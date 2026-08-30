@@ -5,9 +5,9 @@ extends Enum {
     public static final NoneHandler_4 LiteBansModule_31;
     public static final NoneHandler_4 e;
     public static final NoneHandler_4 AsyncBackgroundTask_5;
-    public static final NoneHandler_4 LiteBansModule_194;
+    public static final NoneHandler_4 LiteBansModule_195;
     private static final /* synthetic */ NoneHandler_4[] c;
-    public static NoneHandler_4[] values() {
+        public static NoneHandler_4[] values() {
         return (NoneHandler_4[])c.clone();
     }
 
@@ -25,7 +25,7 @@ extends Enum {
     }
 
     private static final /* synthetic */ NoneHandler_4[] BaseCoreGenericHandler() {
-        return new NoneHandler_4[]{LiteBansModule_31, e, AsyncBackgroundTask_5, LiteBansModule_194};
+        return new NoneHandler_4[]{LiteBansModule_31, e, AsyncBackgroundTask_5, LiteBansModule_195};
     }
 
     static {
@@ -33,11 +33,12 @@ extends Enum {
         LiteBansModule_31 = new NoneHandler_4("NONE", 0);
         e = new NoneHandler_4("FORMATTING", 1);
         AsyncBackgroundTask_5 = new NoneHandler_4("EVENTS", 2);
-        LiteBansModule_194 = new NoneHandler_4("ALL", 3);
+        LiteBansModule_195 = new NoneHandler_4("ALL", 3);
         c = NoneHandler_4.BaseCoreGenericHandler();
     }
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"NONE", "FORMATTING", "EVENTS", "ALL"};
+    }
 }
 

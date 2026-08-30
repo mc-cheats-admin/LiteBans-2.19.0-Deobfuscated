@@ -1,30 +1,36 @@
 package litebans;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import org.jetbrains.annotations.Nullable;
-
-public final class LiteBansModule_433
-extends PluginModule {
-    public static final LiteBansModule_246 LiteBansModule_31;
-    public static final boolean AsyncBackgroundTask_5;
-    private static final Map c;
-
-    public LiteBansModule_433(@Nullable PlatformPlugin plugin) {
+import com.velocitypowered.api.proxy.Player;
+import java.util.Collection;
+@ModulePriority(priority=2)
+public class LiteBansModule_433
+extends ConfigurationManager {
+    public LiteBansModule_433(PlatformPlugin plugin) {
         super(plugin);
     }
 
     @Override
-    public void e() {
+    public int LiteBansModule_31() {
+        Collection collection = this.plugin();
+        return collection.size();
     }
 
-    public static final /* synthetic */ Map BaseCoreGenericHandler() {
-        return c;
+    private final Collection BaseCoreGenericHandler() {
+        return ((VelocityPlugin)this.plugin).c.getAllPlayers();
     }
 
-    static {
-        AsyncBackgroundTask_5 = false;
-        LiteBansModule_31 = new LiteBansModule_246(null);
-        c = new ConcurrentHashMap();
+    @Override
+    public CommandSenderWrapper[] BaseCoreGenericHandler() {
+        PlatformPlugin plugin = this.plugin;
+        Collection collection = this.plugin();
+        if (collection.isEmpty()) {
+            return CommandSenderWrapper.BaseCoreGenericHandler;
+        }
+        CommandSenderWrapper[] jv_0Array = new CommandSenderWrapper[collection.size()];
+        for (Player player : collection) {
+            jv_0Array[n++] = plugin.BaseCoreGenericHandler(player);
+        }
+        return jv_0Array;
+    }
 }
 

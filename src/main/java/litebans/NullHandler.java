@@ -10,9 +10,9 @@ import net.fabricmc.loader.api.metadata.ModMetadata;
 import org.jetbrains.annotations.NotNull;
 
 public final class NullHandler
-implements LiteBansModule_158 {
+implements LiteBansModule_159 {
     private final PlatformPlugin BaseCoreGenericHandler;
-    public NullHandler(@NotNull PlatformPlugin plugin) {
+        public NullHandler(@NotNull PlatformPlugin plugin) {
         this.plugin = plugin;
     }
 
@@ -23,14 +23,16 @@ implements LiteBansModule_158 {
 
     public ModContainer BaseCoreGenericHandler(@NotNull String string) {
         Object v0;
-{
+        block1: {
             Iterable iterable = FabricLoader.getInstance().getAllMods();
             for (Object t2 : iterable) {
                 ModContainer modContainer = (ModContainer)t2;
-                if (!ObjectUtilities.BaseCoreGenericHandler(modContainer.getMetadata().getName(), string)) continue;
+                if (!ObjectUtilities.BaseCoreGenericHandler((Object)modContainer.getMetadata().getName(), (Object)string)) continue;
                 v0 = t2;
-                break;
-}
+                break block1;
+            }
+            v0 = null;
+        }
         return v0;
     }
 
@@ -55,7 +57,7 @@ implements LiteBansModule_158 {
         flag3 = false;
         for (Object t2 : iterable2) {
             boolean flag4;
-{
+            block6: {
                 modContainer = (ModMetadata)t2;
                 flag = false;
                 Iterable iterable3 = modContainer.getDependencies();
@@ -64,12 +66,13 @@ implements LiteBansModule_158 {
                 } else {
                     for (Object t3 : iterable3) {
                         ModDependency modDependency = (ModDependency)t3;
-                        if (!ObjectUtilities.BaseCoreGenericHandler(modDependency.getModId(), string)) continue;
+                        if (!ObjectUtilities.BaseCoreGenericHandler((Object)modDependency.getModId(), (Object)string)) continue;
                         flag4 = true;
-                        break;
+                        break block6;
                     }
                     flag4 = false;
-}
+                }
+            }
             if (!flag4) continue;
             collection2.add(t2);
         }
@@ -100,18 +103,19 @@ implements LiteBansModule_158 {
     @Override
     public void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence, @NotNull String string, boolean flag, @NotNull String string2) {
         Object contextObj = targetObj;
-        if (contextObj instanceof LiteBansModule_422) {
-            targetObj.BaseCoreGenericHandler((charSequence).toString());
-        } else if (contextObj instanceof LiteBansModule_70) {
-            targetObj.BaseCoreGenericHandler(true);
-}
+        if (contextObj instanceof LiteBansModule_424) {
+            ((LiteBansModule_424)targetObj).BaseCoreGenericHandler(((Object)charSequence).toString());
+        } else if (contextObj instanceof LiteBansModule_71) {
+            ((LiteBansModule_71)targetObj).BaseCoreGenericHandler(true);
+        }
+    }
 
     @Override
-    public LiteBansModule_95 BaseCoreGenericHandler(@NotNull Object targetObj, boolean flag) {
-        if (!(targetObj instanceof LiteBansModule_422)) {
+    public LiteBansModule_96 BaseCoreGenericHandler(@NotNull Object targetObj, boolean flag) {
+        if (!(targetObj instanceof LiteBansModule_424)) {
             throw new UnsupportedOperationException();
         }
-        return targetObj.BaseCoreGenericHandler();
+        return ((LiteBansModule_424)targetObj).BaseCoreGenericHandler();
     }
 
     public Void BaseCoreGenericHandler(@NotNull Object targetObj) {
@@ -131,7 +135,7 @@ implements LiteBansModule_158 {
         return modContainer.getMetadata().getVersion().getFriendlyString();
     }
 
-    private static final String BaseCoreGenericHandler(LiteBansModule_178 eo_02, Object targetObj) {
+    private static final String BaseCoreGenericHandler(LiteBansModule_179 eo_02, Object targetObj) {
         return (String)eo_02.BaseCoreGenericHandler(targetObj);
     }
 
@@ -142,11 +146,20 @@ implements LiteBansModule_158 {
 
     @Override
     public String BaseCoreGenericHandler(Object targetObj) {
-        return (String)(this.plugin(targetObj));
+        return (String)((Object)this.plugin(targetObj));
     }
 
     @Override
     public void BaseCoreGenericHandler(Object targetObj, CharSequence charSequence) {
         this.plugin(targetObj, charSequence);
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        LiteBansModule_31 = new String[]{"", "fabric-api", "null"};
+    }
+
+    static {
+        NullHandler.BaseCoreGenericHandler();
+    }
 }
 

@@ -3,7 +3,7 @@ package litebans;
 import org.jetbrains.annotations.NotNull;
 
 public final class KickBannedHandler {
-    public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_158 ec_02, Object targetObj, CharSequence charSequence, String string, boolean flag, String string2, int n, Object contextObj) {
+        public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_159 ec_02, Object targetObj, CharSequence charSequence, String string, boolean flag, String string2, int n, Object contextObj) {
         if (contextObj != null) {
             throw new UnsupportedOperationException("");
         }
@@ -22,11 +22,16 @@ public final class KickBannedHandler {
         ec_02.BaseCoreGenericHandler(targetObj, charSequence, string, flag, string2);
     }
 
-    public static boolean BaseCoreGenericHandler(@NotNull LiteBansModule_158 ec_02, @NotNull String string) {
+    public static boolean BaseCoreGenericHandler(@NotNull LiteBansModule_159 ec_02, @NotNull String string) {
         return ec_02.c(string) != null;
     }
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"", "", "[event cancelled]", "KICK_BANNED"};
+    }
+
+    static {
+        KickBannedHandler.BaseCoreGenericHandler();
+    }
 }
 

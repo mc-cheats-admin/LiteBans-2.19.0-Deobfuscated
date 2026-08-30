@@ -1,38 +1,38 @@
 package litebans;
 
-import com.comphenix.protocol.PacketType;
-import com.comphenix.protocol.ProtocolLibrary;
-import com.comphenix.protocol.ProtocolManager;
-import com.comphenix.protocol.events.PacketContainer;
-import com.comphenix.protocol.wrappers.WrappedChatComponent;
-import org.bukkit.entity.Player;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
-@ModulePriority(priority=0)
 public final class LiteBansModule_139 {
-    public static final LiteBansModule_139 LiteBansModule_31;
-    private LiteBansModule_139() {
+    private boolean BaseCoreGenericHandler;
+    private boolean LiteBansModule_31;
+
+    public LiteBansModule_139(boolean flag, boolean flag2) {
+        this.plugin = flag;
+        this.LiteBansModule_31 = flag2;
     }
 
-    public final void BaseCoreGenericHandler(@Nullable Object targetObj, @NotNull String string) {
-        PacketContainer packetContainer = new PacketContainer(PacketType.Play.Server.KICK_DISCONNECT);
-        packetContainer.getChatComponents().write(0, WrappedChatComponent.fromJson((String)string));
-        ProtocolManager protocolManager = ProtocolLibrary.getProtocolManager();
-        ObjectUtilities.LiteBansModule_31(targetObj, "");
-        protocolManager.sendServerPacket((Player)targetObj, packetContainer);
+    public /* synthetic */ LiteBansModule_139(boolean flag, boolean flag2, int n, LiteBansModule_14 aJ2) {
+        if ((n & 1) != 0) {
+            flag = false;
+        }
+        if ((n & 2) != 0) {
+            flag2 = false;
+        }
+        this(flag, flag2);
+    }
+
+    public final boolean BaseCoreGenericHandler() {
+        return this.plugin;
+    }
+
+    public final void BaseCoreGenericHandler(boolean flag) {
+        this.plugin = flag;
     }
 
     public final boolean LiteBansModule_31() {
-        return ProtocolLibrary.getProtocolManager() == null;
+        return this.LiteBansModule_31;
     }
 
-    static {
-        LiteBansModule_139.BaseCoreGenericHandler();
-        LiteBansModule_31 = new LiteBansModule_139();
+    public LiteBansModule_139() {
+        this(false, false, 3, null);
     }
-
-    private static final void BaseCoreGenericHandler() {
-        BaseCoreGenericHandler = new String[]{""};
 }
 

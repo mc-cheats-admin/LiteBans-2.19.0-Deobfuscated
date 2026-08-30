@@ -6,15 +6,15 @@ import org.jetbrains.annotations.NotNull;
 
 @ModulePriority(priority=1)
 public final class PlayerQuitListener
-extends LiteBansModule_404
-implements LiteBansModule_426 {
-    public PlayerQuitListener(@NotNull PlatformPlugin plugin) {
+extends LiteBansModule_406
+implements LiteBansModule_428 {
+        public PlayerQuitListener(@NotNull PlatformPlugin plugin) {
         super(plugin);
     }
 
     @Override
     public void c() {
-        LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{this};
+        LiteBansModule_176[] em_0Array = new LiteBansModule_176[]{this};
         this.plugin.BaseCoreGenericHandler(em_0Array);
     }
 
@@ -31,9 +31,9 @@ implements LiteBansModule_426 {
     @EventHandler
     public final void BaseCoreGenericHandler(@NotNull PlayerDisconnectEvent playerDisconnectEvent) {
         this.plugin.LiteBansModule_31(playerDisconnectEvent.getPlayer());
-        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
         int n = configService.m();
-        LiteBansModule_158 ec_02 = this.plugin.i();
+        LiteBansModule_159 ec_02 = this.plugin.i();
         ObjectUtilities.LiteBansModule_31(ec_02, "");
         int n2 = ((GetcancelreasoncomponentsHandler)ec_02).c();
         configService.LiteBansModule_31(Math.max(n, n2));
@@ -42,13 +42,22 @@ implements LiteBansModule_426 {
     public PlayerQuitListener e() {
         PlayerQuitListener m;
         PlayerQuitListener m2 = m = this;
-        LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{m2};
+        LiteBansModule_176[] em_0Array = new LiteBansModule_176[]{m2};
         m2.BaseCoreGenericHandler.LiteBansModule_31(em_0Array);
         return m;
     }
 
     @Override
-    public LiteBansModule_175 BaseCoreGenericHandler() {
+    public LiteBansModule_176 BaseCoreGenericHandler() {
         return this.e();
+    }
+
+    private static final void AsyncBackgroundTask_5() {
+        LiteBansModule_31 = new String[]{"Failed ", ""};
+    }
+
+    static {
+        PlayerQuitListener.AsyncBackgroundTask_5();
+    }
 }
 

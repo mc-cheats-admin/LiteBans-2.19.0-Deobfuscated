@@ -1,17 +1,12 @@
 package litebans;
 
-import org.yaml.snakeyaml.nodes.Node;
-import org.yaml.snakeyaml.representer.Represent;
+import net.md_5.bungee.api.chat.BaseComponent;
+import net.md_5.bungee.chat.ChatVersion;
+import net.md_5.bungee.chat.VersionedComponentSerializer;
 
-static class LiteBansModule_281
-implements Represent {
-    final /* synthetic */ LiteBansModule_142 BaseCoreGenericHandler;
-
-    LiteBansModule_281(LiteBansModule_142 dw_02) {
-        this.plugin = dw_02;
+public class LiteBansModule_281 {
+    public static BaseComponent[] BaseCoreGenericHandler(CharSequence charSequence, ChatVersion chatVersion) {
+        return VersionedComponentSerializer.forVersion((ChatVersion)chatVersion).parse(charSequence.toString());
     }
-
-    public Node representData(Object targetObj) {
-        return this.plugin.represent(targetObj.AsyncBackgroundTask_5);
 }
 

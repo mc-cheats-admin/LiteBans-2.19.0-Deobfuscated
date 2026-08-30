@@ -24,7 +24,7 @@ public class StringDecryptor {
                 Thread thread = Thread.currentThread();
                 StackTraceElement[] stackTraceElementArray = thread.getStackTrace();
                 int n7 = new StringBuilder(stackTraceElementArray[2].getClassName()).reverse().hashCode() + new StringBuilder(stackTraceElementArray[2].getMethodName()).reverse().hashCode();
-for (int i = 0; i < cArray.length; ++i) {
+                block24: for (int i = 0; i < cArray.length; ++i) {
                     char c = cArray[i];
                     switch (i % 4) {
                         case 0: {
@@ -32,33 +32,36 @@ for (int i = 0; i < cArray.length; ++i) {
                             int n9 = c >> 4 | ~(n8 & 0xFFFF ^ c);
                             int n10 = c & n7;
                             stringBuilder.append((char)(((n8 >> 16 | n9) ^ n10) & 0xFFFF));
-                            continue;
+                            continue block24;
                         }
                         case 1: {
                             int n8 = c ^ ~(c & 0xFFFF);
                             int n9 = c << 4 | ~(n8 | 0xFFFF ^ c);
                             int n10 = c | n7;
                             stringBuilder.append((char)(((n8 >> 16 | n9) ^ n10) & 0xFFFF));
-                            continue;
+                            continue block24;
                         }
                         case 2: {
                             int n8 = c ^ ~(c << 16 | c >>> 16);
                             int n9 = c >> 4 | ~(n8 + 65535 ^ c);
                             int n10 = c ^ n7;
                             stringBuilder.append((char)(((n8 >> 16 | n9) ^ n10) & 0xFFFF));
-                            continue;
+                            continue block24;
                         }
                         case 3: {
                             int n8 = c ^ c & 0xFFFF;
                             int n9 = c << 4 | ~(n8 % 65535 ^ c);
                             int n10 = c & ~n7;
                             stringBuilder.append((char)(((n8 >> 16 | n9) ^ n10) & 0xFFFF));
-}
+                        }
+                    }
+                }
                 return stringBuilder.toString();
             }
             catch (Throwable throwable) {
                 return string;
-}
+            }
+        }
         String string2 = (String)LiteBansModule_31.get(targetObj);
         if (string2 != null) {
             return string2;
@@ -75,59 +78,65 @@ for (int i = 0; i < cArray.length; ++i) {
             int n17 = 0 ^ n;
             int n18 = 0 ^ n;
             if ((long)n11 / 2L <= BaseCoreGenericHandler[5] && (long)n12 / 2L <= BaseCoreGenericHandler[6] && (long)n13 / 2L <= BaseCoreGenericHandler[7] && (long)n14 / 2L <= BaseCoreGenericHandler[7]) {
-for (int i = 0; i < cArray.length; ++i) {
+                block25: for (int i = 0; i < cArray.length; ++i) {
                     switch (i % 4) {
                         case 0: {
                             cArray2[i] = (char)((cArray[i] ^ n15) & 0xFFFF);
-                            continue;
+                            continue block25;
                         }
                         case 1: {
                             cArray2[i] = (char)((cArray[i] ^ n16) & 0xFFFF);
-                            continue;
+                            continue block25;
                         }
                         case 2: {
                             cArray2[i] = (char)((cArray[i] ^ n17) & 0xFFFF);
-                            continue;
+                            continue block25;
                         }
                         case 3: {
                             cArray2[i] = (char)((cArray[i] ^ n18) & 0xFFFF);
-}
+                        }
+                    }
+                }
                 String string3 = new String(cArray2);
                 LiteBansModule_31.put(string, string3);
                 return string3;
             }
             StringBuilder stringBuilder = new StringBuilder();
             try {
-for (int i = 0; i < cArray.length; ++i) {
+                block26: for (int i = 0; i < cArray.length; ++i) {
                     int n19 = (int)((Thread)null).getId();
                     int n20 = Runtime.getRuntime().availableProcessors();
                     int n21 = atomicInteger.get() ^ n;
                     switch (i % 4) {
                         case 0: {
                             stringBuilder.append((char)(n19 >> 16 % n20 & n21 & cArray[i]));
-                            continue;
+                            continue block26;
                         }
                         case 1: {
                             stringBuilder.append((char)(n19 >> 16 * n20 ^ n21 | cArray[i]));
-                            continue;
+                            continue block26;
                         }
                         case 2: {
                             stringBuilder.append((char)((n19 >> 16 / n20 | n21) ^ cArray[i]));
-                            continue;
+                            continue block26;
                         }
                         case 3: {
                             stringBuilder.append((char)(n19 >> 16 + n20 & ~n21 ^ ~cArray[i]));
-}
+                        }
+                    }
+                }
                 String string4 = stringBuilder.toString();
                 LiteBansModule_31.put(string, string4);
                 return string4;
             }
             catch (Throwable throwable) {
                 return string;
-}
+            }
+        }
         catch (Throwable throwable) {
             return string;
-}
+        }
+    }
 
     static {
         StringDecryptor.BaseCoreGenericHandler[0] = 8829304729L;
@@ -143,5 +152,6 @@ for (int i = 0; i < cArray.length; ++i) {
         StringDecryptor.BaseCoreGenericHandler[10] = 9991828838749L;
         StringDecryptor.BaseCoreGenericHandler[11] = 47774434991928L;
         StringDecryptor.BaseCoreGenericHandler[12] = 1111144744434L;
+    }
 }
 

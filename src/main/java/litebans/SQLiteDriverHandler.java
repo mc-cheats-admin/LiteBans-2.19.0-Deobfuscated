@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 public final class SQLiteDriverHandler
 implements CharSequence {
     private final String BaseCoreGenericHandler;
-    public static int c(String string) {
+        public static int c(String string) {
         return string.length();
     }
 
@@ -32,20 +32,20 @@ implements CharSequence {
 
     public static String LiteBansModule_31(String string) {
         String string2 = string;
-        if (StringUtilities.c(string2, '{', false, 2, null)) {
-            ConfigService configService = (ConfigService)LiteBansModule_209.LiteBansModule_31.BaseCoreGenericHandler().BaseCoreGenericHandler(ConfigService.class);
-            BroadcastService o2 = (BroadcastService)LiteBansModule_209.LiteBansModule_31.BaseCoreGenericHandler().BaseCoreGenericHandler(BroadcastService.class);
-            String string3 = configService.LiteBansModule_194().ElementsHandler();
+        if (StringUtilities.c((CharSequence)string2, '{', false, 2, null)) {
+            ConfigService configService = (ConfigService)LiteBansModule_210.LiteBansModule_31.BaseCoreGenericHandler().BaseCoreGenericHandler(ConfigService.class);
+            BroadcastService o2 = (BroadcastService)LiteBansModule_210.LiteBansModule_31.BaseCoreGenericHandler().BaseCoreGenericHandler(BroadcastService.class);
+            String string3 = configService.LiteBansModule_195().ElementsHandler();
             String string4 = "1";
             String string5 = "0";
-            if (ObjectUtilities.BaseCoreGenericHandler(string3, (Object)"pgsql")) {
+            if (ObjectUtilities.BaseCoreGenericHandler((Object)string3, (Object)"pgsql")) {
                 string4 = "B'1'";
                 string5 = "B'0'";
             }
-            string2 = LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[5], string4);
-            string2 = LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[6], string5);
-            string2 = LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[7], (Object)(!ObjectUtilities.BaseCoreGenericHandler(string3, LiteBansModule_31[8]) ? LiteBansModule_31[9] : LiteBansModule_31[10]));
-            string2 = LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[11], (Object)("" + o2.LiteBansModule_240() + '?' + o2.LiteBansModule_401()));
+            string2 = LiteBansModule_435.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[5], (Object)string4);
+            string2 = LiteBansModule_435.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[6], (Object)string5);
+            string2 = LiteBansModule_435.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[7], (Object)(!ObjectUtilities.BaseCoreGenericHandler((Object)string3, (Object)LiteBansModule_31[8]) ? LiteBansModule_31[9] : LiteBansModule_31[10]));
+            string2 = LiteBansModule_435.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[11], (Object)("" + o2.LiteBansModule_241() + '?' + o2.LiteBansModule_403()));
         }
         return string2;
     }
@@ -94,7 +94,7 @@ implements CharSequence {
             String string2 = LiteBansModule_31[24];
             throw new IllegalArgumentException(string2.toString());
         }
-        LiteBansModule_227.BaseCoreGenericHandler(charSequence);
+        LiteBansModule_228.BaseCoreGenericHandler(charSequence);
         return SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31(string) + LiteBansModule_31[25] + charSequence + LiteBansModule_31[26]);
     }
 
@@ -109,7 +109,7 @@ implements CharSequence {
             String string2 = LiteBansModule_31[30];
             throw new IllegalArgumentException(string2.toString());
         }
-        LiteBansModule_227.AsyncBackgroundTask_5(charSequence);
+        LiteBansModule_228.AsyncBackgroundTask_5(charSequence);
         return SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31(string) + LiteBansModule_31[31] + charSequence);
     }
 
@@ -127,7 +127,7 @@ implements CharSequence {
         return SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31(string) + LiteBansModule_31[33] + charSequence);
     }
 
-    public static final String LiteBansModule_194(String string, @NotNull CharSequence charSequence) {
+    public static final String LiteBansModule_195(String string, @NotNull CharSequence charSequence) {
         CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string), charSequence};
         CharSequence[] charSequenceArray2 = charSequenceArray;
         int n = charSequenceArray2.length;
@@ -138,11 +138,11 @@ implements CharSequence {
             String string2 = LiteBansModule_31[34];
             throw new IllegalArgumentException(string2.toString());
         }
-        LiteBansModule_227.LiteBansModule_31(charSequence);
+        LiteBansModule_228.LiteBansModule_31(charSequence);
         return SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31(string) + LiteBansModule_31[35] + charSequence);
     }
 
-    public static final String LiteBansModule_240(String string, @NotNull CharSequence charSequence) {
+    public static final String LiteBansModule_241(String string, @NotNull CharSequence charSequence) {
         CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string), charSequence};
         CharSequence[] charSequenceArray2 = charSequenceArray;
         int n = charSequenceArray2.length;
@@ -153,7 +153,7 @@ implements CharSequence {
             String string2 = LiteBansModule_31[36];
             throw new IllegalArgumentException(string2.toString());
         }
-        LiteBansModule_227.BaseCoreGenericHandler(charSequence);
+        LiteBansModule_228.BaseCoreGenericHandler(charSequence);
         return SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31(string) + LiteBansModule_31[37] + charSequence);
     }
 
@@ -197,7 +197,7 @@ implements CharSequence {
         if (!(targetObj instanceof SQLiteDriverHandler)) {
             return false;
         }
-        return ObjectUtilities.BaseCoreGenericHandler(string, (Object)targetObj.c());
+        return ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)((SQLiteDriverHandler)targetObj).c());
     }
 
     public boolean equals(Object targetObj) {
@@ -232,5 +232,10 @@ implements CharSequence {
 
     private static final void BaseCoreGenericHandler() {
         LiteBansModule_31 = new String[]{"1", "0", "pgsql", "B'1'", "B'0'", "{true}", "{false}", "{column.SQLiteDriverHandler_4}", "sqlite", "SQLiteDriverHandler_4", "rowid CommandExitException SQLiteDriverHandler_4", "{=?}", "SELECT ", "INSERT ", "DELETE ", "UPDATE ", "ALTER ", "CREATE ", "Failed ", " WHERE ", "Failed ", " AND ", "Failed ", " OR ", "Failed ", " WHERE ", " IS NULL", "Failed ", " WHERE ", " IS NOT NULL", "Failed ", " SET ", "Failed ", " CONVERT TO ", "Failed ", " ADD COLUMN ", "Failed ", " DROP COLUMN ", "Failed ", " ORDER BY ", " DESC", "Failed ", " ORDER BY ", " ASC", "Failed ", " LIMIT ", " LIMIT ?", " OFFSET ?", " LIMIT ? OFFSET ?"};
+    }
+
+    static {
+        SQLiteDriverHandler.BaseCoreGenericHandler();
+    }
 }
 

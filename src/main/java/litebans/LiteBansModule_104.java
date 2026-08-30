@@ -1,13 +1,22 @@
 package litebans;
 
-import com.google.gson.JsonDeserializer;
-public class LiteBansModule_104
-implements JsonDeserializer {
-    public static LiteBansModule_432[] BaseCoreGenericHandler(String string) {
-        return LiteBansModule_147.BaseCoreGenericHandler().BaseCoreGenericHandler(string);
+import java.io.Serializable;
+public final class LiteBansModule_104
+implements LiteBansModule_162,
+Serializable {
+    private final Object BaseCoreGenericHandler;
+
+    public LiteBansModule_104(Object targetObj) {
+        this.plugin = targetObj;
     }
 
-    public static String BaseCoreGenericHandler(LiteBansModule_432[] v_0Array) {
-        return LiteBansModule_147.BaseCoreGenericHandler().BaseCoreGenericHandler(v_0Array);
+    @Override
+    public Object BaseCoreGenericHandler() {
+        return this.plugin;
+    }
+
+    public String toString() {
+        return String.valueOf(this.plugin());
+    }
 }
 

@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 
 public final class PruneHistoryCommand
 extends AbstractCommand {
-    public PruneHistoryCommand(@NotNull PlatformPlugin plugin) {
+        public PruneHistoryCommand(@NotNull PlatformPlugin plugin) {
         super("prunehistory", plugin);
     }
 
@@ -15,14 +15,14 @@ extends AbstractCommand {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
-{
+        block15: {
             boolean flag;
                         Object helperObj = resultObj;
-            if (((ConfigService)((MessageHandler)helperObj).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_194()) {
+            if (((ConfigService)((MessageHandler)helperObj).LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().LiteBansModule_195()) {
                 resultObj = this;
                 flag2 = false;
                 helperObj = MessageHandler.BaseCoreGenericHandler;
-                flag3 = this.AsyncBackgroundTask_5().LiteBansModule_194();
+                flag3 = ((MessageHandler)resultObj).AsyncBackgroundTask_5().LiteBansModule_195();
                 contextObj = MessageKey.LiteBansModule_31;
                 targetObj = helperObj;
                 flag = !flag3;
@@ -30,14 +30,15 @@ extends AbstractCommand {
                     Object tempObj = targetObj;
                     ((ChatFormatter)tempObj).BaseCoreGenericHandler(contextObj);
                     throw new CommandExitException();
-}
+                }
+            }
                         resultObj = CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)object6, (String)ArrayUtilities.LiteBansModule_31(args));
             object6 = this;
             flag7 = false;
-            object6 = (DatabaseMonitorService)((MessageHandler)object6).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+            object6 = (DatabaseMonitorService)((MessageHandler)object6).LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class);
             flag7 = false;
             try {
-                LiteBansModule_82 ch2 = ((DatabaseMonitorService)object6).LiteBansModule_194();
+                LiteBansModule_83 ch2 = ((DatabaseMonitorService)object6).LiteBansModule_195();
                 contextObj = ch2;
                 Throwable throwable = null;
                 try {
@@ -46,10 +47,10 @@ extends AbstractCommand {
                     StringBuilder stringBuilder;
                     int n;
                     String string2;
-                    targetObj = (LiteBansModule_82)contextObj;
+                    targetObj = (LiteBansModule_83)contextObj;
                     flag = false;
-                    LiteBansModule_82 ch3 = ch2;
-                    LiteBansModule_297 iA2 = CommandArgumentUtils.BaseCoreGenericHandler(ch3, (String)resultObj, false, 2, null);
+                    LiteBansModule_83 ch3 = ch2;
+                    LiteBansModule_298 iA2 = CommandArgumentUtils.BaseCoreGenericHandler(ch3, (String)resultObj, false, 2, null);
                     String string3 = iA2.LiteBansModule_31();
                     if (string3 == null) {
                         MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(MessageKey.LiteBansException);
@@ -83,7 +84,7 @@ extends AbstractCommand {
                     String string5 = stringBuilder3.append(string).toString();
                     double d10 = SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(string5, Double.MIN_VALUE);
                     ChatFormatter chatFormatter = MessageHandler.BaseCoreGenericHandler;
-                    flag8 = d10 == Double.MIN_VALUE && !StringUtilities.LiteBansModule_31(string5);
+                    flag8 = d10 == Double.MIN_VALUE && !StringUtilities.LiteBansModule_31((CharSequence)string5);
                     CharSequence charSequence = MessageKey.aL;
                     ChatFormatter fo_03 = chatFormatter;
                     if (flag8) {
@@ -93,7 +94,7 @@ extends AbstractCommand {
                     }
                     long l3 = d10 == Double.MIN_VALUE ? 0L : (long)((double)DatabaseMonitorService.BaseCoreGenericHandler(ch3.AsyncBackgroundTask_5(), false, 1, null) - d10);
                     ch3.BaseCoreGenericHandler(string4, l3);
-                    CommandArgumentUtils.BaseCoreGenericHandler(this, AllHandler_3.BaseCoreGenericHandler(ch3, MessageKey.LiteBansModule_15, iA2, false, 2, null));
+                    CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, AllHandler_3.BaseCoreGenericHandler(ch3, (CharSequence)MessageKey.LiteBansModule_15, iA2, false, 2, null));
                     targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable2) {
@@ -102,13 +103,21 @@ extends AbstractCommand {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler((Closeable)contextObj, throwable);
-}
+                }
+            }
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object6).LiteBansModule_31(sQLException)) break;
+                if (((DatabaseMonitorService)object6).LiteBansModule_31(sQLException)) break block15;
                 throw sQLException;
-}
+            }
+        }
+    }
 
     private static final void BaseCoreGenericHandler() {
         i = new String[]{"prunehistory", "", ""};
+    }
+
+    static {
+        PruneHistoryCommand.BaseCoreGenericHandler();
+    }
 }
 

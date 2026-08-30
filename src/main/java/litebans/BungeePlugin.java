@@ -18,13 +18,13 @@ public class BungeePlugin
 extends Plugin
 implements PlatformPlugin {
     private final LiteBansCore c = new LiteBansCore(this);
-    @Override
+        @Override
     public void m() {
-        this.getProxy().getScheduler().cancel(this);
+        this.getProxy().getScheduler().cancel((Plugin)this);
     }
 
     @Override
-    public DatabaseService LiteBansModule_240() {
+    public DatabaseService LiteBansModule_241() {
         return this.c.BroadcastService;
     }
 
@@ -42,17 +42,18 @@ implements PlatformPlugin {
     public boolean BaseCoreGenericHandler(PluginModule module) {
         boolean flag = module.AsyncBackgroundTask_5();
         if (flag) {
-            if (module instanceof LiteBansModule_404) {
+            if (module instanceof LiteBansModule_406) {
                 this.plugin((ConfigurationManager)module);
             }
             if (module instanceof CommandModule) {
                 this.plugin((CommandManager)module);
-}
+            }
+        }
         return flag;
     }
 
     @Override
-    public StackTraceAnalyzer LiteBansModule_194() {
+    public StackTraceAnalyzer LiteBansModule_195() {
         return this.c.Utf8Handler_2;
     }
 
@@ -63,7 +64,7 @@ implements PlatformPlugin {
 
     @Override
     public ConfigurationManager LiteBansModule_31() {
-        return this.c.LiteBansModule_194;
+        return this.c.LiteBansModule_195;
     }
 
     @Override
@@ -98,7 +99,7 @@ implements PlatformPlugin {
 
     @Override
     public int BaseCoreGenericHandler() {
-        return this.c.LiteBansModule_401();
+        return this.c.LiteBansModule_403();
     }
 
     @Override
@@ -112,12 +113,12 @@ implements PlatformPlugin {
     }
 
     @Override
-    public ThreadPoolExecutor LiteBansModule_433() {
-        ThreadPoolExecutor threadPoolExecutor = this.c.LiteBansModule_240;
+    public ThreadPoolExecutor LiteBansModule_435() {
+        ThreadPoolExecutor threadPoolExecutor = this.c.LiteBansModule_241;
         if (threadPoolExecutor == null) {
             ThreadFactoryBuilder threadFactoryBuilder = this.c.AsyncBackgroundTask_5();
             try {
-                threadFactoryBuilder.setThreadFactory((ThreadFactory)new GroupedThreadFactory(this, this.getName()));
+                threadFactoryBuilder.setThreadFactory((ThreadFactory)new GroupedThreadFactory((Plugin)this, this.getName()));
             }
             catch (NoSuchMethodError noSuchMethodError) {
                 threadFactoryBuilder.setThreadFactory((ThreadFactory)GroupedThreadFactory.class.getConstructor(Plugin.class).newInstance(this));
@@ -129,7 +130,7 @@ implements PlatformPlugin {
 
     @Override
     public long g() {
-        return this.c.LiteBansModule_240();
+        return this.c.LiteBansModule_241();
     }
 
     @Override
@@ -138,7 +139,7 @@ implements PlatformPlugin {
     }
 
     @Override
-    public LiteBansModule_158 i() {
+    public LiteBansModule_159 i() {
         return new GetcancelreasoncomponentsHandler(this);
     }
 
@@ -181,7 +182,7 @@ implements PlatformPlugin {
     }
 
     @Override
-    public boolean LiteBansModule_401() {
+    public boolean LiteBansModule_403() {
         return true;
     }
 
@@ -209,14 +210,15 @@ implements PlatformPlugin {
     }
 
     @Override
-    public void LiteBansModule_31(@Nullable LiteBansModule_175[] em_0Array) {
+    public void LiteBansModule_31(@Nullable LiteBansModule_176[] em_0Array) {
         if (em_0Array == null) {
             return;
         }
-        for (LiteBansModule_175 em_02 : em_0Array) {
-            if (!(em_02 instanceof LiteBansModule_426)) continue;
-            this.getProxy().getPluginManager().registerListener(this, (Listener)((LiteBansModule_426)em_02));
-}
+        for (LiteBansModule_176 em_02 : em_0Array) {
+            if (!(em_02 instanceof LiteBansModule_428)) continue;
+            this.getProxy().getPluginManager().registerListener((Plugin)this, (Listener)((LiteBansModule_428)em_02));
+        }
+    }
 
     @Override
     public boolean BaseCoreGenericHandler(String string, Supplier supplier) {
@@ -235,7 +237,7 @@ implements PlatformPlugin {
 
     @Override
     public void BaseCoreGenericHandler(Runnable runnable) {
-        this.LiteBansModule_433().execute(runnable);
+        this.LiteBansModule_435().execute(runnable);
     }
 
     @Override
@@ -244,11 +246,12 @@ implements PlatformPlugin {
             throw new IllegalArgumentException("Invalid delay: " + l3);
         }
         try {
-            this.getProxy().getScheduler().schedule(this, runnable, l3 * 50L, TimeUnit.MILLISECONDS);
+            this.getProxy().getScheduler().schedule((Plugin)this, runnable, l3 * 50L, TimeUnit.MILLISECONDS);
         }
         catch (RejectedExecutionException rejectedExecutionException) {
             this.plugin(rejectedExecutionException);
-}
+        }
+    }
 
     @Override
     public void LiteBansModule_31(Runnable runnable) {
@@ -263,11 +266,12 @@ implements PlatformPlugin {
     @Override
     public void LiteBansModule_31(Runnable runnable, long l3, long l5) {
         try {
-            this.getProxy().getScheduler().schedule(this, runnable, l3 * 50L, l5 * 50L, TimeUnit.MILLISECONDS);
+            this.getProxy().getScheduler().schedule((Plugin)this, runnable, l3 * 50L, l5 * 50L, TimeUnit.MILLISECONDS);
         }
         catch (RejectedExecutionException rejectedExecutionException) {
             this.plugin(rejectedExecutionException);
-}
+        }
+    }
 
     private final void BaseCoreGenericHandler(Exception exception) {
         if (this.c.m.get()) {
@@ -283,40 +287,41 @@ implements PlatformPlugin {
     }
 
     @Override
-    public void BaseCoreGenericHandler(LiteBansModule_417 ln2) {
+    public void BaseCoreGenericHandler(LiteBansModule_419 ln2) {
         this.c.i = ln2;
     }
 
     @Override
     public void BaseCoreGenericHandler(ConfigurationManager j_02) {
-        this.c.LiteBansModule_194 = j_02;
+        this.c.LiteBansModule_195 = j_02;
     }
 
     @Override
     public void r() {
-        this.getProxy().getPluginManager().unregisterListeners(this);
+        this.getProxy().getPluginManager().unregisterListeners((Plugin)this);
     }
 
     @Override
-    public void BaseCoreGenericHandler(@Nullable LiteBansModule_175[] em_0Array) {
+    public void BaseCoreGenericHandler(@Nullable LiteBansModule_176[] em_0Array) {
         if (em_0Array == null) {
             return;
         }
-        for (LiteBansModule_175 em_02 : em_0Array) {
-            if (!(em_02 instanceof LiteBansModule_426)) continue;
-            this.getProxy().getPluginManager().unregisterListener((Listener)((LiteBansModule_426)em_02));
-}
+        for (LiteBansModule_176 em_02 : em_0Array) {
+            if (!(em_02 instanceof LiteBansModule_428)) continue;
+            this.getProxy().getPluginManager().unregisterListener((Listener)((LiteBansModule_428)em_02));
+        }
+    }
 
     @Override
     public CommandSenderWrapper LiteBansModule_31(Object targetObj) {
         if (!(targetObj instanceof CommandSender)) {
             if (targetObj instanceof CommandSenderWrapper) {
-                return this.c.LiteBansModule_31.remove(targetObj.i());
+                return (CommandSenderWrapper)this.c.LiteBansModule_31.remove(((CommandSenderWrapper)targetObj).i());
             }
             throw new IllegalArgumentException();
         }
         CommandSender commandSender = (CommandSender)targetObj;
-        return this.c.LiteBansModule_31.remove(commandSender.getName());
+        return (CommandSenderWrapper)this.c.LiteBansModule_31.remove(commandSender.getName());
     }
 
     @Override
@@ -331,8 +336,8 @@ implements PlatformPlugin {
         CommandSender commandSender = (CommandSender)targetObj;
         CommandSenderWrapper sender = (CommandSenderWrapper)map.get(commandSender.getName());
         if (sender == null || sender.c() != commandSender) {
-            sender = new LiteBansModule_154(this, commandSender);
-            this.c.LiteBansModule_194();
+            sender = new LiteBansModule_155(this, commandSender);
+            this.c.LiteBansModule_195();
             map.put(commandSender.getName(), sender);
         }
         return sender;
@@ -340,5 +345,14 @@ implements PlatformPlugin {
 
     public LiteBansCore LiteBansModule_31() {
         return this.c;
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        LiteBansModule_31 = new String[]{"config.yml", "Invalid delay: ", "Startup was cancelled!!"};
+    }
+
+    static {
+        BungeePlugin.BaseCoreGenericHandler();
+    }
 }
 

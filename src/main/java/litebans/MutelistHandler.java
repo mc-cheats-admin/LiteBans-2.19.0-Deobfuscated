@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 public final class MutelistHandler
 extends BanListCommand {
-    public MutelistHandler(@NotNull PlatformPlugin plugin) {
+        public MutelistHandler(@NotNull PlatformPlugin plugin) {
         super(plugin);
     }
 
@@ -20,5 +20,10 @@ extends BanListCommand {
 
     private static final void BaseCoreGenericHandler() {
         GnuSparseMapHandler = new String[]{"mutelist"};
+    }
+
+    static {
+        MutelistHandler.BaseCoreGenericHandler();
+    }
 }
 

@@ -1,20 +1,25 @@
 package litebans;
 
-public interface LiteBansModule_177 {
-    public static final int BaseCoreGenericHandler = 4;
+import java.util.ArrayList;
+import java.util.Collection;
+public final class LiteBansModule_177
+implements LiteBansModule_179 {
+    final /* synthetic */ ArrayList LiteBansModule_31;
+    final /* synthetic */ ServerSyncService BaseCoreGenericHandler;
 
-    public LiteBansModule_288 c();
+    public LiteBansModule_177(ArrayList arrayList, ServerSyncService u2) {
+        this.LiteBansModule_31 = arrayList;
+        this.plugin = u2;
+    }
 
-    public LiteBansModule_288 LiteBansModule_31();
+    public final void BaseCoreGenericHandler(LiteBansModule_343 jg_02) {
+        ((Collection)this.LiteBansModule_31).add(jg_02.c());
+    }
 
-    public LiteBansModule_288 BaseCoreGenericHandler();
-
-    public byte[] e();
-
-    public byte[] AsyncBackgroundTask_5();
-
-    public void BaseCoreGenericHandler(byte[] var1, int var2, int var3);
-
-    public void LiteBansModule_31(byte[] var1, int var2, int var3);
+    @Override
+    public Object BaseCoreGenericHandler(Object targetObj) {
+        this.plugin((LiteBansModule_343)targetObj);
+        return KotlinUnitHandler.BaseCoreGenericHandler;
+    }
 }
 

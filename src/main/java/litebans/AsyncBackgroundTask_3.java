@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 public final class AsyncBackgroundTask_3
 implements Runnable {
     private final Object[] LiteBansModule_31;
-    public AsyncBackgroundTask_3(@NotNull Object[] objectArray) {
+        public AsyncBackgroundTask_3(@NotNull Object[] objectArray) {
         this.LiteBansModule_31 = objectArray;
     }
 
@@ -29,5 +29,10 @@ implements Runnable {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"", "/dev/null", "/dev/null"};
+    }
+
+    static {
+        AsyncBackgroundTask_3.LiteBansModule_31();
+    }
 }
 

@@ -28,11 +28,11 @@ import org.jetbrains.annotations.NotNull;
 
 @ModulePriority(priority=1)
 public final class GetcancelreasoncomponentsHandler
-implements LiteBansModule_158 {
+implements LiteBansModule_159 {
     private final PlatformPlugin AsyncBackgroundTask_5;
     private boolean LiteBansModule_31;
     private boolean c;
-    public GetcancelreasoncomponentsHandler(@NotNull PlatformPlugin plugin) {
+        public GetcancelreasoncomponentsHandler(@NotNull PlatformPlugin plugin) {
         GetcancelreasoncomponentsHandler k12;
         boolean flag;
         GetcancelreasoncomponentsHandler k13;
@@ -122,7 +122,8 @@ implements LiteBansModule_158 {
         }
         catch (IllegalStateException illegalStateException) {
             return false;
-}
+        }
+    }
 
     public final ThreadFactory BaseCoreGenericHandler(@NotNull PlatformPlugin plugin) {
         BungeePlugin bungeePlugin = this.LiteBansModule_31(plugin);
@@ -143,34 +144,36 @@ implements LiteBansModule_158 {
     @Override
     public List LiteBansModule_31(@NotNull String v1) {
         v2 = this.c(this.c()).getPluginManager().getPlugins();
-        arg1 = v2;
-        arg2 = new ArrayList<PunishmentService>();
-        for (T arg3 : arg1) {
-            arg4 = (Plugin)arg3;
-            v0 = arg4;
+        v3 = v2;
+        v4 = new ArrayList<PunishmentService>();
+        for (T v5 : v3) {
+            v6 = (Plugin)v5;
+            v0 = v6;
             if (v0 != null && (v0 = v0.getDescription()) != null && (v0 = v0.getDepends()) != null ? v0.contains(v1) : false) ** GOTO lbl-1000
-            v1 = arg4;
+            v1 = v6;
             v2 = v1 != null && (v1 = v1.getDescription()) != null && (v1 = v1.getSoftDepends()) != null ? v1.contains(v1) : false;
             if (v2) lbl-1000:
                         {
+                v3 = true;
             } else {
+                v3 = false;
             }
             if (!v3) continue;
-            arg2.add(arg3);
+            v4.add(v5);
         }
-        v2 = (List)arg2;
-        arg1 = v2;
-        arg2 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler(v2, 10));
-        for (T arg3 : arg1) {
-            arg4 = (Plugin)arg3;
-            arg5 = arg2;
-            v4   = arg4;
+        v2 = (List)v4;
+        v3 = v2;
+        v4 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler(v2, 10));
+        for (T v5 : v3) {
+            v6 = (Plugin)v5;
+            v7 = v4;
+            v4   = v6;
             if (v4   == null || (v4   = v4  .getDescription()) == null || (v4   = v4  .getName()) == null) {
                 v4   = "";
             }
-            arg5.add(v4  );
+            v7.add(v4  );
         }
-        return (List)arg2;
+        return (List)v4;
     }
 
     @Override
@@ -229,61 +232,66 @@ implements LiteBansModule_158 {
             if (exception instanceof IllegalStateException) return false;
             if (!flag) throw exception;
             return false;
-}
+        }
+    }
 
     public final void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String string) {
         Object targetObj = sender.c();
         ObjectUtilities.LiteBansModule_31(targetObj, "");
         BaseComponent[] baseComponentArray = ComponentSerializer.parse((String)string);
-        targetObj.disconnect(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
+        ((ProxiedPlayer)targetObj).disconnect(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
     }
 
     @Override
-    public LiteBansModule_95 BaseCoreGenericHandler(@NotNull Object targetObj, boolean flag) {
+    public LiteBansModule_96 BaseCoreGenericHandler(@NotNull Object targetObj, boolean flag) {
         if (!(targetObj instanceof ServerConnectEvent)) {
             throw new UnsupportedOperationException();
         }
-        ProxiedPlayer proxiedPlayer = targetObj.getPlayer();
-        return new LiteBansModule_95(proxiedPlayer.getName(), proxiedPlayer.getUniqueId().toString(), proxiedPlayer.getAddress().getAddress().getHostAddress());
+        ProxiedPlayer proxiedPlayer = ((ServerConnectEvent)targetObj).getPlayer();
+        return new LiteBansModule_96(proxiedPlayer.getName(), proxiedPlayer.getUniqueId().toString(), proxiedPlayer.getAddress().getAddress().getHostAddress());
     }
 
     @Override
     public void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence) {
         Object contextObj = targetObj;
         if (contextObj instanceof ServerConnectEvent) {
-            if (targetObj.getPlayer().isConnected()) {
-                BaseComponent[] baseComponentArray = TextComponent.fromLegacyText((String)(charSequence).toString());
-                targetObj.getPlayer().sendMessage(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
-} else if (!(contextObj instanceof LoginEvent)) {
+            if (((ServerConnectEvent)targetObj).getPlayer().isConnected()) {
+                BaseComponent[] baseComponentArray = TextComponent.fromLegacyText((String)((Object)charSequence).toString());
+                ((ServerConnectEvent)targetObj).getPlayer().sendMessage(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
+            }
+        } else if (!(contextObj instanceof LoginEvent)) {
             throw new UnsupportedOperationException();
-}
+        }
+    }
 
     @Override
     public String BaseCoreGenericHandler(@NotNull Object targetObj) {
         if (!(targetObj instanceof ServerConnectEvent)) {
             throw new UnsupportedOperationException();
         }
-        return targetObj.getTarget().getName();
+        return ((ServerConnectEvent)targetObj).getTarget().getName();
     }
 
     @Override
     public void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence, @NotNull String string, boolean flag, @NotNull String string2) {
         if (targetObj instanceof Cancellable) {
-            targetObj.setCancelled(true);
+            ((Cancellable)targetObj).setCancelled(true);
         }
         if ((contextObj = targetObj) instanceof ChatEvent) {
-            boolean flag2 = StringUtilities.BaseCoreGenericHandler((CharSequence)targetObj.getMessage(), '/', false, 2, null);
-            targetObj.setMessage((flag2 ? "/" : "") + string + targetObj.getMessage());
+            boolean flag2 = StringUtilities.BaseCoreGenericHandler((CharSequence)((ChatEvent)targetObj).getMessage(), '/', false, 2, null);
+            ((ChatEvent)targetObj).setMessage((flag2 ? "/" : "") + string + ((ChatEvent)targetObj).getMessage());
         } else if (contextObj instanceof LoginEvent) {
             if (this.LiteBansModule_31) {
-                BaseComponent[] baseComponentArray = TextComponent.fromLegacyText((String)(charSequence).toString());
-                targetObj.setCancelReason(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
+                BaseComponent[] baseComponentArray = TextComponent.fromLegacyText((String)((Object)charSequence).toString());
+                ((LoginEvent)targetObj).setCancelReason(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
             } else {
-                LiteBansModule_225.BaseCoreGenericHandler.BaseCoreGenericHandler(targetObj, charSequence);
-} else if (contextObj instanceof ServerConnectEvent && flag && targetObj.getPlayer().getServer() == null) {
-            BaseComponent[] baseComponentArray = TextComponent.fromLegacyText((String)(charSequence).toString());
-            targetObj.getPlayer().disconnect(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
-}
+                LiteBansModule_226.BaseCoreGenericHandler.BaseCoreGenericHandler(targetObj, charSequence);
+            }
+        } else if (contextObj instanceof ServerConnectEvent && flag && ((ServerConnectEvent)targetObj).getPlayer().getServer() == null) {
+            BaseComponent[] baseComponentArray = TextComponent.fromLegacyText((String)((Object)charSequence).toString());
+            ((ServerConnectEvent)targetObj).getPlayer().disconnect(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
+        }
+    }
 
     public final ServerInfo BaseCoreGenericHandler(@NotNull Object targetObj) {
         ServerInfo serverInfo;
@@ -297,7 +305,8 @@ implements LiteBansModule_158 {
             serverInfo = reconnectHandler2.getServer((ProxiedPlayer)new NullHandler_2(this.c(), (PendingConnection)targetObj));
             if (serverInfo == null) {
                 return this.LiteBansModule_31(targetObj);
-} else {
+            }
+        } else {
             serverInfo = null;
         }
         return serverInfo;
@@ -308,11 +317,12 @@ implements LiteBansModule_158 {
         ProxyServer proxyServer = this.c(this.c());
         if (targetObj instanceof PendingConnection) {
             GetcancelreasoncomponentsHandler k12 = this;
-            ListenerInfo listenerInfo = targetObj.getListener();
+            ListenerInfo listenerInfo = ((PendingConnection)targetObj).getListener();
             serverInfo = proxyServer.getServerInfo(listenerInfo.getDefaultServer());
             if (serverInfo == null) {
-                serverInfo = AbstractReconnectHandler.getForcedHost((PendingConnection)targetObj);
-} else {
+                serverInfo = AbstractReconnectHandler.getForcedHost((PendingConnection)((PendingConnection)targetObj));
+            }
+        } else {
             serverInfo = null;
         }
         return serverInfo;
@@ -325,5 +335,10 @@ implements LiteBansModule_158 {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"net.md_5.bungee.api.event.LoginEvent", "getCancelReasonComponents", "net.md_5.bungee.api.plugin.Command", "setPermissionMessage", "", "", "", "Bungee permission config (InitializerHandler_3 Bungee config.yml) is invalid, ignoring. No players will be ", "", "/", ""};
+    }
+
+    static {
+        GetcancelreasoncomponentsHandler.LiteBansModule_31();
+    }
 }
 

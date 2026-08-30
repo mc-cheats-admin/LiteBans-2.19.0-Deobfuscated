@@ -4,8 +4,8 @@ import org.jetbrains.annotations.NotNull;
 
 public final class MessageHandler_2
 extends Error {
-    public MessageHandler_2(@NotNull String string) {
-        ObjectUtilities.BaseCoreGenericHandler(string, "message");
+        public MessageHandler_2(@NotNull String string) {
+        ObjectUtilities.BaseCoreGenericHandler((Object)string, "message");
         super(string);
     }
 
@@ -22,5 +22,10 @@ extends Error {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"message", "An operation is not implemented."};
+    }
+
+    static {
+        MessageHandler_2.BaseCoreGenericHandler();
+    }
 }
 

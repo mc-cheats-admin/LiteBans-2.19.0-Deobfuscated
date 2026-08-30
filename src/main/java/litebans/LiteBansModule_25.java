@@ -10,5 +10,6 @@ public final class LiteBansModule_25 {
 
     public final String BaseCoreGenericHandler() {
         return this.LiteBansModule_31;
+    }
 }
 

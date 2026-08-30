@@ -1,32 +1,33 @@
 package litebans;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
-import net.minecraft.class_2561;
-
-static class LiteBansModule_79
-implements LiteBansModule_252 {
-    final /* synthetic */ LiteBansModule_405 BaseCoreGenericHandler;
-
-    LiteBansModule_79(LiteBansModule_405 la_02) {
-        this.plugin = la_02;
+public final class LiteBansModule_79 {
+        private static final int BaseCoreGenericHandler(int n, int n2) {
+        int n3 = n % n2;
+        return n3 >= 0 ? n3 : n3 + n2;
     }
 
-    public class_2561 LiteBansModule_31(CharSequence charSequence) {
-        throw new UnsupportedOperationException();
+    private static final int BaseCoreGenericHandler(int n, int n2, int n3) {
+        return LiteBansModule_79.BaseCoreGenericHandler(LiteBansModule_79.BaseCoreGenericHandler(n, n3) - LiteBansModule_79.BaseCoreGenericHandler(n2, n3), n3);
     }
 
-    public class_2561 BaseCoreGenericHandler(CharSequence charSequence) {
-        return class_2561.class_2562.method_10872((JsonElement)JsonParser.parseString((String)charSequence.toString()));
+    public static final int LiteBansModule_31(int n, int n2, int n3) {
+        int n4;
+        if (n3 > 0) {
+            n4 = n >= n2 ? n2 : n2 - LiteBansModule_79.BaseCoreGenericHandler(n2, n, n3);
+        } else if (n3 < 0) {
+            n4 = n <= n2 ? n2 : n2 + LiteBansModule_79.BaseCoreGenericHandler(n, n2, -n3);
+        } else {
+            throw new IllegalArgumentException("Step is ");
+        }
+        return n4;
     }
 
-    @Override
-    public Object LiteBansModule_31(CharSequence charSequence) {
-        return this.plugin(charSequence);
+    private static final void BaseCoreGenericHandler() {
+        BaseCoreGenericHandler = new String[]{"Step is ", "Step is zero."};
     }
 
-    @Override
-    public Object BaseCoreGenericHandler(CharSequence charSequence) {
-        return this.LiteBansModule_31(charSequence);
+    static {
+        LiteBansModule_79.BaseCoreGenericHandler();
+    }
 }
 

@@ -1,11 +1,11 @@
 package litebans;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+static final class LiteBansModule_156 {
+    private LiteBansModule_156() {
+    }
 
-@Retention(value=RetentionPolicy.CLASS)
-@Target(value={})
-public @interface LiteBansModule_156 {
+    public /* synthetic */ LiteBansModule_156(LiteBansModule_14 aJ2) {
+        this();
+    }
 }
 

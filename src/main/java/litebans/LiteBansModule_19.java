@@ -10,5 +10,6 @@ extends ByteArrayOutputStream {
 
     public final byte[] BaseCoreGenericHandler() {
         return this.buf;
+    }
 }
 

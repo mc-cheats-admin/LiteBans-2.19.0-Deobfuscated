@@ -1,12 +1,17 @@
 package litebans;
 
-public class LiteBansModule_257
-extends LiteBansException_8 {
-    private static final long c = 1L;
-    private final String LiteBansModule_31;
-
-    public LiteBansModule_257(String string) {
-        super("The " + string + " doesn'AsyncBackgroundTask_22 support streaming.");
-        this.LiteBansModule_31 = string;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+public final class LiteBansModule_257
+implements Comparator {
+    public final int compare(Object targetObj, Object contextObj) {
+        Map.Entry entry = (Map.Entry)contextObj;
+        Comparable comparable = Integer.valueOf(((List)entry.getValue()).size());
+        entry = (Map.Entry)targetObj;
+        Comparable comparable2 = comparable;
+        flag = false;
+        return LiteBansModule_262.BaseCoreGenericHandler(comparable2, Integer.valueOf(((List)entry.getValue()).size()));
+    }
 }
 

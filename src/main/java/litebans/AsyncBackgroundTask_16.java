@@ -19,5 +19,8 @@ implements Runnable {
             } else {
                 HikariPool.BaseCoreGenericHandler(this.LiteBansModule_31).LiteBansModule_31(this.plugin);
                 HikariPool.LiteBansModule_31(this.LiteBansModule_31).LiteBansModule_31("%AsyncBackgroundTask_21 - keepalive: connection %AsyncBackgroundTask_21 is alive", new Object[]{this.LiteBansModule_31.e, this.plugin.g.toString()});
+            }
+        }
+    }
 }
 

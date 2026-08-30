@@ -1,69 +1,53 @@
 package litebans;
 
-public final class LiteBansModule_193
-implements Comparable {
-    public static final ProxyResultSet LiteBansModule_31;
-    private final short c;
-    public static final short e;
-    public static final short AsyncBackgroundTask_5;
-    public static final int LiteBansModule_194;
-    public static final int BaseCoreGenericHandler;
-
-    public static String LiteBansModule_31(short s2) {
-        return String.valueOf(s2 & 0xFFFF);
-    }
-
-    public String toString() {
-        return LiteBansModule_193.LiteBansModule_31(this.c);
-    }
-
-    public static int c(short s2) {
-        return Short.hashCode(s2);
-    }
-
-    public int hashCode() {
-        return LiteBansModule_193.c(this.c);
-    }
-
-    public static boolean BaseCoreGenericHandler(short s2, Object targetObj) {
-        if (!(targetObj instanceof LiteBansModule_193)) {
-            return false;
-        }
-        short s3 = targetObj.BaseCoreGenericHandler();
-        return s2 == s3;
-    }
-
-    public boolean equals(Object targetObj) {
-        return LiteBansModule_193.BaseCoreGenericHandler(this.c, targetObj);
-    }
-
-    private /* synthetic */ LiteBansModule_193(short s2) {
-        this.c = s2;
-    }
-
-    public static short BaseCoreGenericHandler(short s2) {
-        return s2;
-    }
-
-    public static final /* synthetic */ LiteBansModule_193 AsyncBackgroundTask_5(short s2) {
-        return new LiteBansModule_193(s2);
-    }
-
-    public final /* synthetic */ short BaseCoreGenericHandler() {
-        return this.c;
-    }
-
-    public int compareTo(Object targetObj) {
-        LiteBansModule_193 ez_02 = this;
-        short s2 = targetObj.BaseCoreGenericHandler();
-        return ObjectUtilities.BaseCoreGenericHandler(ez_02.BaseCoreGenericHandler() & 0xFFFF, s2 & 0xFFFF);
-    }
+public final class LiteBansModule_193 {
+    public static final /* synthetic */ int[] BaseCoreGenericHandler;
 
     static {
-        BaseCoreGenericHandler = 16;
-        LiteBansModule_194 = 2;
-        AsyncBackgroundTask_5 = (short)-1;
-        e = 0;
-        LiteBansModule_31 = new ProxyResultSet(null);
+        int[] nArray = new int[SecHandler.values().length];
+        try {
+            nArray[SecHandler.LiteBansModule_195.ordinal()] = 1;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            nArray[SecHandler.i.ordinal()] = 2;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            nArray[SecHandler.n.ordinal()] = 3;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            nArray[SecHandler.BaseCoreGenericHandler.ordinal()] = 4;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            nArray[SecHandler.GnuSparseMapHandler.ordinal()] = 5;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            nArray[SecHandler.g.ordinal()] = 6;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            nArray[SecHandler.LiteBansModule_241.ordinal()] = 7;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        BaseCoreGenericHandler = nArray;
+    }
 }
 

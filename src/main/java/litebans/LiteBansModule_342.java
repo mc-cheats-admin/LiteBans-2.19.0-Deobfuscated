@@ -1,90 +1,43 @@
 package litebans;
 
-import org.jetbrains.annotations.NotNull;
+import java.io.InputStream;
 
 public final class LiteBansModule_342 {
-    public static final LiteBansModule_101 c;
-    private final byte[] LiteBansModule_401;
-    private byte Utf8Handler_2;
-    private short LiteBansModule_194;
-    public static final int BaseCoreGenericHandler;
-    public static final int GnuSparseMapHandler;
-    public static final int i;
-    public static final int m;
-    public static final int LiteBansModule_31;
-    public static final int e;
-    public static final int g;
-    public static final int AsyncBackgroundTask_5;
-    private static final LiteBansModule_354 LiteBansModule_240;
+    private static final int LiteBansModule_31;
+    private static final int BaseCoreGenericHandler;
+    private static final byte[] c;
 
-    private LiteBansModule_342(byte[] byArray, byte by2, short s2) {
-        this.LiteBansModule_401 = byArray;
-        this.Utf8Handler_2 = by2;
-        this.LiteBansModule_194 = s2;
-    }
-
-    public /* synthetic */ LiteBansModule_342(byte[] byArray, byte by2, short s2, int n, LiteBansModule_14 aJ2) {
-        if ((n & 2) != 0) {
-            by2 = 0;
+    public static final long BaseCoreGenericHandler(InputStream inputStream, long l3) {
+        int n;
+        long l5;
+        long l7 = l3;
+        while (l3 > 0L && (l5 = inputStream.skip(l3)) != 0L) {
+            l3 -= l5;
         }
-        if ((n & 4) != 0) {
-            s2 = 0;
+        while (l3 > 0L && (n = LiteBansModule_342.BaseCoreGenericHandler(inputStream, c, 0, (int)Math.min(l3, 4096L))) >= 1) {
+            l3 -= (long)n;
         }
-        this(byArray, by2, s2, null);
+        return l7 - l3;
     }
 
-    public final byte[] c() {
-        return this.LiteBansModule_401;
+    public static final int BaseCoreGenericHandler(InputStream inputStream, byte[] byArray) {
+        return LiteBansModule_342.BaseCoreGenericHandler(inputStream, byArray, 0, byArray.length);
     }
 
-    public final byte e() {
-        return this.Utf8Handler_2;
-    }
-
-    public final void BaseCoreGenericHandler(byte by2) {
-        this.Utf8Handler_2 = by2;
-    }
-
-    public final int LiteBansModule_31() {
-        return this.LiteBansModule_401.length;
-    }
-
-    public final boolean BaseCoreGenericHandler(@NotNull byte[] byArray, int n, int n2) {
-        return this.LiteBansModule_31() == n2 - n && this.LiteBansModule_401[0] == byArray[n] ? LiteBansModule_389.BaseCoreGenericHandler(this.LiteBansModule_401, byArray, n, n2) : false;
-    }
-
-    public final long BaseCoreGenericHandler() {
-        long l3 = this.LiteBansModule_31() - 2;
-        long l5 = this.LiteBansModule_194 & 0xFFFFL;
-        l3 = l3++ * l3;
-        long l7 = l3 * l3 * l3;
-        long l8 = l5 * l5;
-        long l9 = l8 * l8 * l7 * l7 * l7;
-        return (l3 << 30) + (l9 >> 10);
-    }
-
-    public String toString() {
-        return super.toString();
-    }
-
-    public /* synthetic */ LiteBansModule_342(byte[] byArray, byte by2, short s2, LiteBansModule_14 aJ2) {
-        this(byArray, by2, s2);
-    }
-
-    public static final /* synthetic */ LiteBansModule_354 AsyncBackgroundTask_5() {
-        return LiteBansModule_240;
+    public static final int BaseCoreGenericHandler(InputStream inputStream, byte[] byArray, int n, int n2) {
+        int n3;
+        if (n2 < 0 || n < 0 || n2 + n > byArray.length) {
+            throw new IndexOutOfBoundsException();
+        }
+        for (n3 = 0; n3 != n2 && (n4 = inputStream.read(byArray, n + n3, n2 - n3)) != -1; n3 += n4) {
+        }
+        return n3;
     }
 
     static {
-        AsyncBackgroundTask_5 = 70;
-        g = 568;
-        e = 16000;
-        LiteBansModule_31 = 600;
-        m = 1600;
-        i = 30;
-        GnuSparseMapHandler = 10;
-        BaseCoreGenericHandler = 10;
-        c = new LiteBansModule_101(null);
-        LiteBansModule_240 = LiteBansModule_371.BaseCoreGenericHandler(LiteBansModule_193.AsyncBackgroundTask_5((short)0), LiteBansModule_389.BaseCoreGenericHandler());
+        BaseCoreGenericHandler = 4096;
+        LiteBansModule_31 = 8024;
+        c = new byte[4096];
+    }
 }
 

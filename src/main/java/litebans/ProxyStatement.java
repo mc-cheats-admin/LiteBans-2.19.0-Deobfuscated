@@ -14,14 +14,14 @@ import javax.net.ssl.HttpsURLConnection;
 import org.jetbrains.annotations.NotNull;
 
 public final class ProxyStatement {
-    private ProxyStatement() {
+        private ProxyStatement() {
     }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
-    public final String LiteBansModule_194(@NotNull String string) {
-        if (this.c(string) || !HexEncodingHelper.BaseCoreGenericHandler(string) || ObjectUtilities.BaseCoreGenericHandler(string, LiteBansModule_91.BaseCoreGenericHandler())) {
+    public final String LiteBansModule_195(@NotNull String string) {
+        if (this.c(string) || !LiteBansModule_346.BaseCoreGenericHandler(string) || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)LiteBansModule_92.BaseCoreGenericHandler())) {
             return null;
         }
         String string2 = this.AsyncBackgroundTask_5(string);
@@ -33,7 +33,7 @@ public final class ProxyStatement {
             httpsURLConnection.setConnectTimeout(n);
             httpsURLConnection.setReadTimeout(n);
             Closeable closeable = httpsURLConnection.getInputStream();
-            Charset charset = LiteBansModule_344.LiteBansModule_31;
+            Charset charset = LiteBansModule_345.LiteBansModule_31;
             closeable = new InputStreamReader((InputStream)closeable, charset);
             int n2 = 512;
             closeable = closeable instanceof BufferedReader ? (BufferedReader)closeable : new BufferedReader((Reader)closeable, n2);
@@ -41,7 +41,7 @@ public final class ProxyStatement {
             try {
                 String string3;
                 Object targetObj = (BufferedReader)closeable;
-                Object contextObj = LiteBansModule_50.BaseCoreGenericHandler().LiteBansModule_31targetObj;
+                Object contextObj = LiteBansModule_50.BaseCoreGenericHandler().LiteBansModule_31((Reader)targetObj);
                 ObjectUtilities.LiteBansModule_31(contextObj, "");
                 NullHandler_3 gr_02 = (NullHandler_3)contextObj;
                 Object v2 = gr_02.get("name");
@@ -59,38 +59,39 @@ public final class ProxyStatement {
             }
             finally {
                 BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-}
+            }
+        }
         catch (Exception exception) {
-            ConfigService configService = (ConfigService)LiteBansModule_209.LiteBansModule_31.BaseCoreGenericHandler().BaseCoreGenericHandler(ConfigService.class);
-            configService.BaseCoreGenericHandler(1, exception);
+            ConfigService configService = (ConfigService)LiteBansModule_210.LiteBansModule_31.BaseCoreGenericHandler().BaseCoreGenericHandler(ConfigService.class);
+            configService.BaseCoreGenericHandler(1, (Object)exception);
         }
         return null;
     }
 
-    public final LiteBansModule_89 BaseCoreGenericHandler(@NotNull String string) {
-        LiteBansModule_89 cM2 = this.LiteBansModule_31(string);
+    public final LiteBansModule_90 BaseCoreGenericHandler(@NotNull String string) {
+        LiteBansModule_90 cM2 = this.LiteBansModule_31(string);
         return !cM2.c() ? cM2 : null;
     }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
-    public final LiteBansModule_89 LiteBansModule_31(@NotNull String string) {
-        ConfigService configService = (ConfigService)LiteBansModule_209.LiteBansModule_31.BaseCoreGenericHandler().BaseCoreGenericHandler(ConfigService.class);
+    public final LiteBansModule_90 LiteBansModule_31(@NotNull String string) {
+        ConfigService configService = (ConfigService)LiteBansModule_210.LiteBansModule_31.BaseCoreGenericHandler().BaseCoreGenericHandler(ConfigService.class);
         Object targetObj = string.toLowerCase(Locale.ROOT);
-        if (!LiteBansModule_50.c().BaseCoreGenericHandler(targetObj)) {
+        if (!LiteBansModule_50.c().BaseCoreGenericHandler((CharSequence)targetObj)) {
             configService.BaseCoreGenericHandler(1, (Object)("Username \"" + string + "\" invalid"));
-            return LiteBansModule_91.LiteBansModule_31();
+            return LiteBansModule_92.LiteBansModule_31();
         }
         try {
             URLConnection uRLConnection = new URL("https://api.mojang.com/users/profiles/minecraft/" + string).openConnection();
             ObjectUtilities.LiteBansModule_31(uRLConnection, "");
             targetObj = (HttpsURLConnection)uRLConnection;
             int n = 10000;
-            targetObj.setConnectTimeout(n);
-            targetObj.setReadTimeout(n);
-            Closeable closeable = targetObj.getInputStream();
-            Charset charset = LiteBansModule_344.LiteBansModule_31;
+            ((URLConnection)targetObj).setConnectTimeout(n);
+            ((URLConnection)targetObj).setReadTimeout(n);
+            Closeable closeable = ((URLConnection)targetObj).getInputStream();
+            Charset charset = LiteBansModule_345.LiteBansModule_31;
             closeable = new InputStreamReader((InputStream)closeable, charset);
             int n2 = 512;
             closeable = closeable instanceof BufferedReader ? (BufferedReader)closeable : new BufferedReader((Reader)closeable, n2);
@@ -106,7 +107,7 @@ public final class ProxyStatement {
                 String string3 = helperObj = v2 instanceof String ? (String)v2 : null;
                 if (string2 != null && helperObj != null) {
                     LiteBansModule_50.c.BaseCoreGenericHandler(gr_02);
-                    LiteBansModule_89 cM2 = new LiteBansModule_89(string2, UUID.fromString(LiteBansModule_50.c.e((String)helperObj)));
+                    LiteBansModule_90 cM2 = new LiteBansModule_90(string2, UUID.fromString(LiteBansModule_50.c.e((String)helperObj)));
                     return cM2;
                 }
                 contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
@@ -117,11 +118,12 @@ public final class ProxyStatement {
             }
             finally {
                 BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-}
-        catch (Exception exception) {
-            configService.BaseCoreGenericHandler(1, exception);
+            }
         }
-        return LiteBansModule_91.LiteBansModule_31();
+        catch (Exception exception) {
+            configService.BaseCoreGenericHandler(1, (Object)exception);
+        }
+        return LiteBansModule_92.LiteBansModule_31();
     }
 
     public final boolean c(@NotNull String string) {
@@ -134,7 +136,7 @@ public final class ProxyStatement {
     }
 
     public final String AsyncBackgroundTask_5(@NotNull String string) {
-        return string.length() != 36 ? string : LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(string, "-", (Object)"");
+        return string.length() != 36 ? string : LiteBansModule_435.LiteBansModule_31.BaseCoreGenericHandler(string, "-", (Object)"");
     }
 
     public final String e(@NotNull String string) {
@@ -169,10 +171,11 @@ public final class ProxyStatement {
         Object v2 = gr_02.get("errorMessage");
         targetObj = v2 instanceof String ? (String)v2 : null;
         String string2 = string;
-        boolean flag = string2 != null ? !((string2).length() == 0) : false;
+        boolean flag = string2 != null ? !(((CharSequence)string2).length() == 0) : false;
         if (flag) {
-            throw new RuntimeExceptiontargetObj;
-}
+            throw new RuntimeException((String)targetObj);
+        }
+    }
 
     public /* synthetic */ ProxyStatement(LiteBansModule_14 aJ2) {
         this();
@@ -180,5 +183,10 @@ public final class ProxyStatement {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"https://sessionserver.mojang.com/session/minecraft/profile/", "", "", "name", "Username \"", "\" invalid", "https://api.mojang.com/users/profiles/minecraft/", "", "", "name", "SQLiteDriverHandler_4", "-", "", "cause", "errorMessage"};
-}
+    }
 
+    static {
+        ProxyStatement.BaseCoreGenericHandler();
+    }
+}
+}

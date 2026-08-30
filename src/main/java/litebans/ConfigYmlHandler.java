@@ -21,20 +21,20 @@ public class ConfigYmlHandler
 implements DedicatedServerModInitializer,
 PlatformPlugin {
     private static final Logger g;
-    private FabricModJsonHandler LiteBansModule_194;
+    private FabricModJsonHandler LiteBansModule_195;
     private java.util.logging.Logger LiteBansModule_31;
     private ModContainer e;
     private LiteBansModule_39 GnuSparseMapHandler;
     private final LiteBansCore AsyncBackgroundTask_5 = new LiteBansCore(this);
-    private LiteBansModule_98 LiteBansModule_240;
+    private LiteBansModule_99 LiteBansModule_241;
     private boolean c = false;
-    @Override
+        @Override
     public void m() {
         this.GnuSparseMapHandler.BaseCoreGenericHandler();
     }
 
     @Override
-    public DatabaseService LiteBansModule_240() {
+    public DatabaseService LiteBansModule_241() {
         return this.AsyncBackgroundTask_5.BroadcastService;
     }
 
@@ -52,17 +52,18 @@ PlatformPlugin {
     public boolean BaseCoreGenericHandler(PluginModule module) {
         boolean flag = module.AsyncBackgroundTask_5();
         if (flag) {
-            if (module instanceof LiteBansModule_430) {
+            if (module instanceof LiteBansModule_432) {
                 this.plugin((ConfigurationManager)module);
             }
-            if (module instanceof LiteBansModule_199) {
+            if (module instanceof LiteBansModule_200) {
                 this.plugin((CommandManager)module);
-}
+            }
+        }
         return flag;
     }
 
     @Override
-    public StackTraceAnalyzer LiteBansModule_194() {
+    public StackTraceAnalyzer LiteBansModule_195() {
         return this.AsyncBackgroundTask_5.Utf8Handler_2;
     }
 
@@ -78,7 +79,7 @@ PlatformPlugin {
 
     @Override
     public ConfigurationManager LiteBansModule_31() {
-        return this.AsyncBackgroundTask_5.LiteBansModule_194;
+        return this.AsyncBackgroundTask_5.LiteBansModule_195;
     }
 
     @Override
@@ -103,12 +104,12 @@ PlatformPlugin {
 
     @Override
     public String getName() {
-        return this.LiteBansModule_194.AsyncBackgroundTask_5();
+        return this.LiteBansModule_195.AsyncBackgroundTask_5();
     }
 
     @Override
     public int BaseCoreGenericHandler() {
-        return this.AsyncBackgroundTask_5.LiteBansModule_401();
+        return this.AsyncBackgroundTask_5.LiteBansModule_403();
     }
 
     @Override
@@ -122,8 +123,8 @@ PlatformPlugin {
     }
 
     @Override
-    public ThreadPoolExecutor LiteBansModule_433() {
-        ThreadPoolExecutor threadPoolExecutor = this.AsyncBackgroundTask_5.LiteBansModule_240;
+    public ThreadPoolExecutor LiteBansModule_435() {
+        ThreadPoolExecutor threadPoolExecutor = this.AsyncBackgroundTask_5.LiteBansModule_241;
         if ((threadPoolExecutor == null || threadPoolExecutor.isShutdown()) && (this.AsyncBackgroundTask_5.GnuSparseMapHandler.get() || this.AsyncBackgroundTask_5.m.get())) {
             ThreadFactoryBuilder threadFactoryBuilder = this.AsyncBackgroundTask_5.AsyncBackgroundTask_5();
             return this.AsyncBackgroundTask_5.BaseCoreGenericHandler(threadFactoryBuilder);
@@ -133,7 +134,7 @@ PlatformPlugin {
 
     @Override
     public long g() {
-        return this.AsyncBackgroundTask_5.LiteBansModule_240();
+        return this.AsyncBackgroundTask_5.LiteBansModule_241();
     }
 
     @Override
@@ -142,18 +143,18 @@ PlatformPlugin {
     }
 
     @Override
-    public LiteBansModule_158 i() {
+    public LiteBansModule_159 i() {
         return new NullHandler(this);
     }
 
     @Override
     public String e() {
-        return this.LiteBansModule_194.LiteBansModule_31();
+        return this.LiteBansModule_195.LiteBansModule_31();
     }
 
     @Override
     public CommandSenderWrapper CommandThrottleService() {
-        return this.LiteBansModule_240.BaseCoreGenericHandler(this.LiteBansModule_240.LiteBansModule_194(), () -> this.LiteBansModule_240.LiteBansModule_194());
+        return this.LiteBansModule_241.BaseCoreGenericHandler(this.LiteBansModule_241.LiteBansModule_195(), () -> this.LiteBansModule_241.LiteBansModule_195());
     }
 
     @Override
@@ -165,11 +166,11 @@ PlatformPlugin {
 
     @Override
     public File getDataFolder() {
-        return FabricLoader.getInstance().getConfigDir().resolve(this.LiteBansModule_194.c()).toFile();
+        return FabricLoader.getInstance().getConfigDir().resolve(this.LiteBansModule_195.c()).toFile();
     }
 
     public int LiteBansModule_31() {
-        return this.LiteBansModule_240.LiteBansModule_31();
+        return this.LiteBansModule_241.LiteBansModule_31();
     }
 
     @Override
@@ -209,32 +210,32 @@ PlatformPlugin {
 
     @Override
     public boolean c() {
-        return this.LiteBansModule_240.BaseCoreGenericHandler();
+        return this.LiteBansModule_241.BaseCoreGenericHandler();
     }
 
     @Override
     public boolean ServerSyncService() {
-        return this.LiteBansModule_240.e();
+        return this.LiteBansModule_241.e();
     }
 
     @Override
-    public boolean LiteBansModule_401() {
+    public boolean LiteBansModule_403() {
         return false;
     }
 
     public void onInitializeServer() {
-        this.LiteBansModule_194 = new FabricModJsonHandler(StackTraceAnalyzer.BaseCoreGenericHandler(FabricModJsonHandler.class));
-        String string = this.LiteBansModule_194.c();
+        this.LiteBansModule_195 = new FabricModJsonHandler(StackTraceAnalyzer.BaseCoreGenericHandler(FabricModJsonHandler.class));
+        String string = this.LiteBansModule_195.c();
         this.LiteBansModule_31 = new WarningHandler(LoggerFactory.getLogger((String)string), string);
-        this.LiteBansModule_240 = BytecodeReflectionHelper.LiteBansModule_31(this, ((ModContainer)FabricLoader.getInstance().getModContainer("fabric-api").get()).getMetadata().getVersion().getFriendlyString().split("\\+")[1]);
+        this.LiteBansModule_241 = Method64396Handler.LiteBansModule_31(this, ((ModContainer)FabricLoader.getInstance().getModContainer("fabric-api").get()).getMetadata().getVersion().getFriendlyString().split("\\+")[1]);
         ServerLifecycleEvents.SERVER_STARTING.register(this::BaseCoreGenericHandler);
         ServerLifecycleEvents.SERVER_STOPPING.register(this::LiteBansModule_31);
         this.AsyncBackgroundTask_5.c();
     }
 
     private final void BaseCoreGenericHandler(MinecraftServer minecraftServer) {
-        this.LiteBansModule_240.BaseCoreGenericHandler(minecraftServer);
-        this.e = FabricLoader.getInstance().getModContainer(this.LiteBansModule_194.c()).orElse(null);
+        this.LiteBansModule_241.BaseCoreGenericHandler(minecraftServer);
+        this.e = FabricLoader.getInstance().getModContainer(this.LiteBansModule_195.c()).orElse(null);
         try {
             Class.forName("me.lucko.fabric.api.permissions.v0.Permissions");
             this.c = true;
@@ -250,15 +251,16 @@ PlatformPlugin {
     }
 
     @Override
-    public void LiteBansModule_31(@Nullable LiteBansModule_175[] em_0Array) {
+    public void LiteBansModule_31(@Nullable LiteBansModule_176[] em_0Array) {
         if (em_0Array == null) {
             return;
         }
-        for (LiteBansModule_175 em_02 : em_0Array) {
+        for (LiteBansModule_176 em_02 : em_0Array) {
             if (!(em_02 instanceof LiteBansModule_51)) continue;
             LiteBansModule_51 bk_02 = (LiteBansModule_51)em_02;
             bk_02.BaseCoreGenericHandler();
-}
+        }
+    }
 
     @Override
     public boolean BaseCoreGenericHandler(String string, Supplier supplier) {
@@ -267,7 +269,7 @@ PlatformPlugin {
 
     @Override
     public void c(Runnable runnable) {
-        this.LiteBansModule_240.BaseCoreGenericHandler(runnable);
+        this.LiteBansModule_241.BaseCoreGenericHandler(runnable);
     }
 
     @Override
@@ -277,7 +279,7 @@ PlatformPlugin {
 
     @Override
     public void BaseCoreGenericHandler(Runnable runnable) {
-        this.LiteBansModule_433().execute(runnable);
+        this.LiteBansModule_435().execute(runnable);
     }
 
     @Override
@@ -290,7 +292,8 @@ PlatformPlugin {
         }
         catch (RejectedExecutionException rejectedExecutionException) {
             this.plugin(rejectedExecutionException);
-}
+        }
+    }
 
     @Override
     public void LiteBansModule_31(Runnable runnable) {
@@ -309,7 +312,8 @@ PlatformPlugin {
         }
         catch (RejectedExecutionException rejectedExecutionException) {
             this.plugin(rejectedExecutionException);
-}
+        }
+    }
 
     private final void BaseCoreGenericHandler(Exception exception) {
         if (this.AsyncBackgroundTask_5.m.get()) {
@@ -325,13 +329,13 @@ PlatformPlugin {
     }
 
     @Override
-    public void BaseCoreGenericHandler(LiteBansModule_417 ln2) {
+    public void BaseCoreGenericHandler(LiteBansModule_419 ln2) {
         this.AsyncBackgroundTask_5.i = ln2;
     }
 
     @Override
     public void BaseCoreGenericHandler(ConfigurationManager j_02) {
-        this.AsyncBackgroundTask_5.LiteBansModule_194 = j_02;
+        this.AsyncBackgroundTask_5.LiteBansModule_195 = j_02;
     }
 
     @Override
@@ -339,20 +343,20 @@ PlatformPlugin {
     }
 
     @Override
-    public void BaseCoreGenericHandler(@Nullable LiteBansModule_175[] em_0Array) {
+    public void BaseCoreGenericHandler(@Nullable LiteBansModule_176[] em_0Array) {
     }
 
     @Override
     public CommandSenderWrapper LiteBansModule_31(Object targetObj) {
-        return this.LiteBansModule_240.c(targetObj);
+        return this.LiteBansModule_241.c(targetObj);
     }
 
     @Override
     public CommandSenderWrapper BaseCoreGenericHandler(Object targetObj) {
-        return this.LiteBansModule_240.LiteBansModule_31(targetObj);
+        return this.LiteBansModule_241.LiteBansModule_31(targetObj);
     }
 
-    public ModContainer LiteBansModule_240() {
+    public ModContainer LiteBansModule_241() {
         return this.e;
     }
 
@@ -360,8 +364,8 @@ PlatformPlugin {
         return this.AsyncBackgroundTask_5;
     }
 
-    public LiteBansModule_98 g() {
-        return this.LiteBansModule_240;
+    public LiteBansModule_99 g() {
+        return this.LiteBansModule_241;
     }
 
     public boolean AsyncBackgroundTask_5() {
@@ -375,5 +379,6 @@ PlatformPlugin {
 
     private static final void e() {
         i = new String[]{"config.yml", "fabric-api", "\\+", "me.lucko.fabric.api.permissions.v0.Permissions", "Invalid delay ", "Startup was cancelled"};
+    }
 }
 

@@ -1,18 +1,49 @@
 package litebans;
 
-import net.minecraft.class_3222;
+import java.util.zip.ZipException;
+public final class LiteBansModule_402
+implements LiteBansModule_353 {
+    public static final int e;
+    public static final int g;
+    public static final int BaseCoreGenericHandler;
+    public static final LiteBansModule_402 LiteBansModule_195;
+    public static final LiteBansModule_402 LiteBansModule_31;
+    public static final LiteBansModule_402 c;
+    private final int AsyncBackgroundTask_5;
 
-public class LiteBansModule_402
-extends ArgsHandler_2 {
-    public LiteBansModule_402(PlatformPlugin plugin) {
-        super(plugin);
+    private LiteBansModule_402(int n) {
+        this.AsyncBackgroundTask_5 = n;
     }
 
     @Override
-    public Object AsyncBackgroundTask_5(Object targetObj) {
-        if (targetObj instanceof class_3222) {
-            return targetObj.method_5671();
+    public LiteBansModule_178 BaseCoreGenericHandler(byte[] byArray, int n, int n2, boolean flag, int n3) {
+        switch (this.AsyncBackgroundTask_5) {
+            case 0: {
+                throw new ZipException("Bad extra field starting LiteBansModule_21 " + n + ".  Block length of " + n3 + " bytes exceeds remaining data of " + (n2 - 4) + " ");
+            }
+            case 2: {
+                LiteBansModule_265 hn_02 = new LiteBansModule_265();
+                if (flag) {
+                    hn_02.BaseCoreGenericHandler(byArray, n, n2);
+                } else {
+                    hn_02.LiteBansModule_31(byArray, n, n2);
+                }
+                return hn_02;
+            }
+            case 1: {
+                return null;
+            }
         }
-        return targetObj;
+        throw new ZipException("Unknown UnparseableExtraField key: " + this.AsyncBackgroundTask_5);
+    }
+
+    static {
+        BaseCoreGenericHandler = 2;
+        g = 1;
+        e = 0;
+        LiteBansModule_195 = new LiteBansModule_402(0);
+        LiteBansModule_31 = new LiteBansModule_402(1);
+        c = new LiteBansModule_402(2);
+    }
 }
 

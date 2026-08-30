@@ -13,14 +13,14 @@ public final class DiscordWebhookClient_2 {
     private final PlatformPlugin AsyncBackgroundTask_5;
     private final File c;
     private final HashMap e;
-    private String LiteBansModule_194;
+    private String LiteBansModule_195;
     private final ConfigService BaseCoreGenericHandler;
-    public DiscordWebhookClient_2(@NotNull PlatformPlugin plugin, @NotNull File file) {
+        public DiscordWebhookClient_2(@NotNull PlatformPlugin plugin, @NotNull File file) {
         this.AsyncBackgroundTask_5 = plugin;
         this.c = file;
         this.e = new HashMap();
-        this.LiteBansModule_194 = "";
-        this.plugin = this.AsyncBackgroundTask_5.BaseCoreGenericHandler(ConfigService.class);
+        this.LiteBansModule_195 = "";
+        this.plugin = (ConfigService)this.AsyncBackgroundTask_5.BaseCoreGenericHandler(ConfigService.class);
     }
 
     public /* synthetic */ DiscordWebhookClient_2(PlatformPlugin plugin, File file, int n, LiteBansModule_14 aJ2) {
@@ -41,7 +41,7 @@ public final class DiscordWebhookClient_2 {
             ConfigService q_03 = configService;
             q_03.BaseCoreGenericHandler((Object)("Fetch webhook: " + string + " => '" + string2 + '\''));
         }
-        return ObjectUtilities.BaseCoreGenericHandler(string2, (Object)"on") || ObjectUtilities.BaseCoreGenericHandler(string2, (Object)"true") || (string2).length() == 0 ? this.LiteBansModule_194 : (ObjectUtilities.BaseCoreGenericHandler(string2, (Object)"off") || ObjectUtilities.BaseCoreGenericHandler(string2, (Object)"false") ? "" : string2);
+        return ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)"on") || ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)"true") || ((CharSequence)string2).length() == 0 ? this.LiteBansModule_195 : (ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)"off") || ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)"false") ? "" : string2);
     }
 
     public final DiscordWebhookClient_2 BaseCoreGenericHandler() {
@@ -60,9 +60,9 @@ public final class DiscordWebhookClient_2 {
             gn_02.BaseCoreGenericHandler(DatabaseService.LiteBansModule_31("webhooks.yml", null));
             String string = gn_02.BaseCoreGenericHandler("default_webhook", "");
             CharSequence charSequence = string;
-            this.LiteBansModule_194 = charSequence == null || charSequence.length() == 0 ? this.plugin.LiteBansModule_194().aO() : string;
+            this.LiteBansModule_195 = charSequence == null || charSequence.length() == 0 ? this.plugin.LiteBansModule_195().aO() : string;
             this.e.clear();
-            Object object322 = BanHandler.LiteBansModule_401;
+            Object object322 = BanHandler.LiteBansModule_403;
             Iterable iterable2 = ((TempHandler)object322).BaseCoreGenericHandler();
             Iterable iterable3 = iterable2;
             Collection collection = new ArrayList();
@@ -85,7 +85,8 @@ public final class DiscordWebhookClient_2 {
                     default: {
                         objectArray = new Object[]{a_2.c(), "temp_" + a_2.c(), "temp_ip" + a_2.c(), "ip" + a_2.c(), "un" + a_2.c()};
                         list = CollectionUtilities.LiteBansModule_31(objectArray);
-}
+                    }
+                }
                 Iterable iterable4 = list;
                 objectArray = iterable4;
                 iterable = new ArrayList(CollectionUtilities.BaseCoreGenericHandler(iterable4, 10));
@@ -124,7 +125,8 @@ public final class DiscordWebhookClient_2 {
                     default: {
                         helperObj = new Object[]{objectArray.c(), "temp_" + objectArray.c(), "temp_ip" + objectArray.c(), "ip" + objectArray.c(), "un" + objectArray.c()};
                         list = CollectionUtilities.LiteBansModule_31((Object[])helperObj);
-}
+                    }
+                }
                 iterable = list;
                 flag2 = false;
                 helperObj = iterable;
@@ -136,7 +138,7 @@ public final class DiscordWebhookClient_2 {
                     Iterator iterator2 = iterator;
                     iterator2.add(e10.toString());
                 }
-                objectArray = (List)(iterator);
+                objectArray = (List)((Object)iterator);
                 bl10 = false;
                 helperObj = objectArray;
                 iterable = new ArrayList(CollectionUtilities.BaseCoreGenericHandler((Iterable)objectArray, 10));
@@ -152,9 +154,9 @@ public final class DiscordWebhookClient_2 {
                 CollectionUtilities.BaseCoreGenericHandler(collection, (Iterable)contextObj);
             }
             for (Object object322 : (Iterable)CollectionUtilities.BaseCoreGenericHandler(collection3, (Iterable)((List)collection))) {
-                (this.e).put(object322, this.plugin(gn_02, "" + (String)object322, ""));
+                ((Map)this.e).put(object322, this.plugin(gn_02, "" + (String)object322, ""));
             }
-            (this.e).put("alts", this.plugin(gn_02, "webhooks.alts", "off"));
+            ((Map)this.e).put("alts", this.plugin(gn_02, "webhooks.alts", "off"));
         }
         catch (Exception exception) {
             this.plugin.BaseCoreGenericHandler("webhooks", exception);
@@ -163,9 +165,9 @@ public final class DiscordWebhookClient_2 {
     }
 
     private final String BaseCoreGenericHandler(DatabaseService gn_02, String string, String string2) {
-        Object targetObj = gn_02.BaseCoreGenericHandler(string, string2);
+        Object targetObj = gn_02.BaseCoreGenericHandler(string, (Object)string2);
         if (targetObj instanceof Boolean) {
-            if (targetObj.booleanValue()) {
+            if (((Boolean)targetObj).booleanValue()) {
                 return "on";
             }
             return "off";
@@ -175,5 +177,14 @@ public final class DiscordWebhookClient_2 {
         }
         AssertionUtilities.BaseCoreGenericHandler();
         throw new CommandExitException();
+    }
+
+    private static final void LiteBansModule_31() {
+        LiteBansModule_31 = new String[]{"", "webhooks.yml", "", "Fetch webhook: ", " => '", "on", "true", "off", "false", "", "webhooks.yml", "webhooks.yml", "default_webhook", "", "un", "temp_", "temp_ip", "ip", "un", "un", "temp_", "temp_ip", "ip", "un", "silent_", "", "", "alts", "webhooks.alts", "off", "webhooks", "on", "off", "Fetch webhook: ", " => '"};
+    }
+
+    static {
+        DiscordWebhookClient_2.LiteBansModule_31();
+    }
 }
 

@@ -9,7 +9,7 @@ public final class LitebansHandler {
     private static String e;
     private static String g;
     private static String BaseCoreGenericHandler;
-    private LitebansHandler() {
+        private LitebansHandler() {
     }
 
     public final String AsyncBackgroundTask_5() {
@@ -44,7 +44,7 @@ public final class LitebansHandler {
         g = string;
     }
 
-    public final String LiteBansModule_194() {
+    public final String LiteBansModule_195() {
         return BaseCoreGenericHandler;
     }
 
@@ -60,5 +60,10 @@ public final class LitebansHandler {
         e = "redacted";
         g = "&pluginVersion=";
         BaseCoreGenericHandler = "&CommandThrottleService=";
+    }
+
+    private static final void LiteBansModule_31() {
+        LiteBansModule_195 = new String[]{"litebans", "?resourceId=", "redacted", "&pluginVersion=", "&CommandThrottleService="};
+    }
 }
 

@@ -1,58 +1,90 @@
 package litebans;
 
-import java.io.Serializable;
+import com.mojang.brigadier.Command;
+import com.mojang.brigadier.context.CommandContext;
+import com.mojang.brigadier.suggestion.SuggestionProvider;
+import com.mojang.brigadier.suggestion.SuggestionsBuilder;
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public final class LiteBansModule_354
-implements Serializable {
-    private final Object LiteBansModule_31;
-    private final Object c;
-    public LiteBansModule_354(Object targetObj, Object contextObj) {
-        this.LiteBansModule_31 = targetObj;
-        this.c = contextObj;
+public class LiteBansModule_354
+implements LiteCommand,
+Command,
+SuggestionProvider {
+    private final LiteCommand LiteBansModule_31;
+    private final String BaseCoreGenericHandler;
+    private final PlatformPlugin e;
+    private final String[] c;
+        public LiteBansModule_354(LiteCommand command, String string, PlatformPlugin plugin, String[] args) {
+        this.LiteBansModule_31 = command;
+        this.plugin = string;
+        this.e = plugin;
+        this.c = args;
     }
 
-    public final Object LiteBansModule_31() {
+    public int run(CommandContext commandContext) {
+        CommandSenderWrapper sender = this.e.BaseCoreGenericHandler(commandContext.getSource());
+        String[] args = commandContext.getInput().split(" ");
+        if (args.length >= 2) {
+            String[] filteredArgs = Arrays.copyOfRange(args, 1, args.length);
+            this.plugin(sender, filteredArgs);
+        } else {
+            this.plugin(sender, new String[0]);
+        }
+        return 1;
+    }
+
+    @Override
+    public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, String[] args) {
+        try {
+            this.e.z().BaseCoreGenericHandler(this.LiteBansModule_31, sender, args);
+        }
+        catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+    @Override
+    public String getName() {
+        return this.LiteBansModule_31.getName();
+    }
+
+    @Override
+    public @Nullable String getPermission() {
+        return this.plugin;
+    }
+
+    @Override
+    public @NotNull List suggest(@NotNull CommandSenderWrapper sender, String[] args) {
+        return this.e.z().BaseCoreGenericHandler(this, this.getName(), sender, args);
+    }
+
+    public CompletableFuture getSuggestions(CommandContext commandContext, SuggestionsBuilder suggestionsBuilder) {
+        CommandSenderWrapper sender = this.e.BaseCoreGenericHandler(commandContext.getSource());
+        String[] args = commandContext.getInput().split(" ");
+        List list = this.suggest(sender, args);
+        list.forEach(arg_0 -> ((SuggestionsBuilder)suggestionsBuilder).suggest(arg_0));
+        return suggestionsBuilder.buildFuture();
+    }
+
+    public LiteCommand BaseCoreGenericHandler() {
         return this.LiteBansModule_31;
     }
 
-    public final Object e() {
+    @Override
+    public String[] getAliases() {
         return this.c;
     }
 
-    public String toString() {
-        return "" + '(' + this.LiteBansModule_31 + ", " + this.c + ')';
+    private static final void LiteBansModule_31() {
+        AsyncBackgroundTask_5 = new String[]{" ", " "};
     }
 
-    public final Object BaseCoreGenericHandler() {
-        return this.LiteBansModule_31;
+    static {
+        LiteBansModule_354.LiteBansModule_31();
     }
-
-    public final Object c() {
-        return this.c;
-    }
-
-    public int hashCode() {
-        int n = this.LiteBansModule_31 == null ? 0 : this.LiteBansModule_31.hashCode();
-        n = n * 31 + (this.c == null ? 0 : this.c.hashCode());
-        return n;
-    }
-
-    public boolean equals(@Nullable Object targetObj) {
-        if (this == targetObj) {
-            return true;
-        }
-        if (!(targetObj instanceof LiteBansModule_354)) {
-            return false;
-        }
-        LiteBansModule_354 jT2 = (LiteBansModule_354)targetObj;
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_31, jT2.LiteBansModule_31)) {
-            return false;
-        }
-        return ObjectUtilities.BaseCoreGenericHandler(this.c, jT2.c);
-    }
-
-    private static final void AsyncBackgroundTask_5() {
-        BaseCoreGenericHandler = new String[]{", "};
 }
 

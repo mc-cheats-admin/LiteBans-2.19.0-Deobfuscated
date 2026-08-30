@@ -9,28 +9,28 @@ import org.jetbrains.annotations.Nullable;
 public final class AsyncBackgroundTask_22
 extends PluginModule
 implements Runnable {
-    public static final LiteBansModule_273 LiteBansModule_31;
-    private final LiteBansModule_161 c = ProxyConnection.BaseCoreGenericHandler(() -> AsyncBackgroundTask_22.BaseCoreGenericHandler(this));
-    private final ArrayBlockingQueue LiteBansModule_194 = new ArrayBlockingQueue(512);
+    public static final LiteBansModule_274 LiteBansModule_31;
+    private final LiteBansModule_162 c = ProxyConnection.BaseCoreGenericHandler(() -> AsyncBackgroundTask_22.BaseCoreGenericHandler(this));
+    private final ArrayBlockingQueue LiteBansModule_195 = new ArrayBlockingQueue(512);
     private final AtomicBoolean g = new AtomicBoolean();
     public static final long AsyncBackgroundTask_5;
     public static final long e;
-    public static final int LiteBansModule_240;
-    public AsyncBackgroundTask_22(@NotNull PlatformPlugin plugin) {
+    public static final int LiteBansModule_241;
+        public AsyncBackgroundTask_22(@NotNull PlatformPlugin plugin) {
         super(plugin);
     }
 
     private final AsyncBackgroundTask_21 BaseCoreGenericHandler() {
-        LiteBansModule_161 eE2 = this.c;
+        LiteBansModule_162 eE2 = this.c;
         return (AsyncBackgroundTask_21)eE2.BaseCoreGenericHandler();
     }
 
     @Override
     public void e() {
-        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
         configService.e();
         long l3 = 80L;
-        if (configService.LiteBansModule_194().e() > 1) {
+        if (configService.LiteBansModule_195().e() > 1) {
             l3 = 30L;
         }
         this.plugin.LiteBansModule_31(this, l3, l3);
@@ -38,7 +38,7 @@ implements Runnable {
 
     @Override
     public void c() {
-        this.LiteBansModule_194.clear();
+        this.LiteBansModule_195.clear();
         AtomicBoolean atomicBoolean = this.g;
         atomicBoolean.set(false);
     }
@@ -58,12 +58,12 @@ implements Runnable {
     public void run() {
         AtomicBoolean atomicBoolean = this.g;
         Object targetObj = atomicBoolean;
-        if (!targetObj.compareAndSet(false, true)) return;
-        targetObj = this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        if (!((AtomicBoolean)targetObj).compareAndSet(false, true)) return;
+        targetObj = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
         try {
             int n2;
             AsyncBackgroundTask_22 t2 = this;
-            n = t2.LiteBansModule_194.size() >= 256 ? 3 : (t2.LiteBansModule_194.size() >= 128 ? 2 : (t2.LiteBansModule_194.size() >= 64 ? 1 : 0));
+            n = t2.LiteBansModule_195.size() >= 256 ? 3 : (t2.LiteBansModule_195.size() >= 128 ? 2 : (t2.LiteBansModule_195.size() >= 64 ? 1 : 0));
             AsyncBackgroundTask_22 t3 = this;
             switch (n) {
                 case 0: {
@@ -85,92 +85,100 @@ implements Runnable {
                 default: {
                     AssertionUtilities.BaseCoreGenericHandler();
                     throw new CommandExitException();
-}
+                }
+            }
             int n3 = n2;
-            if (targetObj.BaseCoreGenericHandler(2) && n <= 2) {
+            if (((DatabaseMonitorService)targetObj).BaseCoreGenericHandler(2) && n <= 2) {
                 return;
             }
             int n4 = 1;
             if (n4 > n3) return;
             while (true) {
-                LiteBansModule_95 cp_02;
-                if (this.LiteBansModule_194.peek() == null) {
+                LiteBansModule_96 cp_02;
+                if ((LiteBansModule_96)this.LiteBansModule_195.peek() == null) {
                     return;
                 }
                 if (this.plugin(cp_02)) return;
-                LiteBansModule_95 cp_03 = this.LiteBansModule_194.poll();
+                LiteBansModule_96 cp_03 = (LiteBansModule_96)this.LiteBansModule_195.poll();
                 if (cp_03 != cp_02) {
                     ObjectUtilities.BaseCoreGenericHandler(cp_03);
                     if (this.plugin(cp_03)) {
-                        this.LiteBansModule_194.offer(cp_03);
+                        this.LiteBansModule_195.offer(cp_03);
                         return;
-}
+                    }
+                }
                 AsyncBackgroundTask_22 t4 = this;
                 ObjectUtilities.BaseCoreGenericHandler(cp_03);
-                LiteBansModule_95 cp_04 = cp_03;
-                LiteBansModule_95 cp_05 = cp_04;
+                LiteBansModule_96 cp_04 = cp_03;
+                LiteBansModule_96 cp_05 = cp_04;
                 new AltsHandler(t4.BaseCoreGenericHandler, cp_05.c(), cp_05.g(), cp_05.LiteBansModule_31()).run();
                 if (n4 == n3) return;
                 ++n4;
-}
+            }
+        }
         catch (Exception exception) {
             if (exception instanceof InterruptedException) {
                 return;
             }
-            targetObj.BaseCoreGenericHandler(exception);
+            ((DatabaseMonitorService)targetObj).BaseCoreGenericHandler(exception);
             return;
         }
         finally {
             AtomicBoolean atomicBoolean2 = atomicBoolean;
             atomicBoolean2.set(false);
-}
+        }
+    }
 
-    private final boolean BaseCoreGenericHandler(LiteBansModule_95 cp_02) {
+    private final boolean BaseCoreGenericHandler(LiteBansModule_96 cp_02) {
         boolean flag;
-{
+        block3: {
             Iterable iterable = this.plugin().BaseCoreGenericHandler();
             if (iterable instanceof Collection && ((Collection)iterable).isEmpty()) {
                 flag = false;
             } else {
                 for (Object t2 : iterable) {
-                    LiteBansModule_95 cp_03 = (LiteBansModule_95)t2;
-                    if (!(ObjectUtilities.BaseCoreGenericHandler(cp_03.c(), cp_02.c()) || ObjectUtilities.BaseCoreGenericHandler(cp_03.g(), cp_02.g()) || ObjectUtilities.BaseCoreGenericHandler(cp_03.LiteBansModule_31(), cp_02.LiteBansModule_31()))) continue;
+                    LiteBansModule_96 cp_03 = (LiteBansModule_96)t2;
+                    if (!(ObjectUtilities.BaseCoreGenericHandler((Object)cp_03.c(), (Object)cp_02.c()) || ObjectUtilities.BaseCoreGenericHandler((Object)cp_03.g(), (Object)cp_02.g()) || ObjectUtilities.BaseCoreGenericHandler((Object)cp_03.LiteBansModule_31(), (Object)cp_02.LiteBansModule_31()))) continue;
                     flag = true;
-                    break;
+                    break block3;
                 }
                 flag = false;
-}
+            }
+        }
         return flag;
     }
 
     public final void BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, @Nullable String string3) {
-        CommandThrottleService v2 = this.plugin.BaseCoreGenericHandler(CommandThrottleService.class);
-        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
-        if (configService.LiteBansModule_194().LockdownCommandHandler() && !v2.BaseCoreGenericHandler((byte)0, string2)) {
+        CommandThrottleService v2 = (CommandThrottleService)this.plugin.BaseCoreGenericHandler(CommandThrottleService.class);
+        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        if (configService.LiteBansModule_195().LockdownCommandHandler() && !v2.BaseCoreGenericHandler((byte)0, string2)) {
             String string4 = string;
-            ObjectUtilities.BaseCoreGenericHandler(string4);
+            ObjectUtilities.BaseCoreGenericHandler((Object)string4);
             String string5 = string2;
-            ObjectUtilities.BaseCoreGenericHandler(string5);
-            this.LiteBansModule_194.offer(new LiteBansModule_95(string4, HexEncodingHelper.LiteBansModule_194(string5), string3));
+            ObjectUtilities.BaseCoreGenericHandler((Object)string5);
+            this.LiteBansModule_195.offer(new LiteBansModule_96(string4, LiteBansModule_346.LiteBansModule_195(string5), string3));
             ConfigService q_03 = configService;
             if (q_03.g()) {
                 ConfigService q_04 = q_03;
                 q_04.BaseCoreGenericHandler((Object)("Offer " + string));
-}
+            }
+        }
+    }
 
     private static final AsyncBackgroundTask_21 BaseCoreGenericHandler(AsyncBackgroundTask_22 t2) {
         return (AsyncBackgroundTask_21)t2.BaseCoreGenericHandler.BaseCoreGenericHandler(AsyncBackgroundTask_21.class);
     }
 
     static {
-        LiteBansModule_240 = 512;
+        LiteBansModule_241 = 512;
         e = 30L;
         AsyncBackgroundTask_5 = 80L;
         AsyncBackgroundTask_22.AsyncBackgroundTask_5();
-        LiteBansModule_31 = new LiteBansModule_273(null);
+        LiteBansModule_31 = new LiteBansModule_274(null);
     }
 
     private static final void AsyncBackgroundTask_5() {
         i = new String[]{"Offer "};
+    }
 }
 

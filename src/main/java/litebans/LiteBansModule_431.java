@@ -1,35 +1,11 @@
 package litebans;
 
-import com.velocitypowered.api.proxy.Player;
-import java.util.Collection;
-@ModulePriority(priority=2)
-public class LiteBansModule_431
-extends ConfigurationManager {
-    public LiteBansModule_431(PlatformPlugin plugin) {
-        super(plugin);
-    }
+public final class LiteBansModule_431 {
+    public static final SQLiteDriverHandler_4 LiteBansModule_31 = new SQLiteDriverHandler_4(null);
+    private static final ThreadLocal BaseCoreGenericHandler = new AsyncBackgroundTask_11();
 
-    @Override
-    public int LiteBansModule_31() {
-        Collection collection = this.plugin();
-        return collection.size();
+    public static final /* synthetic */ ThreadLocal BaseCoreGenericHandler() {
+        return BaseCoreGenericHandler;
     }
-
-    private final Collection BaseCoreGenericHandler() {
-        return (this.plugin).c.getAllPlayers();
-    }
-
-    @Override
-    public CommandSenderWrapper[] BaseCoreGenericHandler() {
-        PlatformPlugin plugin = this.plugin;
-        Collection collection = this.plugin();
-        if (collection.isEmpty()) {
-            return CommandSenderWrapper.BaseCoreGenericHandler;
-        }
-        CommandSenderWrapper[] jv_0Array = new CommandSenderWrapper[collection.size()];
-        for (Player player : collection) {
-            jv_0Array[n++] = plugin.BaseCoreGenericHandler(player);
-        }
-        return jv_0Array;
 }
 

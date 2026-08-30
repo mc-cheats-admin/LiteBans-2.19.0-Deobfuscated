@@ -8,7 +8,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class GeoIPLookupService_3
 extends MessageHandler {
-    public GeoIPLookupService_3(@NotNull PlatformPlugin plugin) {
+        public GeoIPLookupService_3(@NotNull PlatformPlugin plugin) {
         super(plugin);
     }
 
@@ -18,103 +18,117 @@ extends MessageHandler {
      */
     public void LiteBansModule_31(@NotNull Object v1) {
         try {
-{
-                                arg2 = ((ConfigService)arg1.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).BroadcastService();
-                arg1 = this.plugin(v1);
-                arg3 = arg1.LiteBansModule_194();
-                arg4 = arg1.e();
-                arg5 = arg1.AsyncBackgroundTask_5();
-                arg6 = arg2.LiteBansModule_194().be();
-                arg7 = this.c(v1);
-                                arg8 = (DatabaseMonitorService)arg8.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+            block19: {
+                v2 = this;
+                v3 = ((ConfigService)v2.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).BroadcastService();
+                v2 = this.plugin(v1);
+                v4 = v2.LiteBansModule_195();
+                v5 = v2.e();
+                v6 = v2.AsyncBackgroundTask_5();
+                v7 = v3.LiteBansModule_195().be();
+                v8 = this.c(v1);
+                v9 = this;
+                v9 = (DatabaseMonitorService)v9.LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class);
                 try {
-                    arg9 = arg8.LiteBansModule_194();
-                    arg10 = arg9;
+                    v10 = v9.LiteBansModule_195();
+                    v11 = v10;
                     try {
-{
-                                arg11 = (LiteBansModule_82)arg10;
-                                arg12 = arg9;
-                                arg13 = arg3.length();
-                                if (ObjectUtilities.BaseCoreGenericHandler(arg13, arg6 & 255) <= 0) break;
-                                this.plugin(arg12, arg3, arg6);
-                                if (!this.plugin(arg12, v1, arg4, arg3, LiteBansModule_242.BaseCoreGenericHandler(BlackHandler.c, "Invalid username.\nMaximum " + BlackHandler.i + LiteBansModule_283.LiteBansModule_31(arg6) + ' ' + BlackHandler.LiteBansModule_194("characters") + ", found " + BlackHandler.AsyncBackgroundTask_5(BlackHandler.e(String.valueOf(arg3.length())))), null, "KICK_OTHER", false)) break;
-                                break;
+                        block21: {
+                            block20: {
+                                v12 = (LiteBansModule_83)v11;
+                                v13 = v10;
+                                v14 = v4.length();
+                                if (ObjectUtilities.BaseCoreGenericHandler(v14, v7 & 255) <= 0) break block20;
+                                this.plugin(v13, v4, v7);
+                                if (!this.plugin(v13, v1, v5, v4, LiteBansModule_243.BaseCoreGenericHandler(BlackHandler.c, "Invalid username.\nMaximum " + BlackHandler.i + LiteBansModule_284.LiteBansModule_31(v7) + ' ' + BlackHandler.LiteBansModule_195("characters") + ", found " + BlackHandler.AsyncBackgroundTask_5(BlackHandler.e(String.valueOf(v4.length())))), null, "KICK_OTHER", false)) break block20;
+                                break block21;
                             }
-                            if (!this.LiteBansModule_31(arg7)) break;
-                            arg14 = AllHandler_3.BaseCoreGenericHandler(arg12, arg4, arg5, null, arg7, false, false, 52, null);
-                            arg15 = arg2;
-                            arg16 = 3;
-                            if (arg15.BaseCoreGenericHandler(arg16)) {
-                                arg17 = arg15;
-                                arg17.BaseCoreGenericHandler((Object)("Ban for " + arg3 + " (uuid: '" + arg4 + "') on " + arg7 + ": " + arg14));
+                            if (!this.LiteBansModule_31(v8)) break block21;
+                            v15 = AllHandler_3.BaseCoreGenericHandler(v13, v5, v6, null, v8, false, false, 52, null);
+                            v16 = v3;
+                            v17 = 3;
+                            if (v16.BaseCoreGenericHandler(v17)) {
+                                v18 = v16;
+                                v18.BaseCoreGenericHandler((Object)("Ban for " + v4 + " (uuid: '" + v5 + "') on " + v8 + ": " + v15));
                             }
-                            arg15 = this.plugin(arg5);
-                            if (arg15 != null) {
-                                arg18 = this.plugin(arg12, v1, (String)arg15, arg7, arg4, arg3);
+                            v16 = this.plugin(v6);
+                            if (v16 != null) {
+                                v19 = this.plugin(v13, v1, (String)v16, v8, v5, v4);
                             }
-                            if (arg18 || arg14 == null) ** GOTO lbl-1000
-                                                        if (!((BroadcastService)arg19.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class)).BaseCoreGenericHandler(arg14, arg3)) {
-                                arg18 = this.plugin(arg12, v1, arg4, arg3, arg5, arg7, arg14);
-                            } else if (!arg18 && arg2.LiteBansModule_194().NullHandler() && (arg20 = AllHandler_3.BaseCoreGenericHandler(arg12, arg3, arg4, arg7, null, 8, null)) != null) {
-                                                                if (!((BroadcastService)arg21.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class)).BaseCoreGenericHandler(arg20, arg3) && (arg18 = this.plugin(arg12, v1, arg4, arg3, arg5, arg7, arg20))) {
-}
-                        arg11 = KotlinUnitHandler.BaseCoreGenericHandler;
+                            if (v19 || v15 == null) ** GOTO lbl-1000
+                            v20 = this;
+                            if (!((BroadcastService)v20.LiteBansModule_241().BaseCoreGenericHandler(BroadcastService.class)).BaseCoreGenericHandler(v15, v4)) {
+                                v19 = this.plugin(v13, v1, v5, v4, v6, v8, v15);
+                            } else if (!v19 && v3.LiteBansModule_195().NullHandler() && (v21 = AllHandler_3.BaseCoreGenericHandler(v13, v4, v5, v8, null, 8, null)) != null) {
+                                v22 = this;
+                                if (!((BroadcastService)v22.LiteBansModule_241().BaseCoreGenericHandler(BroadcastService.class)).BaseCoreGenericHandler(v21, v4) && (v19 = this.plugin(v13, v1, v5, v4, v6, v8, v21))) {
+                                }
+                            }
+                        }
+                        v12 = KotlinUnitHandler.BaseCoreGenericHandler;
                     }
-                    catch (Throwable arg22) {
-                        arg23 = arg22;
-                        throw arg22;
+                    catch (Throwable v23) {
+                        v24 = v23;
+                        throw v23;
                     }
                     finally {
-                        BlockHandler.BaseCoreGenericHandler(arg10, arg23);
-}
-                catch (SQLException arg24) {
-                    if (arg8.LiteBansModule_31(arg24)) break;
-                    throw arg24;
-}
-            if (arg25) {
+                        BlockHandler.BaseCoreGenericHandler(v11, v24);
+                    }
+                }
+                catch (SQLException v25) {
+                    if (v9.LiteBansModule_31(v25)) break block19;
+                    throw v25;
+                }
+            }
+            if (v26) {
                 return;
             }
-                        ((BroadcastService)arg8.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class)).BaseCoreGenericHandler(arg3, arg5, arg4, arg7, arg18);
+            v9 = this;
+            ((BroadcastService)v9.LiteBansModule_241().BaseCoreGenericHandler(BroadcastService.class)).BaseCoreGenericHandler(v4, v6, v5, v8, v19);
         }
-        catch (LiteBansException_2 arg26) {
-                        ConfigService.BaseCoreGenericHandler((ConfigService)v3.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class), arg26, 0, 2, null);
+        catch (LiteBansException_2 v27) {
+            v28 = this;
+            ConfigService.BaseCoreGenericHandler((ConfigService)v28.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class), v27, 0, 2, null);
         }
-        catch (NullPointerException arg27) {
-            arg28 = this.LiteBansModule_240();
-            arg29 = arg28;
-            if (arg29.isEnabled() == false != false || arg28.AsyncBackgroundTask_21() != false) {
-                                ConfigService.BaseCoreGenericHandler((ConfigService)arg28.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class), arg27, 0, 2, null);
+        catch (NullPointerException v29) {
+            v30 = this.LiteBansModule_241();
+            v31 = v30;
+            if (v31.isEnabled() == false != false || v30.AsyncBackgroundTask_21() != false) {
+                v30 = this;
+                ConfigService.BaseCoreGenericHandler((ConfigService)v30.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class), v29, 0, 2, null);
             }
-            throw arg27;
+            throw v29;
         }
-        catch (SQLException arg30) {
-                        ((DatabaseMonitorService)arg31.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg30);
-}
+        catch (SQLException v32) {
+            v33 = this;
+            ((DatabaseMonitorService)v33.LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(v32);
+        }
+    }
 
-    public final void BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull String string, byte by2) {
-        ch2.e().getLogger().warning("User \"" + string + "\" length > " + LiteBansModule_283.LiteBansModule_31(by2) + " (invalid username); blocking ");
+    public final void BaseCoreGenericHandler(@NotNull LiteBansModule_83 ch2, @NotNull String string, byte by2) {
+        ch2.e().getLogger().warning("User \"" + string + "\" length > " + LiteBansModule_284.LiteBansModule_31(by2) + " (invalid username); blocking ");
     }
 
     public final String BaseCoreGenericHandler(@Nullable String string) {
         MessageHandler messageHandler = this;
-        GeoIPLookupService_2 fv_02 = ((ConfigService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_240();
+        GeoIPLookupService_2 fv_02 = ((ConfigService)messageHandler.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_241();
         return fv_02 != null ? fv_02.BaseCoreGenericHandler(string) : null;
     }
 
     public final boolean LiteBansModule_31(@NotNull String string) {
         boolean flag;
-        if (this.LiteBansModule_240().LiteBansModule_401()) {
-                        flag = !((ConfigService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().ap().contains(((String)(targetObj = string)).toLowerCase(Locale.ENGLISH));
+        if (this.LiteBansModule_241().LiteBansModule_403()) {
+                        flag = !((ConfigService)((MessageHandler)targetObj).LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().ap().contains(((String)(targetObj = string)).toLowerCase(Locale.ENGLISH));
         } else {
             MessageHandler messageHandler = this;
-            flag = !((ConfigService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().PlayerQuitListener();
+            flag = !((ConfigService)messageHandler.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().PlayerQuitListener();
         }
         return flag;
     }
 
-    public final boolean BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull Object targetObj, @NotNull String string, @NotNull String string2, @NotNull CharSequence charSequence, @Nullable SilentHandler dZ2, @NotNull String string3, boolean flag) {
-        UUID uUID = HexEncodingHelper.BaseCoreGenericHandler.GnuSparseMapHandler(string);
-        if ((dZ2 == null || !ObjectUtilities.BaseCoreGenericHandler(dZ2.DatabaseMonitorService(), string)) && uUID != null && ch2.BaseCoreGenericHandler(uUID, BanHandler.LiteBansModule_240) && flag) {
+    public final boolean BaseCoreGenericHandler(@NotNull LiteBansModule_83 ch2, @NotNull Object targetObj, @NotNull String string, @NotNull String string2, @NotNull CharSequence charSequence, @Nullable SilentHandler dZ2, @NotNull String string3, boolean flag) {
+        UUID uUID = LiteBansModule_346.BaseCoreGenericHandler.GnuSparseMapHandler(string);
+        if ((dZ2 == null || !ObjectUtilities.BaseCoreGenericHandler((Object)dZ2.DatabaseMonitorService(), (Object)string)) && uUID != null && ch2.BaseCoreGenericHandler(uUID, BanHandler.LiteBansModule_241) && flag) {
             ch2.e().getLogger().info(string2 + " was permitted to join the ");
             return false;
         }
@@ -122,7 +136,7 @@ extends MessageHandler {
         return true;
     }
 
-    public static /* synthetic */ boolean BaseCoreGenericHandler(GeoIPLookupService_3 gu2, LiteBansModule_82 ch2, Object targetObj, String string, String string2, CharSequence charSequence, SilentHandler dZ2, String string3, boolean flag, int n, Object contextObj) {
+    public static /* synthetic */ boolean BaseCoreGenericHandler(GeoIPLookupService_3 gu2, LiteBansModule_83 ch2, Object targetObj, String string, String string2, CharSequence charSequence, SilentHandler dZ2, String string3, boolean flag, int n, Object contextObj) {
         if (contextObj != null) {
             throw new UnsupportedOperationException("");
         }
@@ -135,47 +149,48 @@ extends MessageHandler {
         return gu2.BaseCoreGenericHandler(ch2, targetObj, string, string2, charSequence, dZ2, string3, flag);
     }
 
-    public final LiteBansModule_95 BaseCoreGenericHandler(@NotNull Object targetObj) {
+    public final LiteBansModule_96 BaseCoreGenericHandler(@NotNull Object targetObj) {
         MessageHandler messageHandler = this;
-        return this.LiteBansModule_240().i().BaseCoreGenericHandler(targetObj, ((ConfigService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_240());
+        return this.LiteBansModule_241().i().BaseCoreGenericHandler(targetObj, ((ConfigService)messageHandler.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().LiteBansModule_241());
     }
 
     public final void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence, @NotNull String string) {
-        KickBannedHandler.BaseCoreGenericHandler(this.LiteBansModule_240().i(), targetObj, charSequence, null, false, string, 12, null);
+        KickBannedHandler.BaseCoreGenericHandler(this.LiteBansModule_241().i(), targetObj, charSequence, null, false, string, 12, null);
     }
 
     public String c(@NotNull Object targetObj) {
-        return this.LiteBansModule_240().i().BaseCoreGenericHandler(targetObj);
+        return this.LiteBansModule_241().i().BaseCoreGenericHandler(targetObj);
     }
 
-    public void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull LiteBansModule_178 eo_02) {
+    public void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull LiteBansModule_179 eo_02) {
         MessageHandler messageHandler = this;
-        ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> GeoIPLookupService_3.BaseCoreGenericHandler(targetObj, eo_02, arg_0));
+        ((DatabaseMonitorService)messageHandler.LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> GeoIPLookupService_3.BaseCoreGenericHandler(targetObj, eo_02, arg_0));
     }
 
-    public final boolean BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull Object targetObj, @NotNull String string, @NotNull String string2, @NotNull String string3, @NotNull String string4) {
+    public final boolean BaseCoreGenericHandler(@NotNull LiteBansModule_83 ch2, @NotNull Object targetObj, @NotNull String string, @NotNull String string2, @NotNull String string3, @NotNull String string4) {
         if (GeoIPLookupService_3.BaseCoreGenericHandler(this, ch2, targetObj, string3, string4, GeoIPLookupService.BaseCoreGenericHandler(ch2, string, string2), null, null, false, 96, null)) {
             CharSequence[] charSequenceArray = (CharSequence[])this;
             CharSequence[] charSequenceArray2 = charSequenceArray;
-            if (((ConfigService)charSequenceArray2.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().aM()) {
+            if (((ConfigService)charSequenceArray2.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().aM()) {
                 charSequenceArray = this;
                 flag = false;
-                BroadcastService o2 = (BroadcastService)charSequenceArray.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
+                BroadcastService o2 = (BroadcastService)charSequenceArray.LiteBansModule_241().BaseCoreGenericHandler(BroadcastService.class);
                 charSequenceArray = new CharSequence[]{"geoip", string, "player", string4};
-                o2.LiteBansModule_31(string3, LiteBansModule_242.BaseCoreGenericHandler(MessageKey.PlayerJoinListener, charSequenceArray), true);
+                o2.LiteBansModule_31(string3, LiteBansModule_243.BaseCoreGenericHandler((CharSequence)MessageKey.PlayerJoinListener, charSequenceArray), true);
                 return true;
-}
+            }
+        }
         return false;
     }
 
-    public final boolean BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull Object targetObj, @NotNull String string, @NotNull String string2, @Nullable String string3, @Nullable String string4, @NotNull SilentHandler dZ2) {
+    public final boolean BaseCoreGenericHandler(@NotNull LiteBansModule_83 ch2, @NotNull Object targetObj, @NotNull String string, @NotNull String string2, @Nullable String string3, @Nullable String string4, @NotNull SilentHandler dZ2) {
         CharSequence charSequence = GeoIPLookupService.BaseCoreGenericHandler(ch2, dZ2, string2, string, string3, string4, -1);
         if (GeoIPLookupService_3.BaseCoreGenericHandler(this, ch2, targetObj, string, string2, charSequence, dZ2, null, false, 96, null)) {
             MessageHandler messageHandler = this;
-            if (((ConfigService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().aM()) {
+            if (((ConfigService)messageHandler.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().aM()) {
                 ch2.AsyncBackgroundTask_5().BaseCoreGenericHandler(arg_0 -> GeoIPLookupService_3.BaseCoreGenericHandler(dZ2, string2, string, string3, string4, this, arg_0));
             }
-            if (ch2.e().LiteBansModule_401()) {
+            if (ch2.e().LiteBansModule_403()) {
                 this.plugin(targetObj, arg_0 -> GeoIPLookupService_3.BaseCoreGenericHandler(this, dZ2, charSequence, arg_0));
             }
             return true;
@@ -183,11 +198,11 @@ extends MessageHandler {
         return false;
     }
 
-    public final CharSequence BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull SilentHandler dZ2, @NotNull CharSequence charSequence) {
+    public final CharSequence BaseCoreGenericHandler(@NotNull LiteBansModule_83 ch2, @NotNull SilentHandler dZ2, @NotNull CharSequence charSequence) {
         CharSequence charSequence2 = charSequence;
         SilentHandler dZ3 = dZ2;
         if (!(dZ3 != null && dZ3.r() != -1)) {
-            charSequence2 = dZ2.HoverTextFormatter() ? MessageKey.AsyncBackgroundTask_5 : MessageKey.aj;
+            charSequence2 = dZ2.HoverTextFormatter() ? (CharSequence)MessageKey.AsyncBackgroundTask_5 : (CharSequence)MessageKey.aj;
         }
         return AllHandler_3.BaseCoreGenericHandler(ch2, charSequence2, dZ2, false, 2, null);
     }
@@ -197,19 +212,19 @@ extends MessageHandler {
         throw new CommandExitException();
     }
 
-    private static final KotlinUnitHandler BaseCoreGenericHandler(Object targetObj, LiteBansModule_178 eo_02, LiteBansModule_82 ch2) {
-        ch2.e().i().BaseCoreGenericHandler(targetObj, eo_02.BaseCoreGenericHandler(ch2));
+    private static final KotlinUnitHandler BaseCoreGenericHandler(Object targetObj, LiteBansModule_179 eo_02, LiteBansModule_83 ch2) {
+        ch2.e().i().BaseCoreGenericHandler(targetObj, (CharSequence)eo_02.BaseCoreGenericHandler(ch2));
         return KotlinUnitHandler.BaseCoreGenericHandler;
     }
 
-    private static final KotlinUnitHandler BaseCoreGenericHandler(SilentHandler dZ2, String string, String string2, String string3, String string4, GeoIPLookupService_3 gu2, LiteBansModule_82 ch2) {
-        CharSequence charSequence = ch2.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler(ch2, MessageKey.LiteBansModule_240, dZ2, false, 2, null), string, string, string2, string3, string4);
+    private static final KotlinUnitHandler BaseCoreGenericHandler(SilentHandler dZ2, String string, String string2, String string3, String string4, GeoIPLookupService_3 gu2, LiteBansModule_83 ch2) {
+        CharSequence charSequence = ch2.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler(ch2, (CharSequence)MessageKey.LiteBansModule_241, dZ2, false, 2, null), string, string, string2, string3, string4);
         MessageHandler messageHandler = gu2;
-        ((BroadcastService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class)).LiteBansModule_31(string2, charSequence, true);
+        ((BroadcastService)messageHandler.LiteBansModule_241().BaseCoreGenericHandler(BroadcastService.class)).LiteBansModule_31(string2, charSequence, true);
         return KotlinUnitHandler.BaseCoreGenericHandler;
     }
 
-    private static final CharSequence BaseCoreGenericHandler(GeoIPLookupService_3 gu2, SilentHandler dZ2, CharSequence charSequence, LiteBansModule_82 ch2) {
+    private static final CharSequence BaseCoreGenericHandler(GeoIPLookupService_3 gu2, SilentHandler dZ2, CharSequence charSequence, LiteBansModule_83 ch2) {
         return gu2.BaseCoreGenericHandler(ch2, dZ2, charSequence);
     }
 
@@ -220,5 +235,10 @@ extends MessageHandler {
 
     private static final void BaseCoreGenericHandler() {
         AsyncBackgroundTask_5 = new String[]{"Invalid username.\nMaximum ", "characters", ", found ", "KICK_OTHER", "Ban for ", " (uuid: '", "') on ", ": ", "User \"", "\" length > ", " (invalid username); blocking ", " was permitted to join the ", "", "KICK_BANNED", "geoip", "player"};
+    }
+
+    static {
+        GeoIPLookupService_3.BaseCoreGenericHandler();
+    }
 }
 

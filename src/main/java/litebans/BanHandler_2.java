@@ -16,13 +16,13 @@ import org.jetbrains.annotations.Nullable;
 @ModulePriority(priority=0)
 public final class BanHandler_2
 extends LiteBansModule_41 {
-    public BanHandler_2(@NotNull PlatformPlugin plugin) {
+        public BanHandler_2(@NotNull PlatformPlugin plugin) {
         super(plugin);
     }
 
     @Override
     public void BaseCoreGenericHandler() {
-        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
         configService.e();
         this.plugin.BaseCoreGenericHandler(this);
         this.g();
@@ -40,8 +40,8 @@ extends LiteBansModule_41 {
     }
 
     private final void g() {
-        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
-        LiteBansModule_158 ec_02 = this.plugin.i();
+        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        LiteBansModule_159 ec_02 = this.plugin.i();
         ObjectUtilities.LiteBansModule_31(ec_02, "");
         Plugin plugin = BungeecordHandler_2.BaseCoreGenericHandler((BungeecordHandler_2)ec_02, null, 1, null);
         Map map = plugin.getDescription().getCommands();
@@ -52,16 +52,17 @@ extends LiteBansModule_41 {
             String string = (String)entry2.getKey();
             PluginCommand pluginCommand = plugin.getServer().getPluginCommand(string);
             if (pluginCommand == null) continue;
-            if (pluginCommand.getTabCompleter() != null && !ObjectUtilities.BaseCoreGenericHandler(pluginCommand.getPlugin(), this.plugin)) {
+            if (pluginCommand.getTabCompleter() != null && !ObjectUtilities.BaseCoreGenericHandler((Object)pluginCommand.getPlugin(), this.plugin)) {
                 configService.BaseCoreGenericHandler(1, (Object)("Command /" + string + " is tab-completed LiteBansModule_61 " + pluginCommand.getTabCompleter() + '!'));
             }
             pluginCommand.setTabCompleter((TabCompleter)plugin);
-            if (ObjectUtilities.BaseCoreGenericHandler(pluginCommand.getPlugin(), this.plugin)) continue;
+            if (ObjectUtilities.BaseCoreGenericHandler((Object)pluginCommand.getPlugin(), this.plugin)) continue;
             configService.BaseCoreGenericHandler(1, (Object)("Command /" + string + " is owned LiteBansModule_61 " + pluginCommand.getPlugin().getDescription().getName() + '!'));
-}
+        }
+    }
 
     private final void i() {
-        LiteBansModule_158 ec_02 = this.plugin.i();
+        LiteBansModule_159 ec_02 = this.plugin.i();
         ObjectUtilities.LiteBansModule_31(ec_02, "");
         Plugin plugin = BungeecordHandler_2.BaseCoreGenericHandler((BungeecordHandler_2)ec_02, null, 1, null);
         Map map = plugin.getDescription().getCommands();
@@ -71,9 +72,10 @@ extends LiteBansModule_41 {
             Map.Entry entry2 = entry = iterator.next();
             String string = (String)entry2.getKey();
             PluginCommand pluginCommand = plugin.getServer().getPluginCommand(string);
-            if (pluginCommand == null || !ObjectUtilities.BaseCoreGenericHandler(pluginCommand.getPlugin(), this.plugin)) continue;
+            if (pluginCommand == null || !ObjectUtilities.BaseCoreGenericHandler((Object)pluginCommand.getPlugin(), this.plugin)) continue;
             pluginCommand.setPermissionMessage(HoverTextFormatter.LiteBansModule_31.BaseCoreGenericHandler(MessageKey.cZ.toString()));
-}
+        }
+    }
 
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String string, @NotNull String[] args) {
@@ -86,7 +88,7 @@ extends LiteBansModule_41 {
         boolean flag;
         int n;
         boolean flag2;
-{
+        block10: {
             tempObj = AbstractCommand.AsyncBackgroundTask_5;
             helperObj = targetObj;
             flag2 = false;
@@ -94,9 +96,9 @@ extends LiteBansModule_41 {
             for (int i = 0; i < n2; ++i) {
                 contextObj = resultObj = helperObj[i];
                 n = 0;
-                if (!StringUtilities.LiteBansModule_31(contextObj)) continue;
+                if (!StringUtilities.LiteBansModule_31((CharSequence)contextObj)) continue;
                 flag = false;
-                break;
+                break block10;
             }
             flag = true;
         }
@@ -111,7 +113,7 @@ extends LiteBansModule_41 {
             for (int i = 0; i < n; ++i) {
                 Command command2;
                 Command command3 = command2 = object6[i];
-                boolean flag6 = !StringUtilities.LiteBansModule_31(command3);
+                boolean flag6 = !StringUtilities.LiteBansModule_31((CharSequence)command3);
                 if (!flag6) continue;
                 collection.add(command2);
             }
@@ -131,7 +133,7 @@ extends LiteBansModule_41 {
         if (StringUtilities.LiteBansModule_31((String)object8, "litebans:", false, 2, null)) {
             helperObj = helperObj.substring(9);
         }
-        if ((abstractCommand = this.plugin((String)object8)) != null) {
+        if ((abstractCommand = (AbstractCommand)this.plugin((String)object8)) != null) {
             String string2 = abstractCommand.getPermission();
             if (string2 != null) {
                 ObjectUtilities.BaseCoreGenericHandler(tempObj);
@@ -143,19 +145,20 @@ extends LiteBansModule_41 {
                     CharSequence charSequence = MessageKey.cZ;
                     ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)object9, charSequence, null, 4, null);
                     return true;
-}
+                }
+            }
             ObjectUtilities.BaseCoreGenericHandler(tempObj);
             this.plugin((CommandSenderWrapper)tempObj, filteredArgs, abstractCommand, (String)helperObj);
             return true;
         }
         String[] parsedArgs = CommandArgumentUtils.BaseCoreGenericHandler(AbstractCommand.AsyncBackgroundTask_5, (String)object8, filteredArgs);
-        AbstractCommand banCommand = this.plugin("ban");
+        AbstractCommand banCommand = (AbstractCommand)this.plugin("ban");
         if (banCommand == null) {
             ObjectUtilities.BaseCoreGenericHandler(tempObj);
             resultObj = tempObj;
-            contextObj = MessageKey.LiteBansModule_67;
+            contextObj = MessageKey.LiteBansModule_68;
             n = 0;
-            ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)resultObj, contextObj, null, 4, null);
+            ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)resultObj, (CharSequence)contextObj, null, 4, null);
             return true;
         }
         ObjectUtilities.BaseCoreGenericHandler(tempObj);
@@ -175,7 +178,8 @@ extends LiteBansModule_41 {
             if (senderWrapper.e(string2)) {
                 list = AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(command, string, sender, this.plugin, args);
                 return list;
-}
+            }
+        }
         list = CollectionUtilities.e();
         return list;
     }
@@ -185,9 +189,15 @@ extends LiteBansModule_41 {
             this.plugin.LiteBansModule_31(new CommandExecutionTask(sender, args, abstractCommand, string));
         } else {
             abstractCommand.BaseCoreGenericHandler(sender, args, string);
-}
+        }
+    }
 
-    private static final void LiteBansModule_240() {
+    private static final void LiteBansModule_241() {
         e = new String[]{"", "Command /", " is tab-completed LiteBansModule_61 ", "Command /", " is owned LiteBansModule_61 ", "", "litebans:", "ban", "litebans.tabcomplete"};
+    }
+
+    static {
+        BanHandler_2.LiteBansModule_241();
+    }
 }
 

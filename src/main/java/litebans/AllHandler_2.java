@@ -5,15 +5,15 @@ import org.jetbrains.annotations.Nullable;
 
 public final class AllHandler_2
 extends AllHandler {
-    private final boolean LiteBansModule_194;
-    public AllHandler_2(@NotNull PlatformPlugin plugin, @Nullable String string, boolean flag) {
+    private final boolean LiteBansModule_195;
+        public AllHandler_2(@NotNull PlatformPlugin plugin, @Nullable String string, boolean flag) {
         super(plugin, string);
-        this.LiteBansModule_194 = flag;
+        this.LiteBansModule_195 = flag;
     }
 
     @Override
     public void BaseCoreGenericHandler(@NotNull LiteBansModule_60 bT2) {
-        if (ObjectUtilities.BaseCoreGenericHandler(this.c(), (Object)"__ALL__")) {
+        if (ObjectUtilities.BaseCoreGenericHandler((Object)this.c(), (Object)"__ALL__")) {
             return;
         }
         bT2.BaseCoreGenericHandler(this.c());
@@ -21,10 +21,10 @@ extends AllHandler {
 
     @Override
     public String toString() {
-        if (ObjectUtilities.BaseCoreGenericHandler(this.c(), (Object)"__ALL__")) {
+        if (ObjectUtilities.BaseCoreGenericHandler((Object)this.c(), (Object)"__ALL__")) {
             return "";
         }
-        if (this.LiteBansModule_194) {
+        if (this.LiteBansModule_195) {
             return " AND(server_scope=?)";
         }
         return "server_scope=?";
@@ -32,5 +32,10 @@ extends AllHandler {
 
     private static final void BaseCoreGenericHandler() {
         e = new String[]{"__ALL__", "__ALL__", "", " AND(server_scope=?)", "server_scope=?"};
+    }
+
+    static {
+        AllHandler_2.BaseCoreGenericHandler();
+    }
 }
 

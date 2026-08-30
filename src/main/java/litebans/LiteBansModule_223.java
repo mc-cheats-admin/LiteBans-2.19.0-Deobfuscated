@@ -1,58 +1,34 @@
 package litebans;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-public abstract class LiteBansModule_223
-implements ResultSet {
-    protected final HexEncodingHelper c;
-    protected final LiteBansModule_415 BaseCoreGenericHandler;
-    final ResultSet LiteBansModule_31;
+import java.nio.ByteBuffer;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetDecoder;
+import java.nio.charset.CodingErrorAction;
+static class LiteBansModule_223
+implements LiteBansModule_120,
+LiteBansModule_230 {
+    private final Charset LiteBansModule_31;
+    private final boolean LiteBansModule_195;
+    private static final char c = (char)63;
+    private static final byte[] e = new byte[]{63};
+    private static final String BaseCoreGenericHandler = String.valueOf('?');
+    private static final char[] AsyncBackgroundTask_5 = new char[]{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'BanHandler_2', 'D', 'PunishmentService', 'F'};
 
-    protected LiteBansModule_223(HexEncodingHelper c22, LiteBansModule_415 lJ2, ResultSet resultSet) {
-        this.c = c22;
-        this.plugin = lJ2;
-        this.LiteBansModule_31 = resultSet;
-    }
-
-    final SQLException BaseCoreGenericHandler(SQLException sQLException) {
-        return this.c.BaseCoreGenericHandler(sQLException);
-    }
-
-    public String toString() {
-        return this.getClass().getSimpleName() + '@' + System.identityHashCode(this) + " wrapping " + this.LiteBansModule_31;
+    LiteBansModule_223(Charset charset, boolean flag) {
+        this.LiteBansModule_31 = charset;
+        this.LiteBansModule_195 = flag;
     }
 
     @Override
-    public final Statement getStatement() {
-        return this.plugin;
+    public String BaseCoreGenericHandler(byte[] byArray) {
+        return this.plugin().decode(ByteBuffer.wrap(byArray)).toString();
     }
 
-    @Override
-    public void updateRow() {
-        this.c.LiteBansModule_31();
-        this.LiteBansModule_31.updateRow();
-    }
-
-    @Override
-    public void insertRow() {
-        this.c.LiteBansModule_31();
-        this.LiteBansModule_31.insertRow();
-    }
-
-    @Override
-    public void deleteRow() {
-        this.c.LiteBansModule_31();
-        this.LiteBansModule_31.deleteRow();
-    }
-
-    public final Object unwrap(Class clazz) {
-        if (clazz.isInstance(this.LiteBansModule_31)) {
-            return this.LiteBansModule_31;
+    private final CharsetDecoder BaseCoreGenericHandler() {
+        if (!this.LiteBansModule_195) {
+            return this.LiteBansModule_31.newDecoder().onMalformedInput(CodingErrorAction.REPORT).onUnmappableCharacter(CodingErrorAction.REPORT);
         }
-        if (this.LiteBansModule_31 != null) {
-            return this.LiteBansModule_31.unwrap(clazz);
-        }
-        throw new SQLException("Wrapped ResultSet is not HikariDataSource instance of " + clazz);
+        return this.LiteBansModule_31.newDecoder().onMalformedInput(CodingErrorAction.REPLACE).onUnmappableCharacter(CodingErrorAction.REPLACE).replaceWith(BaseCoreGenericHandler);
+    }
 }
 

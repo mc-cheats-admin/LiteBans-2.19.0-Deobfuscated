@@ -1,10 +1,19 @@
 package litebans;
 
-public class LiteBansModule_320
-extends LiteBansModule_300 {
-    private static final long LiteBansModule_31 = 1L;
+import net.minecraft.class_2561;
+import net.minecraft.class_5455;
+import net.minecraft.class_7225;
 
-    public LiteBansModule_320() {
-        super("unexpected EOF");
+public class LiteBansModule_320
+implements LiteBansModule_253 {
+    @Override
+    public Object BaseCoreGenericHandler(CharSequence charSequence) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public Object LiteBansModule_31(CharSequence charSequence) {
+        return class_2561.class_2562.method_10877((String)charSequence.toString(), (class_7225.class_7874)class_5455.field_40585);
+    }
 }
 

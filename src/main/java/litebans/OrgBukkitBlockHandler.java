@@ -4,12 +4,12 @@ import net.md_5.bungee.chat.ChatVersion;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
 
-public class BukkitBlockAdapter {
+public class OrgBukkitBlockHandler {
     private static boolean LiteBansModule_31;
     private static boolean c;
     private static boolean e;
     private static boolean AsyncBackgroundTask_5;
-    public static boolean LiteBansModule_31() {
+        public static boolean LiteBansModule_31() {
         return c;
     }
 
@@ -25,15 +25,17 @@ public class BukkitBlockAdapter {
         Player.Spigot spigot = player.spigot();
         if (LiteBansModule_57.LiteBansModule_31()) {
             if (LiteBansModule_31) {
-                spigot.sendMessage(LiteBansModule_280.BaseCoreGenericHandler(string, ChatVersion.V1_21_5));
+                spigot.sendMessage(LiteBansModule_281.BaseCoreGenericHandler(string, ChatVersion.V1_21_5));
             } else {
-                spigot.sendMessage(LiteBansModule_280.BaseCoreGenericHandler(string, ChatVersion.V1_16));
-} else {
+                spigot.sendMessage(LiteBansModule_281.BaseCoreGenericHandler(string, ChatVersion.V1_16));
+            }
+        } else {
             spigot.sendMessage(LiteBansModule_57.LiteBansModule_31(string));
-}
+        }
+    }
 
     static {
-        BukkitBlockAdapter.AsyncBackgroundTask_5();
+        OrgBukkitBlockHandler.AsyncBackgroundTask_5();
         LiteBansModule_31 = StackTraceAnalyzer.BaseCoreGenericHandler("org.bukkit.block.TestBlock");
         c = StackTraceAnalyzer.BaseCoreGenericHandler("net.md_5.bungee.api.chat.BaseComponent");
         e = false;
@@ -48,12 +50,15 @@ public class BukkitBlockAdapter {
             for (Thread thread : threadArray) {
                 if (thread == null || !thread.getName().startsWith("Folia Watchdog")) continue;
                 e = true;
-}
+            }
+        }
         catch (LinkageError | ReflectiveOperationException throwable) {
             // empty catch block
-}
+        }
+    }
 
     private static final void AsyncBackgroundTask_5() {
         BaseCoreGenericHandler = new String[]{"org.bukkit.block.TestBlock", "net.md_5.bungee.api.chat.BaseComponent", "kickMessage", "io.papermc.paper.threadedregions.scheduler.RegionScheduler", "Folia Watchdog"};
+    }
 }
 

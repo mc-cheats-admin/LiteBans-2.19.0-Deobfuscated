@@ -12,23 +12,23 @@ import java.util.function.Supplier;
 import org.jetbrains.annotations.NotNull;
 
 public class LiteBansCore
-implements LiteBansModule_417 {
+implements LiteBansModule_419 {
     private final PlatformPlugin BaseCoreGenericHandler;
     public PluginModule[] AsyncBackgroundTask_5 = PlatformPlugin.BaseCoreGenericHandler;
     public CommandManager e;
-    public ConfigurationManager LiteBansModule_194;
+    public ConfigurationManager LiteBansModule_195;
     public Map LiteBansModule_31 = new ConcurrentHashMap();
     public StackTraceAnalyzer Utf8Handler_2;
     public CommandSenderWrapper g;
-    public ThreadPoolExecutor LiteBansModule_240;
+    public ThreadPoolExecutor LiteBansModule_241;
     public DatabaseService BroadcastService;
-    public LiteBansModule_417 i = this;
+    public LiteBansModule_419 i = this;
     public AtomicBoolean GnuSparseMapHandler = new AtomicBoolean(false);
     public AtomicBoolean m = new AtomicBoolean(false);
     public AtomicBoolean n = new AtomicBoolean(false);
     public long c;
     public boolean PunishmentTableService;
-    public LiteBansCore(PlatformPlugin plugin) {
+        public LiteBansCore(PlatformPlugin plugin) {
         this.plugin = plugin;
         this.Utf8Handler_2 = new StackTraceAnalyzer(plugin);
     }
@@ -79,7 +79,8 @@ implements LiteBansModule_417 {
         }
         finally {
             this.m.set(false);
-}
+        }
+    }
 
     public @NotNull ThreadFactoryBuilder AsyncBackgroundTask_5() {
         ThreadFactoryBuilder threadFactoryBuilder = new ThreadFactoryBuilder().setNameFormat(this.plugin.getName() + "-%1$AsyncBackgroundTask_5").setDaemon(true);
@@ -93,10 +94,13 @@ implements LiteBansModule_417 {
         if (flag) {
             for (PluginModule module : this.plugin.PunishmentTableService()) {
                 module.e();
-} else {
+            }
+        } else {
             for (PluginModule n_03 : this.plugin.PunishmentTableService()) {
                 n_03.BaseCoreGenericHandler();
-}
+            }
+        }
+    }
 
     public void i() {
         if (this.m.get()) {
@@ -113,32 +117,34 @@ implements LiteBansModule_417 {
         this.plugin.m();
         this.BroadcastService = null;
         this.LiteBansModule_31.clear();
-        ThreadPoolExecutor threadPoolExecutor = this.LiteBansModule_240;
+        ThreadPoolExecutor threadPoolExecutor = this.LiteBansModule_241;
         if (threadPoolExecutor != null) {
             try {
                 threadPoolExecutor.shutdown();
                 if (!threadPoolExecutor.awaitTermination(2L, TimeUnit.SECONDS)) {
                     threadPoolExecutor.shutdownNow();
-}
+                }
+            }
             catch (InterruptedException interruptedException) {
                 interruptedException.printStackTrace();
-}
+            }
+        }
         this.plugin.getLogger().info(this.e());
         this.g = null;
-        this.LiteBansModule_240 = null;
+        this.LiteBansModule_241 = null;
         this.n.set(false);
     }
 
     public CommandSenderWrapper[] LiteBansModule_31() {
-        ConfigurationManager j_02 = this.LiteBansModule_194;
+        ConfigurationManager j_02 = this.LiteBansModule_195;
         if (j_02 != null) {
             return j_02.BaseCoreGenericHandler();
         }
         return CommandSenderWrapper.BaseCoreGenericHandler;
     }
 
-    public int LiteBansModule_401() {
-        ConfigurationManager j_02 = this.LiteBansModule_194;
+    public int LiteBansModule_403() {
+        ConfigurationManager j_02 = this.LiteBansModule_195;
         if (j_02 != null) {
             return j_02.LiteBansModule_31();
         }
@@ -152,12 +158,12 @@ implements LiteBansModule_417 {
     public boolean BaseCoreGenericHandler(String string, Supplier supplier) {
         boolean flag = StackTraceAnalyzer.BaseCoreGenericHandler(string);
         if (flag) {
-            this.plugin.LiteBansModule_31((LiteBansModule_175[])supplier.get());
+            this.plugin.LiteBansModule_31((LiteBansModule_176[])supplier.get());
         }
         return flag;
     }
 
-    public long LiteBansModule_240() {
+    public long LiteBansModule_241() {
         return System.currentTimeMillis() - this.c;
     }
 
@@ -170,13 +176,23 @@ implements LiteBansModule_417 {
     }
 
     public ThreadPoolExecutor BaseCoreGenericHandler(ThreadFactoryBuilder threadFactoryBuilder) {
-        this.LiteBansModule_240 = new ThreadPoolExecutor(0, Integer.MAX_VALUE, 1000L, TimeUnit.SECONDS, new SynchronousQueue<Runnable>(), threadFactoryBuilder.build());
-        return this.LiteBansModule_240;
+        this.LiteBansModule_241 = new ThreadPoolExecutor(0, Integer.MAX_VALUE, 1000L, TimeUnit.SECONDS, new SynchronousQueue<Runnable>(), threadFactoryBuilder.build());
+        return this.LiteBansModule_241;
     }
 
-    public void LiteBansModule_194() {
+    public void LiteBansModule_195() {
         int n = this.LiteBansModule_31.size();
-        if (n > 4 && n % 32 == 0 && n > this.LiteBansModule_401() + 4) {
+        if (n > 4 && n % 32 == 0 && n > this.LiteBansModule_403() + 4) {
             this.LiteBansModule_31.clear();
+        }
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        LiteBansModule_403 = new String[]{"onEnable() called while plugin is already enabled! This might break ", "-%1$AsyncBackgroundTask_5", "onDisable() called while plugin hasn'AsyncBackgroundTask_22 finished loading yet! This will be ignored to prevent errors. It'AsyncBackgroundTask_21 likely that another plugin stopped your server ", " ", " enabled. Startup took ", " ms."};
+    }
+
+    static {
+        LiteBansCore.BaseCoreGenericHandler();
+    }
 }
 

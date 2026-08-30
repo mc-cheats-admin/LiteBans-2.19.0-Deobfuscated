@@ -15,13 +15,13 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 import javax.sql.DataSource;
 public class HikariConfig
-implements LiteBansModule_350 {
-    private static final HikariLogger LiteBansModule_401;
+implements LiteBansModule_352 {
+    private static final HikariLogger LiteBansModule_403;
     private static final char[] BaseCoreGenericHandler;
     private static final long CommandThrottleService;
     private static final long A;
     private static final long c;
-    private static final long LiteBansModule_430;
+    private static final long LiteBansModule_432;
     private static final long n;
     private static final long BanHandler_5;
     private static final int B;
@@ -40,8 +40,8 @@ implements LiteBansModule_350 {
     private String BroadcastService;
     private String F;
     private String z;
-    private String LiteBansModule_433;
-    private String LiteBansModule_240;
+    private String LiteBansModule_435;
+    private String LiteBansModule_241;
     private String Utf8Handler_2;
     private String AsyncBackgroundTask_21;
     private String LiteBansModule_31;
@@ -53,7 +53,7 @@ implements LiteBansModule_350 {
     private boolean m;
     private boolean PluginHookService;
     private DataSource O;
-    private Properties LiteBansModule_194 = new Properties();
+    private Properties LiteBansModule_195 = new Properties();
     private ThreadFactory AsyncBackgroundTask_5;
     private ScheduledExecutorService HoverTextFormatter;
     private Properties g = new Properties();
@@ -64,11 +64,12 @@ implements LiteBansModule_350 {
         this.K = n;
         this.i = CommandThrottleService;
         this.L = A;
-        this.H = LiteBansModule_430;
+        this.H = LiteBansModule_432;
         String string = System.getProperty("hikaricp.configurationFile");
         if (string != null) {
             this.e(string);
-}
+        }
+    }
 
     @Override
     public String AsyncBackgroundTask_5() {
@@ -94,7 +95,8 @@ implements LiteBansModule_350 {
                 throw new IllegalArgumentException("connectionTimeout cannot be less than " + c + "ms");
             }
             this.i = l3;
-}
+        }
+    }
 
     @Override
     public long BaseCoreGenericHandler() {
@@ -130,7 +132,7 @@ implements LiteBansModule_350 {
     }
 
     @Override
-    public int LiteBansModule_194() {
+    public int LiteBansModule_195() {
         return this.r;
     }
 
@@ -174,7 +176,7 @@ implements LiteBansModule_350 {
     }
 
     @Override
-    public long LiteBansModule_240() {
+    public long LiteBansModule_241() {
         return this.L;
     }
 
@@ -186,7 +188,7 @@ implements LiteBansModule_350 {
         this.L = l3;
     }
 
-    public String LiteBansModule_433() {
+    public String LiteBansModule_435() {
         return this.F;
     }
 
@@ -199,7 +201,7 @@ implements LiteBansModule_350 {
         return this.BroadcastService;
     }
 
-    public void LiteBansModule_240(String string) {
+    public void LiteBansModule_241(String string) {
         this.HoverTextFormatter();
         this.BroadcastService = string;
     }
@@ -219,19 +221,19 @@ implements LiteBansModule_350 {
 
     public void BaseCoreGenericHandler(String string, Object targetObj) {
         this.HoverTextFormatter();
-        this.LiteBansModule_194.put(string, targetObj);
+        this.LiteBansModule_195.put(string, targetObj);
     }
 
     public String i() {
-        return this.LiteBansModule_433;
+        return this.LiteBansModule_435;
     }
 
     public Properties A() {
-        return this.LiteBansModule_194;
+        return this.LiteBansModule_195;
     }
 
-    public String LiteBansModule_194() {
-        return this.LiteBansModule_240;
+    public String LiteBansModule_195() {
+        return this.LiteBansModule_241;
     }
 
     public String m() {
@@ -255,7 +257,7 @@ implements LiteBansModule_350 {
         return this.J;
     }
 
-    public void LiteBansModule_194(long l3) {
+    public void LiteBansModule_195(long l3) {
         this.HoverTextFormatter();
         this.J = l3;
     }
@@ -276,7 +278,7 @@ implements LiteBansModule_350 {
         return this.PlayerQuitListener;
     }
 
-    public boolean LiteBansModule_240() {
+    public boolean LiteBansModule_241() {
         return this.m;
     }
 
@@ -285,12 +287,12 @@ implements LiteBansModule_350 {
         return this.LiteBansModule_31;
     }
 
-    public void LiteBansModule_194(String string) {
+    public void LiteBansModule_195(String string) {
         this.HoverTextFormatter();
         this.LiteBansModule_31 = string;
     }
 
-    public ScheduledExecutorService LiteBansModule_401() {
+    public ScheduledExecutorService LiteBansModule_403() {
         return this.HoverTextFormatter;
     }
 
@@ -328,7 +330,8 @@ implements LiteBansModule_350 {
             }
             catch (Exception exception) {
                 throw new RuntimeException("Failed to copy HikariConfig state: " + exception.getMessage(), exception);
-}
+            }
+        }
         aB2.PunishmentTableService = false;
     }
 
@@ -338,60 +341,63 @@ implements LiteBansModule_350 {
         } else if (this.m && this.LiteBansModule_31.contains(":")) {
             throw new IllegalArgumentException("poolName cannot contain ':' when used with JMX");
         }
-        this.BanHandler_4 = LiteBansModule_131.LiteBansModule_31(this.BanHandler_4);
-        this.BroadcastService = LiteBansModule_131.LiteBansModule_31(this.BroadcastService);
-        this.F = LiteBansModule_131.LiteBansModule_31(this.F);
-        this.BanHandler_2 = LiteBansModule_131.LiteBansModule_31(this.BanHandler_2);
-        this.z = LiteBansModule_131.LiteBansModule_31(this.z);
-        this.LiteBansModule_433 = LiteBansModule_131.LiteBansModule_31(this.LiteBansModule_433);
-        this.LiteBansModule_240 = LiteBansModule_131.LiteBansModule_31(this.LiteBansModule_240);
-        this.AsyncBackgroundTask_21 = LiteBansModule_131.LiteBansModule_31(this.AsyncBackgroundTask_21);
+        this.BanHandler_4 = LiteBansModule_132.LiteBansModule_31(this.BanHandler_4);
+        this.BroadcastService = LiteBansModule_132.LiteBansModule_31(this.BroadcastService);
+        this.F = LiteBansModule_132.LiteBansModule_31(this.F);
+        this.BanHandler_2 = LiteBansModule_132.LiteBansModule_31(this.BanHandler_2);
+        this.z = LiteBansModule_132.LiteBansModule_31(this.z);
+        this.LiteBansModule_435 = LiteBansModule_132.LiteBansModule_31(this.LiteBansModule_435);
+        this.LiteBansModule_241 = LiteBansModule_132.LiteBansModule_31(this.LiteBansModule_241);
+        this.AsyncBackgroundTask_21 = LiteBansModule_132.LiteBansModule_31(this.AsyncBackgroundTask_21);
         if (this.O != null) {
             if (this.z != null) {
-                LiteBansModule_401.c("%AsyncBackgroundTask_21 - using dataSource and ignoring ", new Object[]{this.LiteBansModule_31});
-} else if (this.z != null) {
-            if (this.LiteBansModule_240 != null) {
-                LiteBansModule_401.BaseCoreGenericHandler("%AsyncBackgroundTask_21 - cannot use driverClassName and dataSourceClassName ", new Object[]{this.LiteBansModule_31});
+                LiteBansModule_403.c("%AsyncBackgroundTask_21 - using dataSource and ignoring ", new Object[]{this.LiteBansModule_31});
+            }
+        } else if (this.z != null) {
+            if (this.LiteBansModule_241 != null) {
+                LiteBansModule_403.BaseCoreGenericHandler("%AsyncBackgroundTask_21 - cannot use driverClassName and dataSourceClassName ", new Object[]{this.LiteBansModule_31});
                 throw new IllegalStateException("cannot use driverClassName and dataSourceClassName ");
             }
             if (this.AsyncBackgroundTask_21 != null) {
-                LiteBansModule_401.c("{} - using dataSourceClassName and ignoring ", new Object[]{this.LiteBansModule_31});
-} else if (this.AsyncBackgroundTask_21 == null && this.LiteBansModule_433 == null) {
-            if (this.LiteBansModule_240 != null) {
-                LiteBansModule_401.BaseCoreGenericHandler("{} - jdbcUrl is required with ", new Object[]{this.LiteBansModule_31});
+                LiteBansModule_403.c("{} - using dataSourceClassName and ignoring ", new Object[]{this.LiteBansModule_31});
+            }
+        } else if (this.AsyncBackgroundTask_21 == null && this.LiteBansModule_435 == null) {
+            if (this.LiteBansModule_241 != null) {
+                LiteBansModule_403.BaseCoreGenericHandler("{} - jdbcUrl is required with ", new Object[]{this.LiteBansModule_31});
                 throw new IllegalArgumentException("jdbcUrl is required with ");
             }
-            LiteBansModule_401.BaseCoreGenericHandler("{} - dataSource or dataSourceClassName or jdbcUrl is ", new Object[]{this.LiteBansModule_31});
+            LiteBansModule_403.BaseCoreGenericHandler("{} - dataSource or dataSourceClassName or jdbcUrl is ", new Object[]{this.LiteBansModule_31});
             throw new IllegalArgumentException("dataSource or dataSourceClassName or jdbcUrl is ");
         }
         this.n();
-        if (LiteBansModule_401.BaseCoreGenericHandler() || ServerSyncService) {
+        if (LiteBansModule_403.BaseCoreGenericHandler() || ServerSyncService) {
             this.g();
-}
+        }
+    }
 
     private final void n() {
         if (this.K != 0L && this.K < TimeUnit.SECONDS.toMillis(30L)) {
-            LiteBansModule_401.c("%AsyncBackgroundTask_21 - maxLifetime is less than 30000ms, setting to default %", new Object[]{this.LiteBansModule_31, n});
+            LiteBansModule_403.c("%AsyncBackgroundTask_21 - maxLifetime is less than 30000ms, setting to default %", new Object[]{this.LiteBansModule_31, n});
             this.K = n;
         }
         if (this.GnuSparseMapHandler != 0L && this.GnuSparseMapHandler < TimeUnit.SECONDS.toMillis(30L)) {
-            LiteBansModule_401.c("%AsyncBackgroundTask_21 - keepaliveTime is less than 30000ms, disabling ", new Object[]{this.LiteBansModule_31});
+            LiteBansModule_403.c("%AsyncBackgroundTask_21 - keepaliveTime is less than 30000ms, disabling ", new Object[]{this.LiteBansModule_31});
             this.GnuSparseMapHandler = 0L;
         }
         if (this.GnuSparseMapHandler != 0L && this.K != 0L && this.GnuSparseMapHandler >= this.K) {
-            LiteBansModule_401.c("%AsyncBackgroundTask_21 - keepaliveTime is greater than or equal to maxLifetime, disabling ", new Object[]{this.LiteBansModule_31});
+            LiteBansModule_403.c("%AsyncBackgroundTask_21 - keepaliveTime is greater than or equal to maxLifetime, disabling ", new Object[]{this.LiteBansModule_31});
             this.GnuSparseMapHandler = 0L;
         }
         if (this.D > 0L && !ServerSyncService && (this.D < TimeUnit.SECONDS.toMillis(2L) || this.D > this.K && this.K > 0L)) {
-            LiteBansModule_401.c("%AsyncBackgroundTask_21 - leakDetectionThreshold is less than 2000ms or more than maxLifetime, disabling ", new Object[]{this.LiteBansModule_31});
+            LiteBansModule_403.c("%AsyncBackgroundTask_21 - leakDetectionThreshold is less than 2000ms or more than maxLifetime, disabling ", new Object[]{this.LiteBansModule_31});
             this.D = 0L;
         }
         if (this.i < c) {
-            LiteBansModule_401.c("%AsyncBackgroundTask_21 - connectionTimeout is less than %dms, setting to %", new Object[]{this.LiteBansModule_31, c, CommandThrottleService});
+            LiteBansModule_403.c("%AsyncBackgroundTask_21 - connectionTimeout is less than %dms, setting to %", new Object[]{this.LiteBansModule_31, c, CommandThrottleService});
             this.i = CommandThrottleService;
         }
         if (this.L < c) {
-            LiteBansModule_401.c("%AsyncBackgroundTask_21 - validationTimeout is less than %dms, setting to %", new Object[]{this.LiteBansModule_31, c, A});
+            LiteBansModule_403.c("%AsyncBackgroundTask_21 - validationTimeout is less than %dms, setting to %", new Object[]{this.LiteBansModule_31, c, A});
             this.L = A;
         }
         if (this.r < 1) {
@@ -401,28 +407,30 @@ implements LiteBansModule_350 {
             this.DatabaseMonitorService = this.r;
         }
         if (this.H + TimeUnit.SECONDS.toMillis(1L) > this.K && this.K > 0L && this.DatabaseMonitorService < this.r) {
-            LiteBansModule_401.c("%AsyncBackgroundTask_21 - idleTimeout is close to or more than maxLifetime, disabling ", new Object[]{this.LiteBansModule_31});
+            LiteBansModule_403.c("%AsyncBackgroundTask_21 - idleTimeout is close to or more than maxLifetime, disabling ", new Object[]{this.LiteBansModule_31});
             this.H = 0L;
         } else if (this.H != 0L && this.H < TimeUnit.SECONDS.toMillis(10L) && this.DatabaseMonitorService < this.r) {
-            LiteBansModule_401.c("%AsyncBackgroundTask_21 - idleTimeout is less than 10000ms, setting to default {}", new Object[]{this.LiteBansModule_31, LiteBansModule_430});
-            this.H = LiteBansModule_430;
-        } else if (this.H != LiteBansModule_430 && this.H != 0L && this.DatabaseMonitorService == this.r) {
-            LiteBansModule_401.c("%AsyncBackgroundTask_21 - idleTimeout has been set but has no effect because the pool is operating CommandExitException BaseCoreGenericHandler fixed size ", new Object[]{this.LiteBansModule_31});
-}
+            LiteBansModule_403.c("%AsyncBackgroundTask_21 - idleTimeout is less than 10000ms, setting to default {}", new Object[]{this.LiteBansModule_31, LiteBansModule_432});
+            this.H = LiteBansModule_432;
+        } else if (this.H != LiteBansModule_432 && this.H != 0L && this.DatabaseMonitorService == this.r) {
+            LiteBansModule_403.c("%AsyncBackgroundTask_21 - idleTimeout has been set but has no effect because the pool is operating CommandExitException BaseCoreGenericHandler fixed size ", new Object[]{this.LiteBansModule_31});
+        }
+    }
 
     private final void HoverTextFormatter() {
         if (this.PunishmentTableService) {
             throw new IllegalStateException("The configuration of the pool is sealed once started. Use HikariConfigMXBean for runtime ");
-}
+        }
+    }
 
     private final void g() {
-        LiteBansModule_401.LiteBansModule_31("%AsyncBackgroundTask_21 - configuration:", new Object[]{this.LiteBansModule_31});
+        LiteBansModule_403.LiteBansModule_31("%AsyncBackgroundTask_21 - configuration:", new Object[]{this.LiteBansModule_31});
         TreeSet treeSet = new TreeSet(SetHandler.BaseCoreGenericHandler(HikariConfig.class));
         for (String string : treeSet) {
             try {
                 Object targetObj = SetHandler.BaseCoreGenericHandler(string, this);
                 if ("dataSourceProperties".equals(string)) {
-                    Properties properties = SetHandler.BaseCoreGenericHandler(this.LiteBansModule_194);
+                    Properties properties = SetHandler.BaseCoreGenericHandler(this.LiteBansModule_195);
                     properties.setProperty("password", "<masked>");
                     targetObj = properties;
                 }
@@ -433,7 +441,7 @@ implements LiteBansModule_350 {
                 } else if (string.matches("scheduledExecutorService|threadFactory") && targetObj == null) {
                     targetObj = "internal";
                 } else if (string.contains("jdbcUrl") && targetObj instanceof String) {
-                    targetObj = targetObj.replaceAll("([?&;]password=)[^&#;]*(.*)", "$1<masked>$2");
+                    targetObj = ((String)targetObj).replaceAll("([?&;]password=)[^&#;]*(.*)", "$1<masked>$2");
                 } else if (string.contains("password")) {
                     targetObj = "<masked>";
                 } else if (targetObj instanceof String) {
@@ -441,26 +449,29 @@ implements LiteBansModule_350 {
                 } else if (targetObj == null) {
                     targetObj = "none";
                 }
-                LiteBansModule_401.LiteBansModule_31("{}{}", new Object[]{string + "............................................... + ".substring(0, 32), targetObj});
+                LiteBansModule_403.LiteBansModule_31("{}{}", new Object[]{string + "............................................... + ".substring(0, 32), targetObj});
             }
             catch (Exception exception) {}
-}
+        }
+    }
 
     private final void e(String string) {
-{
+        block15: {
             File file = new File(string);
             try (InputStream inputStream = file.isFile() ? new FileInputStream(file) : this.getClass().getResourceAsStream(string);){
                 if (inputStream != null) {
                     Properties properties = new Properties();
                     properties.load(inputStream);
                     SetHandler.BaseCoreGenericHandler(this, properties);
-                    break;
+                    break block15;
                 }
                 throw new IllegalArgumentException("Cannot find property file: " + string);
             }
             catch (IOException iOException) {
                 throw new RuntimeException("Failed to read property file", iOException);
-}
+            }
+        }
+    }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -473,27 +484,30 @@ implements LiteBansModule_350 {
                 String string2 = String.valueOf(Integer.getInteger("com.zaxxer.hikari.pool_number", 0) + 1);
                 System.setProperty("com.zaxxer.hikari.pool_number", string2);
                 return "HikariPool-" + string2;
-}
+            }
+        }
         catch (AccessControlException accessControlException) {
             ThreadLocalRandom threadLocalRandom = ThreadLocalRandom.current();
             StringBuilder stringBuilder = new StringBuilder("HikariPool-");
             for (int i = 0; i < 4; ++i) {
                 stringBuilder.append(BaseCoreGenericHandler[threadLocalRandom.nextInt(62)]);
             }
-            LiteBansModule_401.AsyncBackgroundTask_5("assigned random pool name '{}' (security manager prevented access to system properties)", new Object[]{stringBuilder});
+            LiteBansModule_403.AsyncBackgroundTask_5("assigned random pool name '{}' (security manager prevented access to system properties)", new Object[]{stringBuilder});
             return stringBuilder.toString();
-}
+        }
+    }
 
     static {
         B = 10;
         BanHandler_5 = 0L;
-        LiteBansModule_401 = HikariLogger.BaseCoreGenericHandler(HikariConfig.class);
+        LiteBansModule_403 = HikariLogger.BaseCoreGenericHandler(HikariConfig.class);
         BaseCoreGenericHandler = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
         CommandThrottleService = TimeUnit.SECONDS.toMillis(30L);
         A = TimeUnit.SECONDS.toMillis(5L);
         c = Long.getLong("com.zaxxer.hikari.timeoutMs.floor", 250L);
-        LiteBansModule_430 = TimeUnit.MINUTES.toMillis(10L);
+        LiteBansModule_432 = TimeUnit.MINUTES.toMillis(10L);
         n = TimeUnit.MINUTES.toMillis(30L);
         ServerSyncService = false;
+    }
 }
 

@@ -1,94 +1,55 @@
 package litebans;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Locale;
-import org.jetbrains.annotations.NotNull;
-
-public final class LiteBansModule_389 {
-    private static final byte[] BaseCoreGenericHandler = new byte[0];
-
-    public static final byte[] BaseCoreGenericHandler() {
-        return BaseCoreGenericHandler;
+import kotlin.jvm.internal.Reflection;
+public class LiteBansModule_389
+extends LiteBansModule_384
+implements LiteBansModule_136,
+LiteBansModule_197 {
+    private final int i;
+    private final int LiteBansModule_241;
+        public LiteBansModule_389(int n, Object targetObj, Class clazz, String string, String string2, int n2) {
+        super(targetObj, clazz, string, string2, (n2 & 1) == 1);
+        this.i = n;
+        this.LiteBansModule_241 = n2 >> 1;
     }
 
-    public static final List BaseCoreGenericHandler(@NotNull String[] args) {
-        List list;
-        if (args.length == 0) {
-            list = CollectionUtilities.e();
-        } else {
-            String[] filteredArgs = args;
-            String[] parsedArgs = filteredArgs;
-            Collection collection = new ArrayList(filteredArgs.length);
-            int n = parsedArgs.length;
-            for (int i = 0; i < n; ++i) {
-                String string;
-                String string2 = string = parsedArgs[i];
-                Collection collection2 = collection;
-                String string3 = string2;
-                collection2.add(string3.toLowerCase(Locale.ENGLISH));
-            }
-            list = (List)collection;
+    @Override
+    protected LiteBansModule_134 e() {
+        return Reflection.function((LiteBansModule_389)this);
+    }
+
+    public boolean equals(Object targetObj) {
+        if (targetObj == this) {
+            return true;
         }
-        return list;
-    }
-
-    public static final Integer BaseCoreGenericHandler(@NotNull String[] args, int n) {
-        String string = (String)ArrayUtilities.BaseCoreGenericHandler((Object[])args, n);
-        return string != null ? StringUtilities.BaseCoreGenericHandler(string) : null;
-    }
-
-    public static final int BaseCoreGenericHandler(@NotNull String[] args, int n, int n2) {
-        Integer n3 = LiteBansModule_389.BaseCoreGenericHandler(args, n);
-        return n3 != null ? n3 : n2;
-    }
-
-    public static final int LiteBansModule_31(@NotNull String[] args, int n) {
-        int n2 = args.length + -1;
-        if (0 <= n2) {
-            do {
-                int n3 = n2--;
-                Integer n4 = StringUtilities.BaseCoreGenericHandler(args[n3]);
-                if (n4 == null) {
-                    continue;
-                }
-                int n5 = n4;
-                return n5;
-            } while (0 <= n2);
+        if (targetObj instanceof LiteBansModule_389) {
+            LiteBansModule_389 kp_02 = (LiteBansModule_389)targetObj;
+            return this.plugin().equals(kp_02.BaseCoreGenericHandler()) && this.AsyncBackgroundTask_5().equals(kp_02.AsyncBackgroundTask_5()) && this.LiteBansModule_241 == kp_02.LiteBansModule_241 && this.i == kp_02.i && ObjectUtilities.BaseCoreGenericHandler(this.c(), kp_02.c()) && ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_31(), kp_02.LiteBansModule_31());
         }
-        return n;
-    }
-
-    public static final double BaseCoreGenericHandler(@NotNull String[] args, int n, double d10) {
-        Object targetObj = (String)ArrayUtilities.BaseCoreGenericHandler((Object[])args, n);
-        return targetObj != null && (targetObj = StringUtilities.LiteBansModule_31targetObj) != null ? (Double)targetObj : d10;
-    }
-
-    public static final boolean BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull byte[] byArray2, int n, int n2) {
-        int n3 = n2 - n;
-        int n5 = n;
-        while (n4 < n3) {
-            if (byArray[n4++] == byArray2[n5++]) continue;
-            return false;
+        if (targetObj instanceof LiteBansModule_197) {
+            return targetObj.equals(this.plugin());
         }
-        return true;
+        return false;
     }
 
-    public static final boolean BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull byte[] byArray2, int n, int n2, int n3) {
-        int n4 = n + (n3 - n2);
-        int n5 = n;
-        int n6 = n2;
-        while (n5 < n4) {
-            if (byArray[n5++] == byArray2[n6++]) continue;
-            return false;
+    public int hashCode() {
+        return ((this.LiteBansModule_31() == null ? 0 : this.LiteBansModule_31().hashCode() * 31) + this.plugin().hashCode()) * 31 + this.AsyncBackgroundTask_5().hashCode();
+    }
+
+    public String toString() {
+        LiteBansModule_134 dp_02 = this.plugin();
+        if (dp_02 != this) {
+            return dp_02.toString();
         }
-        return true;
+        return "<init>".equals(this.plugin()) ? "constructor (Kotlin reflection is not available)" : "function " + this.plugin() + " (Kotlin reflection is not available)";
     }
 
-    public static final void BaseCoreGenericHandler(@NotNull LiteBansModule_301 id_02, @NotNull LiteBansModule_178 eo_02) {
-        eo_02.BaseCoreGenericHandler(id_02.BaseCoreGenericHandler());
-        eo_02.BaseCoreGenericHandler(id_02.c());
-        eo_02.BaseCoreGenericHandler(id_02.LiteBansModule_194());
+    private static final void BaseCoreGenericHandler() {
+        GnuSparseMapHandler = new String[]{"<init>", "constructor (Kotlin reflection is not available)", "function ", " (Kotlin reflection is not available)"};
+    }
+
+    static {
+        LiteBansModule_389.BaseCoreGenericHandler();
+    }
 }
 

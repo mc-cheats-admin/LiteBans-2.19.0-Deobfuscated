@@ -11,7 +11,7 @@ public final class NullHandler_4 {
     private static final char BaseCoreGenericHandler = (char)46;
     final Map AsyncBackgroundTask_5 = new LinkedHashMap();
     private final NullHandler_4 LiteBansModule_31;
-    public NullHandler_4() {
+        public NullHandler_4() {
         this(null);
     }
 
@@ -29,7 +29,8 @@ public final class NullHandler_4 {
                 continue;
             }
             this.AsyncBackgroundTask_5.put(string, entry.getValue());
-}
+        }
+    }
 
     private final NullHandler_4 c(String string) {
         int n = string.indexOf(46);
@@ -45,14 +46,14 @@ public final class NullHandler_4 {
         return (NullHandler_4)targetObj;
     }
 
-    private final String LiteBansModule_240(String string) {
+    private final String LiteBansModule_241(String string) {
         int n = string.indexOf(46);
         return n == -1 ? string : string.substring(n + 1);
     }
 
     public Object LiteBansModule_31(String string, Object targetObj) {
         NullHandler_4 ie_02 = this.c(string);
-        Object contextObj = ie_02 == this ? this.AsyncBackgroundTask_5.get(string) : ie_02.LiteBansModule_31(this.LiteBansModule_240(string), targetObj);
+        Object contextObj = ie_02 == this ? this.AsyncBackgroundTask_5.get(string) : ie_02.LiteBansModule_31(this.LiteBansModule_241(string), targetObj);
         if (contextObj == null && targetObj instanceof NullHandler_4) {
             this.AsyncBackgroundTask_5.put(string, targetObj);
         }
@@ -77,13 +78,15 @@ public final class NullHandler_4 {
                 this.AsyncBackgroundTask_5.remove(string);
             } else {
                 this.AsyncBackgroundTask_5.put(string, targetObj);
-} else {
-            ie_02.BaseCoreGenericHandler(this.LiteBansModule_240(string), targetObj);
-}
+            }
+        } else {
+            ie_02.BaseCoreGenericHandler(this.LiteBansModule_241(string), targetObj);
+        }
+    }
 
     public NullHandler_4 LiteBansModule_31(String string) {
         Object targetObj = this.g(string);
-        return this.LiteBansModule_31(string, targetObj instanceof NullHandler_4 ? targetObj : new NullHandler_4(this.LiteBansModule_31 == null ? null : this.LiteBansModule_31.LiteBansModule_31(string)));
+        return (NullHandler_4)this.LiteBansModule_31(string, targetObj instanceof NullHandler_4 ? targetObj : new NullHandler_4(this.LiteBansModule_31 == null ? null : this.LiteBansModule_31.LiteBansModule_31(string)));
     }
 
     public Collection LiteBansModule_31() {
@@ -92,25 +95,25 @@ public final class NullHandler_4 {
 
     public int BaseCoreGenericHandler(String string, int n) {
         Object targetObj = this.LiteBansModule_31(string, n);
-        return targetObj instanceof Number ? targetObj.intValue() : n;
+        return targetObj instanceof Number ? ((Number)targetObj).intValue() : n;
     }
 
     public long BaseCoreGenericHandler(String string, long l3) {
         Object targetObj = this.LiteBansModule_31(string, l3);
-        return targetObj instanceof Number ? targetObj.longValue() : l3;
+        return targetObj instanceof Number ? ((Number)targetObj).longValue() : l3;
     }
 
     public double BaseCoreGenericHandler(String string) {
         Object targetObj = this.g(string);
-        return this.plugin(string, targetObj instanceof Number ? targetObj.doubleValue() : 0.0);
+        return this.plugin(string, targetObj instanceof Number ? ((Number)targetObj).doubleValue() : 0.0);
     }
 
     public double BaseCoreGenericHandler(String string, double d10) {
         Object targetObj = this.LiteBansModule_31(string, d10);
-        return targetObj instanceof Number ? targetObj.doubleValue() : d10;
+        return targetObj instanceof Number ? ((Number)targetObj).doubleValue() : d10;
     }
 
-    public boolean LiteBansModule_194(String string) {
+    public boolean LiteBansModule_195(String string) {
         Object targetObj = this.g(string);
         return this.plugin(string, targetObj instanceof Boolean ? (Boolean)targetObj : false);
     }
@@ -152,5 +155,10 @@ public final class NullHandler_4 {
 
     private static final void BaseCoreGenericHandler() {
         c = new String[]{"null", ""};
+    }
+
+    static {
+        NullHandler_4.BaseCoreGenericHandler();
+    }
 }
 

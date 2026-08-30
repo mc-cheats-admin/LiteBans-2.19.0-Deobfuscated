@@ -39,7 +39,7 @@ implements CommandSenderWrapper {
     }
 
     @Override
-    public String LiteBansModule_240() {
+    public String LiteBansModule_241() {
         return null;
     }
 
@@ -59,7 +59,7 @@ implements CommandSenderWrapper {
     }
 
     @Override
-    public boolean LiteBansModule_194() {
+    public boolean LiteBansModule_195() {
         return false;
     }
 
@@ -97,5 +97,6 @@ implements CommandSenderWrapper {
     @Override
     public Object c() {
         return this.plugin();
+    }
 }
 

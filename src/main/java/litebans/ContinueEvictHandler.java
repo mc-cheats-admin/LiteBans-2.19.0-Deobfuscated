@@ -25,5 +25,6 @@ extends Enum {
 
     static {
         BaseCoreGenericHandler = new ContinueEvictHandler[]{LiteBansModule_31, c};
+    }
 }
 

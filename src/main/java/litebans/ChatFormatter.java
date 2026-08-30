@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public final class ChatFormatter {
-    private ChatFormatter() {
+        private ChatFormatter() {
     }
 
     public final ThreadLocal LiteBansModule_31() {
@@ -28,7 +28,7 @@ public final class ChatFormatter {
         HoverTextFormatter y2 = (HoverTextFormatter)plugin.BaseCoreGenericHandler(HoverTextFormatter.class);
         CharSequence charSequence2 = charSequence;
         int n = 4096;
-        String string = LiteBansModule_242.BaseCoreGenericHandler((charSequence2).toString(), n);
+        String string = LiteBansModule_243.BaseCoreGenericHandler(((Object)charSequence2).toString(), n);
         String string2 = y2.BaseCoreGenericHandler(sender, string);
         if (string2 == null) {
             return;
@@ -41,13 +41,14 @@ public final class ChatFormatter {
             if (!(!pluginWrapper.isEnabled() || pluginWrapper.AsyncBackgroundTask_21())) {
                 plugin.c(() -> ChatFormatter.BaseCoreGenericHandler(sender, (String)charSequence2));
                 return;
-}
+            }
+        }
         sender.BaseCoreGenericHandler((String)charSequence2);
     }
 
     public static /* synthetic */ void BaseCoreGenericHandler(ChatFormatter chatFormatter, CommandSenderWrapper sender, CharSequence charSequence, PlatformPlugin plugin, int n, Object targetObj) {
         if ((n & 4) != 0) {
-            plugin = LiteBansModule_209.LiteBansModule_31.BaseCoreGenericHandler();
+            plugin = LiteBansModule_210.LiteBansModule_31.BaseCoreGenericHandler();
         }
         chatFormatter.BaseCoreGenericHandler(sender, charSequence, plugin);
     }
@@ -62,5 +63,10 @@ public final class ChatFormatter {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{""};
+    }
+
+    static {
+        ChatFormatter.BaseCoreGenericHandler();
+    }
 }
 

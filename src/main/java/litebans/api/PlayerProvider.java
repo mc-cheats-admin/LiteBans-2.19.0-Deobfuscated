@@ -20,5 +20,6 @@ public abstract class PlayerProvider {
     @Generated
     public static void setInstance(PlayerProvider playerProvider) {
         instance = playerProvider;
+    }
 }
 

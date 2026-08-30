@@ -1,139 +1,196 @@
 package litebans;
 
-public interface LiteBansModule_411 {
-    public static final int BaseCoreGenericHandler;
-    public static final int HikariDataSource;
-    public static final int GnuSparseMapHandler;
-    public static final int LiteBansModule_31;
-    public static final int ac;
-    public static final int J;
-    public static final int q;
-    public static final int z;
-    public static final int NullHandler_8;
-    public static final long aa;
-    public static final int HoverTextFormatter;
-    public static final int r;
-    public static final int ah;
-    public static final long O;
-    public static final int H;
-    public static final int i;
-    public static final int K;
-    public static final int n;
-    public static final int LiteBansModule_433;
-    public static final int PlayerQuitListener;
-    public static final int F;
-    public static final int PunishmentService;
-    public static final int BroadcastService;
-    public static final int B;
-    public static final int LiteBansModule_194;
-    public static final int U;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+
+public final class LiteBansModule_411 {
+    public static final LiteBansModule_115 LiteBansModule_195;
+    private final int LiteBansModule_31;
+    private final HashMap c = new HashMap();
+    private final HashMap e = new HashMap();
     public static final int AsyncBackgroundTask_5;
-    public static final int W;
-    public static final int m;
-    public static final int L;
-    public static final int BanHandler_4;
-    public static final int LiteBansModule_430;
-    public static final int MessageKey;
-    public static final int V;
-    public static final int BanHandler_2;
-    public static final int T;
-    public static final int CommandThrottleService;
-    public static final byte ad;
-    public static final byte LiteBansModule_17;
-    public static final byte aj;
-    public static final byte LockdownService;
-    public static final byte LiteBansModule_12;
-    public static final byte c;
-    public static final byte LiteBansModule_240;
-    public static final byte LiteBansModule_401;
-    public static final byte DatabaseMonitorService;
-    public static final byte Utf8Handler_2;
-    public static final byte X;
-    public static final byte AsyncBackgroundTask_21;
-    public static final byte g;
-    public static final byte BanHandler_5;
-    public static final byte Y;
-    public static final String af;
-    public static final String A;
-    public static final String PunishmentTableService;
-    public static final String ServerSyncService;
-    public static final String AsyncBackgroundTask_22;
-    public static final String D;
-    public static final String P;
-    public static final String LiteBansModule_10;
-    public static final String ak;
-    public static final int PluginHookService;
-    public static final int ab;
-    public static final int S;
-    public static final int ai;
-    public static final int e;
+    public static final int LiteBansModule_241;
+    public static final long g;
+        public LiteBansModule_411(long l3) {
+        LiteBansModule_325 iX2 = new LiteBansModule_325(l3);
+        this.LiteBansModule_31 = 8500 + iX2.LiteBansModule_31(4000);
+        this.plugin(iX2);
+    }
+
+    public final int LiteBansModule_31() {
+        return this.LiteBansModule_31;
+    }
+
+    public final HashMap BaseCoreGenericHandler() {
+        return this.c;
+    }
+
+    public final String BaseCoreGenericHandler(long l3) {
+        try {
+            long l5 = l3 + (long)this.LiteBansModule_31;
+            String string = String.valueOf(l5);
+            string = this.plugin(string);
+            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder2 = new StringBuilder();
+            String string2 = string;
+            int n = string2.length();
+            for (int i = 0; i < n; ++i) {
+                char c = string2.charAt(i);
+                stringBuilder2.append(c);
+                if (stringBuilder2.length() < 3) continue;
+                if (!flag) {
+                    if (StringUtilities.c((CharSequence)stringBuilder2, "000", false, 2, null)) {
+                        stringBuilder.append("m");
+                    } else if (StringUtilities.c((CharSequence)stringBuilder2, "00", false, 2, null)) {
+                        stringBuilder.append("CommandThrottleService");
+                    } else if (StringUtilities.c((CharSequence)stringBuilder2, "0", false, 2, null)) {
+                        stringBuilder.append("z");
+                    }
+                }
+                stringBuilder.append(this.plugin(stringBuilder2));
+                stringBuilder2.setLength(0);
+                flag = false;
+            }
+            if (((CharSequence)stringBuilder2).length() > 0) {
+                throw new LiteBansException_7(null, 1, null);
+            }
+            return stringBuilder.toString().toUpperCase(Locale.ROOT);
+        }
+        catch (LiteBansException_7 fz_02) {
+            return "error";
+        }
+    }
+
+    private final String BaseCoreGenericHandler(String string) {
+        String string2;
+        switch (string.length() % 3) {
+            case 1: {
+                string2 = "00" + string;
+                break;
+            }
+            case 2: {
+                string2 = '0' + string;
+                break;
+            }
+            default: {
+                string2 = string;
+            }
+        }
+        return string2;
+    }
+
+    private final String BaseCoreGenericHandler(int n, int n2) {
+        String string;
+        switch (n) {
+            case 0: {
+                string = String.valueOf(n2);
+                break;
+            }
+            case 1: {
+                string = "" + '0' + n2;
+                break;
+            }
+            case 2: {
+                string = "00" + n2;
+                break;
+            }
+            case 3: {
+                string = "000";
+                break;
+            }
+            default: {
+                throw new LiteBansException_7(null, 1, null);
+            }
+        }
+        return string;
+    }
+
+    public final long LiteBansModule_31(@NotNull String string) {
+        try {
+            String string2 = string.toLowerCase(Locale.ROOT);
+            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder2 = new StringBuilder();
+            int n2 = string2.length();
+            for (int i = 0; i < n2; ++i) {
+                char c = string2.charAt(i);
+                switch (c) {
+                    case 'm': {
+                        n = 3;
+                        break;
+                    }
+                    case 'CommandThrottleService': {
+                        n = 2;
+                        break;
+                    }
+                    case 'z': {
+                        n = 1;
+                        break;
+                    }
+                    default: {
+                        stringBuilder2.append(c);
+                    }
+                }
+                if (stringBuilder2.length() < 3) continue;
+                stringBuilder.append(this.plugin(stringBuilder2, n));
+                stringBuilder2.setLength(0);
+                n = 0;
+            }
+            if (((CharSequence)stringBuilder2).length() > 0) {
+                throw new LiteBansException_7(null, 1, null);
+            }
+            return Long.parseLong(stringBuilder.toString()) - (long)this.LiteBansModule_31;
+        }
+        catch (LiteBansException_7 fz_02) {
+            return -1L;
+        }
+    }
+
+    private final void BaseCoreGenericHandler(LiteBansModule_325 iX2) {
+        for (int i = 0; i < 1000; ++i) {
+            String string = this.LiteBansModule_31(iX2);
+            while (string.length() != 3 || ((Map)this.e).containsKey(string)) {
+                string = this.LiteBansModule_31(iX2);
+            }
+            Integer n = i;
+            ((Map)this.c).put(n, string);
+            n = i;
+            ((Map)this.e).put(string, n);
+        }
+    }
+
+    private final String LiteBansModule_31(LiteBansModule_325 iX2) {
+        return Long.toString(iX2.LiteBansModule_31() & 0xFFFL, LiteBansModule_339.BaseCoreGenericHandler(16));
+    }
+
+    private final String BaseCoreGenericHandler(StringBuilder stringBuilder) {
+        String string = (String)this.c.get(Integer.parseInt(stringBuilder.toString()));
+        if (string == null) {
+            throw new LiteBansException_7("No shuffle input for " + stringBuilder);
+        }
+        return string;
+    }
+
+    private final String BaseCoreGenericHandler(StringBuilder stringBuilder, int n) {
+        Integer n2 = (Integer)this.e.get(stringBuilder.toString());
+        if (n2 == null) {
+            throw new LiteBansException_7("No shuffle output for " + stringBuilder);
+        }
+        int n3 = n2;
+        return this.plugin(n, n3);
+    }
 
     static {
-        e = 12;
-        ai = 12;
-        S = 131;
-        ab = 4;
-        PluginHookService = 508;
-        ak = "tar\u0000";
-        LiteBansModule_10 = "././@LongLink";
-        P = "\u0000\u0000";
-        D = "ustar\u0000";
-        AsyncBackgroundTask_22 = "0\u0000";
-        ServerSyncService = " \u0000";
-        PunishmentTableService = "ustar ";
-        A = "00";
-        af = "ustar\u0000";
-        Y = (byte)103;
-        BanHandler_5 = (byte)88;
-        g = (byte)120;
-        AsyncBackgroundTask_21 = (byte)83;
-        X = (byte)76;
-        Utf8Handler_2 = (byte)75;
-        DatabaseMonitorService = (byte)55;
-        LiteBansModule_401 = (byte)54;
-        LiteBansModule_240 = (byte)53;
-        c = (byte)52;
-        LiteBansModule_12 = (byte)51;
-        LockdownService = (byte)50;
-        aj = (byte)49;
-        LiteBansModule_17 = (byte)48;
-        ad = 0;
-        CommandThrottleService = 1;
-        T = 504;
-        BanHandler_2 = 21;
-        V = 4;
-        MessageKey = 12;
-        LiteBansModule_430 = 12;
-        BanHandler_4 = 12;
-        L = 1;
-        m = 96;
-        W = 1;
-        AsyncBackgroundTask_5 = 4;
-        U = 12;
-        LiteBansModule_194 = 12;
-        B = 12;
-        BroadcastService = 155;
-        PunishmentService = 8;
-        F = 32;
-        PlayerQuitListener = 32;
-        LiteBansModule_433 = 12;
-        n = 2;
-        K = 263;
-        i = 6;
-        H = 257;
-        O = 0x1FFFFFFFFL;
-        ah = 12;
-        r = 148;
-        HoverTextFormatter = 8;
-        aa = 0x1FFFFFL;
-        NullHandler_8 = 8;
-        z = 8;
-        q = 8;
-        J = 100;
-        ac = 4;
-        LiteBansModule_31 = 3;
-        GnuSparseMapHandler = 2;
-        HikariDataSource = 10240;
-        BaseCoreGenericHandler = 512;
+        g = -1L;
+        LiteBansModule_241 = 6;
+        AsyncBackgroundTask_5 = 3;
+        LiteBansModule_411.c();
+        LiteBansModule_195 = new LiteBansModule_115(null);
+    }
+
+    private static final void c() {
+        BaseCoreGenericHandler = new String[]{"000", "m", "00", "CommandThrottleService", "0", "z", "error", "00", "00", "000", "No shuffle input for ", "No shuffle output for "};
+    }
 }
 

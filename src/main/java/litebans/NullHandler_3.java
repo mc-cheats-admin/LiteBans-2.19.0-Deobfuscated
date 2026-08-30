@@ -7,7 +7,7 @@ public class NullHandler_3
 extends HashMap
 implements Map,
 LiteBansModule_44,
-LiteBansModule_86 {
+LiteBansModule_87 {
     private static final long BaseCoreGenericHandler = -503443796854799292L;
 
     public static final String BaseCoreGenericHandler(Map map) {
@@ -48,5 +48,6 @@ LiteBansModule_86 {
 
     public String toString() {
         return this.plugin();
+    }
 }
 

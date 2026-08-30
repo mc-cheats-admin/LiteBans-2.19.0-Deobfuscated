@@ -1,21 +1,66 @@
 package litebans;
 
-import java.util.Iterator;
-public abstract class LiteBansModule_290
-implements Iterator,
-LiteBansModule_122 {
-    public abstract int LiteBansModule_31();
+import org.jetbrains.annotations.NotNull;
 
-    @Override
-    public void remove() {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
+public final class LiteBansModule_290 {
+    private final String LiteBansModule_31;
+    private final String e;
+    private final String AsyncBackgroundTask_5;
+    private final String LiteBansModule_195;
+    private final boolean BaseCoreGenericHandler;
+    private final boolean c;
+        public LiteBansModule_290(@NotNull String string, @NotNull String string2, @NotNull String string3, @NotNull String string4, boolean flag, boolean flag2) {
+        this.LiteBansModule_31 = string;
+        this.e = string2;
+        this.AsyncBackgroundTask_5 = string3;
+        this.LiteBansModule_195 = string4;
+        this.plugin = flag;
+        this.c = flag2;
     }
 
-    public Object next() {
-        return this.LiteBansModule_31();
+    public /* synthetic */ LiteBansModule_290(String string, String string2, String string3, String string4, boolean flag, boolean flag2, int n, LiteBansModule_14 aJ2) {
+        if ((n & 8) != 0) {
+            string4 = "";
+        }
+        if ((n & 0x10) != 0) {
+            flag = false;
+        }
+        if ((n & 0x20) != 0) {
+            flag2 = false;
+        }
+        this(string, string2, string3, string4, flag, flag2);
     }
 
-    private static final void BaseCoreGenericHandler() {
-        BaseCoreGenericHandler = new String[]{"Operation is not supported for read-only collection"};
+    public final String e() {
+        return this.LiteBansModule_31;
+    }
+
+    public final String g() {
+        return this.e;
+    }
+
+    public final String c() {
+        return this.AsyncBackgroundTask_5;
+    }
+
+    public final String BaseCoreGenericHandler() {
+        return this.LiteBansModule_195;
+    }
+
+    public final boolean LiteBansModule_31() {
+        return this.plugin;
+    }
+
+    public final boolean AsyncBackgroundTask_5() {
+        return this.c;
+    }
+
+    private static final void LiteBansModule_195() {
+        g = new String[]{""};
+    }
+
+    static {
+        LiteBansModule_290.LiteBansModule_195();
+    }
 }
 

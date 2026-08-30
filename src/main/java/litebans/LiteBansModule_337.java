@@ -1,16 +1,16 @@
 package litebans;
 
-public final class LiteBansModule_337 {
-    public static final /* synthetic */ int[] BaseCoreGenericHandler;
+public class LiteBansModule_337 {
+    public static final String BaseCoreGenericHandler() {
+        return LiteBansModule_181.c;
+    }
 
-    static {
-        int[] nArray = new int[BanHandler.values().length];
-        try {
-            nArray[BanHandler.g.ordinal()] = 1;
-        }
-        catch (NoSuchFieldError noSuchFieldError) {
-            // empty catch block
-        }
-        BaseCoreGenericHandler = nArray;
+    public static final String c() {
+        return LiteBansModule_181.AsyncBackgroundTask_5;
+    }
+
+    public static final String LiteBansModule_31() {
+        return LiteBansModule_181.LiteBansModule_31;
+    }
 }
 

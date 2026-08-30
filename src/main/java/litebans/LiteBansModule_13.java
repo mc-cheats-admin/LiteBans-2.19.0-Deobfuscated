@@ -542,5 +542,6 @@ implements PreparedStatement {
 
     public boolean isWrapperFor(Class clazz) {
         return this.plugin.isWrapperFor(clazz);
+    }
 }
 

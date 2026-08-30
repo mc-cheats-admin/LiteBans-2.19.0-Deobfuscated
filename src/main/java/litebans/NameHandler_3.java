@@ -4,13 +4,13 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public final class NameHandler_3 {
-    public static final LiteBansModule_215 c;
+    public static final LiteBansModule_216 c;
     private final byte LiteBansModule_31;
     private final String e;
-    public static final byte LiteBansModule_194;
+    public static final byte LiteBansModule_195;
     public static final byte AsyncBackgroundTask_5;
     public static final byte g;
-    public NameHandler_3(byte by2, @NotNull String string) {
+        public NameHandler_3(byte by2, @NotNull String string) {
         this.LiteBansModule_31 = by2;
         this.e = string;
     }
@@ -58,18 +58,19 @@ public final class NameHandler_3 {
         if (this.LiteBansModule_31 != jp_02.LiteBansModule_31) {
             return false;
         }
-        return ObjectUtilities.BaseCoreGenericHandler(this.e, jp_02.e);
+        return ObjectUtilities.BaseCoreGenericHandler((Object)this.e, (Object)jp_02.e);
     }
 
     static {
         g = (byte)2;
         AsyncBackgroundTask_5 = 1;
-        LiteBansModule_194 = 0;
+        LiteBansModule_195 = 0;
         NameHandler_3.c();
-        c = new LiteBansModule_215(null);
+        c = new LiteBansModule_216(null);
     }
 
     private static final void c() {
         BaseCoreGenericHandler = new String[]{"name", "uuid", "ip", "Target(type=", ", target="};
+    }
 }
 

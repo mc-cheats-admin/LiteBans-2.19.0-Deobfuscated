@@ -1,28 +1,23 @@
 package litebans;
 
-public final class LiteBansModule_78 {
-    private static final int BaseCoreGenericHandler(int n, int n2) {
-        int n3 = n % n2;
-        return n3 >= 0 ? n3 : n3 + n2;
+import java.util.Map;
+public final class LiteBansModule_78
+implements LiteBansModule_179 {
+    final /* synthetic */ String BaseCoreGenericHandler;
+    final /* synthetic */ String LiteBansModule_31;
+
+    public LiteBansModule_78(String string, String string2) {
+        this.plugin = string;
+        this.LiteBansModule_31 = string2;
     }
 
-    private static final int BaseCoreGenericHandler(int n, int n2, int n3) {
-        return LiteBansModule_78.BaseCoreGenericHandler(LiteBansModule_78.BaseCoreGenericHandler(n, n3) - LiteBansModule_78.BaseCoreGenericHandler(n2, n3), n3);
+    public final Boolean BaseCoreGenericHandler(Map.Entry entry) {
+        return this.plugin != null && ObjectUtilities.BaseCoreGenericHandler((Object)this.plugin, (Object)((SilentHandler)entry.getValue()).DatabaseMonitorService()) || this.LiteBansModule_31 != null && ((CharSequence)this.LiteBansModule_31).length() > 0 && ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_31, (Object)((SilentHandler)entry.getValue()).PunishmentTableService());
     }
 
-    public static final int LiteBansModule_31(int n, int n2, int n3) {
-        int n4;
-        if (n3 > 0) {
-            n4 = n >= n2 ? n2 : n2 - LiteBansModule_78.BaseCoreGenericHandler(n2, n, n3);
-        } else if (n3 < 0) {
-            n4 = n <= n2 ? n2 : n2 + LiteBansModule_78.BaseCoreGenericHandler(n, n2, -n3);
-        } else {
-            throw new IllegalArgumentException("Step is ");
-        }
-        return n4;
+    @Override
+    public Object BaseCoreGenericHandler(Object targetObj) {
+        return this.plugin((Map.Entry)targetObj);
     }
-
-    private static final void BaseCoreGenericHandler() {
-        BaseCoreGenericHandler = new String[]{"Step is ", "Step is zero."};
 }
 

@@ -1,60 +1,57 @@
 package litebans;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import net.fabricmc.fabric.api.message.v1.ServerMessageEvents;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.network.chat.ChatType;
+import net.minecraft.network.chat.PlayerChatMessage;
+import net.minecraft.server.level.ServerPlayer;
 import org.jetbrains.annotations.NotNull;
 
-public final class LiteBansModule_366 {
-    private final LiteBansModule_324 BaseCoreGenericHandler;
-    private byte[] LiteBansModule_31;
-    public LiteBansModule_366(@NotNull LiteBansModule_324 iX2, @NotNull byte[] byArray) {
-        this.plugin = iX2;
-        this.LiteBansModule_31 = byArray;
-        if (this.LiteBansModule_31 == LiteBansModule_389.BaseCoreGenericHandler()) {
-            LiteBansModule_366 k92 = this;
-            k92.LiteBansModule_31 = new byte[8192];
-}
+public final class LiteBansModule_366
+implements LiteBansModule_51 {
+    private final PlatformPlugin LiteBansModule_31;
+    private final PunishmentTableService BaseCoreGenericHandler;
 
-    public /* synthetic */ LiteBansModule_366(LiteBansModule_324 iX2, byte[] byArray, int n, LiteBansModule_14 aJ2) {
-        if ((n & 2) != 0) {
-            byArray = LiteBansModule_389.BaseCoreGenericHandler();
-        }
-        this(iX2, byArray);
+    public LiteBansModule_366(@NotNull PlatformPlugin plugin) {
+        this.LiteBansModule_31 = plugin;
+        this.plugin = (PunishmentTableService)this.LiteBansModule_31.BaseCoreGenericHandler(PunishmentTableService.class);
     }
 
-    public final byte[] LiteBansModule_31() {
+    public final PlatformPlugin BaseCoreGenericHandler() {
         return this.LiteBansModule_31;
     }
 
-    public final void BaseCoreGenericHandler(@NotNull byte[] byArray) {
-        this.LiteBansModule_31 = byArray;
+    public LiteBansModule_366 LiteBansModule_31() {
+        LiteBansModule_366 k52;
+        LiteBansModule_366 k53 = k52 = this;
+        ServerMessageEvents.ALLOW_CHAT_MESSAGE.register(k53::BaseCoreGenericHandler);
+        ServerMessageEvents.ALLOW_COMMAND_MESSAGE.register(k53::BaseCoreGenericHandler);
+        return k52;
     }
 
-    public final int BaseCoreGenericHandler(@NotNull SortHandler br2, byte by2) {
-        if (by2 < 0) {
-            this.plugin.LiteBansModule_31();
-            return 0;
-        }
-        int n = this.plugin.LiteBansModule_31(this.LiteBansModule_31.length);
-        if (br2.GnuSparseMapHandler()) {
-            if (br2.e().isEmpty()) {
-                br2.LiteBansModule_31(new ArrayList(this.LiteBansModule_31.length));
-            }
-            br2.LiteBansModule_31(CollectionUtilities.BaseCoreGenericHandler((Collection)br2.e(), LiteBansModule_371.BaseCoreGenericHandler(n, by2)));
-            return 0;
-        }
-        return this.LiteBansModule_31[n];
+    public final boolean BaseCoreGenericHandler(@NotNull PlayerChatMessage playerChatMessage, @NotNull ServerPlayer serverPlayer, @NotNull ChatType.Bound bound) {
+        CommandSenderWrapper sender = this.LiteBansModule_31.BaseCoreGenericHandler(serverPlayer);
+        String string = playerChatMessage.decoratedContent().getString();
+        LiteBansModule_71 c92 = new LiteBansModule_71(playerChatMessage, false, 2, null);
+        TestHandler_2 f82 = this.plugin.BaseCoreGenericHandler();
+        ObjectUtilities.BaseCoreGenericHandler(sender);
+        f82.BaseCoreGenericHandler((Object)c92, string, sender, true);
+        return !c92.BaseCoreGenericHandler();
     }
 
-    public String toString() {
-        return "Bitflipper(table=" + ArrayUtilities.BaseCoreGenericHandler(this.LiteBansModule_31, (CharSequence)",", null, null, 0, null, LiteBansModule_366::BaseCoreGenericHandler, 30, null) + ')';
+    public final boolean BaseCoreGenericHandler(@NotNull PlayerChatMessage playerChatMessage, @NotNull CommandSourceStack commandSourceStack, @NotNull ChatType.Bound bound) {
+        CommandSenderWrapper sender = this.LiteBansModule_31.BaseCoreGenericHandler(commandSourceStack);
+        String string = playerChatMessage.decoratedContent().getString();
+        LiteBansModule_71 c92 = new LiteBansModule_71(playerChatMessage, false, 2, null);
+        TestHandler_2 f82 = this.plugin.BaseCoreGenericHandler();
+        ObjectUtilities.BaseCoreGenericHandler(sender);
+        TestHandler_2.BaseCoreGenericHandler(f82, c92, string, sender, false, 8, null);
+        return !c92.BaseCoreGenericHandler();
     }
 
-    private static final CharSequence BaseCoreGenericHandler(byte by2) {
-        return "0b" + Integer.toString(by2, LiteBansModule_338.BaseCoreGenericHandler(2));
+    @Override
+    public LiteBansModule_176 BaseCoreGenericHandler() {
+        return this.LiteBansModule_31();
     }
-
-    private static final void BaseCoreGenericHandler() {
-        c = new String[]{"Bitflipper(table=", ",", "0b"};
 }
 

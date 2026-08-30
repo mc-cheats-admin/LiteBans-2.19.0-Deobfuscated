@@ -1,27 +1,42 @@
 package litebans;
 
-static final class LiteBansModule_335
-implements LiteBansModule_178 {
-    public static final LiteBansModule_335 LiteBansModule_31;
-    LiteBansModule_335() {
+public class LiteBansModule_335
+implements LiteBansModule_236 {
+    public static final String c;
+    public static final String LiteBansModule_195;
+    private final String e;
+    private static final int AsyncBackgroundTask_5;
+    private final long LiteBansModule_31;
+
+    public long BaseCoreGenericHandler() {
+        return this.LiteBansModule_31;
     }
 
-    public final String BaseCoreGenericHandler(BansHandler_2 kL2) {
-        BansHandler_2 kL3 = kL2;
-        return SQLiteDriverHandler.LiteBansModule_194(SQLiteDriverHandler.e("ALTER TABLE " + kL3), "removed_by_name VARCHAR(128)");
+    public int hashCode() {
+        int n = 31;
+        int n2 = 1;
+        n2 = 31 * n2 + (this.e == null ? 0 : this.e.hashCode());
+        return n2;
     }
 
-    @Override
-    public Object BaseCoreGenericHandler(Object targetObj) {
-        return SQLiteDriverHandler.AsyncBackgroundTask_5(this.plugintargetObj);
+    public boolean equals(Object targetObj) {
+        if (this == targetObj) {
+            return true;
+        }
+        if (targetObj == null || this.getClass() != targetObj.getClass()) {
+            return false;
+        }
+        LiteBansModule_335 ja_02 = (LiteBansModule_335)targetObj;
+        if (this.e == null) {
+            return ja_02.e == null;
+        }
+        return this.e.equals(ja_02.e);
     }
 
     static {
-        LiteBansModule_335.BaseCoreGenericHandler();
-        LiteBansModule_31 = new LiteBansModule_335();
+        AsyncBackgroundTask_5 = 33188;
+        LiteBansModule_195 = "`\n";
+        c = "!<arch>\n";
     }
-
-    private static final void BaseCoreGenericHandler() {
-        BaseCoreGenericHandler = new String[]{"ALTER TABLE ", "removed_by_name VARCHAR(128)"};
 }
 

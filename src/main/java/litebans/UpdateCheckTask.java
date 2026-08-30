@@ -6,67 +6,75 @@ import org.jetbrains.annotations.NotNull;
 public final class UpdateCheckTask
 implements Runnable {
     private final PlatformPlugin LiteBansModule_31;
-    public UpdateCheckTask(@NotNull PlatformPlugin plugin) {
+        public UpdateCheckTask(@NotNull PlatformPlugin plugin) {
         this.LiteBansModule_31 = plugin;
     }
 
     @Override
     public void run() {
-{
-                    v1 = this.LiteBansModule_31.BaseCoreGenericHandler(ConfigService.class);
+        block10: {
+            block8: {
+                block9: {
+                    v1 = (ConfigService)this.LiteBansModule_31.BaseCoreGenericHandler(ConfigService.class);
                     ObjectUtilities.BaseCoreGenericHandler(v1);
-                    arg1 = AbstractCommand.AsyncBackgroundTask_5;
-                    arg2 = "update";
-                    arg3 = arg2;
-                    switch (arg3.hashCode()) {
+                    v2 = AbstractCommand.AsyncBackgroundTask_5;
+                    v3 = "update";
+                    v4 = v3;
+                    switch (v4.hashCode()) {
                         case -1320563219: {
-                            if (arg3.equals("dupeip")) break;
+                            if (v4.equals("dupeip")) break;
                             break;
                         }
                         case 712910260: {
-                            if (!arg3.equals("staffhistory")) {
+                            if (!v4.equals("staffhistory")) {
                                 break;
                             }
-                            break;
+                            break block8;
                         }
                         case 926934164: {
-                            if (!arg3.equals("history")) {
+                            if (!v4.equals("history")) {
                                 break;
                             }
-                            break;
-}
-                    arg4 = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
-                    v0 = arg4;
-                    break;
+                            break block9;
+                        }
+                    }
+                    v5 = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
+                    v0 = v5;
+                    break block10;
                 }
-                arg5 = new String[]{"hist", "litebans:history"};
-                v0 = arg5;
-                break;
+                v6 = new String[]{"hist", "litebans:history"};
+                v0 = v6;
+                break block10;
             }
-            arg6 = new String[]{"staffhist", "litebans:staffhistory"};
-            v0 = arg6;
-            break;
-                        arg7 = new String[]{"litebans:" + (String)arg2};
-            v0 = arg7;
+            v7 = new String[]{"staffhist", "litebans:staffhistory"};
+            v0 = v7;
+            break block10;
+                        v8 = new String[]{"litebans:" + (String)v3};
+            v0 = v8;
         }
-        arg8 = v0;
-        arg9 = new LiteBansModule_15(new LiteBansModule_403(v1, Arrays.copyOf(arg8, ((String[])arg8).length)).LiteBansModule_31(), "disabled", "false", null);
-        v1.BaseCoreGenericHandler(arg9);
-        arg8 = (this.LiteBansModule_31.BaseCoreGenericHandler(DatabaseMonitorService.class)).LiteBansModule_401();
-        if (arg8 != null) {
-            arg8.BaseCoreGenericHandler(arg9.e());
-            arg8.LiteBansModule_31(arg9.AsyncBackgroundTask_5());
+        v9 = v0;
+        v10 = new LiteBansModule_15(new LiteBansModule_405(v1, Arrays.copyOf(v9, ((String[])v9).length)).LiteBansModule_31(), "disabled", "false", null);
+        v1.BaseCoreGenericHandler(v10);
+        v9 = ((DatabaseMonitorService)this.LiteBansModule_31.BaseCoreGenericHandler(DatabaseMonitorService.class)).LiteBansModule_403();
+        if (v9 != null) {
+            v9.BaseCoreGenericHandler(v10.e());
+            v9.LiteBansModule_31(v10.AsyncBackgroundTask_5());
         }
-        arg2 = this.LiteBansModule_31.HoverTextFormatter();
-        arg3 = "[LiteBans] " + BlackHandler.ServerSyncService;
-        arg2.BaseCoreGenericHandler(arg3 + "======================================");
-        arg2.BaseCoreGenericHandler(arg3 + "|| " + BlackHandler.c + "Plugin access has been disabled! " + BlackHandler.ServerSyncService + "||");
-        arg2.BaseCoreGenericHandler(arg3 + "|| " + BlackHandler.AsyncBackgroundTask_5 + "If you have bought LiteBans,     " + BlackHandler.ServerSyncService + "||");
-        arg2.BaseCoreGenericHandler(arg3 + "|| " + BlackHandler.AsyncBackgroundTask_5 + "contact Ruan on SpigotMC + " + BlackHandler.ServerSyncService + "||");
-        arg2.BaseCoreGenericHandler(arg3 + "======================================");
+        v3 = this.LiteBansModule_31.HoverTextFormatter();
+        v4 = "[LiteBans] " + BlackHandler.ServerSyncService;
+        v3.BaseCoreGenericHandler(v4 + "======================================");
+        v3.BaseCoreGenericHandler(v4 + "|| " + BlackHandler.c + "Plugin access has been disabled! " + BlackHandler.ServerSyncService + "||");
+        v3.BaseCoreGenericHandler(v4 + "|| " + BlackHandler.AsyncBackgroundTask_5 + "If you have bought LiteBans,     " + BlackHandler.ServerSyncService + "||");
+        v3.BaseCoreGenericHandler(v4 + "|| " + BlackHandler.AsyncBackgroundTask_5 + "contact Ruan on SpigotMC + " + BlackHandler.ServerSyncService + "||");
+        v3.BaseCoreGenericHandler(v4 + "======================================");
     }
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"update", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", "disabled", "false", "[LiteBans] ", "======================================", "|| ", "Plugin access has been disabled! ", "||", "|| ", "If you have bought LiteBans,     ", "||", "|| ", "contact Ruan on ", "||", "======================================"};
+    }
+
+    static {
+        UpdateCheckTask.BaseCoreGenericHandler();
+    }
 }
 

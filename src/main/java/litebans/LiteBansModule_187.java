@@ -1,71 +1,20 @@
 package litebans;
 
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.Driver;
-import java.sql.DriverManager;
-import java.util.logging.Logger;
-import javax.sql.DataSource;
-import org.jetbrains.annotations.NotNull;
-
+import java.io.File;
 public final class LiteBansModule_187
-implements DataSource {
-    private final Driver BaseCoreGenericHandler;
-    private final HikariConfig LiteBansModule_31;
+implements LiteBansModule_419 {
+    final /* synthetic */ ConfigService LiteBansModule_31;
+    final /* synthetic */ Class BaseCoreGenericHandler;
 
-    public LiteBansModule_187(@NotNull Driver driver, @NotNull HikariConfig aB2) {
-        this.plugin = driver;
-        this.LiteBansModule_31 = aB2;
-        this.setLoginTimeout(this.LiteBansModule_31.c());
+    LiteBansModule_187(ConfigService configService, Class clazz) {
+        this.LiteBansModule_31 = configService;
+        this.plugin = clazz;
     }
 
     @Override
-    public Connection getConnection() {
-        return this.plugin.connect(this.LiteBansModule_31.m(), this.LiteBansModule_31.A());
+    public DatabaseService BaseCoreGenericHandler(PlatformPlugin plugin, File file) {
+        JsonHandler bb_02 = new JsonHandler(file, this.plugin);
+        return new YamlConfigProvider(this.LiteBansModule_31.BaseCoreGenericHandler, bb_02).c(file);
     }
-
-    @Override
-    public Connection getConnection(@NotNull String string, @NotNull String string2) {
-        return this.getConnection();
-    }
-
-    @Override
-    public int getLoginTimeout() {
-        return DriverManager.getLoginTimeout();
-    }
-
-    @Override
-    public void setLoginTimeout(int n) {
-        DriverManager.setLoginTimeout(n);
-    }
-
-    @Override
-    public PrintWriter getLogWriter() {
-        AssertionUtilities.BaseCoreGenericHandler();
-        throw new CommandExitException();
-    }
-
-    public Void BaseCoreGenericHandler(@NotNull PrintWriter printWriter) {
-        AssertionUtilities.BaseCoreGenericHandler();
-        throw new CommandExitException();
-    }
-
-    public Object unwrap(@NotNull Class clazz) {
-        AssertionUtilities.BaseCoreGenericHandler();
-        throw new CommandExitException();
-    }
-
-    public boolean isWrapperFor(@NotNull Class clazz) {
-        return false;
-    }
-
-    @Override
-    public Logger getParentLogger() {
-        return null;
-    }
-
-    @Override
-    public void setLogWriter(PrintWriter printWriter) {
-        this.plugin(printWriter);
 }
 

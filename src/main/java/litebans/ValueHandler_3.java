@@ -10,15 +10,15 @@ import org.jetbrains.annotations.Nullable;
 static final class ValueHandler_3
 implements Map,
 Serializable,
-LiteBansModule_122 {
+LiteBansModule_123 {
     public static final ValueHandler_3 LiteBansModule_31;
     private static final long c;
-    private ValueHandler_3() {
+        private ValueHandler_3() {
     }
 
     @Override
     public boolean equals(@Nullable Object targetObj) {
-        return targetObj instanceof Map && targetObj.isEmpty();
+        return targetObj instanceof Map && ((Map)targetObj).isEmpty();
     }
 
     @Override
@@ -45,7 +45,7 @@ LiteBansModule_122 {
     }
 
     public boolean BaseCoreGenericHandler(@NotNull Void void_) {
-        ObjectUtilities.BaseCoreGenericHandler(void_, BaseCoreGenericHandler[1]);
+        ObjectUtilities.BaseCoreGenericHandler((Object)void_, BaseCoreGenericHandler[1]);
         return false;
     }
 
@@ -53,7 +53,7 @@ LiteBansModule_122 {
         return null;
     }
 
-    public Set LiteBansModule_194() {
+    public Set LiteBansModule_195() {
         return ElementHandler_2.LiteBansModule_31;
     }
 
@@ -92,7 +92,7 @@ LiteBansModule_122 {
         if (!(targetObj instanceof Void)) {
             return false;
         }
-        return this.plugintargetObj;
+        return this.plugin((Void)targetObj);
     }
 
     public Object get(Object targetObj) {
@@ -100,7 +100,7 @@ LiteBansModule_122 {
     }
 
     public final Set entrySet() {
-        return this.LiteBansModule_194();
+        return this.LiteBansModule_195();
     }
 
     public final Set keySet() {
@@ -127,5 +127,6 @@ LiteBansModule_122 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"{}", "value", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection"};
+    }
 }
 

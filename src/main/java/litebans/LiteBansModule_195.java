@@ -1,55 +1,90 @@
 package litebans;
 
-import org.jetbrains.annotations.NotNull;
+import java.io.InputStream;
+public class LiteBansModule_195
+extends LiteBansModule_154 {
+    private final InputStream HoverTextFormatter;
+    private long BroadcastService = 0L;
+    private boolean e;
+    private LiteBansModule_335 LiteBansModule_435 = null;
+    private byte[] LiteBansModule_195 = null;
+    private long z = -1L;
+    private static final int ServerSyncService;
+    private static final int LiteBansModule_403;
+    private static final int CommandThrottleService;
+    private static final int DatabaseMonitorService;
+    private static final int GnuSparseMapHandler;
+    private static final int m;
+    private static final int AsyncBackgroundTask_21;
+    private static final int i;
+    private static final int g;
+    private static final int n;
+    private static final int AsyncBackgroundTask_22;
+    private static final int PunishmentTableService;
+    private final byte[] Utf8Handler_2 = new byte[58];
+    static final String A;
+    private static final int q;
+    private static final String LiteBansModule_241;
+    private static final String AsyncBackgroundTask_5;
+    private static final String r;
 
-public final class LiteBansModule_195
-extends MessageHandler {
-    public LiteBansModule_195(@NotNull PlatformPlugin plugin) {
-        super(plugin);
+    public LiteBansModule_195(InputStream inputStream) {
+        this.HoverTextFormatter = inputStream;
+        this.e = false;
     }
 
     @Override
-    public void run() {
-        MessageHandler messageHandler = this;
-        ChatFormatter chatFormatter = MessageHandler.BaseCoreGenericHandler;
-        boolean flag2 = messageHandler.AsyncBackgroundTask_5().LiteBansModule_194();
-        CharSequence charSequence = MessageKey.LiteBansModule_31;
-        ChatFormatter fo_03 = chatFormatter;
-        boolean flag4 = !flag2;
-        if (flag4) {
-            ChatFormatter fo_04 = fo_03;
-            fo_04.BaseCoreGenericHandler(charSequence);
-            throw new CommandExitException();
+    public void close() {
+        if (!this.e) {
+            this.e = true;
+            this.HoverTextFormatter.close();
         }
-        messageHandler = this;
-        flag = false;
-        ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> LiteBansModule_195.BaseCoreGenericHandler(this, arg_0));
+        this.LiteBansModule_435 = null;
     }
 
-    private static final KotlinUnitHandler BaseCoreGenericHandler(LiteBansModule_195 f02, LiteBansModule_82 ch2) {
-        Object targetObj = MessageHandler.BaseCoreGenericHandler;
-        boolean flag = ch2.LiteBansModule_31();
-        Object contextObj = MessageKey.ServerEventListener;
-        Object resultObj = targetObj;
-        if (flag) {
-            ChatFormatter chatFormatter = resultObj;
-            chatFormatter.BaseCoreGenericHandler(contextObj);
-            throw new CommandExitException();
+    @Override
+    public int read(byte[] byArray, int n, int n2) {
+        if (n2 == 0) {
+            return 0;
         }
-        targetObj = BansHandler_2.AsyncBackgroundTask_5.BaseCoreGenericHandler();
-        flag = false;
-        contextObj = targetObj.iterator();
-        while (contextObj.hasNext()) {
-            Object e = contextObj.next();
-            resultObj = (BansHandler_2)e;
-            flag3 = false;
-            ch2.BaseCoreGenericHandlerthis;
+        if (this.LiteBansModule_435 == null) {
+            throw new IllegalStateException("No current ar entry");
         }
-        CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)f02, LiteBansModule_242.BaseCoreGenericHandler(BlackHandler.ServerSyncService, "All templates have been reset "));
-        return KotlinUnitHandler.BaseCoreGenericHandler;
+        long l3 = this.z + this.LiteBansModule_435.BaseCoreGenericHandler();
+        if (n2 < 0 || this.BroadcastService >= l3) {
+            return -1;
+        }
+        int n3 = (int)Math.min((long)n2, l3 - this.BroadcastService);
+        int n4 = this.HoverTextFormatter.read(byArray, n, n3);
+        this.c(n4);
+        return n4;
     }
 
-    private static final void BaseCoreGenericHandler() {
-        AsyncBackgroundTask_5 = new String[]{"All templates have been reset successfully."};
+    private final void c(long l3) {
+        this.LiteBansModule_31(l3);
+        if (l3 > 0L) {
+            this.BroadcastService += l3;
+        }
+    }
+
+    static {
+        r = "^/\\AsyncBackgroundTask_5+";
+        AsyncBackgroundTask_5 = "//";
+        LiteBansModule_241 = "^#1/\\AsyncBackgroundTask_5+";
+        A = "#1/";
+        PunishmentTableService = 10;
+        AsyncBackgroundTask_22 = 48;
+        n = 8;
+        g = 40;
+        i = 6;
+        AsyncBackgroundTask_21 = 34;
+        m = 6;
+        GnuSparseMapHandler = 28;
+        DatabaseMonitorService = 12;
+        CommandThrottleService = 16;
+        LiteBansModule_403 = 16;
+        ServerSyncService = 0;
+        q = "#1/".length();
+    }
 }
 

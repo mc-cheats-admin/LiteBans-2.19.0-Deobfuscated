@@ -9,8 +9,8 @@ import org.jetbrains.annotations.NotNull;
 public final class AsyncBackgroundTask_21
 extends PluginModule
 implements Runnable {
-    public static final LiteBansModule_272 AsyncBackgroundTask_5;
-    private final ArrayBlockingQueue LiteBansModule_194 = new ArrayBlockingQueue(2048);
+    public static final LiteBansModule_273 AsyncBackgroundTask_5;
+    private final ArrayBlockingQueue LiteBansModule_195 = new ArrayBlockingQueue(2048);
     private final AtomicBoolean c = new AtomicBoolean();
     public static final long LiteBansModule_31;
     public static final int e;
@@ -20,7 +20,7 @@ implements Runnable {
     }
 
     public final ArrayBlockingQueue BaseCoreGenericHandler() {
-        return this.LiteBansModule_194;
+        return this.LiteBansModule_195;
     }
 
     @Override
@@ -37,8 +37,8 @@ implements Runnable {
     public void run() {
         AtomicBoolean atomicBoolean = this.c;
         Object targetObj = atomicBoolean;
-        if (targetObj.compareAndSet(false, true)) {
-            targetObj = this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        if (((AtomicBoolean)targetObj).compareAndSet(false, true)) {
+            targetObj = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
             try {
                 int n2;
                 AsyncBackgroundTask_21 s2 = this;
@@ -67,7 +67,8 @@ implements Runnable {
                     default: {
                         AssertionUtilities.BaseCoreGenericHandler();
                         throw new CommandExitException();
-}
+                    }
+                }
                 n3 = n2;
                 if (DatabaseMonitorService.BaseCoreGenericHandler((DatabaseMonitorService)targetObj, 0, 1, null) && n == 0) {
                     n3 = 1;
@@ -75,21 +76,22 @@ implements Runnable {
                 contextObj = targetObj;
                 flag3 = false;
                 try {
-                    LiteBansModule_82 ch2 = ((DatabaseMonitorService)contextObj).LiteBansModule_194();
+                    LiteBansModule_83 ch2 = ((DatabaseMonitorService)contextObj).LiteBansModule_195();
                     Closeable closeable = ch2;
                     Throwable throwable = null;
                     try {
-                        Object resultObj = (LiteBansModule_82)closeable;
-                        LiteBansModule_82 ch3 = ch2;
+                        Object resultObj = (LiteBansModule_83)closeable;
+                        LiteBansModule_83 ch3 = ch2;
                         int n4 = 1;
                         int n5 = n3;
                         if (n4 <= n5) {
-                            while (this.LiteBansModule_194.poll() != null) {
-                                LiteBansModule_95 cp_02;
+                            while ((LiteBansModule_96)this.LiteBansModule_195.poll() != null) {
+                                LiteBansModule_96 cp_02;
                                 AllHandler_3.BaseCoreGenericHandler(ch3, cp_02.c(), cp_02.g(), cp_02.LiteBansModule_31(), false, false, 24, null);
                                 if (n4 == n5) break;
                                 ++n4;
-}
+                            }
+                        }
                         resultObj = KotlinUnitHandler.BaseCoreGenericHandler;
                     }
                     catch (Throwable throwable2) {
@@ -98,21 +100,26 @@ implements Runnable {
                     }
                     finally {
                         BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-}
+                    }
+                }
                 catch (SQLException sQLException) {
                     if (!((DatabaseMonitorService)contextObj).LiteBansModule_31(sQLException)) {
                         throw sQLException;
-}
+                    }
+                }
+            }
             catch (Exception exception) {
                 if (exception instanceof InterruptedException) {
                     return;
                 }
-                targetObj.BaseCoreGenericHandler(exception);
+                ((DatabaseMonitorService)targetObj).BaseCoreGenericHandler(exception);
             }
             finally {
                 AtomicBoolean atomicBoolean2 = atomicBoolean;
                 atomicBoolean2.set(false);
-}
+            }
+        }
+    }
 
     @Override
     public void LiteBansModule_31() {
@@ -123,6 +130,7 @@ implements Runnable {
     static {
         e = 2048;
         LiteBansModule_31 = 64L;
-        AsyncBackgroundTask_5 = new LiteBansModule_272(null);
+        AsyncBackgroundTask_5 = new LiteBansModule_273(null);
+    }
 }
 

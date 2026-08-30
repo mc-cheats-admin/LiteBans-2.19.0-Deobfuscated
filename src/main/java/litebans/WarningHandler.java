@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 public class WarningHandler
 extends java.util.logging.Logger {
     private final Logger LiteBansModule_31;
-    public WarningHandler(Logger logger, String string) {
+        public WarningHandler(Logger logger, String string) {
         super(string, null);
         this.LiteBansModule_31 = logger;
     }
@@ -167,7 +167,7 @@ extends java.util.logging.Logger {
     public void log(Level v1, String v2) {
         /*
          * This method has failed to decompile.  When submitting BaseCoreGenericHandler bug report, please provide this stack trace, and (if you hold appropriate legal rights) the relevant class file.
-         *
+         * 
          * org.benf.cfr.reader.bytecode.analysis.opgraph.op4rewriters.SwitchStringRewriter$TooOptimisticMatchException
          *     LiteBansModule_21 org.benf.cfr.reader.bytecode.analysis.opgraph.op4rewriters.SwitchStringRewriter.getString(SwitchStringRewriter.java:404)
          *     LiteBansModule_21 org.benf.cfr.reader.bytecode.analysis.opgraph.op4rewriters.SwitchStringRewriter.access$600(SwitchStringRewriter.java:53)
@@ -288,5 +288,10 @@ extends java.util.logging.Logger {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"WARNING", "SEVERE"};
+    }
+
+    static {
+        WarningHandler.BaseCoreGenericHandler();
+    }
 }
 

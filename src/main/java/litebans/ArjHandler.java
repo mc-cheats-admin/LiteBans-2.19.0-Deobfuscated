@@ -10,34 +10,35 @@ import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 public class ArjHandler
-implements LiteBansModule_128 {
+implements LiteBansModule_129 {
     private static final int n;
     private static final int LiteBansModule_31;
     private static final int BroadcastService;
     private static final ArjHandler AsyncBackgroundTask_5;
     public static final String m;
-    public static final String LiteBansModule_194;
+    public static final String LiteBansModule_195;
     public static final String c;
     public static final String i;
     public static final String BaseCoreGenericHandler;
-    public static final String LiteBansModule_401;
+    public static final String LiteBansModule_403;
     public static final String Utf8Handler_2;
     public static final String g;
     private final String GnuSparseMapHandler;
     private volatile String e;
-    private SortedMap LiteBansModule_240;
+    private SortedMap LiteBansModule_241;
 
     private static final ArrayList BaseCoreGenericHandler() {
-        return LiteBansModule_291.BaseCoreGenericHandler(ArjHandler.LiteBansModule_194());
+        return LiteBansModule_292.BaseCoreGenericHandler(ArjHandler.LiteBansModule_195());
     }
 
-    static final void BaseCoreGenericHandler(Set set, LiteBansModule_128 dm_02, TreeMap treeMap) {
+    static final void BaseCoreGenericHandler(Set set, LiteBansModule_129 dm_02, TreeMap treeMap) {
         for (String string : set) {
             treeMap.put(ArjHandler.BaseCoreGenericHandler(string), dm_02);
-}
+        }
+    }
 
-    private static final Iterator LiteBansModule_194() {
-        return new LiteBansModule_346(LiteBansModule_128.class);
+    private static final Iterator LiteBansModule_195() {
+        return new LiteBansModule_348(LiteBansModule_129.class);
     }
 
     private static final String BaseCoreGenericHandler(String string) {
@@ -45,7 +46,7 @@ implements LiteBansModule_128 {
     }
 
     public static final SortedMap c() {
-        return (SortedMap)AccessController.doPrivileged(new LiteBansModule_152());
+        return (SortedMap)AccessController.doPrivileged(new LiteBansModule_153());
     }
 
     public ArjHandler() {
@@ -57,12 +58,12 @@ implements LiteBansModule_128 {
         this.e = string;
     }
 
-    public LiteBansModule_153 BaseCoreGenericHandler(String string, InputStream inputStream) {
+    public LiteBansModule_154 BaseCoreGenericHandler(String string, InputStream inputStream) {
         return this.plugin(string, inputStream, this.e);
     }
 
     @Override
-    public LiteBansModule_153 BaseCoreGenericHandler(String string, InputStream inputStream, String string2) {
+    public LiteBansModule_154 BaseCoreGenericHandler(String string, InputStream inputStream, String string2) {
         if (string == null) {
             throw new IllegalArgumentException("Archivername must not be ");
         }
@@ -70,7 +71,7 @@ implements LiteBansModule_128 {
             throw new IllegalArgumentException("InputStream must not be ");
         }
         if ("ar".equalsIgnoreCase(string)) {
-            return new LiteBansModule_194(inputStream);
+            return new LiteBansModule_195(inputStream);
         }
         if ("arj".equalsIgnoreCase(string)) {
             if (string2 != null) {
@@ -92,26 +93,26 @@ implements LiteBansModule_128 {
         }
         if ("jar".equalsIgnoreCase(string)) {
             if (string2 != null) {
-                return new LiteBansModule_401(inputStream, string2);
+                return new LiteBansModule_403(inputStream, string2);
             }
-            return new LiteBansModule_401(inputStream);
+            return new LiteBansModule_403(inputStream);
         }
         if ("cpio".equalsIgnoreCase(string)) {
             if (string2 != null) {
-                return new LiteBansModule_240(inputStream, string2);
+                return new LiteBansModule_241(inputStream, string2);
             }
-            return new LiteBansModule_240(inputStream);
+            return new LiteBansModule_241(inputStream);
         }
         if ("dump".equalsIgnoreCase(string)) {
             if (string2 != null) {
-                return new LiteBansModule_296(inputStream, string2);
+                return new LiteBansModule_297(inputStream, string2);
             }
-            return new LiteBansModule_296(inputStream);
+            return new LiteBansModule_297(inputStream);
         }
         if ("7z".equalsIgnoreCase(string)) {
-            throw new LiteBansModule_257("7z");
+            throw new LiteBansModule_258("7z");
         }
-        LiteBansModule_128 dm_02 = this.LiteBansModule_31().get(ArjHandler.BaseCoreGenericHandler(string));
+        LiteBansModule_129 dm_02 = (LiteBansModule_129)this.LiteBansModule_31().get(ArjHandler.BaseCoreGenericHandler(string));
         if (dm_02 != null) {
             return dm_02.BaseCoreGenericHandler(string, inputStream, string2);
         }
@@ -119,15 +120,15 @@ implements LiteBansModule_128 {
     }
 
     public SortedMap LiteBansModule_31() {
-        if (this.LiteBansModule_240 == null) {
-            this.LiteBansModule_240 = Collections.unmodifiableSortedMap(ArjHandler.c());
+        if (this.LiteBansModule_241 == null) {
+            this.LiteBansModule_241 = Collections.unmodifiableSortedMap(ArjHandler.c());
         }
-        return this.LiteBansModule_240;
+        return this.LiteBansModule_241;
     }
 
     @Override
     public Set BaseCoreGenericHandler() {
-        return LiteBansModule_234.BaseCoreGenericHandler(new String[]{"ar", "arj", "zip", "tar", "jar", "cpio", "dump", "7z"});
+        return LiteBansModule_235.BaseCoreGenericHandler(new String[]{"ar", "arj", "zip", "tar", "jar", "cpio", "dump", "7z"});
     }
 
     static final /* synthetic */ ArjHandler e() {
@@ -141,15 +142,16 @@ implements LiteBansModule_128 {
     static {
         g = "7z";
         Utf8Handler_2 = "zip";
-        LiteBansModule_401 = "tar";
+        LiteBansModule_403 = "tar";
         BaseCoreGenericHandler = "jar";
         i = "dump";
         c = "cpio";
-        LiteBansModule_194 = "arj";
+        LiteBansModule_195 = "arj";
         m = "ar";
         BroadcastService = 12;
         LiteBansModule_31 = 32;
         n = 512;
         AsyncBackgroundTask_5 = new ArjHandler();
+    }
 }
 

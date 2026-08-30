@@ -1,44 +1,108 @@
 package litebans;
 
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Collection;
+import java.util.List;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 public final class LiteBansModule_246 {
-    private LiteBansModule_246() {
-    }
-
-    public final String BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull Object contextObj, @Nullable Object resultObj) {
-        return this.plugin(targetObj.toString(), contextObj.toString(), resultObj);
-    }
-
-    public final String BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull String string, @Nullable Object targetObj) {
-        if (!StringUtilities.BaseCoreGenericHandler(charSequence, string, false, 2, null)) {
-            return (charSequence).toString();
+    public static final int BaseCoreGenericHandler(@NotNull int[] nArray, @NotNull LiteBansModule_325 iX2) {
+        if (nArray.length <= 1) {
+            return ArrayUtilities.LiteBansModule_31(nArray);
         }
-        Pattern pattern = (Pattern)LiteBansModule_433.BaseCoreGenericHandler().get(string);
-        if (pattern == null) {
-            pattern = this.plugin(string);
-        }
-        String string2 = pattern.matcher(charSequence).replaceAll(Matcher.quoteReplacement(String.valueOf(targetObj)));
-        ObjectUtilities.BaseCoreGenericHandler(string2);
-        return string2;
+        return nArray[iX2.BaseCoreGenericHandler(nArray.length)];
     }
 
-    private final Pattern BaseCoreGenericHandler(String string) {
-        Pattern pattern = Pattern.compile(string, 16);
-        Map map = LiteBansModule_433.BaseCoreGenericHandler();
-        if (map.size() > 512) {
-            map.clear();
+    public static final byte c(@NotNull byte[] byArray, @NotNull LiteBansModule_325 iX2) {
+        if (byArray.length <= 1) {
+            return ArrayUtilities.BaseCoreGenericHandler(byArray);
         }
-        map.put(string, pattern);
-        ObjectUtilities.BaseCoreGenericHandler(pattern);
-        return pattern;
+        return byArray[iX2.LiteBansModule_31(byArray.length)];
     }
 
-    public /* synthetic */ LiteBansModule_246(LiteBansModule_14 aJ2) {
-        this();
+    public static final byte AsyncBackgroundTask_5(@NotNull byte[] byArray, @NotNull LiteBansModule_325 iX2) {
+        return byArray[iX2.LiteBansModule_31(byArray.length)];
+    }
+
+    public static final byte LiteBansModule_31(@NotNull byte[] byArray, @NotNull LiteBansModule_325 iX2) {
+        if (ElementsHandler_3.BaseCoreGenericHandler(byArray) <= 1) {
+            return LiteBansModule_284.BaseCoreGenericHandler(ArrayUtilities.BaseCoreGenericHandler(byArray));
+        }
+        return ElementsHandler_3.BaseCoreGenericHandler(byArray, iX2.BaseCoreGenericHandler(ElementsHandler_3.BaseCoreGenericHandler(byArray)));
+    }
+
+    public static final Object BaseCoreGenericHandler(@NotNull Object[] objectArray, @NotNull LiteBansModule_325 iX2) {
+        if (objectArray.length <= 1) {
+            return ArrayUtilities.LiteBansModule_31(objectArray);
+        }
+        return objectArray[iX2.BaseCoreGenericHandler(objectArray.length)];
+    }
+
+    public static final byte[] BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull LiteBansModule_325 iX2) {
+        byte[] byArray2;
+        byte[] byArray3 = byArray2 = byArray;
+        for (int i = ArrayUtilities.LiteBansModule_31(byArray3); 0 < i; --i) {
+            int n = iX2.LiteBansModule_31(i + 1);
+            byte by2 = byArray3[i];
+            byArray3[i] = byArray3[n];
+            byArray3[n] = by2;
+        }
+        return byArray2;
+    }
+
+    public static final byte[] BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull LiteBansModule_325 iX2, int n) {
+        byte[] byArray2;
+        byte[] byArray3 = byArray2 = byArray;
+        while (n2 < n) {
+            byte by2;
+            int n3 = n2++;
+            int n4 = iX2.LiteBansModule_31(byArray3.length);
+            int n5 = iX2.LiteBansModule_31(byArray3.length - 1);
+            byArray3[n4] = by2 = byArray3[n5];
+            byArray3[n5 + 1] = by2;
+        }
+        return byArray2;
+    }
+
+    public static final List LiteBansModule_31(@NotNull List list, @NotNull LiteBansModule_325 iX2) {
+        List list2;
+        List list3 = list2 = list;
+        for (int i = CollectionUtilities.LiteBansModule_31(list3); 0 < i; --i) {
+            int n = iX2.LiteBansModule_31(i + 1);
+            list3.set(n, list3.set(i, list3.get(n)));
+        }
+        return list2;
+    }
+
+    public static final Object c(@NotNull List list, @NotNull LiteBansModule_325 iX2) {
+        if (list.size() <= 1) {
+            return CollectionUtilities.LiteBansModule_31(list);
+        }
+        return list.get(iX2.LiteBansModule_31(list.size()));
+    }
+
+    public static final Object LiteBansModule_31(@NotNull Collection collection, @NotNull LiteBansModule_325 iX2) {
+        if (collection.size() <= 1) {
+            return CollectionUtilities.LiteBansModule_241(collection);
+        }
+        return CollectionUtilities.LiteBansModule_31((Iterable)collection, iX2.LiteBansModule_31(collection.size()));
+    }
+
+    public static final Object BaseCoreGenericHandler(@NotNull Collection collection, @NotNull LiteBansModule_325 iX2) {
+        if (collection.isEmpty()) {
+            return null;
+        }
+        return LiteBansModule_246.LiteBansModule_31(collection, iX2);
+    }
+
+    public static final void BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull LiteBansModule_325 iX2, @NotNull Number number) {
+        byArray[iX2.LiteBansModule_31((int)byArray.length)] = number.byteValue();
+    }
+
+    public static final List BaseCoreGenericHandler(@NotNull List list, @NotNull LiteBansModule_325 iX2) {
+        List list2;
+        List list3 = list2 = list;
+        list3.remove(iX2.LiteBansModule_31(list3.size()));
+        return list2;
+    }
 }
 

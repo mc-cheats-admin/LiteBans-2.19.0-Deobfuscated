@@ -1,115 +1,49 @@
 package litebans;
 
-import java.io.File;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
-import org.jetbrains.annotations.NotNull;
-
-public final class LiteBansModule_93
-extends ProxyPreparedStatement {
-    private final ReentrantReadWriteLock e = new ReentrantReadWriteLock();
-
-    public LiteBansModule_93(@NotNull PlatformPlugin plugin) {
-        super(plugin);
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+static class LiteBansModule_93
+implements Iterator,
+LiteBansModule_123 {
+    private int c;
+    final /* synthetic */ LiteBansModule_231 LiteBansModule_31;
+        public LiteBansModule_93(LiteBansModule_231 gn2) {
+        this.LiteBansModule_31 = gn2;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
-    @Override
-    public ResultSet c(@NotNull LiteBansModule_60 bT2) {
-        ResultSet resultSet;
-        if (bT2.c().LiteBansModule_31()) {
-            ProxyPreparedStatement bU2 = this;
-            Object arg1 = null;
-            return LiteBansModule_397.BaseCoreGenericHandler();
-        }
-        Lock lock = this.e.writeLock();
-        lock.lock();
-        try {
-            ResultSet resultSet2;
-            LiteBansModule_60 bT3 = bT2;
-            if (bT3.LiteBansModule_31().execute()) {
-                bT3 = bT2;
-                flag2 = false;
-                resultSet2 = bT3.LiteBansModule_31().getResultSet();
-            } else {
-                resultSet2 = LiteBansModule_397.BaseCoreGenericHandler();
-            }
-            resultSet = resultSet2;
-        }
-        finally {
-            lock.unlock();
-        }
-        return resultSet;
+    protected final int BaseCoreGenericHandler() {
+        return this.c;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
-    @Override
-    public int[] BaseCoreGenericHandler(@NotNull Statement statement) {
-        int[] nArray;
-        Lock lock = this.e.writeLock();
-        lock.lock();
-        try {
-            nArray = statement.executeBatch();
-        }
-        finally {
-            lock.unlock();
-        }
-        return nArray;
-    }
-
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
-    @Override
-    public ResultSet LiteBansModule_31(@NotNull LiteBansModule_60 bT2) {
-        ResultSet resultSet;
-        if (bT2.c().LiteBansModule_31()) {
-            ProxyPreparedStatement bU2 = this;
-            Object arg1 = null;
-            return LiteBansModule_397.BaseCoreGenericHandler();
-        }
-        Lock lock = this.e.readLock();
-        lock.lock();
-        try {
-            LiteBansModule_60 bT3 = bT2;
-            resultSet = bT3.LiteBansModule_31().executeQuery();
-        }
-        finally {
-            lock.unlock();
-        }
-        return resultSet;
-    }
-
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
-    @Override
-    public int BaseCoreGenericHandler(@NotNull LiteBansModule_60 bT2) {
-        int n;
-        if (bT2.c().LiteBansModule_31()) {
-            return -1;
-        }
-        Lock lock = this.e.writeLock();
-        lock.lock();
-        try {
-            n = 0;
-            LiteBansModule_60 bT3 = bT2;
-            n = bT3.LiteBansModule_31().executeUpdate();
-        }
-        finally {
-            lock.unlock();
-        }
-        return n;
+    protected final void BaseCoreGenericHandler(int n) {
+        this.c = n;
     }
 
     @Override
-    public String BaseCoreGenericHandler(@NotNull String string) {
-        return LiteBansModule_112.BaseCoreGenericHandler(new File(string)).getAbsolutePath();
+    public boolean hasNext() {
+        return this.c < this.LiteBansModule_31.size();
+    }
+
+    public Object next() {
+        if (!this.hasNext()) {
+            throw new NoSuchElementException();
+        }
+        int n = this.c;
+        this.c = n + 1;
+        return this.LiteBansModule_31.get(n);
+    }
+
+    @Override
+    public void remove() {
+        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
+    }
+
+    private static final void LiteBansModule_31() {
+        BaseCoreGenericHandler = new String[]{"Operation is not supported for read-only collection"};
+    }
+
+    static {
+        LiteBansModule_93.LiteBansModule_31();
+    }
 }
 

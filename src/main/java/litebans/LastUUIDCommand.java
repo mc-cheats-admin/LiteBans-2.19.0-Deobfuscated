@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 
 public final class LastUUIDCommand
 extends AbstractCommand {
-    public LastUUIDCommand(@NotNull PlatformPlugin plugin) {
+        public LastUUIDCommand(@NotNull PlatformPlugin plugin) {
         super("lastuuid", plugin);
     }
 
@@ -15,21 +15,21 @@ extends AbstractCommand {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
-{
+        block7: {
                         String string = CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)targetObj, (String)ArrayUtilities.LiteBansModule_31(args));
             targetObj = this;
             flag = false;
-            targetObj = (DatabaseMonitorService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+            targetObj = (DatabaseMonitorService)((MessageHandler)targetObj).LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class);
             flag = false;
             try {
-                LiteBansModule_82 ch2 = targetObj.LiteBansModule_194();
+                LiteBansModule_83 ch2 = ((DatabaseMonitorService)targetObj).LiteBansModule_195();
                 Closeable closeable = ch2;
                 Throwable throwable = null;
                 try {
-                    Object contextObj = (LiteBansModule_82)closeable;
-                    LiteBansModule_82 ch3 = ch2;
-                    LiteBansModule_297 iA2 = CommandArgumentUtils.BaseCoreGenericHandler(ch3, string, false, 2, null);
-                    CommandArgumentUtils.BaseCoreGenericHandler(this, AllHandler_3.BaseCoreGenericHandler(ch3, MessageKey.bI, iA2, false, 2, null));
+                    Object contextObj = (LiteBansModule_83)closeable;
+                    LiteBansModule_83 ch3 = ch2;
+                    LiteBansModule_298 iA2 = CommandArgumentUtils.BaseCoreGenericHandler(ch3, string, false, 2, null);
+                    CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, AllHandler_3.BaseCoreGenericHandler(ch3, (CharSequence)MessageKey.bI, iA2, false, 2, null));
                     contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable2) {
@@ -38,13 +38,21 @@ extends AbstractCommand {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-}
+                }
+            }
             catch (SQLException sQLException) {
-                if (targetObj.LiteBansModule_31(sQLException)) break;
+                if (((DatabaseMonitorService)targetObj).LiteBansModule_31(sQLException)) break block7;
                 throw sQLException;
-}
+            }
+        }
+    }
 
     private static final void BaseCoreGenericHandler() {
         i = new String[]{"lastuuid"};
+    }
+
+    static {
+        LastUUIDCommand.BaseCoreGenericHandler();
+    }
 }
 

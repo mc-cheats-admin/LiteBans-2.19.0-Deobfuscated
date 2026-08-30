@@ -8,7 +8,7 @@ import org.jetbrains.annotations.Nullable;
 public final class LiteBansModule_32
 extends LiteBansModule_53 {
     private final PlatformPlugin e;
-    public LiteBansModule_32(@NotNull LiteCommand command, @NotNull PlatformPlugin plugin, @Nullable String string, @NotNull String[] args) {
+        public LiteBansModule_32(@NotNull LiteCommand command, @NotNull PlatformPlugin plugin, @Nullable String string, @NotNull String[] args) {
         super(command, string, plugin, Arrays.copyOf(args, args.length));
         this.e = plugin;
     }
@@ -25,5 +25,14 @@ extends LiteBansModule_53 {
         CommandManager commandManager = this.e.z();
         ObjectUtilities.LiteBansModule_31(commandManager, "");
         return ((BanHandler_5)commandManager).BaseCoreGenericHandler(this, this.getName(), sender, args);
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        LiteBansModule_195 = new String[]{""};
+    }
+
+    static {
+        LiteBansModule_32.BaseCoreGenericHandler();
+    }
 }
 

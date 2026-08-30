@@ -1,21 +1,8 @@
 package litebans;
 
-import java.util.concurrent.Executor;
-static class LiteBansModule_151
-implements Executor {
-    private LiteBansModule_151() {
+public final class LiteBansModule_151 {
+    public static final int BaseCoreGenericHandler(int n, int n2) {
+        return ObjectUtilities.BaseCoreGenericHandler(n ^ Integer.MIN_VALUE, n2 ^ Integer.MIN_VALUE);
     }
-
-    @Override
-    public void execute(Runnable runnable) {
-        try {
-            runnable.run();
-        }
-        catch (Exception exception) {
-            HikariLogger.BaseCoreGenericHandler(PoolEntry.class).LiteBansModule_31("Failed to execute: %AsyncBackgroundTask_21", new Object[]{runnable.toString(), exception});
-}
-
-    /* synthetic */ LiteBansModule_151(LiteBansModule_259 hI2) {
-        this();
 }
 

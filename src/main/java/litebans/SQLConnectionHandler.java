@@ -11,23 +11,23 @@ import org.jetbrains.annotations.NotNull;
 
 public final class SQLConnectionHandler
 implements List,
-LiteBansModule_122 {
+LiteBansModule_123 {
     private final PlatformPlugin g;
-    private final LiteBansModule_82 e;
+    private final LiteBansModule_83 e;
     private final boolean c;
     private final ArrayList BaseCoreGenericHandler;
-    private BansHandler_2 LiteBansModule_194;
+    private BansHandler_2 LiteBansModule_195;
     private final ConfigService LiteBansModule_31;
-    public SQLConnectionHandler(@NotNull PlatformPlugin plugin, @NotNull LiteBansModule_82 ch2, boolean flag, @NotNull ArrayList arrayList) {
+        public SQLConnectionHandler(@NotNull PlatformPlugin plugin, @NotNull LiteBansModule_83 ch2, boolean flag, @NotNull ArrayList arrayList) {
         this.g = plugin;
         this.e = ch2;
         this.c = flag;
         this.plugin = arrayList;
-        this.LiteBansModule_194 = BansHandler_2.Utf8Handler_2;
-        this.LiteBansModule_31 = this.g.BaseCoreGenericHandler(ConfigService.class);
+        this.LiteBansModule_195 = BansHandler_2.Utf8Handler_2;
+        this.LiteBansModule_31 = (ConfigService)this.g.BaseCoreGenericHandler(ConfigService.class);
     }
 
-    public /* synthetic */ SQLConnectionHandler(PlatformPlugin plugin, LiteBansModule_82 ch2, boolean flag, ArrayList arrayList, int n, LiteBansModule_14 aJ2) {
+    public /* synthetic */ SQLConnectionHandler(PlatformPlugin plugin, LiteBansModule_83 ch2, boolean flag, ArrayList arrayList, int n, LiteBansModule_14 aJ2) {
         if ((n & 8) != 0) {
             arrayList = new ArrayList();
         }
@@ -43,17 +43,17 @@ LiteBansModule_122 {
     }
 
     public final void BaseCoreGenericHandler(@NotNull BansHandler_2 kL2) {
-        this.LiteBansModule_194 = kL2;
+        this.LiteBansModule_195 = kL2;
     }
 
     public final ConfigService e() {
         return this.LiteBansModule_31;
     }
 
-    public final void BaseCoreGenericHandler(@NotNull LiteBansModule_354 jT2) {
-        boolean flag = ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_31.LiteBansModule_194().ElementsHandler(), (Object)"mysql");
-        if (this.c || !this.e.LiteBansModule_31(this.LiteBansModule_194, (String)jT2.LiteBansModule_31(), flag)) {
-            Object targetObj = ((LiteBansModule_178)jT2.e()).BaseCoreGenericHandler(this.LiteBansModule_194);
+    public final void BaseCoreGenericHandler(@NotNull LiteBansModule_356 jT2) {
+        boolean flag = ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_31.LiteBansModule_195().ElementsHandler(), (Object)"mysql");
+        if (this.c || !this.e.LiteBansModule_31(this.LiteBansModule_195, (String)jT2.LiteBansModule_31(), flag)) {
+            Object targetObj = ((LiteBansModule_179)jT2.e()).BaseCoreGenericHandler(this.LiteBansModule_195);
             if (targetObj instanceof Object[]) {
                 SQLConnectionHandler dc_02 = this;
                 Object[] objectArray = (Object[])targetObj;
@@ -63,12 +63,15 @@ LiteBansModule_122 {
                     Object resultObj = contextObj = objectArray2[i];
                     Collection collection = dc_02.LiteBansModule_31();
                     ObjectUtilities.LiteBansModule_31(resultObj, "");
-                    collection.addthis;
-} else {
+                    collection.add((SQLiteDriverHandler)resultObj);
+                }
+            } else {
                 Collection collection = this.plugin;
                 ObjectUtilities.LiteBansModule_31(targetObj, "");
-                collection.addtargetObj;
-}
+                collection.add((SQLiteDriverHandler)targetObj);
+            }
+        }
+    }
 
     @Override
     public boolean isEmpty() {
@@ -90,7 +93,7 @@ LiteBansModule_122 {
     }
 
     public String BaseCoreGenericHandler(int n) {
-        return (this.plugin.get(n)).c();
+        return ((SQLiteDriverHandler)this.plugin.get(n)).c();
     }
 
     public int LiteBansModule_31(@NotNull String string) {
@@ -163,7 +166,7 @@ LiteBansModule_122 {
         if (!(targetObj instanceof SQLiteDriverHandler)) {
             return false;
         }
-        return this.plugin(targetObj.c());
+        return this.plugin(((SQLiteDriverHandler)targetObj).c());
     }
 
     public Object get(int n) {
@@ -175,7 +178,7 @@ LiteBansModule_122 {
         if (!(targetObj instanceof SQLiteDriverHandler)) {
             return -1;
         }
-        return this.LiteBansModule_31(targetObj.c());
+        return this.LiteBansModule_31(((SQLiteDriverHandler)targetObj).c());
     }
 
     @Override
@@ -183,7 +186,7 @@ LiteBansModule_122 {
         if (!(targetObj instanceof SQLiteDriverHandler)) {
             return -1;
         }
-        return this.c(targetObj.c());
+        return this.c(((SQLiteDriverHandler)targetObj).c());
     }
 
     @Override
@@ -216,5 +219,10 @@ LiteBansModule_122 {
 
     private static final void AsyncBackgroundTask_5() {
         AsyncBackgroundTask_5 = new String[]{"", "mysql", "", "", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection"};
+    }
+
+    static {
+        SQLConnectionHandler.AsyncBackgroundTask_5();
+    }
 }
 

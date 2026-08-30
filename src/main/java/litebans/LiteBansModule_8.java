@@ -11,7 +11,7 @@ public class LiteBansModule_8 {
 
     public static final void BaseCoreGenericHandler(Class clazz) {
         try {
-            LiteBansModule_177 en_02 = (LiteBansModule_177)clazz.newInstance();
+            LiteBansModule_178 en_02 = (LiteBansModule_178)clazz.newInstance();
             LiteBansModule_31.put(en_02.c(), clazz);
         }
         catch (ClassCastException classCastException) {
@@ -22,33 +22,34 @@ public class LiteBansModule_8 {
         }
         catch (IllegalAccessException illegalAccessException) {
             throw new RuntimeException(clazz + "'AsyncBackgroundTask_21 no-arg constructor is not public");
-}
+        }
+    }
 
-    public static final LiteBansModule_177 BaseCoreGenericHandler(LiteBansModule_288 i22) {
-        LiteBansModule_177 en_02 = LiteBansModule_8.LiteBansModule_31(i22);
+    public static final LiteBansModule_178 BaseCoreGenericHandler(LiteBansModule_289 i22) {
+        LiteBansModule_178 en_02 = LiteBansModule_8.LiteBansModule_31(i22);
         if (en_02 != null) {
             return en_02;
         }
-        LiteBansModule_434 y_02 = new LiteBansModule_434();
+        LiteBansModule_436 y_02 = new LiteBansModule_436();
         y_02.BaseCoreGenericHandler(i22);
         return y_02;
     }
 
-    public static final LiteBansModule_177 LiteBansModule_31(LiteBansModule_288 i22) {
+    public static final LiteBansModule_178 LiteBansModule_31(LiteBansModule_289 i22) {
         Class clazz = (Class)LiteBansModule_31.get(i22);
         if (clazz != null) {
-            return (LiteBansModule_177)clazz.newInstance();
+            return (LiteBansModule_178)clazz.newInstance();
         }
         return null;
     }
 
-    public static final LiteBansModule_177[] BaseCoreGenericHandler(byte[] byArray, boolean flag, LiteBansModule_137 dt_02) {
+    public static final LiteBansModule_178[] BaseCoreGenericHandler(byte[] byArray, boolean flag, LiteBansModule_138 dt_02) {
         int n;
-        ArrayList<LiteBansModule_177> arrayList = new ArrayList<LiteBansModule_177>();
+        ArrayList<LiteBansModule_178> arrayList = new ArrayList<LiteBansModule_178>();
         for (int i = 0; i <= byArray.length - 4; i += n + 4) {
-            LiteBansModule_177 en_02;
-            targetObj = new LiteBansModule_288(byArray, i);
-            n = new LiteBansModule_288(byArray, i + 2).BaseCoreGenericHandler();
+            LiteBansModule_178 en_02;
+            targetObj = new LiteBansModule_289(byArray, i);
+            n = new LiteBansModule_289(byArray, i + 2).BaseCoreGenericHandler();
             if (i + 4 + n > byArray.length) {
                 en_02 = dt_02.BaseCoreGenericHandler(byArray, i, byArray.length - i, flag, n);
                 if (en_02 == null) break;
@@ -56,23 +57,24 @@ public class LiteBansModule_8 {
                 break;
             }
             try {
-                en_02 = Objects.requireNonNull(dt_02.BaseCoreGenericHandlertargetObj, "createExtraField must not return null");
+                en_02 = Objects.requireNonNull(dt_02.BaseCoreGenericHandler((LiteBansModule_289)targetObj), "createExtraField must not return null");
                 arrayList.add(Objects.requireNonNull(dt_02.BaseCoreGenericHandler(en_02, byArray, i + 4, n, flag), "fill must not return null"));
                 continue;
             }
             catch (IllegalAccessException | InstantiationException reflectiveOperationException) {
                 throw (ZipException)new ZipException(reflectiveOperationException.getMessage()).initCause(reflectiveOperationException);
-}
-        targetObj = new LiteBansModule_177[arrayList.size()];
+            }
+        }
+        targetObj = new LiteBansModule_178[arrayList.size()];
         return arrayList.toArray((T[])targetObj);
     }
 
-    public static final byte[] LiteBansModule_31(LiteBansModule_177[] en_0Array) {
+    public static final byte[] LiteBansModule_31(LiteBansModule_178[] en_0Array) {
         byte[] byArray;
-        boolean flag = en_0Array.length > 0 && en_0Array[en_0Array.length - 1] instanceof LiteBansModule_264;
+        boolean flag = en_0Array.length > 0 && en_0Array[en_0Array.length - 1] instanceof LiteBansModule_265;
         int n = flag ? en_0Array.length - 1 : en_0Array.length;
         int n2 = 4 * n;
-        for (LiteBansModule_177 en_02 : en_0Array) {
+        for (LiteBansModule_178 en_02 : en_0Array) {
             n2 += en_02.LiteBansModule_31().BaseCoreGenericHandler();
         }
         byte[] byArray2 = new byte[n2];
@@ -91,12 +93,12 @@ public class LiteBansModule_8 {
         return byArray2;
     }
 
-    public static final byte[] BaseCoreGenericHandler(LiteBansModule_177[] en_0Array) {
+    public static final byte[] BaseCoreGenericHandler(LiteBansModule_178[] en_0Array) {
         byte[] byArray;
-        boolean flag = en_0Array.length > 0 && en_0Array[en_0Array.length - 1] instanceof LiteBansModule_264;
+        boolean flag = en_0Array.length > 0 && en_0Array[en_0Array.length - 1] instanceof LiteBansModule_265;
         int n = flag ? en_0Array.length - 1 : en_0Array.length;
         int n2 = 4 * n;
-        for (LiteBansModule_177 en_02 : en_0Array) {
+        for (LiteBansModule_178 en_02 : en_0Array) {
             n2 += en_02.BaseCoreGenericHandler().BaseCoreGenericHandler();
         }
         byte[] byArray2 = new byte[n2];
@@ -115,7 +117,7 @@ public class LiteBansModule_8 {
         return byArray2;
     }
 
-    public static final LiteBansModule_177 BaseCoreGenericHandler(LiteBansModule_177 en_02, byte[] byArray, int n, int n2, boolean flag) {
+    public static final LiteBansModule_178 BaseCoreGenericHandler(LiteBansModule_178 en_02, byte[] byArray, int n, int n2, boolean flag) {
         try {
             if (flag) {
                 en_02.BaseCoreGenericHandler(byArray, n, n2);
@@ -126,22 +128,24 @@ public class LiteBansModule_8 {
         }
         catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
             throw (ZipException)new ZipException("Failed to parse corrupt ZIP extra field of type " + Integer.toHexString(en_02.c().BaseCoreGenericHandler())).initCause(arrayIndexOutOfBoundsException);
-}
+        }
+    }
 
     static {
-        LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_306.class);
-        LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_97.class);
-        LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_356.class);
-        LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_383.class);
+        LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_307.class);
+        LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_98.class);
+        LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_358.class);
+        LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_385.class);
         LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_37.class);
         LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_33.class);
         LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_59.class);
-        LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_363.class);
+        LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_365.class);
         LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_11.class);
         LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_30.class);
         LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_2.class);
         LiteBansModule_8.BaseCoreGenericHandler(IvsizeHandler.class);
         LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_17.class);
-        LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_170.class);
+        LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_171.class);
+    }
 }
 

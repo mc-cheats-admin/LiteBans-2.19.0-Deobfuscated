@@ -1,43 +1,65 @@
 package litebans;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.TimeUnit;
-static final class LiteBansModule_116
-implements Callable {
-    private final String LiteBansModule_31;
-    final /* synthetic */ HikariPool BaseCoreGenericHandler;
+public class LiteBansModule_116
+implements LiteBansModule_112,
+LiteBansModule_236 {
+    private final short K;
+    private final int J;
+    private long BanHandler_5;
+    private long H;
+    private String L;
 
-    LiteBansModule_116(HikariPool dr2, String string) {
-        this.plugin = dr2;
-        this.LiteBansModule_31 = string;
-    }
-
-    public Boolean BaseCoreGenericHandler() {
-        long l3 = 250L;
-        while (this.plugin.P == 0 && this.LiteBansModule_31()) {
-            InUseHandler kJ2 = HikariPool.AsyncBackgroundTask_5(this.plugin);
-            if (kJ2 != null) {
-                HikariPool.BaseCoreGenericHandler(this.plugin).c(kJ2);
-                HikariPool.LiteBansModule_31(this.plugin).LiteBansModule_31("%AsyncBackgroundTask_21 - Added connection %AsyncBackgroundTask_21", new Object[]{this.plugin.e, kJ2.g.toString()});
-                if (this.LiteBansModule_31 != null) {
-                    this.plugin.BaseCoreGenericHandler(new String[]{this.LiteBansModule_31});
-                }
-                return Boolean.TRUE;
-            }
-            if (this.LiteBansModule_31 != null) {
-                HikariPool.LiteBansModule_31(this.plugin).LiteBansModule_31("%AsyncBackgroundTask_21 - Connection add failed, sleeping with backoff: %dms", new Object[]{this.plugin.e, l3});
-            }
-            LiteBansModule_131.BaseCoreGenericHandler(l3);
-            l3 = Math.min(TimeUnit.SECONDS.toMillis(10L), Math.min(this.plugin.AsyncBackgroundTask_21, (long)((double)l3 * 1.5)));
+    private final void BaseCoreGenericHandler() {
+        if ((this.K & 3) == 0) {
+            throw new UnsupportedOperationException();
         }
-        return Boolean.FALSE;
     }
 
-    private final synchronized boolean LiteBansModule_31() {
-        return this.plugin.LiteBansModule_194() < this.plugin.AsyncBackgroundTask_22.LiteBansModule_194() && (HikariPool.BaseCoreGenericHandler(this.plugin).c() > 0 || this.plugin.LiteBansModule_31() < this.plugin.AsyncBackgroundTask_22.i());
+    public long AsyncBackgroundTask_5() {
+        this.plugin();
+        return this.BanHandler_5 & 0xFFFFFFFFL;
     }
 
-    public Object call() {
-        return this.plugin();
+    @Override
+    public long getSize() {
+        return this.H;
+    }
+
+    public short c() {
+        return this.K;
+    }
+
+    public int LiteBansModule_31() {
+        if (this.J == 0) {
+            return 0;
+        }
+        long l3 = this.H;
+        int n = (int)(l3 % (long)this.J);
+        if (n > 0) {
+            return this.J - n;
+        }
+        return 0;
+    }
+
+    public int hashCode() {
+        int n = 31;
+        int n2 = 1;
+        n2 = 31 * n2 + (this.L == null ? 0 : this.L.hashCode());
+        return n2;
+    }
+
+    public boolean equals(Object targetObj) {
+        if (this == targetObj) {
+            return true;
+        }
+        if (targetObj == null || this.getClass() != targetObj.getClass()) {
+            return false;
+        }
+        LiteBansModule_116 da_02 = (LiteBansModule_116)targetObj;
+        if (this.L == null) {
+            return da_02.L == null;
+        }
+        return this.L.equals(da_02.L);
+    }
 }
 

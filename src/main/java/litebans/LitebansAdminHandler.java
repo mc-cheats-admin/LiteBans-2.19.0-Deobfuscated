@@ -7,18 +7,18 @@ import org.jetbrains.annotations.NotNull;
 public final class LitebansAdminHandler
 extends MessageHandler {
     private final String[] e;
-    private final boolean LiteBansModule_194;
-    public LitebansAdminHandler(@NotNull String[] args, @NotNull PlatformPlugin plugin, boolean flag) {
+    private final boolean LiteBansModule_195;
+        public LitebansAdminHandler(@NotNull String[] args, @NotNull PlatformPlugin plugin, boolean flag) {
         super(plugin);
         this.e = args;
-        this.LiteBansModule_194 = flag;
+        this.LiteBansModule_195 = flag;
     }
 
     @Override
     public void run() {
-        if (this.LiteBansModule_194) {
+        if (this.LiteBansModule_195) {
             targetObj = new String[]{"litebans.admin", "litebans.allow"};
-            CommandArgumentUtils.BaseCoreGenericHandler(this, (String[])targetObj);
+            CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, (String[])targetObj);
         }
         targetObj = MessageHandler.BaseCoreGenericHandler;
         boolean flag = this.e.length < 2;
@@ -31,18 +31,18 @@ extends MessageHandler {
         }
         targetObj = this;
         flag = false;
-        ((DatabaseMonitorService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> LitebansAdminHandler.BaseCoreGenericHandler(this, arg_0));
+        ((DatabaseMonitorService)((MessageHandler)targetObj).LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> LitebansAdminHandler.BaseCoreGenericHandler(this, arg_0));
     }
 
     /*
      * Enabled force condition propagation
      * Lifted jumps to return sites
      */
-    private static final KotlinUnitHandler BaseCoreGenericHandler(LitebansAdminHandler f72, LiteBansModule_82 ch2) {
+    private static final KotlinUnitHandler BaseCoreGenericHandler(LitebansAdminHandler f72, LiteBansModule_83 ch2) {
         boolean flag;
-{
+        block21: {
             boolean flag2;
-{
+            block22: {
                 Object tempObj = MessageHandler.BaseCoreGenericHandler;
                 boolean flag3 = ch2.LiteBansModule_31();
                 Object object6 = MessageKey.ServerEventListener;
@@ -61,7 +61,7 @@ extends MessageHandler {
                 Object object7 = MessageHandler.BaseCoreGenericHandler;
                 object6 = tempObj;
                 flag4 = false;
-                byte by2 = HexEncodingHelper.BaseCoreGenericHandler.i((String)object6);
+                byte by2 = LiteBansModule_346.BaseCoreGenericHandler.i((String)object6);
                 targetObj = MessageKey.flag;
                 ChatFormatter fo_04 = object7;
                 if (by2 != 0) {
@@ -70,28 +70,29 @@ extends MessageHandler {
                     throw new CommandExitException();
                 }
                 object7 = ch2.c((String)tempObj);
-                by2 = HexEncodingHelper.BaseCoreGenericHandler.Utf8Handler_2((String)tempObj).AsyncBackgroundTask_5();
+                by2 = LiteBansModule_346.BaseCoreGenericHandler.Utf8Handler_2((String)tempObj).AsyncBackgroundTask_5();
                 Object object8 = object7;
-                if ((object8 != null ? ((LiteBansModule_297)object8).LiteBansModule_31() : null) != null) {
+                if ((object8 != null ? ((LiteBansModule_298)object8).LiteBansModule_31() : null) != null) {
                     helperObj = object7;
                 } else if (by2 == 1) {
-                    helperObj = new LiteBansModule_297((String)tempObj, (String)tempObj, null, null, 12, null);
+                    helperObj = new LiteBansModule_298((String)tempObj, (String)tempObj, null, null, 12, null);
                 } else {
                     Object object9 = f72;
-                    if (((ConfigService)((MessageHandler)object9).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().af()) {
+                    if (((ConfigService)((MessageHandler)object9).LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().af()) {
                         object9 = LiteBansModule_50.c.LiteBansModule_31((String)tempObj);
                         bl10 = false;
-                        UUID uUID = ((LiteBansModule_89)object9).BaseCoreGenericHandler();
-                        helperObj = AllHandler_3.BaseCoreGenericHandler(ch2, new LiteBansModule_297(((LiteBansModule_89)object9).AsyncBackgroundTask_5(), uUID != null ? uUID.toString() : null, null, new Date()), false, 2, null);
+                        UUID uUID = ((LiteBansModule_90)object9).BaseCoreGenericHandler();
+                        helperObj = AllHandler_3.BaseCoreGenericHandler(ch2, new LiteBansModule_298(((LiteBansModule_90)object9).AsyncBackgroundTask_5(), uUID != null ? uUID.toString() : null, null, new Date()), false, 2, null);
                     } else if (by2 == 0) {
-                        helperObj = AllHandler_3.BaseCoreGenericHandler(ch2, new LiteBansModule_297((String)tempObj, LiteBansModule_242.BaseCoreGenericHandler((String)tempObj), null, null, 12, null), false, 2, null);
+                        helperObj = AllHandler_3.BaseCoreGenericHandler(ch2, new LiteBansModule_298((String)tempObj, LiteBansModule_243.BaseCoreGenericHandler((String)tempObj), null, null, 12, null), false, 2, null);
                     } else {
                         MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(MessageKey.aN);
                         throw new CommandExitException();
-}
+                    }
+                }
                 targetObj = helperObj;
                 resultObj = MessageHandler.BaseCoreGenericHandler;
-                flag = targetObj.LiteBansModule_31() == null;
+                flag = ((LiteBansModule_298)targetObj).LiteBansModule_31() == null;
                 CharSequence charSequence = MessageKey.aN;
                 contextObj = resultObj;
                 flag2 = false;
@@ -100,8 +101,8 @@ extends MessageHandler {
                     fo_06.BaseCoreGenericHandler(charSequence);
                     throw new CommandExitException();
                 }
-                String string2 = targetObj.LiteBansModule_31();
-                ObjectUtilities.BaseCoreGenericHandler(string2);
+                String string2 = ((LiteBansModule_298)targetObj).LiteBansModule_31();
+                ObjectUtilities.BaseCoreGenericHandler((Object)string2);
                 resultObj = UUID.fromString(string2);
                 ObjectUtilities.BaseCoreGenericHandler(resultObj);
                 flag = AllHandler_3.BaseCoreGenericHandler(ch2, (UUID)resultObj, null, 2, null);
@@ -115,16 +116,17 @@ extends MessageHandler {
                         if (!((String)charSequence).equals("check")) {
                             return KotlinUnitHandler.BaseCoreGenericHandler;
                         }
-                        break;
+                        break block21;
                     }
                     case -934610812: {
                         if (!((String)charSequence).equals("remove")) {
                             return KotlinUnitHandler.BaseCoreGenericHandler;
                         }
-                        break;
-}
+                        break block22;
+                    }
+                }
                 ChatFormatter fo_07 = MessageHandler.BaseCoreGenericHandler;
-                contextObj = AllHandler_3.BaseCoreGenericHandler(ch2, MessageKey.LiteBansModule_75, (LiteBansModule_297)targetObj, false, 2, null);
+                contextObj = AllHandler_3.BaseCoreGenericHandler(ch2, (CharSequence)MessageKey.LiteBansModule_76, (LiteBansModule_298)targetObj, false, 2, null);
                 flag2 = false;
                 ChatFormatter fo_08 = fo_07;
                 if (flag) {
@@ -133,11 +135,11 @@ extends MessageHandler {
                     throw new CommandExitException();
                 }
                 AllHandler_3.BaseCoreGenericHandler(ch2, (UUID)resultObj, 0, 2, null);
-                CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)f72, AllHandler_3.BaseCoreGenericHandler(ch2, MessageKey.ElementHandler, (LiteBansModule_297)targetObj, false, 2, null));
+                CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)f72, AllHandler_3.BaseCoreGenericHandler(ch2, (CharSequence)MessageKey.ElementHandler, (LiteBansModule_298)targetObj, false, 2, null));
                 return KotlinUnitHandler.BaseCoreGenericHandler;
             }
             ChatFormatter fo_010 = MessageHandler.BaseCoreGenericHandler;
-            contextObj = AllHandler_3.BaseCoreGenericHandler(ch2, MessageKey.ExceptionHandler, (LiteBansModule_297)targetObj, false, 2, null);
+            contextObj = AllHandler_3.BaseCoreGenericHandler(ch2, (CharSequence)MessageKey.ExceptionHandler, (LiteBansModule_298)targetObj, false, 2, null);
             flag2 = false;
             ChatFormatter fo_011 = fo_010;
             boolean bl15 = !flag;
@@ -146,18 +148,23 @@ extends MessageHandler {
                 fo_012.BaseCoreGenericHandler(contextObj);
                 throw new CommandExitException();
             }
-            ch2.BaseCoreGenericHandlerthis;
-            CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)f72, AllHandler_3.BaseCoreGenericHandler(ch2, MessageKey.LiteBansModule_73, (LiteBansModule_297)targetObj, false, 2, null));
+            ch2.BaseCoreGenericHandler((UUID)resultObj);
+            CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)f72, AllHandler_3.BaseCoreGenericHandler(ch2, (CharSequence)MessageKey.LiteBansModule_74, (LiteBansModule_298)targetObj, false, 2, null));
             return KotlinUnitHandler.BaseCoreGenericHandler;
         }
         MessageKey am2 = MessageKey.c("ALLOW_CHECK_" + flag);
         MessageHandler messageHandler = f72;
         ObjectUtilities.BaseCoreGenericHandler(am2);
-        CommandArgumentUtils.BaseCoreGenericHandler(messageHandler, AllHandler_3.BaseCoreGenericHandler(ch2, am2, (LiteBansModule_297)targetObj, false, 2, null));
+        CommandArgumentUtils.BaseCoreGenericHandler(messageHandler, AllHandler_3.BaseCoreGenericHandler(ch2, (CharSequence)am2, (LiteBansModule_298)targetObj, false, 2, null));
         return KotlinUnitHandler.BaseCoreGenericHandler;
     }
 
     private static final void BaseCoreGenericHandler() {
         AsyncBackgroundTask_5 = new String[]{"litebans.admin", "litebans.allow", "add", "check", "remove", "ALLOW_CHECK_"};
+    }
+
+    static {
+        LitebansAdminHandler.BaseCoreGenericHandler();
+    }
 }
 

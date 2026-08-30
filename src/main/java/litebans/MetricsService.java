@@ -11,16 +11,16 @@ import net.md_5.bungee.event.EventHandler;
 import org.jetbrains.annotations.NotNull;
 
 public final class MetricsService
-implements LiteBansModule_426 {
+implements LiteBansModule_428 {
     private final PlatformPlugin c;
     private final AsyncBackgroundTask_22 e;
     private final ConfigService AsyncBackgroundTask_5;
     private final BroadcastService LiteBansModule_31;
-    public MetricsService(@NotNull PlatformPlugin plugin) {
+        public MetricsService(@NotNull PlatformPlugin plugin) {
         this.c = plugin;
-        this.e = this.c.BaseCoreGenericHandler(AsyncBackgroundTask_22.class);
-        this.AsyncBackgroundTask_5 = this.c.BaseCoreGenericHandler(ConfigService.class);
-        this.LiteBansModule_31 = this.c.BaseCoreGenericHandler(BroadcastService.class);
+        this.e = (AsyncBackgroundTask_22)this.c.BaseCoreGenericHandler(AsyncBackgroundTask_22.class);
+        this.AsyncBackgroundTask_5 = (ConfigService)this.c.BaseCoreGenericHandler(ConfigService.class);
+        this.LiteBansModule_31 = (BroadcastService)this.c.BaseCoreGenericHandler(BroadcastService.class);
         this.AsyncBackgroundTask_5.e();
     }
 
@@ -32,7 +32,7 @@ implements LiteBansModule_426 {
         return this.e;
     }
 
-    public final ConfigService LiteBansModule_194() {
+    public final ConfigService LiteBansModule_195() {
         return this.AsyncBackgroundTask_5;
     }
 
@@ -48,43 +48,45 @@ implements LiteBansModule_426 {
         PlatformPlugin plugin = this.c;
         ObjectUtilities.LiteBansModule_31(plugin, "");
         loginEvent.registerIntent((Plugin)((BungeePlugin)plugin));
-        (this.c).BaseCoreGenericHandler(() -> MetricsService.BaseCoreGenericHandler(this, loginEvent));
+        ((BungeePlugin)this.c).BaseCoreGenericHandler(() -> MetricsService.BaseCoreGenericHandler(this, loginEvent));
     }
 
     @EventHandler
     public final void BaseCoreGenericHandler(@NotNull ServerConnectEvent serverConnectEvent) {
         if (!serverConnectEvent.isCancelled()) {
             this.LiteBansModule_31.c().LiteBansModule_31(serverConnectEvent);
-}
+        }
+    }
 
     @EventHandler
     public final void BaseCoreGenericHandler(@NotNull ServerConnectedEvent serverConnectedEvent) {
         Server server;
         String string;
         CommandSenderWrapper sender = this.c.BaseCoreGenericHandler(serverConnectedEvent.getPlayer());
-        List list = this.AsyncBackgroundTask_5.LiteBansModule_194().aj();
+        List list = this.AsyncBackgroundTask_5.LiteBansModule_195().aj();
         if (list.contains(string = ((String)(targetObj = (server = serverConnectedEvent.getServer()).getInfo().getName())).toLowerCase(Locale.ENGLISH))) {
             return;
         }
         targetObj = sender;
-        new LiteBansModule_221(this.c, targetObj.i(), targetObj.BaseCoreGenericHandler(), targetObj.LiteBansModule_31()).run();
+        new LiteBansModule_222(this.c, targetObj.i(), targetObj.BaseCoreGenericHandler(), targetObj.LiteBansModule_31()).run();
         ObjectUtilities.BaseCoreGenericHandler(sender);
         Object contextObj = sender;
         Object resultObj = "litebans.exempt.dupeip_join";
         CommandSenderWrapper senderWrapper = contextObj;
-        if (!senderWrapper.ethis) {
+        if (!senderWrapper.e((String)resultObj)) {
             contextObj = this.e;
             ObjectUtilities.BaseCoreGenericHandler(targetObj);
             resultObj = targetObj;
             flag2 = false;
             ((AsyncBackgroundTask_22)contextObj).BaseCoreGenericHandler(resultObj.i(), resultObj.BaseCoreGenericHandler(), resultObj.LiteBansModule_31());
-}
+        }
+    }
 
     @Override
     public MetricsService BaseCoreGenericHandler() {
         MetricsService gX2;
         MetricsService gX3 = gX2 = this;
-        LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{gX3};
+        LiteBansModule_176[] em_0Array = new LiteBansModule_176[]{gX3};
         gX3.c.LiteBansModule_31(em_0Array);
         return gX2;
     }
@@ -103,18 +105,25 @@ implements LiteBansModule_426 {
             int n = 1;
             if (configService.BaseCoreGenericHandler(n)) {
                 ConfigService q_03 = configService;
-                q_03.BaseCoreGenericHandler((Object)("Handled login event: " + LiteBansModule_287.LiteBansModule_31((double)(System.nanoTime() - l3) / 1000.0 / 1000.0) + " "));
-}
+                q_03.BaseCoreGenericHandler((Object)("Handled login event: " + LiteBansModule_288.LiteBansModule_31((double)(System.nanoTime() - l3) / 1000.0 / 1000.0) + " "));
+            }
+        }
         finally {
             loginEvent.completeIntent((Plugin)gX2.c);
-}
+        }
+    }
 
     @Override
-    public LiteBansModule_175 BaseCoreGenericHandler() {
+    public LiteBansModule_176 BaseCoreGenericHandler() {
         return this.plugin();
     }
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"", "litebans.exempt.dupeip_join", "", "Handled login event: ", " ms."};
+    }
+
+    static {
+        MetricsService.LiteBansModule_31();
+    }
 }
 

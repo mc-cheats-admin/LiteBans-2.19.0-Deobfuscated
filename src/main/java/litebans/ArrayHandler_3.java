@@ -16,12 +16,12 @@ import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 
 static class ArrayHandler_3
-extends LiteBansModule_369 {
-    /*
+extends LiteBansModule_371 {
+        /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     public static final byte[] BaseCoreGenericHandler(@NotNull File file) {
-        ObjectUtilities.BaseCoreGenericHandler(file, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)file, "<this>");
         Closeable closeable = new FileInputStream(file);
         Throwable throwable = null;
         try {
@@ -35,14 +35,14 @@ extends LiteBansModule_369 {
             }
             int n4 = (int)l3;
             byte[] byArray2 = new byte[n4];
-            while (n4 > 0 && (n = targetObj.read(byArray2, n2, n4)) >= 0) {
+            while (n4 > 0 && (n = ((FileInputStream)targetObj).read(byArray2, n2, n4)) >= 0) {
                 n4 -= n;
                 n2 += n;
             }
             if (n4 > 0) {
                 byArray = Arrays.copyOf(byArray2, n2);
             } else {
-                n = targetObj.read();
+                n = ((FileInputStream)targetObj).read();
                 if (n == -1) {
                     byArray = byArray2;
                 } else {
@@ -54,7 +54,8 @@ extends LiteBansModule_369 {
                         throw new OutOfMemoryError("File " + file + " is too big to fit InitializerHandler_3 ");
                     }
                     byArray = ArrayUtilities.BaseCoreGenericHandler(aq_02.BaseCoreGenericHandler(), Arrays.copyOf(byArray2, n3), byArray2.length, 0, aq_02.size());
-}
+                }
+            }
             targetObj = byArray;
         }
         catch (Throwable throwable2) {
@@ -71,13 +72,13 @@ extends LiteBansModule_369 {
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     public static final void BaseCoreGenericHandler(@NotNull File file, @NotNull byte[] byArray) {
-        ObjectUtilities.BaseCoreGenericHandler(file, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler(byArray, "array");
+        ObjectUtilities.BaseCoreGenericHandler((Object)file, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)byArray, "array");
         Closeable closeable = new FileOutputStream(file);
         Throwable throwable = null;
         try {
             Object targetObj = (FileOutputStream)closeable;
-            targetObj.write(byArray);
+            ((FileOutputStream)targetObj).write(byArray);
             targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable2) {
@@ -86,20 +87,21 @@ extends LiteBansModule_369 {
         }
         finally {
             BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-}
+        }
+    }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     public static final void BaseCoreGenericHandler(@NotNull File file, @NotNull String string, @NotNull Charset charset) {
-        ObjectUtilities.BaseCoreGenericHandler(file, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler(string, "text");
-        ObjectUtilities.BaseCoreGenericHandler(charset, "charset");
+        ObjectUtilities.BaseCoreGenericHandler((Object)file, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)string, "text");
+        ObjectUtilities.BaseCoreGenericHandler((Object)charset, "charset");
         Closeable closeable = new FileOutputStream(file);
         Throwable throwable = null;
         try {
             Object targetObj = (FileOutputStream)closeable;
-            LiteBansModule_373.BaseCoreGenericHandler((OutputStream)targetObj, string, charset);
+            LiteBansModule_375.BaseCoreGenericHandler((OutputStream)targetObj, string, charset);
             targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable2) {
@@ -108,34 +110,35 @@ extends LiteBansModule_369 {
         }
         finally {
             BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-}
+        }
+    }
 
     public static /* synthetic */ void BaseCoreGenericHandler(File file, String string, Charset charset, int n, Object targetObj) {
         if ((n & 2) != 0) {
-            charset = LiteBansModule_344.LiteBansModule_31;
+            charset = LiteBansModule_345.LiteBansModule_31;
         }
-        LiteBansModule_373.BaseCoreGenericHandler(file, string, charset);
+        LiteBansModule_375.BaseCoreGenericHandler(file, string, charset);
     }
 
     public static final void BaseCoreGenericHandler(@NotNull OutputStream outputStream, @NotNull String string, @NotNull Charset charset) {
-        ObjectUtilities.BaseCoreGenericHandler(outputStream, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler(string, "text");
-        ObjectUtilities.BaseCoreGenericHandler(charset, "charset");
+        ObjectUtilities.BaseCoreGenericHandler((Object)outputStream, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)string, "text");
+        ObjectUtilities.BaseCoreGenericHandler((Object)charset, "charset");
         int n = 8192;
         if (string.length() < 2 * n) {
             outputStream.write(string.getBytes(charset));
             return;
         }
-        CharsetEncoder charsetEncoder = LiteBansModule_373.BaseCoreGenericHandler(charset);
+        CharsetEncoder charsetEncoder = LiteBansModule_375.BaseCoreGenericHandler(charset);
         CharBuffer charBuffer = CharBuffer.allocate(n);
         ObjectUtilities.BaseCoreGenericHandler(charsetEncoder);
-        ByteBuffer byteBuffer = LiteBansModule_373.BaseCoreGenericHandler(n, charsetEncoder);
+        ByteBuffer byteBuffer = LiteBansModule_375.BaseCoreGenericHandler(n, charsetEncoder);
         while (n2 < string.length()) {
             int n4 = Math.min(n - n3, string.length() - n2);
             int n5 = n2 + n4;
             Object targetObj = string;
             Object contextObj = charBuffer.array();
-            targetObj.getChars(n2, n5, (char[])contextObj, n3);
+            ((String)targetObj).getChars(n2, n5, (char[])contextObj, n3);
             charBuffer.limit(n4 + n3);
             targetObj = charsetEncoder.encode(charBuffer, byteBuffer, n5 == string.length());
             contextObj = targetObj;
@@ -152,16 +155,26 @@ extends LiteBansModule_369 {
             charBuffer.clear();
             byteBuffer.clear();
             n2 = n5;
-}
+        }
+    }
 
     public static final CharsetEncoder BaseCoreGenericHandler(@NotNull Charset charset) {
-        ObjectUtilities.BaseCoreGenericHandler(charset, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)charset, "<this>");
         return charset.newEncoder().onMalformedInput(CodingErrorAction.REPLACE).onUnmappableCharacter(CodingErrorAction.REPLACE);
     }
 
     public static final ByteBuffer BaseCoreGenericHandler(int n, @NotNull CharsetEncoder charsetEncoder) {
-        ObjectUtilities.BaseCoreGenericHandler(charsetEncoder, "encoder");
+        ObjectUtilities.BaseCoreGenericHandler((Object)charsetEncoder, "encoder");
         int n2 = (int)Math.ceil(charsetEncoder.maxBytesPerChar());
         return ByteBuffer.allocate(n * n2);
+    }
+
+    private static final void LiteBansModule_31() {
+        LiteBansModule_31 = new String[]{"<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "File ", " is too big (", " bytes) to fit InitializerHandler_3 ", "File ", " is too big to fit InitializerHandler_3 ", "<this>", "array", "<this>", "array", "<this>", "charset", "<this>", "text", "charset", "<this>", "text", "charset", "<this>", "text", "charset", "Check ", "<this>", "encoder", "<this>", "action", "<this>", "action", "<this>", "charset", "action", "<this>", "<this>", "<this>", "charset", "<this>", "charset", "block", "<this>", "charset", "block", "UpdateCheckTask"};
+    }
+
+    static {
+        ArrayHandler_3.LiteBansModule_31();
+    }
 }
 

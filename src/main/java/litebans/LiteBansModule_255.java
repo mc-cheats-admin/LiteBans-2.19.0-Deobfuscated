@@ -1,25 +1,42 @@
 package litebans;
 
-import com.mojang.serialization.DynamicOps;
-import com.mojang.serialization.JsonOps;
-import net.minecraft.core.RegistryAccess;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.ComponentSerialization;
-import net.minecraft.util.StrictJsonParser;
+import org.jetbrains.annotations.NotNull;
 
-public class LiteBansModule_255
-implements LiteBansModule_252 {
-    @Override
-    public Object BaseCoreGenericHandler(CharSequence charSequence) {
-        return Component.literal((String)charSequence.toString());
+public final class LiteBansModule_255 {
+        private LiteBansModule_255() {
     }
 
-    @Override
-    public Object LiteBansModule_31(CharSequence charSequence) {
-        return this.plugin(charSequence);
+    public final boolean c() {
+        return LiteBansModule_210.BaseCoreGenericHandler();
     }
 
-    private final Component BaseCoreGenericHandler(CharSequence charSequence) {
-        return (Component)ComponentSerialization.CODEC.parse((DynamicOps)RegistryAccess.EMPTY.createSerializationContext((DynamicOps)JsonOps.INSTANCE), StrictJsonParser.parse((String)charSequence.toString())).getOrThrow(IllegalArgumentException::new);
+    public final void BaseCoreGenericHandler(boolean flag) {
+        LiteBansModule_210.BaseCoreGenericHandler(flag);
+    }
+
+    public final PlatformPlugin BaseCoreGenericHandler() {
+        PlatformPlugin plugin = LiteBansModule_210.c;
+        if (plugin != null) {
+            return plugin;
+        }
+        ObjectUtilities.e("");
+        return null;
+    }
+
+    public final void BaseCoreGenericHandler(@NotNull PlatformPlugin plugin) {
+        LiteBansModule_210.c = plugin;
+    }
+
+    public /* synthetic */ LiteBansModule_255(LiteBansModule_14 aJ2) {
+        this();
+    }
+
+    private static final void LiteBansModule_31() {
+        BaseCoreGenericHandler = new String[]{""};
+    }
+
+    static {
+        LiteBansModule_255.LiteBansModule_31();
+    }
 }
 

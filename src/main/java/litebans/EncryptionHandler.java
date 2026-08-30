@@ -10,13 +10,14 @@ implements Serializable {
     public static final EncryptionHandler BaseCoreGenericHandler = new EncryptionHandler("data descriptor");
     public static final EncryptionHandler g = new EncryptionHandler("splitting");
     public static final EncryptionHandler AsyncBackgroundTask_5 = new EncryptionHandler("unknown compressed size");
-    private final String LiteBansModule_194;
+    private final String LiteBansModule_195;
 
     private EncryptionHandler(String string) {
-        this.LiteBansModule_194 = string;
+        this.LiteBansModule_195 = string;
     }
 
     public String toString() {
-        return this.LiteBansModule_194;
+        return this.LiteBansModule_195;
+    }
 }
 

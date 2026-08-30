@@ -1,40 +1,35 @@
 package litebans;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
 public final class LiteBansModule_121 {
-    private LiteBansModule_121() {
+    public static final LiteBansModule_184 c = new LiteBansModule_184(null);
+    private final int AsyncBackgroundTask_5;
+    private final int LiteBansModule_31;
+    private final int BaseCoreGenericHandler;
+
+    public LiteBansModule_121(int n, int n2, int n3) {
+        this.AsyncBackgroundTask_5 = n;
+        this.LiteBansModule_31 = n2;
+        this.plugin = n3;
     }
 
-    public final DescHandler BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @Nullable String string, @NotNull String string2, @NotNull UuidHandler jR2, boolean flag, @Nullable String string3, boolean flag2, @NotNull Number number, @NotNull Number number2) {
-        LiteBansModule_82 ch3 = ch2;
-        return new DescHandler(ch2, string, jR2, flag, new AllHandler(ch3.e(), string2), string3, flag2, number, number2);
+    public final boolean BaseCoreGenericHandler(int n, int n2, int n3) {
+        if (this.AsyncBackgroundTask_5 > n) {
+            return true;
+        }
+        if (this.LiteBansModule_31 > n2) {
+            return true;
+        }
+        if (this.LiteBansModule_31 < n2) {
+            return false;
+        }
+        return this.plugin >= n3;
     }
 
-    public static /* synthetic */ DescHandler BaseCoreGenericHandler(LiteBansModule_121 df_02, LiteBansModule_82 ch2, String string, String string2, UuidHandler jR2, boolean flag, String string3, boolean flag2, Number number, Number number2, int n, Object targetObj) {
-        if ((n & 4) != 0) {
-            jR2 = UuidHandler.g;
+    public String toString() {
+        if (this.AsyncBackgroundTask_5 >= 100 && this.LiteBansModule_31 == 0 && this.plugin == 0) {
+            return "" + '#' + this.AsyncBackgroundTask_5;
         }
-        if ((n & 8) != 0) {
-            flag = false;
-        }
-        if ((n & 0x10) != 0) {
-            string3 = null;
-        }
-        if ((n & 0x20) != 0) {
-            flag2 = true;
-        }
-        if ((n & 0x40) != 0) {
-            number = 0;
-        }
-        if ((n & 0x80) != 0) {
-            number2 = 0;
-        }
-        return df_02.BaseCoreGenericHandler(ch2, string, string2, jR2, flag, string3, flag2, number, number2);
+        return "" + this.AsyncBackgroundTask_5 + '.' + this.LiteBansModule_31 + '.' + this.plugin;
     }
-
-    public /* synthetic */ LiteBansModule_121(LiteBansModule_14 aJ2) {
-        this();
 }
 

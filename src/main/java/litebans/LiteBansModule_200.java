@@ -1,18 +1,35 @@
 package litebans;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import com.mojang.brigadier.CommandDispatcher;
+@ModulePriority(priority=3)
+public class LiteBansModule_200
+extends CommandManager {
+    public LiteBansModule_200(PlatformPlugin plugin) {
+        super(plugin);
+    }
 
-public interface LiteBansModule_200 {
-    public static final LiteBansModule_325 BaseCoreGenericHandler;
-    public static final boolean c;
-    public static final boolean LiteBansModule_31;
+    @Override
+    public boolean AsyncBackgroundTask_5() {
+        return this.plugin.AsyncBackgroundTask_22() == 3;
+    }
 
-    public boolean BaseCoreGenericHandler(@Nullable LiteBansModule_15 var1, @NotNull BroadcastHandler var2, @NotNull String var3);
+    @Override
+    public void e() {
+    }
 
-    static {
-        LiteBansModule_31 = true;
-        c = false;
-        BaseCoreGenericHandler = LiteBansModule_325.c;
+    @Override
+    public void BaseCoreGenericHandler() {
+        super.BaseCoreGenericHandler();
+        ((ConfigYmlHandler)this.plugin).g().BaseCoreGenericHandler((T targetObj) -> {
+            for (LiteCommand command : this.e()) {
+                this.plugin(new LiteBansModule_354(command, command.getPermission(), this.plugin, command.getAliases()), (CommandDispatcher)targetObj);
+            }
+            return Void.TYPE;
+        });
+    }
+
+    public void BaseCoreGenericHandler(LiteBansModule_354 jq_02, CommandDispatcher commandDispatcher) {
+        ((ConfigYmlHandler)this.plugin).g().BaseCoreGenericHandler(jq_02, commandDispatcher);
+    }
 }
 

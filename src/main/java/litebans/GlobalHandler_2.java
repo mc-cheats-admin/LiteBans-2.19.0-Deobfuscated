@@ -7,26 +7,26 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public final class GlobalHandler_2 {
-    private GlobalHandler_2() {
+        private GlobalHandler_2() {
     }
 
     public final String LiteBansModule_31() {
-        return LiteBansModule_181.c();
+        return LiteBansModule_182.c();
     }
 
-    public final LiteBansModule_181 c() {
-        return LiteBansModule_181.LiteBansModule_31();
+    public final LiteBansModule_182 c() {
+        return LiteBansModule_182.LiteBansModule_31();
     }
 
     public final boolean LiteBansModule_31(@Nullable String string) {
-        return ObjectUtilities.BaseCoreGenericHandler(string, this.LiteBansModule_31()) || StringUtilities.BaseCoreGenericHandler(string, "global", true) || StringUtilities.BaseCoreGenericHandler(string, "all", true);
+        return ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)this.LiteBansModule_31()) || StringUtilities.BaseCoreGenericHandler(string, "global", true) || StringUtilities.BaseCoreGenericHandler(string, "all", true);
     }
 
     public final boolean BaseCoreGenericHandler(@Nullable String string) {
         return StringUtilities.BaseCoreGenericHandler(string, "local", true) || StringUtilities.BaseCoreGenericHandler(string, "this", true);
     }
 
-    public final LiteBansModule_181 BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull List list, @NotNull String string, boolean flag) {
+    public final LiteBansModule_182 BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull List list, @NotNull String string, boolean flag) {
         Iterator iterator = list.iterator();
         while (iterator.hasNext()) {
             String string2;
@@ -37,21 +37,21 @@ public final class GlobalHandler_2 {
                 if (flag) {
                     iterator.remove();
                 }
-                return new LiteBansModule_181(string2);
+                return new LiteBansModule_182(string2);
             }
-            if (ObjectUtilities.BaseCoreGenericHandler(string3, (Object)"--")) {
+            if (ObjectUtilities.BaseCoreGenericHandler((Object)string3, (Object)"--")) {
                 return this.c();
             }
-            if (!StringUtilities.BaseCoreGenericHandler(string3, '-', false, 2, null) || !StringUtilities.c(string3, 'g', false, 2, null)) continue;
+            if (!StringUtilities.BaseCoreGenericHandler((CharSequence)string3, '-', false, 2, null) || !StringUtilities.c((CharSequence)string3, 'g', false, 2, null)) continue;
             if (flag) {
                 iterator.remove();
             }
-            return new LiteBansModule_181(this.LiteBansModule_31());
+            return new LiteBansModule_182(this.LiteBansModule_31());
         }
         return this.c();
     }
 
-    public static /* synthetic */ LiteBansModule_181 BaseCoreGenericHandler(GlobalHandler_2 jG2, CommandSenderWrapper sender, List list, String string, boolean flag, int n, Object targetObj) {
+    public static /* synthetic */ LiteBansModule_182 BaseCoreGenericHandler(GlobalHandler_2 jG2, CommandSenderWrapper sender, List list, String string, boolean flag, int n, Object targetObj) {
         if ((n & 8) != 0) {
             flag = true;
         }
@@ -66,7 +66,7 @@ public final class GlobalHandler_2 {
     }
 
     public final String AsyncBackgroundTask_5(@NotNull String string) {
-        return LiteBansModule_242.BaseCoreGenericHandler(string, 32);
+        return LiteBansModule_243.BaseCoreGenericHandler(string, 32);
     }
 
     public final String BaseCoreGenericHandler(@NotNull String string, @NotNull String string2, @NotNull CommandSenderWrapper sender) {
@@ -74,7 +74,7 @@ public final class GlobalHandler_2 {
             return "global";
         }
         if (this.plugin(string)) {
-            String string3 = sender.LiteBansModule_240();
+            String string3 = sender.LiteBansModule_241();
             String string4 = string3;
             if (string4 == null) {
                 string4 = string2;
@@ -94,5 +94,10 @@ public final class GlobalHandler_2 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"global", "all", "local", "this", "server:", "--", "global"};
+    }
+
+    static {
+        GlobalHandler_2.BaseCoreGenericHandler();
+    }
 }
 

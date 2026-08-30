@@ -14,11 +14,11 @@ public final class LiteBansType {
     private static final Map e;
     private static final Map AsyncBackgroundTask_5;
     public static final LiteBansType HoverTextFormatter;
-    public static final LiteBansType LiteBansModule_194;
+    public static final LiteBansType LiteBansModule_195;
     public static final LiteBansType i;
     public static final LiteBansType m;
     public static final LiteBansType BanHandler_4;
-    public static final LiteBansType LiteBansModule_401;
+    public static final LiteBansType LiteBansModule_403;
     public static final LiteBansType AsyncBackgroundTask_21;
     public static final LiteBansType q;
     public static final LiteBansType PunishmentTableService;
@@ -28,7 +28,7 @@ public final class LiteBansType {
     public static final LiteBansType r;
     public static final LiteBansType g;
     public static final LiteBansType F;
-    public static final LiteBansType LiteBansModule_433;
+    public static final LiteBansType LiteBansModule_435;
     public static final LiteBansType LiteBansModule_31;
     public static final LiteBansType AsyncBackgroundTask_22;
     public static final LiteBansType c;
@@ -38,16 +38,16 @@ public final class LiteBansType {
     private static int CommandThrottleService;
     private final String BanHandler_2;
     private final String DatabaseMonitorService;
-    private final int LiteBansModule_240;
+    private final int LiteBansModule_241;
     private final Color GnuSparseMapHandler;
-    private LiteBansType(char c, String string) {
+        private LiteBansType(char c, String string) {
         this(c, string, null);
     }
 
     private LiteBansType(char c, String string, Color color) {
         this.DatabaseMonitorService = string;
         this.BanHandler_2 = new String(new char[]{'\u00a7', c});
-        this.LiteBansModule_240 = CommandThrottleService++;
+        this.LiteBansModule_241 = CommandThrottleService++;
         this.GnuSparseMapHandler = color;
         e.put(Character.valueOf(c), this);
         AsyncBackgroundTask_5.put(string.toUpperCase(Locale.ROOT), this);
@@ -56,7 +56,7 @@ public final class LiteBansType {
     private LiteBansType(String string, String string2, int n) {
         this.DatabaseMonitorService = string;
         this.BanHandler_2 = string2;
-        this.LiteBansModule_240 = -1;
+        this.LiteBansModule_241 = -1;
         this.GnuSparseMapHandler = new Color(n);
     }
 
@@ -124,11 +124,11 @@ public final class LiteBansType {
         e = new HashMap();
         AsyncBackgroundTask_5 = new HashMap();
         HoverTextFormatter = new LiteBansType('0', "black", new Color(0));
-        LiteBansModule_194 = new LiteBansType('1', "dark_blue", new Color(170));
+        LiteBansModule_195 = new LiteBansType('1', "dark_blue", new Color(170));
         i = new LiteBansType('2', "dark_green", new Color(43520));
         m = new LiteBansType('3', "dark_aqua", new Color(43690));
         BanHandler_4 = new LiteBansType('4', "dark_red", new Color(0xAA0000));
-        LiteBansModule_401 = new LiteBansType('5', "dark_purple", new Color(0xAA00AA));
+        LiteBansModule_403 = new LiteBansType('5', "dark_purple", new Color(0xAA00AA));
         AsyncBackgroundTask_21 = new LiteBansType('6', "gold", new Color(0xFFAA00));
         q = new LiteBansType('7', "gray", new Color(0xAAAAAA));
         PunishmentTableService = new LiteBansType('8', "dark_gray", new Color(0x555555));
@@ -138,9 +138,9 @@ public final class LiteBansType {
         r = new LiteBansType('c', "red", new Color(0xFF5555));
         g = new LiteBansType('AsyncBackgroundTask_5', "light_purple", new Color(0xFF55FF));
         F = new LiteBansType('e', "yellow", new Color(0xFFFF55));
-        LiteBansModule_433 = new LiteBansType('LiteBansModule_194', "white", new Color(0xFFFFFF));
+        LiteBansModule_435 = new LiteBansType('LiteBansModule_195', "white", new Color(0xFFFFFF));
         LiteBansModule_31 = new LiteBansType('Utf8Handler_2', "obfuscated");
-        AsyncBackgroundTask_22 = new LiteBansType('LiteBansModule_401', "bold");
+        AsyncBackgroundTask_22 = new LiteBansType('LiteBansModule_403', "bold");
         c = new LiteBansType('m', "strikethrough");
         A = new LiteBansType('n', "underline");
         Utf8Handler_2 = new LiteBansType('BroadcastService', "italic");
@@ -150,5 +150,6 @@ public final class LiteBansType {
 
     private static final void LiteBansModule_31() {
         BroadcastService = new String[]{"", "0123456789AaBbCcDdEeFfKkLlMmNnOoRrXx", "#", "%08x", "string cannot be null", "Illegal hex string ", "\u00a7x", "Could not parse ChatColor ", "Name is null", "No enum constant ", " + ", "Cannot get ordinal of hex color", "(?i)", "[0-9A-FK-ORX]", "black", "dark_blue", "dark_green", "dark_aqua", "dark_red", "dark_purple", "gold", "gray", "dark_gray", "blue", "green", "aqua", "red", "light_purple", "yellow", "white", "obfuscated", "bold", "strikethrough", "underline", "italic", StringDecryptor.BaseCoreGenericHandler("\u71b5\u71a2\u71b4\u71a2\u71b3", 0x111C71C7)};
+    }
 }
 

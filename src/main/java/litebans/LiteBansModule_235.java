@@ -1,12 +1,14 @@
 package litebans;
 
-public interface LiteBansModule_235 {
-    public static final long BaseCoreGenericHandler = -1L;
+import java.util.Collections;
+import java.util.HashSet;
 
-    public String getName();
-
-    public long getSize();
-
-    public boolean isDirectory();
+public class LiteBansModule_235 {
+    @SafeVarargs
+    public static final HashSet BaseCoreGenericHandler(Object[] objectArray) {
+        HashSet hashSet = new HashSet(objectArray.length);
+        Collections.addAll(hashSet, objectArray);
+        return hashSet;
+    }
 }
 

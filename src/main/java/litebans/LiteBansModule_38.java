@@ -6,7 +6,7 @@ public final class LiteBansModule_38 {
     static {
         int[] nArray = new int[BanHandler.values().length];
         try {
-            nArray[BanHandler.LiteBansModule_240.ordinal()] = 1;
+            nArray[BanHandler.LiteBansModule_241.ordinal()] = 1;
         }
         catch (NoSuchFieldError noSuchFieldError) {
             // empty catch block
@@ -30,5 +30,6 @@ public final class LiteBansModule_38 {
             // empty catch block
         }
         BaseCoreGenericHandler = nArray;
+    }
 }
 

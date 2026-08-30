@@ -6,8 +6,8 @@ extends Enum {
     public static final DeleteHandler LiteBansModule_31;
     public static final DeleteHandler e;
     private static final /* synthetic */ DeleteHandler[] AsyncBackgroundTask_5;
-    private static final /* synthetic */ LiteBansModule_372 BaseCoreGenericHandler;
-    /*
+    private static final /* synthetic */ LiteBansModule_374 BaseCoreGenericHandler;
+        /*
      * WARNING - Possible parameter corruption
      * WARNING - void declaration
      */
@@ -31,5 +31,10 @@ extends Enum {
         e = new DeleteHandler("PRUNE", 2);
         AsyncBackgroundTask_5 = jZArray = new DeleteHandler[]{DeleteHandler.c, DeleteHandler.LiteBansModule_31, DeleteHandler.e};
         BaseCoreGenericHandler = EntriesHandler_3.BaseCoreGenericHandler(AsyncBackgroundTask_5);
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        LiteBansModule_195 = new String[]{"DELETE", "DEACTIVATE", "PRUNE"};
+    }
 }
 

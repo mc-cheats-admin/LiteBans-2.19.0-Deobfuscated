@@ -1,44 +1,28 @@
 package litebans;
 
-import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
-import net.minecraft.class_2540;
-import net.minecraft.class_2561;
-import net.minecraft.class_2960;
-import net.minecraft.class_3222;
+import java.util.Arrays;
+import org.jetbrains.annotations.NotNull;
 
-public class LiteBansModule_405
-extends ArgsHandler_2 {
-    protected final LiteBansModule_252 e = new LiteBansModule_79(this);
+public final class LiteBansModule_405 {
+    private final ConfigService LiteBansModule_31;
+    private final CharSequence[] BaseCoreGenericHandler;
 
-    public LiteBansModule_405(PlatformPlugin plugin) {
-        super(plugin);
+    public LiteBansModule_405(@NotNull ConfigService configService, @NotNull CharSequence[] charSequenceArray) {
+        this.LiteBansModule_31 = configService;
+        this.plugin = charSequenceArray;
     }
 
-    @Override
-    public Object AsyncBackgroundTask_5(Object targetObj) {
-        if (targetObj instanceof class_3222) {
-            return targetObj.method_5671();
-        }
-        return targetObj;
+    public final ConfigService c() {
+        return this.LiteBansModule_31;
     }
 
-    @Override
-    public LiteBansModule_252 AsyncBackgroundTask_5() {
-        return this.e;
+    public final CharSequence[] BaseCoreGenericHandler() {
+        return this.plugin;
     }
 
-    @Override
-    public void BaseCoreGenericHandler(Object targetObj, String string) {
-        int n = this.LiteBansModule_31();
-        V116Handler g82 = n >= 770 ? V116Handler.BaseCoreGenericHandler : V116Handler.c;
-        targetObj.field_13987.method_14367(this.e.LiteBansModule_31(LiteBansModule_164.BaseCoreGenericHandler(string, g82)));
+    public final int LiteBansModule_31() {
+        CharSequence[] charSequenceArray = this.plugin;
+        return this.LiteBansModule_31.BaseCoreGenericHandler(Arrays.copyOf(charSequenceArray, charSequenceArray.length));
     }
-
-    @Override
-    public void BaseCoreGenericHandler(Object targetObj, String string, byte[] byArray) {
-        class_2540 class_25402 = PacketByteBufs.create();
-        class_25402.writeBytes(byArray);
-        targetObj.field_13987.method_14364(ServerPlayNetworking.createS2CPacket((class_2960)class_2960.method_12829((String)string), (class_2540)class_25402));
 }
 

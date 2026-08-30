@@ -11,15 +11,15 @@ extends Enum {
     public static final NoneHandler i = new NoneHandler("MD5", 2, 32771);
     public static final NoneHandler BaseCoreGenericHandler = new NoneHandler("SHA1", 3, 32772);
     public static final NoneHandler c = new NoneHandler("RIPEND160", 4, 32775);
-    public static final NoneHandler LiteBansModule_194 = new NoneHandler("SHA256", 5, 32780);
+    public static final NoneHandler LiteBansModule_195 = new NoneHandler("SHA256", 5, 32780);
     public static final NoneHandler GnuSparseMapHandler = new NoneHandler("SHA384", 6, 32781);
     public static final NoneHandler Utf8Handler_2 = new NoneHandler("SHA512", 7, 32782);
     private final int e;
     private static final Map AsyncBackgroundTask_5;
-    private static final /* synthetic */ NoneHandler[] LiteBansModule_240;
+    private static final /* synthetic */ NoneHandler[] LiteBansModule_241;
 
     public static final NoneHandler[] values() {
-        return (NoneHandler[])LiteBansModule_240.clone();
+        return (NoneHandler[])LiteBansModule_241.clone();
     }
 
     public static final NoneHandler BaseCoreGenericHandler(String string) {
@@ -31,10 +31,10 @@ extends Enum {
      * WARNING - void declaration
      */
     private NoneHandler() {
-        void arg1;
+        void v1;
         void var2_-1;
         void var1_-1;
-        this.e = arg1;
+        this.e = v1;
     }
 
     public int BaseCoreGenericHandler() {
@@ -42,15 +42,16 @@ extends Enum {
     }
 
     public static final NoneHandler BaseCoreGenericHandler(int n) {
-        return (NoneHandler)(AsyncBackgroundTask_5.get(n));
+        return (NoneHandler)((Object)AsyncBackgroundTask_5.get(n));
     }
 
     static {
-        LiteBansModule_240 = new NoneHandler[]{g, LiteBansModule_31, i, BaseCoreGenericHandler, c, LiteBansModule_194, GnuSparseMapHandler, Utf8Handler_2};
+        LiteBansModule_241 = new NoneHandler[]{g, LiteBansModule_31, i, BaseCoreGenericHandler, c, LiteBansModule_195, GnuSparseMapHandler, Utf8Handler_2};
         HashMap<Integer, NoneHandler> hashMap = new HashMap<Integer, NoneHandler>();
         for (NoneHandler bj_02 : NoneHandler.values()) {
             hashMap.put(bj_02.BaseCoreGenericHandler(), bj_02);
         }
         AsyncBackgroundTask_5 = Collections.unmodifiableMap(hashMap);
+    }
 }
 

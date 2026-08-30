@@ -5,31 +5,34 @@ import java.sql.Statement;
 import org.jetbrains.annotations.NotNull;
 
 public class ProxyPreparedStatement {
-    public static final LiteBansModule_127 c;
+    public static final LiteBansModule_128 c;
     private final PlatformPlugin AsyncBackgroundTask_5;
     public static final int LiteBansModule_31;
-    public ProxyPreparedStatement(@NotNull PlatformPlugin plugin) {
+        public ProxyPreparedStatement(@NotNull PlatformPlugin plugin) {
         this.AsyncBackgroundTask_5 = plugin;
     }
 
     public ResultSet c(@NotNull LiteBansModule_60 v1) {
         if (v1.c().LiteBansModule_31()) {
-                        return LiteBansModule_397.BaseCoreGenericHandler();
+            v2 = this;
+            return LiteBansModule_399.BaseCoreGenericHandler();
         }
-                arg2 = v1;
-        arg3 = arg2;
-        if (!(arg3.LiteBansModule_31().isClosed() == false)) ** GOTO lbl-1000
-        arg2 = v1;
-        if (arg2.LiteBansModule_31().execute()) {
-            arg2 = v1;
-            v0 = arg2.LiteBansModule_31().getResultSet();
+        v3 = this;
+        v4 = v1;
+        v5 = v4;
+        if (!(v5.LiteBansModule_31().isClosed() == false)) ** GOTO lbl-1000
+        v4 = v1;
+        if (v4.LiteBansModule_31().execute()) {
+            v4 = v1;
+            v0 = v4.LiteBansModule_31().getResultSet();
         } else lbl-1000:
                 {
+            v0 = null;
         }
-        arg2 = v0;
-        v1   = arg2;
+        v4 = v0;
+        v1   = v4;
         if (v1   == null) {
-            v1   = LiteBansModule_397.BaseCoreGenericHandler();
+            v1   = LiteBansModule_399.BaseCoreGenericHandler();
         }
         return v1  ;
     }
@@ -38,8 +41,8 @@ public class ProxyPreparedStatement {
         AutoCloseable autoCloseable;
         if (bT2.c().LiteBansModule_31()) {
             ProxyPreparedStatement bU2 = this;
-            Object arg4 = null;
-            return LiteBansModule_397.BaseCoreGenericHandler();
+            Object v6 = null;
+            return LiteBansModule_399.BaseCoreGenericHandler();
         }
         ProxyPreparedStatement bU3 = this;
         Object targetObj = bT2;
@@ -51,14 +54,15 @@ public class ProxyPreparedStatement {
             flag3 = false;
             autoCloseable = autoCloseable2;
             if (autoCloseable == null) {
-                autoCloseable = LiteBansModule_397.BaseCoreGenericHandler();
-} else {
+                autoCloseable = LiteBansModule_399.BaseCoreGenericHandler();
+            }
+        } else {
             autoCloseable = null;
         }
         targetObj = autoCloseable;
         Object contextObj = targetObj;
         if (contextObj == null) {
-            contextObj = LiteBansModule_397.BaseCoreGenericHandler();
+            contextObj = LiteBansModule_399.BaseCoreGenericHandler();
         }
         return contextObj;
     }
@@ -92,7 +96,7 @@ public class ProxyPreparedStatement {
             ObjectUtilities.BaseCoreGenericHandler(contextObj);
             targetObj = contextObj;
         } else {
-            targetObj = new int[]{ }
+            targetObj = new int[]{};
         }
         return targetObj;
     }
@@ -103,12 +107,12 @@ public class ProxyPreparedStatement {
 
     private final boolean BaseCoreGenericHandler(int n, Throwable throwable) {
         boolean flag;
-        ConfigService configService = this.AsyncBackgroundTask_5.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = (ConfigService)this.AsyncBackgroundTask_5.BaseCoreGenericHandler(ConfigService.class);
         String string = throwable.getMessage();
         if (string == null) {
             string = "";
         }
-        if (StringUtilities.BaseCoreGenericHandler(string, (CharSequence)"Deadlock found when trying to get lock; try restarting transaction", false, 2, null)) {
+        if (StringUtilities.BaseCoreGenericHandler((CharSequence)string, (CharSequence)"Deadlock found when trying to get lock; try restarting transaction", false, 2, null)) {
             int n2 = n * n * 101;
             configService.BaseCoreGenericHandler((Object)("executeUpdate() failed due to deadlock. Wait " + n2 + " ms before retrying... (" + n + "/5)"));
             Thread.sleep(n2);
@@ -122,10 +126,11 @@ public class ProxyPreparedStatement {
     static {
         LiteBansModule_31 = 5;
         ProxyPreparedStatement.BaseCoreGenericHandler();
-        c = new LiteBansModule_127(null);
+        c = new LiteBansModule_128(null);
     }
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"", "Deadlock found when trying to get lock; try restarting transaction", "executeUpdate() failed due to deadlock. Wait ", " ms before retrying... (", "/5)"};
+    }
 }
 

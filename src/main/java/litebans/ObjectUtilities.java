@@ -2,18 +2,20 @@ package litebans;
 
 import java.util.Arrays;
 public class ObjectUtilities {
-    private ObjectUtilities() {
+        private ObjectUtilities() {
     }
 
     public static void BaseCoreGenericHandler(Object targetObj) {
         if (targetObj == null) {
             ObjectUtilities.BaseCoreGenericHandler();
-}
+        }
+    }
 
     public static void LiteBansModule_31(Object targetObj, String string) {
         if (targetObj == null) {
             ObjectUtilities.AsyncBackgroundTask_5(string);
-}
+        }
+    }
 
     public static void BaseCoreGenericHandler() {
         throw (NullPointerException)ObjectUtilities.BaseCoreGenericHandler(new NullPointerException());
@@ -34,12 +36,14 @@ public class ObjectUtilities {
     public static void c(Object targetObj, String string) {
         if (targetObj == null) {
             throw (NullPointerException)ObjectUtilities.BaseCoreGenericHandler(new NullPointerException(string + " must not be null"));
-}
+        }
+    }
 
     public static void BaseCoreGenericHandler(Object targetObj, String string) {
         if (targetObj == null) {
             ObjectUtilities.LiteBansModule_31(string);
-}
+        }
+    }
 
     private static final void LiteBansModule_31(String string) {
         throw (NullPointerException)ObjectUtilities.BaseCoreGenericHandler(new NullPointerException(ObjectUtilities.c(string)));
@@ -91,5 +95,10 @@ public class ObjectUtilities {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"lateinit property ", " has not been initialized", " must not be null", " must not be null", "Method specified CommandExitException non-null returned null: ", " + ", "Field specified CommandExitException non-null is null: ", " + ", "Parameter specified CommandExitException non-null is null: method ", " + ", ", parameter ", "This function has BaseCoreGenericHandler reified type parameter and thus can only be inlined LiteBansModule_21 compilation time, not called ", "Class ", " is not found. Please update the Kotlin runtime to the latest version", "Class ", " is not found: this code requires the Kotlin runtime of version LiteBansModule_21 least "};
+    }
+
+    static {
+        ObjectUtilities.LiteBansModule_31();
+    }
 }
 

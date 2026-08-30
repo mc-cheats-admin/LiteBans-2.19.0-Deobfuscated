@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 
 public final class LiteBansModule_48 {
     public static final LiteBansModule_48 LiteBansModule_31;
-    private LiteBansModule_48() {
+        private LiteBansModule_48() {
     }
 
     public final Object BaseCoreGenericHandler() {
@@ -32,7 +32,7 @@ public final class LiteBansModule_48 {
     }
 
     public final Object BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull String string) {
-        if (!HexEncodingHelper.BaseCoreGenericHandler(string)) {
+        if (!LiteBansModule_346.BaseCoreGenericHandler(string)) {
             return null;
         }
         UserManager userManager = this.c(targetObj).getUserManager();
@@ -55,16 +55,18 @@ public final class LiteBansModule_48 {
 
     public final int BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull Object contextObj) {
         Object v0;
-{
+        block2: {
             Set set = this.LiteBansModule_31(targetObj);
             String string = this.e(contextObj).getCachedData().getMetaData().getPrimaryGroup();
             Iterable iterable = set;
             for (Object t2 : iterable) {
                 Group group = (Group)t2;
-                if (!ObjectUtilities.BaseCoreGenericHandler(group.getName(), string)) continue;
+                if (!ObjectUtilities.BaseCoreGenericHandler((Object)group.getName(), (Object)string)) continue;
                 v0 = t2;
-                break;
-}
+                break block2;
+            }
+            v0 = null;
+        }
         if ((resultObj = (Group)v0) == null || (resultObj = resultObj.getWeight()) == null) {
             resultObj = OptionalInt.empty();
         }
@@ -83,5 +85,6 @@ public final class LiteBansModule_48 {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"", ""};
+    }
 }
 

@@ -8,11 +8,11 @@ import java.util.stream.IntStream;
 public final class BanHandler
 extends Enum
 implements CharSequence {
-    public static final TempHandler LiteBansModule_401;
-    private final BanHandler LiteBansModule_194;
+    public static final TempHandler LiteBansModule_403;
+    private final BanHandler LiteBansModule_195;
     private final BansHandler_2 m;
     private static final List LiteBansModule_31;
-    public static final BanHandler LiteBansModule_240;
+    public static final BanHandler LiteBansModule_241;
     public static final BanHandler GnuSparseMapHandler;
     public static final BanHandler c;
     public static final BanHandler g;
@@ -20,17 +20,17 @@ implements CharSequence {
     public static final BanHandler n;
     public static final BanHandler e;
     private static final /* synthetic */ BanHandler[] Utf8Handler_2;
-    private static final /* synthetic */ LiteBansModule_372 BaseCoreGenericHandler;
-    /*
+    private static final /* synthetic */ LiteBansModule_374 BaseCoreGenericHandler;
+        /*
      * WARNING - void declaration
      */
     private BanHandler() {
-        void arg1;
-        void arg2;
+        void v1;
+        void v2;
         void var2_-1;
         void var1_-1;
-        this.LiteBansModule_194 = arg2;
-        this.m = arg1;
+        this.LiteBansModule_195 = v2;
+        this.m = v1;
     }
 
     /*
@@ -38,26 +38,27 @@ implements CharSequence {
      * WARNING - void declaration
      */
     /* synthetic */ BanHandler(BanHandler a_2, BansHandler_2 kL2, int targetObj, LiteBansModule_14 aJ2) {
-        void v4;
+        void v3;
         void var1_-1;
-{
-{
-                    void arg3;
-                    if ((arg3 & 1) != 0) {
+        block4: {
+            block6: {
+                block5: {
+                    void v4;
+                    if ((v4 & 1) != 0) {
                         targetObj = null;
                     }
-                    if ((arg3 & 2) == 0) break;
+                    if ((v4 & 2) == 0) break block4;
                     contextObj = targetObj;
-                    if (contextObj == null) break;
+                    if (contextObj == null) break block5;
                     BansHandler_2 kL3 = contextObj.m;
                     contextObj = kL3;
-                    if (kL3 != null) break;
+                    if (kL3 != null) break block6;
                 }
-                contextObj = (BansHandler_2)(AssertionUtilities.BaseCoreGenericHandler());
+                contextObj = (BansHandler_2)((Object)AssertionUtilities.BaseCoreGenericHandler());
             }
             Object resultObj = contextObj;
         }
-        this((String)var1_-1, (int)kL2, (BanHandler)targetObj, (BansHandler_2)v4);
+        this((String)var1_-1, (int)kL2, (BanHandler)targetObj, (BansHandler_2)v3);
     }
 
     public final BansHandler_2 BaseCoreGenericHandler() {
@@ -65,7 +66,7 @@ implements CharSequence {
     }
 
     public final BanHandler c() {
-        BanHandler a_2 = this.LiteBansModule_194;
+        BanHandler a_2 = this.LiteBansModule_195;
         if (a_2 == null) {
             a_2 = this;
         }
@@ -125,16 +126,16 @@ implements CharSequence {
 
     static {
         BanHandler.LiteBansModule_31();
-        LiteBansModule_240 = new BanHandler("BAN", 0, null, BansHandler_2.Utf8Handler_2, 1, null);
+        LiteBansModule_241 = new BanHandler("BAN", 0, null, BansHandler_2.Utf8Handler_2, 1, null);
         GnuSparseMapHandler = new BanHandler("MUTE", 1, null, BansHandler_2.m, 1, null);
         c = new BanHandler("WARN", 2, null, BansHandler_2.LiteBansModule_31, 1, null);
         g = new BanHandler("KICK", 3, null, BansHandler_2.GnuSparseMapHandler, 1, null);
-        AsyncBackgroundTask_5 = new BanHandler("UNBAN", 4, LiteBansModule_240, null, 2, null);
+        AsyncBackgroundTask_5 = new BanHandler("UNBAN", 4, LiteBansModule_241, null, 2, null);
         n = new BanHandler("UNMUTE", 5, GnuSparseMapHandler, null, 2, null);
         e = new BanHandler("UNWARN", 6, c, null, 2, null);
-        Utf8Handler_2 = a_Array = new BanHandler[]{BanHandler.LiteBansModule_240, BanHandler.GnuSparseMapHandler, BanHandler.c, BanHandler.g, BanHandler.AsyncBackgroundTask_5, BanHandler.n, BanHandler.e};
+        Utf8Handler_2 = a_Array = new BanHandler[]{BanHandler.LiteBansModule_241, BanHandler.GnuSparseMapHandler, BanHandler.c, BanHandler.g, BanHandler.AsyncBackgroundTask_5, BanHandler.n, BanHandler.e};
         BaseCoreGenericHandler = EntriesHandler_3.BaseCoreGenericHandler(Utf8Handler_2);
-        LiteBansModule_401 = new TempHandler(null);
+        LiteBansModule_403 = new TempHandler(null);
         BanHandler[] a_Array = BanHandler.values();
         BanHandler[] a_Array2 = a_Array;
         Collection collection = new ArrayList();
@@ -150,5 +151,6 @@ implements CharSequence {
 
     private static final void LiteBansModule_31() {
         i = new String[]{"un", "temp_", "temp_ip", "ip", "un", "un", "temp_", "temp_ip", "ip", "un", "silent_", "BAN", "MUTE", "WARN", "KICK", "UNBAN", "UNMUTE", "UNWARN"};
+    }
 }
 

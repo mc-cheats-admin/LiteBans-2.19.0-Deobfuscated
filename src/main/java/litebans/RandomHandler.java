@@ -2,15 +2,15 @@ package litebans;
 
 static class RandomHandler
 extends ThatHandler {
-    public static final LiteBansModule_159 BaseCoreGenericHandler(int n, int n2) {
-        return LiteBansModule_159.BaseCoreGenericHandler.BaseCoreGenericHandler(n, n2, -1);
+        public static final LiteBansModule_160 BaseCoreGenericHandler(int n, int n2) {
+        return LiteBansModule_160.BaseCoreGenericHandler.BaseCoreGenericHandler(n, n2, -1);
     }
 
-    public static final LiteBansModule_166 LiteBansModule_31(int n, int n2) {
+    public static final LiteBansModule_167 LiteBansModule_31(int n, int n2) {
         if (n2 <= Integer.MIN_VALUE) {
-            return LiteBansModule_166.LiteBansModule_240.BaseCoreGenericHandler();
+            return LiteBansModule_167.LiteBansModule_241.BaseCoreGenericHandler();
         }
-        return new LiteBansModule_166(n, n2 - 1);
+        return new LiteBansModule_167(n, n2 - 1);
     }
 
     public static final int c(int n, int n2) {
@@ -32,5 +32,14 @@ extends ThatHandler {
             return n3;
         }
         return n;
+    }
+
+    private static final void LiteBansModule_31() {
+        LiteBansModule_31 = new String[]{"<this>", "Progression ", " is ", "<this>", "Progression ", " is ", "<this>", "Progression ", " is ", "<this>", "<this>", "<this>", "<this>", "Progression ", " is ", "<this>", "Progression ", " is ", "<this>", "Progression ", " is ", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "random", "<this>", "random", "<this>", "random", "<this>", "<this>", "<this>", "<this>", "random", "<this>", "random", "<this>", "random", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "minimumValue", "<this>", "maximumValue", "<this>", "Cannot coerce value to HikariDataSource empty range: maximum ", " is less than minimum ", "Cannot coerce value to HikariDataSource empty range: maximum ", " is less than minimum ", "Cannot coerce value to HikariDataSource empty range: maximum ", " is less than minimum ", "Cannot coerce value to HikariDataSource empty range: maximum ", " is less than minimum ", "Cannot coerce value to HikariDataSource empty range: maximum ", " is less than minimum ", "Cannot coerce value to HikariDataSource empty range: maximum ", " is less than minimum ", "Cannot coerce value to HikariDataSource empty range: maximum ", " is less than minimum ", "<this>", "range", "Cannot coerce value to HikariDataSource empty range: ", "<this>", "range", "Cannot coerce value to HikariDataSource empty range: ", "range", "Cannot coerce value to HikariDataSource empty range: ", "range", "Cannot coerce value to HikariDataSource empty range: "};
+    }
+
+    static {
+        RandomHandler.LiteBansModule_31();
+    }
 }
 

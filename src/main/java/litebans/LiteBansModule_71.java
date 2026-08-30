@@ -1,42 +1,29 @@
 package litebans;
 
-import java.util.Comparator;
-public final class LiteBansModule_71
-implements Comparator {
-    final /* synthetic */ SortHandler BaseCoreGenericHandler;
+import org.jetbrains.annotations.NotNull;
 
-    public LiteBansModule_71(SortHandler br2) {
-        this.plugin = br2;
+public final class LiteBansModule_71 {
+    private final Object BaseCoreGenericHandler;
+    private boolean LiteBansModule_31;
+
+    public LiteBansModule_71(@NotNull Object targetObj, boolean flag) {
+        this.plugin = targetObj;
+        this.LiteBansModule_31 = flag;
     }
 
-    public final int compare(Object targetObj, Object contextObj) {
-        int n;
-        boolean flag;
-        int n2;
-        char c;
-        char c10;
-        int n3;
-        String string = (String)contextObj;
-        CharSequence charSequence = string;
-        for (n3 = 0; n3 < charSequence.length(); ++n3) {
-            c = c10 = charSequence.charAt(n3);
-            n2 = n4;
+    public /* synthetic */ LiteBansModule_71(Object targetObj, boolean flag, int n, LiteBansModule_14 aJ2) {
+        if ((n & 2) != 0) {
             flag = false;
-            n = this.plugin.BaseCoreGenericHandler(c);
-            n4 = n2 + n;
         }
-        string = (String)targetObj;
-        Comparable comparable = Integer.valueOf(n4);
-        flag2 = false;
-        charSequence = string;
-        n4 = 0;
-        for (n3 = 0; n3 < charSequence.length(); ++n3) {
-            c = c10 = charSequence.charAt(n3);
-            n2 = n4;
-            flag = false;
-            n = this.plugin.BaseCoreGenericHandler(c);
-            n4 = n2 + n;
-        }
-        return LiteBansModule_261.BaseCoreGenericHandler(comparable, Integer.valueOf(n4));
+        this(targetObj, flag);
+    }
+
+    public final boolean BaseCoreGenericHandler() {
+        return this.LiteBansModule_31;
+    }
+
+    public final void BaseCoreGenericHandler(boolean flag) {
+        this.LiteBansModule_31 = flag;
+    }
 }
 

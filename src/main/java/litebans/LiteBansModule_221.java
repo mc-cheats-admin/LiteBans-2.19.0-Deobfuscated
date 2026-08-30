@@ -1,48 +1,44 @@
 package litebans;
 
-import java.util.Collection;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public final class LiteBansModule_221
-extends MessageHandler {
-    private final String e;
-    private final String AsyncBackgroundTask_5;
-    private final String LiteBansModule_194;
-
-    public LiteBansModule_221(@NotNull PlatformPlugin plugin, @NotNull String string, @NotNull String string2, @Nullable String string3) {
-        super(plugin);
-        this.e = string;
-        this.AsyncBackgroundTask_5 = string2;
-        this.LiteBansModule_194 = string3;
+public final class LiteBansModule_221 {
+        private LiteBansModule_221() {
     }
 
-    @Override
-    public void run() {
-        boolean flag;
-        String string;
-        String string2;
-        String string3;
-        AsyncBackgroundTask_21 s2;
-{
-            AsyncBackgroundTask_21 s3;
-            s2 = s3 = this.LiteBansModule_240().BaseCoreGenericHandler(AsyncBackgroundTask_21.class);
-            string3 = this.e;
-            string2 = this.AsyncBackgroundTask_5;
-            string = this.LiteBansModule_194;
-            Iterable iterable = s2.BaseCoreGenericHandler();
-            if (iterable instanceof Collection && ((Collection)iterable).isEmpty()) {
-                flag = false;
-            } else {
-                for (Object t2 : iterable) {
-                    LiteBansModule_95 cp_02 = (LiteBansModule_95)t2;
-                    if (!(ObjectUtilities.BaseCoreGenericHandler(cp_02.c(), string3) && ObjectUtilities.BaseCoreGenericHandler(cp_02.g(), string2) && ObjectUtilities.BaseCoreGenericHandler(cp_02.LiteBansModule_31(), string))) continue;
-                    flag = true;
-                    break;
-                }
-                flag = false;
-}
-        if (!flag) {
-            s2.BaseCoreGenericHandler().put(new LiteBansModule_95(string3, string2, string));
+    public final boolean BaseCoreGenericHandler(@Nullable String string, @Nullable String string2) {
+        return string != null && ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)string2);
+    }
+
+    /*
+     * Enabled force condition propagation
+     * Lifted jumps to return sites
+     */
+    public final boolean BaseCoreGenericHandler(boolean flag, @Nullable String string, @Nullable String string2, boolean flag2) {
+        if (!flag) return false;
+        if (string2 == null) return false;
+        if (string == null) return false;
+        if (ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)string)) return true;
+        if (!flag2) return false;
+        CharSequence charSequence = string2;
+        if (!new NativepatternHandler(LiteBansModule_435.LiteBansModule_31.BaseCoreGenericHandler(string, "%", (Object)".*")).BaseCoreGenericHandler(charSequence)) return false;
+        return true;
+    }
+
+    public final boolean BaseCoreGenericHandler(@Nullable String string) {
+        return string != null && (StringUtilities.c((CharSequence)string, '%', false, 2, null) || StringUtilities.c((CharSequence)string, '_', false, 2, null));
+    }
+
+    public /* synthetic */ LiteBansModule_221(LiteBansModule_14 aJ2) {
+        this();
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        BaseCoreGenericHandler = new String[]{"%", ".*"};
+    }
+
+    static {
+        LiteBansModule_221.BaseCoreGenericHandler();
+    }
 }
 

@@ -8,9 +8,9 @@ import org.jetbrains.annotations.NotNull;
 
 static class ElementsHandler_6
 extends ComparatorHandler_2 {
-    public static final boolean BaseCoreGenericHandler(@NotNull Collection collection, @NotNull Iterable iterable) {
-        ObjectUtilities.BaseCoreGenericHandler(collection, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler(iterable, "elements");
+        public static final boolean BaseCoreGenericHandler(@NotNull Collection collection, @NotNull Iterable iterable) {
+        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "elements");
         if (iterable instanceof Collection) {
             return collection.addAll((Collection)iterable);
         }
@@ -22,18 +22,18 @@ extends ComparatorHandler_2 {
     }
 
     public static final boolean BaseCoreGenericHandler(@NotNull Collection collection, @NotNull Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler(collection, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler(objectArray, "elements");
+        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "elements");
         return collection.addAll(ArrayUtilities.BaseCoreGenericHandler(objectArray));
     }
 
-    public static final boolean BaseCoreGenericHandler(@NotNull Iterable iterable, @NotNull LiteBansModule_178 eo_02) {
-        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler(eo_02, "predicate");
+    public static final boolean BaseCoreGenericHandler(@NotNull Iterable iterable, @NotNull LiteBansModule_179 eo_02) {
+        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)eo_02, "predicate");
         return ElementsHandler_6.BaseCoreGenericHandler(iterable, eo_02, true);
     }
 
-    private static final boolean BaseCoreGenericHandler(Iterable iterable, LiteBansModule_178 eo_02, boolean flag) {
+    private static final boolean BaseCoreGenericHandler(Iterable iterable, LiteBansModule_179 eo_02, boolean flag) {
         Iterator iterator = iterable.iterator();
         while (iterator.hasNext()) {
             if ((Boolean)eo_02.BaseCoreGenericHandler(iterator.next()) != flag) continue;
@@ -43,13 +43,13 @@ extends ComparatorHandler_2 {
         return flag2;
     }
 
-    public static final boolean BaseCoreGenericHandler(@NotNull List list, @NotNull LiteBansModule_178 eo_02) {
-        ObjectUtilities.BaseCoreGenericHandler(list, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler(eo_02, "predicate");
+    public static final boolean BaseCoreGenericHandler(@NotNull List list, @NotNull LiteBansModule_179 eo_02) {
+        ObjectUtilities.BaseCoreGenericHandler((Object)list, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)eo_02, "predicate");
         return ElementsHandler_6.BaseCoreGenericHandler(list, eo_02, false);
     }
 
-    private static final boolean BaseCoreGenericHandler(List list, LiteBansModule_178 eo_02, boolean flag) {
+    private static final boolean BaseCoreGenericHandler(List list, LiteBansModule_179 eo_02, boolean flag) {
         if (!(list instanceof RandomAccess)) {
             ObjectUtilities.LiteBansModule_31(list, "");
             return ElementsHandler_6.BaseCoreGenericHandler(NullHandler_6.BaseCoreGenericHandler(list), eo_02, flag);
@@ -66,7 +66,8 @@ extends ComparatorHandler_2 {
                 }
                 if (n2 == n3) break;
                 ++n2;
-}
+            }
+        }
         if (n < list.size()) {
             n3 = n;
             n2 = CollectionUtilities.LiteBansModule_31(list);
@@ -75,7 +76,8 @@ extends ComparatorHandler_2 {
                     list.remove(n2);
                     if (n2 == n3) break;
                     --n2;
-}
+                }
+            }
             return true;
         }
         return false;
@@ -83,5 +85,10 @@ extends ComparatorHandler_2 {
 
     private static final void i() {
         g = new String[]{"<this>", "<this>", "elements", "<this>", "elements", "<this>", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "predicate", "<this>", "predicate", "<this>", "<this>", "List is ", "<this>", "<this>", "List is ", "<this>", "<this>", "predicate", "<this>", "predicate", ""};
+    }
+
+    static {
+        ElementsHandler_6.i();
+    }
 }
 

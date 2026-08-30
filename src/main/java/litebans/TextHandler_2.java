@@ -11,7 +11,7 @@ public class TextHandler_2
 extends InsertionHandler
 implements JsonSerializer,
 JsonDeserializer {
-    public TextHandler_2(LiteBansModule_147 e22) {
+        public TextHandler_2(LiteBansModule_148 e22) {
         super(e22);
     }
 
@@ -22,13 +22,13 @@ JsonDeserializer {
         if (jsonElement2 != null) {
             w_02.c(jsonElement2.getAsString());
         }
-        this.plugin(jsonObject, (LiteBansModule_432)w_02, jsonDeserializationContext);
+        this.plugin(jsonObject, (LiteBansModule_434)w_02, jsonDeserializationContext);
         return w_02;
     }
 
     public JsonElement BaseCoreGenericHandler(HttpHandler w_02, Type type, JsonSerializationContext jsonSerializationContext) {
         JsonObject jsonObject = new JsonObject();
-        this.plugin(jsonObject, (LiteBansModule_432)w_02, jsonSerializationContext);
+        this.plugin(jsonObject, (LiteBansModule_434)w_02, jsonSerializationContext);
         jsonObject.addProperty("text", w_02.LiteBansModule_31());
         return jsonObject;
     }
@@ -43,5 +43,10 @@ JsonDeserializer {
 
     private static final void LiteBansModule_31() {
         c = new String[]{"text", "text"};
+    }
+
+    static {
+        TextHandler_2.LiteBansModule_31();
+    }
 }
 

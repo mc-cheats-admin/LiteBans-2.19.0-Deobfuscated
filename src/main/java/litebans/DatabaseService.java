@@ -19,13 +19,13 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class DatabaseService
-implements LiteBansModule_390,
+implements LiteBansModule_392,
 Closeable {
     protected PlatformPlugin AsyncBackgroundTask_5;
     private File LiteBansModule_31;
     private Throwable c;
     private String BaseCoreGenericHandler = "";
-    public DatabaseService(PlatformPlugin plugin) {
+        public DatabaseService(PlatformPlugin plugin) {
         this.AsyncBackgroundTask_5 = plugin;
     }
 
@@ -50,14 +50,14 @@ Closeable {
 
     public static String LiteBansModule_31(@NonNull String string, @Nullable String string2) {
         String string3;
-{
+        block9: {
             if (string == null) {
                 throw new NullPointerException("resource is marked non-null but is null");
             }
             InputStream inputStream = DatabaseService.BaseCoreGenericHandler(string, string2);
             try {
                 string3 = DatabaseService.LiteBansModule_31(inputStream);
-                if (inputStream == null) break;
+                if (inputStream == null) break block9;
             }
             catch (Throwable throwable) {
                 try {
@@ -67,13 +67,15 @@ Closeable {
                         }
                         catch (Throwable throwable2) {
                             throwable.addSuppressed(throwable2);
-}
+                        }
+                    }
                     throw throwable;
                 }
                 catch (IOException iOException) {
                     iOException.printStackTrace();
                     return "#Header 404" + System.lineSeparator();
-}
+                }
+            }
             inputStream.close();
         }
         return string3;
@@ -95,13 +97,14 @@ Closeable {
             }
             string2 = stringBuilder.toString();
             return string2;
-}
+        }
+    }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     public static void BaseCoreGenericHandler(@NotNull File file, @NotNull String string, @Nullable String string2, boolean flag) {
-{
+        block16: {
             try (InputStream inputStream = DatabaseService.BaseCoreGenericHandler(string, string2);){
                 if (inputStream == null) {
                     return;
@@ -112,13 +115,17 @@ Closeable {
                 if (!file3.exists() && !file3.mkdirs()) {
                     throw new IOException("mkdir failed: " + file3.getAbsolutePath());
                 }
-                if (file2.exists() && file2.length() != 0L && !flag) break;
+                if (file2.exists() && file2.length() != 0L && !flag) break block16;
                 try (FileOutputStream fileOutputStream = new FileOutputStream(file2);){
                     int n2;
                     byte[] byArray = new byte[8192];
                     while ((n2 = inputStream.read(byArray)) > 0) {
                         fileOutputStream.write(byArray, 0, n2);
-}
+                    }
+                }
+            }
+        }
+    }
 
     public static String LiteBansModule_31(String string) {
         String[] args;
@@ -145,7 +152,7 @@ Closeable {
     }
 
     @Override
-    public boolean LiteBansModule_194(String string) {
+    public boolean LiteBansModule_195(String string) {
         return this.LiteBansModule_31(string) != null;
     }
 
@@ -153,9 +160,9 @@ Closeable {
 
     public abstract DatabaseService BaseCoreGenericHandler(InputStream var1);
 
-    public abstract DatabaseService LiteBansModule_194();
+    public abstract DatabaseService LiteBansModule_195();
 
-    public abstract DatabaseService LiteBansModule_240();
+    public abstract DatabaseService LiteBansModule_241();
 
     public abstract DatabaseService BaseCoreGenericHandler(File var1);
 
@@ -179,7 +186,8 @@ Closeable {
         try (OutputStreamWriter outputStreamWriter = new OutputStreamWriter((OutputStream)new FileOutputStream(file), Charsets.UTF_8);){
             outputStreamWriter.write(this.e() + DatabaseService.LiteBansModule_31(string));
             outputStreamWriter.flush();
-}
+        }
+    }
 
     public File c() {
         return this.LiteBansModule_31;
@@ -203,5 +211,10 @@ Closeable {
 
     private static final void AsyncBackgroundTask_5() {
         e = new String[]{"", "resource is marked non-null but is null", "#Header 404", "", "#", "mkdir failed: ", "\\r?\\n", "#", ".yml generated LiteBansModule_61 version", "\\r?\\n", "#"};
+    }
+
+    static {
+        DatabaseService.AsyncBackgroundTask_5();
+    }
 }
 

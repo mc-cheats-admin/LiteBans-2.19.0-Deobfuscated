@@ -1,7 +1,7 @@
 package litebans;
 
 public final class UsageHandler {
-    private UsageHandler() {
+        private UsageHandler() {
     }
 
     public /* synthetic */ UsageHandler(LiteBansModule_14 aJ2) {
@@ -10,5 +10,10 @@ public final class UsageHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"_USAGE", "_USAGE", "_USAGE", "_USAGE", "_USAGE", "_USAGE"};
+    }
+
+    static {
+        UsageHandler.BaseCoreGenericHandler();
+    }
 }
 

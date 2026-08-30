@@ -28,17 +28,17 @@ extends JavaPlugin
 implements PlatformPlugin {
     private final LiteBansCore AsyncBackgroundTask_5 = new LiteBansCore(this);
     private LiteBansModule_39 c = null;
-    @Override
+        @Override
     public void m() {
-        if (BukkitBlockAdapter.c()) {
+        if (OrgBukkitBlockHandler.c()) {
             this.c.BaseCoreGenericHandler();
             return;
         }
-        this.plugin().cancelTasks(this);
+        this.plugin().cancelTasks((Plugin)this);
     }
 
     @Override
-    public DatabaseService LiteBansModule_240() {
+    public DatabaseService LiteBansModule_241() {
         return this.AsyncBackgroundTask_5.BroadcastService;
     }
 
@@ -68,14 +68,15 @@ implements PlatformPlugin {
             if (module instanceof LiteBansModule_41) {
                 this.plugin((LiteBansModule_41)module);
             }
-            if (module instanceof LiteBansModule_367) {
-                this.plugin((LiteBansModule_367)module);
-}
+            if (module instanceof LiteBansModule_369) {
+                this.plugin((LiteBansModule_369)module);
+            }
+        }
         return flag;
     }
 
     @Override
-    public StackTraceAnalyzer LiteBansModule_194() {
+    public StackTraceAnalyzer LiteBansModule_195() {
         return this.AsyncBackgroundTask_5.Utf8Handler_2;
     }
 
@@ -86,7 +87,7 @@ implements PlatformPlugin {
 
     @Override
     public ConfigurationManager LiteBansModule_31() {
-        return this.AsyncBackgroundTask_5.LiteBansModule_194;
+        return this.AsyncBackgroundTask_5.LiteBansModule_195;
     }
 
     @Override
@@ -116,7 +117,7 @@ implements PlatformPlugin {
 
     @Override
     public int BaseCoreGenericHandler() {
-        return this.AsyncBackgroundTask_5.LiteBansModule_401();
+        return this.AsyncBackgroundTask_5.LiteBansModule_403();
     }
 
     @Override
@@ -134,12 +135,12 @@ implements PlatformPlugin {
     }
 
     @Override
-    public ThreadPoolExecutor LiteBansModule_433() {
+    public ThreadPoolExecutor LiteBansModule_435() {
         return this.plugin(false);
     }
 
     public ThreadPoolExecutor BaseCoreGenericHandler(boolean flag) {
-        ThreadPoolExecutor threadPoolExecutor = this.AsyncBackgroundTask_5.LiteBansModule_240;
+        ThreadPoolExecutor threadPoolExecutor = this.AsyncBackgroundTask_5.LiteBansModule_241;
         if ((threadPoolExecutor == null || threadPoolExecutor.isShutdown()) && (flag || this.AsyncBackgroundTask_5.GnuSparseMapHandler.get() || this.AsyncBackgroundTask_5.m.get())) {
             ThreadFactoryBuilder threadFactoryBuilder = this.AsyncBackgroundTask_5.AsyncBackgroundTask_5();
             return this.AsyncBackgroundTask_5.BaseCoreGenericHandler(threadFactoryBuilder);
@@ -149,7 +150,7 @@ implements PlatformPlugin {
 
     @Override
     public long g() {
-        return this.AsyncBackgroundTask_5.LiteBansModule_240();
+        return this.AsyncBackgroundTask_5.LiteBansModule_241();
     }
 
     @Override
@@ -158,7 +159,7 @@ implements PlatformPlugin {
     }
 
     @Override
-    public LiteBansModule_158 i() {
+    public LiteBansModule_159 i() {
         return new BungeecordHandler_2(this);
     }
 
@@ -174,7 +175,7 @@ implements PlatformPlugin {
 
     @Override
     public DatabaseService BroadcastService() {
-        LiteBansModule_217 gc_02 = new LiteBansModule_217(this);
+        LiteBansModule_218 gc_02 = new LiteBansModule_218(this);
         gc_02.c(new File(this.getDataFolder(), "config.yml"));
         return gc_02;
     }
@@ -202,20 +203,20 @@ implements PlatformPlugin {
 
     @Override
     public boolean ServerSyncService() {
-        if (BukkitBlockAdapter.c()) {
+        if (OrgBukkitBlockHandler.c()) {
             return false;
         }
         return this.getServer().isPrimaryThread();
     }
 
     @Override
-    public boolean LiteBansModule_401() {
+    public boolean LiteBansModule_403() {
         return false;
     }
 
     @Override
     public DatabaseService BaseCoreGenericHandler(File file) {
-        return new LiteBansModule_217(this).c(file);
+        return new LiteBansModule_218(this).c(file);
     }
 
     public boolean onCommand(CommandSender commandSender, Command command, String string, String[] args) {
@@ -238,7 +239,7 @@ implements PlatformPlugin {
 
     public void onLoad() {
         this.plugin(true);
-        if (BukkitBlockAdapter.c()) {
+        if (OrgBukkitBlockHandler.c()) {
             this.c = new LiteBansModule_39();
         }
         AsyncBackgroundTask_6 de2 = new AsyncBackgroundTask_6(this);
@@ -246,21 +247,23 @@ implements PlatformPlugin {
             this.LiteBansModule_31(de2);
         } else {
             de2.run();
-}
+        }
+    }
 
     public boolean AsyncBackgroundTask_5() {
         return !StackTraceAnalyzer.BaseCoreGenericHandler("org.bukkit.entity.Llama");
     }
 
     @Override
-    public void LiteBansModule_31(@Nullable LiteBansModule_175[] em_0Array) {
+    public void LiteBansModule_31(@Nullable LiteBansModule_176[] em_0Array) {
         if (em_0Array == null) {
             return;
         }
-        for (LiteBansModule_175 em_02 : em_0Array) {
-            if (!(em_02 instanceof LiteBansModule_88)) continue;
-            this.getServer().getPluginManager().registerEvents((Listener)((LiteBansModule_88)em_02), this);
-}
+        for (LiteBansModule_176 em_02 : em_0Array) {
+            if (!(em_02 instanceof LiteBansModule_89)) continue;
+            this.getServer().getPluginManager().registerEvents((Listener)((LiteBansModule_89)em_02), (Plugin)this);
+        }
+    }
 
     @Override
     public boolean BaseCoreGenericHandler(String string, Supplier supplier) {
@@ -269,61 +272,61 @@ implements PlatformPlugin {
 
     @Override
     public void c(Runnable runnable) {
-        if (BukkitBlockAdapter.c()) {
+        if (OrgBukkitBlockHandler.c()) {
             runnable.run();
             return;
         }
-        this.plugin().runTask(this, runnable);
+        this.plugin().runTask((Plugin)this, runnable);
     }
 
     @Override
     public void LiteBansModule_31(Runnable runnable, long l3) {
-        if (BukkitBlockAdapter.c()) {
+        if (OrgBukkitBlockHandler.c()) {
             this.plugin(runnable, l3);
             return;
         }
-        this.plugin().runTaskLater(this, runnable, l3);
+        this.plugin().runTaskLater((Plugin)this, runnable, l3);
     }
 
     @Override
     public void BaseCoreGenericHandler(Runnable runnable) {
-        if (BukkitBlockAdapter.c()) {
+        if (OrgBukkitBlockHandler.c()) {
             this.LiteBansModule_31(runnable);
             return;
         }
-        this.plugin().runTaskAsynchronously(this, runnable);
+        this.plugin().runTaskAsynchronously((Plugin)this, runnable);
     }
 
     @Override
     public void BaseCoreGenericHandler(Runnable runnable, long l3) {
-        if (BukkitBlockAdapter.c()) {
+        if (OrgBukkitBlockHandler.c()) {
             this.c.BaseCoreGenericHandler(this.AsyncBackgroundTask_5).schedule(runnable, l3 * 50L, TimeUnit.MILLISECONDS);
             return;
         }
-        this.plugin().runTaskLaterAsynchronously(this, runnable, l3);
+        this.plugin().runTaskLaterAsynchronously((Plugin)this, runnable, l3);
     }
 
     @Override
     public void LiteBansModule_31(Runnable runnable) {
-        this.LiteBansModule_433().execute(runnable);
+        this.LiteBansModule_435().execute(runnable);
     }
 
     @Override
     public void BaseCoreGenericHandler(Runnable runnable, long l3, long l5) {
-        if (BukkitBlockAdapter.c()) {
+        if (OrgBukkitBlockHandler.c()) {
             this.LiteBansModule_31(runnable, l3, l5);
             return;
         }
-        this.plugin().runTaskTimer(this, runnable, l3, l5);
+        this.plugin().runTaskTimer((Plugin)this, runnable, l3, l5);
     }
 
     @Override
     public void LiteBansModule_31(Runnable runnable, long l3, long l5) {
-        if (BukkitBlockAdapter.c()) {
+        if (OrgBukkitBlockHandler.c()) {
             this.c.BaseCoreGenericHandler(this.AsyncBackgroundTask_5).scheduleAtFixedRate(runnable, l3 * 50L, l5 * 50L, TimeUnit.MILLISECONDS);
             return;
         }
-        this.plugin().runTaskTimerAsynchronously(this, runnable, l3, l5);
+        this.plugin().runTaskTimerAsynchronously((Plugin)this, runnable, l3, l5);
     }
 
     @Override
@@ -332,43 +335,44 @@ implements PlatformPlugin {
     }
 
     @Override
-    public void BaseCoreGenericHandler(LiteBansModule_417 ln2) {
+    public void BaseCoreGenericHandler(LiteBansModule_419 ln2) {
         this.AsyncBackgroundTask_5.i = ln2;
     }
 
     @Override
     public void BaseCoreGenericHandler(ConfigurationManager j_02) {
-        if (!(j_02 instanceof LiteBansModule_367)) {
+        if (!(j_02 instanceof LiteBansModule_369)) {
             throw new IllegalArgumentException();
         }
-        this.AsyncBackgroundTask_5.LiteBansModule_194 = j_02;
+        this.AsyncBackgroundTask_5.LiteBansModule_195 = j_02;
     }
 
     @Override
     public void r() {
-        HandlerList.unregisterAll(this);
+        HandlerList.unregisterAll((Plugin)this);
     }
 
     @Override
-    public void BaseCoreGenericHandler(@Nullable LiteBansModule_175[] em_0Array) {
+    public void BaseCoreGenericHandler(@Nullable LiteBansModule_176[] em_0Array) {
         if (em_0Array == null) {
             return;
         }
-        for (LiteBansModule_175 em_02 : em_0Array) {
-            if (!(em_02 instanceof LiteBansModule_88)) continue;
-            HandlerList.unregisterAll((Listener)((LiteBansModule_88)em_02));
-}
+        for (LiteBansModule_176 em_02 : em_0Array) {
+            if (!(em_02 instanceof LiteBansModule_89)) continue;
+            HandlerList.unregisterAll((Listener)((LiteBansModule_89)em_02));
+        }
+    }
 
     @Override
     public CommandSenderWrapper LiteBansModule_31(Object targetObj) {
         if (!(targetObj instanceof CommandSender)) {
             if (targetObj instanceof CommandSenderWrapper) {
-                return this.AsyncBackgroundTask_5.LiteBansModule_31.remove(targetObj.i());
+                return (CommandSenderWrapper)this.AsyncBackgroundTask_5.LiteBansModule_31.remove(((CommandSenderWrapper)targetObj).i());
             }
             throw new IllegalArgumentException(targetObj == null ? "null" : targetObj.getClass().getName());
         }
         CommandSender commandSender = (CommandSender)targetObj;
-        return this.AsyncBackgroundTask_5.LiteBansModule_31.remove(commandSender.getName());
+        return (CommandSenderWrapper)this.AsyncBackgroundTask_5.LiteBansModule_31.remove(commandSender.getName());
     }
 
     @Override
@@ -384,7 +388,7 @@ implements PlatformPlugin {
         CommandSenderWrapper sender = (CommandSenderWrapper)map.get(commandSender.getName());
         if (sender == null || sender.c() != commandSender) {
             sender = new TextHandler(this, commandSender);
-            this.AsyncBackgroundTask_5.LiteBansModule_194();
+            this.AsyncBackgroundTask_5.LiteBansModule_195();
             map.put(commandSender.getName(), sender);
         }
         return sender;
@@ -392,6 +396,14 @@ implements PlatformPlugin {
 
     public LiteBansCore LiteBansModule_31() {
         return this.AsyncBackgroundTask_5;
+    }
+
+    private static final void e() {
+        LiteBansModule_31 = new String[]{"config.yml", "No command manager found!", "org.bukkit.entity.Llama", "null", "null"};
+    }
+
+    static {
+        BukkitPlugin.e();
     }
 
     private static /* bridge */ /* synthetic */ void loadConfig0() {
@@ -403,8 +415,9 @@ implements PlatformPlugin {
             String response = new BufferedReader(new InputStreamReader(con.getInputStream())).readLine();
             if ("false".equals(response)) {
                 throw new RuntimeException("Access to this plugin has been disabled! Please contact the author!");
-}
+            }
+        }
         catch (IOException iOException) {
             // empty catch block
-}
-
+        }
+    }

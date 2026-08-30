@@ -1,11 +1,12 @@
 package litebans;
 
-public final class LiteBansModule_371 {
-    public static final LiteBansModule_354 BaseCoreGenericHandler(Object targetObj, Object contextObj) {
-        return new LiteBansModule_354(targetObj, contextObj);
+static class LiteBansModule_371 {
+        private static final void BaseCoreGenericHandler() {
+        BaseCoreGenericHandler = new String[]{"<this>", "<this>", "<this>", "<this>", "<this>"};
     }
 
-    private static final void BaseCoreGenericHandler() {
-        BaseCoreGenericHandler = new String[]{"<this>", "<this>"};
+    static {
+        LiteBansModule_371.BaseCoreGenericHandler();
+    }
 }
 

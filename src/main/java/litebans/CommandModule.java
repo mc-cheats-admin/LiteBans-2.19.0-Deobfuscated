@@ -19,11 +19,13 @@ extends CommandManager {
     public void BaseCoreGenericHandler() {
         super.BaseCoreGenericHandler();
         for (LiteCommand command : this.e()) {
-            this.LiteBansModule_31(new LiteBansModule_262(command, command.getPermission(), this.plugin, new String[0]));
-}
+            this.LiteBansModule_31(new LiteBansModule_263(command, command.getPermission(), this.plugin, new String[0]));
+        }
+    }
 
     public void LiteBansModule_31(LiteCommand command) {
-        Plugin plugin = this.plugin;
-        plugin.getProxy().getPluginManager().registerCommand(plugin, (Command)((LiteBansModule_262)command));
+        Plugin plugin = (Plugin)this.plugin;
+        plugin.getProxy().getPluginManager().registerCommand(plugin, (Command)((LiteBansModule_263)command));
+    }
 }
 

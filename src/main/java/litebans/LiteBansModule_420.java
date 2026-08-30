@@ -1,9 +1,11 @@
 package litebans;
 
-import org.jetbrains.annotations.NotNull;
-
-public final class LiteBansModule_420 {
-    public static final LiteBansModule_161 BaseCoreGenericHandler(@NotNull LiteBansModule_146 messageSupplier) {
-        return ProxyConnection.BaseCoreGenericHandler(SynchronizedHandler.BaseCoreGenericHandler, messageSupplier);
+import java.sql.CallableStatement;
+public abstract class LiteBansModule_420
+extends LiteBansModule_426
+implements CallableStatement {
+    protected LiteBansModule_420(LiteBansModule_66 c22, CallableStatement callableStatement) {
+        super(c22, callableStatement);
+    }
 }
 

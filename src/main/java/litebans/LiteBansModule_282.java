@@ -1,28 +1,18 @@
 package litebans;
 
-public final class LiteBansModule_282 {
-    public static final /* synthetic */ int[] BaseCoreGenericHandler;
+import org.yaml.snakeyaml.nodes.Node;
+import org.yaml.snakeyaml.representer.Represent;
 
-    static {
-        int[] nArray = new int[BanHandler.values().length];
-        try {
-            nArray[BanHandler.LiteBansModule_240.ordinal()] = 1;
-        }
-        catch (NoSuchFieldError noSuchFieldError) {
-            // empty catch block
-        }
-        try {
-            nArray[BanHandler.GnuSparseMapHandler.ordinal()] = 2;
-        }
-        catch (NoSuchFieldError noSuchFieldError) {
-            // empty catch block
-        }
-        try {
-            nArray[BanHandler.c.ordinal()] = 3;
-        }
-        catch (NoSuchFieldError noSuchFieldError) {
-            // empty catch block
-        }
-        BaseCoreGenericHandler = nArray;
+static class LiteBansModule_282
+implements Represent {
+    final /* synthetic */ LiteBansModule_143 BaseCoreGenericHandler;
+
+    LiteBansModule_282(LiteBansModule_143 dw_02) {
+        this.plugin = dw_02;
+    }
+
+    public Node representData(Object targetObj) {
+        return this.plugin.represent(((NullHandler_4)targetObj).AsyncBackgroundTask_5);
+    }
 }
 

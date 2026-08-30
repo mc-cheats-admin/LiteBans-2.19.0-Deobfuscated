@@ -1,17 +1,22 @@
 package litebans;
 
-public interface LiteBansModule_219 {
-    public static final long LiteBansModule_31;
-    public static final long e;
-    public static final long BaseCoreGenericHandler;
-    public static final long c;
-    public static final long AsyncBackgroundTask_5;
+import java.util.Comparator;
+public final class LiteBansModule_219
+implements Comparator {
+    final /* synthetic */ SilentHandler BaseCoreGenericHandler;
 
-    static {
-        AsyncBackgroundTask_5 = 32L;
-        c = 16L;
-        BaseCoreGenericHandler = 8L;
-        e = 4L;
-        LiteBansModule_31 = 2L;
+    public LiteBansModule_219(SilentHandler dZ2) {
+        this.plugin = dZ2;
+    }
+
+    public final int compare(Object targetObj, Object contextObj) {
+        LiteBansModule_110 cy2 = (LiteBansModule_110)targetObj;
+        LiteBansModule_23 au2 = cy2.g();
+        cy2 = (LiteBansModule_110)contextObj;
+        Comparable comparable = Long.valueOf(au2.BaseCoreGenericHandler(this.plugin));
+        flag = false;
+        au2 = cy2.g();
+        return LiteBansModule_262.BaseCoreGenericHandler(comparable, Long.valueOf(au2.BaseCoreGenericHandler(this.plugin)));
+    }
 }
 

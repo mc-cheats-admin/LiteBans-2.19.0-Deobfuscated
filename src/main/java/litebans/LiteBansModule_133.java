@@ -1,7 +1,6 @@
 package litebans;
 
-public interface LiteBansModule_133
-extends LiteBansModule_391 {
-    public String BaseCoreGenericHandler();
+public final class LiteBansModule_133
+extends AssertionError {
 }
 

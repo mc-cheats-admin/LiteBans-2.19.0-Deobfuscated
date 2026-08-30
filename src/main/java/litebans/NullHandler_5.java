@@ -7,12 +7,13 @@ import java.util.Map;
 public class NullHandler_5 {
     public static final Object BaseCoreGenericHandler(Reader reader) {
         try {
-            LiteBansModule_314 ip_02 = new LiteBansModule_314();
+            LiteBansModule_315 ip_02 = new LiteBansModule_315();
             return ip_02.LiteBansModule_31(reader);
         }
         catch (Exception exception) {
             return null;
-}
+        }
+    }
 
     public static final Object BaseCoreGenericHandler(String string) {
         StringReader stringReader = new StringReader(string);
@@ -24,16 +25,16 @@ public class NullHandler_5 {
             return "null";
         }
         if (targetObj instanceof String) {
-            return "\"" + NullHandler_5.LiteBansModule_31targetObj + "\"";
+            return "\"" + NullHandler_5.LiteBansModule_31((String)targetObj) + "\"";
         }
         if (targetObj instanceof Double) {
-            if (targetObj.isInfinite() || targetObj.isNaN()) {
+            if (((Double)targetObj).isInfinite() || ((Double)targetObj).isNaN()) {
                 return "null";
             }
             return targetObj.toString();
         }
         if (targetObj instanceof Float) {
-            if (targetObj.isInfinite() || targetObj.isNaN()) {
+            if (((Float)targetObj).isInfinite() || ((Float)targetObj).isNaN()) {
                 return "null";
             }
             return targetObj.toString();
@@ -45,13 +46,13 @@ public class NullHandler_5 {
             return targetObj.toString();
         }
         if (targetObj instanceof LiteBansModule_44) {
-            return targetObj.BaseCoreGenericHandler();
+            return ((LiteBansModule_44)targetObj).BaseCoreGenericHandler();
         }
         if (targetObj instanceof Map) {
-            return NullHandler_3.BaseCoreGenericHandlertargetObj;
+            return NullHandler_3.BaseCoreGenericHandler((Map)targetObj);
         }
         if (targetObj instanceof List) {
-            return NullHandler_7.BaseCoreGenericHandlertargetObj;
+            return NullHandler_7.BaseCoreGenericHandler((List)targetObj);
         }
         return targetObj.toString();
     }
@@ -66,40 +67,40 @@ public class NullHandler_5 {
     }
 
     static final void BaseCoreGenericHandler(String string, StringBuffer stringBuffer) {
-for (int i = 0; i < string.length(); ++i) {
+        block10: for (int i = 0; i < string.length(); ++i) {
             char c = string.charAt(i);
             switch (c) {
                 case '\"': {
                     stringBuffer.append("\\\"");
-                    continue;
+                    continue block10;
                 }
                 case '\\': {
                     stringBuffer.append("\\\\");
-                    continue;
+                    continue block10;
                 }
                 case '\LiteBansModule_31': {
                     stringBuffer.append("\\LiteBansModule_31");
-                    continue;
+                    continue block10;
                 }
-                case '\LiteBansModule_194': {
-                    stringBuffer.append("\\LiteBansModule_194");
-                    continue;
+                case '\LiteBansModule_195': {
+                    stringBuffer.append("\\LiteBansModule_195");
+                    continue block10;
                 }
                 case '\n': {
                     stringBuffer.append("\\n");
-                    continue;
+                    continue block10;
                 }
                 case '\r': {
                     stringBuffer.append("\\r");
-                    continue;
+                    continue block10;
                 }
                 case '\AsyncBackgroundTask_22': {
                     stringBuffer.append("\\AsyncBackgroundTask_22");
-                    continue;
+                    continue block10;
                 }
                 case '/': {
                     stringBuffer.append("\\/");
-                    continue;
+                    continue block10;
                 }
                 default: {
                     if (c >= '\u0000' && c <= '\u001f' || c >= '\u007f' && c <= '\u009f' || c >= '\u2000' && c <= '\u20ff') {
@@ -109,8 +110,8 @@ for (int i = 0; i < string.length(); ++i) {
                             stringBuffer.append('0');
                         }
                         stringBuffer.append(string2.toUpperCase());
-                        continue;
+                        continue block10;
                     }
                     stringBuffer.append(c);
-}
-
+                }
+            }

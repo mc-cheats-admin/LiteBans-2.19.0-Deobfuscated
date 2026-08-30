@@ -20,10 +20,10 @@ import org.jetbrains.annotations.NotNull;
 
 @ModulePriority(priority=0)
 public final class BungeecordHandler_2
-implements LiteBansModule_158 {
+implements LiteBansModule_159 {
     private final PlatformPlugin c;
-    private final LiteBansModule_161 LiteBansModule_31;
-    public BungeecordHandler_2(@NotNull PlatformPlugin plugin) {
+    private final LiteBansModule_162 LiteBansModule_31;
+        public BungeecordHandler_2(@NotNull PlatformPlugin plugin) {
         this.c = plugin;
         this.LiteBansModule_31 = ProxyConnection.BaseCoreGenericHandler(() -> BungeecordHandler_2.BaseCoreGenericHandler(this));
     }
@@ -34,7 +34,7 @@ implements LiteBansModule_158 {
     }
 
     public final DefaultHandler LiteBansModule_31() {
-        LiteBansModule_161 eE2 = this.LiteBansModule_31;
+        LiteBansModule_162 eE2 = this.LiteBansModule_31;
         return (DefaultHandler)eE2.BaseCoreGenericHandler();
     }
 
@@ -63,12 +63,12 @@ implements LiteBansModule_158 {
     }
 
     public final byte[] BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String string) {
-        LiteBansModule_120 de_02 = LiteBansModule_183.BaseCoreGenericHandler(LiteBansModule_120.c, this.LiteBansModule_31(), null, 2, null);
+        LiteBansModule_121 de_02 = LiteBansModule_184.BaseCoreGenericHandler(LiteBansModule_121.c, this.LiteBansModule_31(), null, 2, null);
         ByteArrayDataOutput byteArrayDataOutput = ByteStreams.newDataOutput();
         byteArrayDataOutput.writeUTF("KickPlayerRaw");
         byteArrayDataOutput.writeUTF(sender.i());
         V116Handler g82 = de_02.BaseCoreGenericHandler(1, 21, 5) ? V116Handler.BaseCoreGenericHandler : V116Handler.c;
-        byteArrayDataOutput.writeUTF(LiteBansModule_164.BaseCoreGenericHandler(string, g82));
+        byteArrayDataOutput.writeUTF(LiteBansModule_165.BaseCoreGenericHandler(string, g82));
         byte[] byArray = byteArrayDataOutput.toByteArray();
         ObjectUtilities.BaseCoreGenericHandler(byArray);
         return byArray;
@@ -81,8 +81,8 @@ implements LiteBansModule_158 {
 
     public final String LiteBansModule_31(@NotNull Object targetObj) {
         ObjectUtilities.LiteBansModule_31(targetObj, "");
-        String string = targetObj.getName();
-        ObjectUtilities.BaseCoreGenericHandler(string);
+        String string = ((OfflinePlayer)targetObj).getName();
+        ObjectUtilities.BaseCoreGenericHandler((Object)string);
         return string;
     }
 
@@ -147,30 +147,30 @@ implements LiteBansModule_158 {
         String string;
         Object contextObj = targetObj;
         if (contextObj instanceof AsyncPlayerChatEvent) {
-            string = targetObj.getMessage();
+            string = ((AsyncPlayerChatEvent)targetObj).getMessage();
         } else if (contextObj instanceof PlayerCommandPreprocessEvent) {
-            string = targetObj.getMessage();
+            string = ((PlayerCommandPreprocessEvent)targetObj).getMessage();
         } else {
             this.plugin(targetObj);
             throw new CommandExitException();
         }
         String string2 = string;
-        ObjectUtilities.BaseCoreGenericHandler(string2);
+        ObjectUtilities.BaseCoreGenericHandler((Object)string2);
         return string2;
     }
 
     @Override
-    public LiteBansModule_95 BaseCoreGenericHandler(@NotNull Object targetObj, boolean flag) {
+    public LiteBansModule_96 BaseCoreGenericHandler(@NotNull Object targetObj, boolean flag) {
         String string;
         UUID uUID;
         if (targetObj instanceof AsyncPlayerPreLoginEvent) {
-            String string2 = targetObj.getName();
-            UUID uUID2 = targetObj.getUniqueId();
+            String string2 = ((AsyncPlayerPreLoginEvent)targetObj).getName();
+            UUID uUID2 = ((AsyncPlayerPreLoginEvent)targetObj).getUniqueId();
             if (uUID2 == null) {
                 throw new NullPointerException(targetObj.getClass().getSimpleName() + ".getUniqueId() == null (" + string2 + ')');
             }
             uUID = uUID2;
-            InetAddress inetAddress = targetObj.getAddress();
+            InetAddress inetAddress = ((AsyncPlayerPreLoginEvent)targetObj).getAddress();
             if (inetAddress == null) {
                 if (!flag) {
                     this.c().getLogger().warning(targetObj.getClass().getSimpleName() + ".getAddress() == null (" + string2 + ')');
@@ -178,12 +178,13 @@ implements LiteBansModule_158 {
                 string = null;
             } else {
                 string = inetAddress.getHostAddress();
-} else {
+            }
+        } else {
             this.plugin(targetObj);
             throw new CommandExitException();
         }
         String string3 = string;
-        return new LiteBansModule_95(targetObj.getName(), uUID.toString(), string3);
+        return new LiteBansModule_96(((AsyncPlayerPreLoginEvent)targetObj).getName(), uUID.toString(), string3);
     }
 
     public Void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence) {
@@ -198,16 +199,16 @@ implements LiteBansModule_158 {
     @Override
     public void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence, @NotNull String string, boolean flag, @NotNull String string2) {
         if (targetObj instanceof AsyncPlayerPreLoginEvent) {
-            targetObj.disallow(AsyncPlayerPreLoginEvent.Result.valueOf((String)string2), (charSequence).toString());
+            ((AsyncPlayerPreLoginEvent)targetObj).disallow(AsyncPlayerPreLoginEvent.Result.valueOf((String)string2), ((Object)charSequence).toString());
             return;
         }
         if (targetObj instanceof PlayerLoginEvent) {
-            targetObj.disallow(PlayerLoginEvent.Result.valueOf((String)string2), (charSequence).toString());
+            ((PlayerLoginEvent)targetObj).disallow(PlayerLoginEvent.Result.valueOf((String)string2), ((Object)charSequence).toString());
             return;
         }
         if (targetObj instanceof Cancellable) {
             if (flag) {
-                targetObj.setCancelled(true);
+                ((Cancellable)targetObj).setCancelled(true);
             }
             if (targetObj instanceof AsyncPlayerChatEvent) {
                 BungeecordHandler_2 ao_02 = this;
@@ -217,13 +218,15 @@ implements LiteBansModule_158 {
                 }
                 catch (UnsupportedOperationException unsupportedOperationException) {
                 }
-                targetObj.setMessage(string + targetObj.getMessage());
+                ((AsyncPlayerChatEvent)targetObj).setMessage(string + ((AsyncPlayerChatEvent)targetObj).getMessage());
             } else if (targetObj instanceof PlayerCommandPreprocessEvent) {
-                targetObj.setMessage('/' + string + targetObj.getMessage());
-} else {
+                ((PlayerCommandPreprocessEvent)targetObj).setMessage('/' + string + ((PlayerCommandPreprocessEvent)targetObj).getMessage());
+            }
+        } else {
             this.plugin(targetObj);
             throw new CommandExitException();
-}
+        }
+    }
 
     private final Void BaseCoreGenericHandler(Object targetObj) {
         throw new MessageHandler_2(targetObj.getClass().getName());
@@ -245,7 +248,8 @@ implements LiteBansModule_158 {
             byteArrayDataOutput.writeUTF(sender.i());
             byteArrayDataOutput.writeUTF(string);
             sender.BaseCoreGenericHandler("BungeeCord", byteArrayDataOutput.toByteArray());
-}
+        }
+    }
 
     @Override
     public void BaseCoreGenericHandler(Object targetObj, CharSequence charSequence) {
@@ -254,5 +258,10 @@ implements LiteBansModule_158 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"", "BungeeCord", "BungeeCord", "BungeeCord", "Kicking ", " from ", "KickPlayerRaw", "", ".getUniqueId() == null (", ".getAddress() == null (", "KickPlayer", "BungeeCord"};
+    }
+
+    static {
+        BungeecordHandler_2.BaseCoreGenericHandler();
+    }
 }
 

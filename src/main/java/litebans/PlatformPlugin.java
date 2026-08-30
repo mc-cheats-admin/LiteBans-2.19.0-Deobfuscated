@@ -6,12 +6,12 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.function.Supplier;
 import java.util.logging.Logger;
 public interface PlatformPlugin
-extends LiteBansModule_360 {
+extends LiteBansModule_362 {
     public static final PluginModule[] BaseCoreGenericHandler = new PluginModule[0];
 
     public void m();
 
-    public DatabaseService LiteBansModule_240();
+    public DatabaseService LiteBansModule_241();
 
     public PluginModule[] Utf8Handler_2();
 
@@ -19,7 +19,7 @@ extends LiteBansModule_360 {
 
     public boolean BaseCoreGenericHandler(PluginModule var1);
 
-    public StackTraceAnalyzer LiteBansModule_194();
+    public StackTraceAnalyzer LiteBansModule_195();
 
     public CommandManager z();
 
@@ -49,13 +49,13 @@ extends LiteBansModule_360 {
 
     public Map DatabaseMonitorService();
 
-    public ThreadPoolExecutor LiteBansModule_433();
+    public ThreadPoolExecutor LiteBansModule_435();
 
     public long g();
 
     public byte AsyncBackgroundTask_22();
 
-    public LiteBansModule_158 i();
+    public LiteBansModule_159 i();
 
     public String e();
 
@@ -71,11 +71,11 @@ extends LiteBansModule_360 {
 
     public boolean ServerSyncService();
 
-    public boolean LiteBansModule_401();
+    public boolean LiteBansModule_403();
 
     public DatabaseService BaseCoreGenericHandler(File var1);
 
-    public void LiteBansModule_31(LiteBansModule_175[] var1);
+    public void LiteBansModule_31(LiteBansModule_176[] var1);
 
     public boolean BaseCoreGenericHandler(String var1, Supplier var2);
 
@@ -95,13 +95,13 @@ extends LiteBansModule_360 {
 
     public void BaseCoreGenericHandler(String var1);
 
-    public void BaseCoreGenericHandler(LiteBansModule_417 var1);
+    public void BaseCoreGenericHandler(LiteBansModule_419 var1);
 
     public void BaseCoreGenericHandler(ConfigurationManager var1);
 
     public void r();
 
-    public void BaseCoreGenericHandler(LiteBansModule_175[] var1);
+    public void BaseCoreGenericHandler(LiteBansModule_176[] var1);
 
     public CommandSenderWrapper LiteBansModule_31(Object var1);
 

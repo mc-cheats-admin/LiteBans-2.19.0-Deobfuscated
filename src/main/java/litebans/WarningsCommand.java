@@ -10,8 +10,8 @@ import org.jetbrains.annotations.Nullable;
 
 public final class WarningsCommand
 extends AbstractCommand
-implements LiteBansModule_359 {
-    public WarningsCommand(@NotNull PlatformPlugin plugin) {
+implements LiteBansModule_361 {
+        public WarningsCommand(@NotNull PlatformPlugin plugin) {
         super("warnings", plugin);
     }
 
@@ -30,7 +30,7 @@ implements LiteBansModule_359 {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
-{
+        block15: {
             boolean flag;
             boolean flag2;
             boolean flag3;
@@ -44,7 +44,7 @@ implements LiteBansModule_359 {
             if (StringUtilities.BaseCoreGenericHandler(string = CommandArgumentUtils.BaseCoreGenericHandler(messageHandler, string3), sender.i(), true) || StringUtilities.BaseCoreGenericHandler(string, string2, true)) {
                 resultObj = this;
                 String string4 = "litebans.warnings.self";
-                CommandSenderWrapper senderWrapper = this.AsyncBackgroundTask_5();
+                CommandSenderWrapper senderWrapper = ((MessageHandler)resultObj).AsyncBackgroundTask_5();
                 ChatFormatter chatFormatter = MessageHandler.BaseCoreGenericHandler;
                 CommandSenderWrapper senderWrapper = senderWrapper;
                 CommandSenderWrapper senderWrapper = senderWrapper;
@@ -69,10 +69,11 @@ implements LiteBansModule_359 {
                     flag2 = false;
                     ((ChatFormatter)contextObj).BaseCoreGenericHandler(charSequence);
                     throw new CommandExitException();
-} else {
+                }
+            } else {
                 resultObj = this;
                 String string5 = "litebans.warnings";
-                CommandSenderWrapper senderWrapper = this.AsyncBackgroundTask_5();
+                CommandSenderWrapper senderWrapper = ((MessageHandler)resultObj).AsyncBackgroundTask_5();
                 ChatFormatter fo_04 = MessageHandler.BaseCoreGenericHandler;
                 CommandSenderWrapper senderWrapper = senderWrapper;
                 CommandSenderWrapper senderWrapper = senderWrapper;
@@ -85,34 +86,35 @@ implements LiteBansModule_359 {
                     ChatFormatter fo_05 = targetObj;
                     fo_05.BaseCoreGenericHandler(contextObj);
                     throw new CommandExitException();
-}
+                }
+            }
             resultObj = CommandArgumentUtils.BaseCoreGenericHandler(this, sender, args, null, 4, null);
-            int n = this.plugin(this.LiteBansModule_240(), args, CollectionUtilities.e(), 512);
-                        tempObj = (DatabaseMonitorService)((MessageHandler)tempObj).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+            int n = this.plugin(this.LiteBansModule_241(), args, CollectionUtilities.e(), 512);
+                        tempObj = (DatabaseMonitorService)((MessageHandler)tempObj).LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class);
             bl17 = false;
             try {
-                LiteBansModule_82 ch2 = ((DatabaseMonitorService)tempObj).LiteBansModule_194();
+                LiteBansModule_83 ch2 = ((DatabaseMonitorService)tempObj).LiteBansModule_195();
                 Closeable closeable = ch2;
                 Throwable throwable = null;
                 try {
-                    contextObj = (LiteBansModule_82)closeable;
+                    contextObj = (LiteBansModule_83)closeable;
                     flag2 = false;
                     targetObj = ch2;
                     flag = false;
-                    LiteBansModule_297 iA2 = CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_82)targetObj, string, false, 2, null);
+                    LiteBansModule_298 iA2 = CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_83)targetObj, string, false, 2, null);
                     List list = CollectionUtilities.e(targetObj.BaseCoreGenericHandler(iA2, BanHandler.c, (String)resultObj, true, n));
-                    CommandArgumentUtils.BaseCoreGenericHandler(this, GeoIPLookupService.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)targetObj, this.plugin(), iA2, false, 2, null), (CharSequence)"limit", n));
+                    CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, (CharSequence)GeoIPLookupService.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)targetObj, this.plugin(), iA2, false, 2, null), (CharSequence)"limit", n));
                     Iterable iterable = list;
                     for (Object t2 : iterable) {
                         MessageKey am2;
                         SilentHandler dZ2 = (SilentHandler)t2;
                         CharSequence charSequence = MessageKey.BaseCoreGenericHandler(dZ2.ServerSyncService());
-                        MessageKey am3 = am2 = dZ2.HoverTextFormatter() ? MessageKey.LiteBansModule_89 : MessageKey.MessageKey;
+                        MessageKey am3 = am2 = dZ2.HoverTextFormatter() ? MessageKey.LiteBansModule_90 : MessageKey.MessageKey;
                         if (targetObj.BaseCoreGenericHandler(dZ2)) {
                             CharSequence charSequence2 = charSequence;
-                            charSequence = "" + charSequence2 + am2;
+                            charSequence = "" + charSequence2 + (CharSequence)am2;
                         }
-                        CommandArgumentUtils.BaseCoreGenericHandler(this, AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)targetObj, charSequence, dZ2, iA2, false, 4, null));
+                        CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)targetObj, charSequence, dZ2, iA2, false, 4, null));
                     }
                     contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
@@ -122,11 +124,14 @@ implements LiteBansModule_359 {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-}
+                }
+            }
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)tempObj).LiteBansModule_31(sQLException)) break;
+                if (((DatabaseMonitorService)tempObj).LiteBansModule_31(sQLException)) break block15;
                 throw sQLException;
-}
+            }
+        }
+    }
 
     @Override
     public CharSequence BaseCoreGenericHandler() {
@@ -139,16 +144,21 @@ implements LiteBansModule_359 {
     }
 
     @Override
-    public void BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull Collection collection, @Nullable LiteBansModule_297 iA2, @Nullable String[] args, @NotNull AbstractCommand abstractCommand, int n) {
-        LimitHandler.BaseCoreGenericHandler(this, ch2, collection, iA2, args, abstractCommand, n);
+    public void BaseCoreGenericHandler(@NotNull LiteBansModule_83 ch2, @NotNull Collection collection, @Nullable LiteBansModule_298 iA2, @Nullable String[] args, @NotNull AbstractCommand abstractCommand, int n) {
+        LimitHandler.BaseCoreGenericHandler((LiteBansModule_361)this, ch2, collection, iA2, args, abstractCommand, n);
     }
 
     @Override
-    public LiteBansModule_297 BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull HashMap hashMap, @Nullable String string) {
+    public LiteBansModule_298 BaseCoreGenericHandler(@NotNull LiteBansModule_83 ch2, @NotNull HashMap hashMap, @Nullable String string) {
         return LimitHandler.BaseCoreGenericHandler(this, ch2, hashMap, string);
     }
 
     private static final void BaseCoreGenericHandler() {
         i = new String[]{"warnings", "litebans.warnings.self", "litebans.warnings.self", "litebans.warnings", "limit"};
+    }
+
+    static {
+        WarningsCommand.BaseCoreGenericHandler();
+    }
 }
 

@@ -1,34 +1,15 @@
 package litebans;
 
-import java.util.Collection;
-import java.util.List;
-public interface LiteBansModule_311 {
-    public boolean c(String var1);
+public class LiteBansModule_311
+extends LiteBansModule_301 {
+    private static final long LiteBansModule_31 = 1L;
 
-    public Object LiteBansModule_31(String var1);
+    public LiteBansModule_311() {
+        super("this file uses HikariDataSource unsupported compression ");
+    }
 
-    public Object BaseCoreGenericHandler(String var1, Object var2);
-
-    public boolean BaseCoreGenericHandler(String var1);
-
-    public boolean BaseCoreGenericHandler(String var1, boolean var2);
-
-    public double AsyncBackgroundTask_5(String var1);
-
-    public int BaseCoreGenericHandler(String var1, int var2);
-
-    public Collection BaseCoreGenericHandler(boolean var1);
-
-    public long BaseCoreGenericHandler(String var1, long var2);
-
-    public String e(String var1);
-
-    public String BaseCoreGenericHandler(String var1, String var2);
-
-    public List g(String var1);
-
-    public boolean LiteBansModule_194(String var1);
-
-    public DatabaseService LiteBansModule_31(String var1, Object var2);
+    public LiteBansModule_311(String string) {
+        super("this file uses HikariDataSource unsupported compression algorithm: " + string + ".");
+    }
 }
 

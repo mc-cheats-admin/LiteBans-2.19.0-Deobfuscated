@@ -1,11 +1,8 @@
 package litebans;
 
-public class LiteBansModule_253 {
-    public static Object BaseCoreGenericHandler(ConfigService configService) {
-        return configService.n;
-    }
+public interface LiteBansModule_253 {
+    public Object BaseCoreGenericHandler(CharSequence var1);
 
-    public static void BaseCoreGenericHandler(ConfigService configService, Object targetObj) {
-        configService.BaseCoreGenericHandlertargetObj;
+    public Object LiteBansModule_31(CharSequence var1);
 }
 

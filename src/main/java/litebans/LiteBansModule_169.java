@@ -1,12 +1,29 @@
 package litebans;
 
-static final class LiteBansModule_169
-extends StrictForKnowHandler {
-    LiteBansModule_169(LiteBansModule_400 kz_02) {
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+public final class LiteBansModule_169 {
+    private final String LiteBansModule_31;
+    private final NullHandler_3 c;
+    private final LiteBansModule_290[] BaseCoreGenericHandler;
+
+    public LiteBansModule_169(@NotNull String string, @Nullable NullHandler_3 gr_02, @NotNull LiteBansModule_290[] i4Array) {
+        this.LiteBansModule_31 = string;
+        this.c = gr_02;
+        this.plugin = i4Array;
     }
 
-    @Override
-    public LiteBansModule_177 BaseCoreGenericHandler(LiteBansModule_177 en_02, byte[] byArray, int n, int n2, boolean flag) {
-        return StrictForKnowHandler.LiteBansModule_31(en_02, byArray, n, n2, flag);
+    public final String c() {
+        return this.LiteBansModule_31;
+    }
+
+    public final NullHandler_3 LiteBansModule_31() {
+        return this.c;
+    }
+
+    public final LiteBansModule_290[] BaseCoreGenericHandler() {
+        return this.plugin;
+    }
 }
 

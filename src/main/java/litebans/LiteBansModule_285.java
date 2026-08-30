@@ -1,193 +1,67 @@
 package litebans;
 
-import com.velocitypowered.api.command.CommandSource;
-import com.velocitypowered.api.proxy.Player;
-import com.velocitypowered.api.proxy.ServerConnection;
-import com.velocitypowered.api.proxy.messages.ChannelIdentifier;
-import com.velocitypowered.api.proxy.messages.LegacyChannelIdentifier;
-import java.lang.ref.WeakReference;
-import java.net.InetAddress;
-import java.net.InetSocketAddress;
-import java.util.Optional;
-import java.util.UUID;
-import lombok.NonNull;
-import net.kyori.adventure.text.Component;
-import org.jetbrains.annotations.Nullable;
+static class LiteBansModule_285 {
+    private TapeHandler AsyncBackgroundTask_5;
+    private int LiteBansModule_31;
+    private int c;
+    private int BaseCoreGenericHandler;
+    private int e;
+    private final byte[] LiteBansModule_195 = new byte[512];
 
-@ModulePriority(priority=2)
-public class LiteBansModule_285
-implements CommandSenderWrapper {
-    private final VelocityPlugin LiteBansModule_194;
-    private final WeakReference e;
-    private final String c;
-    private final boolean AsyncBackgroundTask_5;
-    private UUID GnuSparseMapHandler = LiteBansModule_31;
-    private String i = null;
-    private String g;
-    public LiteBansModule_285(VelocityPlugin velocityPlugin, CommandSource commandSource) {
-        this.LiteBansModule_194 = velocityPlugin;
-        this.e = new WeakReference<CommandSource>(commandSource);
-        this.AsyncBackgroundTask_5 = commandSource instanceof Player;
-        this.c = this.AsyncBackgroundTask_5 ? ((Player)commandSource).getUsername() : "[Console]";
+    LiteBansModule_285() {
     }
 
-    public boolean equals(Object targetObj) {
-        return this == targetObj || targetObj instanceof LiteBansModule_285 && targetObj.AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
-    }
-
-    @Override
-    public void c(String string) {
-        CommandSource commandSource = this.e.get();
-        if (commandSource == null || string.isEmpty()) {
-            return;
-        }
-        this.LiteBansModule_194.c.getCommandManager().executeAsync(commandSource, string);
-    }
-
-    @Override
-    public String g() {
-        return this.i();
-    }
-
-    @Override
-    public Object c() {
-        return this.e.get();
-    }
-
-    @Override
-    public @Nullable String LiteBansModule_31() {
-        CommandSource commandSource;
-        String string = this.g;
-        if (string == null && (commandSource = this.e.get()) != null) {
-            this.g = string = this.plugin(commandSource);
-        }
-        return string;
-    }
-
-    @Override
-    public String i() {
-        return this.c;
-    }
-
-    @Override
-    public @Nullable String LiteBansModule_240() {
-        CommandSource commandSource = this.e.get();
-        if (commandSource == null) {
-            return null;
-        }
-        if (this.e()) {
-            Player player = (Player)commandSource;
-            Optional optional = player.getCurrentServer();
-            if (!optional.isPresent()) {
-                return null;
-            }
-            return ((ServerConnection)optional.get()).getServerInfo().getName();
-        }
-        return null;
-    }
-
-    @Override
-    public @NonNull UUID AsyncBackgroundTask_5() {
-        UUID uUID;
-        CommandSource commandSource;
-        UUID uUID2 = this.GnuSparseMapHandler;
-        if (uUID2.equals(LiteBansModule_31) && this.AsyncBackgroundTask_5 && (commandSource = this.e.get()) != null && (uUID = ((Player)commandSource).getUniqueId()) != null) {
-            this.GnuSparseMapHandler = uUID;
-            return uUID;
-        }
-        return uUID2;
-    }
-
-    @Override
-    public String BaseCoreGenericHandler() {
-        String string = this.i;
-        return string == null || string.equals("00000000-0000-0000-0000-000000000000") ? (this.i = this.AsyncBackgroundTask_5().toString()) : string;
-    }
-
-    public int BaseCoreGenericHandler() {
-        Object targetObj = this.c();
-        if (targetObj instanceof Player) {
-            Player player = (Player)targetObj;
-            return player.getProtocolVersion().getProtocol();
-        }
-        return 0;
-    }
-
-    @Override
-    public boolean e(@Nullable String string) {
-        if (string == null) {
-            return true;
-        }
-        CommandSource commandSource = this.e.get();
-        return commandSource != null && commandSource.hasPermission(string);
-    }
-
-    @Override
-    public boolean LiteBansModule_194() {
-        return !this.AsyncBackgroundTask_5;
-    }
-
-    @Override
-    public boolean GnuSparseMapHandler() {
-        CommandSource commandSource;
-        if (this.AsyncBackgroundTask_5 && (commandSource = this.e.get()) != null) {
-            return ((Player)commandSource).isActive();
-        }
-        return this.e.get() != null;
-    }
-
-    @Override
-    public boolean e() {
+    public TapeHandler BaseCoreGenericHandler() {
         return this.AsyncBackgroundTask_5;
     }
 
-    @Override
-    public void AsyncBackgroundTask_5(@NonNull String string) {
-        if (string == null) {
-            throw new NullPointerException("reason is marked non-null but is null");
-        }
-        CommandSource commandSource = this.e.get();
-        if (commandSource == null) {
-            return;
-        }
-        if (this.e()) {
-            ((Player)commandSource).disconnect((Component)LiteBansModule_304.BaseCoreGenericHandler(string));
-}
-
-    @Override
-    public void LiteBansModule_31(String string) {
-        CommandSource commandSource = this.e.get();
-        if (commandSource == null) {
-            return;
-        }
-        commandSource.sendMessage(LiteBansModule_304.LiteBansModule_31(string));
+    public int c() {
+        return this.LiteBansModule_31;
     }
 
-    @Override
-    public void BaseCoreGenericHandler(String string) {
-        CommandSource commandSource = this.e.get();
-        if (commandSource == null) {
-            return;
-        }
-        commandSource.sendMessage((Component)LiteBansModule_304.BaseCoreGenericHandler(string));
+    public int LiteBansModule_31() {
+        return this.plugin;
     }
 
-    @Override
-    public void BaseCoreGenericHandler(String string, byte[] byArray) {
-        CommandSource commandSource = this.e.get();
-        if (commandSource == null) {
-            return;
-        }
-        if (this.e()) {
-            ((Player)commandSource).sendPluginMessage((ChannelIdentifier)new LegacyChannelIdentifier(string), byArray);
-}
+    public int BaseCoreGenericHandler(int n) {
+        return this.LiteBansModule_195[n];
+    }
 
-    private final String BaseCoreGenericHandler(CommandSource commandSource) {
-        InetAddress inetAddress;
-        InetSocketAddress inetSocketAddress;
-        if (commandSource instanceof Player && (inetSocketAddress = ((Player)commandSource).getRemoteAddress()) != null && (inetAddress = inetSocketAddress.getAddress()) != null) {
-            return inetAddress.getHostAddress();
-        }
-        return null;
+    static final /* synthetic */ TapeHandler BaseCoreGenericHandler(LiteBansModule_285 hz2, TapeHandler ao2) {
+        hz2.AsyncBackgroundTask_5 = ao2;
+        return hz2.AsyncBackgroundTask_5;
+    }
+
+    static final /* synthetic */ int AsyncBackgroundTask_5(LiteBansModule_285 hz2, int n) {
+        hz2.LiteBansModule_31 = n;
+        return hz2.LiteBansModule_31;
+    }
+
+    static final /* synthetic */ int c(LiteBansModule_285 hz2, int n) {
+        hz2.c = n;
+        return hz2.c;
+    }
+
+    static final /* synthetic */ int LiteBansModule_31(LiteBansModule_285 hz2, int n) {
+        hz2.BaseCoreGenericHandler = n;
+        return hz2.BaseCoreGenericHandler;
+    }
+
+    static final /* synthetic */ int BaseCoreGenericHandler(LiteBansModule_285 hz2, int n) {
+        hz2.e = n;
+        return hz2.e;
+    }
+
+    static final /* synthetic */ int LiteBansModule_31(LiteBansModule_285 hz2) {
+        return hz2.BaseCoreGenericHandler;
+    }
+
+    static final /* synthetic */ int BaseCoreGenericHandler(LiteBansModule_285 hz2) {
+        return hz2.e++;
+    }
+
+    static final /* synthetic */ byte[] c(LiteBansModule_285 hz2) {
+        return hz2.LiteBansModule_195;
+    }
 }
 

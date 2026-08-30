@@ -6,7 +6,7 @@ import org.jetbrains.annotations.Nullable;
 
 static class OldvalueHandler
 extends InputHandler {
-    public static final boolean BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, boolean flag) {
+        public static final boolean BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, boolean flag) {
         if (string == null) {
             return string2 == null;
         }
@@ -15,7 +15,7 @@ extends InputHandler {
 
     public static final String BaseCoreGenericHandler(@NotNull String string, char c, char c10, boolean flag) {
         StringBuilder stringBuilder;
-        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
         if (!flag) {
             return string.replace(c, c10);
         }
@@ -25,7 +25,7 @@ extends InputHandler {
         for (int i = 0; i < charSequence.length(); ++i) {
             char c11;
             char c12 = c11 = charSequence.charAt(i);
-            stringBuilder2.append(LiteBansModule_338.BaseCoreGenericHandler(c12, c, flag) ? c10 : c12);
+            stringBuilder2.append(LiteBansModule_339.BaseCoreGenericHandler(c12, c, flag) ? c10 : c12);
         }
         return stringBuilder.toString();
     }
@@ -38,11 +38,11 @@ extends InputHandler {
     }
 
     public static final String BaseCoreGenericHandler(@NotNull String string, @NotNull String string2, @NotNull String string3, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler(string2, "oldValue");
-        ObjectUtilities.BaseCoreGenericHandler(string3, "newValue");
+        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)string2, "oldValue");
+        ObjectUtilities.BaseCoreGenericHandler((Object)string3, "newValue");
         String string4 = string;
-        int n = StringUtilities.LiteBansModule_31(string4, string2, 0, flag);
+        int n = StringUtilities.LiteBansModule_31((CharSequence)string4, string2, 0, flag);
         if (n < 0) {
             return string4;
         }
@@ -56,7 +56,7 @@ extends InputHandler {
         do {
             stringBuilder.append(string4, n5, n).append(string3);
             n5 = n + n2;
-        } while (n < string4.length() && (n = StringUtilities.LiteBansModule_31(string4, string2, n + n3, flag)) > 0);
+        } while (n < string4.length() && (n = StringUtilities.LiteBansModule_31((CharSequence)string4, string2, n + n3, flag)) > 0);
         return stringBuilder.append(string4, n5, string4.length()).toString();
     }
 
@@ -68,8 +68,8 @@ extends InputHandler {
     }
 
     public static final boolean c(@NotNull String string, @NotNull String string2, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler(string2, "prefix");
+        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)string2, "prefix");
         if (!flag) {
             return string.startsWith(string2);
         }
@@ -84,8 +84,8 @@ extends InputHandler {
     }
 
     public static final boolean LiteBansModule_31(@NotNull String string, @NotNull String string2, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler(string2, "suffix");
+        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)string2, "suffix");
         if (!flag) {
             return string.endsWith(string2);
         }
@@ -100,16 +100,16 @@ extends InputHandler {
     }
 
     public static final boolean BaseCoreGenericHandler(@NotNull String string, int n, @NotNull String string2, int n2, int n3, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler(string2, "other");
+        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)string2, "other");
         return !flag ? string.regionMatches(n, string2, n2, n3) : string.regionMatches(flag, n, string2, n2, n3);
     }
 
     public static final String BaseCoreGenericHandler(@NotNull String string, @NotNull Locale locale) {
         char c;
-        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler(locale, "locale");
-        if ((string).length() > 0 && Character.isLowerCase(c = string.charAt(0))) {
+        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)locale, "locale");
+        if (((CharSequence)string).length() > 0 && Character.isLowerCase(c = string.charAt(0))) {
             int n;
             String string2;
             StringBuilder stringBuilder;
@@ -136,5 +136,10 @@ extends InputHandler {
 
     private static final void i() {
         i = new String[]{"<this>", "<this>", "str", "<this>", "<this>", "str", "<this>", "<this>", "oldValue", "newValue", "<this>", "<this>", "oldValue", "newValue", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "", "<this>", "<this>", "destination", "<this>", "destination", "<this>", "args", "<this>", "format", "args", "<this>", "args", "<this>", "format", "args", "<this>", "regex", "<this>", "<this>", "<this>", "prefix", "<this>", "prefix", "<this>", "suffix", "bytes", "charset", "bytes", "charset", "bytes", "bytes", "chars", "chars", "codePoints", "stringBuffer", "stringBuilder", "<this>", "<this>", "<this>", "<this>", "other", "<this>", "charSequence", "<this>", "stringBuilder", "<this>", "<this>", "<this>", "other", "<this>", "other", "<this>", "locale", "<this>", "locale", "<this>", "locale", "<this>", "locale", "<this>", "charset", "<this>", "charset", "<this>", "<this>", "<this>", "<this>", "locale", "", "<this>", "", "<this>", "locale", "", "<this>", "Count 'n' must be non-negative, but was ", "", "", "<this>"};
+    }
+
+    static {
+        OldvalueHandler.i();
+    }
 }
 

@@ -12,24 +12,24 @@ implements Runnable {
         this.c = plugin;
     }
 
-    public final PlatformPlugin LiteBansModule_240() {
+    public final PlatformPlugin LiteBansModule_241() {
         return this.c;
     }
 
     public final ConfigService LiteBansModule_31() {
-        return this.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
+        return (ConfigService)this.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class);
     }
 
     public final PunishmentTableService e() {
-        return this.LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class);
+        return (PunishmentTableService)this.LiteBansModule_241().BaseCoreGenericHandler(PunishmentTableService.class);
     }
 
     public final BroadcastService BaseCoreGenericHandler() {
-        return this.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
+        return (BroadcastService)this.LiteBansModule_241().BaseCoreGenericHandler(BroadcastService.class);
     }
 
     public final DatabaseMonitorService g() {
-        return this.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+        return (DatabaseMonitorService)this.LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class);
     }
 
     public final CommandSenderWrapper AsyncBackgroundTask_5() {
@@ -47,7 +47,7 @@ implements Runnable {
     public void i() {
     }
 
-    public void LiteBansModule_194() {
+    public void LiteBansModule_195() {
     }
 
     public static final void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull CharSequence charSequence, @NotNull PlatformPlugin plugin) {
@@ -56,5 +56,6 @@ implements Runnable {
 
     public static final /* synthetic */ ThreadLocal c() {
         return LiteBansModule_31;
+    }
 }
 

@@ -1,7 +1,7 @@
 package litebans;
 
 public final class LiteralHandler {
-    private LiteralHandler() {
+        private LiteralHandler() {
     }
 
     public /* synthetic */ LiteralHandler(LiteBansModule_14 aJ2) {
@@ -10,5 +10,10 @@ public final class LiteralHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"literal", "literal", "literal"};
+    }
+
+    static {
+        LiteralHandler.BaseCoreGenericHandler();
+    }
 }
 

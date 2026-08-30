@@ -10,8 +10,8 @@ implements Serializable {
     private final String LiteBansModule_31;
     private final int c;
     private static final long BaseCoreGenericHandler;
-    public PatternHandler(@NotNull String string, int n) {
-        ObjectUtilities.BaseCoreGenericHandler(string, "pattern");
+        public PatternHandler(@NotNull String string, int n) {
+        ObjectUtilities.BaseCoreGenericHandler((Object)string, "pattern");
         this.LiteBansModule_31 = string;
         this.c = n;
     }
@@ -28,5 +28,6 @@ implements Serializable {
 
     private static final void BaseCoreGenericHandler() {
         AsyncBackgroundTask_5 = new String[]{"pattern"};
+    }
 }
 

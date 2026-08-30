@@ -6,7 +6,7 @@ public final class UnbanHandler
 implements Function {
     final /* synthetic */ ConfigService LiteBansModule_31;
     final /* synthetic */ BanHandler_4 c;
-    public UnbanHandler(ConfigService configService, BanHandler_4 g) {
+        public UnbanHandler(ConfigService configService, BanHandler_4 g) {
         this.LiteBansModule_31 = configService;
         this.c = g;
     }
@@ -14,131 +14,141 @@ implements Function {
     public final void BaseCoreGenericHandler(Object v1) {
         v2 = AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(this.LiteBansModule_31);
         v3 = this.c;
-        arg1 = v2.length;
-        for (arg2 = 0; arg2 < arg1; ++arg2) {
-{
-                                            arg3 = arg4 = v2[arg2];
-                                            arg5 = v3;
+        v4 = v2.length;
+        for (v5 = 0; v5 < v4; ++v5) {
+            block36: {
+                block34: {
+                    block35: {
+                        block33: {
+                            block29: {
+                                block31: {
+                                    block30: {
+                                        block32: {
+                                            v6 = v7 = v2[v5];
+                                            v8 = v3;
                                             ObjectUtilities.LiteBansModule_31(v1, "");
-                                            arg6 = (CommandDispatcher)v1;
+                                            v9 = (CommandDispatcher)v1;
                                             v0 = new StringBuilder().append("litebans + ");
-                                            arg7 = AbstractCommand.AsyncBackgroundTask_5;
-                                            arg8 = arg3;
-                                            switch (arg8.hashCode()) {
+                                            v10 = AbstractCommand.AsyncBackgroundTask_5;
+                                            v11 = v6;
+                                            switch (v11.hashCode()) {
                                                 case -1396405339: {
-                                                    if (!arg8.equals("ban-ip")) {
+                                                    if (!v11.equals("ban-ip")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block29;
                                                 }
                                                 case 111426262: {
-                                                    if (arg8.equals("unban")) break;
+                                                    if (v11.equals("unban")) break;
                                                     break;
                                                 }
                                                 case -840127329: {
-                                                    if (!arg8.equals("unwarn")) {
+                                                    if (!v11.equals("unwarn")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block30;
                                                 }
                                                 case 1972486690: {
-                                                    if (!arg8.equals("tempbanip")) {
+                                                    if (!v11.equals("tempbanip")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block29;
                                                 }
                                                 case 93503862: {
-                                                    if (!arg8.equals("banip")) {
+                                                    if (!v11.equals("banip")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block29;
                                                 }
                                                 case -1062781696: {
-                                                    if (!arg8.equals("muteip")) {
+                                                    if (!v11.equals("muteip")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block31;
                                                 }
                                                 case -840405966: {
-                                                    if (!arg8.equals("unmute")) {
+                                                    if (!v11.equals("unmute")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block32;
                                                 }
                                                 case 1351111124: {
-                                                    if (!arg8.equals("tempmuteip")) {
+                                                    if (!v11.equals("tempmuteip")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block31;
                                                 }
                                                 case 1231784084: {
-                                                    if (!arg8.equals("tempipmute")) {
+                                                    if (!v11.equals("tempipmute")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block31;
                                                 }
                                                 case 1979386420: {
-                                                    if (!arg8.equals("tempipban")) {
+                                                    if (!v11.equals("tempipban")) {
                                                         break;
                                                     }
-                                                    break;
-}
+                                                    break block29;
+                                                }
+                                            }
                                             v1 = "unban.own";
-                                            break;
+                                            break block33;
                                         }
                                         v1 = "unmute.own";
-                                        break;
+                                        break block33;
                                     }
                                     v1 = "unwarn.own";
-                                    break;
+                                    break block33;
                                 }
                                 v1 = "ipmute";
-                                break;
+                                break block33;
                             }
                             v1 = "ipban";
-                            break;
-                                                        v1 = arg3;
+                            break block33;
+                                                        v1 = v6;
                         }
-                        arg9 = v0.append(v1).toString();
-                        arg7 = new ClearChatCommand(arg3, arg3, arg10, arg9, arg5);
-                        arg11 = arg5;
-                        arg8 = AbstractCommand.AsyncBackgroundTask_5;
-                        arg12 = arg7.getName();
-                        arg13 = arg12;
-                        switch (arg13.hashCode()) {
+                        v12 = v0.append(v1).toString();
+                        v10 = new ClearChatCommand(v6, v6, v13, v12, v8);
+                        v14 = v8;
+                        v11 = AbstractCommand.AsyncBackgroundTask_5;
+                        v15 = v10.getName();
+                        v16 = v15;
+                        switch (v16.hashCode()) {
                             case -1320563219: {
-                                if (arg13.equals("dupeip")) break;
+                                if (v16.equals("dupeip")) break;
                                 break;
                             }
                             case 712910260: {
-                                if (!arg13.equals("staffhistory")) {
+                                if (!v16.equals("staffhistory")) {
                                     break;
                                 }
-                                break;
+                                break block34;
                             }
                             case 926934164: {
-                                if (!arg13.equals("history")) {
+                                if (!v16.equals("history")) {
                                     break;
                                 }
-                                break;
-}
-                        arg14 = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
-                        v2 = arg14;
-                        break;
+                                break block35;
+                            }
+                        }
+                        v17 = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
+                        v2 = v17;
+                        break block36;
                     }
-                    arg14 = new String[]{"hist", "litebans:history"};
-                    v2 = arg14;
-                    break;
+                    v17 = new String[]{"hist", "litebans:history"};
+                    v2 = v17;
+                    break block36;
                 }
-                arg14 = new String[]{"staffhist", "litebans:staffhistory"};
-                v2 = arg14;
-                break;
-                                arg14 = new String[]{"litebans:" + arg12};
-                v2 = arg14;
+                v17 = new String[]{"staffhist", "litebans:staffhistory"};
+                v2 = v17;
+                break block36;
+                                v17 = new String[]{"litebans:" + v15};
+                v2 = v17;
             }
-            arg8 = v2;
-            arg5.BaseCoreGenericHandler(new LiteBansModule_352((LiteCommand)arg7, ((LiteCommand)arg7).getPermission(), arg11.BaseCoreGenericHandler, arg8), arg6);
-}
+            v11 = v2;
+            v8.BaseCoreGenericHandler(new LiteBansModule_354((LiteCommand)v10, ((LiteCommand)v10).getPermission(), v14.BaseCoreGenericHandler, v11), v9);
+        }
+    }
 
     public Object apply(Object targetObj) {
         this.plugin(targetObj);
@@ -147,5 +157,10 @@ implements Function {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"", "", "ban-ip", "unban", "unwarn", "tempbanip", "banip", "muteip", "unmute", "tempmuteip", "tempipmute", "tempipban", "unban.own", "unmute.own", "unwarn.own", "ipmute", "ipban", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:"};
+    }
+
+    static {
+        UnbanHandler.BaseCoreGenericHandler();
+    }
 }
 

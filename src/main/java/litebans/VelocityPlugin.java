@@ -26,12 +26,12 @@ import org.slf4j.Logger;
 @Plugin(SQLiteDriverHandler_4="litebans", name="LiteBans", version="2.19.0", url="https://www.spigotmc.org/resources/litebans.3715/", description="Lightweight banning plugin with full UUID ", authors={"Ruan"})
 public class VelocityPlugin
 implements PlatformPlugin {
-    private final LiteBansCore LiteBansModule_194 = new LiteBansCore(this);
+    private final LiteBansCore LiteBansModule_195 = new LiteBansCore(this);
     public final ProxyServer c;
     private final WarningHandler e;
     private final Path AsyncBackgroundTask_5;
     private final List g = Collections.synchronizedList(new ArrayList());
-    @Inject
+        @Inject
     public VelocityPlugin(ProxyServer proxyServer, Logger logger, @DataDirectory Path path) {
         this.c = proxyServer;
         this.e = new WarningHandler(logger, this.getName());
@@ -58,59 +58,61 @@ implements PlatformPlugin {
         synchronized (list) {
             this.g.forEach(ScheduledTask::cancel);
             this.g.clear();
-}
+        }
+    }
 
     @Override
-    public DatabaseService LiteBansModule_240() {
-        return this.LiteBansModule_194.BroadcastService;
+    public DatabaseService LiteBansModule_241() {
+        return this.LiteBansModule_195.BroadcastService;
     }
 
     @Override
     public PluginModule[] Utf8Handler_2() {
-        return this.LiteBansModule_194.GnuSparseMapHandler();
+        return this.LiteBansModule_195.GnuSparseMapHandler();
     }
 
     @Override
     public void AsyncBackgroundTask_5() {
-        this.LiteBansModule_194.i();
+        this.LiteBansModule_195.i();
     }
 
     @Override
     public boolean BaseCoreGenericHandler(PluginModule module) {
         boolean flag = module.AsyncBackgroundTask_5();
         if (flag) {
-            if (module instanceof LiteBansModule_431) {
+            if (module instanceof LiteBansModule_433) {
                 this.plugin((ConfigurationManager)module);
             }
-            if (module instanceof LiteBansModule_249) {
+            if (module instanceof LiteBansModule_250) {
                 this.plugin((CommandManager)module);
-}
+            }
+        }
         return flag;
     }
 
     @Override
-    public StackTraceAnalyzer LiteBansModule_194() {
-        return this.LiteBansModule_194.Utf8Handler_2;
+    public StackTraceAnalyzer LiteBansModule_195() {
+        return this.LiteBansModule_195.Utf8Handler_2;
     }
 
     @Override
     public CommandManager z() {
-        return this.LiteBansModule_194.e;
+        return this.LiteBansModule_195.e;
     }
 
     @Override
     public ConfigurationManager LiteBansModule_31() {
-        return this.LiteBansModule_194.LiteBansModule_194;
+        return this.LiteBansModule_195.LiteBansModule_195;
     }
 
     @Override
     public void BaseCoreGenericHandler(CommandManager commandManager) {
-        this.LiteBansModule_194.e = commandManager;
+        this.LiteBansModule_195.e = commandManager;
     }
 
     @Override
     public CommandSenderWrapper HoverTextFormatter() {
-        return this.LiteBansModule_194.g;
+        return this.LiteBansModule_195.g;
     }
 
     @Override
@@ -121,7 +123,7 @@ implements PlatformPlugin {
     @Override
     public DatabaseService BroadcastService() {
         DatabaseService gn_02;
-        this.LiteBansModule_194.BroadcastService = gn_02 = this.plugin(new File(this.getDataFolder(), "config.yml"));
+        this.LiteBansModule_195.BroadcastService = gn_02 = this.plugin(new File(this.getDataFolder(), "config.yml"));
         return gn_02;
     }
 
@@ -137,17 +139,17 @@ implements PlatformPlugin {
 
     @Override
     public PluginModule BaseCoreGenericHandler(Class clazz) {
-        return this.LiteBansModule_194.LiteBansModule_31(clazz);
+        return this.LiteBansModule_195.LiteBansModule_31(clazz);
     }
 
     @Override
     public PluginModule LiteBansModule_31(Class clazz) {
-        return this.LiteBansModule_194.BaseCoreGenericHandler(clazz);
+        return this.LiteBansModule_195.BaseCoreGenericHandler(clazz);
     }
 
     @Override
     public PluginModule[] PunishmentTableService() {
-        return this.LiteBansModule_194.AsyncBackgroundTask_5;
+        return this.LiteBansModule_195.AsyncBackgroundTask_5;
     }
 
     @Override
@@ -157,32 +159,32 @@ implements PlatformPlugin {
 
     @Override
     public int BaseCoreGenericHandler() {
-        return this.LiteBansModule_194.LiteBansModule_401();
+        return this.LiteBansModule_195.LiteBansModule_403();
     }
 
     @Override
     public CommandSenderWrapper[] q() {
-        return this.LiteBansModule_194.LiteBansModule_31();
+        return this.LiteBansModule_195.LiteBansModule_31();
     }
 
     @Override
     public Map DatabaseMonitorService() {
-        return this.LiteBansModule_194.LiteBansModule_31;
+        return this.LiteBansModule_195.LiteBansModule_31;
     }
 
     @Override
-    public ThreadPoolExecutor LiteBansModule_433() {
-        ThreadPoolExecutor threadPoolExecutor = this.LiteBansModule_194.LiteBansModule_240;
-        if ((threadPoolExecutor == null || threadPoolExecutor.isShutdown()) && (this.LiteBansModule_194.GnuSparseMapHandler.get() || this.LiteBansModule_194.m.get())) {
-            ThreadFactoryBuilder threadFactoryBuilder = this.LiteBansModule_194.AsyncBackgroundTask_5();
-            return this.LiteBansModule_194.BaseCoreGenericHandler(threadFactoryBuilder);
+    public ThreadPoolExecutor LiteBansModule_435() {
+        ThreadPoolExecutor threadPoolExecutor = this.LiteBansModule_195.LiteBansModule_241;
+        if ((threadPoolExecutor == null || threadPoolExecutor.isShutdown()) && (this.LiteBansModule_195.GnuSparseMapHandler.get() || this.LiteBansModule_195.m.get())) {
+            ThreadFactoryBuilder threadFactoryBuilder = this.LiteBansModule_195.AsyncBackgroundTask_5();
+            return this.LiteBansModule_195.BaseCoreGenericHandler(threadFactoryBuilder);
         }
         return threadPoolExecutor;
     }
 
     @Override
     public long g() {
-        return this.LiteBansModule_194.LiteBansModule_240();
+        return this.LiteBansModule_195.LiteBansModule_241();
     }
 
     @Override
@@ -191,8 +193,8 @@ implements PlatformPlugin {
     }
 
     @Override
-    public LiteBansModule_158 i() {
-        return new LiteBansModule_90(this);
+    public LiteBansModule_159 i() {
+        return new LiteBansModule_91(this);
     }
 
     @Override
@@ -202,23 +204,23 @@ implements PlatformPlugin {
 
     @Override
     public void GnuSparseMapHandler() {
-        this.LiteBansModule_194.c();
-        this.LiteBansModule_194.Utf8Handler_2();
+        this.LiteBansModule_195.c();
+        this.LiteBansModule_195.Utf8Handler_2();
     }
 
     @Override
     public boolean isEnabled() {
-        return this.LiteBansModule_194.PunishmentTableService;
+        return this.LiteBansModule_195.PunishmentTableService;
     }
 
     @Override
     public boolean n() {
-        return this.LiteBansModule_194.PunishmentTableService;
+        return this.LiteBansModule_195.PunishmentTableService;
     }
 
     @Override
     public boolean AsyncBackgroundTask_21() {
-        return this.LiteBansModule_194.n.get();
+        return this.LiteBansModule_195.n.get();
     }
 
     @Override
@@ -232,24 +234,25 @@ implements PlatformPlugin {
     }
 
     @Override
-    public boolean LiteBansModule_401() {
+    public boolean LiteBansModule_403() {
         return true;
     }
 
     @Override
     public DatabaseService BaseCoreGenericHandler(File file) {
-        return this.LiteBansModule_194.i.BaseCoreGenericHandler(this, file);
+        return this.LiteBansModule_195.i.BaseCoreGenericHandler(this, file);
     }
 
     @Override
-    public void LiteBansModule_31(LiteBansModule_175[] em_0Array) {
-        for (LiteBansModule_175 em_02 : em_0Array) {
-            this.c.getEventManager().register(this, em_02);
-}
+    public void LiteBansModule_31(LiteBansModule_176[] em_0Array) {
+        for (LiteBansModule_176 em_02 : em_0Array) {
+            this.c.getEventManager().register((Object)this, (Object)em_02);
+        }
+    }
 
     @Override
     public boolean BaseCoreGenericHandler(String string, Supplier supplier) {
-        return this.LiteBansModule_194.BaseCoreGenericHandler(string, supplier);
+        return this.LiteBansModule_195.BaseCoreGenericHandler(string, supplier);
     }
 
     @Override
@@ -264,7 +267,7 @@ implements PlatformPlugin {
 
     @Override
     public void BaseCoreGenericHandler(Runnable runnable) {
-        this.LiteBansModule_433().execute(runnable);
+        this.LiteBansModule_435().execute(runnable);
     }
 
     @Override
@@ -273,7 +276,7 @@ implements PlatformPlugin {
             throw new IllegalArgumentException("Invalid delay: " + l3);
         }
         this.c();
-        this.g.add(this.c.getScheduler().buildTask(this, runnable).delay(l3 * 50L, TimeUnit.MILLISECONDS).schedule());
+        this.g.add(this.c.getScheduler().buildTask((Object)this, runnable).delay(l3 * 50L, TimeUnit.MILLISECONDS).schedule());
     }
 
     @Override
@@ -289,7 +292,7 @@ implements PlatformPlugin {
     @Override
     public void LiteBansModule_31(Runnable runnable, long l3, long l5) {
         this.c();
-        this.g.add(this.c.getScheduler().buildTask(this, runnable).delay(l3 * 50L, TimeUnit.MILLISECONDS).repeat(l5 * 50L, TimeUnit.MILLISECONDS).schedule());
+        this.g.add(this.c.getScheduler().buildTask((Object)this, runnable).delay(l3 * 50L, TimeUnit.MILLISECONDS).repeat(l5 * 50L, TimeUnit.MILLISECONDS).schedule());
     }
 
     /*
@@ -299,7 +302,8 @@ implements PlatformPlugin {
         List list = this.g;
         synchronized (list) {
             this.g.removeIf(scheduledTask -> scheduledTask.status() != TaskStatus.SCHEDULED);
-}
+        }
+    }
 
     @Override
     public void BaseCoreGenericHandler(String string) {
@@ -307,39 +311,40 @@ implements PlatformPlugin {
     }
 
     @Override
-    public void BaseCoreGenericHandler(LiteBansModule_417 ln2) {
-        this.LiteBansModule_194.i = ln2;
+    public void BaseCoreGenericHandler(LiteBansModule_419 ln2) {
+        this.LiteBansModule_195.i = ln2;
     }
 
     @Override
     public void BaseCoreGenericHandler(ConfigurationManager j_02) {
-        this.LiteBansModule_194.LiteBansModule_194 = j_02;
+        this.LiteBansModule_195.LiteBansModule_195 = j_02;
     }
 
     @Override
     public void r() {
-        this.c.getEventManager().unregisterListeners(this);
+        this.c.getEventManager().unregisterListeners((Object)this);
     }
 
     @Override
-    public void BaseCoreGenericHandler(LiteBansModule_175[] em_0Array) {
-        for (LiteBansModule_175 em_02 : em_0Array) {
-            this.c.getEventManager().unregisterListener(this, em_02);
-}
+    public void BaseCoreGenericHandler(LiteBansModule_176[] em_0Array) {
+        for (LiteBansModule_176 em_02 : em_0Array) {
+            this.c.getEventManager().unregisterListener((Object)this, (Object)em_02);
+        }
+    }
 
     @Override
     public CommandSenderWrapper LiteBansModule_31(Object targetObj) {
         if (!(targetObj instanceof CommandSource)) {
             if (targetObj instanceof CommandSenderWrapper) {
-                return this.LiteBansModule_194.LiteBansModule_31.remove(targetObj.i());
+                return (CommandSenderWrapper)this.LiteBansModule_195.LiteBansModule_31.remove(((CommandSenderWrapper)targetObj).i());
             }
             throw new IllegalArgumentException();
         }
         String string = "[Console]";
         if (targetObj instanceof Player) {
-            string = targetObj.getUsername();
+            string = ((Player)targetObj).getUsername();
         }
-        return this.LiteBansModule_194.LiteBansModule_31.remove(string);
+        return (CommandSenderWrapper)this.LiteBansModule_195.LiteBansModule_31.remove(string);
     }
 
     @Override
@@ -352,20 +357,25 @@ implements PlatformPlugin {
             throw new IllegalArgumentException();
         }
         CommandSource commandSource = (CommandSource)targetObj;
-        Map map = this.LiteBansModule_194.LiteBansModule_31;
+        Map map = this.LiteBansModule_195.LiteBansModule_31;
         String string = "[Console]";
         if (commandSource instanceof Player) {
             string = ((Player)commandSource).getUsername();
         }
         if ((sender = (CommandSenderWrapper)map.get(string)) == null || sender.c() != commandSource) {
-            sender = new LiteBansModule_285(this, commandSource);
-            this.LiteBansModule_194.LiteBansModule_194();
+            sender = new LiteBansModule_286(this, commandSource);
+            this.LiteBansModule_195.LiteBansModule_195();
             map.put(string, sender);
         }
         return sender;
     }
 
     public LiteBansCore LiteBansModule_31() {
-        return this.LiteBansModule_194;
-}
+        return this.LiteBansModule_195;
+    }
 
+    private static final void BaseCoreGenericHandler() {
+        LiteBansModule_31 = new String[]{"config.yml", "LiteBans", "2.19.0", "Invalid delay: ", "[Console]", "[Console]"};
+
+    static {
+        VelocityPlugin.BaseCoreGenericHandler();

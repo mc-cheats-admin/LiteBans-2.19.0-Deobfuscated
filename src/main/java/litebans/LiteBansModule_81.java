@@ -1,9 +1,35 @@
 package litebans;
 
-import org.jetbrains.annotations.NotNull;
-
 public final class LiteBansModule_81 {
-    public static final String BaseCoreGenericHandler(@NotNull NativepatternHandler hN2, @NotNull CharSequence charSequence, @NotNull String string) {
-        return hN2.BaseCoreGenericHandler().matcher(charSequence).replaceAll(string);
+    public static final /* synthetic */ int[] BaseCoreGenericHandler;
+
+    static {
+        int[] nArray = new int[BanHandler.values().length];
+        try {
+            nArray[BanHandler.LiteBansModule_241.ordinal()] = 1;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            nArray[BanHandler.GnuSparseMapHandler.ordinal()] = 2;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            nArray[BanHandler.c.ordinal()] = 3;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            nArray[BanHandler.g.ordinal()] = 4;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        BaseCoreGenericHandler = nArray;
+    }
 }
 

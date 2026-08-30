@@ -15,7 +15,7 @@ import org.jetbrains.annotations.NotNull;
 public final class BanHandler_3
 extends UnbanCommand {
     public static final UsageHandler GnuSparseMapHandler;
-    public BanHandler_3(@NotNull PlatformPlugin plugin) {
+        public BanHandler_3(@NotNull PlatformPlugin plugin) {
         super("ban", plugin);
     }
 
@@ -31,58 +31,63 @@ extends UnbanCommand {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper v1, @NotNull String[] v2) {
-{
-                        arg2 = (ConfigService)arg1.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
-            arg1 = this.LiteBansModule_240().DatabaseMonitorService();
-            arg3 = arg1.size();
+        block271: {
+            v3 = this;
+            v4 = (ConfigService)v3.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class);
+            v3 = this.LiteBansModule_241().DatabaseMonitorService();
+            v5 = v3.size();
             try {
-                arg4 = arg2;
-                if (arg4.g()) {
-                    arg5 = arg4;
-                    arg6 = "[c] " + arg3;
-                    arg5.BaseCoreGenericHandler(arg6);
-}
-            catch (LiteBansException_4 arg7) {
-                arg8 = arg2;
-                if (ObjectUtilities.BaseCoreGenericHandler(LiteBansModule_253.BaseCoreGenericHandler((ConfigService)arg8), MessageKey.BaseCoreGenericHandler(arg8, false, true))) {
-                    arg2.LiteBansModule_31((byte)49);
+                v6 = v4;
+                if (v6.g()) {
+                    v7 = v6;
+                    v8 = "[c] " + v5;
+                    v7.BaseCoreGenericHandler((Object)v8);
                 }
-                                ((DatabaseMonitorService)arg8.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg7);
+            }
+            catch (LiteBansException_4 v9) {
+                v10 = v4;
+                if (ObjectUtilities.BaseCoreGenericHandler(LiteBansModule_254.BaseCoreGenericHandler((ConfigService)v10), (Object)MessageKey.BaseCoreGenericHandler(v10, false, true))) {
+                    v4.LiteBansModule_31((byte)49);
+                }
+                v10 = this;
+                ((DatabaseMonitorService)v10.LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(v9);
                 return;
             }
-                        arg4 = (DatabaseMonitorService)arg4.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+            v6 = this;
+            v6 = (DatabaseMonitorService)v6.LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class);
             try {
-                arg9 = arg4.LiteBansModule_194();
-                arg10 = arg9;
+                v11 = v6.LiteBansModule_195();
+                v12 = v11;
                 try {
-{
-                        arg11 = (LiteBansModule_82)arg10;
-                        arg12 = arg9;
-                        arg13 = new LiteBansException_2();
-                        if (arg12.LiteBansModule_31()) {
-                            arg14 = MessageHandler.BaseCoreGenericHandler;
-                            arg15 = arg2.DatabaseMonitorService() != null;
-                            arg16 = BlackHandler.c + "[LiteBans]" + BlackHandler.F + " Plugin access has been disabled!";
-                            arg17 = v1;
-                            arg18 = "litebans.admin";
-                            arg19 = arg17.e(arg18);
-                            if (arg19) {
-                                arg20 = BlackHandler.c + "[LiteBans]" + BlackHandler.AsyncBackgroundTask_5 + " If you have bought LiteBans, contact Ruan on SpigotMC + ";
-                                if (arg20 != null && arg20.length() > 0 != false) {
-                                    arg21 = arg16;
-                                    arg22 = "\n";
-                                    arg21 = "" + arg21 + arg22;
-                                    v0 = "" + arg21 + arg20;
+                    block268: {
+                        v13 = (LiteBansModule_83)v12;
+                        v14 = v11;
+                        v15 = new LiteBansException_2();
+                        if (v14.LiteBansModule_31()) {
+                            v16 = MessageHandler.BaseCoreGenericHandler;
+                            v17 = v4.DatabaseMonitorService() != null;
+                            v18 = BlackHandler.c + "[LiteBans]" + BlackHandler.F + " Plugin access has been disabled!";
+                            v19 = v1;
+                            v20 = "litebans.admin";
+                            v21 = v19.e(v20);
+                            if (v21) {
+                                v22 = BlackHandler.c + "[LiteBans]" + BlackHandler.AsyncBackgroundTask_5 + " If you have bought LiteBans, contact Ruan on SpigotMC + ";
+                                if (v22 != null && v22.length() > 0 != false) {
+                                    v23 = v18;
+                                    v24 = "\n";
+                                    v23 = "" + v23 + v24;
+                                    v0 = "" + v23 + v22;
                                 } else {
-                                    v0 = arg16;
-} else {
-                                v0 = arg16;
+                                    v0 = v18;
+                                }
+                            } else {
+                                v0 = v18;
                             }
-                            arg16 = LiteBansModule_242.BaseCoreGenericHandler(v0, arg2.GnuSparseMapHandler());
-                            arg23 = arg14;
-                            if (arg15) {
-                                arg20 = arg23;
-                                arg20.BaseCoreGenericHandler(arg16);
+                            v18 = LiteBansModule_243.BaseCoreGenericHandler(v0, (CharSequence)v4.GnuSparseMapHandler());
+                            v25 = v16;
+                            if (v17) {
+                                v22 = v25;
+                                v22.BaseCoreGenericHandler(v18);
                                 throw new CommandExitException();
                             }
                             MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(MessageKey.ServerEventListener);
@@ -90,343 +95,370 @@ extends UnbanCommand {
                         }
                         try {
                             if (LiteBansCommand.i == null) {
-                                throw arg13;
+                                throw v15;
                             }
-                            arg24 = arg2.LiteBansModule_194();
-                            arg25 = arg12.e().q();
-                            arg26 = arg24.BuilderactionHandler();
-                            arg27 = BanHandler.LiteBansModule_240;
-                            arg28 = arg24.ServerSyncService();
-                            arg29 = arg24.n();
-                            arg30 = arg12.AsyncBackgroundTask_5().BaseCoreGenericHandler(v1);
-                            arg31 = DatabaseMonitorService.BaseCoreGenericHandler(arg12.AsyncBackgroundTask_5(), false, 1, null);
-                            arg32 = arg12.BaseCoreGenericHandler(v1);
-                            arg33 = new NoneHandler_2((BanHandler)arg27, arg28, arg29, false, false, false, false, false, false, false, false, false, false, false, arg31, 0L, 0L, 0, null, null, false, null, 0, null, null, null, null, v1, (String)arg32, null, arg26, arg30, null, null, v2, null, null, 671072248, 27, null);
-                            arg27 = arg33;
+                            v26 = v4.LiteBansModule_195();
+                            v27 = v14.e().q();
+                            v28 = v26.BuilderactionHandler();
+                            v29 = BanHandler.LiteBansModule_241;
+                            v30 = v26.ServerSyncService();
+                            v31 = v26.n();
+                            v32 = v14.AsyncBackgroundTask_5().BaseCoreGenericHandler(v1);
+                            v33 = DatabaseMonitorService.BaseCoreGenericHandler(v14.AsyncBackgroundTask_5(), false, 1, null);
+                            v34 = v14.BaseCoreGenericHandler(v1);
+                            v35 = new NoneHandler_2((BanHandler)v29, v30, v31, false, false, false, false, false, false, false, false, false, false, false, v33, 0L, 0L, 0, null, null, false, null, 0, null, null, null, null, v1, (String)v34, null, v28, v32, null, null, v2, null, null, 671072248, 27, null);
+                            v29 = v35;
                             try {
-{
-                                                                                            NoneHandler_2.BaseCoreGenericHandler((NoneHandler_2)arg27, arg12, null, false, 3, null);
-                                                                                            arg34 = MessageHandler.BaseCoreGenericHandler;
-                                                                                            arg35 = arg27.ServerSyncService().c() == BanHandler.GnuSparseMapHandler && arg24.PunishmentTableService() == false ? 1 : 0;
-                                                                                            arg36 = MessageKey.LiteBansModule_134;
-                                                                                            arg32 = arg34;
-                                                                                            if (arg35 != 0) {
-                                                                                                arg37 = arg32;
-                                                                                                arg37.BaseCoreGenericHandler(arg36);
+                                block270: {
+                                    block283: {
+                                        block284: {
+                                            block275: {
+                                                block276: {
+                                                    block278: {
+                                                        block279: {
+                                                            block282: {
+                                                                block280: {
+                                                                    block281: {
+                                                                        block277: {
+                                                                            block274: {
+                                                                                block272: {
+                                                                                    block267: {
+                                                                                        block273: {
+                                                                                            NoneHandler_2.BaseCoreGenericHandler((NoneHandler_2)v29, v14, null, false, 3, null);
+                                                                                            v36 = MessageHandler.BaseCoreGenericHandler;
+                                                                                            v37 = v29.ServerSyncService().c() == BanHandler.GnuSparseMapHandler && v26.PunishmentTableService() == false ? 1 : 0;
+                                                                                            v38 = MessageKey.LiteBansModule_135;
+                                                                                            v34 = v36;
+                                                                                            if (v37 != 0) {
+                                                                                                v39 = v34;
+                                                                                                v39.BaseCoreGenericHandler(v38);
                                                                                                 throw new CommandExitException();
                                                                                             }
-                                                                                            arg34 = MessageHandler.BaseCoreGenericHandler;
-                                                                                            arg35 = arg27.Utf8Handler_2() != false && v1.e() != false && arg24.LiteBansModule_24() != false ? 1 : 0;
-                                                                                            arg36 = MessageKey.LiteBansModule_31;
-                                                                                            arg32 = arg34;
-                                                                                            if (arg35 != 0) {
-                                                                                                arg38 = arg32;
-                                                                                                arg38.BaseCoreGenericHandler(arg36);
+                                                                                            v36 = MessageHandler.BaseCoreGenericHandler;
+                                                                                            v37 = v29.Utf8Handler_2() != false && v1.e() != false && v26.LiteBansModule_24() != false ? 1 : 0;
+                                                                                            v38 = MessageKey.LiteBansModule_31;
+                                                                                            v34 = v36;
+                                                                                            if (v37 != 0) {
+                                                                                                v40 = v34;
+                                                                                                v40.BaseCoreGenericHandler(v38);
                                                                                                 throw new CommandExitException();
                                                                                             }
-                                                                                            arg34 = MessageHandler.BaseCoreGenericHandler;
-                                                                                            arg35 = arg27.F() != false && v1.e() != false && arg24.LiteBansModule_17() != false ? 1 : 0;
-                                                                                            arg36 = MessageKey.LiteBansModule_31;
-                                                                                            arg32 = arg34;
-                                                                                            if (arg35 != 0) {
-                                                                                                arg39 = arg32;
-                                                                                                arg39.BaseCoreGenericHandler(arg36);
+                                                                                            v36 = MessageHandler.BaseCoreGenericHandler;
+                                                                                            v37 = v29.F() != false && v1.e() != false && v26.LiteBansModule_17() != false ? 1 : 0;
+                                                                                            v38 = MessageKey.LiteBansModule_31;
+                                                                                            v34 = v36;
+                                                                                            if (v37 != 0) {
+                                                                                                v41 = v34;
+                                                                                                v41.BaseCoreGenericHandler(v38);
                                                                                                 throw new CommandExitException();
                                                                                             }
-                                                                                            arg40 = arg2.i().BaseCoreGenericHandler(10);
-                                                                                            switch (arg40) {
-                                                                                                case 0:
+                                                                                            v42 = v4.i().BaseCoreGenericHandler(10);
+                                                                                            switch (v42) {
+                                                                                                case 0: 
                                                                                                 case 1: {
-                                                                                                    arg35 = arg2.i().BaseCoreGenericHandler(10);
-                                                                                                    if (arg35 != 1) ** GOTO lbl182
-                                                                                                    arg36 = arg2;
-                                                                                                    if (!arg36.g()) ** GOTO lbl183
-                                                                                                    arg41 = arg36;
+                                                                                                    v37 = v4.i().BaseCoreGenericHandler(10);
+                                                                                                    if (v37 != 1) ** GOTO lbl182
+                                                                                                    v38 = v4;
+                                                                                                    if (!v38.g()) ** GOTO lbl183
+                                                                                                    v43 = v38;
                                                                                                     v1 = new StringBuilder().append("Timeout after ");
-                                                                                                    arg42 = AbstractCommand.AsyncBackgroundTask_5;
-                                                                                                    arg43   = this.getName();
-                                                                                                    arg44 = arg43  ;
-                                                                                                    switch (arg44.hashCode()) {
+                                                                                                    v44 = AbstractCommand.AsyncBackgroundTask_5;
+                                                                                                    v45   = this.getName();
+                                                                                                    v46 = v45  ;
+                                                                                                    switch (v46.hashCode()) {
                                                                                                         case -1320563219: {
-                                                                                                            if (arg44.equals("dupeip")) break;
+                                                                                                            if (v46.equals("dupeip")) break;
                                                                                                             break;
                                                                                                         }
                                                                                                         case 712910260: {
-                                                                                                            if (!arg44.equals("staffhistory")) {
+                                                                                                            if (!v46.equals("staffhistory")) {
                                                                                                                 break;
                                                                                                             }
                                                                                                             ** GOTO lbl171
                                                                                                         }
                                                                                                         case 926934164: {
-                                                                                                            if (!arg44.equals("history")) {
+                                                                                                            if (!v46.equals("history")) {
                                                                                                                 break;
                                                                                                             }
                                                                                                             ** GOTO lbl168
-}
-                                                                                                    arg45   = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
-                                                                                                    v2 = arg45  ;
+                                                                                                        }
+                                                                                                    }
+                                                                                                    v47   = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
+                                                                                                    v2 = v47  ;
                                                                                                     ** GOTO lbl177
-                                                                                                                                                                                                        arg45   = new String[]{"hist", "litebans:history"};
-                                                                                                    v2 = arg45  ;
+                                                                                                                                                                                                        v47   = new String[]{"hist", "litebans:history"};
+                                                                                                    v2 = v47  ;
                                                                                                     ** GOTO lbl177
-                                                                                                                                                                                                        arg45   = new String[]{"staffhist", "litebans:staffhistory"};
-                                                                                                    v2 = arg45  ;
+                                                                                                                                                                                                        v47   = new String[]{"staffhist", "litebans:staffhistory"};
+                                                                                                    v2 = v47  ;
                                                                                                     ** GOTO lbl177
-                                                                                                                                                                                                        arg45   = new String[]{"litebans:" + (String)arg43  };
-                                                                                                    v2 = arg45  ;
-                                                                                                                                                                                                        arg46 = v2;
-                                                                                                    arg47   = v1.append(LiteBansModule_72.c(new LiteBansModule_403(arg2, Arrays.copyOf(arg46, ((String[])arg46).length)).LiteBansModule_31())).append(" seconds").toString();
-                                                                                                    arg41.BaseCoreGenericHandler(arg47  );
+                                                                                                                                                                                                        v47   = new String[]{"litebans:" + (String)v45  };
+                                                                                                    v2 = v47  ;
+                                                                                                                                                                                                        v48 = v2;
+                                                                                                    v49   = v1.append((Object)LiteBansModule_73.c(new LiteBansModule_405(v4, Arrays.copyOf(v48, ((String[])v48).length)).LiteBansModule_31())).append(" seconds").toString();
+                                                                                                    v43.BaseCoreGenericHandler((Object)v49  );
                                                                                                     ** GOTO lbl183
-                                                                                                                                                                                                        arg12.AsyncBackgroundTask_5().c();
+                                                                                                                                                                                                        v14.AsyncBackgroundTask_5().c();
                                                                                                                                                                                                         v3 = KotlinUnitHandler.BaseCoreGenericHandler;
                                                                                                     break;
                                                                                                 }
                                                                                                 case 2: {
-                                                                                                    LiteBansModule_253.BaseCoreGenericHandler(arg2, MessageKey.BaseCoreGenericHandler(arg2.LiteBansModule_194(), false, true));
+                                                                                                    LiteBansModule_254.BaseCoreGenericHandler(v4, MessageKey.BaseCoreGenericHandler(v4.LiteBansModule_195(), false, true));
                                                                                                     v3 = KotlinUnitHandler.BaseCoreGenericHandler;
                                                                                                     break;
                                                                                                 }
-                                                                                                case 3:
-                                                                                                case 4:
-                                                                                                case 5:
-                                                                                                case 6:
+                                                                                                case 3: 
+                                                                                                case 4: 
+                                                                                                case 5: 
+                                                                                                case 6: 
                                                                                                 case 7: {
-                                                                                                    arg35 = arg2.LiteBansModule_401();
-                                                                                                    if (arg35 == 1 && new LiteBansModule_324(0L, 1, null).BaseCoreGenericHandler((int)arg2.q()) == 0 || arg35 == 2 && (long)arg25.length >= arg2.q() || arg35 == 3 && AllHandler_3.BaseCoreGenericHandler(arg12, BansHandler_2.Utf8Handler_2, null, true, 2, null) >= arg2.q()) {
-                                                                                                        arg2.BaseCoreGenericHandler(new LiteBansModule_324(0L, 1, null));
+                                                                                                    v37 = v4.LiteBansModule_403();
+                                                                                                    if (v37 == 1 && new LiteBansModule_325(0L, 1, null).BaseCoreGenericHandler((int)v4.q()) == 0 || v37 == 2 && (long)v27.length >= v4.q() || v37 == 3 && AllHandler_3.BaseCoreGenericHandler(v14, BansHandler_2.Utf8Handler_2, null, true, 2, null) >= v4.q()) {
+                                                                                                        v4.BaseCoreGenericHandler(new LiteBansModule_325(0L, 1, null));
                                                                                                     }
-                                                                                                    while (arg48 < arg27.A().size()) {
-                                                                                                        arg49 = arg27.A().get(arg48);
-                                                                                                        arg50 = (String)arg49;
-                                                                                                        if ((arg50).length() == 0) {
-                                                                                                            ++arg48;
+                                                                                                    while (v50 < v29.A().size()) {
+                                                                                                        v51 = v29.A().get(v50);
+                                                                                                        v52 = (String)v51;
+                                                                                                        if (((CharSequence)v52).length() == 0) {
+                                                                                                            ++v50;
                                                                                                             continue;
                                                                                                         }
-                                                                                                        if (ObjectUtilities.BaseCoreGenericHandler(arg50, (Object)"duration:permanent") && (arg27.F() || !arg27.BanHandler_5() && arg27.ServerSyncService().c() != BanHandler.c)) {
-                                                                                                            arg27.LiteBansModule_31(-2L);
-                                                                                                            arg27.LiteBansModule_401(false);
-                                                                                                            ++arg48;
+                                                                                                        if (ObjectUtilities.BaseCoreGenericHandler((Object)v52, (Object)"duration:permanent") && (v29.F() || !v29.BanHandler_5() && v29.ServerSyncService().c() != BanHandler.c)) {
+                                                                                                            v29.LiteBansModule_31(-2L);
+                                                                                                            v29.LiteBansModule_403(false);
+                                                                                                            ++v50;
                                                                                                             continue;
                                                                                                         }
-                                                                                                        arg50 = LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(arg50, "\\-", (Object)"-");
-                                                                                                        arg51 = arg48 == arg27.A().size() - 1;
-                                                                                                        arg52 = LiteBansModule_81.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(), arg50, "");
-                                                                                                        arg43   = this.plugin((NoneHandler_2)arg27, arg50);
-                                                                                                        if (arg43   == null) ** GOTO lbl214
-                                                                                                        this.plugin((NoneHandler_2)arg27, (LiteBansModule_65)arg43  );
+                                                                                                        v52 = LiteBansModule_435.LiteBansModule_31.BaseCoreGenericHandler(v52, "\\-", (Object)"-");
+                                                                                                        v53 = v50 == v29.A().size() - 1;
+                                                                                                        v54 = LiteBansModule_82.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(), v52, "");
+                                                                                                        v45   = this.plugin((NoneHandler_2)v29, v52);
+                                                                                                        if (v45   == null) ** GOTO lbl214
+                                                                                                        this.plugin((NoneHandler_2)v29, (LiteBansModule_65)v45  );
                                                                                                         ** GOTO lbl304
-                                                                                                                                                                                                                if (!arg27.F() && arg27.BanHandler_5() || arg27.ServerSyncService().c() == BanHandler.c || arg27.DatabaseMonitorService() != -1L || !Character.isDigit(arg50.charAt(0)) || StringUtilities.c(arg50, ':', false, 2, null) || StringUtilities.c(arg50, '%', false, 2, null) || StringUtilities.c(arg50, '*', false, 2, null) || !HexEncodingHelper.BaseCoreGenericHandler.c(arg52) || HexEncodingHelper.BaseCoreGenericHandler(arg50)) ** GOTO lbl296
-                                                                                                        if (!((arg27.AsyncBackgroundTask_21()).length() == 0) || arg50.length() <= 1) ** GOTO lbl251
-                                                                                                        arg53 = BlackHandler.BaseCoreGenericHandler(arg50);
-                                                                                                        ObjectUtilities.BaseCoreGenericHandler(arg25);
-                                                                                                        arg45   = arg25;
-                                                                                                        ObjectUtilities.BaseCoreGenericHandler(arg53);
-                                                                                                        arg46 = arg53;
-                                                                                                        arg54 = arg45  ;
-                                                                                                        arg55 = (arg54).length;
-                                                                                                        for (arg56 = 0; arg56 < arg55; ++arg56) {
-                                                                                                            arg57 = arg58 = arg54[arg56];
-                                                                                                            if (!StringUtilities.BaseCoreGenericHandler(arg57.i(), (String)arg46, arg59)) continue;
-                                                                                                            v4 = arg58;
+                                                                                                                                                                                                                if (!v29.F() && v29.BanHandler_5() || v29.ServerSyncService().c() == BanHandler.c || v29.DatabaseMonitorService() != -1L || !Character.isDigit(v52.charAt(0)) || StringUtilities.c((CharSequence)v52, ':', false, 2, null) || StringUtilities.c((CharSequence)v52, '%', false, 2, null) || StringUtilities.c((CharSequence)v52, '*', false, 2, null) || !LiteBansModule_346.BaseCoreGenericHandler.c(v54) || LiteBansModule_346.BaseCoreGenericHandler(v52)) ** GOTO lbl296
+                                                                                                        if (!(((CharSequence)v29.AsyncBackgroundTask_21()).length() == 0) || v52.length() <= 1) ** GOTO lbl251
+                                                                                                        v55 = BlackHandler.BaseCoreGenericHandler((CharSequence)v52);
+                                                                                                        ObjectUtilities.BaseCoreGenericHandler(v27);
+                                                                                                        v47   = v27;
+                                                                                                        ObjectUtilities.BaseCoreGenericHandler(v55);
+                                                                                                        v48 = v55;
+                                                                                                        v56 = v47  ;
+                                                                                                        v57 = ((Object)v56).length;
+                                                                                                        for (v58 = 0; v58 < v57; ++v58) {
+                                                                                                            v59 = v60 = v56[v58];
+                                                                                                            if (!StringUtilities.BaseCoreGenericHandler(v59.i(), (String)v48, v61)) continue;
+                                                                                                            v4 = v60;
                                                                                                             ** GOTO lbl233
                                                                                                         }
-                                                                                                                                                                                                                if ((arg60 = v4) != null) {
-                                                                                                            arg45   = arg60.i();
-                                                                                                            arg27.LiteBansModule_31((String)arg45  );
-                                                                                                            if (AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg12.e(), arg27.CommandThrottleService())) {
-                                                                                                                arg12.AsyncBackgroundTask_5().BaseCoreGenericHandler((LiteBansModule_178)LambdaMetafactory.metafactory(null, null, null, (Ljava/lang/Object;)Ljava/lang/Object;, BaseCoreGenericHandler(litebans.CommandSenderWrapper litebans.LiteBansModule_82 ), (Llitebans/LiteBansModule_82;)Llitebans/iV;)((CommandSenderWrapper)arg60));
+                                                                                                        v4 = null;
+                                                                                                                                                                                                                if ((v62 = v4) != null) {
+                                                                                                            v47   = v62.i();
+                                                                                                            v29.LiteBansModule_31((String)v47  );
+                                                                                                            if (AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(v14.e(), v29.CommandThrottleService())) {
+                                                                                                                v14.AsyncBackgroundTask_5().BaseCoreGenericHandler((LiteBansModule_179)LambdaMetafactory.metafactory(null, null, null, (Ljava/lang/Object;)Ljava/lang/Object;, BaseCoreGenericHandler(litebans.CommandSenderWrapper litebans.LiteBansModule_83 ), (Llitebans/LiteBansModule_83;)Llitebans/iV;)((CommandSenderWrapper)v62));
                                                                                                             }
-                                                                                                            ++arg48;
+                                                                                                            ++v50;
                                                                                                             continue;
                                                                                                         }
-                                                                                                        arg27.BaseCoreGenericHandler(arg12.c(arg50));
-                                                                                                        if (arg27.AsyncBackgroundTask_22() != null) {
-                                                                                                            arg45   = arg27.AsyncBackgroundTask_22();
-                                                                                                            v5 = arg45  ;
-                                                                                                            if (v5 == null || (v5 = (arg46 = v5.BaseCoreGenericHandler())) == null) {
+                                                                                                        v29.BaseCoreGenericHandler(v14.c(v52));
+                                                                                                        if (v29.AsyncBackgroundTask_22() != null) {
+                                                                                                            v47   = v29.AsyncBackgroundTask_22();
+                                                                                                            v5 = v47  ;
+                                                                                                            if (v5 == null || (v5 = (v48 = v5.BaseCoreGenericHandler())) == null) {
                                                                                                                 v5 = "";
                                                                                                             }
-                                                                                                            arg27.LiteBansModule_31((String)v5);
-                                                                                                            ++arg48;
+                                                                                                            v29.LiteBansModule_31((String)v5);
+                                                                                                            ++v50;
                                                                                                             continue;
                                                                                                         }
-                                                                                                                                                                                                                if ((arg53 = StringUtilities.LiteBansModule_31(arg52)) == null) {
-                                                                                                            if ((arg27.AsyncBackgroundTask_21()).length() == 0) {
-                                                                                                                arg27.LiteBansModule_31(arg50);
+                                                                                                                                                                                                                if ((v55 = StringUtilities.LiteBansModule_31(v54)) == null) {
+                                                                                                            if (((CharSequence)v29.AsyncBackgroundTask_21()).length() == 0) {
+                                                                                                                v29.LiteBansModule_31(v52);
                                                                                                             }
-                                                                                                            ++arg48;
+                                                                                                            ++v50;
                                                                                                             continue;
                                                                                                         }
-                                                                                                        arg61 = LiteBansModule_81.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5.LiteBansModule_31(), arg50, "");
-                                                                                                        arg45   = SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg61);
-                                                                                                        if (arg45   == null) {
-                                                                                                            if (arg51) {
-                                                                                                                if ((arg27.AsyncBackgroundTask_21()).length() == 0) {
-                                                                                                                    arg27.LiteBansModule_31(arg50);
+                                                                                                        v63 = LiteBansModule_82.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5.LiteBansModule_31(), v52, "");
+                                                                                                        v47   = SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v63);
+                                                                                                        if (v47   == null) {
+                                                                                                            if (v53) {
+                                                                                                                if (((CharSequence)v29.AsyncBackgroundTask_21()).length() == 0) {
+                                                                                                                    v29.LiteBansModule_31(v52);
                                                                                                                 } else {
-                                                                                                                    this.LiteBansModule_31((NoneHandler_2)arg27, arg50);
+                                                                                                                    this.LiteBansModule_31((NoneHandler_2)v29, v52);
                                                                                                                 }
-                                                                                                                ++arg48;
+                                                                                                                ++v50;
                                                                                                                 continue;
                                                                                                             }
-                                                                                                            arg62   = arg27.A().get(++arg48);
-                                                                                                            arg46 = (String)arg62  ;
-                                                                                                            arg45   = SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg46);
-                                                                                                            if (arg45   == null) {
-                                                                                                                if ((arg27.AsyncBackgroundTask_21()).length() == 0) {
-                                                                                                                    arg27.LiteBansModule_31(arg50);
-                                                                                                                    arg62   = LiteBansModule_81.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5.LiteBansModule_31(), arg46, "");
-                                                                                                                    arg63 = SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg62  );
-                                                                                                                    if (arg63 == null) {
-                                                                                                                        this.LiteBansModule_31((NoneHandler_2)arg27, (String)arg46);
+                                                                                                            v64   = v29.A().get(++v50);
+                                                                                                            v48 = (String)v64  ;
+                                                                                                            v47   = SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v48);
+                                                                                                            if (v47   == null) {
+                                                                                                                if (((CharSequence)v29.AsyncBackgroundTask_21()).length() == 0) {
+                                                                                                                    v29.LiteBansModule_31(v52);
+                                                                                                                    v64   = LiteBansModule_82.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5.LiteBansModule_31(), (CharSequence)v48, "");
+                                                                                                                    v65 = SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v64  );
+                                                                                                                    if (v65 == null) {
+                                                                                                                        this.LiteBansModule_31((NoneHandler_2)v29, (String)v48);
                                                                                                                     } else {
-                                                                                                                        arg54 = StringUtilities.LiteBansModule_31(LiteBansModule_81.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(), arg46, ""));
-                                                                                                                        if (arg54 == null) {
-                                                                                                                            this.LiteBansModule_31((NoneHandler_2)arg27, (String)arg46);
+                                                                                                                        v56 = StringUtilities.LiteBansModule_31(LiteBansModule_82.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(), (CharSequence)v48, ""));
+                                                                                                                        if (v56 == null) {
+                                                                                                                            this.LiteBansModule_31((NoneHandler_2)v29, (String)v48);
                                                                                                                         } else {
-                                                                                                                            arg27.BaseCoreGenericHandler(arg63.LiteBansModule_31(arg54.doubleValue()));
-                                                                                                                            arg27.LiteBansModule_31(arg27.J() + arg27.BroadcastService());
-                                                                                                                            arg27.BaseCoreGenericHandler((CharSequence)(LiteBansModule_287.BaseCoreGenericHandler(arg54.doubleValue()) + ' ' + arg63.BaseCoreGenericHandler(arg54.doubleValue())));
-}
+                                                                                                                            v29.BaseCoreGenericHandler(v65.LiteBansModule_31(v56.doubleValue()));
+                                                                                                                            v29.LiteBansModule_31(v29.J() + v29.BroadcastService());
+                                                                                                                            v29.BaseCoreGenericHandler((CharSequence)(LiteBansModule_288.BaseCoreGenericHandler(v56.doubleValue()) + ' ' + v65.BaseCoreGenericHandler(v56.doubleValue())));
+                                                                                                                        }
+                                                                                                                    }
                                                                                                                     v6 = KotlinUnitHandler.BaseCoreGenericHandler;
                                                                                                                 } else {
-                                                                                                                    v6 = arg27.n().append(arg50).append(' ').append((String)arg46).append(' ');
+                                                                                                                    v6 = v29.n().append(v52).append(' ').append((String)v48).append(' ');
                                                                                                                 }
-                                                                                                                ++arg48;
+                                                                                                                ++v50;
                                                                                                                 continue;
-}
-                                                                                                        arg27.BaseCoreGenericHandler(arg45  .LiteBansModule_31(arg53.doubleValue()));
-                                                                                                        arg27.LiteBansModule_31(arg27.J() + arg27.BroadcastService());
-                                                                                                        arg27.BaseCoreGenericHandler((CharSequence)(LiteBansModule_287.BaseCoreGenericHandler(arg53.doubleValue()) + ' ' + arg45  .BaseCoreGenericHandler(arg53.doubleValue())));
+                                                                                                            }
+                                                                                                        }
+                                                                                                        v29.BaseCoreGenericHandler(v47  .LiteBansModule_31(v55.doubleValue()));
+                                                                                                        v29.LiteBansModule_31(v29.J() + v29.BroadcastService());
+                                                                                                        v29.BaseCoreGenericHandler((CharSequence)(LiteBansModule_288.BaseCoreGenericHandler(v55.doubleValue()) + ' ' + v47  .BaseCoreGenericHandler(v55.doubleValue())));
                                                                                                         ** GOTO lbl304
-                                                                                                                                                                                                                if ((arg27.AsyncBackgroundTask_21()).length() == 0) {
-                                                                                                            arg27.LiteBansModule_31(arg50);
+                                                                                                                                                                                                                if (((CharSequence)v29.AsyncBackgroundTask_21()).length() == 0) {
+                                                                                                            v29.LiteBansModule_31(v52);
                                                                                                         } else {
-                                                                                                            this.LiteBansModule_31((NoneHandler_2)arg27, arg50);
-                                                                                                                                                                                                                        if (((BroadcastService)arg53.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class)).GnuSparseMapHandler() == 0) {
-                                                                                                                throw arg13;
-}
-                                                                                                                                                                                                                ++arg48;
+                                                                                                            this.LiteBansModule_31((NoneHandler_2)v29, v52);
+                                                                                                            v55 = this;
+                                                                                                            if (((BroadcastService)v55.LiteBansModule_241().BaseCoreGenericHandler(BroadcastService.class)).GnuSparseMapHandler() == 0) {
+                                                                                                                throw v15;
+                                                                                                            }
+                                                                                                        }
+                                                                                                                                                                                                                ++v50;
                                                                                                     }
-                                                                                                    if (arg27.DatabaseMonitorService() > 0L) {
-                                                                                                        arg27.LiteBansModule_401(true);
+                                                                                                    if (v29.DatabaseMonitorService() > 0L) {
+                                                                                                        v29.LiteBansModule_403(true);
                                                                                                     }
                                                                                                     v3 = KotlinUnitHandler.BaseCoreGenericHandler;
                                                                                                     break;
                                                                                                 }
                                                                                                 default: {
                                                                                                     v3 = KotlinUnitHandler.BaseCoreGenericHandler;
-}
-                                                                                            arg64 = arg27;
-                                                                                                                                                                                        arg66 = NoneHandler_2.BaseCoreGenericHandler((NoneHandler_2)arg64, null, 1, null);
-                                                                                            if (!arg64.HoverTextFormatter()) ** GOTO lbl-1000
-                                                                                            arg67 = arg65;
-                                                                                            arg43   = arg67;
-                                                                                            if (!((ConfigService)arg43  .LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().ServerSyncService()) {
+                                                                                                }
+                                                                                            }
+                                                                                            v66 = v29;
+                                                                                            v67 = this;
+                                                                                            v68 = NoneHandler_2.BaseCoreGenericHandler((NoneHandler_2)v66, null, 1, null);
+                                                                                            if (!v66.HoverTextFormatter()) ** GOTO lbl-1000
+                                                                                            v69 = v67;
+                                                                                            v45   = v69;
+                                                                                            if (!((ConfigService)v45  .LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().ServerSyncService()) {
+                                                                                                v7 = true;
                                                                                             } else lbl-1000:
                                                                                                                                                                                         {
+                                                                                                v7 = false;
                                                                                             }
-                                                                                            arg68 = v7;
-                                                                                            switch (LiteBansModule_43.BaseCoreGenericHandler[arg64.ServerSyncService().ordinal()]) {
-                                                                                                case 4:
+                                                                                            v70 = v7;
+                                                                                            switch (LiteBansModule_43.BaseCoreGenericHandler[v66.ServerSyncService().ordinal()]) {
+                                                                                                case 4: 
                                                                                                 case 5: {
-                                                                                                    if (arg64.LiteBansModule_401()) {
-                                                                                                        arg69 = new String[]{"litebans.temp" + arg64.ServerSyncService(), "litebans + " + arg64.ServerSyncService(), "litebans.ip" + arg64.ServerSyncService()};
-                                                                                                        v8 = arg69;
+                                                                                                    if (v66.LiteBansModule_403()) {
+                                                                                                        v71 = new String[]{"litebans.temp" + v66.ServerSyncService(), "litebans + " + v66.ServerSyncService(), "litebans.ip" + v66.ServerSyncService()};
+                                                                                                        v8 = v71;
                                                                                                     } else {
-                                                                                                        arg69 = new String[]{"litebans + " + arg64.ServerSyncService(), "litebans.ip" + arg64.ServerSyncService()};
-                                                                                                        v8 = arg43   = arg69;
+                                                                                                        v71 = new String[]{"litebans + " + v66.ServerSyncService(), "litebans.ip" + v66.ServerSyncService()};
+                                                                                                        v8 = v45   = v71;
                                                                                                     }
-                                                                                                    if (arg68) {
-                                                                                                        arg69 = arg65;
-                                                                                                        arg45   = "litebans.ip" + arg64.ServerSyncService();
-                                                                                                        arg70 = arg69.AsyncBackgroundTask_5();
-                                                                                                        arg54 = MessageHandler.BaseCoreGenericHandler;
-                                                                                                        arg71 = arg70;
-                                                                                                        arg58 = arg71;
-                                                                                                        arg56 = arg58.e((String)arg45  ) == false ? 1 : 0;
-                                                                                                        arg72 = MessageKey.cZ;
-                                                                                                        arg57 = arg54;
-                                                                                                        if (arg56 != 0) {
-                                                                                                            arg73 = arg57;
-                                                                                                            arg73.BaseCoreGenericHandler(arg72);
+                                                                                                    if (v70) {
+                                                                                                        v71 = v67;
+                                                                                                        v47   = "litebans.ip" + v66.ServerSyncService();
+                                                                                                        v72 = v71.AsyncBackgroundTask_5();
+                                                                                                        v56 = MessageHandler.BaseCoreGenericHandler;
+                                                                                                        v73 = v72;
+                                                                                                        v60 = v73;
+                                                                                                        v58 = v60.e((String)v47  ) == false ? 1 : 0;
+                                                                                                        v74 = MessageKey.cZ;
+                                                                                                        v59 = v56;
+                                                                                                        if (v58 != 0) {
+                                                                                                            v75 = v59;
+                                                                                                            v75.BaseCoreGenericHandler(v74);
                                                                                                             throw new CommandExitException();
-}
-                                                                                                    CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)arg65, Arrays.copyOf(arg43  , arg43  .length));
+                                                                                                        }
+                                                                                                    }
+                                                                                                    CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)v67, Arrays.copyOf(v45  , v45  .length));
                                                                                                     v9 = KotlinUnitHandler.BaseCoreGenericHandler;
                                                                                                     break;
                                                                                                 }
                                                                                                 case 6: {
-                                                                                                    arg43   = arg65;
-                                                                                                    arg69 = "litebans + " + arg64.ServerSyncService();
-                                                                                                    arg46 = arg43  .AsyncBackgroundTask_5();
-                                                                                                    arg74 = MessageHandler.BaseCoreGenericHandler;
-                                                                                                    arg54 = arg46;
-                                                                                                    arg75 = arg54;
-                                                                                                    arg76 = arg75.e((String)arg69) == false;
-                                                                                                    arg77 = MessageKey.cZ;
-                                                                                                    arg78 = arg74;
-                                                                                                    if (arg76) {
-                                                                                                        arg79 = arg78;
-                                                                                                        arg79.BaseCoreGenericHandler(arg77);
+                                                                                                    v45   = v67;
+                                                                                                    v71 = "litebans + " + v66.ServerSyncService();
+                                                                                                    v48 = v45  .AsyncBackgroundTask_5();
+                                                                                                    v76 = MessageHandler.BaseCoreGenericHandler;
+                                                                                                    v56 = v48;
+                                                                                                    v77 = v56;
+                                                                                                    v78 = v77.e((String)v71) == false;
+                                                                                                    v79 = MessageKey.cZ;
+                                                                                                    v80 = v76;
+                                                                                                    if (v78) {
+                                                                                                        v81 = v80;
+                                                                                                        v81.BaseCoreGenericHandler(v79);
                                                                                                         throw new CommandExitException();
                                                                                                     }
                                                                                                     v9 = KotlinUnitHandler.BaseCoreGenericHandler;
                                                                                                     break;
                                                                                                 }
-                                                                                                case 1:
-                                                                                                case 2:
+                                                                                                case 1: 
+                                                                                                case 2: 
                                                                                                 case 3: {
-                                                                                                    arg43   = arg64.F() != false ? "litebans.modify" : "litebans + " + arg64.ServerSyncService();
-                                                                                                    arg69 = new String[]{arg43  , (String)arg43   + ".own"};
-                                                                                                    CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)arg65, (String[])arg69);
+                                                                                                    v45   = v66.F() != false ? "litebans.modify" : "litebans + " + v66.ServerSyncService();
+                                                                                                    v71 = new String[]{v45  , (String)v45   + ".own"};
+                                                                                                    CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)v67, (String[])v71);
                                                                                                     v9 = KotlinUnitHandler.BaseCoreGenericHandler;
                                                                                                     break;
                                                                                                 }
                                                                                                 default: {
                                                                                                     AssertionUtilities.BaseCoreGenericHandler();
                                                                                                     throw new CommandExitException();
-}
-                                                                                            if (!arg64.BanHandler_5() && arg66) {
-                                                                                                arg80 = arg65;
-                                                                                                arg81 = "litebans.ip" + arg64.ServerSyncService() + ".wildcard";
-                                                                                                arg69 = arg80.AsyncBackgroundTask_5();
-                                                                                                arg46 = MessageHandler.BaseCoreGenericHandler;
-                                                                                                arg82 = arg69;
-                                                                                                arg83 = arg82;
-                                                                                                arg84 = arg83.e(arg81) == false;
-                                                                                                arg85 = MessageKey.cZ;
-                                                                                                arg86 = arg46;
-                                                                                                if (arg84) {
-                                                                                                    arg87 = arg86;
-                                                                                                    arg87.BaseCoreGenericHandler(arg85);
+                                                                                                }
+                                                                                            }
+                                                                                            if (!v66.BanHandler_5() && v68) {
+                                                                                                v82 = v67;
+                                                                                                v83 = "litebans.ip" + v66.ServerSyncService() + ".wildcard";
+                                                                                                v71 = v82.AsyncBackgroundTask_5();
+                                                                                                v48 = MessageHandler.BaseCoreGenericHandler;
+                                                                                                v84 = v71;
+                                                                                                v85 = v84;
+                                                                                                v86 = v85.e(v83) == false;
+                                                                                                v87 = MessageKey.cZ;
+                                                                                                v88 = v48;
+                                                                                                if (v86) {
+                                                                                                    v89 = v88;
+                                                                                                    v89.BaseCoreGenericHandler(v87);
                                                                                                     throw new CommandExitException();
-}
-                                                                                            arg27.BaseCoreGenericHandler(InitHandler.LiteBansModule_194);
-                                                                                            if ((arg27.AsyncBackgroundTask_21()).length() == 0) {
-                                                                                                arg64 = BanHandler_3.GnuSparseMapHandler;
-                                                                                                arg65 = arg27.ServerSyncService();
-                                                                                                arg88 = arg27.BanHandler_5();
-                                                                                                arg89 = MessageKey.cC;
-                                                                                                if (arg88) {
-                                                                                                    v10 = MessageKey.c(arg65 + "_USAGE");
+                                                                                                }
+                                                                                            }
+                                                                                            v29.BaseCoreGenericHandler(InitHandler.LiteBansModule_195);
+                                                                                            if (((CharSequence)v29.AsyncBackgroundTask_21()).length() == 0) {
+                                                                                                v66 = BanHandler_3.GnuSparseMapHandler;
+                                                                                                v67 = v29.ServerSyncService();
+                                                                                                v90 = v29.BanHandler_5();
+                                                                                                v91 = MessageKey.cC;
+                                                                                                if (v90) {
+                                                                                                    v10 = MessageKey.c(v67 + "_USAGE");
                                                                                                 } else {
-                                                                                                    switch (LiteBansModule_190.BaseCoreGenericHandler[arg65.ordinal()]) {
+                                                                                                    switch (LiteBansModule_191.BaseCoreGenericHandler[v67.ordinal()]) {
                                                                                                         case 1: {
-                                                                                                            if (arg89 == MessageKey.LockdownCommandHandler) {
+                                                                                                            if (v91 == MessageKey.LockdownCommandHandler) {
                                                                                                                 v11 = MessageKey.NullHandler;
                                                                                                                 break;
                                                                                                             }
-                                                                                                            v11 = MessageKey.LiteBansModule_102;
+                                                                                                            v11 = MessageKey.LiteBansModule_103;
                                                                                                             break;
                                                                                                         }
                                                                                                         case 2: {
-                                                                                                            if (arg89 == MessageKey.LockdownCommandHandler) {
+                                                                                                            if (v91 == MessageKey.LockdownCommandHandler) {
                                                                                                                 v11 = MessageKey.ah;
                                                                                                                 break;
                                                                                                             }
-                                                                                                            v11 = MessageKey.HexEncodingHelper;
+                                                                                                            v11 = MessageKey.LiteBansModule_66;
                                                                                                             break;
                                                                                                         }
                                                                                                         case 3: {
@@ -434,39 +466,40 @@ extends UnbanCommand {
                                                                                                             break;
                                                                                                         }
                                                                                                         default: {
-                                                                                                            v11 = arg89;
-}
+                                                                                                            v11 = v91;
+                                                                                                        }
+                                                                                                    }
                                                                                                     v10 = v11;
                                                                                                 }
-                                                                                                arg90 = v10;
-                                                                                                arg89 = MessageHandler.BaseCoreGenericHandler;
-                                                                                                arg91 = arg65 == BanHandler.g;
-                                                                                                arg92 = arg89;
-                                                                                                if (arg91) {
-                                                                                                    arg46 = arg92;
-                                                                                                    arg46.BaseCoreGenericHandler(arg90);
+                                                                                                v92 = v10;
+                                                                                                v91 = MessageHandler.BaseCoreGenericHandler;
+                                                                                                v93 = v67 == BanHandler.g;
+                                                                                                v94 = v91;
+                                                                                                if (v93) {
+                                                                                                    v48 = v94;
+                                                                                                    v48.BaseCoreGenericHandler(v92);
                                                                                                     throw new CommandExitException();
                                                                                                 }
-                                                                                                arg93 = arg64;
-                                                                                                arg94 = MessageKey.LockdownCommandHandler;
-                                                                                                if (arg88) {
-                                                                                                    v12 = MessageKey.c(arg65 + "_USAGE");
+                                                                                                v95 = v66;
+                                                                                                v96 = MessageKey.LockdownCommandHandler;
+                                                                                                if (v90) {
+                                                                                                    v12 = MessageKey.c(v67 + "_USAGE");
                                                                                                 } else {
-                                                                                                    switch (LiteBansModule_190.BaseCoreGenericHandler[arg65.ordinal()]) {
+                                                                                                    switch (LiteBansModule_191.BaseCoreGenericHandler[v67.ordinal()]) {
                                                                                                         case 1: {
-                                                                                                            if (arg94 == MessageKey.LockdownCommandHandler) {
+                                                                                                            if (v96 == MessageKey.LockdownCommandHandler) {
                                                                                                                 v13 = MessageKey.NullHandler;
                                                                                                                 break;
                                                                                                             }
-                                                                                                            v13 = MessageKey.LiteBansModule_102;
+                                                                                                            v13 = MessageKey.LiteBansModule_103;
                                                                                                             break;
                                                                                                         }
                                                                                                         case 2: {
-                                                                                                            if (arg94 == MessageKey.LockdownCommandHandler) {
+                                                                                                            if (v96 == MessageKey.LockdownCommandHandler) {
                                                                                                                 v13 = MessageKey.ah;
                                                                                                                 break;
                                                                                                             }
-                                                                                                            v13 = MessageKey.HexEncodingHelper;
+                                                                                                            v13 = MessageKey.LiteBansModule_66;
                                                                                                             break;
                                                                                                         }
                                                                                                         case 3: {
@@ -474,375 +507,399 @@ extends UnbanCommand {
                                                                                                             break;
                                                                                                         }
                                                                                                         default: {
-                                                                                                            v13 = arg94;
-}
+                                                                                                            v13 = v96;
+                                                                                                        }
+                                                                                                    }
                                                                                                     v12 = v13;
                                                                                                 }
-                                                                                                arg89 = v12;
-                                                                                                MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler(arg90, arg88 == false, arg89));
+                                                                                                v91 = v12;
+                                                                                                MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(LiteBansModule_243.BaseCoreGenericHandler(v92, v90 == false, (CharSequence)v91));
                                                                                                 throw new CommandExitException();
                                                                                             }
-                                                                                            this.plugin((NoneHandler_2)arg27);
-                                                                                            arg27.LiteBansModule_31(arg27.BaseCoreGenericHandler(this));
-                                                                                            arg64 = CommandArgumentUtils.LiteBansModule_31(this, arg27.AsyncBackgroundTask_21());
-                                                                                            v14 = arg64;
-                                                                                            v15 = v14 != null && (v14 = (arg95 = v14.LiteBansModule_240())) != null ? LiteBansModule_242.BaseCoreGenericHandler((String)v14, 32) : (arg65 = null);
-                                                                                            if (LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(arg26) || StringUtilities.BaseCoreGenericHandler(arg27.LiteBansModule_31(), arg26, true)) break;
-                                                                                            if (!LiteBansModule_181.LiteBansModule_194.BaseCoreGenericHandler(arg26)) break;
-                                                                                            v16 = arg27.LiteBansModule_31();
-                                                                                            arg96 = arg27.CommandThrottleService();
-                                                                                            v17 = arg96;
-                                                                                            if (v17 == null && (v17 = arg65) == null) {
-                                                                                                v17 = arg12.AsyncBackgroundTask_5().ServerSyncService();
+                                                                                            this.plugin((NoneHandler_2)v29);
+                                                                                            v29.LiteBansModule_31(v29.BaseCoreGenericHandler(this));
+                                                                                            v66 = CommandArgumentUtils.LiteBansModule_31(this, v29.AsyncBackgroundTask_21());
+                                                                                            v14 = v66;
+                                                                                            v15 = v14 != null && (v14 = (v97 = v14.LiteBansModule_241())) != null ? LiteBansModule_243.BaseCoreGenericHandler((String)v14, 32) : (v67 = null);
+                                                                                            if (LiteBansModule_182.LiteBansModule_195.LiteBansModule_31(v28) || StringUtilities.BaseCoreGenericHandler(v29.LiteBansModule_31(), v28, true)) break block272;
+                                                                                            if (!LiteBansModule_182.LiteBansModule_195.BaseCoreGenericHandler(v28)) break block273;
+                                                                                            v16 = v29.LiteBansModule_31();
+                                                                                            v98 = v29.CommandThrottleService();
+                                                                                            v17 = v98;
+                                                                                            if (v17 == null && (v17 = v67) == null) {
+                                                                                                v17 = v14.AsyncBackgroundTask_5().ServerSyncService();
                                                                                             }
-                                                                                            if (StringUtilities.BaseCoreGenericHandler(v16, (String)v17, true)) break;
+                                                                                            if (StringUtilities.BaseCoreGenericHandler(v16, (String)v17, true)) break block272;
                                                                                         }
-                                                                                        arg97 = v1;
-                                                                                        arg98 = new String[]{"litebans.server + " + arg27.LiteBansModule_31(), "litebans.server + " + arg27.LiteBansModule_31() + '.' + arg27.ServerSyncService().c()};
-                                                                                        arg99 = arg97;
-                                                                                        arg100 = Arrays.copyOf(arg98, arg98.length);
-                                                                                        arg101 = arg100;
-                                                                                        arg102 = arg101.length;
-                                                                                        for (arg103 = 0; arg103 < arg102; ++arg103) {
-                                                                                            arg104 = arg105 = arg101[arg103];
-                                                                                            if (!arg99.e(arg104)) continue;
-                                                                                            break;
-}
+                                                                                        v99 = v1;
+                                                                                        v100 = new String[]{"litebans.server + " + v29.LiteBansModule_31(), "litebans.server + " + v29.LiteBansModule_31() + '.' + v29.ServerSyncService().c()};
+                                                                                        v101 = v99;
+                                                                                        v102 = Arrays.copyOf(v100, v100.length);
+                                                                                        v103 = v102;
+                                                                                        v104 = v103.length;
+                                                                                        for (v105 = 0; v105 < v104; ++v105) {
+                                                                                            v106 = v107 = v103[v105];
+                                                                                            if (!v101.e(v106)) continue;
+                                                                                            v18 = true;
+                                                                                            break block267;
+                                                                                        }
+                                                                                        v18 = false;
+                                                                                    }
                                                                                     if (v18 == false) {
-                                                                                        arg27.AsyncBackgroundTask_5(LiteBansModule_181.LiteBansModule_194.BaseCoreGenericHandler(arg26, arg12.AsyncBackgroundTask_5().ServerSyncService(), v1));
-}
-                                                                                arg106 = LiteBansModule_181.LiteBansModule_194.BaseCoreGenericHandler(arg12.AsyncBackgroundTask_5().ServerSyncService(), arg27.LiteBansModule_31()) != false || arg65 != null && LiteBansModule_181.LiteBansModule_194.BaseCoreGenericHandler((String)arg65, arg27.LiteBansModule_31()) != false;
-                                                                                arg107   = arg2;
-                                                                                if (arg107  .g()) {
-                                                                                    arg41 = arg107  ;
-                                                                                    arg47   = arg27.LiteBansModule_31();
-                                                                                    arg41.BaseCoreGenericHandler(arg47  );
+                                                                                        v29.AsyncBackgroundTask_5(LiteBansModule_182.LiteBansModule_195.BaseCoreGenericHandler(v28, v14.AsyncBackgroundTask_5().ServerSyncService(), v1));
+                                                                                    }
                                                                                 }
-                                                                                if (arg64 == null) break;
-                                                                                arg108 = arg2;
-                                                                                arg109 = arg64.g();
-                                                                                arg110 = arg64.i();
-                                                                                arg107   = new LiteBansModule_113(arg27.AsyncBackgroundTask_21(), arg64.i(), arg108.LiteBansModule_194().SetHandler() != false ? arg109 : arg110, arg64.BaseCoreGenericHandler(), arg64.LiteBansModule_31(), (CommandSenderWrapper)arg64, null, 64, null);
-                                                                                arg27.BaseCoreGenericHandler(new LiteBansModule_297(arg107  .AsyncBackgroundTask_5(), arg107  .BaseCoreGenericHandler(), arg107  .c(), new Date(arg27.J())));
-                                                                                break;
+                                                                                v108 = LiteBansModule_182.LiteBansModule_195.BaseCoreGenericHandler(v14.AsyncBackgroundTask_5().ServerSyncService(), v29.LiteBansModule_31()) != false || v67 != null && LiteBansModule_182.LiteBansModule_195.BaseCoreGenericHandler((String)v67, v29.LiteBansModule_31()) != false;
+                                                                                v109   = v4;
+                                                                                if (v109  .g()) {
+                                                                                    v43 = v109  ;
+                                                                                    v49   = v29.LiteBansModule_31();
+                                                                                    v43.BaseCoreGenericHandler((Object)v49  );
+                                                                                }
+                                                                                if (v66 == null) break block274;
+                                                                                v110 = v4;
+                                                                                v111 = v66.g();
+                                                                                v112 = v66.i();
+                                                                                v109   = new LiteBansModule_114(v29.AsyncBackgroundTask_21(), v66.i(), v110.LiteBansModule_195().SetHandler() != false ? v111 : v112, v66.BaseCoreGenericHandler(), v66.LiteBansModule_31(), (CommandSenderWrapper)v66, null, 64, null);
+                                                                                v29.BaseCoreGenericHandler(new LiteBansModule_298(v109  .AsyncBackgroundTask_5(), v109  .BaseCoreGenericHandler(), v109  .c(), new Date(v29.J())));
+                                                                                break block275;
                                                                             }
-                                                                            arg27.BaseCoreGenericHandler(arg12.c(arg27.AsyncBackgroundTask_21()));
-                                                                            arg108 = arg27.AsyncBackgroundTask_22();
-                                                                            v19 = arg108;
-                                                                            if (!(v19 != null && (v19 = (arg111 = v19.LiteBansModule_31())) != null ? !StringUtilities.BaseCoreGenericHandler(v19, '#', false, 2, null) : false)) {
-                                                                                arg27.BaseCoreGenericHandler((LiteBansModule_297)null);
+                                                                            v29.BaseCoreGenericHandler(v14.c(v29.AsyncBackgroundTask_21()));
+                                                                            v110 = v29.AsyncBackgroundTask_22();
+                                                                            v19 = v110;
+                                                                            if (!(v19 != null && (v19 = (v113 = v19.LiteBansModule_31())) != null ? !StringUtilities.BaseCoreGenericHandler((CharSequence)v19, '#', false, 2, null) : false)) {
+                                                                                v29.BaseCoreGenericHandler((LiteBansModule_298)null);
                                                                             }
-                                                                            if (arg27.AsyncBackgroundTask_22() != null) break;
-                                                                            arg108 = arg27.AsyncBackgroundTask_21();
-                                                                            if (!HexEncodingHelper.BaseCoreGenericHandler.i((String)arg108)) break;
-                                                                            arg27.m(true);
-                                                                            arg108 = MessageHandler.BaseCoreGenericHandler;
-                                                                            arg112 = v1;
-                                                                            arg113   = "litebans.ip" + arg27.ServerSyncService().c();
-                                                                            arg114 = arg112;
-                                                                            arg115 = arg114.e(arg113  ) == false;
-                                                                            arg113   = MessageKey.cZ;
-                                                                            arg114 = arg108;
-                                                                            if (arg115) {
-                                                                                arg116 = arg114;
-                                                                                arg116.BaseCoreGenericHandler(arg113  );
+                                                                            if (v29.AsyncBackgroundTask_22() != null) break block276;
+                                                                            v110 = v29.AsyncBackgroundTask_21();
+                                                                            if (!LiteBansModule_346.BaseCoreGenericHandler.i((String)v110)) break block277;
+                                                                            v29.m(true);
+                                                                            v110 = MessageHandler.BaseCoreGenericHandler;
+                                                                            v114 = v1;
+                                                                            v115   = "litebans.ip" + v29.ServerSyncService().c();
+                                                                            v116 = v114;
+                                                                            v117 = v116.e(v115  ) == false;
+                                                                            v115   = MessageKey.cZ;
+                                                                            v116 = v110;
+                                                                            if (v117) {
+                                                                                v118 = v116;
+                                                                                v118.BaseCoreGenericHandler(v115  );
                                                                                 throw new CommandExitException();
                                                                             }
-                                                                            arg27.BaseCoreGenericHandler(new LiteBansModule_297("#offline#", "#offline#", arg27.AsyncBackgroundTask_21(), new Date()));
-                                                                            break;
+                                                                            v29.BaseCoreGenericHandler(new LiteBansModule_298("#offline#", "#offline#", v29.AsyncBackgroundTask_21(), new Date()));
+                                                                            break block278;
                                                                         }
-                                                                        if (!arg27.BanHandler_5()) break;
-                                                                        arg108 = CommandArgumentUtils.AsyncBackgroundTask_5(this, arg27.AsyncBackgroundTask_21());
-                                                                        if (ObjectUtilities.BaseCoreGenericHandler(arg108, arg27.AsyncBackgroundTask_21())) break;
-                                                                        arg117 = AllHandler_3.BaseCoreGenericHandler(arg12, (String)arg108, arg27.ServerSyncService(), null, arg27.BanHandler_2() == false, 4, null);
-                                                                        if (arg27.BanHandler_2()) break;
-                                                                        v20 = arg117;
-                                                                        v21 = v20 != null ? arg12.BaseCoreGenericHandler(v20) : false;
-                                                                        if (!v21) break;
+                                                                        if (!v29.BanHandler_5()) break block279;
+                                                                        v110 = CommandArgumentUtils.AsyncBackgroundTask_5(this, v29.AsyncBackgroundTask_21());
+                                                                        if (ObjectUtilities.BaseCoreGenericHandler(v110, (Object)v29.AsyncBackgroundTask_21())) break block280;
+                                                                        v119 = AllHandler_3.BaseCoreGenericHandler(v14, (String)v110, v29.ServerSyncService(), null, v29.BanHandler_2() == false, 4, null);
+                                                                        if (v29.BanHandler_2()) break block281;
+                                                                        v20 = v119;
+                                                                        v21 = v20 != null ? v14.BaseCoreGenericHandler(v20) : false;
+                                                                        if (!v21) break block280;
                                                                     }
-                                                                    v22 = arg117;
-                                                                    arg27.BaseCoreGenericHandler(arg12.c(v22 != null ? v22.DatabaseMonitorService() : null));
-                                                                    v23 = arg117;
-                                                                    if (v23 == null || (v23 = (arg118 = v23.m())) == null) {
-                                                                        v23 = arg27.LiteBansModule_31();
+                                                                    v22 = v119;
+                                                                    v29.BaseCoreGenericHandler(v14.c(v22 != null ? v22.DatabaseMonitorService() : null));
+                                                                    v23 = v119;
+                                                                    if (v23 == null || (v23 = (v120 = v23.m())) == null) {
+                                                                        v23 = v29.LiteBansModule_31();
                                                                     }
-                                                                    arg27.AsyncBackgroundTask_5((String)v23);
-                                                                    arg27.BaseCoreGenericHandler(arg117);
+                                                                    v29.AsyncBackgroundTask_5((String)v23);
+                                                                    v29.BaseCoreGenericHandler(v119);
                                                                 }
-                                                                if (arg27.AsyncBackgroundTask_22() != null || !HexEncodingHelper.BaseCoreGenericHandler.AsyncBackgroundTask_5(arg27.AsyncBackgroundTask_21())) break;
-                                                                arg119 = AllHandler_3.BaseCoreGenericHandler(arg12, arg27.AsyncBackgroundTask_21(), arg27.ServerSyncService(), null, arg27.BanHandler_2() == false, 4, null);
-                                                                if (arg27.BanHandler_2()) break;
-                                                                v24 = arg119;
-                                                                v25 = v24 != null ? arg12.BaseCoreGenericHandler(v24) : false;
-                                                                if (!v25) break;
+                                                                if (v29.AsyncBackgroundTask_22() != null || !LiteBansModule_346.BaseCoreGenericHandler.AsyncBackgroundTask_5(v29.AsyncBackgroundTask_21())) break block279;
+                                                                v121 = AllHandler_3.BaseCoreGenericHandler(v14, v29.AsyncBackgroundTask_21(), v29.ServerSyncService(), null, v29.BanHandler_2() == false, 4, null);
+                                                                if (v29.BanHandler_2()) break block282;
+                                                                v24 = v121;
+                                                                v25 = v24 != null ? v14.BaseCoreGenericHandler(v24) : false;
+                                                                if (!v25) break block279;
                                                             }
-                                                            v26 = arg119;
-                                                            arg27.BaseCoreGenericHandler(arg12.c(v26 != null ? v26.DatabaseMonitorService() : null));
-                                                            v27 = arg119;
-                                                            if (v27 == null || (v27 = (arg120 = v27.m())) == null) {
-                                                                v27 = arg27.LiteBansModule_31();
+                                                            v26 = v121;
+                                                            v29.BaseCoreGenericHandler(v14.c(v26 != null ? v26.DatabaseMonitorService() : null));
+                                                            v27 = v121;
+                                                            if (v27 == null || (v27 = (v122 = v27.m())) == null) {
+                                                                v27 = v29.LiteBansModule_31();
                                                             }
-                                                            arg27.AsyncBackgroundTask_5((String)v27);
-                                                            arg27.BaseCoreGenericHandler(arg119);
+                                                            v29.AsyncBackgroundTask_5((String)v27);
+                                                            v29.BaseCoreGenericHandler(v121);
                                                         }
-                                                        if (arg27.AsyncBackgroundTask_22() == null) {
-                                                                                                                        arg122 = arg27.AsyncBackgroundTask_21();
-                                                            arg123 = arg121;
-                                                            arg124 = ((ConfigService)arg123.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().af();
-                                                            if (arg124) {
-                                                                if (HexEncodingHelper.BaseCoreGenericHandler(arg122)) {
-                                                                    v28 = LiteBansModule_50.c.LiteBansModule_194(arg122);
+                                                        if (v29.AsyncBackgroundTask_22() == null) {
+                                                            v123 = this;
+                                                            v124 = v29.AsyncBackgroundTask_21();
+                                                            v125 = v123;
+                                                            v126 = ((ConfigService)v125.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().af();
+                                                            if (v126) {
+                                                                if (LiteBansModule_346.BaseCoreGenericHandler(v124)) {
+                                                                    v28 = LiteBansModule_50.c.LiteBansModule_195(v124);
                                                                     if (v28 == null) {
+                                                                        v29 = null;
                                                                     } else {
-                                                                        arg125 = v28;
-                                                                        v29 = new LiteBansModule_297(arg125, arg122, "#", new Date());
-} else {
-                                                                    v30 = LiteBansModule_50.c.BaseCoreGenericHandler(arg122);
+                                                                        v127 = v28;
+                                                                        v29 = new LiteBansModule_298(v127, v124, "#", new Date());
+                                                                    }
+                                                                } else {
+                                                                    v30 = LiteBansModule_50.c.BaseCoreGenericHandler(v124);
                                                                     if (v30 == null) {
+                                                                        v29 = null;
                                                                     } else {
-                                                                        arg126 = v30;
-                                                                        v31 = arg126.BaseCoreGenericHandler();
-                                                                        v29 = new LiteBansModule_297(arg126.AsyncBackgroundTask_5(), v31 != null ? v31.toString() : null, null, new Date());
-} else {
-                                                                if (HexEncodingHelper.BaseCoreGenericHandler(arg122)) {
-                                                                    new LiteBansModule_297(LiteBansModule_242.BaseCoreGenericHandler(arg122, 16), arg122, "#", new Date());
+                                                                        v128 = v30;
+                                                                        v31 = v128.BaseCoreGenericHandler();
+                                                                        v29 = new LiteBansModule_298(v128.AsyncBackgroundTask_5(), v31 != null ? v31.toString() : null, null, new Date());
+                                                                    }
                                                                 }
-                                                                v29 = new LiteBansModule_297(LiteBansModule_242.BaseCoreGenericHandler(arg122, 16), LiteBansModule_242.BaseCoreGenericHandler(arg122), "#", new Date());
+                                                            } else {
+                                                                if (LiteBansModule_346.BaseCoreGenericHandler(v124)) {
+                                                                    new LiteBansModule_298(LiteBansModule_243.BaseCoreGenericHandler(v124, 16), v124, "#", new Date());
+                                                                }
+                                                                v29 = new LiteBansModule_298(LiteBansModule_243.BaseCoreGenericHandler(v124, 16), LiteBansModule_243.BaseCoreGenericHandler(v124), "#", new Date());
                                                             }
-                                                            v32 = arg108 = v29;
+                                                            v32 = v110 = v29;
                                                             if (v32 == null) {
-                                                                arg27.BaseCoreGenericHandler(arg12, MessageKey.aN.BaseCoreGenericHandler("player", arg27.AsyncBackgroundTask_21()));
+                                                                v29.BaseCoreGenericHandler(v14, (Object)MessageKey.aN.BaseCoreGenericHandler("player", (Object)v29.AsyncBackgroundTask_21()));
                                                                 throw new CommandExitException();
                                                             }
-                                                            arg27.BaseCoreGenericHandler((LiteBansModule_297)v32);
-}
-                                                    v33 = arg108 = arg27.AsyncBackgroundTask_22();
+                                                            v29.BaseCoreGenericHandler((LiteBansModule_298)v32);
+                                                        }
+                                                    }
+                                                    v33 = v110 = v29.AsyncBackgroundTask_22();
                                                     if ((v33 != null ? v33.LiteBansModule_31() : null) != null) {
-                                                        v34 = arg27.AsyncBackgroundTask_22();
+                                                        v34 = v29.AsyncBackgroundTask_22();
                                                         ObjectUtilities.BaseCoreGenericHandler(v34);
                                                         v35 = v34.LiteBansModule_31();
-                                                        ObjectUtilities.BaseCoreGenericHandler(v35);
-                                                        if (!StringUtilities.BaseCoreGenericHandler(v35, '#', false, 2, null)) {
-                                                            v36 = arg108 = arg27.AsyncBackgroundTask_22();
-                                                            if (!HexEncodingHelper.BaseCoreGenericHandler.LiteBansModule_31(v36 != null ? v36.BaseCoreGenericHandler() : null) && AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg12.e(), arg27.CommandThrottleService())) {
-                                                                arg12.AsyncBackgroundTask_5().BaseCoreGenericHandler((LiteBansModule_178)LambdaMetafactory.metafactory(null, null, null, (Ljava/lang/Object;)Ljava/lang/Object;, BaseCoreGenericHandler(litebans.NoneHandler_2 litebans.LiteBansModule_82 ), (Llitebans/LiteBansModule_82;)Llitebans/iV;)((NoneHandler_2)arg27));
-}
-                                                v37 = arg108 = arg27.AsyncBackgroundTask_22();
-                                                v38 = v37 != null ? v37.BaseCoreGenericHandler() : null;
-                                                v39 = arg108 = arg27.AsyncBackgroundTask_22();
-                                                v40 = v39 != null ? v39.LiteBansModule_31() : null;
-                                                v41 = arg108 = arg27.AsyncBackgroundTask_22();
-                                                arg107   = new LiteBansModule_113(v38, null, null, v40, v41 != null ? v41.i() : null, null, arg27.AsyncBackgroundTask_21(), 38, null);
-                                                if (arg107  .LiteBansModule_31()) {
-                                                    arg108 = arg27.AsyncBackgroundTask_22();
-                                                    v42 = arg108;
-                                                    v43 = v42 != null && (v42 = (arg127 = v42.BaseCoreGenericHandler())) != null ? StringUtilities.BaseCoreGenericHandler(v42, '#', false, 2, null) : false;
-                                                    if (v43) {
-                                                        arg108 = arg107  ;
-                                                        if (arg2.LiteBansModule_194().aa()) {
-                                                            arg2.BaseCoreGenericHandler((Object)("Hiding IP address from broadcast: " + arg108.c()));
-                                                            arg108.BaseCoreGenericHandler(MessageKey.SecHandler.toString());
-                                                        } else {
-                                                            arg108.BaseCoreGenericHandler(arg108.c());
+                                                        ObjectUtilities.BaseCoreGenericHandler((Object)v35);
+                                                        if (!StringUtilities.BaseCoreGenericHandler((CharSequence)v35, '#', false, 2, null)) {
+                                                            v36 = v110 = v29.AsyncBackgroundTask_22();
+                                                            if (!LiteBansModule_346.BaseCoreGenericHandler.LiteBansModule_31(v36 != null ? v36.BaseCoreGenericHandler() : null) && AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(v14.e(), v29.CommandThrottleService())) {
+                                                                v14.AsyncBackgroundTask_5().BaseCoreGenericHandler((LiteBansModule_179)LambdaMetafactory.metafactory(null, null, null, (Ljava/lang/Object;)Ljava/lang/Object;, BaseCoreGenericHandler(litebans.NoneHandler_2 litebans.LiteBansModule_83 ), (Llitebans/LiteBansModule_83;)Llitebans/iV;)((NoneHandler_2)v29));
+                                                            }
                                                         }
-                                                        arg108.LiteBansModule_31(arg108.AsyncBackgroundTask_5());
-                                                        arg108 = arg107  .c();
-                                                        v44 = arg108;
+                                                    }
+                                                }
+                                                v37 = v110 = v29.AsyncBackgroundTask_22();
+                                                v38 = v37 != null ? v37.BaseCoreGenericHandler() : null;
+                                                v39 = v110 = v29.AsyncBackgroundTask_22();
+                                                v40 = v39 != null ? v39.LiteBansModule_31() : null;
+                                                v41 = v110 = v29.AsyncBackgroundTask_22();
+                                                v109   = new LiteBansModule_114(v38, null, null, v40, v41 != null ? v41.i() : null, null, v29.AsyncBackgroundTask_21(), 38, null);
+                                                if (v109  .LiteBansModule_31()) {
+                                                    v110 = v29.AsyncBackgroundTask_22();
+                                                    v42 = v110;
+                                                    v43 = v42 != null && (v42 = (v129 = v42.BaseCoreGenericHandler())) != null ? StringUtilities.BaseCoreGenericHandler((CharSequence)v42, '#', false, 2, null) : false;
+                                                    if (v43) {
+                                                        v110 = v109  ;
+                                                        if (v4.LiteBansModule_195().aa()) {
+                                                            v4.BaseCoreGenericHandler((Object)("Hiding IP address from broadcast: " + v110.c()));
+                                                            v110.BaseCoreGenericHandler(MessageKey.SecHandler.toString());
+                                                        } else {
+                                                            v110.BaseCoreGenericHandler(v110.c());
+                                                        }
+                                                        v110.LiteBansModule_31(v110.AsyncBackgroundTask_5());
+                                                        v110 = v109  .c();
+                                                        v44 = v110;
                                                         if (v44 == null) {
                                                             v44 = "";
                                                         }
-                                                        arg27.LiteBansModule_31((String)v44);
-}
-                                            arg128 = NoneHandler_2.BaseCoreGenericHandler((NoneHandler_2)arg27, null, 1, null);
-                                            arg129 = MessageHandler.BaseCoreGenericHandler;
-                                            arg130 = arg128 != false && v1.LiteBansModule_194() == false && arg2.LiteBansModule_194().MessageKey() >= 1 ? 1 : 0;
-                                            arg131 = MessageKey.LiteBansModule_31;
-                                            arg132 = arg129;
-                                            if (arg130 != 0) {
-                                                arg133 = arg132;
-                                                arg133.BaseCoreGenericHandler(arg131);
-                                                throw new CommandExitException();
-                                            }
-                                            arg129 = MessageHandler.BaseCoreGenericHandler;
-                                            arg130 = arg27.HoverTextFormatter() != false && arg2.LiteBansModule_194().MessageKey() >= 2 && v1.LiteBansModule_194() == false ? 1 : 0;
-                                            arg131 = MessageKey.LiteBansModule_31;
-                                            arg132 = arg129;
-                                            if (arg130 != 0) {
-                                                arg134 = arg132;
-                                                arg134.BaseCoreGenericHandler(arg131);
-                                                throw new CommandExitException();
-                                            }
-                                            arg129 = arg27.CommandThrottleService();
-                                            v45 = arg129;
-                                            if (v45 == null && (v45 = arg65) == null) {
-                                                v45 = arg12.AsyncBackgroundTask_5().ServerSyncService();
-                                            }
-                                            arg27.e((String)v45);
-                                            arg27.c(LiteBansModule_242.BaseCoreGenericHandler(arg27.H(), 128));
-                                            arg27.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler(arg27.AsyncBackgroundTask_5(), 36));
-                                                                                        arg130 = arg27.Utf8Handler_2();
-                                            arg131 = arg27.H();
-                                            arg135 = arg27.AsyncBackgroundTask_5();
-                                            arg136 = (MessageHandler)arg129;
-                                            ((DatabaseMonitorService)arg136.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(new ConsoleHandler((boolean)arg130, (String)arg131, (BanHandler_3)arg129, (String)arg135, v1));
-                                            arg27.BaseCoreGenericHandler(InitHandler.BaseCoreGenericHandler);
-                                            if (arg27.PunishmentService() && arg107  .BaseCoreGenericHandler() != null) {
-                                                arg129 = arg27.g().LiteBansModule_31();
-                                                if (arg27.i() == null) {
-                                                    arg27.BaseCoreGenericHandler(arg12.BaseCoreGenericHandler(arg27.g(), arg107  .BaseCoreGenericHandler(), arg107  .c()));
-                                                    arg27.BaseCoreGenericHandler(arg27.g().BaseCoreGenericHandler(arg27.D()));
-                                                } else {
-                                                    v46 = arg27.i();
-                                                    ObjectUtilities.BaseCoreGenericHandler(v46);
-                                                    arg137 = v46;
-                                                    arg129 = arg137.LiteBansModule_194();
-                                                    arg131 = arg12.BaseCoreGenericHandler(arg107  .BaseCoreGenericHandler(), arg107  .c(), arg137, arg27.g());
-                                                    arg27.BaseCoreGenericHandler((int)Math.floor(((Number)arg131.e()).doubleValue()));
-                                                    arg27.BaseCoreGenericHandler(arg137.BaseCoreGenericHandler(arg27.D()));
-                                                    arg138 = ((Number)arg131.LiteBansModule_31()).doubleValue();
-                                                    if (arg138 <= 0.0 || arg27.D() != (int)Math.floor(arg138)) {
-                                                        arg27.BaseCoreGenericHandler(true);
+                                                        v29.LiteBansModule_31((String)v44);
                                                     }
-                                                    arg136 = LiteBansModule_287.BaseCoreGenericHandler(arg138);
-                                                    arg139 = LiteBansModule_287.BaseCoreGenericHandler(((Number)arg131.e()).doubleValue());
-                                                    arg140 = Math.min(arg137.LiteBansModule_194().size(), arg27.D() + 1);
-                                                    arg2.BaseCoreGenericHandler((Object)("Applying " + arg137.c() + " template group " + arg137.BaseCoreGenericHandler() + ": weight " + (String)arg136 + " => " + arg139 + " (" + arg140 + '/' + arg129.size() + ')'));
                                                 }
-                                                arg130 = Math.min(arg129.size(), arg27.D() + 1);
-                                                arg2.BaseCoreGenericHandler((Object)("Applying " + arg27.g().AsyncBackgroundTask_5() + " template \"" + arg27.g().g() + "\" LiteBansModule_21 level " + arg130 + '/' + arg129.size()));
-                                                arg135 = arg27.L();
-                                                ObjectUtilities.LiteBansModule_31(arg135, "");
-                                                arg131 = (LiteBansModule_105)arg135;
-                                                arg141 = arg27.g().LiteBansModule_240();
-                                                ObjectUtilities.LiteBansModule_31(arg141, "");
-                                                arg135 = (LiteBansModule_105)arg141;
-                                                arg136 = arg131.BaseCoreGenericHandler();
-                                                v47 = arg136;
-                                                if (v47 == null) {
-                                                    v47 = arg135.BaseCoreGenericHandler();
-                                                }
-                                                if ((arg141 = v47) != null) {
-                                                    if (arg141.longValue() > 0L) {
-                                                        arg27.LiteBansModule_31(arg27.J() + arg141.longValue());
-                                                        arg27.LiteBansModule_401(true);
-                                                        arg142 = arg141.longValue();
-                                                        arg27.BaseCoreGenericHandler(PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, arg142, false, 2, null));
-                                                    } else {
-                                                        arg27.LiteBansModule_31(-1L);
-                                                        arg27.LiteBansModule_401(false);
-                                                        arg27.BaseCoreGenericHandler(MessageKey.LiteBansModule_60);
-}
-                                                if (arg27.g().GnuSparseMapHandler()) {
-                                                    arg27.m(true);
-                                                }
-                                                CommandArgumentUtils.BaseCoreGenericHandler(this, arg27.g(), arg27.L());
-                                                arg27.BaseCoreGenericHandler(arg12);
                                             }
-                                            arg129 = MessageHandler.BaseCoreGenericHandler;
-                                            arg130 = arg27.LiteBansModule_401() != false && arg27.BanHandler_5() == false && arg27.DatabaseMonitorService() <= 0L ? 1 : 0;
-                                            arg131 = MessageKey.aL;
-                                            arg143 = arg129;
-                                            if (arg130 != 0) {
-                                                arg144 = arg143;
-                                                arg144.BaseCoreGenericHandler(arg131);
+                                            v130 = NoneHandler_2.BaseCoreGenericHandler((NoneHandler_2)v29, null, 1, null);
+                                            v131 = MessageHandler.BaseCoreGenericHandler;
+                                            v132 = v130 != false && v1.LiteBansModule_195() == false && v4.LiteBansModule_195().MessageKey() >= 1 ? 1 : 0;
+                                            v133 = MessageKey.LiteBansModule_31;
+                                            v134 = v131;
+                                            if (v132 != 0) {
+                                                v135 = v134;
+                                                v135.BaseCoreGenericHandler(v133);
                                                 throw new CommandExitException();
                                             }
-                                            arg129 = arg27.c(arg12);
-                                            v48 = arg107  .AsyncBackgroundTask_5();
-                                            ObjectUtilities.BaseCoreGenericHandler(v48);
-                                            v49 = arg107  .BaseCoreGenericHandler();
-                                            ObjectUtilities.BaseCoreGenericHandler(v49);
-                                            arg27.BaseCoreGenericHandler(arg12, v48, v49);
-                                            if (!arg27.BanHandler_5()) break;
-                                            arg145 = new LiteBansModule_278();
-                                            arg146 = arg27.GnuSparseMapHandler();
-                                            v50 = arg146;
+                                            v131 = MessageHandler.BaseCoreGenericHandler;
+                                            v132 = v29.HoverTextFormatter() != false && v4.LiteBansModule_195().MessageKey() >= 2 && v1.LiteBansModule_195() == false ? 1 : 0;
+                                            v133 = MessageKey.LiteBansModule_31;
+                                            v134 = v131;
+                                            if (v132 != 0) {
+                                                v136 = v134;
+                                                v136.BaseCoreGenericHandler(v133);
+                                                throw new CommandExitException();
+                                            }
+                                            v131 = v29.CommandThrottleService();
+                                            v45 = v131;
+                                            if (v45 == null && (v45 = v67) == null) {
+                                                v45 = v14.AsyncBackgroundTask_5().ServerSyncService();
+                                            }
+                                            v29.e((String)v45);
+                                            v29.c(LiteBansModule_243.BaseCoreGenericHandler(v29.H(), 128));
+                                            v29.BaseCoreGenericHandler(LiteBansModule_243.BaseCoreGenericHandler(v29.AsyncBackgroundTask_5(), 36));
+                                            v131 = this;
+                                            v132 = v29.Utf8Handler_2();
+                                            v133 = v29.H();
+                                            v137 = v29.AsyncBackgroundTask_5();
+                                            v138 = (MessageHandler)v131;
+                                            ((DatabaseMonitorService)v138.LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(new ConsoleHandler((boolean)v132, (String)v133, (BanHandler_3)v131, (String)v137, v1));
+                                            v29.BaseCoreGenericHandler(InitHandler.BaseCoreGenericHandler);
+                                            if (v29.PunishmentService() && v109  .BaseCoreGenericHandler() != null) {
+                                                v131 = v29.g().LiteBansModule_31();
+                                                if (v29.i() == null) {
+                                                    v29.BaseCoreGenericHandler(v14.BaseCoreGenericHandler(v29.g(), v109  .BaseCoreGenericHandler(), v109  .c()));
+                                                    v29.BaseCoreGenericHandler(v29.g().BaseCoreGenericHandler(v29.D()));
+                                                } else {
+                                                    v46 = v29.i();
+                                                    ObjectUtilities.BaseCoreGenericHandler(v46);
+                                                    v139 = v46;
+                                                    v131 = v139.LiteBansModule_195();
+                                                    v133 = v14.BaseCoreGenericHandler(v109  .BaseCoreGenericHandler(), v109  .c(), v139, v29.g());
+                                                    v29.BaseCoreGenericHandler((int)Math.floor(((Number)v133.e()).doubleValue()));
+                                                    v29.BaseCoreGenericHandler(v139.BaseCoreGenericHandler(v29.D()));
+                                                    v140 = ((Number)v133.LiteBansModule_31()).doubleValue();
+                                                    if (v140 <= 0.0 || v29.D() != (int)Math.floor(v140)) {
+                                                        v29.BaseCoreGenericHandler(true);
+                                                    }
+                                                    v138 = LiteBansModule_288.BaseCoreGenericHandler(v140);
+                                                    v141 = LiteBansModule_288.BaseCoreGenericHandler(((Number)v133.e()).doubleValue());
+                                                    v142 = Math.min(v139.LiteBansModule_195().size(), v29.D() + 1);
+                                                    v4.BaseCoreGenericHandler((Object)("Applying " + v139.c() + " template group " + v139.BaseCoreGenericHandler() + ": weight " + (String)v138 + " => " + v141 + " (" + v142 + '/' + v131.size() + ')'));
+                                                }
+                                                v132 = Math.min(v131.size(), v29.D() + 1);
+                                                v4.BaseCoreGenericHandler((Object)("Applying " + v29.g().AsyncBackgroundTask_5() + " template \"" + v29.g().g() + "\" LiteBansModule_21 level " + v132 + '/' + v131.size()));
+                                                v137 = v29.L();
+                                                ObjectUtilities.LiteBansModule_31(v137, "");
+                                                v133 = (LiteBansModule_106)v137;
+                                                v143 = v29.g().LiteBansModule_241();
+                                                ObjectUtilities.LiteBansModule_31(v143, "");
+                                                v137 = (LiteBansModule_106)v143;
+                                                v138 = v133.BaseCoreGenericHandler();
+                                                v47 = v138;
+                                                if (v47 == null) {
+                                                    v47 = v137.BaseCoreGenericHandler();
+                                                }
+                                                if ((v143 = v47) != null) {
+                                                    if (v143.longValue() > 0L) {
+                                                        v29.LiteBansModule_31(v29.J() + v143.longValue());
+                                                        v29.LiteBansModule_403(true);
+                                                        v144 = v143.longValue();
+                                                        v29.BaseCoreGenericHandler((CharSequence)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, v144, false, 2, null));
+                                                    } else {
+                                                        v29.LiteBansModule_31(-1L);
+                                                        v29.LiteBansModule_403(false);
+                                                        v29.BaseCoreGenericHandler(MessageKey.LiteBansModule_60);
+                                                    }
+                                                }
+                                                if (v29.g().GnuSparseMapHandler()) {
+                                                    v29.m(true);
+                                                }
+                                                CommandArgumentUtils.BaseCoreGenericHandler(this, v29.g(), v29.L());
+                                                v29.BaseCoreGenericHandler(v14);
+                                            }
+                                            v131 = MessageHandler.BaseCoreGenericHandler;
+                                            v132 = v29.LiteBansModule_403() != false && v29.BanHandler_5() == false && v29.DatabaseMonitorService() <= 0L ? 1 : 0;
+                                            v133 = MessageKey.aL;
+                                            v145 = v131;
+                                            if (v132 != 0) {
+                                                v146 = v145;
+                                                v146.BaseCoreGenericHandler(v133);
+                                                throw new CommandExitException();
+                                            }
+                                            v131 = v29.c(v14);
+                                            v48 = v109  .AsyncBackgroundTask_5();
+                                            ObjectUtilities.BaseCoreGenericHandler((Object)v48);
+                                            v49 = v109  .BaseCoreGenericHandler();
+                                            ObjectUtilities.BaseCoreGenericHandler((Object)v49);
+                                            v29.BaseCoreGenericHandler(v14, v48, v49);
+                                            if (!v29.BanHandler_5()) break block283;
+                                            v147 = new LiteBansModule_279();
+                                            v148 = v29.GnuSparseMapHandler();
+                                            v50 = v148;
                                             if (v50 == null) {
-                                                v50 = arg12.BaseCoreGenericHandler(arg107  .BaseCoreGenericHandler(), arg107  .c(), arg27.ServerSyncService(), arg27.LiteBansModule_31(), true, true);
+                                                v50 = v14.BaseCoreGenericHandler(v109  .BaseCoreGenericHandler(), v109  .c(), v29.ServerSyncService(), v29.LiteBansModule_31(), true, true);
                                             }
-                                            arg27.LiteBansModule_31(v50);
-                                            v51 = arg143 = arg27.q();
-                                            arg147 = ObjectUtilities.BaseCoreGenericHandler((Object)(v51 != null ? v51.e() : null), v1.BaseCoreGenericHandler());
-                                            v52 = arg143 = arg147 != false ? ".own" : "";
-                                            if (arg27.q() != null && !arg147 && arg2.LiteBansModule_194().ac()) {
-                                                arg148 = MessageHandler.BaseCoreGenericHandler;
-                                                v53 = arg149 = arg27.q();
-                                                arg150 = arg27.BaseCoreGenericHandler(arg12, v53 != null ? v53.e() : null) == false;
-                                                arg151 = MessageKey.cZ;
-                                                arg152 = arg148;
-                                                if (arg150) {
-                                                    arg153 = arg152;
-                                                    arg153.BaseCoreGenericHandler(arg151);
+                                            v29.LiteBansModule_31(v50);
+                                            v51 = v145 = v29.q();
+                                            v149 = ObjectUtilities.BaseCoreGenericHandler((Object)(v51 != null ? v51.e() : null), (Object)v1.BaseCoreGenericHandler());
+                                            v52 = v145 = v149 != false ? ".own" : "";
+                                            if (v29.q() != null && !v149 && v4.LiteBansModule_195().ac()) {
+                                                v150 = MessageHandler.BaseCoreGenericHandler;
+                                                v53 = v151 = v29.q();
+                                                v152 = v29.BaseCoreGenericHandler(v14, v53 != null ? v53.e() : null) == false;
+                                                v153 = MessageKey.cZ;
+                                                v154 = v150;
+                                                if (v152) {
+                                                    v155 = v154;
+                                                    v155.BaseCoreGenericHandler(v153);
                                                     throw new CommandExitException();
-}
-                                            arg154 = arg27.q();
-                                            v54 = arg154;
-                                            if (!((v54 != null ? v54.DatabaseMonitorService() : null) != null)) break;
-                                            arg154 = arg27.q();
-                                            if (!(arg154 != null && arg154.r() != -1)) break;
-                                            v55 = arg2.AsyncBackgroundTask_21();
-                                            v56 = arg27.q();
-                                            ObjectUtilities.BaseCoreGenericHandler(v56);
-                                            arg154 = v55.BaseCoreGenericHandler(v56);
-                                            if (arg154 == null) break;
-                                            arg155 = arg27.q();
-                                            v57 = arg155;
-                                            arg155 = arg27.q();
-                                            v58 = arg155;
-                                            arg156 = arg12.BaseCoreGenericHandler((LiteBansModule_65)arg154, v57 != null ? v57.DatabaseMonitorService() : null, v58 != null ? v58.PunishmentTableService() : null);
-                                            arg155 = arg154.BaseCoreGenericHandler(arg156);
-                                            arg157 = arg155.c();
-                                            v59 = arg157;
-                                            if (v59 == null) {
-                                                v59 = arg154.LiteBansModule_240().c();
+                                                }
                                             }
-                                            arg158 = v59;
-                                            arg157 = MessageHandler.BaseCoreGenericHandler;
-                                            if (arg158 == null) ** GOTO lbl-1000
-                                            arg159 = v1;
-                                            arg160 = arg159;
-                                            if (arg160.e(arg158) == false) {
+                                            v156 = v29.q();
+                                            v54 = v156;
+                                            if (!((v54 != null ? v54.DatabaseMonitorService() : null) != null)) break block284;
+                                            v156 = v29.q();
+                                            if (!(v156 != null && v156.r() != -1)) break block284;
+                                            v55 = v4.AsyncBackgroundTask_21();
+                                            v56 = v29.q();
+                                            ObjectUtilities.BaseCoreGenericHandler(v56);
+                                            v156 = v55.BaseCoreGenericHandler(v56);
+                                            if (v156 == null) break block284;
+                                            v157 = v29.q();
+                                            v57 = v157;
+                                            v157 = v29.q();
+                                            v58 = v157;
+                                            v158 = v14.BaseCoreGenericHandler((LiteBansModule_65)v156, v57 != null ? v57.DatabaseMonitorService() : null, v58 != null ? v58.PunishmentTableService() : null);
+                                            v157 = v156.BaseCoreGenericHandler(v158);
+                                            v159 = v157.c();
+                                            v59 = v159;
+                                            if (v59 == null) {
+                                                v59 = v156.LiteBansModule_241().c();
+                                            }
+                                            v160 = v59;
+                                            v159 = MessageHandler.BaseCoreGenericHandler;
+                                            if (v160 == null) ** GOTO lbl-1000
+                                            v161 = v1;
+                                            v162 = v161;
+                                            if (v162.e(v160) == false) {
+                                                v60 = true;
                                             } else lbl-1000:
                                                                                         {
+                                                v60 = false;
                                             }
-                                            arg161 = v60;
-                                            arg162 = MessageKey.cZ;
-                                            arg163 = arg157;
-                                            if (arg161) {
-                                                arg164 = arg163;
-                                                arg164.BaseCoreGenericHandler(arg162);
+                                            v163 = v60;
+                                            v164 = MessageKey.cZ;
+                                            v165 = v159;
+                                            if (v163) {
+                                                v166 = v165;
+                                                v166.BaseCoreGenericHandler(v164);
                                                 throw new CommandExitException();
-}
-                                        arg154 = arg2;
-                                        if (arg154.g()) {
-                                            arg41 = arg154;
-                                            v61 = arg27.q();
-                                            arg47   = "[0xff] " + (v61 != null ? v61.e() : null) + ' ' + v1.BaseCoreGenericHandler() + " (LiteBansModule_433=" + arg147 + ')';
-                                            arg41.BaseCoreGenericHandler(arg47  );
+                                            }
                                         }
-                                        if (arg27.F()) {
-                                            arg165 = arg27.q();
-                                            v62 = arg165;
+                                        v156 = v4;
+                                        if (v156.g()) {
+                                            v43 = v156;
+                                            v61 = v29.q();
+                                            v49   = "[0xff] " + (v61 != null ? v61.e() : null) + ' ' + v1.BaseCoreGenericHandler() + " (LiteBansModule_435=" + v149 + ')';
+                                            v43.BaseCoreGenericHandler((Object)v49  );
+                                        }
+                                        if (v29.F()) {
+                                            v167 = v29.q();
+                                            v62 = v167;
                                             if (v62 == null) {
-                                                arg27.BaseCoreGenericHandler(arg12, MessageKey.SQLiteDriverHandler_2);
+                                                v29.BaseCoreGenericHandler(v14, (Object)MessageKey.SQLiteDriverHandler_2);
                                                 throw new CommandExitException();
                                             }
-                                            arg154 = v62;
-                                                                                        arg166 = "litebans.modify" + (String)arg143;
-                                            arg167 = arg165.AsyncBackgroundTask_5();
-                                            arg168 = MessageHandler.BaseCoreGenericHandler;
-                                            arg169 = arg167;
-                                            arg170 = arg169;
-                                            arg171 = arg170.e((String)arg166) == false;
-                                            arg172 = MessageKey.cZ;
-                                            arg173 = arg168;
-                                            if (arg171) {
-                                                arg174 = arg173;
-                                                arg174.BaseCoreGenericHandler(arg172);
+                                            v156 = v62;
+                                            v167 = this;
+                                            v168 = "litebans.modify" + (String)v145;
+                                            v169 = v167.AsyncBackgroundTask_5();
+                                            v170 = MessageHandler.BaseCoreGenericHandler;
+                                            v171 = v169;
+                                            v172 = v171;
+                                            v173 = v172.e((String)v168) == false;
+                                            v174 = MessageKey.cZ;
+                                            v175 = v170;
+                                            if (v173) {
+                                                v176 = v175;
+                                                v176.BaseCoreGenericHandler(v174);
                                                 throw new CommandExitException();
                                             }
-                                            arg166 = arg27.ServerSyncService();
-                                            switch (LiteBansModule_274.BaseCoreGenericHandler[arg166.c().ordinal()]) {
+                                            v168 = v29.ServerSyncService();
+                                            switch (LiteBansModule_275.BaseCoreGenericHandler[v168.c().ordinal()]) {
                                                 case 1: {
                                                     v63 = MessageKey.df;
                                                     break;
@@ -856,100 +913,106 @@ extends UnbanCommand {
                                                     break;
                                                 }
                                                 default: {
-}
-                                            arg165 = ObjectUtilities.BaseCoreGenericHandler(arg129, v63) != false ? arg154.LiteBansModule_31() : arg129;
-                                            arg175 = arg27.DatabaseMonitorService() == -1L ? arg154.LiteBansModule_401() : arg27.DatabaseMonitorService();
-                                            arg27.LiteBansModule_31(arg12);
-                                            arg12.BaseCoreGenericHandler(arg165, arg175, (SilentHandler)arg154);
-                                            arg167 = new LiteBansModule_144();
-                                            arg176 = arg154;
-                                            arg167.BaseCoreGenericHandler = new SilentHandler(arg176.ServerSyncService(), arg176.DatabaseMonitorService(), arg176.PunishmentTableService(), arg165, arg176.e(), arg176.LiteBansModule_433(), arg176.m(), arg176.GnuSparseMapHandler(), arg176.BroadcastService(), arg175, arg176.r(), arg176.AsyncBackgroundTask_5(), arg176.LiteBansModule_240(), arg176.AsyncBackgroundTask_22(), arg176.BaseCoreGenericHandler(), null);
-                                            arg27.BaseCoreGenericHandler(arg12, AllHandler_3.BaseCoreGenericHandler(arg12, MessageKey.cj, (SilentHandler)arg167.BaseCoreGenericHandler, false, 2, null));
-                                        } else if (arg27.BanHandler_2()) {
-                                            arg177 = arg27.q();
-                                            v64 = arg177;
+                                                    v63 = null;
+                                                }
+                                            }
+                                            v167 = ObjectUtilities.BaseCoreGenericHandler(v131, v63) != false ? v156.LiteBansModule_31() : v131;
+                                            v177 = v29.DatabaseMonitorService() == -1L ? v156.LiteBansModule_403() : v29.DatabaseMonitorService();
+                                            v29.LiteBansModule_31(v14);
+                                            v14.BaseCoreGenericHandler((CharSequence)v167, v177, (SilentHandler)v156);
+                                            v169 = new LiteBansModule_145();
+                                            v178 = v156;
+                                            v169.BaseCoreGenericHandler = new SilentHandler(v178.ServerSyncService(), v178.DatabaseMonitorService(), v178.PunishmentTableService(), (CharSequence)v167, v178.e(), v178.LiteBansModule_435(), v178.m(), v178.GnuSparseMapHandler(), v178.BroadcastService(), v177, v178.r(), v178.AsyncBackgroundTask_5(), v178.LiteBansModule_241(), v178.AsyncBackgroundTask_22(), v178.BaseCoreGenericHandler(), null);
+                                            v29.BaseCoreGenericHandler(v14, AllHandler_3.BaseCoreGenericHandler(v14, (CharSequence)MessageKey.cj, (SilentHandler)v169.BaseCoreGenericHandler, false, 2, null));
+                                        } else if (v29.BanHandler_2()) {
+                                            v179 = v29.q();
+                                            v64 = v179;
                                             if (v64 == null) {
-                                                arg27.BaseCoreGenericHandler(arg12, MessageKey.SQLiteDriverHandler_2);
+                                                v29.BaseCoreGenericHandler(v14, (Object)MessageKey.SQLiteDriverHandler_2);
                                                 throw new CommandExitException();
                                             }
-                                            arg154 = v64;
-                                                                                        arg178 = "litebans.delete" + (String)arg143;
-                                            arg179 = arg177.AsyncBackgroundTask_5();
-                                            arg180 = MessageHandler.BaseCoreGenericHandler;
-                                            arg181 = arg179;
-                                            arg182 = arg181;
-                                            arg183 = arg182.e(arg178) == false;
-                                            arg184 = MessageKey.cZ;
-                                            arg185 = arg180;
-                                            if (arg183) {
-                                                arg186 = arg185;
-                                                arg186.BaseCoreGenericHandler(arg184);
+                                            v156 = v64;
+                                            v179 = this;
+                                            v180 = "litebans.delete" + (String)v145;
+                                            v181 = v179.AsyncBackgroundTask_5();
+                                            v182 = MessageHandler.BaseCoreGenericHandler;
+                                            v183 = v181;
+                                            v184 = v183;
+                                            v185 = v184.e(v180) == false;
+                                            v186 = MessageKey.cZ;
+                                            v187 = v182;
+                                            if (v185) {
+                                                v188 = v187;
+                                                v188.BaseCoreGenericHandler(v186);
                                                 throw new CommandExitException();
                                             }
-                                            arg27.LiteBansModule_31(arg12);
-                                            AllHandler_3.BaseCoreGenericHandler(arg12, (SilentHandler)arg154, null, null, null, true, 14, null);
-                                            arg27.BaseCoreGenericHandler(arg12, MessageKey.af);
+                                            v29.LiteBansModule_31(v14);
+                                            AllHandler_3.BaseCoreGenericHandler(v14, (SilentHandler)v156, null, null, null, true, 14, null);
+                                            v29.BaseCoreGenericHandler(v14, MessageKey.af);
                                         } else {
-                                                                                        arg187 = "litebans + " + arg27.ServerSyncService() + (String)arg143;
-                                            arg188 = arg154.AsyncBackgroundTask_5();
-                                            arg189 = MessageHandler.BaseCoreGenericHandler;
-                                            arg190 = arg188;
-                                            arg191 = arg190;
-                                            arg192 = arg191.e((String)arg187) == false;
-                                            arg193 = MessageKey.cZ;
-                                            arg194 = arg189;
-                                            if (arg192) {
-                                                arg195 = arg194;
-                                                arg195.BaseCoreGenericHandler(arg193);
+                                            v156 = this;
+                                            v189 = "litebans + " + v29.ServerSyncService() + (String)v145;
+                                            v190 = v156.AsyncBackgroundTask_5();
+                                            v191 = MessageHandler.BaseCoreGenericHandler;
+                                            v192 = v190;
+                                            v193 = v192;
+                                            v194 = v193.e((String)v189) == false;
+                                            v195 = MessageKey.cZ;
+                                            v196 = v191;
+                                            if (v194) {
+                                                v197 = v196;
+                                                v197.BaseCoreGenericHandler(v195);
                                                 throw new CommandExitException();
                                             }
-                                            if (arg27.GnuSparseMapHandler() == null && arg24.K() && arg27.ServerSyncService() != BanHandler.e && ((Collection)(arg154 = arg12.BaseCoreGenericHandler(arg107  .g(), 1024))).isEmpty() == false) {
-                                                arg187 = new HashSet<PunishmentService>();
-                                                arg196 = arg154.iterator();
-                                                while (arg196.hasNext()) {
-                                                    arg188 = (LiteBansModule_297)arg196.next();
-                                                    arg197 = arg188.c();
-                                                    arg198 = AllHandler_3.BaseCoreGenericHandler(arg12, arg197, (String)(arg189 = arg188.AsyncBackgroundTask_5()), arg27.ServerSyncService(), arg27.LiteBansModule_31(), false, true, 16, null);
-                                                    if (arg198 == null || CollectionUtilities.BaseCoreGenericHandler((Iterable)arg187, arg197) || arg198.LiteBansModule_240()) continue;
-                                                    arg193 = arg2;
-                                                    if (arg193.g()) {
-                                                        arg41 = arg193;
-                                                        arg47   = arg198;
-                                                        arg41.BaseCoreGenericHandler(arg47  );
+                                            if (v29.GnuSparseMapHandler() == null && v26.K() && v29.ServerSyncService() != BanHandler.e && ((Collection)(v156 = v14.BaseCoreGenericHandler(v109  .g(), 1024))).isEmpty() == false) {
+                                                v189 = new HashSet<PunishmentService>();
+                                                v198 = v156.iterator();
+                                                while (v198.hasNext()) {
+                                                    v190 = (LiteBansModule_298)v198.next();
+                                                    v199 = v190.c();
+                                                    v200 = AllHandler_3.BaseCoreGenericHandler(v14, v199, (String)(v191 = v190.AsyncBackgroundTask_5()), v29.ServerSyncService(), v29.LiteBansModule_31(), false, true, 16, null);
+                                                    if (v200 == null || CollectionUtilities.BaseCoreGenericHandler((Iterable)v189, (Object)v199) || v200.LiteBansModule_241()) continue;
+                                                    v195 = v4;
+                                                    if (v195.g()) {
+                                                        v43 = v195;
+                                                        v49   = v200;
+                                                        v43.BaseCoreGenericHandler((Object)v49  );
                                                     }
-                                                    arg131 = arg198;
-                                                    arg145.BaseCoreGenericHandler = true;
-                                                    AllHandler_3.BaseCoreGenericHandler(arg12, arg27.AsyncBackgroundTask_5(), arg27.H(), arg129, arg198, false, 16, null);
-                                                    CommandArgumentUtils.BaseCoreGenericHandler(arg12, arg198, true, arg106);
-                                                    v65 = arg197;
-                                                    ObjectUtilities.BaseCoreGenericHandler(v65);
-                                                    arg187.add(v65);
-}
-                                            arg187 = arg154 = arg27;
-                                            if (arg187.q() == null) {
-                                                if (!arg145.BaseCoreGenericHandler) {
-                                                    arg188 = arg2;
-                                                    arg199 = 1;
-                                                    if (arg188.BaseCoreGenericHandler(arg199)) {
-                                                        arg200 = arg188;
-                                                        arg201 = "No active " + arg187.ServerSyncService().c() + " found for uuid:" + arg107  .BaseCoreGenericHandler() + " / ip:" + arg107  .c() + " on server:" + arg187.LiteBansModule_31() + " (target: '" + arg107  .AsyncBackgroundTask_5() + "')";
-                                                        arg202 = ObjectUtilities.BaseCoreGenericHandler(arg187.AsyncBackgroundTask_21(), arg107  .BaseCoreGenericHandler()) == false;
-                                                        if (arg202) {
-                                                            arg203 = "Try targeting LiteBansModule_61 UUID instead of name + ";
-                                                            if (arg203.length() > 0 != false) {
-                                                                arg204 = arg201;
-                                                                arg205 = "\n";
-                                                                arg204 = "" + arg204 + arg205;
-                                                                v66 = "" + arg204 + arg203;
+                                                    v133 = v200;
+                                                    v147.BaseCoreGenericHandler = true;
+                                                    AllHandler_3.BaseCoreGenericHandler(v14, v29.AsyncBackgroundTask_5(), v29.H(), (CharSequence)v131, v200, false, 16, null);
+                                                    CommandArgumentUtils.BaseCoreGenericHandler(v14, v200, true, v108);
+                                                    v65 = v199;
+                                                    ObjectUtilities.BaseCoreGenericHandler((Object)v65);
+                                                    v189.add(v65);
+                                                }
+                                            }
+                                            v189 = v156 = v29;
+                                            if (v189.q() == null) {
+                                                if (!v147.BaseCoreGenericHandler) {
+                                                    v190 = v4;
+                                                    v201 = 1;
+                                                    if (v190.BaseCoreGenericHandler(v201)) {
+                                                        v202 = v190;
+                                                        v203 = "No active " + v189.ServerSyncService().c() + " found for uuid:" + v109  .BaseCoreGenericHandler() + " / ip:" + v109  .c() + " on server:" + v189.LiteBansModule_31() + " (target: '" + v109  .AsyncBackgroundTask_5() + "')";
+                                                        v204 = ObjectUtilities.BaseCoreGenericHandler((Object)v189.AsyncBackgroundTask_21(), (Object)v109  .BaseCoreGenericHandler()) == false;
+                                                        if (v204) {
+                                                            v205 = "Try targeting LiteBansModule_61 UUID instead of name + ";
+                                                            if (v205.length() > 0 != false) {
+                                                                v206 = v203;
+                                                                v207 = "\n";
+                                                                v206 = "" + v206 + v207;
+                                                                v66 = "" + v206 + v205;
                                                             } else {
-                                                                v66 = arg201;
-} else {
-                                                            v66 = arg201;
+                                                                v66 = v203;
+                                                            }
+                                                        } else {
+                                                            v66 = v203;
                                                         }
-                                                        arg200.BaseCoreGenericHandler(v66);
+                                                        v202.BaseCoreGenericHandler(v66);
                                                     }
-                                                    arg206 = arg187.ServerSyncService();
-                                                    switch (LiteBansModule_274.BaseCoreGenericHandler[arg206.c().ordinal()]) {
+                                                    v208 = v189.ServerSyncService();
+                                                    switch (LiteBansModule_275.BaseCoreGenericHandler[v208.c().ordinal()]) {
                                                         case 1: {
                                                             v67 = MessageKey.SQLiteDriverHandler_2;
                                                             break;
@@ -965,69 +1028,72 @@ extends UnbanCommand {
                                                         default: {
                                                             AssertionUtilities.BaseCoreGenericHandler();
                                                             throw new CommandExitException();
-}
-                                                    arg188 = v67;
-                                                    if (arg187.ServerSyncService() == BanHandler.AsyncBackgroundTask_5 && !arg107  .LiteBansModule_31() && arg106 && !HexEncodingHelper.BaseCoreGenericHandler(arg107  .g())) {
-                                                        arg206 = v1;
-                                                        arg207 = "litebans.unban.queue";
-                                                        if (arg206.e(arg207) && !arg187.K()) {
-                                                            this.plugin((LiteBansModule_113)arg107  );
-                                                            arg188 = MessageKey.LiteBansModule_14;
-}
-                                                    arg187.BaseCoreGenericHandler(arg12, arg188);
+                                                        }
+                                                    }
+                                                    v190 = v67;
+                                                    if (v189.ServerSyncService() == BanHandler.AsyncBackgroundTask_5 && !v109  .LiteBansModule_31() && v108 && !LiteBansModule_346.BaseCoreGenericHandler(v109  .g())) {
+                                                        v208 = v1;
+                                                        v209 = "litebans.unban.queue";
+                                                        if (v208.e(v209) && !v189.K()) {
+                                                            this.plugin((LiteBansModule_114)v109  );
+                                                            v190 = MessageKey.LiteBansModule_14;
+                                                        }
+                                                    }
+                                                    v189.BaseCoreGenericHandler(v14, v190);
                                                     throw new CommandExitException();
-} else {
-                                                arg188 = arg2;
-                                                if (arg188.g()) {
-                                                    arg208 = arg188;
-                                                    arg208.BaseCoreGenericHandler(arg187.q());
                                                 }
-                                                if (arg187.ServerSyncService() == BanHandler.e && arg187.GnuSparseMapHandler() == null) {
-                                                    v68 = arg187.q();
+                                            } else {
+                                                v190 = v4;
+                                                if (v190.g()) {
+                                                    v210 = v190;
+                                                    v210.BaseCoreGenericHandler(v189.q());
+                                                }
+                                                if (v189.ServerSyncService() == BanHandler.e && v189.GnuSparseMapHandler() == null) {
+                                                    v68 = v189.q();
                                                     ObjectUtilities.BaseCoreGenericHandler(v68);
-                                                    AllHandler_3.BaseCoreGenericHandler(arg12, v68, arg187.AsyncBackgroundTask_5(), arg187.H(), arg129, false, 16, null);
+                                                    AllHandler_3.BaseCoreGenericHandler(v14, v68, v189.AsyncBackgroundTask_5(), v189.H(), (CharSequence)v131, false, 16, null);
                                                 } else {
-                                                    v69 = arg187.AsyncBackgroundTask_5();
-                                                    v70 = arg187.H();
-                                                    v71 = arg187.q();
+                                                    v69 = v189.AsyncBackgroundTask_5();
+                                                    v70 = v189.H();
+                                                    v71 = v189.q();
                                                     ObjectUtilities.BaseCoreGenericHandler(v71);
-                                                    arg12.BaseCoreGenericHandler(v69, v70, arg129, v71, arg187.GnuSparseMapHandler() != null);
+                                                    v14.BaseCoreGenericHandler(v69, v70, (CharSequence)v131, v71, v189.GnuSparseMapHandler() != null);
                                                 }
-                                                if (arg187.ServerSyncService() == BanHandler.e) {
-                                                    arg187.BaseCoreGenericHandler(arg12, arg12.BaseCoreGenericHandler(MessageKey.LiteBansModule_69, (CommandSenderWrapper)arg64));
+                                                if (v189.ServerSyncService() == BanHandler.e) {
+                                                    v189.BaseCoreGenericHandler(v14, v14.BaseCoreGenericHandler((CharSequence)MessageKey.LiteBansModule_70, (CommandSenderWrapper)v66));
                                                 }
-                                                arg188 = arg12;
-                                                arg209 = BroadcastHandler.LiteBansModule_401.BaseCoreGenericHandler(arg187.ServerSyncService());
-                                                if (arg188.AsyncBackgroundTask_5().AsyncBackgroundTask_21()) {
-                                                    arg210 = arg209;
-                                                    arg211 = arg188;
-                                                    arg212 = ServerSyncService.GnuSparseMapHandler;
-                                                    v72 = arg187.q();
+                                                v190 = v14;
+                                                v211 = BroadcastHandler.LiteBansModule_403.BaseCoreGenericHandler(v189.ServerSyncService());
+                                                if (v190.AsyncBackgroundTask_5().AsyncBackgroundTask_21()) {
+                                                    v212 = v211;
+                                                    v213 = v190;
+                                                    v214 = ServerSyncService.GnuSparseMapHandler;
+                                                    v72 = v189.q();
                                                     ObjectUtilities.BaseCoreGenericHandler(v72);
-                                                    arg213 = v72;
-                                                    arg214 = arg107  ;
-                                                    arg215 = ServerSyncService.GnuSparseMapHandler;
-                                                    arg216 = new CharSequence[2];
-                                                    v73 = arg214.BaseCoreGenericHandler();
+                                                    v215 = v72;
+                                                    v216 = v109  ;
+                                                    v217 = ServerSyncService.GnuSparseMapHandler;
+                                                    v218 = new CharSequence[2];
+                                                    v73 = v216.BaseCoreGenericHandler();
                                                     if (v73 == null) {
                                                         v73 = "";
                                                     }
-                                                    arg216[0] = LiteBansModule_50.c.AsyncBackgroundTask_5(v73);
-                                                    arg216[1] = arg213.LiteBansModule_240() != false ? String.valueOf(arg214.c()) : "";
-                                                    arg217 = ArrayUtilities.BaseCoreGenericHandler(arg216, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
-                                                    CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_82)arg211, arg210, arg217, null, null, 12, null);
+                                                    v218[0] = LiteBansModule_50.c.AsyncBackgroundTask_5(v73);
+                                                    v218[1] = v215.LiteBansModule_241() != false ? String.valueOf(v216.c()) : "";
+                                                    v219 = ArrayUtilities.BaseCoreGenericHandler(v218, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
+                                                    CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_83)v213, v212, v219, null, null, 12, null);
                                                 }
-                                                v74 = arg12.e();
-                                                v75 = arg187.q();
+                                                v74 = v14.e();
+                                                v75 = v189.q();
                                                 ObjectUtilities.BaseCoreGenericHandler(v75);
-                                                LiteBansModule_268.BaseCoreGenericHandler.LiteBansModule_31(arg12, v74, v75);
+                                                LiteBansModule_269.BaseCoreGenericHandler.LiteBansModule_31(v14, v74, v75);
                                             }
-                                            if (arg27.q() == null) {
-                                                arg27.LiteBansModule_31((SilentHandler)arg131);
+                                            if (v29.q() == null) {
+                                                v29.LiteBansModule_31((SilentHandler)v133);
                                             }
-                                            if (arg27.q() != null) {
-                                                arg187 = arg27.ServerSyncService();
-                                                switch (LiteBansModule_274.BaseCoreGenericHandler[arg187.c().ordinal()]) {
+                                            if (v29.q() != null) {
+                                                v189 = v29.ServerSyncService();
+                                                switch (LiteBansModule_275.BaseCoreGenericHandler[v189.c().ordinal()]) {
                                                     case 1: {
                                                         v76 = MessageKey.cO;
                                                         break;
@@ -1043,129 +1109,140 @@ extends UnbanCommand {
                                                     default: {
                                                         AssertionUtilities.BaseCoreGenericHandler();
                                                         throw new CommandExitException();
-}
-                                                arg154 = v76;
-                                                arg154 = AllHandler_3.BaseCoreGenericHandler(arg12, arg154, arg27.H(), arg27.AsyncBackgroundTask_5(), false, 4, null);
-                                                arg154 = arg12.BaseCoreGenericHandler(arg154, (LiteBansModule_113)arg107  );
-                                                new BannedHandler((NoneHandler_2)arg27, (CommandSenderWrapper)arg64, arg27.AsyncBackgroundTask_22(), arg154, arg12.e(), null, false, arg27.B(), 32, null).run();
-                                                if (arg27.ServerSyncService() == BanHandler.n) {
-                                                    if (arg106) {
-                                                                                                                ((PunishmentTableService)arg187.LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class)).BaseCoreGenericHandler(arg27.q());
                                                     }
-                                                    arg187 = arg12;
-                                                    arg218 = BroadcastHandler.AsyncBackgroundTask_21;
-                                                    if (arg187.AsyncBackgroundTask_5().AsyncBackgroundTask_21()) {
-                                                        arg47   = arg218;
-                                                        arg41 = arg187;
-                                                        arg219 = ServerSyncService.GnuSparseMapHandler;
-                                                        v77 = arg27.q();
+                                                }
+                                                v156 = v76;
+                                                v156 = AllHandler_3.BaseCoreGenericHandler(v14, (CharSequence)v156, v29.H(), v29.AsyncBackgroundTask_5(), false, 4, null);
+                                                v156 = v14.BaseCoreGenericHandler((CharSequence)v156, (LiteBansModule_114)v109  );
+                                                new BannedHandler((NoneHandler_2)v29, (CommandSenderWrapper)v66, v29.AsyncBackgroundTask_22(), (CharSequence)v156, v14.e(), null, false, v29.B(), 32, null).run();
+                                                if (v29.ServerSyncService() == BanHandler.n) {
+                                                    if (v108) {
+                                                        v189 = this;
+                                                        ((PunishmentTableService)v189.LiteBansModule_241().BaseCoreGenericHandler(PunishmentTableService.class)).BaseCoreGenericHandler(v29.q());
+                                                    }
+                                                    v189 = v14;
+                                                    v220 = BroadcastHandler.AsyncBackgroundTask_21;
+                                                    if (v189.AsyncBackgroundTask_5().AsyncBackgroundTask_21()) {
+                                                        v49   = v220;
+                                                        v43 = v189;
+                                                        v221 = ServerSyncService.GnuSparseMapHandler;
+                                                        v77 = v29.q();
                                                         ObjectUtilities.BaseCoreGenericHandler(v77);
-                                                        arg220 = v77;
-                                                        arg221 = arg107  ;
-                                                        arg222 = ServerSyncService.GnuSparseMapHandler;
-                                                        arg214 = new CharSequence[2];
-                                                        v78 = arg221.BaseCoreGenericHandler();
+                                                        v222 = v77;
+                                                        v223 = v109  ;
+                                                        v224 = ServerSyncService.GnuSparseMapHandler;
+                                                        v216 = new CharSequence[2];
+                                                        v78 = v223.BaseCoreGenericHandler();
                                                         if (v78 == null) {
                                                             v78 = "";
                                                         }
-                                                        arg214[0] = LiteBansModule_50.c.AsyncBackgroundTask_5(v78);
-                                                        arg214[1] = arg220.LiteBansModule_240() != false ? String.valueOf(arg221.c()) : "";
-                                                        arg223 = ArrayUtilities.BaseCoreGenericHandler(arg214, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
-                                                        CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_82)arg41, (BroadcastHandler)arg47  , arg223, null, null, 12, null);
-}
-                                                                                                v79 = ((BroadcastService)arg187.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class)).BaseCoreGenericHandler(arg27.q());
+                                                        v216[0] = LiteBansModule_50.c.AsyncBackgroundTask_5(v78);
+                                                        v216[1] = v222.LiteBansModule_241() != false ? String.valueOf(v223.c()) : "";
+                                                        v225 = ArrayUtilities.BaseCoreGenericHandler(v216, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
+                                                        CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_83)v43, (BroadcastHandler)v49  , v225, null, null, 12, null);
+                                                    }
+                                                }
+                                                v189 = this;
+                                                v79 = ((BroadcastService)v189.LiteBansModule_241().BaseCoreGenericHandler(BroadcastService.class)).BaseCoreGenericHandler(v29.q());
                                             } else {
-                                                ConfigService.BaseCoreGenericHandler(arg2, null, 0, 2, null);
+                                                ConfigService.BaseCoreGenericHandler(v4, null, 0, 2, null);
                                                 v79 = KotlinUnitHandler.BaseCoreGenericHandler;
-}
-                                        break;
+                                            }
+                                        }
+                                        break block268;
                                     }
-                                    if (arg27.ServerSyncService() == BanHandler.c) {
-                                        arg224 = arg27.g();
-                                        arg225 = arg224;
-                                        if (ObjectUtilities.BaseCoreGenericHandler(arg225.LiteBansModule_194() & 255, -1 & 255) < 0 == false) {
-                                            arg224 = SecHandler.AsyncBackgroundTask_5;
-                                            arg226 = arg27.J();
-                                            arg227 = arg24.ar();
-                                            arg228 = PermanentHandler.BaseCoreGenericHandler((PermanentHandler)arg224, arg227, 0.0, 2, null);
-                                            arg27.LiteBansModule_31((long)(arg228 < 1.0 ? -1.0 : (double)arg226 + arg228));
-}
-                                    arg27.LiteBansModule_31(arg12);
-                                    arg27.LiteBansModule_31(Math.max(arg27.DatabaseMonitorService(), 0L));
-                                    arg229 = new SilentHandler(arg33, (LiteBansModule_113)arg107  , arg129);
-                                    arg33.LiteBansModule_31(arg229);
-                                    arg27.BaseCoreGenericHandler(InitHandler.i);
-                                    arg27.BaseCoreGenericHandler(arg12, v1, arg229, arg27.AsyncBackgroundTask_22());
-                                                                        arg231 = arg12;
-                                    arg232   = arg107  .LiteBansModule_194();
-                                    arg233 = arg27.LiteBansModule_433();
-                                    arg234 = arg27.AsyncBackgroundTask_22();
-                                    arg235 = arg229;
-                                    switch (LiteBansModule_38.BaseCoreGenericHandler[arg235.ServerSyncService().ordinal()]) {
-                                        case 1:
+                                    if (v29.ServerSyncService() == BanHandler.c) {
+                                        v226 = v29.g();
+                                        v227 = v226;
+                                        if (ObjectUtilities.BaseCoreGenericHandler(v227.LiteBansModule_195() & 255, -1 & 255) < 0 == false) {
+                                            v226 = SecHandler.AsyncBackgroundTask_5;
+                                            v228 = v29.J();
+                                            v229 = v26.ar();
+                                            v230 = PermanentHandler.BaseCoreGenericHandler((PermanentHandler)v226, v229, 0.0, 2, null);
+                                            v29.LiteBansModule_31((long)(v230 < 1.0 ? -1.0 : (double)v228 + v230));
+                                        }
+                                    }
+                                    v29.LiteBansModule_31(v14);
+                                    v29.LiteBansModule_31(Math.max(v29.DatabaseMonitorService(), 0L));
+                                    v231 = new SilentHandler(v35, (LiteBansModule_114)v109  , (CharSequence)v131);
+                                    v35.LiteBansModule_31(v231);
+                                    v29.BaseCoreGenericHandler(InitHandler.i);
+                                    v29.BaseCoreGenericHandler(v14, v1, v231, v29.AsyncBackgroundTask_22());
+                                    v232 = this;
+                                    v233 = v14;
+                                    v234   = v109  .LiteBansModule_195();
+                                    v235 = v29.LiteBansModule_435();
+                                    v236 = v29.AsyncBackgroundTask_22();
+                                    v237 = v231;
+                                    switch (LiteBansModule_38.BaseCoreGenericHandler[v237.ServerSyncService().ordinal()]) {
+                                        case 1: 
                                         case 2: {
-                                            arg236 = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)arg231, arg235.DatabaseMonitorService(), arg235.PunishmentTableService(), arg235.ServerSyncService(), arg235.m(), false, false, 48, null);
-                                            if (arg236 == null || LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(arg236.m()) && !LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(arg235.m()) || arg236.LiteBansModule_240() && !arg235.LiteBansModule_240() || arg236.LiteBansModule_240() && arg235.LiteBansModule_240() && (!ObjectUtilities.BaseCoreGenericHandler(arg235.DatabaseMonitorService(), arg236.DatabaseMonitorService()) || !ObjectUtilities.BaseCoreGenericHandler(arg235.PunishmentTableService(), arg236.PunishmentTableService()))) ** GOTO lbl1262
-                                            arg237 = arg230.AsyncBackgroundTask_5();
-                                            arg238 = "litebans.override";
-                                            arg239 = arg237;
-                                            if (arg239.e((String)arg238) == false) {
-                                                arg237 = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)arg231, AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)arg231, (CharSequence)(arg235.ServerSyncService() == BanHandler.LiteBansModule_240 ? MessageKey.LiteBansModule_34 : MessageKey.SQLiteDriverHandler), arg236, false, 2, null), arg234, false, 2, null);
-                                                MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(arg237);
+                                            v238 = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)v233, v237.DatabaseMonitorService(), v237.PunishmentTableService(), v237.ServerSyncService(), v237.m(), false, false, 48, null);
+                                            if (v238 == null || LiteBansModule_182.LiteBansModule_195.LiteBansModule_31(v238.m()) && !LiteBansModule_182.LiteBansModule_195.LiteBansModule_31(v237.m()) || v238.LiteBansModule_241() && !v237.LiteBansModule_241() || v238.LiteBansModule_241() && v237.LiteBansModule_241() && (!ObjectUtilities.BaseCoreGenericHandler((Object)v237.DatabaseMonitorService(), (Object)v238.DatabaseMonitorService()) || !ObjectUtilities.BaseCoreGenericHandler((Object)v237.PunishmentTableService(), (Object)v238.PunishmentTableService()))) ** GOTO lbl1262
+                                            v239 = v232.AsyncBackgroundTask_5();
+                                            v240 = "litebans.override";
+                                            v241 = v239;
+                                            if (v241.e((String)v240) == false) {
+                                                v239 = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)v233, AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)v233, (CharSequence)(v237.ServerSyncService() == BanHandler.LiteBansModule_241 ? MessageKey.LiteBansModule_34 : MessageKey.SQLiteDriverHandler), v238, false, 2, null), v236, false, 2, null);
+                                                MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(v239);
                                                 throw new CommandExitException();
                                             }
-                                            if (!arg233) ** GOTO lbl1249
-                                            arg238 = (MessageHandler)arg230;
-                                            arg239 = arg238;
-                                            if (!((ConfigService)arg239.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().ax()) ** GOTO lbl-1000
-                                            arg238 = arg236;
-                                            if (arg238.HoverTextFormatter() == false && (arg235.HoverTextFormatter() || arg235.n() > arg236.n())) {
+                                            if (!v235) ** GOTO lbl1249
+                                            v240 = (MessageHandler)v232;
+                                            v241 = v240;
+                                            if (!((ConfigService)v241.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().ax()) ** GOTO lbl-1000
+                                            v240 = v238;
+                                            if (v240.HoverTextFormatter() == false && (v237.HoverTextFormatter() || v237.n() > v238.n())) {
+                                                v80 = true;
                                             } else lbl-1000:
                                                                                         {
+                                                v80 = false;
                                             }
-                                            arg240 = v80;
-                                            arg238 = MessageHandler.BaseCoreGenericHandler;
-                                            arg241 = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)arg231, (CharSequence)(arg235.ServerSyncService() == BanHandler.LiteBansModule_240 ? MessageKey.ai : MessageKey.LiteBansModule_5), arg234, false, 2, null);
-                                            arg242 = arg238;
-                                            arg243 = arg240 == false;
-                                            if (arg243) {
-                                                arg244 = arg242;
-                                                arg244.BaseCoreGenericHandler(arg241);
+                                            v242 = v80;
+                                            v240 = MessageHandler.BaseCoreGenericHandler;
+                                            v243 = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)v233, (CharSequence)(v237.ServerSyncService() == BanHandler.LiteBansModule_241 ? MessageKey.ai : MessageKey.LiteBansModule_5), v236, false, 2, null);
+                                            v244 = v240;
+                                            v245 = v242 == false;
+                                            if (v245) {
+                                                v246 = v244;
+                                                v246.BaseCoreGenericHandler(v243);
                                                 throw new CommandExitException();
                                             }
-                                                                                        AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)arg231, arg33.AsyncBackgroundTask_5(), arg33.H(), arg235.LiteBansModule_31(), arg236, false, 16, null);
-                                            v81 = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)arg231, (CharSequence)(arg235.ServerSyncService() == BanHandler.LiteBansModule_240 ? MessageKey.dB : MessageKey.ServerSyncService), arg236, false, 2, null);
-                                            arg238 = new CharSequence[4];
-                                            arg238[0] = "bannedPlayer";
-                                            ObjectUtilities.BaseCoreGenericHandler(arg232  );
-                                            arg238[2] = "mutedPlayer";
-                                            arg238[3] = arg232  ;
-                                            arg245 = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)arg231, LiteBansModule_242.BaseCoreGenericHandler(v81, arg238), arg234, false, 2, null);
-                                            if (StringUtilities.c(arg245, '#', false, 2, null)) {
-                                                arg245 = LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(arg245, "#offline#", arg235.PunishmentTableService());
+                                                                                        AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)v233, v35.AsyncBackgroundTask_5(), v35.H(), v237.LiteBansModule_31(), v238, false, 16, null);
+                                            v81 = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)v233, (CharSequence)(v237.ServerSyncService() == BanHandler.LiteBansModule_241 ? MessageKey.dB : MessageKey.ServerSyncService), v238, false, 2, null);
+                                            v240 = new CharSequence[4];
+                                            v240[0] = "bannedPlayer";
+                                            ObjectUtilities.BaseCoreGenericHandler(v234  );
+                                            v240[2] = "mutedPlayer";
+                                            v240[3] = v234  ;
+                                            v247 = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)v233, (CharSequence)LiteBansModule_243.BaseCoreGenericHandler(v81, v240), v236, false, 2, null);
+                                            if (StringUtilities.c(v247, '#', false, 2, null)) {
+                                                v247 = LiteBansModule_435.LiteBansModule_31.BaseCoreGenericHandler(v247, "#offline#", (Object)v237.PunishmentTableService());
                                             }
-                                            ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, arg230.AsyncBackgroundTask_5(), arg245, null, 4, null);
-                                            CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_82)arg231, arg236, true, arg106);
+                                            ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, v232.AsyncBackgroundTask_5(), v247, null, 4, null);
+                                            CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_83)v233, v238, true, v108);
                                                                                         v82 = KotlinUnitHandler.BaseCoreGenericHandler;
                                             break;
                                         }
                                         default: {
                                             v82 = KotlinUnitHandler.BaseCoreGenericHandler;
-}
-                                    if (arg27.ServerSyncService() == BanHandler.c && arg64 != null && arg106) {
-                                        arg229.BaseCoreGenericHandler(true);
+                                        }
                                     }
-                                    CommandArgumentUtils.BaseCoreGenericHandler(arg12, arg229, false, false, 6, null);
-                                    arg27.BaseCoreGenericHandler(arg12, (CommandSenderWrapper)arg64, (LiteBansModule_113)arg107  , arg106);
-                                    this.plugin((NoneHandler_2)arg27, (LiteBansModule_113)arg107  );
-                                    arg27.BaseCoreGenericHandler(InitHandler.c);
+                                    if (v29.ServerSyncService() == BanHandler.c && v66 != null && v108) {
+                                        v231.BaseCoreGenericHandler(true);
+                                    }
+                                    CommandArgumentUtils.BaseCoreGenericHandler(v14, v231, false, false, 6, null);
+                                    v29.BaseCoreGenericHandler(v14, (CommandSenderWrapper)v66, (LiteBansModule_114)v109  , v108);
+                                    this.plugin((NoneHandler_2)v29, (LiteBansModule_114)v109  );
+                                    v29.BaseCoreGenericHandler(InitHandler.c);
                                     try {
-                                                                                arg231 = arg12;
-                                        arg246 = arg27;
-                                        arg230.BaseCoreGenericHandler((LiteBansModule_82)arg231, arg229, (NoneHandler_2)arg246);
-                                        if (!arg246.PunishmentTableService()) {
-                                            arg247 = arg246.ServerSyncService();
-                                            switch (LiteBansModule_274.BaseCoreGenericHandler[arg247.c().ordinal()]) {
+                                        v232 = this;
+                                        v233 = v14;
+                                        v248 = v29;
+                                        v232.BaseCoreGenericHandler((LiteBansModule_83)v233, v231, (NoneHandler_2)v248);
+                                        if (!v248.PunishmentTableService()) {
+                                            v249 = v248.ServerSyncService();
+                                            switch (LiteBansModule_275.BaseCoreGenericHandler[v249.c().ordinal()]) {
                                                 case 1: {
                                                     v83 = MessageKey.D;
                                                     break;
@@ -1179,134 +1256,140 @@ extends UnbanCommand {
                                                     break;
                                                 }
                                                 case 4: {
-                                                    v83 = MessageKey.LiteBansModule_99;
+                                                    v83 = MessageKey.LiteBansModule_100;
                                                     break;
                                                 }
                                                 default: {
                                                     AssertionUtilities.BaseCoreGenericHandler();
                                                     throw new CommandExitException();
-}
-                                            arg246.BaseCoreGenericHandler((LiteBansModule_82)arg231, GeoIPLookupService.BaseCoreGenericHandler(v83, (CharSequence)"tempDuration", arg246.LiteBansModule_240()));
-                                            switch (LiteBansModule_38.BaseCoreGenericHandler[arg229.ServerSyncService().ordinal()]) {
+                                                }
+                                            }
+                                            v248.BaseCoreGenericHandler((LiteBansModule_83)v233, (CharSequence)GeoIPLookupService.BaseCoreGenericHandler(v83, (CharSequence)"tempDuration", v248.LiteBansModule_241()));
+                                            switch (LiteBansModule_38.BaseCoreGenericHandler[v231.ServerSyncService().ordinal()]) {
                                                 case 1: {
-                                                    CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_82)arg231, arg229, arg246.D());
+                                                    CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_83)v233, v231, v248.D());
                                                     v84 = KotlinUnitHandler.BaseCoreGenericHandler;
                                                     break;
                                                 }
                                                 case 2: {
-                                                    arg248 = arg230;
-                                                    arg249 = arg231;
-                                                    arg250 = arg249.e().q();
-                                                    ObjectUtilities.BaseCoreGenericHandler(arg250);
-                                                    if (!(arg250.length == 0)) {
-                                                        arg251 = arg250;
-                                                        arg252 = arg251;
-                                                        arg253   = new ArrayList<PunishmentService>();
-                                                        arg254 = ((CommandSenderWrapper[])arg252).length;
-                                                        for (arg255 = 0; arg255 < arg254; ++arg255) {
-                                                            arg256 = arg257 = arg252[arg255];
-                                                            ObjectUtilities.BaseCoreGenericHandler(arg256);
-                                                            if (!arg249.BaseCoreGenericHandler(arg229, arg256)) continue;
-                                                            arg253  .add(arg257);
+                                                    v250 = v232;
+                                                    v251 = v233;
+                                                    v252 = v251.e().q();
+                                                    ObjectUtilities.BaseCoreGenericHandler(v252);
+                                                    if (!(v252.length == 0)) {
+                                                        v253 = v252;
+                                                        v254 = v253;
+                                                        v255   = new ArrayList<PunishmentService>();
+                                                        v256 = ((CommandSenderWrapper[])v254).length;
+                                                        for (v257 = 0; v257 < v256; ++v257) {
+                                                            v258 = v259 = v254[v257];
+                                                            ObjectUtilities.BaseCoreGenericHandler(v258);
+                                                            if (!v251.BaseCoreGenericHandler(v231, v258)) continue;
+                                                            v255  .add(v259);
                                                         }
-                                                        arg251 = (List)arg253  ;
-                                                        arg252 = arg251.iterator();
-                                                        while (arg252.hasNext()) {
-                                                            arg253   = arg252.next();
-                                                            arg258 = (CommandSenderWrapper)arg253  ;
-                                                            arg259 = (MessageHandler)arg248;
-                                                            ((PunishmentTableService)arg259.LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class)).BaseCoreGenericHandler(arg258.BaseCoreGenericHandler(), arg229);
-}
+                                                        v253 = (List)v255  ;
+                                                        v254 = v253.iterator();
+                                                        while (v254.hasNext()) {
+                                                            v255   = v254.next();
+                                                            v260 = (CommandSenderWrapper)v255  ;
+                                                            v261 = (MessageHandler)v250;
+                                                            ((PunishmentTableService)v261.LiteBansModule_241().BaseCoreGenericHandler(PunishmentTableService.class)).BaseCoreGenericHandler(v260.BaseCoreGenericHandler(), v231);
+                                                        }
+                                                    }
                                                     v84 = KotlinUnitHandler.BaseCoreGenericHandler;
                                                     break;
                                                 }
                                                 case 3: {
-                                                    arg260 = arg230;
-                                                    arg261 = arg231;
-                                                    arg262 = arg229;
-                                                    arg263 = (MessageHandler)arg260;
-                                                    arg264 = arg263;
-                                                    if (!(((ConfigService)arg264.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().A().length == 0)) {
-                                                        arg263 = (CommandThrottleService)arg261.e().BaseCoreGenericHandler(CommandThrottleService.class);
-                                                        if (arg262.DatabaseMonitorService() == null) {
-                                                            arg265 = (MessageHandler)arg260;
-                                                            ConfigService.BaseCoreGenericHandler((ConfigService)arg265.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class), (Object)"null", 0, 2, null);
+                                                    v262 = v232;
+                                                    v263 = v233;
+                                                    v264 = v231;
+                                                    v265 = (MessageHandler)v262;
+                                                    v266 = v265;
+                                                    if (!(((ConfigService)v266.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().A().length == 0)) {
+                                                        v265 = (CommandThrottleService)v263.e().BaseCoreGenericHandler(CommandThrottleService.class);
+                                                        if (v264.DatabaseMonitorService() == null) {
+                                                            v267 = (MessageHandler)v262;
+                                                            ConfigService.BaseCoreGenericHandler((ConfigService)v267.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class), (Object)"null", 0, 2, null);
                                                         } else {
-                                                            arg266 = arg261.BaseCoreGenericHandler(arg262, 512);
-                                                            arg264 = arg261.c(arg262.DatabaseMonitorService());
-                                                            if (arg264 == null) {
-                                                                arg267 = (MessageHandler)arg260;
-                                                                ConfigService.BaseCoreGenericHandler((ConfigService)arg267.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class), (Object)"null", 0, 2, null);
+                                                            v268 = v263.BaseCoreGenericHandler(v264, 512);
+                                                            v266 = v263.c(v264.DatabaseMonitorService());
+                                                            if (v266 == null) {
+                                                                v269 = (MessageHandler)v262;
+                                                                ConfigService.BaseCoreGenericHandler((ConfigService)v269.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class), (Object)"null", 0, 2, null);
                                                             } else {
-                                                                arg268 = arg264.BaseCoreGenericHandler();
-                                                                arg255 = arg266.size();
-                                                                arg269 = (MessageHandler)arg260;
-                                                                arg269 = (ConfigService)arg269.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
-                                                                arg270 = 10;
-                                                                if (arg269.BaseCoreGenericHandler(arg270)) {
-                                                                    arg271 = arg269;
-                                                                    arg271.BaseCoreGenericHandler((Object)("Active warnings: " + arg255));
+                                                                v270 = v266.BaseCoreGenericHandler();
+                                                                v257 = v268.size();
+                                                                v271 = (MessageHandler)v262;
+                                                                v271 = (ConfigService)v271.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class);
+                                                                v272 = 10;
+                                                                if (v271.BaseCoreGenericHandler(v272)) {
+                                                                    v273 = v271;
+                                                                    v273.BaseCoreGenericHandler((Object)("Active warnings: " + v257));
                                                                 }
-                                                                arg272 = (MessageHandler)arg260;
-                                                                arg273 = arg272;
-                                                                for (Object arg273 : ((ConfigService)arg273.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().A()) {
-                                                                    if (StringUtilities.LiteBansModule_31(arg273)) continue;
-                                                                    arg274   = new char[]{':'};
-                                                                    arg274   = (char[])StringUtilities.BaseCoreGenericHandler(arg273, arg274  , false, 2, 2, null);
-                                                                    arg275 = arg274  ;
-                                                                    arg276 = arg275.toArray(new String[0]);
-                                                                    if (StringUtilities.LiteBansModule_31(arg276[0], '+', false, 2, null)) {
-                                                                        arg276[0] = arg276[0].substring(0, arg276[0].length() - 1);
+                                                                v274 = (MessageHandler)v262;
+                                                                v275 = v274;
+                                                                for (Object v275 : ((ConfigService)v275.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().A()) {
+                                                                    if (StringUtilities.LiteBansModule_31((CharSequence)v275)) continue;
+                                                                    v276   = new char[]{':'};
+                                                                    v276   = (char[])StringUtilities.BaseCoreGenericHandler((CharSequence)v275, v276  , false, 2, 2, null);
+                                                                    v277 = v276  ;
+                                                                    v278 = v277.toArray(new String[0]);
+                                                                    if (StringUtilities.LiteBansModule_31((CharSequence)v278[0], '+', false, 2, null)) {
+                                                                        v278[0] = v278[0].substring(0, v278[0].length() - 1);
                                                                     }
-                                                                    if (!StringUtilities.c(arg273, ':', false, 2, null) || !HexEncodingHelper.BaseCoreGenericHandler.AsyncBackgroundTask_5(arg276[0])) {
-                                                                        arg261.e().getLogger().warning("Warning action is invalid (bad format): '" + (String)arg273 + "'. Ignored + ");
+                                                                    if (!StringUtilities.c((CharSequence)v275, ':', false, 2, null) || !LiteBansModule_346.BaseCoreGenericHandler.AsyncBackgroundTask_5(v278[0])) {
+                                                                        v263.e().getLogger().warning("Warning action is invalid (bad format): '" + (String)v275 + "'. Ignored + ");
                                                                         continue;
                                                                     }
-                                                                    arg277 = Integer.parseInt(arg276[0]);
-                                                                    if (arg277 < 1 && !arg278) {
-                                                                        arg261.e().getLogger().warning("Warning action is invalid (threshold " + arg277 + " < 1): '" + (String)arg273 + "'. Ignored + ");
+                                                                    v279 = Integer.parseInt(v278[0]);
+                                                                    if (v279 < 1 && !v280) {
+                                                                        v263.e().getLogger().warning("Warning action is invalid (threshold " + v279 + " < 1): '" + (String)v275 + "'. Ignored + ");
                                                                         continue;
                                                                     }
-                                                                    if (arg255 != arg277 && (!arg278 || arg255 <= arg277)) continue;
-                                                                    arg275 = new LiteBansModule_144();
-                                                                    arg275.BaseCoreGenericHandler = arg276[1];
-                                                                    if (StringUtilities.BaseCoreGenericHandler(arg275.BaseCoreGenericHandler, '/', false, 2, null)) {
-                                                                        arg279 = arg275.BaseCoreGenericHandler;
-                                                                        arg280 = 1;
-                                                                        arg281 = arg279.length();
-                                                                        arg275.BaseCoreGenericHandler = arg279.subSequence(arg280, arg281).toString();
+                                                                    if (v257 != v279 && (!v280 || v257 <= v279)) continue;
+                                                                    v277 = new LiteBansModule_145();
+                                                                    v277.BaseCoreGenericHandler = v278[1];
+                                                                    if (StringUtilities.BaseCoreGenericHandler((CharSequence)v277.BaseCoreGenericHandler, '/', false, 2, null)) {
+                                                                        v281 = (CharSequence)v277.BaseCoreGenericHandler;
+                                                                        v282 = 1;
+                                                                        v283 = v281.length();
+                                                                        v277.BaseCoreGenericHandler = v281.subSequence(v282, v283).toString();
                                                                     }
-                                                                    if (GeoIPLookupService.LiteBansModule_31(arg275.BaseCoreGenericHandler, "list")) {
-                                                                        arg279 = new StringBuilder();
-                                                                        arg282 = arg266;
-                                                                        for (T arg283 : arg282) {
-                                                                            arg284 = (SilentHandler)arg283;
-                                                                            arg279.append('\n').append(AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)arg261, MessageKey.UsageHandler, arg284, false, 2, null));
+                                                                    if (GeoIPLookupService.LiteBansModule_31((CharSequence)v277.BaseCoreGenericHandler, "list")) {
+                                                                        v281 = new StringBuilder();
+                                                                        v284 = v268;
+                                                                        for (T v285 : v284) {
+                                                                            v286 = (SilentHandler)v285;
+                                                                            v281.append('\n').append(AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)v263, (CharSequence)MessageKey.UsageHandler, v286, false, 2, null));
                                                                         }
-                                                                        arg275.BaseCoreGenericHandler = GeoIPLookupService.BaseCoreGenericHandler(arg275.BaseCoreGenericHandler, (CharSequence)"list", arg279);
+                                                                        v277.BaseCoreGenericHandler = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)v277.BaseCoreGenericHandler, (CharSequence)"list", v281);
                                                                     }
-                                                                    arg275.BaseCoreGenericHandler = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)arg261, GeoIPLookupService.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)arg261, arg275.BaseCoreGenericHandler, arg262, false, 2, null), (CharSequence)"player", arg268), (LiteBansModule_297)arg264, false, 2, null);
-                                                                    arg279 = (MessageHandler)arg260;
-                                                                    ((ConfigService)arg279.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).BaseCoreGenericHandler(10, arg275.BaseCoreGenericHandler);
-                                                                    arg285 = (MessageHandler)arg260;
-                                                                    arg286 = arg285;
-                                                                    v85 = arg279 = ((ConfigService)arg286.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule() != false ? arg261.e().HoverTextFormatter() : arg260.AsyncBackgroundTask_5();
+                                                                    v277.BaseCoreGenericHandler = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)v263, (CharSequence)GeoIPLookupService.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)v263, (CharSequence)v277.BaseCoreGenericHandler, v264, false, 2, null), (CharSequence)"player", (Object)v270), (LiteBansModule_298)v266, false, 2, null);
+                                                                    v281 = (MessageHandler)v262;
+                                                                    ((ConfigService)v281.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).BaseCoreGenericHandler(10, v277.BaseCoreGenericHandler);
+                                                                    v287 = (MessageHandler)v262;
+                                                                    v288 = v287;
+                                                                    v85 = v281 = ((ConfigService)v288.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().LiteBansModule() != false ? v263.e().HoverTextFormatter() : v262.AsyncBackgroundTask_5();
                                                                     ObjectUtilities.BaseCoreGenericHandler(v85);
-                                                                    arg263.LiteBansModule_31((byte)3, v85.BaseCoreGenericHandler());
-                                                                    arg261.e().c(new AsyncBackgroundTask_2((CommandSenderWrapper)arg279, (LiteBansModule_144)arg275));
-                                                                    arg285 = (MessageHandler)arg260;
-                                                                    arg286 = arg285;
-                                                                    if (!((ConfigService)arg286.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_2()) continue;
-                                                                    arg285 = (MessageHandler)arg260;
-                                                                    arg286 = arg285;
-                                                                    if (arg273 != ArrayUtilities.c(((ConfigService)arg286.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().A())) continue;
-                                                                    arg285 = arg266;
-                                                                    arg286 = arg285.iterator();
-                                                                    while (arg286.hasNext()) {
-                                                                        arg287 = arg286.next();
-                                                                        arg284 = (SilentHandler)arg287;
-                                                                        AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)arg261, arg284, arg262.e(), arg262.LiteBansModule_433(), null, false, 24, null);
-}
+                                                                    v265.LiteBansModule_31((byte)3, v85.BaseCoreGenericHandler());
+                                                                    v263.e().c(new AsyncBackgroundTask_2((CommandSenderWrapper)v281, (LiteBansModule_145)v277));
+                                                                    v287 = (MessageHandler)v262;
+                                                                    v288 = v287;
+                                                                    if (!((ConfigService)v288.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().LiteBansModule_2()) continue;
+                                                                    v287 = (MessageHandler)v262;
+                                                                    v288 = v287;
+                                                                    if (v275 != ArrayUtilities.c(((ConfigService)v288.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().A())) continue;
+                                                                    v287 = v268;
+                                                                    v288 = v287.iterator();
+                                                                    while (v288.hasNext()) {
+                                                                        v289 = v288.next();
+                                                                        v286 = (SilentHandler)v289;
+                                                                        AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)v263, v286, v264.e(), v264.LiteBansModule_435(), null, false, 24, null);
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
                                                     v84 = KotlinUnitHandler.BaseCoreGenericHandler;
                                                     break;
                                                 }
@@ -1317,118 +1400,132 @@ extends UnbanCommand {
                                                 default: {
                                                     AssertionUtilities.BaseCoreGenericHandler();
                                                     throw new CommandExitException();
-}
-                                            arg247 = (MessageHandler)arg230;
-                                            arg235 = (BroadcastService)arg247.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
-                                            arg235.BaseCoreGenericHandler((LiteBansModule_82)arg231, (NoneHandler_2)arg27);
+                                                }
+                                            }
+                                            v249 = (MessageHandler)v232;
+                                            v237 = (BroadcastService)v249.LiteBansModule_241().BaseCoreGenericHandler(BroadcastService.class);
+                                            v237.BaseCoreGenericHandler((LiteBansModule_83)v233, (NoneHandler_2)v29);
                                         }
-                                        if (!arg246.PunishmentTableService()) {
-                                            arg288 = (MessageHandler)arg230;
-                                            arg289 = arg288;
-                                            if (((ConfigService)arg289.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().e() > 0 && arg229.ServerSyncService() == BanHandler.LiteBansModule_240 && arg229.LiteBansModule_240() && arg229.DatabaseMonitorService() != null) {
-                                                arg288 = MessageHandler.BaseCoreGenericHandler;
-                                                arg290 = arg231.AsyncBackgroundTask_5().CommandThrottleService() == false;
-                                                arg289 = MessageKey.LiteBansModule_117;
-                                                arg291 = arg288;
-                                                if (arg290) {
-                                                    arg292 = arg291;
-                                                    arg292.BaseCoreGenericHandler(arg289);
+                                        if (!v248.PunishmentTableService()) {
+                                            v290 = (MessageHandler)v232;
+                                            v291 = v290;
+                                            if (((ConfigService)v291.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().e() > 0 && v231.ServerSyncService() == BanHandler.LiteBansModule_241 && v231.LiteBansModule_241() && v231.DatabaseMonitorService() != null) {
+                                                v290 = MessageHandler.BaseCoreGenericHandler;
+                                                v292 = v233.AsyncBackgroundTask_5().CommandThrottleService() == false;
+                                                v291 = MessageKey.LiteBansModule_118;
+                                                v293 = v290;
+                                                if (v292) {
+                                                    v294 = v293;
+                                                    v294.BaseCoreGenericHandler(v291);
                                                     throw new CommandExitException();
                                                 }
-                                                arg288 = new LiteBansModule_206(arg229.DatabaseMonitorService(), (LiteBansModule_82)arg231, null, false, 0, 28, null).i();
-                                                if (arg288.n()) {
-{
-                                                        arg293 = MessageHandler.BaseCoreGenericHandler;
-                                                        arg294 = arg288.m() > 10 && arg246.LiteBansModule_194() == false;
-                                                        if (arg294) {
-                                                            arg295 = arg293;
-                                                            arg295.BaseCoreGenericHandler(MessageKey.U.BaseCoreGenericHandler("list", arg288.c()));
+                                                v290 = new LiteBansModule_207(v231.DatabaseMonitorService(), (LiteBansModule_83)v233, null, false, 0, 28, null).i();
+                                                if (v290.n()) {
+                                                    block269: {
+                                                        v295 = MessageHandler.BaseCoreGenericHandler;
+                                                        v296 = v290.m() > 10 && v248.LiteBansModule_195() == false;
+                                                        if (v296) {
+                                                            v297 = v295;
+                                                            v297.BaseCoreGenericHandler(MessageKey.U.BaseCoreGenericHandler("list", (Object)v290.c()));
                                                             throw new CommandExitException();
                                                         }
-                                                        arg293 = MessageHandler.BaseCoreGenericHandler;
-                                                        arg296 = arg288.LiteBansModule_240();
-                                                        if (arg296 instanceof Collection && ((Collection)arg296).isEmpty()) {
+                                                        v295 = MessageHandler.BaseCoreGenericHandler;
+                                                        v298 = v290.LiteBansModule_241();
+                                                        if (v298 instanceof Collection && ((Collection)v298).isEmpty()) {
+                                                            v86 = false;
                                                         } else {
-                                                            for (T arg297 : arg296) {
-                                                                arg298 = (LiteBansModule_327)arg297;
-                                                                if (!ObjectUtilities.BaseCoreGenericHandler(arg298.LiteBansModule_31(), arg246.AsyncBackgroundTask_5())) continue;
-                                                                break;
-}
-                                                    arg299 = v86;
-                                                    arg300 = MessageKey.aa;
-                                                    arg301 = arg293;
-                                                    if (arg299) {
-                                                        arg302 = arg301;
-                                                        arg302.BaseCoreGenericHandler(arg300);
+                                                            for (T v299 : v298) {
+                                                                v300 = (LiteBansModule_328)v299;
+                                                                if (!ObjectUtilities.BaseCoreGenericHandler((Object)v300.LiteBansModule_31(), (Object)v248.AsyncBackgroundTask_5())) continue;
+                                                                v86 = true;
+                                                                break block269;
+                                                            }
+                                                            v86 = false;
+                                                        }
+                                                    }
+                                                    v301 = v86;
+                                                    v302 = MessageKey.aa;
+                                                    v303 = v295;
+                                                    if (v301) {
+                                                        v304 = v303;
+                                                        v304.BaseCoreGenericHandler(v302);
                                                         throw new CommandExitException();
                                                     }
-                                                    for (LiteBansModule_327 arg303 : arg288.LiteBansModule_240()) {
-                                                        if (HexEncodingHelper.BaseCoreGenericHandler.GnuSparseMapHandler(arg303.LiteBansModule_31()) == null || ObjectUtilities.BaseCoreGenericHandler(arg303.LiteBansModule_31(), arg229.DatabaseMonitorService()) || arg303.c() != null && ObjectUtilities.BaseCoreGenericHandler(arg303.c().DatabaseMonitorService(), arg303.LiteBansModule_31()) || AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)arg231, (UUID)arg300, null, 2, null)) continue;
-                                                        arg246.BaseCoreGenericHandler((LiteBansModule_82)arg231, arg303.e(), arg303.LiteBansModule_31());
-                                                        v87 = arg246.AsyncBackgroundTask_22();
-                                                        v88 = arg246.AsyncBackgroundTask_22();
-                                                        CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_82)arg231, arg303, arg229, v87 != null ? v87.BaseCoreGenericHandler() : null, v88 != null ? v88.i() : null, null, null, false, 112, null);
-}
-                                        arg230 = arg12;
-                                        arg231 = BroadcastHandler.LiteBansModule_401.BaseCoreGenericHandler(arg27.ServerSyncService());
-                                        if (!arg230.AsyncBackgroundTask_5().AsyncBackgroundTask_21()) break;
-                                        arg47   = arg231;
-                                        arg41 = arg230;
-                                        arg304 = ServerSyncService.GnuSparseMapHandler;
-                                        arg305 = arg107  ;
-                                        arg306 = ServerSyncService.GnuSparseMapHandler;
+                                                    for (LiteBansModule_328 v305 : v290.LiteBansModule_241()) {
+                                                        if (LiteBansModule_346.BaseCoreGenericHandler.GnuSparseMapHandler(v305.LiteBansModule_31()) == null || ObjectUtilities.BaseCoreGenericHandler((Object)v305.LiteBansModule_31(), (Object)v231.DatabaseMonitorService()) || v305.c() != null && ObjectUtilities.BaseCoreGenericHandler((Object)v305.c().DatabaseMonitorService(), (Object)v305.LiteBansModule_31()) || AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)v233, (UUID)v302, null, 2, null)) continue;
+                                                        v248.BaseCoreGenericHandler((LiteBansModule_83)v233, v305.e(), v305.LiteBansModule_31());
+                                                        v87 = v248.AsyncBackgroundTask_22();
+                                                        v88 = v248.AsyncBackgroundTask_22();
+                                                        CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_83)v233, v305, v231, v87 != null ? v87.BaseCoreGenericHandler() : null, v88 != null ? v88.i() : null, null, null, false, 112, null);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        v232 = v14;
+                                        v233 = BroadcastHandler.LiteBansModule_403.BaseCoreGenericHandler(v29.ServerSyncService());
+                                        if (!v232.AsyncBackgroundTask_5().AsyncBackgroundTask_21()) break block270;
+                                        v49   = v233;
+                                        v43 = v232;
+                                        v306 = ServerSyncService.GnuSparseMapHandler;
+                                        v307 = v109  ;
+                                        v308 = ServerSyncService.GnuSparseMapHandler;
                                     }
-                                    catch (Throwable arg307) {
-                                        arg231 = arg12;
-                                        arg232   = BroadcastHandler.LiteBansModule_401.BaseCoreGenericHandler(arg27.ServerSyncService());
-                                        if (arg231.AsyncBackgroundTask_5().AsyncBackgroundTask_21()) {
-                                            arg47   = arg232  ;
-                                            arg41 = arg231;
-                                            arg308 = ServerSyncService.GnuSparseMapHandler;
-                                            arg309 = arg107  ;
-                                            arg310 = ServerSyncService.GnuSparseMapHandler;
-                                            arg311 = new CharSequence[2];
-                                            v89 = arg309.BaseCoreGenericHandler();
+                                    catch (Throwable v309) {
+                                        v233 = v14;
+                                        v234   = BroadcastHandler.LiteBansModule_403.BaseCoreGenericHandler(v29.ServerSyncService());
+                                        if (v233.AsyncBackgroundTask_5().AsyncBackgroundTask_21()) {
+                                            v49   = v234  ;
+                                            v43 = v233;
+                                            v310 = ServerSyncService.GnuSparseMapHandler;
+                                            v311 = v109  ;
+                                            v312 = ServerSyncService.GnuSparseMapHandler;
+                                            v313 = new CharSequence[2];
+                                            v89 = v311.BaseCoreGenericHandler();
                                             if (v89 == null) {
                                                 v89 = "";
                                             }
-                                            arg311[0] = LiteBansModule_50.c.AsyncBackgroundTask_5(v89);
-                                            arg311[1] = arg229.LiteBansModule_240() != false ? String.valueOf(arg309.c()) : "";
-                                            arg312 = ArrayUtilities.BaseCoreGenericHandler(arg311, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
-                                            CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_82)arg41, (BroadcastHandler)arg47  , arg312, null, null, 12, null);
+                                            v313[0] = LiteBansModule_50.c.AsyncBackgroundTask_5(v89);
+                                            v313[1] = v231.LiteBansModule_241() != false ? String.valueOf(v311.c()) : "";
+                                            v314 = ArrayUtilities.BaseCoreGenericHandler(v313, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
+                                            CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_83)v43, (BroadcastHandler)v49  , v314, null, null, 12, null);
                                         }
-                                        throw arg307;
+                                        throw v309;
                                     }
-                                    arg313 = new CharSequence[2];
-                                    v90 = arg305.BaseCoreGenericHandler();
+                                    v315 = new CharSequence[2];
+                                    v90 = v307.BaseCoreGenericHandler();
                                     if (v90 == null) {
                                         v90 = "";
                                     }
-                                    arg313[0] = LiteBansModule_50.c.AsyncBackgroundTask_5(v90);
-                                    arg313[1] = arg229.LiteBansModule_240() != false ? String.valueOf(arg305.c()) : "";
-                                    arg314 = ArrayUtilities.BaseCoreGenericHandler(arg313, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
-                                    CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_82)arg41, (BroadcastHandler)arg47  , arg314, null, null, 12, null);
+                                    v315[0] = LiteBansModule_50.c.AsyncBackgroundTask_5(v90);
+                                    v315[1] = v231.LiteBansModule_241() != false ? String.valueOf(v307.c()) : "";
+                                    v316 = ArrayUtilities.BaseCoreGenericHandler(v315, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
+                                    CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_83)v43, (BroadcastHandler)v49  , v316, null, null, 12, null);
                                 }
-                                arg27.BaseCoreGenericHandler(InitHandler.e);
+                                v29.BaseCoreGenericHandler(InitHandler.e);
                             }
                             finally {
-                                arg27.BaseCoreGenericHandler(InitHandler.LiteBansModule_31);
-}
-                        catch (LiteBansException_2 arg315) {
-}
-                    arg11 = KotlinUnitHandler.BaseCoreGenericHandler;
+                                v29.BaseCoreGenericHandler(InitHandler.LiteBansModule_31);
+                            }
+                        }
+                        catch (LiteBansException_2 v317) {
+                        }
+                    }
+                    v13 = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
-                catch (Throwable arg316) {
-                    arg317 = arg316;
-                    throw arg316;
+                catch (Throwable v318) {
+                    v319 = v318;
+                    throw v318;
                 }
                 finally {
-                    BlockHandler.BaseCoreGenericHandler(arg10, arg317);
-}
-            catch (SQLException arg318) {
-                if (arg4.LiteBansModule_31(arg318)) break;
-                throw arg318;
-}
+                    BlockHandler.BaseCoreGenericHandler(v12, v319);
+                }
+            }
+            catch (SQLException v320) {
+                if (v6.LiteBansModule_31(v320)) break block271;
+                throw v320;
+            }
+        }
+    }
 
     private final void LiteBansModule_31(NoneHandler_2 cz2, String string) {
         LiteBansModule_65 c12 = this.plugin(cz2, string);
@@ -1436,29 +1533,30 @@ extends UnbanCommand {
             cz2.n().append(string).append(' ');
         } else {
             this.plugin(cz2, c12);
-}
+        }
+    }
 
     private final void BaseCoreGenericHandler(NoneHandler_2 cz2, LiteBansModule_65 c12) {
         cz2.BaseCoreGenericHandler(c12);
         MessageHandler messageHandler = this;
-        cz2.BaseCoreGenericHandler(((ConfigService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).AsyncBackgroundTask_21().BaseCoreGenericHandler(cz2.ServerSyncService(), c12));
+        cz2.BaseCoreGenericHandler(((ConfigService)messageHandler.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).AsyncBackgroundTask_21().BaseCoreGenericHandler(cz2.ServerSyncService(), c12));
     }
 
     private final LiteBansModule_65 BaseCoreGenericHandler(NoneHandler_2 cz2, String string) {
         LiteBansModule_65 c12;
-        if ((cz2.n()).length() > 0 || (cz2.AsyncBackgroundTask_21()).length() == 0 || cz2.PunishmentService() || cz2.BanHandler_5()) {
+        if (((CharSequence)cz2.n()).length() > 0 || ((CharSequence)cz2.AsyncBackgroundTask_21()).length() == 0 || cz2.PunishmentService() || cz2.BanHandler_5()) {
             c12 = null;
         } else {
             MessageHandler messageHandler = this;
-            c12 = ((ConfigService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).AsyncBackgroundTask_21().BaseCoreGenericHandler(cz2.ServerSyncService(), string);
+            c12 = ((ConfigService)messageHandler.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).AsyncBackgroundTask_21().BaseCoreGenericHandler(cz2.ServerSyncService(), string);
         }
         return c12;
     }
 
-    private final void BaseCoreGenericHandler(NoneHandler_2 cz2, LiteBansModule_113 d92) {
-        if (cz2.ServerSyncService() == BanHandler.LiteBansModule_240) {
+    private final void BaseCoreGenericHandler(NoneHandler_2 cz2, LiteBansModule_114 d92) {
+        if (cz2.ServerSyncService() == BanHandler.LiteBansModule_241) {
             String string;
-                        targetObj = ((BroadcastService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class)).LiteBansModule_194();
+                        targetObj = ((BroadcastService)((MessageHandler)targetObj).LiteBansModule_241().BaseCoreGenericHandler(BroadcastService.class)).LiteBansModule_195();
             String string2 = d92.AsyncBackgroundTask_5();
             if (string2 != null) {
                 String string3 = string2;
@@ -1468,33 +1566,34 @@ extends UnbanCommand {
             }
             String string4 = string;
             NullHandler_6.LiteBansModule_31(targetObj).remove(string4);
-}
+        }
+    }
 
-    private final void BaseCoreGenericHandler(LiteBansModule_113 d92) {
+    private final void BaseCoreGenericHandler(LiteBansModule_114 d92) {
         String string;
         String string2;
                 MessageHandler messageHandler = (MessageHandler)targetObj;
-        if (((BroadcastService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class)).LiteBansModule_194().size() >= 128) {
+        if (((BroadcastService)messageHandler.LiteBansModule_241().BaseCoreGenericHandler(BroadcastService.class)).LiteBansModule_195().size() >= 128) {
             messageHandler = (MessageHandler)targetObj;
             flag2 = false;
-            ((BroadcastService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class)).LiteBansModule_194().clear();
-            targetObj.LiteBansModule_240().getLogger().warning("Too many unbanned players InitializerHandler_3 queue! Cleared list to prevent memory ");
+            ((BroadcastService)messageHandler.LiteBansModule_241().BaseCoreGenericHandler(BroadcastService.class)).LiteBansModule_195().clear();
+            ((MessageHandler)targetObj).LiteBansModule_241().getLogger().warning("Too many unbanned players InitializerHandler_3 queue! Cleared list to prevent memory ");
         }
         if ((string2 = d92.g()) == null || (string2 = (string = string2).toLowerCase(Locale.ENGLISH)) == null) {
             return;
         }
         targetObj = string2;
         MessageHandler fg_03 = this;
-        ((BroadcastService)fg_03.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class)).LiteBansModule_194().add(targetObj);
+        ((BroadcastService)fg_03.LiteBansModule_241().BaseCoreGenericHandler(BroadcastService.class)).LiteBansModule_195().add(targetObj);
     }
 
-    private static final KotlinUnitHandler BaseCoreGenericHandler(CommandSenderWrapper sender, LiteBansModule_82 ch2) {
+    private static final KotlinUnitHandler BaseCoreGenericHandler(CommandSenderWrapper sender, LiteBansModule_83 ch2) {
         AllHandler_3.BaseCoreGenericHandler(ch2, sender.i(), sender.BaseCoreGenericHandler(), sender.LiteBansModule_31(), false, false, 16, null);
         return KotlinUnitHandler.BaseCoreGenericHandler;
     }
 
-    private static final KotlinUnitHandler BaseCoreGenericHandler(NoneHandler_2 cz2, LiteBansModule_82 ch2) {
-        LiteBansModule_297 iA2 = cz2.AsyncBackgroundTask_22();
+    private static final KotlinUnitHandler BaseCoreGenericHandler(NoneHandler_2 cz2, LiteBansModule_83 ch2) {
+        LiteBansModule_298 iA2 = cz2.AsyncBackgroundTask_22();
         ObjectUtilities.BaseCoreGenericHandler(iA2);
         ch2.BaseCoreGenericHandler(iA2, false);
         return KotlinUnitHandler.BaseCoreGenericHandler;
@@ -1506,6 +1605,7 @@ extends UnbanCommand {
     }
 
     private static final void LiteBansModule_31() {
-        Utf8Handler_2 = new String[]{"ban", "[c] ", "[LiteBans]", " Plugin access has been disabled!", "litebans.admin", "[LiteBans]", " If you have bought LiteBans, contact Ruan on ", "\n", "Timeout after ", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", " seconds", "duration:permanent", "\\-", "-", "", "", "", "", "", "litebans.temp", "", "litebans.ip", "", "litebans.ip", "litebans.ip", "", "litebans.modify", "", ".own", "litebans.ip", ".wildcard", "_USAGE", "_USAGE", "litebans + ", "litebans + ", "litebans.ip", "#offline#", "#offline#", "#", "#", "#", "player", "Hiding IP address from broadcast: ", "", "Applying ", " template group ", ": weight ", " => ", " (", "Applying ", " template \"", "\" LiteBansModule_21 level ", "", "", ".own", "", "[0xff] ", " (LiteBansModule_433=", "litebans.modify", "litebans.delete", "", "No active ", " found for uuid:", " / ip:", " on server:", " (target: '", "')", "Try targeting LiteBansModule_61 UUID instead of ", "\n", "litebans.unban.queue", "", "", "\ufeff", "", "", "\ufeff", "litebans.override", "bannedPlayer", "mutedPlayer", "#offline#", "tempDuration", "null", "null", "Active warnings: ", "Warning action is invalid (bad format): '", "' + ", "Warning action is invalid (threshold ", " < 1): '", "' + ", "list", "list", "player", "list", "", "", "\ufeff", "", "", "\ufeff", "Too many unbanned players InitializerHandler_3 queue! Cleared list to prevent memory ", "Too many unbanned players InitializerHandler_3 queue! Cleared list to prevent memory ", "litebans.override", "bannedPlayer", "mutedPlayer", "#offline#", "null", "null", "Active warnings: ", "Warning action is invalid (bad format): '", "' + ", "Warning action is invalid (threshold ", " < 1): '", "' + ", "list", "list", "player", "tempDuration", "null", "null", "Active warnings: ", "Warning action is invalid (bad format): '", "' + ", "Warning action is invalid (threshold ", " < 1): '", "' + ", "list", "list", "player", "list"};
+        Utf8Handler_2 = new String[]{"ban", "[c] ", "[LiteBans]", " Plugin access has been disabled!", "litebans.admin", "[LiteBans]", " If you have bought LiteBans, contact Ruan on ", "\n", "Timeout after ", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", " seconds", "duration:permanent", "\\-", "-", "", "", "", "", "", "litebans.temp", "", "litebans.ip", "", "litebans.ip", "litebans.ip", "", "litebans.modify", "", ".own", "litebans.ip", ".wildcard", "_USAGE", "_USAGE", "litebans + ", "litebans + ", "litebans.ip", "#offline#", "#offline#", "#", "#", "#", "player", "Hiding IP address from broadcast: ", "", "Applying ", " template group ", ": weight ", " => ", " (", "Applying ", " template \"", "\" LiteBansModule_21 level ", "", "", ".own", "", "[0xff] ", " (LiteBansModule_435=", "litebans.modify", "litebans.delete", "", "No active ", " found for uuid:", " / ip:", " on server:", " (target: '", "')", "Try targeting LiteBansModule_61 UUID instead of ", "\n", "litebans.unban.queue", "", "", "\ufeff", "", "", "\ufeff", "litebans.override", "bannedPlayer", "mutedPlayer", "#offline#", "tempDuration", "null", "null", "Active warnings: ", "Warning action is invalid (bad format): '", "' + ", "Warning action is invalid (threshold ", " < 1): '", "' + ", "list", "list", "player", "list", "", "", "\ufeff", "", "", "\ufeff", "Too many unbanned players InitializerHandler_3 queue! Cleared list to prevent memory ", "Too many unbanned players InitializerHandler_3 queue! Cleared list to prevent memory ", "litebans.override", "bannedPlayer", "mutedPlayer", "#offline#", "null", "null", "Active warnings: ", "Warning action is invalid (bad format): '", "' + ", "Warning action is invalid (threshold ", " < 1): '", "' + ", "list", "list", "player", "tempDuration", "null", "null", "Active warnings: ", "Warning action is invalid (bad format): '", "' + ", "Warning action is invalid (threshold ", " < 1): '", "' + ", "list", "list", "player", "list"};
+    }
 }
 

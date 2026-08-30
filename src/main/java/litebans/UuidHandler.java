@@ -7,8 +7,8 @@ extends Enum {
     public static final UuidHandler AsyncBackgroundTask_5;
     public static final UuidHandler c;
     private static final /* synthetic */ UuidHandler[] BaseCoreGenericHandler;
-    private static final /* synthetic */ LiteBansModule_372 LiteBansModule_31;
-    /*
+    private static final /* synthetic */ LiteBansModule_374 LiteBansModule_31;
+        /*
      * WARNING - Possible parameter corruption
      * WARNING - void declaration
      */
@@ -33,5 +33,10 @@ extends Enum {
         c = new UuidHandler("CUSTOM", 3);
         BaseCoreGenericHandler = jRArray = new UuidHandler[]{UuidHandler.g, UuidHandler.e, UuidHandler.AsyncBackgroundTask_5, UuidHandler.c};
         LiteBansModule_31 = EntriesHandler_3.BaseCoreGenericHandler(BaseCoreGenericHandler);
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        LiteBansModule_195 = new String[]{"UUID", "EXECUTOR_UUID", "ID", "CUSTOM"};
+    }
 }
 

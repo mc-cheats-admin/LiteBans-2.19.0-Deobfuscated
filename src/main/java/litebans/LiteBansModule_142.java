@@ -1,15 +1,20 @@
 package litebans;
 
-import org.yaml.snakeyaml.DumperOptions;
-import org.yaml.snakeyaml.representer.Representer;
+public final class LiteBansModule_142 {
+    private final String LiteBansModule_31;
+    private final String BaseCoreGenericHandler;
+    private final String c;
 
-static class LiteBansModule_142
-extends Representer {
-    final /* synthetic */ AsyncBackgroundTask_5 BaseCoreGenericHandler;
+    public final String c() {
+        return this.LiteBansModule_31;
+    }
 
-    LiteBansModule_142(AsyncBackgroundTask_5 d10, DumperOptions dumperOptions) {
-        this.plugin = d10;
-        super(dumperOptions);
-        this.representers.put(NullHandler_4.class, new LiteBansModule_281(this));
+    public final String LiteBansModule_31() {
+        return this.plugin;
+    }
+
+    public final String BaseCoreGenericHandler() {
+        return this.c;
+    }
 }
 

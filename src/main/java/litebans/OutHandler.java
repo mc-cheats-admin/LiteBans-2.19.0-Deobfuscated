@@ -6,9 +6,9 @@ import java.io.OutputStream;
 import org.jetbrains.annotations.NotNull;
 
 public final class OutHandler {
-    public static final long BaseCoreGenericHandler(@NotNull InputStream inputStream, @NotNull OutputStream outputStream, int n) {
-        ObjectUtilities.BaseCoreGenericHandler(inputStream, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler(outputStream, "out");
+        public static final long BaseCoreGenericHandler(@NotNull InputStream inputStream, @NotNull OutputStream outputStream, int n) {
+        ObjectUtilities.BaseCoreGenericHandler((Object)inputStream, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)outputStream, "out");
         long l3 = 0L;
         byte[] byArray = new byte[n];
         int n2 = inputStream.read(byArray);
@@ -28,7 +28,7 @@ public final class OutHandler {
     }
 
     public static final byte[] BaseCoreGenericHandler(@NotNull InputStream inputStream) {
-        ObjectUtilities.BaseCoreGenericHandler(inputStream, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)inputStream, "<this>");
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(Math.max(8192, inputStream.available()));
         OutHandler.BaseCoreGenericHandler(inputStream, byteArrayOutputStream, 0, 2, null);
         return byteArrayOutputStream.toByteArray();
@@ -36,5 +36,10 @@ public final class OutHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"<this>", "<this>", "charset", "<this>", "charset", "<this>", "<this>", "<this>", "<this>", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "<this>", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "out", "<this>", "<this>"};
+    }
+
+    static {
+        OutHandler.BaseCoreGenericHandler();
+    }
 }
 

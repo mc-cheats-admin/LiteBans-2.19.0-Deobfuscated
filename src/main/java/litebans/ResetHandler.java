@@ -2,11 +2,11 @@ package litebans;
 
 import java.util.concurrent.atomic.AtomicLong;
 static final class ResetHandler
-extends LiteBansModule_375
-implements LiteBansModule_178 {
-    public static final ResetHandler LiteBansModule_401;
-    ResetHandler() {
-        super(1, LiteBansModule_340.class, "reset", "reset(Ljava/util/concurrent/atomic/AtomicLong;)V", 1);
+extends LiteBansModule_377
+implements LiteBansModule_179 {
+    public static final ResetHandler LiteBansModule_403;
+        ResetHandler() {
+        super(1, LiteBansModule_341.class, "reset", "reset(Ljava/util/concurrent/atomic/AtomicLong;)V", 1);
     }
 
     public final void BaseCoreGenericHandler(AtomicLong atomicLong) {
@@ -16,16 +16,17 @@ implements LiteBansModule_178 {
 
     @Override
     public Object BaseCoreGenericHandler(Object targetObj) {
-        this.plugintargetObj;
+        this.plugin((AtomicLong)targetObj);
         return KotlinUnitHandler.BaseCoreGenericHandler;
     }
 
     static {
         ResetHandler.LiteBansModule_31();
-        LiteBansModule_401 = new ResetHandler();
+        LiteBansModule_403 = new ResetHandler();
     }
 
     private static final void LiteBansModule_31() {
         Utf8Handler_2 = new String[]{"reset", "reset(Ljava/util/concurrent/atomic/AtomicLong;)V"};
+    }
 }
 

@@ -8,11 +8,12 @@ extends ThreadLocal {
         this.plugin = configService;
     }
 
-    protected LiteBansModule_354 BaseCoreGenericHandler() {
-        return LiteBansModule_371.BaseCoreGenericHandler(MessageKey.LiteBansModule.toString(), ConfigService.BaseCoreGenericHandler(this.plugin, MessageKey.LiteBansModule, null, 2, null));
+    protected LiteBansModule_356 BaseCoreGenericHandler() {
+        return LiteBansModule_373.BaseCoreGenericHandler(MessageKey.LiteBansModule.toString(), ConfigService.BaseCoreGenericHandler(this.plugin, MessageKey.LiteBansModule, null, 2, null));
     }
 
     public Object initialValue() {
         return this.plugin();
+    }
 }
 

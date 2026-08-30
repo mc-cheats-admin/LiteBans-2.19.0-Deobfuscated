@@ -1,33 +1,22 @@
 package litebans;
 
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonSerializationContext;
-import com.google.gson.JsonSerializer;
-import java.lang.reflect.Type;
-public class LiteBansModule_330
-implements JsonSerializer,
-JsonDeserializer {
-    public LiteBansModule_167 BaseCoreGenericHandler(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) {
-        if (jsonElement.isJsonArray()) {
-            return new LiteBansModule_167((LiteBansModule_432[])jsonDeserializationContext.deserialize(jsonElement, LiteBansModule_432[].class));
-        }
-        if (jsonElement.isJsonPrimitive()) {
-            return new LiteBansModule_167(jsonElement.getAsJsonPrimitive().getAsString());
-        }
-        return new LiteBansModule_167(new LiteBansModule_432[]{(LiteBansModule_432)jsonDeserializationContext.deserialize(jsonElement, LiteBansModule_432.class)});
+import java.util.concurrent.ScheduledExecutorService;
+static final class LiteBansModule_330
+extends AsyncBackgroundTask_15 {
+    LiteBansModule_330() {
+        super((LiteBansModule_330)null);
     }
 
-    public JsonElement BaseCoreGenericHandler(LiteBansModule_167 ei_02, Type type, JsonSerializationContext jsonSerializationContext) {
-        return jsonSerializationContext.serialize(ei_02.BaseCoreGenericHandler());
+    @Override
+    void BaseCoreGenericHandler(ScheduledExecutorService scheduledExecutorService, long l3) {
     }
 
-    public JsonElement serialize(Object targetObj, Type type, JsonSerializationContext jsonSerializationContext) {
-        return this.plugin((LiteBansModule_167)targetObj, type, jsonSerializationContext);
+    @Override
+    public void run() {
     }
 
-    public Object deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) {
-        return this.plugin(jsonElement, type, jsonDeserializationContext);
+    @Override
+    public void BaseCoreGenericHandler() {
+    }
 }
 

@@ -1,54 +1,77 @@
 package litebans;
 
-import com.mojang.authlib.GameProfile;
-import litebans.mixin.AccessLoginData_1_20;
-import net.fabricmc.fabric.api.networking.v1.PacketSender;
-import net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents;
-import net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking;
-import net.minecraft.class_2535;
-import net.minecraft.class_3248;
-import net.minecraft.server.MinecraftServer;
-import org.jetbrains.annotations.NotNull;
+import java.io.Serializable;
+import org.jetbrains.annotations.Nullable;
 
 public final class LiteBansModule_302
-implements LiteBansModule_51 {
-    private final PlatformPlugin c;
-    private final LiteBansModule_98 BaseCoreGenericHandler;
-    public LiteBansModule_302(@NotNull PlatformPlugin plugin, @NotNull LiteBansModule_98 cr_02) {
-        this.c = plugin;
-        this.plugin = cr_02;
+implements Serializable {
+    private final Object AsyncBackgroundTask_5;
+    private final Object BaseCoreGenericHandler;
+    private final Object c;
+        public LiteBansModule_302(Object targetObj, Object contextObj, Object resultObj) {
+        this.AsyncBackgroundTask_5 = targetObj;
+        this.plugin = contextObj;
+        this.c = resultObj;
     }
 
-    public final PlatformPlugin LiteBansModule_31() {
-        return this.c;
+    public final Object BaseCoreGenericHandler() {
+        return this.AsyncBackgroundTask_5;
     }
 
-    public final LiteBansModule_98 BaseCoreGenericHandler() {
+    public final Object c() {
         return this.plugin;
     }
 
-    public LiteBansModule_302 c() {
-        LiteBansModule_302 ie2;
-        LiteBansModule_302 ie3 = ie2 = this;
-        ServerLoginConnectionEvents.QUERY_START.register(ie3::BaseCoreGenericHandler);
-        return ie2;
+    public final Object LiteBansModule_195() {
+        return this.c;
     }
 
-    public final void BaseCoreGenericHandler(@NotNull class_3248 class_32482, @NotNull MinecraftServer minecraftServer, @NotNull PacketSender packetSender, @NotNull ServerLoginNetworking.LoginSynchronizer loginSynchronizer) {
-        PluginModule module = this.c.LiteBansModule_31(AbstractModule.class);
-        ObjectUtilities.LiteBansModule_31(module, "");
-        LiteBansModule_247 h82 = (LiteBansModule_247)(module);
-        if (!(class_32482 instanceof AccessLoginData_1_20)) {
-            AssertionUtilities.BaseCoreGenericHandler();
-            throw new CommandExitException();
+    public String toString() {
+        return "" + '(' + this.AsyncBackgroundTask_5 + ", " + this.plugin + ", " + this.c + ')';
+    }
+
+    public final Object g() {
+        return this.AsyncBackgroundTask_5;
+    }
+
+    public final Object e() {
+        return this.plugin;
+    }
+
+    public final Object AsyncBackgroundTask_5() {
+        return this.c;
+    }
+
+    public int hashCode() {
+        int n = this.AsyncBackgroundTask_5 == null ? 0 : this.AsyncBackgroundTask_5.hashCode();
+        n = n * 31 + (this.plugin == null ? 0 : this.plugin.hashCode());
+        n = n * 31 + (this.c == null ? 0 : this.c.hashCode());
+        return n;
+    }
+
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
+            return true;
         }
-        GameProfile gameProfile = ((AccessLoginData_1_20)class_32482).getProfile();
-        class_2535 class_25352 = ((AccessLoginData_1_20)class_32482).getConnection();
-        h82.BaseCoreGenericHandler(class_32482, loginSynchronizer, new LiteBansModule_95(gameProfile.getName(), gameProfile.getId().toString(), this.plugin.BaseCoreGenericHandler(class_25352)), class_25352);
+        if (!(targetObj instanceof LiteBansModule_302)) {
+            return false;
+        }
+        LiteBansModule_302 id_02 = (LiteBansModule_302)targetObj;
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, id_02.AsyncBackgroundTask_5)) {
+            return false;
+        }
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.plugin, id_02.BaseCoreGenericHandler)) {
+            return false;
+        }
+        return ObjectUtilities.BaseCoreGenericHandler(this.c, id_02.c);
     }
 
-    @Override
-    public LiteBansModule_175 BaseCoreGenericHandler() {
-        return this.c();
+    private static final void LiteBansModule_31() {
+        LiteBansModule_31 = new String[]{", ", ", "};
+    }
+
+    static {
+        LiteBansModule_302.LiteBansModule_31();
+    }
 }
 

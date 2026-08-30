@@ -8,8 +8,8 @@ import org.jetbrains.annotations.NotNull;
 public final class BlackHandler
 extends Enum
 implements CharSequence {
-    public static final BlackHandler LiteBansModule_194;
-    public static final BlackHandler LiteBansModule_240;
+    public static final BlackHandler LiteBansModule_195;
+    public static final BlackHandler LiteBansModule_241;
     public static final BlackHandler CommandThrottleService;
     public static final BlackHandler HoverTextFormatter;
     public static final BlackHandler F;
@@ -24,11 +24,11 @@ implements CharSequence {
     public static final BlackHandler AsyncBackgroundTask_5;
     public static final BlackHandler ServerSyncService;
     public static final BlackHandler Utf8Handler_2;
-    public static final BlackHandler LiteBansModule_433;
+    public static final BlackHandler LiteBansModule_435;
     public static final BlackHandler PunishmentService;
     public static final BlackHandler z;
     public static final BlackHandler r;
-    public static final BlackHandler LiteBansModule_401;
+    public static final BlackHandler LiteBansModule_403;
     public static final BlackHandler PunishmentTableService;
     public static final BlackHandler AsyncBackgroundTask_22;
     public static final char GnuSparseMapHandler;
@@ -39,7 +39,7 @@ implements CharSequence {
     private final String B;
     private final String A;
     private static final /* synthetic */ BlackHandler[] e;
-    public static BlackHandler[] values() {
+        public static BlackHandler[] values() {
         return (BlackHandler[])e.clone();
     }
 
@@ -51,13 +51,13 @@ implements CharSequence {
      * WARNING - void declaration
      */
     private BlackHandler() {
-        void arg1;
-        void arg2;
+        void v1;
+        void v2;
         void var2_-1;
         void var1_-1;
-        this.q = arg2;
-        this.A = arg1;
-        this.B = new String(new char[]{'\u00a7', arg2});
+        this.q = v2;
+        this.A = v1;
+        this.B = new String(new char[]{'\u00a7', v2});
     }
 
     public static String BaseCoreGenericHandler(CharSequence charSequence) {
@@ -105,7 +105,7 @@ implements CharSequence {
         return i + string;
     }
 
-    public static String LiteBansModule_194(String string) {
+    public static String LiteBansModule_195(String string) {
         return c + string;
     }
 
@@ -122,15 +122,15 @@ implements CharSequence {
     }
 
     private static final /* synthetic */ BlackHandler[] LiteBansModule_31() {
-        return new BlackHandler[]{LiteBansModule_194, LiteBansModule_240, CommandThrottleService, HoverTextFormatter, F, BanHandler_2, m, BroadcastService, g, n, i, DatabaseMonitorService, c, AsyncBackgroundTask_5, ServerSyncService, Utf8Handler_2, LiteBansModule_433, PunishmentService, z, r, LiteBansModule_401, PunishmentTableService, AsyncBackgroundTask_22};
+        return new BlackHandler[]{LiteBansModule_195, LiteBansModule_241, CommandThrottleService, HoverTextFormatter, F, BanHandler_2, m, BroadcastService, g, n, i, DatabaseMonitorService, c, AsyncBackgroundTask_5, ServerSyncService, Utf8Handler_2, LiteBansModule_435, PunishmentService, z, r, LiteBansModule_403, PunishmentTableService, AsyncBackgroundTask_22};
     }
 
     static {
         D = "0123456789AaBbCcDdEeFfKkLlMmNnOoRrXx";
         GnuSparseMapHandler = (char)167;
         BlackHandler.BaseCoreGenericHandler();
-        LiteBansModule_194 = new BlackHandler("BLACK", 0, '0', "black");
-        LiteBansModule_240 = new BlackHandler("DARK_BLUE", 1, '1', "dark_blue");
+        LiteBansModule_195 = new BlackHandler("BLACK", 0, '0', "black");
+        LiteBansModule_241 = new BlackHandler("DARK_BLUE", 1, '1', "dark_blue");
         CommandThrottleService = new BlackHandler("DARK_GREEN", 2, '2', "dark_green");
         HoverTextFormatter = new BlackHandler("DARK_AQUA", 3, '3', "dark_aqua");
         F = new BlackHandler("DARK_RED", 4, '4', "dark_red");
@@ -144,22 +144,24 @@ implements CharSequence {
         c = new BlackHandler("RED", 12, 'c', "red");
         AsyncBackgroundTask_5 = new BlackHandler("LIGHT_PURPLE", 13, 'AsyncBackgroundTask_5', "light_purple");
         ServerSyncService = new BlackHandler("YELLOW", 14, 'e', "yellow");
-        Utf8Handler_2 = new BlackHandler("WHITE", 15, 'LiteBansModule_194', "white");
-        LiteBansModule_433 = new BlackHandler("OBFUSCATED", 16, 'Utf8Handler_2', "obfuscated");
-        PunishmentService = new BlackHandler("BOLD", 17, 'LiteBansModule_401', "bold");
+        Utf8Handler_2 = new BlackHandler("WHITE", 15, 'LiteBansModule_195', "white");
+        LiteBansModule_435 = new BlackHandler("OBFUSCATED", 16, 'Utf8Handler_2', "obfuscated");
+        PunishmentService = new BlackHandler("BOLD", 17, 'LiteBansModule_403', "bold");
         z = new BlackHandler("STRIKETHROUGH", 18, 'm', "strikethrough");
         r = new BlackHandler("UNDERLINE", 19, 'n', "underline");
-        LiteBansModule_401 = new BlackHandler("ITALIC", 20, 'BroadcastService', "italic");
+        LiteBansModule_403 = new BlackHandler("ITALIC", 20, 'BroadcastService', "italic");
         PunishmentTableService = new BlackHandler("RESET", 21, 'r', "reset");
-        AsyncBackgroundTask_22 = new BlackHandler("MAGIC", 22, 'LiteBansModule_433', "magic");
+        AsyncBackgroundTask_22 = new BlackHandler("MAGIC", 22, 'LiteBansModule_435', "magic");
         e = BlackHandler.LiteBansModule_31();
         LiteBansModule_31 = Pattern.compile("(?i)(?<!<@)[&\u00a7][0-9A-FK-ORX]");
         BaseCoreGenericHandler = new HashMap();
         for (BlackHandler hd_02 : BlackHandler.values()) {
             BaseCoreGenericHandler.put(Character.valueOf(hd_02.q), hd_02);
-}
+        }
+    }
 
     private static final void BaseCoreGenericHandler() {
         AsyncBackgroundTask_21 = new String[]{"", "0123456789AaBbCcDdEeFfKkLlMmNnOoRrXx", "BLACK", "black", "DARK_BLUE", "dark_blue", "DARK_GREEN", "dark_green", "DARK_AQUA", "dark_aqua", "DARK_RED", "dark_red", "DARK_PURPLE", "dark_purple", "GOLD", "gold", "GRAY", "gray", "DARK_GRAY", "dark_gray", "BLUE", "blue", "GREEN", "green", "AQUA", "aqua", "RED", "red", "LIGHT_PURPLE", "light_purple", "YELLOW", "yellow", "WHITE", "white", "OBFUSCATED", "obfuscated", "BOLD", "bold", "STRIKETHROUGH", "strikethrough", "UNDERLINE", "underline", "ITALIC", "italic", "RESET", "reset", "MAGIC", "magic", "(?i)(?<!<@)[&\u00a7][0-9A-FK-ORX]"};
+    }
 }
 

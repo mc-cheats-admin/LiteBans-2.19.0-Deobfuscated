@@ -2,7 +2,7 @@ package litebans;
 
 public final class KotlinUnitHandler {
     public static final KotlinUnitHandler BaseCoreGenericHandler;
-    private KotlinUnitHandler() {
+        private KotlinUnitHandler() {
     }
 
     public String toString() {
@@ -12,5 +12,10 @@ public final class KotlinUnitHandler {
     static {
         KotlinUnitHandler.BaseCoreGenericHandler();
         BaseCoreGenericHandler = new KotlinUnitHandler();
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        LiteBansModule_31 = new String[]{"kotlin.Unit"};
+    }
 }
 

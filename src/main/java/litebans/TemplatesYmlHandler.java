@@ -14,8 +14,8 @@ public final class TemplatesYmlHandler {
     private final boolean c;
     private final ArrayList g;
     private List BaseCoreGenericHandler;
-    private DatabaseService LiteBansModule_194;
-    public TemplatesYmlHandler(@NotNull PlatformPlugin plugin, @NotNull File file, boolean flag) {
+    private DatabaseService LiteBansModule_195;
+        public TemplatesYmlHandler(@NotNull PlatformPlugin plugin, @NotNull File file, boolean flag) {
         this.AsyncBackgroundTask_5 = plugin;
         this.LiteBansModule_31 = file;
         this.c = flag;
@@ -56,16 +56,16 @@ public final class TemplatesYmlHandler {
     }
 
     public final DatabaseService BaseCoreGenericHandler() {
-        return this.LiteBansModule_194;
+        return this.LiteBansModule_195;
     }
 
     public final void BaseCoreGenericHandler(@Nullable DatabaseService gn_02) {
-        this.LiteBansModule_194 = gn_02;
+        this.LiteBansModule_195 = gn_02;
     }
 
     public final LiteBansModule_65 BaseCoreGenericHandler(@NotNull BanHandler a_2, @NotNull String string) {
         Object v0;
-{
+        block2: {
             Iterable iterable = this.g;
             Iterable iterable2 = iterable;
             Object targetObj = iterable2;
@@ -81,10 +81,12 @@ public final class TemplatesYmlHandler {
             flag = false;
             for (Object e : iterable) {
                 targetObj = (LiteBansModule_65)e;
-                if (!StringUtilities.BaseCoreGenericHandler(targetObj.g(), string, true)) continue;
+                if (!StringUtilities.BaseCoreGenericHandler(((LiteBansModule_65)targetObj).g(), string, true)) continue;
                 v0 = e;
-                break;
-}
+                break block2;
+            }
+            v0 = null;
+        }
         return v0;
     }
 
@@ -94,7 +96,7 @@ public final class TemplatesYmlHandler {
 
     public final LiteBansModule_65 BaseCoreGenericHandler(@NotNull BanHandler a_2, byte by2) {
         Object v0;
-{
+        block2: {
             Iterable iterable = this.g;
             Iterable iterable2 = iterable;
             Object targetObj = iterable2;
@@ -110,16 +112,18 @@ public final class TemplatesYmlHandler {
             flag = false;
             for (Object e : iterable) {
                 targetObj = (LiteBansModule_65)e;
-                if (!(targetObj.LiteBansModule_194() == by2)) continue;
+                if (!(((LiteBansModule_65)targetObj).LiteBansModule_195() == by2)) continue;
                 v0 = e;
-                break;
-}
+                break block2;
+            }
+            v0 = null;
+        }
         return v0;
     }
 
     public final LiteBansModule_65 BaseCoreGenericHandler(@NotNull BanHandler a_2, int n) {
         Object v0;
-{
+        block2: {
             Iterable iterable = this.g;
             Iterable iterable2 = iterable;
             Object targetObj = iterable2;
@@ -135,37 +139,39 @@ public final class TemplatesYmlHandler {
             flag = false;
             for (Object e : iterable) {
                 targetObj = (LiteBansModule_65)e;
-                if (!((targetObj.LiteBansModule_194() & 0xFF) == n)) continue;
+                if (!((((LiteBansModule_65)targetObj).LiteBansModule_195() & 0xFF) == n)) continue;
                 v0 = e;
-                break;
-}
+                break block2;
+            }
+            v0 = null;
+        }
         return v0;
     }
 
-    public final LiteBansModule_174 BaseCoreGenericHandler(@NotNull BanHandler a_2, @NotNull LiteBansModule_65 c12) {
+    public final LiteBansModule_175 BaseCoreGenericHandler(@NotNull BanHandler a_2, @NotNull LiteBansModule_65 c12) {
         Collection collection;
-{
+        block2: {
             Iterable iterable = this.plugin;
             Iterable iterable2 = iterable;
             Collection collection22 = new ArrayList();
             Iterator iterator = iterable2.iterator();
             while (iterator.hasNext()) {
                 Object t2 = iterator.next();
-                LiteBansModule_174 eM2 = (LiteBansModule_174)t2;
+                LiteBansModule_175 eM2 = (LiteBansModule_175)t2;
                 if (!(eM2.c() == a_2.c())) continue;
                 collection22.add(t2);
             }
             iterable = (List)collection22;
             flag = false;
             for (Collection collection22 : iterable) {
-                LiteBansModule_174 eM3 = (LiteBansModule_174)(collection22);
+                LiteBansModule_175 eM3 = (LiteBansModule_175)((Object)collection22);
                 if (!eM3.e().containsKey(c12)) continue;
                 collection = collection22;
-                break;
+                break block2;
             }
             collection = null;
         }
-        return (LiteBansModule_174)(collection);
+        return (LiteBansModule_175)((Object)collection);
     }
 
     public final List BaseCoreGenericHandler(@NotNull BanHandler a_2) {
@@ -180,15 +186,15 @@ public final class TemplatesYmlHandler {
             if (!(((LiteBansModule_65)contextObj).AsyncBackgroundTask_5() == a_2.c())) continue;
             iterator.add(t2);
         }
-        iterable = (List)(iterator);
+        iterable = (List)((Object)iterator);
         flag2 = false;
         iterable2 = iterable;
         Collection collection = new ArrayList();
         for (Object e : iterable2) {
             boolean flag6;
-{
+            block6: {
                 targetObj = (LiteBansModule_65)e;
-                contextObj = targetObj.LiteBansModule_240().LiteBansModule_31();
+                contextObj = ((LiteBansModule_65)targetObj).LiteBansModule_241().LiteBansModule_31();
                 flag = false;
                 if (contextObj instanceof Collection && ((Collection)contextObj).isEmpty()) {
                     flag6 = false;
@@ -197,12 +203,13 @@ public final class TemplatesYmlHandler {
                     while (iterator2.hasNext()) {
                         Object t3 = iterator2.next();
                         String string = (String)t3;
-                        if (!StringUtilities.BaseCoreGenericHandler(string, (CharSequence)"--hide", false, 2, null)) continue;
+                        if (!StringUtilities.BaseCoreGenericHandler((CharSequence)string, (CharSequence)"--hide", false, 2, null)) continue;
                         flag6 = true;
-                        break;
+                        break block6;
                     }
                     flag6 = false;
-}
+                }
+            }
             if (!flag6) continue;
             collection.add(e);
         }
@@ -214,25 +221,26 @@ public final class TemplatesYmlHandler {
         for (Object t4 : iterable2) {
             targetObj = (LiteBansModule_65)t4;
             Collection collection2 = collection;
-            collection2.add(LiteBansModule_283.AsyncBackgroundTask_5(targetObj.LiteBansModule_194()));
+            collection2.add(LiteBansModule_284.AsyncBackgroundTask_5(((LiteBansModule_65)targetObj).LiteBansModule_195()));
         }
         return (List)collection;
     }
 
-    public final List BaseCoreGenericHandler(@NotNull LiteBansModule_390 kr_02, @Nullable String string) {
+    public final List BaseCoreGenericHandler(@NotNull LiteBansModule_392 kr_02, @Nullable String string) {
         List list = kr_02.g(string);
         if (list == null) {
             List list2;
             String string2 = kr_02.e(string);
             if (string2 != null) {
                 char[] cArray = new char[]{' '};
-                list2 = StringUtilities.BaseCoreGenericHandler(string2, cArray, false, 0, 6, null);
+                list2 = StringUtilities.BaseCoreGenericHandler((CharSequence)string2, cArray, false, 0, 6, null);
             } else {
                 list2 = list = null;
             }
             if (list2 == null) {
                 list = CollectionUtilities.e();
-}
+            }
+        }
         return list;
     }
 
@@ -240,13 +248,19 @@ public final class TemplatesYmlHandler {
         if (this.c) {
             throw exception;
         }
-        ConfigService configService = this.AsyncBackgroundTask_5.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = (ConfigService)this.AsyncBackgroundTask_5.BaseCoreGenericHandler(ConfigService.class);
         configService.BaseCoreGenericHandler("templates", exception);
         if (configService.BaseCoreGenericHandler(1)) {
             configService.BaseCoreGenericHandler(exception);
-}
+        }
+    }
 
-    private static final void LiteBansModule_194() {
+    private static final void LiteBansModule_195() {
         e = new String[]{"templates.yml", "--hide", "templates.yml", "templates.yml", "-templates", "Empty template: '", "Template name '", "' cannot include dots or spaces! Use dashes or underscores ", "", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "ladder", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "expire_ladder", "0", "ip_template", "Loaded ", " templates from templates.yml!", "template-groups", "weights", "Empty template group: '", "No weights for template group '", "'!", "type", "", "Template group '", "' type is missing: ", "ladder", " template '", StringDecryptor.BaseCoreGenericHandler("\u00c9\u00ce\u0086\u008f\u009d\u00ce\u0087\u0080\u0098\u008f\u0082\u0087\u008a\u00ce\u009d\u008b\u008d\u009a\u0087\u0081\u0080\u00c0", 0x11EE00EE), "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "expire_ladder", "0", "No ladder for template group '", "'!", "Template group '", "' refers to non-existing ", " template: '", "Template '", "' belongs to template group '", "', its ladder will be ignored. Remove the ladder from '", "' to silence this ", "No weights for template group '", "'!", "Template group '", "' includes BaseCoreGenericHandler bad weight: ", "Loaded ", " template groups from templates.yml!", "-templates", "Empty template: '", "Template name '", "' cannot include dots or spaces! Use dashes or underscores ", "", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "ladder", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "expire_ladder", "0", "ip_template", "Loaded ", " templates from templates.yml!", "template-groups", "weights", "Empty template group: '", "No weights for template group '", "'!", "type", "", "Template group '", "' type is missing: ", "ladder", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "expire_ladder", "0", "No ladder for template group '", "'!", "Template group '", "' refers to non-existing ", " template: '", "Template '", "' belongs to template group '", "', its ladder will be ignored. Remove the ladder from '", "' to silence this ", "No weights for template group '", "'!", "Template group '", "' includes BaseCoreGenericHandler bad weight: ", "Loaded ", " template groups from templates.yml!", "weights", "Empty template group: '", "No weights for template group '", "'!", "type", "", "Template group '", "' type is missing: ", "ladder", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "expire_ladder", "0", "No ladder for template group '", "'!", "Template group '", "' refers to non-existing ", " template: '", "Template '", "' belongs to template group '", "', its ladder will be ignored. Remove the ladder from '", "' to silence this ", "No weights for template group '", "'!", "Template group '", "' includes BaseCoreGenericHandler bad weight: ", "Empty template: '", "Template name '", "' cannot include dots or spaces! Use dashes or underscores ", "", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "ladder", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "expire_ladder", "0", "ip_template", "ladder", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "templates"};
+    }
+
+    static {
+        TemplatesYmlHandler.LiteBansModule_195();
+    }
 }
 

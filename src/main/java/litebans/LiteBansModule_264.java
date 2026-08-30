@@ -1,46 +1,36 @@
 package litebans;
 
-import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 public final class LiteBansModule_264
-implements LiteBansModule_177 {
-    private static final LiteBansModule_288 LiteBansModule_31 = new LiteBansModule_288(44225);
-    private byte[] AsyncBackgroundTask_5;
-    private byte[] c;
-
+implements LiteBansModule_150 {
     @Override
-    public LiteBansModule_288 c() {
-        return LiteBansModule_31;
+    public long BaseCoreGenericHandler() {
+        return System.currentTimeMillis();
     }
 
     @Override
-    public LiteBansModule_288 LiteBansModule_31() {
-        return new LiteBansModule_288(this.AsyncBackgroundTask_5 == null ? 0 : this.AsyncBackgroundTask_5.length);
+    public long c(long l3) {
+        return System.currentTimeMillis() - l3;
     }
 
     @Override
-    public LiteBansModule_288 BaseCoreGenericHandler() {
-        return this.c == null ? this.LiteBansModule_31() : new LiteBansModule_288(this.c.length);
+    public long LiteBansModule_195(long l3, long l5) {
+        return l5 - l3;
     }
 
     @Override
-    public byte[] e() {
-        return LiteBansModule_188.LiteBansModule_31(this.AsyncBackgroundTask_5);
+    public long BaseCoreGenericHandler(long l3) {
+        return TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis() - l3);
     }
 
     @Override
-    public byte[] AsyncBackgroundTask_5() {
-        return this.c == null ? this.e() : LiteBansModule_188.LiteBansModule_31(this.c);
+    public long LiteBansModule_31(long l3, long l5) {
+        return TimeUnit.MILLISECONDS.toNanos(l5 - l3);
     }
 
     @Override
-    public void BaseCoreGenericHandler(byte[] byArray, int n, int n2) {
-        this.AsyncBackgroundTask_5 = Arrays.copyOfRange(byArray, n, n + n2);
+    public long AsyncBackgroundTask_5(long l3, long l5) {
+        return l3 + l5;
     }
-
-    @Override
-    public void LiteBansModule_31(byte[] byArray, int n, int n2) {
-        this.c = Arrays.copyOfRange(byArray, n, n + n2);
-        if (this.AsyncBackgroundTask_5 == null) {
-            this.plugin(byArray, n, n2);
 }
 

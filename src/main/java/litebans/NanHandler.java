@@ -4,9 +4,9 @@ import org.jetbrains.annotations.NotNull;
 
 static class NanHandler
 extends BuilderactionHandler_2 {
-    public static final Double LiteBansModule_31(@NotNull String string) {
+        public static final Double LiteBansModule_31(@NotNull String string) {
         String string2;
-        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
         try {
             Double d10;
             if (NanHandler.BaseCoreGenericHandler(string)) {
@@ -95,7 +95,8 @@ extends BuilderactionHandler_2 {
                 flag3 = true;
             } else {
                 --n7;
-}
+            }
+        }
         if (!flag3) {
             int n10;
             String string6 = string;
@@ -127,16 +128,18 @@ extends BuilderactionHandler_2 {
                     String string9;
                     n2 = n8;
                     String string10 = n2 == n5 + 3 - 1 ? "NaN" : (string9 = n2 == n5 + 8 - 1 ? "Infinity" : null);
-                    n10 = string9 == null ? -1 : (StringUtilities.LiteBansModule_31(string6, string9, n5, false) == n5 ? n8 + 1 : -1);
+                    n10 = string9 == null ? -1 : (StringUtilities.LiteBansModule_31((CharSequence)string6, string9, n5, false) == n5 ? n8 + 1 : -1);
                 } else {
                     n10 = n7 = n5;
-}
+                }
+            }
             if (n7 == -1) {
                 return false;
             }
             if (n7 > n8) {
                 return true;
-}
+            }
+        }
         if ((n = string.charAt(n7++) | 0x20) != (flag3 ? 112 : 101)) {
             return !flag3 && (n == 102 || n == 100) && n7 > n8;
         }
@@ -165,5 +168,10 @@ extends BuilderactionHandler_2 {
 
     private static final void g() {
         g = new String[]{"<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "mathContext", "<this>", "<this>", "mathContext", "NaN", "Infinity", "NaN", "Infinity", "NaN", "Infinity"};
+    }
+
+    static {
+        NanHandler.g();
+    }
 }
 

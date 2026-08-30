@@ -19,5 +19,6 @@ implements Runnable {
     @Override
     public void run() {
         this.AsyncBackgroundTask_5.BaseCoreGenericHandler(this.c, this.LiteBansModule_31, this.plugin);
+    }
 }
 

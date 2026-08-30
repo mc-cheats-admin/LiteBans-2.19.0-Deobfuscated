@@ -1,10 +1,19 @@
 package litebans;
 
-public class LiteBansModule_294
-extends LiteBansModule_300 {
-    private static final long LiteBansModule_31 = 1L;
+import org.jetbrains.annotations.NotNull;
 
-    public LiteBansModule_294() {
-        super("this is not BaseCoreGenericHandler recognized format.");
+public final class LiteBansModule_294 {
+        public static final String BaseCoreGenericHandler(@NotNull String string, @NotNull String string2) {
+        LiteBansModule_228.BaseCoreGenericHandler(string2);
+        return SQLiteDriverHandler.c(string, string2 + BaseCoreGenericHandler[0]);
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        BaseCoreGenericHandler = new String[]{"={true}", "={false}"};
+    }
+
+    static {
+        LiteBansModule_294.BaseCoreGenericHandler();
+    }
 }
 

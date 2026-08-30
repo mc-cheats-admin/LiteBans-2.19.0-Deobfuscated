@@ -8,9 +8,9 @@ extends Enum {
     public static final OpenUrlHandler BaseCoreGenericHandler;
     public static final OpenUrlHandler AsyncBackgroundTask_5;
     public static final OpenUrlHandler c;
-    private static final /* synthetic */ OpenUrlHandler[] LiteBansModule_240;
-    public static OpenUrlHandler[] values() {
-        return (OpenUrlHandler[])LiteBansModule_240.clone();
+    private static final /* synthetic */ OpenUrlHandler[] LiteBansModule_241;
+        public static OpenUrlHandler[] values() {
+        return (OpenUrlHandler[])LiteBansModule_241.clone();
     }
 
     public static OpenUrlHandler BaseCoreGenericHandler(String string) {
@@ -38,6 +38,11 @@ extends Enum {
         BaseCoreGenericHandler = new OpenUrlHandler("SUGGEST_COMMAND", 3);
         AsyncBackgroundTask_5 = new OpenUrlHandler("CHANGE_PAGE", 4);
         c = new OpenUrlHandler("COPY_TO_CLIPBOARD", 5);
-        LiteBansModule_240 = OpenUrlHandler.BaseCoreGenericHandler();
+        LiteBansModule_241 = OpenUrlHandler.BaseCoreGenericHandler();
+    }
+
+    private static final void LiteBansModule_31() {
+        LiteBansModule_195 = new String[]{"OPEN_URL", "OPEN_FILE", "RUN_COMMAND", "SUGGEST_COMMAND", "CHANGE_PAGE", "COPY_TO_CLIPBOARD"};
+    }
 }
 

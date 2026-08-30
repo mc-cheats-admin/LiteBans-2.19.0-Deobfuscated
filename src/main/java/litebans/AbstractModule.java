@@ -8,7 +8,8 @@ extends PluginModule {
         super(plugin);
     }
 
-    public @Nullable LiteBansModule_175 BaseCoreGenericHandler(LiteBansModule_360 commandContext) {
+    public @Nullable LiteBansModule_176 BaseCoreGenericHandler(LiteBansModule_362 commandContext) {
         return null;
+    }
 }
 

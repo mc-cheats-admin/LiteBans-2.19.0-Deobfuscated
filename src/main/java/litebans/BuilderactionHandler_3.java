@@ -6,16 +6,21 @@ import java.util.List;
 import org.jetbrains.annotations.NotNull;
 
 static class BuilderactionHandler_3 {
-    public static final List BaseCoreGenericHandler(Object targetObj) {
+        public static final List BaseCoreGenericHandler(Object targetObj) {
         return Collections.singletonList(targetObj);
     }
 
     public static final Object[] BaseCoreGenericHandler(@NotNull Object[] objectArray, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler(objectArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
         return flag && ObjectUtilities.BaseCoreGenericHandler(objectArray.getClass(), Object[].class) ? objectArray : Arrays.copyOf(objectArray, objectArray.length, Object[].class);
     }
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"builderAction", "builderAction", "builder", "<this>", "<this>", "<this>", "random", "collection", "collection", "array", "array", "<this>"};
+    }
+
+    static {
+        BuilderactionHandler_3.BaseCoreGenericHandler();
+    }
 }
 

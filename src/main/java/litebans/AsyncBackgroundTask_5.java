@@ -18,11 +18,12 @@ extends ThreadLocal {
     protected Yaml BaseCoreGenericHandler() {
         DumperOptions dumperOptions = new DumperOptions();
         dumperOptions.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK);
-        LiteBansModule_142 dw_02 = new LiteBansModule_142(this, dumperOptions);
+        LiteBansModule_143 dw_02 = new LiteBansModule_143(this, dumperOptions);
         return new Yaml((BaseConstructor)new Constructor(new LoaderOptions()), (Representer)dw_02, dumperOptions);
     }
 
     protected Object initialValue() {
         return this.plugin();
+    }
 }
 

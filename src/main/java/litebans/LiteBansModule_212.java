@@ -1,82 +1,107 @@
 package litebans;
 
-import java.util.UUID;
+import java.util.ArrayList;
+import java.util.List;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public final class LiteBansModule_212
-extends MessageHandler {
-    private final String AsyncBackgroundTask_5;
-    private final String g;
-    private final String LiteBansModule_194;
-    private final String e;
-    public LiteBansModule_212(@NotNull PlatformPlugin plugin, @Nullable String string, @NotNull String string2, @Nullable String string3, @Nullable String string4) {
-        super(plugin);
-        this.AsyncBackgroundTask_5 = string;
-        this.g = string2;
-        this.LiteBansModule_194 = string3;
-        this.e = string4;
+public final class LiteBansModule_212 {
+    private String e;
+    private String LiteBansModule_31;
+    private String AsyncBackgroundTask_5;
+    private int LiteBansModule_195;
+    private LiteBansModule_25 c;
+    private String i;
+    private LiteBansModule_6 LiteBansModule_241;
+    private LiteBansModule_142 BaseCoreGenericHandler;
+    private final List g;
+
+    public LiteBansModule_212(@Nullable String string, @Nullable String string2, @Nullable String string3, int n, @Nullable LiteBansModule_25 aw2, @Nullable String string4, @Nullable LiteBansModule_6 a92, @Nullable LiteBansModule_142 dw2, @NotNull List list) {
+        this.e = string;
+        this.LiteBansModule_31 = string2;
+        this.AsyncBackgroundTask_5 = string3;
+        this.LiteBansModule_195 = n;
+        this.c = aw2;
+        this.i = string4;
+        this.LiteBansModule_241 = a92;
+        this.plugin = dw2;
+        this.g = list;
     }
 
-    @Override
-    public void run() {
-        MessageHandler messageHandler = this;
-        if (!((ConfigService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().PunishmentTableService()) {
-            return;
+    public /* synthetic */ LiteBansModule_212(String string, String string2, String string3, int n, LiteBansModule_25 aw2, String string4, LiteBansModule_6 a92, LiteBansModule_142 dw2, List list, int n2, LiteBansModule_14 aJ2) {
+        if ((n2 & 1) != 0) {
+            string = null;
         }
-        messageHandler = this;
-        flag = false;
-        ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> LiteBansModule_212.BaseCoreGenericHandler(this, arg_0));
+        if ((n2 & 2) != 0) {
+            string2 = null;
+        }
+        if ((n2 & 4) != 0) {
+            string3 = null;
+        }
+        if ((n2 & 8) != 0) {
+            n = 0xFFFFFF;
+        }
+        if ((n2 & 0x10) != 0) {
+            aw2 = null;
+        }
+        if ((n2 & 0x20) != 0) {
+            string4 = null;
+        }
+        if ((n2 & 0x40) != 0) {
+            a92 = null;
+        }
+        if ((n2 & 0x80) != 0) {
+            dw2 = null;
+        }
+        if ((n2 & 0x100) != 0) {
+            list = new ArrayList();
+        }
+        this(string, string2, string3, n, aw2, string4, a92, dw2, list);
     }
 
-    private static final KotlinUnitHandler BaseCoreGenericHandler(LiteBansModule_212 g_2, LiteBansModule_82 ch2) {
-        String string = g_2.e;
-        if (string == null) {
-            boolean flag;
-{
-                MessageHandler messageHandler = g_2;
-                resultObj = g_2.g;
-                flag = false;
-                for (Object helperObj : (Object[])messageHandler.LiteBansModule_240().q()) {
-                    CommandSenderWrapper sender = (CommandSenderWrapper)helperObj;
-                    if (!ObjectUtilities.BaseCoreGenericHandler(sender.BaseCoreGenericHandler(), resultObj)) continue;
-                    contextObj = helperObj;
-                    break;
-                }
-                contextObj = null;
-            }
-            CommandSenderWrapper senderWrapper = (CommandSenderWrapper)contextObj;
-            string = senderWrapper != null ? senderWrapper.LiteBansModule_240() : null;
-            if (string == null) {
-                MessageHandler fg_03 = g_2;
-                resultObj = fg_03;
-                flag = false;
-                string = ((ConfigService)this.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_25();
-}
-        String string2 = LiteBansModule_242.BaseCoreGenericHandler(string, 32);
-        SilentHandler dZ2 = null;
-        dZ2 = AllHandler_3.BaseCoreGenericHandler(ch2, g_2.g, g_2.LiteBansModule_194, BanHandler.GnuSparseMapHandler, string2, false, false, 48, null);
-        if (dZ2 == null && g_2.AsyncBackgroundTask_5 != null) {
-            targetObj = g_2;
-            if (((ConfigService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().NullHandler()) {
-                dZ2 = ch2.BaseCoreGenericHandler(g_2.AsyncBackgroundTask_5, g_2.g, string2, BanHandler.GnuSparseMapHandler);
-}
-        targetObj = g_2;
-        targetObj = (ConfigService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
-        n = 3;
-        if (targetObj.BaseCoreGenericHandler(n)) {
-            Object tempObj = targetObj;
-            ((ConfigService)tempObj).BaseCoreGenericHandler((Object)("Active mute for " + g_2.g + " on server " + string2 + ": " + dZ2));
-        }
-        if (dZ2 != null) {
-            targetObj = g_2;
-            n = 0;
-            ((PunishmentTableService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class)).BaseCoreGenericHandler(g_2.g, dZ2);
-        } else {
-            targetObj = g_2;
-            n = 0;
-            ((PunishmentTableService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class)).BaseCoreGenericHandler().LiteBansModule_31().remove(UUID.fromString(g_2.g));
-        }
-        return KotlinUnitHandler.BaseCoreGenericHandler;
+    public final String LiteBansModule_195() {
+        return this.e;
+    }
+
+    public final String LiteBansModule_241() {
+        return this.LiteBansModule_31;
+    }
+
+    public final String LiteBansModule_31() {
+        return this.AsyncBackgroundTask_5;
+    }
+
+    public final int BaseCoreGenericHandler() {
+        return this.LiteBansModule_195;
+    }
+
+    public final LiteBansModule_25 g() {
+        return this.c;
+    }
+
+    public final String e() {
+        return this.i;
+    }
+
+    public final LiteBansModule_6 AsyncBackgroundTask_5() {
+        return this.LiteBansModule_241;
+    }
+
+    public final LiteBansModule_142 c() {
+        return this.plugin;
+    }
+
+    public final List i() {
+        return this.g;
+    }
+
+    public final LiteBansModule_212 BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, boolean flag) {
+        this.g.add(new LiteBansModule_21(this, string, string2, flag));
+        return this;
+    }
+
+    public LiteBansModule_212() {
+        this(null, null, null, 0, null, null, null, null, null, 511, null);
+    }
 }
 

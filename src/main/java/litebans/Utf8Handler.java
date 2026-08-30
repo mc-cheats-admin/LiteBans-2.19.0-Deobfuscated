@@ -5,9 +5,9 @@ import java.nio.charset.StandardCharsets;
 import java.nio.charset.UnsupportedCharsetException;
 public abstract class Utf8Handler {
     static final String BaseCoreGenericHandler = "UTF8";
-    static final LiteBansModule_119 LiteBansModule_31 = Utf8Handler.LiteBansModule_31("UTF8");
+    static final LiteBansModule_120 LiteBansModule_31 = Utf8Handler.LiteBansModule_31("UTF8");
 
-    public static final LiteBansModule_119 LiteBansModule_31(String string) {
+    public static final LiteBansModule_120 LiteBansModule_31(String string) {
         Charset charset = Charset.defaultCharset();
         if (string != null) {
             try {
@@ -15,9 +15,10 @@ public abstract class Utf8Handler {
             }
             catch (UnsupportedCharsetException unsupportedCharsetException) {
                 // empty catch block
-}
+            }
+        }
         boolean flag = Utf8Handler.BaseCoreGenericHandler(charset.name());
-        return new LiteBansModule_222(charset, flag);
+        return new LiteBansModule_223(charset, flag);
     }
 
     static final boolean BaseCoreGenericHandler(String string) {
@@ -32,5 +33,6 @@ public abstract class Utf8Handler {
             return true;
         }
         return false;
+    }
 }
 

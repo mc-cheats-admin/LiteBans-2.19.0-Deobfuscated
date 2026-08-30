@@ -1,21 +1,20 @@
 package litebans;
 
-import java.util.concurrent.ScheduledExecutorService;
-static final class LiteBansModule_329
-extends AsyncBackgroundTask_15 {
-    LiteBansModule_329() {
-        super((LiteBansModule_329)null);
+public final class LiteBansModule_329 {
+    private LiteBansModule_329() {
     }
 
-    @Override
-    void BaseCoreGenericHandler(ScheduledExecutorService scheduledExecutorService, long l3) {
+    private final Object BaseCoreGenericHandler() {
+        LiteBansModule_162 eE2 = LiteBansModule_144.LiteBansModule_31();
+        return eE2.BaseCoreGenericHandler();
     }
 
-    @Override
-    public void run() {
+    public static final /* synthetic */ Object BaseCoreGenericHandler(LiteBansModule_329 j12) {
+        return j12.BaseCoreGenericHandler();
     }
 
-    @Override
-    public void BaseCoreGenericHandler() {
+    public /* synthetic */ LiteBansModule_329(LiteBansModule_14 aJ2) {
+        this();
+    }
 }
 

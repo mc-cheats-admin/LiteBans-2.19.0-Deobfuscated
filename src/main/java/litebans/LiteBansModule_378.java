@@ -1,11 +1,6 @@
 package litebans;
 
-import org.jetbrains.annotations.NotNull;
-
-public final class LiteBansModule_378 {
-    public static final LiteBansModule_395 BaseCoreGenericHandler = new LiteBansModule_395(null);
-
-    public static final String BaseCoreGenericHandler(@NotNull Object[] objectArray, @NotNull String string) {
-        return BaseCoreGenericHandler.BaseCoreGenericHandler(objectArray, string);
+public class LiteBansModule_378 {
+    public static String BaseCoreGenericHandler = "-211914585020134444444444-1791906487";
 }
 

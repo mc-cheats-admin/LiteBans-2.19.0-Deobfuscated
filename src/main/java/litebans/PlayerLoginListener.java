@@ -6,12 +6,12 @@ import org.bukkit.event.player.PlayerLoginEvent;
 import org.jetbrains.annotations.NotNull;
 
 public final class PlayerLoginListener
-implements LiteBansModule_88 {
+implements LiteBansModule_89 {
     private final PlatformPlugin BaseCoreGenericHandler;
     private final BroadcastService c;
-    public PlayerLoginListener(@NotNull PlatformPlugin plugin) {
+        public PlayerLoginListener(@NotNull PlatformPlugin plugin) {
         this.plugin = plugin;
-        this.c = this.plugin.BaseCoreGenericHandler(BroadcastService.class);
+        this.c = (BroadcastService)this.plugin.BaseCoreGenericHandler(BroadcastService.class);
     }
 
     public final PlatformPlugin BaseCoreGenericHandler() {
@@ -29,7 +29,7 @@ implements LiteBansModule_88 {
             return;
         }
         LitebansLockdownBypassHandler gG3 = gG2;
-        CommandSenderWrapper sender = gG3.LiteBansModule_240().BaseCoreGenericHandler(playerLoginEvent.getPlayer());
+        CommandSenderWrapper sender = gG3.LiteBansModule_241().BaseCoreGenericHandler(playerLoginEvent.getPlayer());
         ObjectUtilities.BaseCoreGenericHandler(sender);
         Object targetObj = sender;
         Object contextObj = "litebans.lockdown.bypass";
@@ -37,20 +37,30 @@ implements LiteBansModule_88 {
         if (!senderWrapper.e((String)contextObj)) {
             contextObj = gG3;
             flag2 = false;
-            targetObj = gG2.BaseCoreGenericHandler(((DatabaseMonitorService)((MessageHandler)contextObj).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService(), false);
-            KickBannedHandler.BaseCoreGenericHandler(gG3.LiteBansModule_240().i(), playerLoginEvent, targetObj, null, false, "KICK_OTHER", 12, null);
-}
+            targetObj = gG2.BaseCoreGenericHandler(((DatabaseMonitorService)((MessageHandler)contextObj).LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService(), false);
+            KickBannedHandler.BaseCoreGenericHandler(gG3.LiteBansModule_241().i(), playerLoginEvent, (CharSequence)targetObj, null, false, "KICK_OTHER", 12, null);
+        }
+    }
 
     public PlayerLoginListener AsyncBackgroundTask_5() {
         PlayerLoginListener ad_02;
         PlayerLoginListener ad_03 = ad_02 = this;
-        LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{ad_03};
+        LiteBansModule_176[] em_0Array = new LiteBansModule_176[]{ad_03};
         ad_03.BaseCoreGenericHandler.LiteBansModule_31(em_0Array);
         return ad_02;
     }
 
     @Override
-    public LiteBansModule_175 BaseCoreGenericHandler() {
+    public LiteBansModule_176 BaseCoreGenericHandler() {
         return this.AsyncBackgroundTask_5();
+    }
+
+    private static final void LiteBansModule_31() {
+        LiteBansModule_31 = new String[]{"litebans.lockdown.bypass", "KICK_OTHER"};
+    }
+
+    static {
+        PlayerLoginListener.LiteBansModule_31();
+    }
 }
 

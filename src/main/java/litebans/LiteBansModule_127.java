@@ -1,10 +1,11 @@
 package litebans;
 
-public final class LiteBansModule_127 {
-    private LiteBansModule_127() {
-    }
+import java.util.Arrays;
+import java.util.List;
 
-    public /* synthetic */ LiteBansModule_127(LiteBansModule_14 aJ2) {
-        this();
+static class LiteBansModule_127 {
+    static List BaseCoreGenericHandler(Object[] objectArray) {
+        return Arrays.asList(objectArray);
+    }
 }
 

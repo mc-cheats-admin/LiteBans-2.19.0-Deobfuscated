@@ -7,7 +7,7 @@ public class NullHandler_7
 extends ArrayList
 implements List,
 LiteBansModule_44,
-LiteBansModule_86 {
+LiteBansModule_87 {
     private static final long BaseCoreGenericHandler = 3957988303675231981L;
 
     public static final String BaseCoreGenericHandler(List list) {
@@ -40,5 +40,6 @@ LiteBansModule_86 {
 
     public String toString() {
         return this.plugin();
+    }
 }
 

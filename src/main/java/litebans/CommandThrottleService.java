@@ -8,14 +8,14 @@ import org.jetbrains.annotations.Nullable;
 
 public final class CommandThrottleService
 extends PluginModule {
-    private final LiteBansModule_161 c = ProxyConnection.BaseCoreGenericHandler(() -> CommandThrottleService.BaseCoreGenericHandler(this));
+    private final LiteBansModule_162 c = ProxyConnection.BaseCoreGenericHandler(() -> CommandThrottleService.BaseCoreGenericHandler(this));
     private final Set LiteBansModule_31 = Collections.newSetFromMap(new ConcurrentHashMap());
-    public CommandThrottleService(@NotNull PlatformPlugin plugin) {
+        public CommandThrottleService(@NotNull PlatformPlugin plugin) {
         super(plugin);
     }
 
     public final ConfigService e() {
-        LiteBansModule_161 eE2 = this.c;
+        LiteBansModule_162 eE2 = this.c;
         return (ConfigService)eE2.BaseCoreGenericHandler();
     }
 
@@ -23,10 +23,11 @@ extends PluginModule {
     public void e() {
         this.e().e();
         this.LiteBansModule_31.clear();
-        long l3 = this.e().LiteBansModule_194().bf();
+        long l3 = this.e().LiteBansModule_195().bf();
         if (l3 > 0L) {
             this.plugin.LiteBansModule_31(this.LiteBansModule_31::clear, l3, l3);
-}
+        }
+    }
 
     @Override
     public void LiteBansModule_31() {
@@ -37,7 +38,7 @@ extends PluginModule {
         if (string == null) {
             return false;
         }
-        if (this.e().LiteBansModule_194().bf() <= 0) {
+        if (this.e().LiteBansModule_195().bf() <= 0) {
             return false;
         }
         boolean flag = !this.LiteBansModule_31.add("" + by2 + ':' + string);
@@ -54,7 +55,7 @@ extends PluginModule {
         if (string == null) {
             return;
         }
-        if (this.e().LiteBansModule_194().bf() <= 0) {
+        if (this.e().LiteBansModule_195().bf() <= 0) {
             return;
         }
         this.LiteBansModule_31.remove("" + by2 + ':' + string);
@@ -66,5 +67,10 @@ extends PluginModule {
 
     private static final void AsyncBackgroundTask_5() {
         AsyncBackgroundTask_5 = new String[]{"Throttled! "};
+    }
+
+    static {
+        CommandThrottleService.AsyncBackgroundTask_5();
+    }
 }
 

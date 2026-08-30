@@ -2,7 +2,7 @@ package litebans;
 
 import java.util.zip.ZipException;
 public abstract class LiteBansModule_42
-implements LiteBansModule_177 {
+implements LiteBansModule_178 {
     private long LiteBansModule_31;
     private byte[] c;
     private byte[] AsyncBackgroundTask_5;
@@ -16,7 +16,7 @@ implements LiteBansModule_177 {
         }
         this.AsyncBackgroundTask_5 = new byte[5 + this.c.length];
         this.AsyncBackgroundTask_5[0] = 1;
-        System.arraycopy(LiteBansModule_84.BaseCoreGenericHandler(this.LiteBansModule_31), 0, this.AsyncBackgroundTask_5, 1, 4);
+        System.arraycopy(LiteBansModule_85.BaseCoreGenericHandler(this.LiteBansModule_31), 0, this.AsyncBackgroundTask_5, 1, 4);
         System.arraycopy(this.c, 0, this.AsyncBackgroundTask_5, 5, this.c.length);
     }
 
@@ -34,11 +34,11 @@ implements LiteBansModule_177 {
     }
 
     @Override
-    public LiteBansModule_288 BaseCoreGenericHandler() {
+    public LiteBansModule_289 BaseCoreGenericHandler() {
         if (this.AsyncBackgroundTask_5 == null) {
             this.plugin();
         }
-        return new LiteBansModule_288(this.AsyncBackgroundTask_5 != null ? this.AsyncBackgroundTask_5.length : 0);
+        return new LiteBansModule_289(this.AsyncBackgroundTask_5 != null ? this.AsyncBackgroundTask_5.length : 0);
     }
 
     @Override
@@ -47,7 +47,7 @@ implements LiteBansModule_177 {
     }
 
     @Override
-    public LiteBansModule_288 LiteBansModule_31() {
+    public LiteBansModule_289 LiteBansModule_31() {
         return this.plugin();
     }
 
@@ -60,7 +60,7 @@ implements LiteBansModule_177 {
         if (by2 != 1) {
             throw new ZipException("Unsupported version [" + by2 + "] for UniCode path extra data.");
         }
-        this.LiteBansModule_31 = LiteBansModule_84.BaseCoreGenericHandler(byArray, n + 1);
+        this.LiteBansModule_31 = LiteBansModule_85.BaseCoreGenericHandler(byArray, n + 1);
         this.c = new byte[n2 - 5];
         System.arraycopy(byArray, n + 5, this.c, 0, n2 - 5);
         this.AsyncBackgroundTask_5 = null;
@@ -69,5 +69,6 @@ implements LiteBansModule_177 {
     @Override
     public void LiteBansModule_31(byte[] byArray, int n, int n2) {
         this.plugin(byArray, n, n2);
+    }
 }
 

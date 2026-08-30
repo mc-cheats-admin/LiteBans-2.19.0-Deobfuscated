@@ -28,11 +28,11 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class ArgsHandler
-implements LiteBansModule_98 {
+implements LiteBansModule_99 {
     protected final PlatformPlugin AsyncBackgroundTask_5;
     protected MinecraftServer c;
-    protected final LiteBansModule_255 LiteBansModule_31 = new LiteBansModule_255();
-    public ArgsHandler(PlatformPlugin plugin) {
+    protected final LiteBansModule_256 LiteBansModule_31 = new LiteBansModule_256();
+        public ArgsHandler(PlatformPlugin plugin) {
         this.AsyncBackgroundTask_5 = plugin;
     }
 
@@ -40,11 +40,11 @@ implements LiteBansModule_98 {
     public void BaseCoreGenericHandler(Object targetObj, String string) {
         int n = this.LiteBansModule_31();
         V116Handler g82 = n >= 770 ? V116Handler.BaseCoreGenericHandler : V116Handler.c;
-        targetObj.connection.disconnect(this.LiteBansModule_31().LiteBansModule_31(LiteBansModule_164.BaseCoreGenericHandler(string, g82)));
+        ((ServerPlayer)targetObj).connection.disconnect((Component)this.LiteBansModule_31().LiteBansModule_31(LiteBansModule_165.BaseCoreGenericHandler(string, g82)));
     }
 
     @Override
-    public Object LiteBansModule_194() {
+    public Object LiteBansModule_195() {
         return this.c.createCommandSourceStack();
     }
 
@@ -53,20 +53,20 @@ implements LiteBansModule_98 {
         SocketAddress socketAddress;
         InetAddress inetAddress;
         if (targetObj instanceof CommandSourceStack) {
-            ServerPlayer serverPlayer = targetObj.getPlayer();
+            ServerPlayer serverPlayer = ((CommandSourceStack)targetObj).getPlayer();
             if (serverPlayer == null) {
                 return null;
             }
             return this.plugin(serverPlayer.connection);
         }
-        if (targetObj instanceof Player && (inetAddress = ((InetSocketAddress)(socketAddress = (InetSocketAddress)targetObj.connection.getRemoteAddress())).getAddress()) != null) {
+        if (targetObj instanceof Player && (inetAddress = ((InetSocketAddress)(socketAddress = (InetSocketAddress)((ServerPlayer)targetObj).connection.getRemoteAddress())).getAddress()) != null) {
             return inetAddress.getHostAddress();
         }
-        if (targetObj instanceof ServerPlayer && (socketAddress = targetObj.connection.getRemoteAddress()) instanceof InetSocketAddress && (inetAddress = ((InetSocketAddress)socketAddress).getAddress()) != null) {
+        if (targetObj instanceof ServerPlayer && (socketAddress = ((ServerPlayer)targetObj).connection.getRemoteAddress()) instanceof InetSocketAddress && (inetAddress = ((InetSocketAddress)socketAddress).getAddress()) != null) {
             return inetAddress.getHostAddress();
         }
         if (targetObj instanceof ServerGamePacketListenerImpl) {
-            return this.plugin(targetObj.player);
+            return this.plugin(((ServerGamePacketListenerImpl)targetObj).player);
         }
         return null;
     }
@@ -108,12 +108,13 @@ implements LiteBansModule_98 {
         catch (LinkageError linkageError) {
             this.AsyncBackgroundTask_5.getLogger().warning("Unable to determine server protocol version");
             return 770;
-}
+        }
+    }
 
     @Override
     public Object AsyncBackgroundTask_5(Object targetObj) {
         if (targetObj instanceof ServerPlayer) {
-            return targetObj.createCommandSourceStack();
+            return ((ServerPlayer)targetObj).createCommandSourceStack();
         }
         return targetObj;
     }
@@ -121,20 +122,21 @@ implements LiteBansModule_98 {
     @Override
     public void c(Object targetObj, String string) {
         if (targetObj instanceof CommandSourceStack) {
-            targetObj.sendSystemMessage(this.LiteBansModule_31().LiteBansModule_31(string));
+            ((CommandSourceStack)targetObj).sendSystemMessage((Component)this.LiteBansModule_31().LiteBansModule_31(string));
         } else {
             this.c(this.AsyncBackgroundTask_5(targetObj), string);
-}
+        }
+    }
 
     @Override
     public void BaseCoreGenericHandler(Object targetObj, String string, byte[] byArray) {
-        LiteBansModule_157.BaseCoreGenericHandler(targetObj, string, byArray);
+        LiteBansModule_158.BaseCoreGenericHandler(targetObj, string, byArray);
     }
 
     @Override
     public CommandSenderWrapper c(Object targetObj) {
-        String string = (targetObj = this.AsyncBackgroundTask_5(targetObj)) instanceof CommandSourceStack ? targetObj.getTextName() : targetObj.toString();
-        return (CommandSenderWrapper)(this.AsyncBackgroundTask_5).BaseCoreGenericHandler().LiteBansModule_31.remove(string);
+        String string = (targetObj = this.AsyncBackgroundTask_5(targetObj)) instanceof CommandSourceStack ? ((CommandSourceStack)targetObj).getTextName() : targetObj.toString();
+        return (CommandSenderWrapper)((ConfigYmlHandler)this.AsyncBackgroundTask_5).BaseCoreGenericHandler().LiteBansModule_31.remove(string);
     }
 
     @Override
@@ -144,13 +146,13 @@ implements LiteBansModule_98 {
 
     @Override
     public CommandSenderWrapper BaseCoreGenericHandler(Object targetObj, @Nullable Supplier supplier) {
-        LiteBansCore core = (this.AsyncBackgroundTask_5).BaseCoreGenericHandler();
+        LiteBansCore core = ((ConfigYmlHandler)this.AsyncBackgroundTask_5).BaseCoreGenericHandler();
         Map map = core.LiteBansModule_31;
-        String string = (targetObj = this.AsyncBackgroundTask_5(targetObj)) instanceof CommandSourceStack ? targetObj.getTextName() : targetObj.toString();
+        String string = (targetObj = this.AsyncBackgroundTask_5(targetObj)) instanceof CommandSourceStack ? ((CommandSourceStack)targetObj).getTextName() : targetObj.toString();
         CommandSenderWrapper sender = (CommandSenderWrapper)map.get(string);
         if (sender == null || sender.c() != targetObj) {
-            sender = new BungeecordHandler_3(this.AsyncBackgroundTask_5, targetObj, supplier);
-            core.LiteBansModule_194();
+            sender = new BungeecordHandler_3((ConfigYmlHandler)this.AsyncBackgroundTask_5, targetObj, supplier);
+            core.LiteBansModule_195();
             map.put(string, sender);
         }
         return sender;
@@ -162,7 +164,7 @@ implements LiteBansModule_98 {
     }
 
     @Override
-    public void BaseCoreGenericHandler(LiteBansModule_352 jq_02, CommandDispatcher commandDispatcher) {
+    public void BaseCoreGenericHandler(LiteBansModule_354 jq_02, CommandDispatcher commandDispatcher) {
         ArgumentBuilder argumentBuilder = ((LiteralArgumentBuilder)((LiteralArgumentBuilder)Commands.literal((String)jq_02.getName()).requires(commandSourceStack -> this.AsyncBackgroundTask_5.BaseCoreGenericHandler(commandSourceStack).e(jq_02.getPermission()))).executes((Command)jq_02)).then(Commands.argument((String)"args", (ArgumentType)StringArgumentType.greedyString()).suggests((SuggestionProvider)jq_02).executes((Command)jq_02));
         commandDispatcher.getRoot().getChildren().removeIf(commandNode -> commandNode.getName().equals(jq_02.getName()));
         commandDispatcher.register((LiteralArgumentBuilder)argumentBuilder);
@@ -170,7 +172,7 @@ implements LiteBansModule_98 {
 
     @Override
     public boolean AsyncBackgroundTask_5(@Nullable Object targetObj, @NotNull String string) {
-        return LiteBansModule_381.BaseCoreGenericHandler(targetObj, string);
+        return LiteBansModule_383.BaseCoreGenericHandler(targetObj, string);
     }
 
     @Override
@@ -178,16 +180,21 @@ implements LiteBansModule_98 {
         this.c = minecraftServer;
     }
 
-    public LiteBansModule_255 LiteBansModule_31() {
+    public LiteBansModule_256 LiteBansModule_31() {
         return this.LiteBansModule_31;
     }
 
     @Override
-    public LiteBansModule_252 AsyncBackgroundTask_5() {
+    public LiteBansModule_253 AsyncBackgroundTask_5() {
         return this.LiteBansModule_31();
     }
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"Unable to determine server protocol version", "args"};
+    }
+
+    static {
+        ArgsHandler.BaseCoreGenericHandler();
+    }
 }
 

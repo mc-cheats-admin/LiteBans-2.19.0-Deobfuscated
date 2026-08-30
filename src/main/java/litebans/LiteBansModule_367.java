@@ -1,33 +1,35 @@
 package litebans;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import org.bukkit.entity.Player;
+public final class LiteBansModule_367 {
+    public static final /* synthetic */ int[] BaseCoreGenericHandler;
 
-@ModulePriority(priority=0)
-public class LiteBansModule_367
-extends ConfigurationManager {
-    public LiteBansModule_367(PlatformPlugin plugin) {
-        super(plugin);
-    }
-
-    @Override
-    public int LiteBansModule_31() {
-        Collection collection = (this.plugin).getServer().getOnlinePlayers();
-        return collection.size();
-    }
-
-    @Override
-    public CommandSenderWrapper[] BaseCoreGenericHandler() {
-        Collection collection = (this.plugin).getServer().getOnlinePlayers();
-        if (collection.isEmpty()) {
-            return CommandSenderWrapper.BaseCoreGenericHandler;
+    static {
+        int[] nArray = new int[BansHandler_2.values().length];
+        try {
+            nArray[BansHandler_2.Utf8Handler_2.ordinal()] = 1;
         }
-        int n = collection.size();
-        ArrayList<CommandSenderWrapper> arrayList = new ArrayList<CommandSenderWrapper>(n);
-        for (Player player : collection) {
-            arrayList.add(this.plugin.BaseCoreGenericHandler(player));
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
         }
-        return arrayList.toArray(CommandSenderWrapper.BaseCoreGenericHandler);
+        try {
+            nArray[BansHandler_2.m.ordinal()] = 2;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            nArray[BansHandler_2.LiteBansModule_31.ordinal()] = 3;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            nArray[BansHandler_2.GnuSparseMapHandler.ordinal()] = 4;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        BaseCoreGenericHandler = nArray;
+    }
 }
 

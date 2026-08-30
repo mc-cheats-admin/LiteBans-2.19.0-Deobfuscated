@@ -8,21 +8,21 @@ implements CharSequence {
     private final PlatformPlugin LiteBansModule_31;
     private String AsyncBackgroundTask_5;
     private final byte c;
-    public AllHandler(@NotNull PlatformPlugin plugin, @Nullable String string) {
+        public AllHandler(@NotNull PlatformPlugin plugin, @Nullable String string) {
         byte by2;
         this.LiteBansModule_31 = plugin;
         this.AsyncBackgroundTask_5 = string;
-        this.AsyncBackgroundTask_5 = LiteBansModule_181.LiteBansModule_194.c(this.AsyncBackgroundTask_5);
+        this.AsyncBackgroundTask_5 = LiteBansModule_182.LiteBansModule_195.c(this.AsyncBackgroundTask_5);
         AllHandler jJ2 = this;
-        if (ObjectUtilities.BaseCoreGenericHandler(jJ2.AsyncBackgroundTask_5, (Object)"__ALL__")) {
+        if (ObjectUtilities.BaseCoreGenericHandler((Object)jJ2.AsyncBackgroundTask_5, (Object)"__ALL__")) {
             by2 = 0;
         } else {
             String string2 = jJ2.AsyncBackgroundTask_5().ServerSyncService();
             byte by3 = 1;
-            if (jJ2.AsyncBackgroundTask_5 != null && !LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(jJ2.AsyncBackgroundTask_5)) {
+            if (jJ2.AsyncBackgroundTask_5 != null && !LiteBansModule_182.LiteBansModule_195.LiteBansModule_31(jJ2.AsyncBackgroundTask_5)) {
                 by3 = (byte)(by3 + 1);
             }
-            if (jJ2.LiteBansModule_31.LiteBansModule_401() && !ObjectUtilities.BaseCoreGenericHandler(string2, jJ2.AsyncBackgroundTask_5)) {
+            if (jJ2.LiteBansModule_31.LiteBansModule_403() && !ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)jJ2.AsyncBackgroundTask_5)) {
                 by3 = (byte)(by3 + 1);
             }
             by2 = by3;
@@ -35,7 +35,7 @@ implements CharSequence {
     }
 
     public final DatabaseMonitorService AsyncBackgroundTask_5() {
-        return this.LiteBansModule_31.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        return (DatabaseMonitorService)this.LiteBansModule_31.BaseCoreGenericHandler(DatabaseMonitorService.class);
     }
 
     public void BaseCoreGenericHandler(@NotNull LiteBansModule_60 bT2) {
@@ -44,7 +44,8 @@ implements CharSequence {
         }
         if (this.c >= 3) {
             bT2.BaseCoreGenericHandler(this.AsyncBackgroundTask_5().ServerSyncService());
-}
+        }
+    }
 
     public int BaseCoreGenericHandler() {
         return this.toString().length();
@@ -80,8 +81,9 @@ implements CharSequence {
                 break;
             }
             default: {
-                throw new LiteBansModule_132();
-}
+                throw new LiteBansModule_133();
+            }
+        }
         return string;
     }
 
@@ -97,5 +99,10 @@ implements CharSequence {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"__ALL__", "__ALL__", "", " AND(server_scope='*')", " AND(server_scope='*' OR server_scope=?)", " AND(server_scope='*' OR server_scope=? OR server_scope=?)"};
+    }
+
+    static {
+        AllHandler.LiteBansModule_31();
+    }
 }
 

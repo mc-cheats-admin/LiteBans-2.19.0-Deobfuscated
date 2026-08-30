@@ -1,33 +1,55 @@
 package litebans;
 
-import com.velocitypowered.api.command.Command;
-import com.velocitypowered.api.command.CommandManager;
-@ModulePriority(priority=2)
-public class LiteBansModule_249
-extends CommandManager {
-    public LiteBansModule_249(PlatformPlugin plugin) {
-        super(plugin);
+import java.io.InputStream;
+import java.util.zip.CRC32;
+static final class LiteBansModule_249 {
+    private final LiteBansModule_398 LiteBansModule_195 = new LiteBansModule_398();
+    private boolean BaseCoreGenericHandler;
+    private boolean AsyncBackgroundTask_5;
+    private long c;
+    private long LiteBansModule_31;
+    private final CRC32 e = new CRC32();
+    private InputStream g;
+
+    private LiteBansModule_249() {
     }
 
-    @Override
-    public boolean AsyncBackgroundTask_5() {
-        return this.plugin.AsyncBackgroundTask_22() == 2;
+    static final /* synthetic */ LiteBansModule_398 AsyncBackgroundTask_5(LiteBansModule_249 h92) {
+        return h92.LiteBansModule_195;
     }
 
-    @Override
-    public void e() {
+    static final /* synthetic */ boolean e(LiteBansModule_249 h92) {
+        return h92.BaseCoreGenericHandler;
     }
 
-    @Override
-    public void BaseCoreGenericHandler() {
-        super.BaseCoreGenericHandler();
-        for (LiteCommand command : this.e()) {
-            this.LiteBansModule_31(new LiteBansModule_53(command, command.getPermission(), this.plugin, command.getAliases()));
-}
+    static final /* synthetic */ InputStream LiteBansModule_31(LiteBansModule_249 h92) {
+        return h92.g;
+    }
 
-    public void LiteBansModule_31(LiteCommand command) {
-        VelocityPlugin velocityPlugin = this.plugin;
-        CommandManager commandManager = velocityPlugin.c.getCommandManager();
-        commandManager.register(command.getName(), (Command)((LiteBansModule_53)command), command.getAliases());
+    static final /* synthetic */ CRC32 g(LiteBansModule_249 h92) {
+        return h92.e;
+    }
+
+    static final /* synthetic */ long BaseCoreGenericHandler(LiteBansModule_249 h92) {
+        return h92.c;
+    }
+
+    static final /* synthetic */ long c(LiteBansModule_249 h92) {
+        return h92.LiteBansModule_31;
+    }
+
+    static final /* synthetic */ long LiteBansModule_31(LiteBansModule_249 h92, long l3) {
+        h92.LiteBansModule_31 = l3;
+        return h92.LiteBansModule_31;
+    }
+
+    static final /* synthetic */ long BaseCoreGenericHandler(LiteBansModule_249 h92, long l3) {
+        h92.c = l3;
+        return h92.c;
+    }
+
+    static final /* synthetic */ boolean LiteBansModule_195(LiteBansModule_249 h92) {
+        return h92.AsyncBackgroundTask_5;
+    }
 }
 

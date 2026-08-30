@@ -1,23 +1,37 @@
 package litebans;
 
-static final class LiteBansModule_406
-implements LiteBansModule_178 {
-    public static final LiteBansModule_406 BaseCoreGenericHandler;
-    LiteBansModule_406() {
-    }
+import java.util.Collection;
+import net.md_5.bungee.api.connection.ProxiedPlayer;
 
-    public final String BaseCoreGenericHandler(BansHandler_2 kL2) {
-        BansHandler_2 kL3 = kL2;
-        return SQLiteDriverHandler.LiteBansModule_194(SQLiteDriverHandler.e("ALTER TABLE " + kL3), "removed_by_date TIMESTAMP");
+@ModulePriority(priority=1)
+public class LiteBansModule_406
+extends ConfigurationManager {
+    public LiteBansModule_406(PlatformPlugin plugin) {
+        super(plugin);
     }
 
     @Override
-    public Object BaseCoreGenericHandler(Object targetObj) {
-        return SQLiteDriverHandler.AsyncBackgroundTask_5(this.plugintargetObj);
+    public int LiteBansModule_31() {
+        Collection collection = this.plugin();
+        return collection.size();
     }
 
-    static {
-        LiteBansModule_406.BaseCoreGenericHandler();
-        BaseCoreGenericHandler = new LiteBansModule_406();
+    private final Collection BaseCoreGenericHandler() {
+        return ((BungeePlugin)this.plugin).getProxy().getPlayers();
+    }
+
+    @Override
+    public CommandSenderWrapper[] BaseCoreGenericHandler() {
+        PlatformPlugin plugin = this.plugin;
+        Collection collection = this.plugin();
+        if (collection.isEmpty()) {
+            return CommandSenderWrapper.BaseCoreGenericHandler;
+        }
+        CommandSenderWrapper[] jv_0Array = new CommandSenderWrapper[collection.size()];
+        for (ProxiedPlayer proxiedPlayer : collection) {
+            jv_0Array[n++] = plugin.BaseCoreGenericHandler(proxiedPlayer);
+        }
+        return jv_0Array;
+    }
 }
 

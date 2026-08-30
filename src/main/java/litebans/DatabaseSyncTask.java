@@ -12,14 +12,14 @@ import org.jetbrains.annotations.NotNull;
 public final class DatabaseSyncTask
 extends MessageHandler
 implements Runnable {
-    private final AtomicBoolean LiteBansModule_194 = new AtomicBoolean();
+    private final AtomicBoolean LiteBansModule_195 = new AtomicBoolean();
     private final CopyOnWriteArrayList AsyncBackgroundTask_5 = new CopyOnWriteArrayList();
-    public DatabaseSyncTask(@NotNull PlatformPlugin plugin) {
+        public DatabaseSyncTask(@NotNull PlatformPlugin plugin) {
         super(plugin);
     }
 
     public final AtomicBoolean c() {
-        return this.LiteBansModule_194;
+        return this.LiteBansModule_195;
     }
 
     public final CopyOnWriteArrayList LiteBansModule_31() {
@@ -30,14 +30,14 @@ implements Runnable {
     public void run() {
         try {
             int n;
-            DatabaseMonitorService w2 = this.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
-            ServerSyncService u2 = this.LiteBansModule_240().BaseCoreGenericHandler(ServerSyncService.class);
-                        targetObj = (ConfigService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
+            DatabaseMonitorService w2 = (DatabaseMonitorService)this.LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class);
+            ServerSyncService u2 = (ServerSyncService)this.LiteBansModule_241().BaseCoreGenericHandler(ServerSyncService.class);
+                        targetObj = (ConfigService)((MessageHandler)targetObj).LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class);
             n2 = 0;
-            if (targetObj.g()) {
+            if (((ConfigService)targetObj).g()) {
                 Object contextObj = targetObj;
                 n = 0;
-                ((ConfigService)contextObj).BaseCoreGenericHandler(LiteBansModule_4.BaseCoreGenericHandler.BaseCoreGenericHandler().LiteBansModule_31());
+                ((ConfigService)contextObj).BaseCoreGenericHandler((Object)LiteBansModule_4.BaseCoreGenericHandler.BaseCoreGenericHandler().LiteBansModule_31());
             }
             targetObj = (SortHandler)LiteBansModule_4.BaseCoreGenericHandler.BaseCoreGenericHandler().BaseCoreGenericHandler();
             ObjectUtilities.BaseCoreGenericHandler(w2);
@@ -49,11 +49,12 @@ implements Runnable {
                 int n3 = n++;
                 this.plugin(this, (SortHandler)targetObj, w2, u2);
                 Thread.sleep(70L);
-}
+            }
+        }
         catch (InterruptedException interruptedException) {
             this.AsyncBackgroundTask_5();
         }
-        this.LiteBansModule_194.set(false);
+        this.LiteBansModule_195.set(false);
     }
 
     private final void AsyncBackgroundTask_5() {
@@ -67,17 +68,17 @@ implements Runnable {
         if (!((Collection)ge2.AsyncBackgroundTask_5).isEmpty()) {
             boolean flag;
             int n;
-{
+            block30: {
                 boolean flag2;
                 boolean flag3;
-{
+                block28: {
                     Object helperObj = br2.BaseCoreGenericHandler();
                     if (helperObj == null) {
                         n = 0;
                         byte[][] byArrayArray = new byte[4][];
                         while (n < 4) {
                             int n2 = n++;
-                            byArrayArray[n2] = LiteBansModule_389.BaseCoreGenericHandler();
+                            byArrayArray[n2] = LiteBansModule_391.BaseCoreGenericHandler();
                         }
                         helperObj = byArrayArray;
                     }
@@ -91,7 +92,7 @@ implements Runnable {
                         boolean flag4 = ((byte[])resultObj).length == 0;
                         if (!flag4) continue;
                         flag2 = true;
-                        break;
+                        break block28;
                     }
                     flag2 = false;
                 }
@@ -99,13 +100,13 @@ implements Runnable {
                     contextObj = w2;
                     n = 0;
                     try {
-                        LiteBansModule_82 ch2 = ((DatabaseMonitorService)contextObj).LiteBansModule_194();
+                        LiteBansModule_83 ch2 = ((DatabaseMonitorService)contextObj).LiteBansModule_195();
                         Closeable closeable = ch2;
                         tempObj = null;
                         try {
-                            resultObj = (LiteBansModule_82)closeable;
+                            resultObj = (LiteBansModule_83)closeable;
                             flag3 = false;
-                            LiteBansModule_82 ch3 = ch2;
+                            LiteBansModule_83 ch3 = ch2;
                             if (ch3.BaseCoreGenericHandler()) {
                                 try {
                                     ServerSyncService u3 = u2;
@@ -128,10 +129,12 @@ implements Runnable {
                                     }
                                     finally {
                                         CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
-}
+                                    }
+                                }
                                 catch (SQLException sQLException) {
                                     w2.BaseCoreGenericHandler(sQLException);
-}
+                                }
+                            }
                             resultObj = KotlinUnitHandler.BaseCoreGenericHandler;
                         }
                         catch (Throwable throwable) {
@@ -142,13 +145,16 @@ implements Runnable {
                             catch (Throwable throwable3) {
                                 BlockHandler.BaseCoreGenericHandler(closeable, tempObj);
                                 throw throwable3;
-}
+                            }
+                        }
                         BlockHandler.BaseCoreGenericHandler(closeable, (Throwable)tempObj);
                     }
                     catch (SQLException sQLException) {
-                        if (((DatabaseMonitorService)contextObj).LiteBansModule_31(sQLException)) break;
+                        if (((DatabaseMonitorService)contextObj).LiteBansModule_31(sQLException)) break block30;
                         throw sQLException;
-}
+                    }
+                }
+            }
             try {
                 contextObj = u2;
                 n = 0;
@@ -156,7 +162,7 @@ implements Runnable {
                 for (Object resultObj : iterable) {
                     boolean bl10;
                     Byte by2;
-{
+                    block31: {
                         by2 = (Byte)resultObj;
                         if (by2 < 0) continue;
                         Iterable iterable2 = ((ServerSyncService)contextObj).GnuSparseMapHandler();
@@ -165,9 +171,9 @@ implements Runnable {
                         } else {
                             for (ResultSet resultSet : iterable2) {
                                 boolean bl13;
-                                targetObj = (Reference)(resultSet);
+                                targetObj = (Reference)((Object)resultSet);
                                 flag = false;
-                                LiteBansModule_56 bP2 = (LiteBansModule_56)targetObj.get();
+                                LiteBansModule_56 bP2 = (LiteBansModule_56)((Reference)targetObj).get();
                                 if (bP2 != null) {
                                     byte by3 = bP2.LiteBansModule_31();
                                     bl13 = by2 == by3;
@@ -176,10 +182,11 @@ implements Runnable {
                                 }
                                 if (!bl13) continue;
                                 bl10 = false;
-                                break;
+                                break block31;
                             }
                             bl10 = true;
-}
+                        }
+                    }
                     if (!bl10) continue;
                     ((ServerSyncService)contextObj).BaseCoreGenericHandler(by2.byteValue(), br2);
                 }
@@ -189,22 +196,28 @@ implements Runnable {
                 ge2.BaseCoreGenericHandler(indexOutOfBoundsException, br2, u2);
             }
             ge2.AsyncBackgroundTask_5();
-}
+        }
+    }
 
     private final void BaseCoreGenericHandler(Exception exception, SortHandler br2, ServerSyncService u2) {
         char[] cArray;
-        this.LiteBansModule_240().getLogger().warning("Cache desync, reloading. (error " + ((targetObj = exception.getMessage()) != null && (targetObj = StringUtilities.BaseCoreGenericHandler(targetObj, cArray = new char[]{' '}, false, 0, 6, null)) != null ? (String)targetObj.get(1) : null) + ')');
+        this.LiteBansModule_241().getLogger().warning("Cache desync, reloading. (error " + ((targetObj = exception.getMessage()) != null && (targetObj = StringUtilities.BaseCoreGenericHandler((CharSequence)targetObj, cArray = new char[]{' '}, false, 0, 6, null)) != null ? (String)targetObj.get(1) : null) + ')');
         br2.BaseCoreGenericHandler((byte[][])null);
         u2.BaseCoreGenericHandler(0);
-                contextObj = (ConfigService)((MessageHandler)contextObj).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
+                contextObj = (ConfigService)((MessageHandler)contextObj).LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class);
         flag = false;
         if (((ConfigService)contextObj).g()) {
-            ((ConfigService)contextObj).BaseCoreGenericHandler(exception);
+            ((ConfigService)contextObj).BaseCoreGenericHandler((Object)exception);
         }
         Thread.sleep(1000L);
     }
 
     private static final void BaseCoreGenericHandler() {
         e = new String[]{"SQLiteDriverHandler_4", "LiteBansModule_31", "Cache desync, reloading. (error "};
+    }
+
+    static {
+        DatabaseSyncTask.BaseCoreGenericHandler();
+    }
 }
 

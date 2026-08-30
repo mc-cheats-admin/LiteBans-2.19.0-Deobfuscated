@@ -1,28 +1,15 @@
 package litebans;
 
 public final class LiteBansModule_190 {
-    public static final /* synthetic */ int[] BaseCoreGenericHandler;
+    private LiteBansModule_190() {
+    }
 
-    static {
-        int[] nArray = new int[BanHandler.values().length];
-        try {
-            nArray[BanHandler.c.ordinal()] = 1;
-        }
-        catch (NoSuchFieldError noSuchFieldError) {
-            // empty catch block
-        }
-        try {
-            nArray[BanHandler.GnuSparseMapHandler.ordinal()] = 2;
-        }
-        catch (NoSuchFieldError noSuchFieldError) {
-            // empty catch block
-        }
-        try {
-            nArray[BanHandler.g.ordinal()] = 3;
-        }
-        catch (NoSuchFieldError noSuchFieldError) {
-            // empty catch block
-        }
-        BaseCoreGenericHandler = nArray;
+    public final LiteBansModule_160 BaseCoreGenericHandler(int n, int n2, int n3) {
+        return new LiteBansModule_160(n, n2, n3);
+    }
+
+    public /* synthetic */ LiteBansModule_190(LiteBansModule_14 aJ2) {
+        this();
+    }
 }
 

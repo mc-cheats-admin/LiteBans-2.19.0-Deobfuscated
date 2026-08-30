@@ -7,20 +7,20 @@ import org.jetbrains.annotations.NotNull;
 public final class BansHandler_2
 extends Enum
 implements CharSequence {
-    public static final LiteBansModule_87 AsyncBackgroundTask_5;
+    public static final LiteBansModule_88 AsyncBackgroundTask_5;
     public static final BansHandler_2 Utf8Handler_2;
     public static final BansHandler_2 m;
     public static final BansHandler_2 LiteBansModule_31;
     public static final BansHandler_2 GnuSparseMapHandler;
     public static final BansHandler_2 g;
     public static final BansHandler_2 c;
-    public static final BansHandler_2 LiteBansModule_194;
+    public static final BansHandler_2 LiteBansModule_195;
     public static final BansHandler_2 n;
     public static final BansHandler_2 i;
-    public static final BansHandler_2 LiteBansModule_240;
+    public static final BansHandler_2 LiteBansModule_241;
     private static final /* synthetic */ BansHandler_2[] e;
-    private static final /* synthetic */ LiteBansModule_372 BaseCoreGenericHandler;
-    /*
+    private static final /* synthetic */ LiteBansModule_374 BaseCoreGenericHandler;
+        /*
      * WARNING - Possible parameter corruption
      * WARNING - void declaration
      */
@@ -31,25 +31,26 @@ implements CharSequence {
 
     public final boolean BaseCoreGenericHandler() {
         boolean flag;
-        switch (LiteBansModule_365.BaseCoreGenericHandler[this.ordinal()]) {
-            case 1:
-            case 2:
-            case 3:
+        switch (LiteBansModule_367.BaseCoreGenericHandler[this.ordinal()]) {
+            case 1: 
+            case 2: 
+            case 3: 
             case 4: {
                 flag = true;
                 break;
             }
             default: {
                 flag = false;
-}
+            }
+        }
         return flag;
     }
 
     public final BanHandler c() {
         BanHandler a_2;
-        switch (LiteBansModule_365.BaseCoreGenericHandler[this.ordinal()]) {
+        switch (LiteBansModule_367.BaseCoreGenericHandler[this.ordinal()]) {
             case 1: {
-                a_2 = BanHandler.LiteBansModule_240;
+                a_2 = BanHandler.LiteBansModule_241;
                 break;
             }
             case 3: {
@@ -66,7 +67,8 @@ implements CharSequence {
             }
             default: {
                 throw new UnsupportedOperationException();
-}
+            }
+        }
         return a_2;
     }
 
@@ -94,17 +96,18 @@ implements CharSequence {
     }
 
     public final String BaseCoreGenericHandler(@NotNull Locale locale, boolean flag) {
-        if (LiteBansModule_209.LiteBansModule_31.c()) {
-            ConfigService configService = (ConfigService)LiteBansModule_209.LiteBansModule_31.BaseCoreGenericHandler().BaseCoreGenericHandler(ConfigService.class);
+        if (LiteBansModule_210.LiteBansModule_31.c()) {
+            ConfigService configService = (ConfigService)LiteBansModule_210.LiteBansModule_31.BaseCoreGenericHandler().BaseCoreGenericHandler(ConfigService.class);
             String string = this.name().toLowerCase(locale);
             if (configService != null) {
-                DiscordWebhookClient eG2 = configService.LiteBansModule_194();
+                DiscordWebhookClient eG2 = configService.LiteBansModule_195();
                 string = eG2.AsyncBackgroundTask_5() + string;
-                if (ObjectUtilities.BaseCoreGenericHandler(configService.LiteBansModule_194().ElementsHandler(), (Object)"LiteBansModule_243") && flag) {
+                if (ObjectUtilities.BaseCoreGenericHandler((Object)configService.LiteBansModule_195().ElementsHandler(), (Object)"LiteBansModule_244") && flag) {
                     string = string.toUpperCase(locale);
                 }
                 return string;
-}
+            }
+        }
         return this.name();
     }
 
@@ -147,12 +150,17 @@ implements CharSequence {
         GnuSparseMapHandler = new BansHandler_2("KICKS", 3);
         g = new BansHandler_2("HISTORY", 4);
         c = new BansHandler_2("SYNC", 5);
-        LiteBansModule_194 = new BansHandler_2("SERVERS", 6);
+        LiteBansModule_195 = new BansHandler_2("SERVERS", 6);
         n = new BansHandler_2("CACHE8K", 7);
         i = new BansHandler_2("CONFIG", 8);
-        LiteBansModule_240 = new BansHandler_2("ALLOW", 9);
-        e = kLArray = new BansHandler_2[]{BansHandler_2.Utf8Handler_2, BansHandler_2.m, BansHandler_2.LiteBansModule_31, BansHandler_2.GnuSparseMapHandler, BansHandler_2.g, BansHandler_2.c, BansHandler_2.LiteBansModule_194, BansHandler_2.n, BansHandler_2.i, BansHandler_2.LiteBansModule_240};
+        LiteBansModule_241 = new BansHandler_2("ALLOW", 9);
+        e = kLArray = new BansHandler_2[]{BansHandler_2.Utf8Handler_2, BansHandler_2.m, BansHandler_2.LiteBansModule_31, BansHandler_2.GnuSparseMapHandler, BansHandler_2.g, BansHandler_2.c, BansHandler_2.LiteBansModule_195, BansHandler_2.n, BansHandler_2.i, BansHandler_2.LiteBansModule_241};
         BaseCoreGenericHandler = EntriesHandler_3.BaseCoreGenericHandler(e);
-        AsyncBackgroundTask_5 = new LiteBansModule_87(null);
+        AsyncBackgroundTask_5 = new LiteBansModule_88(null);
+    }
+
+    private static final void AsyncBackgroundTask_5() {
+        LiteBansModule_403 = new String[]{"LiteBansModule_244", "", "BANS", "MUTES", "WARNINGS", "KICKS", "HISTORY", "SYNC", "SERVERS", "CACHE8K", "CONFIG", "ALLOW"};
+    }
 }
 

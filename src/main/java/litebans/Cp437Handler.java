@@ -7,12 +7,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.zip.CRC32;
 public class Cp437Handler
-extends LiteBansModule_153 {
-    private static final int LiteBansModule_240;
-    private static final int LiteBansModule_194;
+extends LiteBansModule_154 {
+    private static final int LiteBansModule_241;
+    private static final int LiteBansModule_195;
     private final DataInputStream GnuSparseMapHandler;
     private final String e;
-    private final LiteBansModule_347 g;
+    private final LiteBansModule_349 g;
     private LiteBansModule_22 AsyncBackgroundTask_5 = null;
     private InputStream i = null;
 
@@ -21,15 +21,17 @@ extends LiteBansModule_153 {
         this.e = string;
         try {
             this.g = this.LiteBansModule_31();
-            if ((this.g.LiteBansModule_240 & 1) != 0) {
+            if ((this.g.LiteBansModule_241 & 1) != 0) {
                 throw new LiteBansException_8("Encrypted ARJ files are unsupported");
             }
-            if ((this.g.LiteBansModule_240 & 4) != 0) {
+            if ((this.g.LiteBansModule_241 & 4) != 0) {
                 throw new LiteBansException_8("Multi-volume ARJ files are unsupported");
-}
+            }
+        }
         catch (IOException iOException) {
             throw new LiteBansException_8(iOException.getMessage(), iOException);
-}
+        }
+    }
 
     public Cp437Handler(InputStream inputStream) {
         this(inputStream, "CP437");
@@ -70,7 +72,8 @@ extends LiteBansModule_153 {
             }
             String string = new String(byteArrayOutputStream.toByteArray());
             return string;
-}
+        }
+    }
 
     private final void BaseCoreGenericHandler(DataInputStream dataInputStream, byte[] byArray) {
         dataInputStream.readFully(byArray);
@@ -92,7 +95,7 @@ extends LiteBansModule_153 {
             if (n3 > 2600) continue;
             byArray = new byte[n3];
             this.plugin(this.GnuSparseMapHandler, byArray);
-            long l3 = this.AsyncBackgroundTask_5(this.GnuSparseMapHandler) & 0xFFFFFFFFL;
+            long l3 = (long)this.AsyncBackgroundTask_5(this.GnuSparseMapHandler) & 0xFFFFFFFFL;
             CRC32 cRC32 = new CRC32();
             cRC32.update(byArray);
             if (l3 != cRC32.getValue()) continue;
@@ -101,7 +104,7 @@ extends LiteBansModule_153 {
         return byArray;
     }
 
-    private final LiteBansModule_347 LiteBansModule_31() {
+    private final LiteBansModule_349 LiteBansModule_31() {
         byte[] byArray = this.plugin();
         if (byArray == null) {
             throw new IOException("Archive ends without any headers");
@@ -111,20 +114,20 @@ extends LiteBansModule_153 {
         byte[] byArray2 = new byte[n - 1];
         dataInputStream.readFully(byArray2);
         DataInputStream dataInputStream2 = new DataInputStream(new ByteArrayInputStream(byArray2));
-        LiteBansModule_347 jl_02 = new LiteBansModule_347();
+        LiteBansModule_349 jl_02 = new LiteBansModule_349();
         jl_02.Utf8Handler_2 = dataInputStream2.readUnsignedByte();
         jl_02.i = dataInputStream2.readUnsignedByte();
         jl_02.PunishmentTableService = dataInputStream2.readUnsignedByte();
-        jl_02.LiteBansModule_240 = dataInputStream2.readUnsignedByte();
+        jl_02.LiteBansModule_241 = dataInputStream2.readUnsignedByte();
         jl_02.AsyncBackgroundTask_22 = dataInputStream2.readUnsignedByte();
         jl_02.LiteBansModule_31 = dataInputStream2.readUnsignedByte();
         jl_02.AsyncBackgroundTask_21 = dataInputStream2.readUnsignedByte();
         jl_02.BroadcastService = this.AsyncBackgroundTask_5(dataInputStream2);
         jl_02.q = this.AsyncBackgroundTask_5(dataInputStream2);
-        jl_02.LiteBansModule_194 = 0xFFFFFFFFL & this.AsyncBackgroundTask_5(dataInputStream2);
+        jl_02.LiteBansModule_195 = 0xFFFFFFFFL & (long)this.AsyncBackgroundTask_5(dataInputStream2);
         jl_02.BaseCoreGenericHandler = this.AsyncBackgroundTask_5(dataInputStream2);
         jl_02.GnuSparseMapHandler = this.LiteBansModule_31(dataInputStream2);
-        jl_02.LiteBansModule_401 = this.LiteBansModule_31(dataInputStream2);
+        jl_02.LiteBansModule_403 = this.LiteBansModule_31(dataInputStream2);
         this.plugin(20L);
         jl_02.AsyncBackgroundTask_5 = dataInputStream2.readUnsignedByte();
         jl_02.c = dataInputStream2.readUnsignedByte();
@@ -140,12 +143,13 @@ extends LiteBansModule_153 {
         if (n2 > 0) {
             jl_02.e = new byte[n2];
             this.plugin(this.GnuSparseMapHandler, jl_02.e);
-            long l3 = 0xFFFFFFFFL & this.AsyncBackgroundTask_5(this.GnuSparseMapHandler);
+            long l3 = 0xFFFFFFFFL & (long)this.AsyncBackgroundTask_5(this.GnuSparseMapHandler);
             CRC32 cRC32 = new CRC32();
             cRC32.update(jl_02.e);
             if (l3 != cRC32.getValue()) {
                 throw new IOException("Extended header CRC32 verification failure");
-}
+            }
+        }
         return jl_02;
     }
 
@@ -164,7 +168,8 @@ extends LiteBansModule_153 {
     }
 
     static {
-        LiteBansModule_194 = 234;
-        LiteBansModule_240 = 96;
+        LiteBansModule_195 = 234;
+        LiteBansModule_241 = 96;
+    }
 }
 

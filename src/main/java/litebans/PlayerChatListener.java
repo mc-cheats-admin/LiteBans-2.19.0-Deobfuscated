@@ -9,13 +9,13 @@ import com.velocitypowered.api.proxy.Player;
 import org.jetbrains.annotations.NotNull;
 
 public final class PlayerChatListener
-implements LiteBansModule_171 {
+implements LiteBansModule_172 {
     private final PlatformPlugin LiteBansModule_31;
     private final PunishmentTableService BaseCoreGenericHandler;
 
     public PlayerChatListener(@NotNull PlatformPlugin plugin) {
         this.LiteBansModule_31 = plugin;
-        this.plugin = this.LiteBansModule_31.BaseCoreGenericHandler(PunishmentTableService.class);
+        this.plugin = (PunishmentTableService)this.LiteBansModule_31.BaseCoreGenericHandler(PunishmentTableService.class);
     }
 
     public final PlatformPlugin LiteBansModule_31() {
@@ -30,8 +30,8 @@ implements LiteBansModule_171 {
         Player player = playerChatEvent.getPlayer();
         String string = playerChatEvent.getMessage();
         TestHandler_2 f82 = this.plugin.BaseCoreGenericHandler();
-        ObjectUtilities.BaseCoreGenericHandler(string);
-        f82.BaseCoreGenericHandler(playerChatEvent, string, this.LiteBansModule_31.BaseCoreGenericHandler(player), true);
+        ObjectUtilities.BaseCoreGenericHandler((Object)string);
+        f82.BaseCoreGenericHandler((Object)playerChatEvent, string, this.LiteBansModule_31.BaseCoreGenericHandler(player), true);
     }
 
     @Subscribe(order=PostOrder.EARLY)
@@ -48,13 +48,14 @@ implements LiteBansModule_171 {
     public PlayerChatListener BaseCoreGenericHandler() {
         PlayerChatListener e72;
         PlayerChatListener e73 = e72 = this;
-        LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{e73};
+        LiteBansModule_176[] em_0Array = new LiteBansModule_176[]{e73};
         e73.LiteBansModule_31.LiteBansModule_31(em_0Array);
         return e72;
     }
 
     @Override
-    public LiteBansModule_175 BaseCoreGenericHandler() {
+    public LiteBansModule_176 BaseCoreGenericHandler() {
         return this.plugin();
+    }
 }
 

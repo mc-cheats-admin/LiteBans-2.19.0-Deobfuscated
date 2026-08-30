@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 public final class EventsHandler
 extends Events {
     private final CopyOnWriteArrayList BaseCoreGenericHandler = new CopyOnWriteArrayList();
-    public final CopyOnWriteArrayList LiteBansModule_31() {
+        public final CopyOnWriteArrayList LiteBansModule_31() {
         return this.plugin;
     }
 
@@ -28,5 +28,14 @@ extends Events {
 
     public String toString() {
         return "Events";
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        LiteBansModule_31 = new String[]{"Listener is already registered: ", "Events"};
+    }
+
+    static {
+        EventsHandler.BaseCoreGenericHandler();
+    }
 }
 

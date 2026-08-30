@@ -26,5 +26,6 @@ extends Enum {
 
     static {
         LiteBansModule_31 = new NameHandler[]{BaseCoreGenericHandler, AsyncBackgroundTask_5, c};
+    }
 }
 

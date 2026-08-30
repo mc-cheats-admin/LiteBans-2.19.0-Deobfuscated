@@ -18,7 +18,7 @@ public interface CommandSenderWrapper {
 
     public @NonNull String i();
 
-    public @Nullable String LiteBansModule_240();
+    public @Nullable String LiteBansModule_241();
 
     public @NonNull UUID AsyncBackgroundTask_5();
 
@@ -26,7 +26,7 @@ public interface CommandSenderWrapper {
 
     public boolean e(@Nullable String var1);
 
-    public boolean LiteBansModule_194();
+    public boolean LiteBansModule_195();
 
     public boolean GnuSparseMapHandler();
 

@@ -1,16 +1,91 @@
 package litebans;
 
-import org.jetbrains.annotations.NotNull;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import org.bukkit.configuration.ConfigurationSection;
 
-public final class LiteBansModule_395 {
-    private LiteBansModule_395() {
+public class LiteBansModule_395
+implements LiteBansModule_392 {
+    private final LiteBansModule_218 BaseCoreGenericHandler;
+    private final ConfigurationSection LiteBansModule_31;
+
+    public LiteBansModule_395(LiteBansModule_218 gc_02, ConfigurationSection configurationSection) {
+        this.plugin = gc_02;
+        this.LiteBansModule_31 = configurationSection;
     }
 
-    public final String BaseCoreGenericHandler(@NotNull Object[] objectArray, @NotNull String string) {
-        return ArrayUtilities.BaseCoreGenericHandler(objectArray, string, null, null, 0, null, null, 62, null);
+    @Override
+    public LiteBansModule_392 BaseCoreGenericHandler(String string) {
+        ConfigurationSection configurationSection = this.LiteBansModule_31.getConfigurationSection(string);
+        if (configurationSection == null) {
+            return null;
+        }
+        return new LiteBansModule_395(this.plugin, configurationSection);
     }
 
-    public /* synthetic */ LiteBansModule_395(LiteBansModule_14 aJ2) {
-        this();
+    @Override
+    public DatabaseService LiteBansModule_31(String string, Object targetObj) {
+        this.LiteBansModule_31.set(string, targetObj);
+        return this.plugin;
+    }
+
+    @Override
+    public Collection BaseCoreGenericHandler(boolean flag) {
+        if (this.LiteBansModule_31 == null) {
+            return Collections.emptyList();
+        }
+        return this.LiteBansModule_31.getKeys(flag);
+    }
+
+    @Override
+    public Object LiteBansModule_31(String string) {
+        return this.LiteBansModule_31.get(string);
+    }
+
+    @Override
+    public Object BaseCoreGenericHandler(String string, Object targetObj) {
+        return this.LiteBansModule_31.get(string, targetObj);
+    }
+
+    @Override
+    public boolean BaseCoreGenericHandler(String string) {
+        return this.LiteBansModule_31.getBoolean(string);
+    }
+
+    @Override
+    public boolean BaseCoreGenericHandler(String string, boolean flag) {
+        return this.LiteBansModule_31.getBoolean(string, flag);
+    }
+
+    @Override
+    public double AsyncBackgroundTask_5(String string) {
+        return this.LiteBansModule_31.getDouble(string);
+    }
+
+    @Override
+    public int BaseCoreGenericHandler(String string, int n) {
+        return this.LiteBansModule_31.getInt(string, n);
+    }
+
+    @Override
+    public long BaseCoreGenericHandler(String string, long l3) {
+        return this.LiteBansModule_31.getLong(string, l3);
+    }
+
+    @Override
+    public String e(String string) {
+        return this.LiteBansModule_31.getString(string);
+    }
+
+    @Override
+    public String BaseCoreGenericHandler(String string, String string2) {
+        return this.LiteBansModule_31.getString(string, string2);
+    }
+
+    @Override
+    public List g(String string) {
+        return this.LiteBansModule_31.getStringList(string);
+    }
 }
 

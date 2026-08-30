@@ -46,12 +46,12 @@ public final class LiteBansModule_15 {
         return this.c != null && this.LiteBansModule_31 != null && Integer.compareUnsigned(this.plugin, 65535) < 0;
     }
 
-    public final boolean LiteBansModule_194() {
+    public final boolean LiteBansModule_195() {
         return !this.LiteBansModule_31();
     }
 
     public int hashCode() {
-        int n = LiteBansModule_72.AsyncBackgroundTask_5(this.plugin);
+        int n = LiteBansModule_73.AsyncBackgroundTask_5(this.plugin);
         n = n * 31 + (this.c == null ? 0 : this.c.hashCode());
         n = n * 31 + (this.LiteBansModule_31 == null ? 0 : this.LiteBansModule_31.hashCode());
         return n;
@@ -68,13 +68,14 @@ public final class LiteBansModule_15 {
         if (this.plugin != aK2.BaseCoreGenericHandler) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.c, aK2.c)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.c, (Object)aK2.c)) {
             return false;
         }
-        return ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_31, aK2.LiteBansModule_31);
+        return ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_31, (Object)aK2.LiteBansModule_31);
     }
 
     public /* synthetic */ LiteBansModule_15(int n, String string, String string2, LiteBansModule_14 aJ2) {
         this(n, string, string2);
+    }
 }
 

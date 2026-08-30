@@ -2,8 +2,8 @@ package litebans;
 
 public final class InitHandler
 extends Enum {
-    public static final InitHandler LiteBansModule_240;
-    public static final InitHandler LiteBansModule_194;
+    public static final InitHandler LiteBansModule_241;
+    public static final InitHandler LiteBansModule_195;
     public static final InitHandler BaseCoreGenericHandler;
     public static final InitHandler i;
     public static final InitHandler c;
@@ -11,7 +11,7 @@ extends Enum {
     public static final InitHandler LiteBansModule_31;
     public static final InitHandler g;
     private static final /* synthetic */ InitHandler[] AsyncBackgroundTask_5;
-    public static InitHandler[] values() {
+        public static InitHandler[] values() {
         return (InitHandler[])AsyncBackgroundTask_5.clone();
     }
 
@@ -29,13 +29,13 @@ extends Enum {
     }
 
     private static final /* synthetic */ InitHandler[] LiteBansModule_31() {
-        return new InitHandler[]{LiteBansModule_240, LiteBansModule_194, BaseCoreGenericHandler, i, c, e, LiteBansModule_31, g};
+        return new InitHandler[]{LiteBansModule_241, LiteBansModule_195, BaseCoreGenericHandler, i, c, e, LiteBansModule_31, g};
     }
 
     static {
         InitHandler.BaseCoreGenericHandler();
-        LiteBansModule_240 = new InitHandler("INIT", 0);
-        LiteBansModule_194 = new InitHandler("PRE_TARGET", 1);
+        LiteBansModule_241 = new InitHandler("INIT", 0);
+        LiteBansModule_195 = new InitHandler("PRE_TARGET", 1);
         BaseCoreGenericHandler = new InitHandler("POST_TARGET", 2);
         i = new InitHandler("ENTRY_CREATED", 3);
         c = new InitHandler("ENTRY_EMITTED", 4);
@@ -47,5 +47,6 @@ extends Enum {
 
     private static final void BaseCoreGenericHandler() {
         GnuSparseMapHandler = new String[]{"INIT", "PRE_TARGET", "POST_TARGET", "ENTRY_CREATED", "ENTRY_EMITTED", "ENTRY_APPLIED", "FINALIZED", "CANCELLED"};
+    }
 }
 

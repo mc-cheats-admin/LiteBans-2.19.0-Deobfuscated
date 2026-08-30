@@ -18,12 +18,12 @@ implements CommandSenderWrapper {
     private final BukkitPlugin GnuSparseMapHandler;
     private final WeakReference Utf8Handler_2;
     private UUID i = LiteBansModule_31;
-    private String LiteBansModule_240 = null;
+    private String LiteBansModule_241 = null;
     private final String e;
     private String AsyncBackgroundTask_5;
     private final boolean c;
     private final boolean g;
-    public TextHandler(BukkitPlugin bukkitPlugin, CommandSender commandSender) {
+        public TextHandler(BukkitPlugin bukkitPlugin, CommandSender commandSender) {
         boolean flag;
         this.GnuSparseMapHandler = bukkitPlugin;
         this.Utf8Handler_2 = new WeakReference<CommandSender>(commandSender);
@@ -33,16 +33,16 @@ implements CommandSenderWrapper {
     }
 
     public boolean equals(Object targetObj) {
-        return this == targetObj || targetObj instanceof TextHandler && targetObj.AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
+        return this == targetObj || targetObj instanceof TextHandler && ((TextHandler)targetObj).AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
     }
 
     @Override
     public void c(String string) {
-        CommandSender commandSender = this.Utf8Handler_2.get();
+        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
         if (commandSender == null || string.isEmpty()) {
             return;
         }
-        if (BukkitBlockAdapter.c()) {
+        if (OrgBukkitBlockHandler.c()) {
             if (commandSender instanceof BlockCommandSender) {
                 LiteBansModule_26.BaseCoreGenericHandler(this.GnuSparseMapHandler, ((BlockCommandSender)commandSender).getBlock().getLocation(), () -> this.GnuSparseMapHandler.getServer().dispatchCommand(commandSender, string));
             } else if (commandSender instanceof Entity) {
@@ -57,7 +57,7 @@ implements CommandSenderWrapper {
 
     @Override
     public String g() {
-        CommandSender commandSender = this.Utf8Handler_2.get();
+        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
         if (commandSender == null) {
             return this.e;
         }
@@ -73,7 +73,7 @@ implements CommandSenderWrapper {
     public String LiteBansModule_31() {
         CommandSender commandSender;
         String string = this.AsyncBackgroundTask_5;
-        if (string == null && (commandSender = this.Utf8Handler_2.get()) != null) {
+        if (string == null && (commandSender = (CommandSender)this.Utf8Handler_2.get()) != null) {
             this.AsyncBackgroundTask_5 = string = this.plugin(commandSender);
         }
         return string;
@@ -85,7 +85,7 @@ implements CommandSenderWrapper {
     }
 
     @Override
-    public @Nullable String LiteBansModule_240() {
+    public @Nullable String LiteBansModule_241() {
         return null;
     }
 
@@ -94,7 +94,7 @@ implements CommandSenderWrapper {
         UUID uUID;
         CommandSender commandSender;
         UUID uUID2 = this.i;
-        if (uUID2.equals(LiteBansModule_31) && this.c && (commandSender = this.Utf8Handler_2.get()) != null && (uUID = ((Player)commandSender).getUniqueId()) != null) {
+        if (uUID2.equals(LiteBansModule_31) && this.c && (commandSender = (CommandSender)this.Utf8Handler_2.get()) != null && (uUID = ((Player)commandSender).getUniqueId()) != null) {
             this.i = uUID;
             return uUID;
         }
@@ -103,8 +103,8 @@ implements CommandSenderWrapper {
 
     @Override
     public String BaseCoreGenericHandler() {
-        String string = this.LiteBansModule_240;
-        return string == null || string.equals("00000000-0000-0000-0000-000000000000") ? (this.LiteBansModule_240 = this.AsyncBackgroundTask_5().toString()) : string;
+        String string = this.LiteBansModule_241;
+        return string == null || string.equals("00000000-0000-0000-0000-000000000000") ? (this.LiteBansModule_241 = this.AsyncBackgroundTask_5().toString()) : string;
     }
 
     @Override
@@ -112,18 +112,18 @@ implements CommandSenderWrapper {
         if (string == null) {
             return true;
         }
-        CommandSender commandSender = this.Utf8Handler_2.get();
+        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
         return commandSender != null && commandSender.hasPermission(string);
     }
 
     @Override
-    public boolean LiteBansModule_194() {
+    public boolean LiteBansModule_195() {
         return this.g;
     }
 
     @Override
     public boolean GnuSparseMapHandler() {
-        CommandSender commandSender = this.Utf8Handler_2.get();
+        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
         return this.c && commandSender != null && ((Player)commandSender).isOnline();
     }
 
@@ -134,41 +134,45 @@ implements CommandSenderWrapper {
 
     @Override
     public void AsyncBackgroundTask_5(String string) {
-        CommandSender commandSender = this.Utf8Handler_2.get();
+        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
         if (commandSender == null) {
             return;
         }
         if (this.c) {
             Player player = (Player)commandSender;
-            if (BukkitBlockAdapter.c() || this.GnuSparseMapHandler.getServer().isPrimaryThread()) {
+            if (OrgBukkitBlockHandler.c() || this.GnuSparseMapHandler.getServer().isPrimaryThread()) {
                 player.kickPlayer(string);
             } else {
                 this.GnuSparseMapHandler.c(new AsyncBackgroundTask_13(this, player, string));
-}
+            }
+        }
+    }
 
     @Override
     public void LiteBansModule_31(String string) {
-        CommandSender commandSender = this.Utf8Handler_2.get();
+        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
         if (commandSender == null || string == null) {
             return;
         }
         if (this.c) {
             Player player = (Player)commandSender;
-            if (BukkitBlockAdapter.LiteBansModule_31()) {
-                BukkitBlockAdapter.BaseCoreGenericHandler(player, string);
+            if (OrgBukkitBlockHandler.LiteBansModule_31()) {
+                OrgBukkitBlockHandler.BaseCoreGenericHandler(player, string);
             } else {
                 this.plugin(this.plugin(string));
-} else {
+            }
+        } else {
             this.plugin(this.plugin(string));
-}
+        }
+    }
 
     @Override
     public void BaseCoreGenericHandler(String string) {
-        CommandSender commandSender = this.Utf8Handler_2.get();
+        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
         if (commandSender == null) {
             return;
         }
-        if (BukkitBlockAdapter.c() && commandSender instanceof BlockCommandSender) {
+        if (OrgBukkitBlockHandler.c() && commandSender instanceof BlockCommandSender) {
             LiteBansModule_26.BaseCoreGenericHandler(this.GnuSparseMapHandler, ((BlockCommandSender)commandSender).getBlock().getLocation(), () -> commandSender.sendMessage(string));
             return;
         }
@@ -177,16 +181,17 @@ implements CommandSenderWrapper {
 
     @Override
     public void BaseCoreGenericHandler(String string, byte[] byArray) {
-        CommandSender commandSender = this.Utf8Handler_2.get();
+        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
         if (commandSender == null) {
             return;
         }
         if (this.c) {
-            ((Player)commandSender).sendPluginMessage(this.GnuSparseMapHandler, string, byArray);
-}
+            ((Player)commandSender).sendPluginMessage((Plugin)this.GnuSparseMapHandler, string, byArray);
+        }
+    }
 
     private final String BaseCoreGenericHandler(String string) {
-        NullHandler_3 gr_02 = (NullHandler_3)new LiteBansModule_314().BaseCoreGenericHandler(string);
+        NullHandler_3 gr_02 = (NullHandler_3)new LiteBansModule_315().BaseCoreGenericHandler(string);
         return (String)gr_02.get("text");
     }
 
@@ -197,5 +202,14 @@ implements CommandSenderWrapper {
             return inetAddress.getHostAddress();
         }
         return null;
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        LiteBansModule_195 = new String[]{"00000000-0000-0000-0000-000000000000", "text"};
+    }
+
+    static {
+        TextHandler.BaseCoreGenericHandler();
+    }
 }
 

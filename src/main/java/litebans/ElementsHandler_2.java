@@ -5,18 +5,18 @@ import org.jetbrains.annotations.NotNull;
 
 static class ElementsHandler_2
 extends BuilderactionHandler {
-    public static final Set c() {
+        public static final Set c() {
         return ElementHandler_2.LiteBansModule_31;
     }
 
     public static final Set BaseCoreGenericHandler(@NotNull Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler(objectArray, "elements");
+        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "elements");
         return ArrayUtilities.BaseCoreGenericHandler(objectArray);
     }
 
     public static final Set BaseCoreGenericHandler(@NotNull Set set) {
         Set set2;
-        ObjectUtilities.BaseCoreGenericHandler(set, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler((Object)set, "<this>");
         switch (set.size()) {
             case 0: {
                 set2 = LiteBansModule_5.c();
@@ -28,7 +28,17 @@ extends BuilderactionHandler {
             }
             default: {
                 set2 = set;
-}
+            }
+        }
         return set2;
+    }
+
+    private static final void LiteBansModule_31() {
+        LiteBansModule_31 = new String[]{"elements", "elements", "elements", "elements", "elements", "builderAction", "builderAction", "<this>"};
+    }
+
+    static {
+        ElementsHandler_2.LiteBansModule_31();
+    }
 }
 

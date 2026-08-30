@@ -1,23 +1,23 @@
 package litebans;
 
-static final class LiteBansModule_107
-implements LiteBansModule_178 {
-    public static final LiteBansModule_107 BaseCoreGenericHandler;
-    LiteBansModule_107() {
+import com.google.gson.JsonElement;
+import com.google.gson.JsonSerializationContext;
+import com.google.gson.JsonSerializer;
+import java.lang.reflect.Type;
+static class LiteBansModule_107
+implements JsonSerializer {
+    final /* synthetic */ LiteBansModule_54 BaseCoreGenericHandler;
+
+    LiteBansModule_107(LiteBansModule_54 bn_02) {
+        this.plugin = bn_02;
     }
 
-    public final String BaseCoreGenericHandler(BansHandler_2 kL2) {
-        BansHandler_2 kL3 = kL2;
-        return SQLiteDriverHandler.LiteBansModule_194(SQLiteDriverHandler.e("ALTER TABLE " + kL3), "removed_by_uuid VARCHAR(36)");
+    public JsonElement BaseCoreGenericHandler(NullHandler_4 ie_02, Type type, JsonSerializationContext jsonSerializationContext) {
+        return jsonSerializationContext.serialize((Object)ie_02.AsyncBackgroundTask_5);
     }
 
-    @Override
-    public Object BaseCoreGenericHandler(Object targetObj) {
-        return SQLiteDriverHandler.AsyncBackgroundTask_5(this.plugintargetObj);
+    public JsonElement serialize(Object targetObj, Type type, JsonSerializationContext jsonSerializationContext) {
+        return this.plugin((NullHandler_4)targetObj, type, jsonSerializationContext);
     }
-
-    static {
-        LiteBansModule_107.BaseCoreGenericHandler();
-        BaseCoreGenericHandler = new LiteBansModule_107();
 }
 

@@ -1,33 +1,51 @@
 package litebans;
 
-import java.nio.ByteBuffer;
-import java.nio.charset.Charset;
-import java.nio.charset.CharsetDecoder;
-import java.nio.charset.CodingErrorAction;
-static class LiteBansModule_222
-implements LiteBansModule_119,
-LiteBansModule_229 {
-    private final Charset LiteBansModule_31;
-    private final boolean LiteBansModule_194;
-    private static final char c = (char)63;
-    private static final byte[] e = new byte[]{63};
-    private static final String BaseCoreGenericHandler = String.valueOf('?');
-    private static final char[] AsyncBackgroundTask_5 = new char[]{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'BanHandler_2', 'D', 'PunishmentService', 'F'};
+import java.util.Collection;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-    LiteBansModule_222(Charset charset, boolean flag) {
-        this.LiteBansModule_31 = charset;
-        this.LiteBansModule_194 = flag;
+public final class LiteBansModule_222
+extends MessageHandler {
+    private final String e;
+    private final String AsyncBackgroundTask_5;
+    private final String LiteBansModule_195;
+
+    public LiteBansModule_222(@NotNull PlatformPlugin plugin, @NotNull String string, @NotNull String string2, @Nullable String string3) {
+        super(plugin);
+        this.e = string;
+        this.AsyncBackgroundTask_5 = string2;
+        this.LiteBansModule_195 = string3;
     }
 
     @Override
-    public String BaseCoreGenericHandler(byte[] byArray) {
-        return this.plugin().decode(ByteBuffer.wrap(byArray)).toString();
-    }
-
-    private final CharsetDecoder BaseCoreGenericHandler() {
-        if (!this.LiteBansModule_194) {
-            return this.LiteBansModule_31.newDecoder().onMalformedInput(CodingErrorAction.REPORT).onUnmappableCharacter(CodingErrorAction.REPORT);
+    public void run() {
+        boolean flag;
+        String string;
+        String string2;
+        String string3;
+        AsyncBackgroundTask_21 s2;
+        block4: {
+            AsyncBackgroundTask_21 s3;
+            s2 = s3 = (AsyncBackgroundTask_21)this.LiteBansModule_241().BaseCoreGenericHandler(AsyncBackgroundTask_21.class);
+            string3 = this.e;
+            string2 = this.AsyncBackgroundTask_5;
+            string = this.LiteBansModule_195;
+            Iterable iterable = s2.BaseCoreGenericHandler();
+            if (iterable instanceof Collection && ((Collection)iterable).isEmpty()) {
+                flag = false;
+            } else {
+                for (Object t2 : iterable) {
+                    LiteBansModule_96 cp_02 = (LiteBansModule_96)t2;
+                    if (!(ObjectUtilities.BaseCoreGenericHandler((Object)cp_02.c(), (Object)string3) && ObjectUtilities.BaseCoreGenericHandler((Object)cp_02.g(), (Object)string2) && ObjectUtilities.BaseCoreGenericHandler((Object)cp_02.LiteBansModule_31(), (Object)string))) continue;
+                    flag = true;
+                    break block4;
+                }
+                flag = false;
+            }
         }
-        return this.LiteBansModule_31.newDecoder().onMalformedInput(CodingErrorAction.REPLACE).onUnmappableCharacter(CodingErrorAction.REPLACE).replaceWith(BaseCoreGenericHandler);
+        if (!flag) {
+            s2.BaseCoreGenericHandler().put(new LiteBansModule_96(string3, string2, string));
+        }
+    }
 }
 

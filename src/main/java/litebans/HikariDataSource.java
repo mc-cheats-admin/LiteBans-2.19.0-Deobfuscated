@@ -55,7 +55,10 @@ Closeable {
                             throw (SQLException)d32.getCause();
                         }
                         throw d32;
-}
+                    }
+                }
+            }
+        }
         return dr2.LiteBansModule_31();
     }
 
@@ -75,14 +78,16 @@ Closeable {
         HikariPool dr2 = this.T;
         if (dr2 != null) {
             dr2.c().setLogWriter(printWriter);
-}
+        }
+    }
 
     @Override
     public void setLoginTimeout(int n) {
         HikariPool dr2 = this.T;
         if (dr2 != null) {
             dr2.c().setLoginTimeout(n);
-}
+        }
+    }
 
     @Override
     public int getLoginTimeout() {
@@ -107,7 +112,8 @@ Closeable {
             }
             if (dataSource != null) {
                 return dataSource.unwrap(clazz);
-}
+            }
+        }
         throw new SQLException("Wrapped DataSource is not HikariDataSource instance of " + clazz);
     }
 
@@ -123,11 +129,12 @@ Closeable {
             }
             if (dataSource != null) {
                 return dataSource.isWrapperFor(clazz);
-}
+            }
+        }
         return false;
     }
 
-    public LiteBansModule_305 BaseCoreGenericHandler() {
+    public LiteBansModule_306 BaseCoreGenericHandler() {
         return this.T;
     }
 
@@ -139,12 +146,14 @@ Closeable {
         HikariPool dr2 = this.T;
         if (dr2 != null) {
             try {
-                dr2.LiteBansModule_240();
+                dr2.LiteBansModule_241();
             }
             catch (InterruptedException interruptedException) {
                 S.c("%AsyncBackgroundTask_21 - Interrupted during closing", new Object[]{this.e(), interruptedException});
                 Thread.currentThread().interrupt();
-}
+            }
+        }
+    }
 
     public boolean LiteBansModule_31() {
         return this.U.get();
@@ -152,5 +161,6 @@ Closeable {
 
     public String toString() {
         return "HikariDataSource (" + this.T + ")";
+    }
 }
 

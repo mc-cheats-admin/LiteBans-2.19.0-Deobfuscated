@@ -1,22 +1,10 @@
 package litebans;
 
 import java.io.InputStream;
-static class LiteBansModule_129
-extends InputStream {
-    private LiteBansModule_129() {
-    }
+import java.util.Set;
+public interface LiteBansModule_129 {
+    public LiteBansModule_154 BaseCoreGenericHandler(String var1, InputStream var2, String var3);
 
-    @Override
-    public int read() {
-        return 0;
-    }
-
-    @Override
-    public long skip(long l3) {
-        return l3;
-    }
-
-    /* synthetic */ LiteBansModule_129(LiteBansModule_52 bl_02) {
-        this();
+    public Set BaseCoreGenericHandler();
 }
 

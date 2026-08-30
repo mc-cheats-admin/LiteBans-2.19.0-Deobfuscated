@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 public final class LiteBansException_7
 extends RuntimeException {
-    public LiteBansException_7(@NotNull String string) {
+        public LiteBansException_7(@NotNull String string) {
         super(string);
     }
 
@@ -21,5 +21,10 @@ extends RuntimeException {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{""};
+    }
+
+    static {
+        LiteBansException_7.BaseCoreGenericHandler();
+    }
 }
 

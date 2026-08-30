@@ -6,7 +6,7 @@ import net.md_5.bungee.chat.ComponentSerializer;
 
 public class LiteBansModule_57 {
     private static boolean LiteBansModule_31;
-    public static boolean LiteBansModule_31() {
+        public static boolean LiteBansModule_31() {
         return LiteBansModule_31;
     }
 
@@ -25,5 +25,6 @@ public class LiteBansModule_57 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"net.md_5.bungee.chat.ChatVersion"};
+    }
 }
 

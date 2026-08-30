@@ -1,75 +1,148 @@
 package litebans;
 
-import litebans.api.Entry;
-import litebans.api.RandomID;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import java.io.Serializable;
+import java.math.BigInteger;
+import java.util.Arrays;
+import java.util.zip.ZipException;
+public class LiteBansModule_358
+implements LiteBansModule_178,
+Cloneable,
+Serializable {
+    private static final LiteBansModule_289 LiteBansModule_241;
+    private static final LiteBansModule_289 AsyncBackgroundTask_5;
+    private static final BigInteger LiteBansModule_31;
+    private static final long c;
+    private int LiteBansModule_195 = 1;
+    private BigInteger e;
+    private BigInteger g;
 
-public final class LiteBansModule_358
-extends Entry {
-    private final PlatformPlugin BaseCoreGenericHandler;
-    public LiteBansModule_358(@NotNull PlatformPlugin plugin, long l3, @Nullable String string, @Nullable String string2, @Nullable String string3, @Nullable String string4, @Nullable String string5, @Nullable String string6, @Nullable String string7, @Nullable String string8, @Nullable String string9, long l5, long l7, @Nullable String string10, @Nullable String string11, byte by2, boolean flag, boolean flag2, boolean flag3) {
-        super(l3, string, string2, string3, string4, string5, string6, string7, string8, string9, l5, l7, string10, string11, by2, flag, flag2, flag3);
-        this.plugin = plugin;
+    public LiteBansModule_358() {
+        this.plugin();
     }
 
     @Override
-    public String getDurationString() {
-        long l3 = this.getDuration();
-        return PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, l3, false, 2, null);
+    public LiteBansModule_289 c() {
+        return LiteBansModule_241;
     }
 
     @Override
-    public long getRemainingDuration(long l3) {
-        return this.isPermanent() || this.isExpired(l3) ? -1L : this.getDateEnd() - l3;
+    public LiteBansModule_289 LiteBansModule_31() {
+        byte[] byArray = LiteBansModule_358.BaseCoreGenericHandler(this.e.toByteArray());
+        int n = byArray == null ? 0 : byArray.length;
+        byArray = LiteBansModule_358.BaseCoreGenericHandler(this.g.toByteArray());
+        int n2 = byArray == null ? 0 : byArray.length;
+        return new LiteBansModule_289(3 + n + n2);
     }
 
     @Override
-    public String getRemainingDurationString(long l3) {
-        long l5 = this.getRemainingDuration(l3);
-        return PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, l5, false, 2, null);
+    public LiteBansModule_289 BaseCoreGenericHandler() {
+        return AsyncBackgroundTask_5;
     }
 
     @Override
-    public String getRandomID() {
-        return RandomID.get().convert(this.getId());
-    }
-
-    @Override
-    public long getDuration() {
-        return this.isPermanent() ? -1L : this.getDateEnd() - this.getDateStart();
-    }
-
-    @Override
-    public boolean isExpired(long l3) {
-        return !this.isPermanent() && l3 >= this.getDateEnd();
-    }
-
-    @Override
-    public boolean isPermanent() {
-        return this.getDateEnd() <= 0L;
-    }
-
-    @Override
-    public int getTemplateID() {
-        return LiteBansModule_283.BaseCoreGenericHandler(this.getTemplate()) & 0xFF;
-    }
-
-    @Override
-    public String getTemplateName() {
-        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
-        TemplatesYmlHandler fu2 = configService.AsyncBackgroundTask_21();
-        BanHandler a_2 = BanHandler.LiteBansModule_401.BaseCoreGenericHandler(this.getType());
-        ObjectUtilities.BaseCoreGenericHandler(a_2);
-        Object targetObj = fu2.BaseCoreGenericHandler(a_2, this.getTemplateID());
-        if (targetObj == null || (targetObj = targetObj.g()) == null) {
-            targetObj = "";
+    public byte[] e() {
+        byte[] byArray = this.e.toByteArray();
+        byte[] byArray2 = this.g.toByteArray();
+        int n = (byArray = LiteBansModule_358.BaseCoreGenericHandler(byArray)) != null ? byArray.length : 0;
+        byArray2 = LiteBansModule_358.BaseCoreGenericHandler(byArray2);
+        int n2 = byArray2 != null ? byArray2.length : 0;
+        byte[] byArray3 = new byte[3 + n + n2];
+        if (byArray != null) {
+            LiteBansModule_189.BaseCoreGenericHandler(byArray);
         }
-        return targetObj;
+        if (byArray2 != null) {
+            LiteBansModule_189.BaseCoreGenericHandler(byArray2);
+        }
+        byArray3[n3++] = LiteBansModule_189.BaseCoreGenericHandler(this.LiteBansModule_195);
+        byArray3[n3++] = LiteBansModule_189.BaseCoreGenericHandler(n);
+        if (byArray != null) {
+            System.arraycopy(byArray, 0, byArray3, n3, n);
+        }
+        n3 += n;
+        byArray3[n3++] = LiteBansModule_189.BaseCoreGenericHandler(n2);
+        if (byArray2 != null) {
+            System.arraycopy(byArray2, 0, byArray3, n3, n2);
+        }
+        return byArray3;
     }
 
     @Override
-    public boolean hasTemplate() {
-        return this.getTemplateID() != (0xFFFFFFFF & 0xFF);
+    public byte[] AsyncBackgroundTask_5() {
+        return new byte[0];
+    }
+
+    @Override
+    public void BaseCoreGenericHandler(byte[] byArray, int n, int n2) {
+        int n3;
+        int n4;
+        this.plugin();
+        if (n2 < 3) {
+            throw new ZipException("X7875_NewUnix length is too short, only " + n2 + " bytes");
+        }
+        this.LiteBansModule_195 = LiteBansModule_189.BaseCoreGenericHandler(byArray[n++]);
+        if ((n4 = LiteBansModule_189.BaseCoreGenericHandler(byArray[n++])) + 3 > n2) {
+            throw new ZipException("X7875_NewUnix invalid: uidSize " + n4 + " doesn'AsyncBackgroundTask_22 fit into " + n2 + " bytes");
+        }
+        byte[] byArray2 = Arrays.copyOfRange(byArray, n, n + n4);
+        n += n4;
+        this.e = new BigInteger(1, LiteBansModule_189.BaseCoreGenericHandler(byArray2));
+        if (n4 + 3 + (n3 = LiteBansModule_189.BaseCoreGenericHandler(byArray[n++])) > n2) {
+            throw new ZipException("X7875_NewUnix invalid: gidSize " + n3 + " doesn'AsyncBackgroundTask_22 fit into " + n2 + " bytes");
+        }
+        byte[] byArray3 = Arrays.copyOfRange(byArray, n, n + n3);
+        this.g = new BigInteger(1, LiteBansModule_189.BaseCoreGenericHandler(byArray3));
+    }
+
+    @Override
+    public void LiteBansModule_31(byte[] byArray, int n, int n2) {
+    }
+
+    private final void BaseCoreGenericHandler() {
+        this.e = LiteBansModule_31;
+        this.g = LiteBansModule_31;
+    }
+
+    public String toString() {
+        return "0x7875 Zip Extra Field: UID=" + this.e + " GID=" + this.g;
+    }
+
+    public Object clone() {
+        return super.clone();
+    }
+
+    public boolean equals(Object targetObj) {
+        if (targetObj instanceof LiteBansModule_358) {
+            LiteBansModule_358 ju2 = (LiteBansModule_358)targetObj;
+            return this.LiteBansModule_195 == ju2.LiteBansModule_195 && this.e.equals(ju2.e) && this.g.equals(ju2.g);
+        }
+        return false;
+    }
+
+    public int hashCode() {
+        int n = -1234567 * this.LiteBansModule_195;
+        n ^= Integer.rotateLeft(this.e.hashCode(), 16);
+        return n ^= this.g.hashCode();
+    }
+
+    static final byte[] BaseCoreGenericHandler(byte[] byArray) {
+        if (byArray == null) {
+            return byArray;
+        }
+        for (byte by2 : byArray) {
+            if (by2 != 0) break;
+            ++n;
+        }
+        byte[] byArray2 = new byte[Math.max(1, byArray.length - n)];
+        int n2 = byArray2.length - (byArray.length - n);
+        System.arraycopy(byArray, n, byArray2, n2, byArray2.length - n2);
+        return byArray2;
+    }
+
+    static {
+        c = 1L;
+        LiteBansModule_241 = new LiteBansModule_289(30837);
+        AsyncBackgroundTask_5 = new LiteBansModule_289(0);
+        LiteBansModule_31 = BigInteger.valueOf(1000L);
+    }
 }
 

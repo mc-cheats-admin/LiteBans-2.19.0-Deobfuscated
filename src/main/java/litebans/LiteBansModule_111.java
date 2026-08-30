@@ -1,73 +1,60 @@
 package litebans;
 
-public interface LiteBansModule_111 {
-    public static final String LiteBansModule_240;
-    public static final String A;
-    public static final String r;
-    public static final int c;
-    public static final short PunishmentTableService;
-    public static final short AsyncBackgroundTask_5;
-    public static final short AsyncBackgroundTask_22;
-    public static final short LiteBansModule_194;
-    public static final short Utf8Handler_2;
-    public static final short BaseCoreGenericHandler;
-    public static final int ServerSyncService;
-    public static final int F;
-    public static final int DatabaseMonitorService;
-    public static final int LiteBansModule_401;
-    public static final int PunishmentService;
-    public static final int AsyncBackgroundTask_21;
-    public static final int g;
-    public static final int B;
-    public static final int BanHandler_4;
-    public static final int CommandThrottleService;
-    public static final int BanHandler_2;
-    public static final int i;
-    public static final int LiteBansModule_31;
-    public static final int m;
-    public static final int z;
-    public static final int LiteBansModule_433;
-    public static final int HoverTextFormatter;
-    public static final int GnuSparseMapHandler;
-    public static final int e;
-    public static final int n;
-    public static final int D;
-    public static final String BroadcastService;
-    public static final int q;
+import net.fabricmc.fabric.api.message.v1.ServerMessageEvents;
+import net.minecraft.class_2168;
+import net.minecraft.class_2556;
+import net.minecraft.class_3222;
+import net.minecraft.class_7471;
+import org.jetbrains.annotations.NotNull;
 
-    static {
-        q = 512;
-        BroadcastService = "TRAILER!!!";
-        D = 1;
-        n = 2;
-        e = 4;
-        GnuSparseMapHandler = 8;
-        HoverTextFormatter = 16;
-        LiteBansModule_433 = 32;
-        z = 64;
-        m = 128;
-        LiteBansModule_31 = 256;
-        i = 512;
-        BanHandler_2 = 1024;
-        CommandThrottleService = 2048;
-        BanHandler_4 = 4096;
-        B = 8192;
-        g = 16384;
-        AsyncBackgroundTask_21 = 24576;
-        PunishmentService = 32768;
-        LiteBansModule_401 = 36864;
-        DatabaseMonitorService = 40960;
-        F = 49152;
-        ServerSyncService = 61440;
-        BaseCoreGenericHandler = (short)12;
-        Utf8Handler_2 = (short)3;
-        LiteBansModule_194 = (short)8;
-        AsyncBackgroundTask_22 = (short)4;
-        AsyncBackgroundTask_5 = (short)2;
-        PunishmentTableService = 1;
-        c = 29127;
-        r = "070707";
-        A = "070702";
-        LiteBansModule_240 = "070701";
+public final class LiteBansModule_111
+implements LiteBansModule_51 {
+    private final PlatformPlugin BaseCoreGenericHandler;
+    private final PunishmentTableService LiteBansModule_31;
+
+    public LiteBansModule_111(@NotNull PlatformPlugin plugin) {
+        this.plugin = plugin;
+        this.LiteBansModule_31 = (PunishmentTableService)this.plugin.BaseCoreGenericHandler(PunishmentTableService.class);
+    }
+
+    public final PlatformPlugin LiteBansModule_31() {
+        return this.plugin;
+    }
+
+    @Override
+    public LiteBansModule_111 BaseCoreGenericHandler() {
+        LiteBansModule_111 cy_02;
+        LiteBansModule_111 cy_03 = cy_02 = this;
+        ServerMessageEvents.ALLOW_CHAT_MESSAGE.register(cy_03::BaseCoreGenericHandler);
+        ServerMessageEvents.ALLOW_COMMAND_MESSAGE.register(cy_03::BaseCoreGenericHandler);
+        return cy_02;
+    }
+
+    public final boolean BaseCoreGenericHandler(@NotNull class_7471 class_74712, @NotNull class_3222 class_32222, @NotNull class_2556.class_7602 class_76022) {
+        CommandSenderWrapper sender = this.plugin.BaseCoreGenericHandler(class_32222);
+        String string = class_74712.method_46291().getString();
+        LiteBansModule_71 c92 = new LiteBansModule_71(class_74712, false, 2, null);
+        TestHandler_2 f82 = this.LiteBansModule_31.BaseCoreGenericHandler();
+        ObjectUtilities.BaseCoreGenericHandler((Object)string);
+        ObjectUtilities.BaseCoreGenericHandler(sender);
+        f82.BaseCoreGenericHandler((Object)c92, string, sender, true);
+        return !c92.BaseCoreGenericHandler();
+    }
+
+    public final boolean BaseCoreGenericHandler(@NotNull class_7471 class_74712, @NotNull class_2168 class_21682, @NotNull class_2556.class_7602 class_76022) {
+        CommandSenderWrapper sender = this.plugin.BaseCoreGenericHandler(class_21682);
+        String string = class_74712.method_46291().getString();
+        LiteBansModule_71 c92 = new LiteBansModule_71(class_74712, false, 2, null);
+        TestHandler_2 f82 = this.LiteBansModule_31.BaseCoreGenericHandler();
+        ObjectUtilities.BaseCoreGenericHandler((Object)string);
+        ObjectUtilities.BaseCoreGenericHandler(sender);
+        TestHandler_2.BaseCoreGenericHandler(f82, c92, string, sender, false, 8, null);
+        return !c92.BaseCoreGenericHandler();
+    }
+
+    @Override
+    public LiteBansModule_176 BaseCoreGenericHandler() {
+        return this.plugin();
+    }
 }
 

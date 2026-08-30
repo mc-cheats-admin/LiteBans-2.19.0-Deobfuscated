@@ -8,18 +8,18 @@ public class LiteBansModule_55 {
     public static final int i;
     public static final int c;
     public static final int AsyncBackgroundTask_5;
-    public static final int LiteBansModule_194;
-    public int LiteBansModule_240 = 0;
+    public static final int LiteBansModule_195;
+    public int LiteBansModule_241 = 0;
     public Object e = null;
 
     public LiteBansModule_55(int n, Object targetObj) {
-        this.LiteBansModule_240 = n;
+        this.LiteBansModule_241 = n;
         this.e = targetObj;
     }
 
     public String toString() {
         StringBuffer stringBuffer = new StringBuffer();
-        switch (this.LiteBansModule_240) {
+        switch (this.LiteBansModule_241) {
             case 0: {
                 stringBuffer.append("VALUE(").append(this.e).append(")");
                 break;
@@ -50,12 +50,13 @@ public class LiteBansModule_55 {
             }
             case -1: {
                 stringBuffer.append("END OF FILE");
-}
+            }
+        }
         return stringBuffer.toString();
     }
 
     static {
-        LiteBansModule_194 = -1;
+        LiteBansModule_195 = -1;
         AsyncBackgroundTask_5 = 6;
         c = 5;
         i = 4;
@@ -63,5 +64,6 @@ public class LiteBansModule_55 {
         g = 2;
         LiteBansModule_31 = 1;
         BaseCoreGenericHandler = 0;
+    }
 }
 

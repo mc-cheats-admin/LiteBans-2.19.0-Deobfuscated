@@ -38,5 +38,6 @@ public final class LiteBansModule_45 {
 
     public LiteBansModule_45() {
         this(0, 0, 0, 7, null);
+    }
 }
 

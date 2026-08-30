@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 
 public final class DupeIPCommand
 extends AbstractCommand {
-    public DupeIPCommand(@NotNull PlatformPlugin plugin) {
+        public DupeIPCommand(@NotNull PlatformPlugin plugin) {
         super("dupeip", plugin);
     }
 
@@ -16,57 +16,72 @@ extends AbstractCommand {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper v1, @NotNull String[] v2) {
-{
-                        arg2 = CommandArgumentUtils.BaseCoreGenericHandler(arg1, (String)ArrayUtilities.LiteBansModule_31(v2));
-                        arg4 = arg3;
-            arg5 = LiteBansModule_389.BaseCoreGenericHandler(v2, 1, ((ConfigService)arg4.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().HoverTextFormatter());
-                        arg3 = (DatabaseMonitorService)arg3.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+        block9: {
+            v3 = this;
+            v4 = CommandArgumentUtils.BaseCoreGenericHandler(v3, (String)ArrayUtilities.LiteBansModule_31(v2));
+            v5 = this;
+            v6 = v5;
+            v7 = LiteBansModule_391.BaseCoreGenericHandler(v2, 1, ((ConfigService)v6.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().HoverTextFormatter());
+            v5 = this;
+            v5 = (DatabaseMonitorService)v5.LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class);
             try {
-                arg4 = arg3.LiteBansModule_194();
-                arg6 = (Closeable)arg4;
+                v6 = v5.LiteBansModule_195();
+                v8 = (Closeable)v6;
                 try {
-{
-                            arg7 = (LiteBansModule_82)arg6;
-                            arg8 = arg4;
-                            arg9 = new LiteBansModule_206(arg2, (LiteBansModule_82)arg8, v1, false, arg5).i();
-                            if (arg9.e()) break;
-                            if (v1.LiteBansModule_194()) break;
-                                                        arg11 = arg10;
-                            if (((ConfigService)arg11.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().O()) ** GOTO lbl-1000
+                    block10: {
+                        block11: {
+                            v9 = (LiteBansModule_83)v8;
+                            v10 = v6;
+                            v11 = new LiteBansModule_207(v4, (LiteBansModule_83)v10, v1, false, v7).i();
+                            if (v11.e()) break block10;
+                            if (v1.LiteBansModule_195()) break block11;
+                            v12 = this;
+                            v13 = v12;
+                            if (((ConfigService)v13.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_195().O()) ** GOTO lbl-1000
                         }
-                        arg10 = v1;
-                        arg12 = "litebans.dupeip.viewip";
-                        arg13 = arg10;
-                        if (arg13.e(arg12) == false) lbl-1000:
+                        v12 = v1;
+                        v14 = "litebans.dupeip.viewip";
+                        v15 = v12;
+                        if (v15.e(v14) == false) lbl-1000:
                                                 {
+                            v0 = true;
                         } else {
+                            v0 = false;
                         }
-                        arg14 = v0;
-                        arg10 = arg9.LiteBansModule_194() != false ? MessageKey.PoolBase.BaseCoreGenericHandler("num", arg9.Utf8Handler_2()) : arg9.GnuSparseMapHandler();
-                        arg15 = arg14 != false ? MessageKey.P : MessageKey.BanHandler_4;
-                        v1 = GeoIPLookupService.BaseCoreGenericHandler(arg15, (CharSequence)"ip", arg10);
-                        v2 = arg9.LiteBansModule_401();
+                        v16 = v0;
+                        v12 = v11.LiteBansModule_195() != false ? MessageKey.PoolBase.BaseCoreGenericHandler("num", (Object)v11.Utf8Handler_2()) : v11.GnuSparseMapHandler();
+                        v17 = v16 != false ? (CharSequence)MessageKey.P : (CharSequence)MessageKey.BanHandler_4;
+                        v1 = GeoIPLookupService.BaseCoreGenericHandler(v17, (CharSequence)"ip", v12);
+                        v2 = v11.LiteBansModule_403();
                         ObjectUtilities.BaseCoreGenericHandler(v2);
-                        arg15 = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)arg8, v1, v2, false, 2, null);
-                        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, v1, arg15, null, 4, null);
-                        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, v1, arg9.c(), null, 4, null);
+                        v17 = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)v10, v1, v2, false, 2, null);
+                        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, v1, v17, null, 4, null);
+                        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, v1, v11.c(), null, 4, null);
                         ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, v1, MessageKey.HikariPool, null, 4, null);
                     }
-                    arg7 = KotlinUnitHandler.BaseCoreGenericHandler;
+                    v9 = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
-                catch (Throwable arg16) {
-                    arg17 = arg16;
-                    throw arg16;
+                catch (Throwable v18) {
+                    v19 = v18;
+                    throw v18;
                 }
                 finally {
-                    BlockHandler.BaseCoreGenericHandler(arg6, arg17);
-}
-            catch (SQLException v7) {
-                if (arg3.LiteBansModule_31(v7)) break;
-                throw v7;
-}
+                    BlockHandler.BaseCoreGenericHandler(v8, v19);
+                }
+            }
+            catch (SQLException v20) {
+                if (v5.LiteBansModule_31(v20)) break block9;
+                throw v20;
+            }
+        }
+    }
 
     private static final void BaseCoreGenericHandler() {
         i = new String[]{"dupeip", "litebans.dupeip.viewip", "num", "ip"};
+    }
+
+    static {
+        DupeIPCommand.BaseCoreGenericHandler();
+    }
 }
 

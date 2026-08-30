@@ -1,61 +1,72 @@
 package litebans;
 
-import org.jetbrains.annotations.NotNull;
+import java.io.Serializable;
+public final class LiteBansModule_289
+implements Cloneable,
+Serializable {
+    public static final LiteBansModule_289 c;
+    private static final long LiteBansModule_31;
+    private final int BaseCoreGenericHandler;
 
-public final class LiteBansModule_289 {
-    private final String LiteBansModule_31;
-    private final String e;
-    private final String AsyncBackgroundTask_5;
-    private final String LiteBansModule_194;
-    private final boolean BaseCoreGenericHandler;
-    private final boolean c;
-    public LiteBansModule_289(@NotNull String string, @NotNull String string2, @NotNull String string3, @NotNull String string4, boolean flag, boolean flag2) {
-        this.LiteBansModule_31 = string;
-        this.e = string2;
-        this.AsyncBackgroundTask_5 = string3;
-        this.LiteBansModule_194 = string4;
-        this.plugin = flag;
-        this.c = flag2;
+    public LiteBansModule_289(int n) {
+        this.plugin = n;
     }
 
-    public /* synthetic */ LiteBansModule_289(String string, String string2, String string3, String string4, boolean flag, boolean flag2, int n, LiteBansModule_14 aJ2) {
-        if ((n & 8) != 0) {
-            string4 = "";
-        }
-        if ((n & 0x10) != 0) {
-            flag = false;
-        }
-        if ((n & 0x20) != 0) {
-            flag2 = false;
-        }
-        this(string, string2, string3, string4, flag, flag2);
+    public LiteBansModule_289(byte[] byArray, int n) {
+        this.plugin = LiteBansModule_289.BaseCoreGenericHandler(byArray, n);
     }
 
-    public final String e() {
-        return this.LiteBansModule_31;
+    public byte[] LiteBansModule_31() {
+        byte[] byArray = new byte[2];
+        LiteBansModule_268.BaseCoreGenericHandler(byArray, this.plugin, 0, 2);
+        return byArray;
     }
 
-    public final String g() {
-        return this.e;
-    }
-
-    public final String c() {
-        return this.AsyncBackgroundTask_5;
-    }
-
-    public final String BaseCoreGenericHandler() {
-        return this.LiteBansModule_194;
-    }
-
-    public final boolean LiteBansModule_31() {
+    public int BaseCoreGenericHandler() {
         return this.plugin;
     }
 
-    public final boolean AsyncBackgroundTask_5() {
-        return this.c;
+    public static final byte[] BaseCoreGenericHandler(int n) {
+        byte[] byArray = new byte[2];
+        LiteBansModule_289.BaseCoreGenericHandler(n, byArray, 0);
+        return byArray;
     }
 
-    private static final void LiteBansModule_194() {
-        g = new String[]{""};
+    public static final void BaseCoreGenericHandler(int n, byte[] byArray, int n2) {
+        LiteBansModule_268.BaseCoreGenericHandler(byArray, n, n2, 2);
+    }
+
+    public static final int BaseCoreGenericHandler(byte[] byArray, int n) {
+        return (int)LiteBansModule_268.BaseCoreGenericHandler(byArray, n, 2);
+    }
+
+    public boolean equals(Object targetObj) {
+        if (targetObj == null || !(targetObj instanceof LiteBansModule_289)) {
+            return false;
+        }
+        return this.plugin == ((LiteBansModule_289)targetObj).BaseCoreGenericHandler();
+    }
+
+    public int hashCode() {
+        return this.plugin;
+    }
+
+    public Object clone() {
+        try {
+            return super.clone();
+        }
+        catch (CloneNotSupportedException cloneNotSupportedException) {
+            throw new RuntimeException(cloneNotSupportedException);
+        }
+    }
+
+    public String toString() {
+        return "ZipShort value: " + this.plugin;
+    }
+
+    static {
+        LiteBansModule_31 = 1L;
+        c = new LiteBansModule_289(0);
+    }
 }
 

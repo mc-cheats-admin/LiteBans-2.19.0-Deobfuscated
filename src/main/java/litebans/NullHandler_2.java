@@ -29,7 +29,7 @@ public final class NullHandler_2
 implements ProxiedPlayer {
     private final PlatformPlugin c;
     private final PendingConnection LiteBansModule_31;
-    public NullHandler_2(@NotNull PlatformPlugin plugin, @Nullable PendingConnection pendingConnection) {
+        public NullHandler_2(@NotNull PlatformPlugin plugin, @Nullable PendingConnection pendingConnection) {
         this.c = plugin;
         this.LiteBansModule_31 = pendingConnection;
     }
@@ -104,25 +104,28 @@ implements ProxiedPlayer {
     }
 
     public void disconnect(@NotNull String string) {
-{
+        block0: {
             PendingConnection pendingConnection = this.LiteBansModule_31;
-            if (pendingConnection == null) break;
+            if (pendingConnection == null) break block0;
             pendingConnection.disconnect(string);
-}
+        }
+    }
 
     public void disconnect(@NotNull BaseComponent[] baseComponentArray) {
-{
+        block0: {
             PendingConnection pendingConnection = this.LiteBansModule_31;
-            if (pendingConnection == null) break;
+            if (pendingConnection == null) break block0;
             pendingConnection.disconnect(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
-}
+        }
+    }
 
     public void disconnect(@NotNull BaseComponent baseComponent) {
-{
+        block0: {
             PendingConnection pendingConnection = this.LiteBansModule_31;
-            if (pendingConnection == null) break;
+            if (pendingConnection == null) break block0;
             pendingConnection.disconnect(baseComponent);
-}
+        }
+    }
 
     public InetSocketAddress getAddress() {
         PendingConnection pendingConnection = this.LiteBansModule_31;
@@ -177,7 +180,7 @@ implements ProxiedPlayer {
     }
 
     public ServerInfo getReconnectServer() {
-        LiteBansModule_158 ec_02 = this.c.i();
+        LiteBansModule_159 ec_02 = this.c.i();
         ObjectUtilities.LiteBansModule_31(ec_02, "");
         GetcancelreasoncomponentsHandler k12 = (GetcancelreasoncomponentsHandler)ec_02;
         PendingConnection pendingConnection = this.LiteBansModule_31;
@@ -324,5 +327,10 @@ implements ProxiedPlayer {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"null", ""};
+    }
+
+    static {
+        NullHandler_2.BaseCoreGenericHandler();
+    }
 }
 

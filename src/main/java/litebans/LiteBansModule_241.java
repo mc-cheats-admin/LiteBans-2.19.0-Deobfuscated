@@ -1,405 +1,137 @@
 package litebans;
 
-import java.io.Reader;
-static class LiteBansModule_241 {
-    public static final int AsyncBackgroundTask_22;
-    private static final int LiteBansModule_194;
-    public static final int BanHandler_2;
-    public static final int AsyncBackgroundTask_5;
-    private static final int[] ServerSyncService;
-    private static final String q;
-    private static final char[] PunishmentService;
-    private static final int[] g;
-    private static final String LiteBansModule_433;
-    private static final int[] n;
-    private static final String HoverTextFormatter;
-    private static final int[] LiteBansModule_240;
-    private static final int BaseCoreGenericHandler;
-    private static final int BroadcastService;
-    private static final int F;
-    private static final String[] PunishmentTableService;
-    private static final int[] LiteBansModule_401;
-    private static final String AsyncBackgroundTask_21;
-    private Reader A;
-    private int B;
-    private int i = 0;
-    private char[] CommandThrottleService = new char[16384];
-    private int DatabaseMonitorService;
-    private int GnuSparseMapHandler;
-    private int c;
-    private int e;
-    private int LiteBansModule_31;
-    private int D;
-    private int z;
-    private boolean r = true;
-    private boolean Utf8Handler_2;
-    private StringBuffer m = new StringBuffer();
+import java.io.EOFException;
+import java.io.IOException;
+import java.io.InputStream;
+public class LiteBansModule_241
+extends LiteBansModule_154
+implements LiteBansModule_112 {
+    private boolean J = false;
+    private LiteBansModule_116 P;
+    private long K = 0L;
+    private boolean O = false;
+    private final byte[] T = new byte[4096];
+    private long LiteBansModule_432 = 0L;
+    private final InputStream PlayerQuitListener;
+    private final byte[] BanHandler_5 = new byte[2];
+    private final byte[] L = new byte[4];
+    private final byte[] S = new byte[6];
+    private final int LockdownService;
+    private final LiteBansModule_120 H;
+    final String PluginHookService;
 
-    private static final int[] BaseCoreGenericHandler() {
-        int[] nArray = new int[45];
-        n = LiteBansModule_241.c("\u0002\u0000\u0002\u0001\u0001\u0002\u0001\u0003\u0001\u0004\u0003\u0001\u0001\u0005\u0001\u0006\u0001\u0007\u0001\LiteBansModule_31\u0001\AsyncBackgroundTask_22\u0001\n\u0001\u000b\u0001\LiteBansModule_194\u0001\r\u0005\u0000\u0001\LiteBansModule_194\u0001\u000e\u0001\u000f\u0001\u0010\u0001\u0011\u0001\u0012\u0001\u0013\u0001\u0014\u0001\u0000\u0001\u0015\u0001\u0000\u0001\u0015\u0004\u0000\u0001\u0016\u0001\u0017\u0002\u0000\u0001\u0018", n, nArray);
-        return nArray;
+    public LiteBansModule_241(InputStream inputStream) {
+        this(inputStream, 512, "US-ASCII");
     }
 
-    private static final int c(String string, int n, int[] nArray) {
-        int n3 = n;
-        int n4 = string.length();
-        while (n2 < n4) {
-            int n5 = string.charAt(n2++);
-            char c = string.charAt(n2++);
-            do {
-                nArray[n3++] = c;
-            } while (--n5 > 0);
+    public LiteBansModule_241(InputStream inputStream, String string) {
+        this(inputStream, 512, string);
+    }
+
+    public LiteBansModule_241(InputStream inputStream, int n, String string) {
+        this.PlayerQuitListener = inputStream;
+        if (n <= 0) {
+            throw new IllegalArgumentException("blockSize must be bigger than 0");
+        }
+        this.LockdownService = n;
+        this.PluginHookService = string;
+        this.H = Utf8Handler.LiteBansModule_31(string);
+    }
+
+    @Override
+    public int available() {
+        this.plugin();
+        if (this.O) {
+            return 0;
+        }
+        return 1;
+    }
+
+    @Override
+    public void close() {
+        if (!this.J) {
+            this.PlayerQuitListener.close();
+            this.J = true;
+        }
+    }
+
+    private final void BaseCoreGenericHandler() {
+        if (this.J) {
+            throw new IOException("Stream closed");
+        }
+    }
+
+    private final void LiteBansModule_31(int n) {
+        if (n > 0) {
+            this.plugin(this.L, 0, n);
+        }
+    }
+
+    @Override
+    public int read(byte[] byArray, int n, int n2) {
+        this.plugin();
+        if (n < 0 || n2 < 0 || n > byArray.length - n2) {
+            throw new IndexOutOfBoundsException();
+        }
+        if (n2 == 0) {
+            return 0;
+        }
+        if (this.P == null || this.O) {
+            return -1;
+        }
+        if (this.K == this.P.getSize()) {
+            this.LiteBansModule_31(this.P.LiteBansModule_31());
+            this.O = true;
+            if (this.P.c() == 2 && this.LiteBansModule_432 != this.P.AsyncBackgroundTask_5()) {
+                throw new IOException("CRC Error. Occured LiteBansModule_21 byte: " + this.LiteBansModule_31());
+            }
+            return -1;
+        }
+        int n3 = (int)Math.min((long)n2, this.P.getSize() - this.K);
+        if (n3 < 0) {
+            return -1;
+        }
+        int n4 = this.plugin(byArray, n, n3);
+        if (this.P.c() == 2) {
+            for (int i = 0; i < n4; ++i) {
+                this.LiteBansModule_432 += (long)(byArray[i] & 0xFF);
+                this.LiteBansModule_432 &= 0xFFFFFFFFL;
+            }
+        }
+        if (n4 > 0) {
+            this.K += (long)n4;
+        }
+        return n4;
+    }
+
+    private final int BaseCoreGenericHandler(byte[] byArray, int n, int n2) {
+        int n3 = LiteBansModule_342.BaseCoreGenericHandler(this.PlayerQuitListener, byArray, n, n2);
+        this.plugin(n3);
+        if (n3 < n2) {
+            throw new EOFException();
         }
         return n3;
     }
 
-    private static final int[] g() {
-        int[] nArray = new int[45];
-        n = LiteBansModule_241.LiteBansModule_31("\u0000\u0000\u0000\u001b\u00006\u0000Q\u0000l\u0000\u0087\u00006\u0000\u00a2\u0000\u00bd\u0000\u00d8\u00006\u00006\u00006\u00006\u00006\u00006\u0000\u00f3\u0000\u010e\u00006\u0000\u0129\u0000\u0144\u0000\u015f\u0000\u017a\u0000\u0195\u00006\u00006\u00006\u00006\u00006\u00006\u00006\u00006\u0000\u01b0\u0000\u01cb\u0000\u01e6\u0000\u01e6\u0000\u0201\u0000\u021c\u0000\u0237\u0000\u0252\u00006\u00006\u0000\u026d\u0000\u0288\u00006", n, nArray);
-        return nArray;
-    }
-
-    private static final int LiteBansModule_31(String string, int n, int[] nArray) {
-        int n3 = n;
-        int n4 = string.length();
-        while (n2 < n4) {
-            int n5 = string.charAt(n2++) << 16;
-            nArray[n3++] = n5 | string.charAt(n2++);
-        }
-        return n3;
-    }
-
-    private static final int[] LiteBansModule_194() {
-        int[] nArray = new int[45];
-        n = LiteBansModule_241.BaseCoreGenericHandler("\u0002\u0000\u0001\AsyncBackgroundTask_22\u0003\u0001\u0001\AsyncBackgroundTask_22\u0003\u0001\u0006\AsyncBackgroundTask_22\u0002\u0001\u0001\AsyncBackgroundTask_22\u0005\u0000\LiteBansModule_31\AsyncBackgroundTask_22\u0001\u0000\u0001\u0001\u0001\u0000\u0001\u0001\u0004\u0000\u0002\AsyncBackgroundTask_22\u0002\u0000\u0001\AsyncBackgroundTask_22", n, nArray);
-        return nArray;
-    }
-
-    private static final int BaseCoreGenericHandler(String string, int n, int[] nArray) {
-        int n3 = n;
-        int n4 = string.length();
-        while (n2 < n4) {
-            int n5 = string.charAt(n2++);
-            char c = string.charAt(n2++);
-            do {
-                nArray[n3++] = c;
-            } while (--n5 > 0);
-        }
-        return n3;
-    }
-
-    int c() {
-        return this.D;
-    }
-
-    LiteBansModule_241(Reader reader) {
-        this.A = reader;
-    }
-
-    private static final char[] BaseCoreGenericHandler(String string) {
-        char[] cArray = new char[65536];
-        while (n < 90) {
-            int n3 = string.charAt(n++);
-            char c = string.charAt(n++);
-            do {
-                cArray[n2++] = c;
-            } while (--n3 > 0);
-        }
-        return cArray;
-    }
-
-    private final boolean AsyncBackgroundTask_5() {
+    @Override
+    public long skip(long l3) {
         int n;
-        if (this.c > 0) {
-            System.arraycopy(this.CommandThrottleService, this.c, this.CommandThrottleService, 0, this.e - this.c);
-            this.e -= this.c;
-            this.GnuSparseMapHandler -= this.c;
-            this.DatabaseMonitorService -= this.c;
-            this.c = 0;
+        int n2;
+        if (l3 < 0L) {
+            throw new IllegalArgumentException("Negative skip length");
         }
-        if (this.GnuSparseMapHandler >= this.CommandThrottleService.length) {
-            char[] cArray = new char[this.GnuSparseMapHandler * 2];
-            System.arraycopy(this.CommandThrottleService, 0, cArray, 0, this.CommandThrottleService.length);
-            this.CommandThrottleService = cArray;
-        }
-        if ((n = this.A.read(this.CommandThrottleService, this.e, this.CommandThrottleService.length - this.e)) > 0) {
-            this.e += n;
-            return false;
-        }
-        if (n == 0) {
-            int n2 = this.A.read();
-            if (n2 == -1) {
-                return true;
+        this.plugin();
+        int n3 = (int)Math.min(l3, Integer.MAX_VALUE);
+        for (n = 0; n < n3; n += n2) {
+            n2 = n3 - n;
+            if (n2 > this.T.length) {
+                n2 = this.T.length;
             }
-            this.CommandThrottleService[this.e++] = (char)n2;
-            return false;
+            if ((n2 = this.read(this.T, 0, n2)) != -1) continue;
+            this.O = true;
+            break;
         }
-        return true;
+        return n;
     }
-
-    public final void BaseCoreGenericHandler(Reader reader) {
-        this.A = reader;
-        this.r = true;
-        this.Utf8Handler_2 = false;
-        this.c = 0;
-        this.e = 0;
-        this.DatabaseMonitorService = 0;
-        this.GnuSparseMapHandler = 0;
-        this.z = 0;
-        this.D = 0;
-        this.LiteBansModule_31 = 0;
-        this.i = 0;
-    }
-
-    public final void LiteBansModule_31(int n) {
-        this.i = n;
-    }
-
-    public final String LiteBansModule_31() {
-        return new String(this.CommandThrottleService, this.c, this.DatabaseMonitorService - this.c);
-    }
-
-    public final char BaseCoreGenericHandler(int n) {
-        return this.CommandThrottleService[this.c + n];
-    }
-
-    private final void c(int n) {
-        String string;
-        try {
-            string = PunishmentTableService[n];
-        }
-        catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
-            string = "Unkown internal scanner error";
-        }
-        throw new Error(string);
-    }
-
-    public LiteBansModule_55 e() {
-        int n = this.e;
-        char[] cArray = this.CommandThrottleService;
-        char[] cArray2 = PunishmentService;
-        int[] nArray = LiteBansModule_240;
-        int[] nArray2 = LiteBansModule_241.n;
-        int[] nArray3 = LiteBansModule_401;
-while (true) {
-            int n2;
-            int n3;
-            int n4 = this.DatabaseMonitorService;
-            this.D += n4 - this.c;
-            int n5 = -1;
-            this.GnuSparseMapHandler = this.c = n4;
-            int n6 = this.c;
-            this.B = ServerSyncService[this.i];
-            while (true) {
-                if (n6 < n) {
-                    n3 = cArray[n6++];
-                } else {
-                    if (this.Utf8Handler_2) {
-                        n3 = -1;
-                        break;
-                    }
-                    this.GnuSparseMapHandler = n6;
-                    this.DatabaseMonitorService = n4;
-                    n2 = this.AsyncBackgroundTask_5();
-                    n6 = this.GnuSparseMapHandler;
-                    n4 = this.DatabaseMonitorService;
-                    cArray = this.CommandThrottleService;
-                    n = this.e;
-                    if (n2 != 0) {
-                        n3 = -1;
-                        break;
-                    }
-                    n3 = cArray[n6++];
-                }
-                n2 = nArray[nArray2[this.B] + cArray2[n3]];
-                if (n2 == -1) break;
-                this.B = n2;
-                int n7 = nArray3[this.B];
-                if ((n7 & 1) != 1) continue;
-                n5 = this.B;
-                n4 = n6;
-                if ((n7 & 8) == 8) break;
-            }
-            this.DatabaseMonitorService = n4;
-            switch (n5 < 0 ? n5 : g[n5]) {
-                case 11: {
-                    this.m.append(this.LiteBansModule_31());
-                }
-                case 25: {
-                    continue;
-                }
-                case 4: {
-                    this.m.delete(0, this.m.length());
-                    this.LiteBansModule_31(2);
-                }
-                case 26: {
-                    continue;
-                }
-                case 16: {
-                    this.m.append('\LiteBansModule_31');
-                }
-                case 27: {
-                    continue;
-                }
-                case 6: {
-                    return new LiteBansModule_55(2, null);
-                }
-                case 28: {
-                    continue;
-                }
-                case 23: {
-                    Boolean flag = Boolean.valueOf(this.LiteBansModule_31());
-                    return new LiteBansModule_55(0, flag);
-                }
-                case 29: {
-                    continue;
-                }
-                case 22: {
-                    return new LiteBansModule_55(0, null);
-                }
-                case 30: {
-                    continue;
-                }
-                case 13: {
-                    this.LiteBansModule_31(0);
-                    return new LiteBansModule_55(0, this.m.toString());
-                }
-                case 31: {
-                    continue;
-                }
-                case 12: {
-                    this.m.append('\\');
-                }
-                case 32: {
-                    continue;
-                }
-                case 21: {
-                    Double d10 = Double.valueOf(this.LiteBansModule_31());
-                    return new LiteBansModule_55(0, d10);
-                }
-                case 33: {
-                    continue;
-                }
-                case 1: {
-                    throw new UnexpectedTokenException(this.D, 0, new Character(this.plugin(0)));
-                }
-                case 34: {
-                    continue;
-                }
-                case 8: {
-                    return new LiteBansModule_55(4, null);
-                }
-                case 35: {
-                    continue;
-                }
-                case 19: {
-                    this.m.append('\r');
-                }
-                case 36: {
-                    continue;
-                }
-                case 15: {
-                    this.m.append('/');
-                }
-                case 37: {
-                    continue;
-                }
-                case 10: {
-                    return new LiteBansModule_55(6, null);
-                }
-                case 38: {
-                    continue;
-                }
-                case 14: {
-                    this.m.append('\"');
-                }
-                case 39: {
-                    continue;
-                }
-                case 5: {
-                    return new LiteBansModule_55(1, null);
-                }
-                case 40: {
-                    continue;
-                }
-                case 17: {
-                    this.m.append('\LiteBansModule_194');
-                }
-                case 41: {
-                    continue;
-                }
-                case 24: {
-                    try {
-                        n2 = Integer.parseInt(this.LiteBansModule_31().substring(2), 16);
-                        this.m.append((char)n2);
-                    }
-                    catch (Exception exception) {
-                        throw new UnexpectedTokenException(this.D, 2, exception);
-}
-                case 42: {
-                    continue;
-                }
-                case 20: {
-                    this.m.append('\AsyncBackgroundTask_22');
-                }
-                case 43: {
-                    continue;
-                }
-                case 7: {
-                    return new LiteBansModule_55(3, null);
-                }
-                case 44: {
-                    continue;
-                }
-                case 2: {
-                    Long l3 = Long.valueOf(this.LiteBansModule_31());
-                    return new LiteBansModule_55(0, l3);
-                }
-                case 45: {
-                    continue;
-                }
-                case 18: {
-                    this.m.append('\n');
-                }
-                case 46: {
-                    continue;
-                }
-                case 9: {
-                    return new LiteBansModule_55(5, null);
-                }
-                case 47: {
-                    continue;
-                }
-                case 3:
-                case 48: {
-                    continue;
-}
-            if (n3 == -1 && this.c == this.GnuSparseMapHandler) {
-                this.Utf8Handler_2 = true;
-                return null;
-            }
-            this.c(1);
-}
-
-    static {
-        AsyncBackgroundTask_21 = "\u0002\u0000\u0001\AsyncBackgroundTask_22\u0003\u0001\u0001\AsyncBackgroundTask_22\u0003\u0001\u0006\AsyncBackgroundTask_22\u0002\u0001\u0001\AsyncBackgroundTask_22\u0005\u0000\LiteBansModule_31\AsyncBackgroundTask_22\u0001\u0000\u0001\u0001\u0001\u0000\u0001\u0001\u0004\u0000\u0002\AsyncBackgroundTask_22\u0002\u0000\u0001\AsyncBackgroundTask_22";
-        F = 2;
-        BroadcastService = 1;
-        BaseCoreGenericHandler = 0;
-        HoverTextFormatter = "\u0000\u0000\u0000\u001b\u00006\u0000Q\u0000l\u0000\u0087\u00006\u0000\u00a2\u0000\u00bd\u0000\u00d8\u00006\u00006\u00006\u00006\u00006\u00006\u0000\u00f3\u0000\u010e\u00006\u0000\u0129\u0000\u0144\u0000\u015f\u0000\u017a\u0000\u0195\u00006\u00006\u00006\u00006\u00006\u00006\u00006\u00006\u0000\u01b0\u0000\u01cb\u0000\u01e6\u0000\u01e6\u0000\u0201\u0000\u021c\u0000\u0237\u0000\u0252\u00006\u00006\u0000\u026d\u0000\u0288\u00006";
-        LiteBansModule_433 = "\u0002\u0000\u0002\u0001\u0001\u0002\u0001\u0003\u0001\u0004\u0003\u0001\u0001\u0005\u0001\u0006\u0001\u0007\u0001\LiteBansModule_31\u0001\AsyncBackgroundTask_22\u0001\n\u0001\u000b\u0001\LiteBansModule_194\u0001\r\u0005\u0000\u0001\LiteBansModule_194\u0001\u000e\u0001\u000f\u0001\u0010\u0001\u0011\u0001\u0012\u0001\u0013\u0001\u0014\u0001\u0000\u0001\u0015\u0001\u0000\u0001\u0015\u0004\u0000\u0001\u0016\u0001\u0017\u0002\u0000\u0001\u0018";
-        q = "\AsyncBackgroundTask_22\u0000\u0001\u0007\u0001\u0007\u0002\u0000\u0001\u0007\u0012\u0000\u0001\u0007\u0001\u0000\u0001\AsyncBackgroundTask_22\LiteBansModule_31\u0000\u0001\u0006\u0001\u0019\u0001\u0002\u0001\u0004\u0001\n\n\u0003\u0001\u001a\u0006\u0000\u0004\u0001\u0001\u0005\u0001\u0001\u0014\u0000\u0001\u0017\u0001\LiteBansModule_31\u0001\u0018\u0003\u0000\u0001\u0012\u0001\u000b\u0002\u0001\u0001\u0011\u0001\LiteBansModule_194\u0005\u0000\u0001\u0013\u0001\u0000\u0001\r\u0003\u0000\u0001\u000e\u0001\u0014\u0001\u000f\u0001\u0010\u0005\u0000\u0001\u0015\u0001\u0000\u0001\u0016\uff82\u0000";
-        AsyncBackgroundTask_5 = 2;
-        BanHandler_2 = 0;
-        LiteBansModule_194 = 16384;
-        AsyncBackgroundTask_22 = -1;
-        ServerSyncService = new int[]{0, 0, 1, 1};
-        PunishmentService = LiteBansModule_241.BaseCoreGenericHandler("\AsyncBackgroundTask_22\u0000\u0001\u0007\u0001\u0007\u0002\u0000\u0001\u0007\u0012\u0000\u0001\u0007\u0001\u0000\u0001\AsyncBackgroundTask_22\LiteBansModule_31\u0000\u0001\u0006\u0001\u0019\u0001\u0002\u0001\u0004\u0001\n\n\u0003\u0001\u001a\u0006\u0000\u0004\u0001\u0001\u0005\u0001\u0001\u0014\u0000\u0001\u0017\u0001\LiteBansModule_31\u0001\u0018\u0003\u0000\u0001\u0012\u0001\u000b\u0002\u0001\u0001\u0011\u0001\LiteBansModule_194\u0005\u0000\u0001\u0013\u0001\u0000\u0001\r\u0003\u0000\u0001\u000e\u0001\u0014\u0001\u000f\u0001\u0010\u0005\u0000\u0001\u0015\u0001\u0000\u0001\u0016\uff82\u0000");
-        g = LiteBansModule_241.BaseCoreGenericHandler();
-        n = LiteBansModule_241.g();
-        LiteBansModule_240 = new int[]{2, 2, 3, 4, 2, 2, 2, 5, 2, 6, 2, 2, 7, 8, 2, 9, 2, 2, 2, 2, 2, 10, 11, 12, 13, 14, 15, 16, 16, 16, 16, 16, 16, 16, 16, 17, 18, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 4, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 4, 19, 20, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 20, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 5, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 21, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 22, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 23, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 16, 16, 16, 16, 16, 16, 16, 16, -1, -1, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, -1, -1, -1, -1, -1, -1, -1, -1, 24, 25, 26, 27, 28, 29, 30, 31, 32, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 33, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 34, 35, -1, -1, 34, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 36, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 37, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 38, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 39, -1, 39, -1, 39, -1, -1, -1, -1, -1, 39, 39, -1, -1, -1, -1, 39, 39, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 33, -1, 20, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 20, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 35, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 38, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 40, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 41, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 42, -1, 42, -1, 42, -1, -1, -1, -1, -1, 42, 42, -1, -1, -1, -1, 42, 42, -1, -1, -1, -1, -1, -1, -1, -1, -1, 43, -1, 43, -1, 43, -1, -1, -1, -1, -1, 43, 43, -1, -1, -1, -1, 43, 43, -1, -1, -1, -1, -1, -1, -1, -1, -1, 44, -1, 44, -1, 44, -1, -1, -1, -1, -1, 44, 44, -1, -1, -1, -1, 44, 44, -1, -1, -1, -1, -1, -1, -1, -1};
-        PunishmentTableService = new String[]{"Unkown internal scanner error", "Error: could not match input", "Error: pushback value was too large"};
-        LiteBansModule_401 = LiteBansModule_241.LiteBansModule_194();
 }
 

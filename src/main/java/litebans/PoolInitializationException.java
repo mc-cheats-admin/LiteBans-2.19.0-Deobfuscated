@@ -37,12 +37,13 @@ public class PoolInitializationException {
         this.plugin.release(10000);
     }
 
-    /* synthetic */ PoolInitializationException(boolean flag, LiteBansModule_100 ct2) {
+    /* synthetic */ PoolInitializationException(boolean flag, LiteBansModule_101 ct2) {
         this(flag);
     }
 
     static {
         c = 10000;
-        LiteBansModule_31 = new LiteBansModule_100(false);
+        LiteBansModule_31 = new LiteBansModule_101(false);
+    }
 }
 

@@ -5,18 +5,20 @@ import java.util.Iterator;
 import org.jetbrains.annotations.NotNull;
 
 public final class OtherHandler {
-    private OtherHandler() {
+        private OtherHandler() {
     }
 
     public final void BaseCoreGenericHandler(int n, int n2) {
         if (n < 0 || n >= n2) {
             throw new IndexOutOfBoundsException("index: " + n + ", size: " + n2);
-}
+        }
+    }
 
     public final void LiteBansModule_31(int n, int n2) {
         if (n < 0 || n > n2) {
             throw new IndexOutOfBoundsException("index: " + n + ", size: " + n2);
-}
+        }
+    }
 
     public final void BaseCoreGenericHandler(int n, int n2, int n3) {
         if (n < 0 || n2 > n3) {
@@ -24,10 +26,11 @@ public final class OtherHandler {
         }
         if (n > n2) {
             throw new IllegalArgumentException("fromIndex: " + n + " > toIndex: " + n2);
-}
+        }
+    }
 
     public final int BaseCoreGenericHandler(@NotNull Collection collection) {
-        ObjectUtilities.BaseCoreGenericHandler(collection, "c");
+        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "c");
         int n = 1;
         Iterator iterator = collection.iterator();
         while (iterator.hasNext()) {
@@ -39,8 +42,8 @@ public final class OtherHandler {
     }
 
     public final boolean BaseCoreGenericHandler(@NotNull Collection collection, @NotNull Collection collection2) {
-        ObjectUtilities.BaseCoreGenericHandler(collection, "c");
-        ObjectUtilities.BaseCoreGenericHandler(collection2, "other");
+        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "c");
+        ObjectUtilities.BaseCoreGenericHandler((Object)collection2, "other");
         if (collection.size() != collection2.size()) {
             return false;
         }
@@ -59,5 +62,10 @@ public final class OtherHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"index: ", ", size: ", "index: ", ", size: ", "fromIndex: ", ", toIndex: ", ", size: ", "fromIndex: ", " > toIndex: ", "startIndex: ", ", endIndex: ", ", size: ", "startIndex: ", " > endIndex: ", "c", "c", "other"};
+    }
+
+    static {
+        OtherHandler.BaseCoreGenericHandler();
+    }
 }
 

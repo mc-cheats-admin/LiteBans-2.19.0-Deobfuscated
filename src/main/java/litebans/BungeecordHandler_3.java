@@ -19,18 +19,18 @@ implements CommandSenderWrapper {
     private final String i;
     private final boolean Utf8Handler_2;
     private UUID GnuSparseMapHandler = LiteBansModule_31;
-    private String LiteBansModule_240 = null;
-    private String LiteBansModule_194;
-    public BungeecordHandler_3(ConfigYmlHandler fabricPlugin, Object targetObj, @Nullable Supplier supplier) {
+    private String LiteBansModule_241 = null;
+    private String LiteBansModule_195;
+        public BungeecordHandler_3(ConfigYmlHandler fabricPlugin, Object targetObj, @Nullable Supplier supplier) {
         this.AsyncBackgroundTask_5 = fabricPlugin;
         this.e = new WeakReference<Object>(targetObj);
         this.c = supplier;
-        boolean flag = this.Utf8Handler_2 = targetObj instanceof ServerPlayer || targetObj instanceof CommandSourceStack && targetObj.isPlayer();
-        this.i = this.Utf8Handler_2 && targetObj instanceof ServerPlayer ? targetObj.getPlainTextName() : (targetObj instanceof CommandSourceStack ? targetObj.getTextName() : "?");
+        boolean flag = this.Utf8Handler_2 = targetObj instanceof ServerPlayer || targetObj instanceof CommandSourceStack && ((CommandSourceStack)targetObj).isPlayer();
+        this.i = this.Utf8Handler_2 && targetObj instanceof ServerPlayer ? ((ServerPlayer)targetObj).getPlainTextName() : (targetObj instanceof CommandSourceStack ? ((CommandSourceStack)targetObj).getTextName() : "?");
     }
 
     public boolean equals(Object targetObj) {
-        return this == targetObj || targetObj instanceof BungeecordHandler_3 && targetObj.AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
+        return this == targetObj || targetObj instanceof BungeecordHandler_3 && ((BungeecordHandler_3)targetObj).AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
     }
 
     @Override
@@ -58,10 +58,10 @@ implements CommandSenderWrapper {
 
     @Override
     public @Nullable String LiteBansModule_31() {
-        String string = this.LiteBansModule_194;
+        String string = this.LiteBansModule_195;
         if (string == null) {
             Object targetObj = this.c();
-            this.LiteBansModule_194 = string = this.AsyncBackgroundTask_5.g().BaseCoreGenericHandler(targetObj);
+            this.LiteBansModule_195 = string = this.AsyncBackgroundTask_5.g().BaseCoreGenericHandler(targetObj);
         }
         return string;
     }
@@ -72,7 +72,7 @@ implements CommandSenderWrapper {
     }
 
     @Override
-    public @Nullable String LiteBansModule_240() {
+    public @Nullable String LiteBansModule_241() {
         return null;
     }
 
@@ -89,8 +89,8 @@ implements CommandSenderWrapper {
 
     @Override
     public String BaseCoreGenericHandler() {
-        String string = this.LiteBansModule_240;
-        return string == null || string.equals("00000000-0000-0000-0000-000000000000") ? (this.LiteBansModule_240 = this.AsyncBackgroundTask_5().toString()) : string;
+        String string = this.LiteBansModule_241;
+        return string == null || string.equals("00000000-0000-0000-0000-000000000000") ? (this.LiteBansModule_241 = this.AsyncBackgroundTask_5().toString()) : string;
     }
 
     @Override
@@ -108,11 +108,11 @@ implements CommandSenderWrapper {
         if (!(targetObj instanceof CommandSourceStack) || !this.GnuSparseMapHandler()) {
             return false;
         }
-        return (Boolean)Permissions.check(this.AsyncBackgroundTask_5(), (String)string).get();
+        return (Boolean)Permissions.check((UUID)this.AsyncBackgroundTask_5(), (String)string).get();
     }
 
     @Override
-    public boolean LiteBansModule_194() {
+    public boolean LiteBansModule_195() {
         return !this.Utf8Handler_2;
     }
 
@@ -126,7 +126,7 @@ implements CommandSenderWrapper {
     }
 
     private final ServerPlayer LiteBansModule_31() {
-        CommandSourceStack commandSourceStack = this.c();
+        CommandSourceStack commandSourceStack = (CommandSourceStack)this.c();
         if (commandSourceStack == null) {
             return null;
         }
@@ -149,10 +149,12 @@ implements CommandSenderWrapper {
         }
         if (this.e()) {
             if (this.AsyncBackgroundTask_5.ServerSyncService()) {
-                this.AsyncBackgroundTask_5.g().BaseCoreGenericHandler(this.LiteBansModule_31(), string);
+                this.AsyncBackgroundTask_5.g().BaseCoreGenericHandler((Object)this.LiteBansModule_31(), string);
             } else {
                 this.AsyncBackgroundTask_5.c(() -> this.AsyncBackgroundTask_5(string));
-}
+            }
+        }
+    }
 
     @Override
     public void LiteBansModule_31(String string) {
@@ -165,14 +167,16 @@ implements CommandSenderWrapper {
         if (!this.Utf8Handler_2) {
             Object targetObj = this.c();
             if (targetObj != null) {
-                targetObj.sendSystemMessage(this.AsyncBackgroundTask_5.g().AsyncBackgroundTask_5().BaseCoreGenericHandler(BlackHandler.BaseCoreGenericHandler(string)));
-} else {
+                ((CommandSourceStack)targetObj).sendSystemMessage((Component)this.AsyncBackgroundTask_5.g().AsyncBackgroundTask_5().BaseCoreGenericHandler(BlackHandler.BaseCoreGenericHandler((CharSequence)string)));
+            }
+        } else {
             V116Handler g82 = V116Handler.c;
             if (this.AsyncBackgroundTask_5.g().LiteBansModule_31() >= 770) {
                 g82 = V116Handler.BaseCoreGenericHandler;
             }
-            this.LiteBansModule_31(LiteBansModule_147.BaseCoreGenericHandler(g82).BaseCoreGenericHandler(LiteBansModule_182.BaseCoreGenericHandler(string)));
-}
+            this.LiteBansModule_31(LiteBansModule_148.BaseCoreGenericHandler(g82).BaseCoreGenericHandler(LiteBansModule_183.BaseCoreGenericHandler(string)));
+        }
+    }
 
     @Override
     public void BaseCoreGenericHandler(String string, byte[] byArray) {
@@ -185,9 +189,15 @@ implements CommandSenderWrapper {
                 string = "bungeecord:main";
             }
             this.AsyncBackgroundTask_5.g().BaseCoreGenericHandler(this.LiteBansModule_31(), string, byArray);
-}
+        }
+    }
 
     private static final void BaseCoreGenericHandler() {
         g = new String[]{"?", "00000000-0000-0000-0000-000000000000", "reason is marked non-null but is null", "BungeeCord", "bungeecord:main"};
+    }
+
+    static {
+        BungeecordHandler_3.BaseCoreGenericHandler();
+    }
 }
 

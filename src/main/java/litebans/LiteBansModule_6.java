@@ -5,5 +5,6 @@ public final class LiteBansModule_6 {
 
     public final String BaseCoreGenericHandler() {
         return this.plugin;
+    }
 }
 

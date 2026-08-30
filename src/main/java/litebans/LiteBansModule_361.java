@@ -1,21 +1,17 @@
 package litebans;
 
-import java.util.Comparator;
-public final class LiteBansModule_361
-implements Comparator {
-    final /* synthetic */ BanHandler BaseCoreGenericHandler;
+import java.util.Collection;
+import java.util.HashMap;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-    public LiteBansModule_361(BanHandler a_2) {
-        this.plugin = a_2;
-    }
+public interface LiteBansModule_361 {
+    public CharSequence BaseCoreGenericHandler();
 
-    public final int compare(Object targetObj, Object contextObj) {
-        LiteBansModule_109 cy2 = (LiteBansModule_109)contextObj;
-        LiteBansModule_34 b32 = cy2.AsyncBackgroundTask_5();
-        cy2 = (LiteBansModule_109)targetObj;
-        Comparable comparable = Long.valueOf(b32.BaseCoreGenericHandler(this.plugin));
-        flag = false;
-        b32 = cy2.AsyncBackgroundTask_5();
-        return LiteBansModule_261.BaseCoreGenericHandler(comparable, Long.valueOf(b32.BaseCoreGenericHandler(this.plugin)));
+    public int BaseCoreGenericHandler(@NotNull PlatformPlugin var1, @Nullable String[] var2, @NotNull Collection var3, int var4);
+
+    public void BaseCoreGenericHandler(@NotNull LiteBansModule_83 var1, @NotNull Collection var2, @Nullable LiteBansModule_298 var3, @Nullable String[] var4, @NotNull AbstractCommand var5, int var6);
+
+    public LiteBansModule_298 BaseCoreGenericHandler(@NotNull LiteBansModule_83 var1, @NotNull HashMap var2, @Nullable String var3);
 }
 

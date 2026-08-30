@@ -1,22 +1,35 @@
 package litebans;
 
-public final class LiteBansModule_250 {
-    public static final /* synthetic */ int[] BaseCoreGenericHandler;
+import com.velocitypowered.api.command.Command;
+import com.velocitypowered.api.command.CommandManager;
+@ModulePriority(priority=2)
+public class LiteBansModule_250
+extends CommandManager {
+    public LiteBansModule_250(PlatformPlugin plugin) {
+        super(plugin);
+    }
 
-    static {
-        int[] nArray = new int[BanHandler.values().length];
-        try {
-            nArray[BanHandler.LiteBansModule_240.ordinal()] = 1;
+    @Override
+    public boolean AsyncBackgroundTask_5() {
+        return this.plugin.AsyncBackgroundTask_22() == 2;
+    }
+
+    @Override
+    public void e() {
+    }
+
+    @Override
+    public void BaseCoreGenericHandler() {
+        super.BaseCoreGenericHandler();
+        for (LiteCommand command : this.e()) {
+            this.LiteBansModule_31(new LiteBansModule_53(command, command.getPermission(), this.plugin, command.getAliases()));
         }
-        catch (NoSuchFieldError noSuchFieldError) {
-            // empty catch block
-        }
-        try {
-            nArray[BanHandler.GnuSparseMapHandler.ordinal()] = 2;
-        }
-        catch (NoSuchFieldError noSuchFieldError) {
-            // empty catch block
-        }
-        BaseCoreGenericHandler = nArray;
+    }
+
+    public void LiteBansModule_31(LiteCommand command) {
+        VelocityPlugin velocityPlugin = (VelocityPlugin)this.plugin;
+        CommandManager commandManager = velocityPlugin.c.getCommandManager();
+        commandManager.register(command.getName(), (Command)((LiteBansModule_53)command), command.getAliases());
+    }
 }
 

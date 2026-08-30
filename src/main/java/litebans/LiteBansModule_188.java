@@ -1,60 +1,72 @@
 package litebans;
 
-import java.util.Arrays;
-public abstract class LiteBansModule_188 {
-    private static final byte[] BaseCoreGenericHandler = LiteBansModule_84.BaseCoreGenericHandler(8448L);
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.util.logging.Logger;
+import javax.sql.DataSource;
+import org.jetbrains.annotations.NotNull;
 
-    public static final byte[] BaseCoreGenericHandler(byte[] byArray) {
-        int n = byArray.length - 1;
-        for (int i = 0; i < byArray.length / 2; ++i) {
-            byte by2 = byArray[i];
-            byArray[i] = byArray[n - i];
-            byArray[n - i] = by2;
-        }
-        return byArray;
+public final class LiteBansModule_188
+implements DataSource {
+    private final Driver BaseCoreGenericHandler;
+    private final HikariConfig LiteBansModule_31;
+
+    public LiteBansModule_188(@NotNull Driver driver, @NotNull HikariConfig aB2) {
+        this.plugin = driver;
+        this.LiteBansModule_31 = aB2;
+        this.setLoginTimeout((int)this.LiteBansModule_31.c());
     }
 
-    public static final int BaseCoreGenericHandler(byte by2) {
-        if (by2 >= 0) {
-            return by2;
-        }
-        return 256 + by2;
+    @Override
+    public Connection getConnection() {
+        return this.plugin.connect(this.LiteBansModule_31.m(), this.LiteBansModule_31.A());
     }
 
-    public static final byte BaseCoreGenericHandler(int n) {
-        if (n > 255 || n < 0) {
-            throw new IllegalArgumentException("Can only convert non-negative integers between [0,255] to byte: [" + n + "]");
-        }
-        if (n < 128) {
-            return (byte)n;
-        }
-        return (byte)(n - 256);
+    @Override
+    public Connection getConnection(@NotNull String string, @NotNull String string2) {
+        return this.getConnection();
     }
 
-    static final byte[] LiteBansModule_31(byte[] byArray) {
-        if (byArray != null) {
-            return Arrays.copyOf(byArray, byArray.length);
-        }
+    @Override
+    public int getLoginTimeout() {
+        return DriverManager.getLoginTimeout();
+    }
+
+    @Override
+    public void setLoginTimeout(int n) {
+        DriverManager.setLoginTimeout(n);
+    }
+
+    @Override
+    public PrintWriter getLogWriter() {
+        AssertionUtilities.BaseCoreGenericHandler();
+        throw new CommandExitException();
+    }
+
+    public Void BaseCoreGenericHandler(@NotNull PrintWriter printWriter) {
+        AssertionUtilities.BaseCoreGenericHandler();
+        throw new CommandExitException();
+    }
+
+    public Object unwrap(@NotNull Class clazz) {
+        AssertionUtilities.BaseCoreGenericHandler();
+        throw new CommandExitException();
+    }
+
+    public boolean isWrapperFor(@NotNull Class clazz) {
+        return false;
+    }
+
+    @Override
+    public Logger getParentLogger() {
         return null;
     }
 
-    private static final boolean LiteBansModule_31(LiteBansModule_396 kw_02) {
-        return !kw_02.AsyncBackgroundTask_5().BaseCoreGenericHandler();
+    @Override
+    public void setLogWriter(PrintWriter printWriter) {
+        this.plugin(printWriter);
     }
-
-    private static final boolean BaseCoreGenericHandler(LiteBansModule_396 kw_02) {
-        return kw_02.getMethod() == 0 || kw_02.getMethod() == StoredHandler.CommandThrottleService.BaseCoreGenericHandler() || kw_02.getMethod() == StoredHandler.LiteBansModule_401.BaseCoreGenericHandler() || kw_02.getMethod() == 8 || kw_02.getMethod() == StoredHandler.c.BaseCoreGenericHandler() || kw_02.getMethod() == StoredHandler.q.BaseCoreGenericHandler();
-    }
-
-    static final void c(LiteBansModule_396 kw_02) {
-        if (!LiteBansModule_188.LiteBansModule_31(kw_02)) {
-            throw new LiteBansModule_173(EncryptionHandler.LiteBansModule_31, kw_02);
-        }
-        if (!LiteBansModule_188.BaseCoreGenericHandler(kw_02)) {
-            StoredHandler dq_02 = StoredHandler.BaseCoreGenericHandler(kw_02.getMethod());
-            if (dq_02 == null) {
-                throw new LiteBansModule_173(EncryptionHandler.c, kw_02);
-            }
-            throw new LiteBansModule_173(dq_02, kw_02);
 }
 

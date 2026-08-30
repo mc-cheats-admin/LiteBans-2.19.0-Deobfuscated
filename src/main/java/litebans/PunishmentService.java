@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable;
 @ModulePriority(priority=1)
 public final class PunishmentService
 extends CommandModule {
-    public PunishmentService(@NotNull PlatformPlugin plugin) {
+        public PunishmentService(@NotNull PlatformPlugin plugin) {
         super(plugin);
     }
 
@@ -35,7 +35,7 @@ extends CommandModule {
         int n2;
         int n3;
         boolean flag2;
-{
+        block8: {
             contextObj = AbstractCommand.AsyncBackgroundTask_5;
             targetObj = args;
             flag2 = false;
@@ -44,9 +44,9 @@ extends CommandModule {
                 String string2;
                 String string3 = string2 = targetObj[n2];
                 n = 0;
-                if (!StringUtilities.LiteBansModule_31(string3)) continue;
+                if (!StringUtilities.LiteBansModule_31((CharSequence)string3)) continue;
                 flag = false;
-                break;
+                break block8;
             }
             flag = true;
         }
@@ -61,7 +61,7 @@ extends CommandModule {
             for (int i = 0; i < n; ++i) {
                 String string4;
                 String string5 = string4 = parsedArgs[i];
-                boolean flag6 = !StringUtilities.LiteBansModule_31(string5);
+                boolean flag6 = !StringUtilities.LiteBansModule_31((CharSequence)string5);
                 if (!flag6) continue;
                 collection.add(string4);
             }
@@ -73,19 +73,20 @@ extends CommandModule {
         String[] cmdArgs = filteredArgs;
         contextObj = string;
         contextObj = StringUtilities.BaseCoreGenericHandler((String)contextObj, "litebans:", null, 2, null);
-        AbstractCommand abstractCommand = this.plugin((String)contextObj);
+        AbstractCommand abstractCommand = (AbstractCommand)this.plugin((String)contextObj);
         if (abstractCommand != null) {
             targetObj = abstractCommand.getPermission();
             if (targetObj != null) {
                 CommandSenderWrapper senderWrapper = sender;
                 n2 = 0;
                 CommandSenderWrapper senderWrapper = senderWrapper;
-                if (!senderWrapper.etargetObj) {
+                if (!senderWrapper.e((String)targetObj)) {
                     senderWrapper = sender;
                     CharSequence charSequence = MessageKey.cZ;
                     ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, senderWrapper, charSequence, null, 4, null);
                     return;
-}
+                }
+            }
             PunishmentService e = this;
             n2 = 0;
             e.BaseCoreGenericHandler.LiteBansModule_31(new CommandExecutionTask(sender, cmdArgs, abstractCommand, (String)contextObj));
@@ -94,7 +95,7 @@ extends CommandModule {
         targetObj = CommandArgumentUtils.BaseCoreGenericHandler(AbstractCommand.AsyncBackgroundTask_5, (String)contextObj, cmdArgs);
         PunishmentService e = this;
                 n3 = 0;
-        AbstractCommand banCommand = (AbstractCommand)this.BaseCoreGenericHandler("ban");
+        AbstractCommand banCommand = (AbstractCommand)((CommandManager)resultObj).BaseCoreGenericHandler("ban");
         if (banCommand == null) {
             AssertionUtilities.BaseCoreGenericHandler();
             throw new CommandExitException();
@@ -106,193 +107,208 @@ extends CommandModule {
 
     @Override
     public void BaseCoreGenericHandler() {
-        v1 = this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        v1 = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
         v1.e();
         super.BaseCoreGenericHandler();
         this.plugin.BaseCoreGenericHandler(this);
         v2 = this.e();
-        v4 = v2;
-        v5 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)v2, 10));
-        v7 = v4.iterator();
-        while (v7.hasNext()) {
-{
-                        arg1 = v7.next();
-                        arg2 = (LiteCommand)arg1;
-                        arg3 = v5;
-                                                v0 = arg4.BaseCoreGenericHandler;
-                        v1 = arg2.getPermission();
-                        arg5 = AbstractCommand.AsyncBackgroundTask_5;
-                        arg6 = arg2.getName();
-                        arg7 = arg6;
-                        switch (arg7.hashCode()) {
+        v3 = v2;
+        v4 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)v2, 10));
+        v5 = v3.iterator();
+        while (v5.hasNext()) {
+            block40: {
+                block38: {
+                    block39: {
+                        v6 = v5.next();
+                        v7 = (LiteCommand)v6;
+                        v8 = v4;
+                        v9 = this;
+                        v0 = v9.BaseCoreGenericHandler;
+                        v1 = v7.getPermission();
+                        v10 = AbstractCommand.AsyncBackgroundTask_5;
+                        v11 = v7.getName();
+                        v12 = v11;
+                        switch (v12.hashCode()) {
                             case -1320563219: {
-                                if (arg7.equals("dupeip")) break;
+                                if (v12.equals("dupeip")) break;
                                 break;
                             }
                             case 712910260: {
-                                if (!arg7.equals("staffhistory")) {
+                                if (!v12.equals("staffhistory")) {
                                     break;
                                 }
-                                break;
+                                break block38;
                             }
                             case 926934164: {
-                                if (!arg7.equals("history")) {
+                                if (!v12.equals("history")) {
                                     break;
                                 }
-                                break;
-}
-                        arg8   = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
-                        v2 = arg8  ;
-                        break;
+                                break block39;
+                            }
+                        }
+                        v13   = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
+                        v2 = v13  ;
+                        break block40;
                     }
-                    arg8   = new String[]{"hist", "litebans:history"};
-                    v2 = arg8  ;
-                    break;
+                    v13   = new String[]{"hist", "litebans:history"};
+                    v2 = v13  ;
+                    break block40;
                 }
-                arg8   = new String[]{"staffhist", "litebans:staffhistory"};
-                v2 = arg8  ;
-                break;
-                                arg8   = new String[]{"litebans:" + (String)arg6};
-                v2 = arg8  ;
+                v13   = new String[]{"staffhist", "litebans:staffhistory"};
+                v2 = v13  ;
+                break block40;
+                                v13   = new String[]{"litebans:" + (String)v11};
+                v2 = v13  ;
             }
-            arg9   = v2;
-            arg3.add(new LiteBansModule_265((LiteCommand)arg2, v0, v1, Arrays.copyOf(arg9  , arg9  .length)));
+            v14   = v2;
+            v8.add(new LiteBansModule_266((LiteCommand)v7, v0, v1, Arrays.copyOf(v14  , v14  .length)));
         }
-        v2 = (List)v5;
-        v4 = v2.iterator();
-        while (v4.hasNext()) {
-            v5 = v4.next();
-            arg10 = (LiteCommand)v5;
-            this.LiteBansModule_31(arg10);
+        v2 = (List)v4;
+        v3 = v2.iterator();
+        while (v3.hasNext()) {
+            v4 = v3.next();
+            v15 = (LiteCommand)v4;
+            this.LiteBansModule_31(v15);
         }
-                ObjectUtilities.BaseCoreGenericHandler(v1);
-        arg11 = v1;
-        v5 = AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg11);
-        arg12 = v5.length;
-        for (arg13 = 0; arg13 < arg12; ++arg13) {
-{
-                                            arg14 = arg2 = v5[arg13];
-                                            arg15 = v2;
+        v2 = this;
+        ObjectUtilities.BaseCoreGenericHandler(v1);
+        v16 = v1;
+        v4 = AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(v16);
+        v17 = v4.length;
+        for (v18 = 0; v18 < v17; ++v18) {
+            block48: {
+                block46: {
+                    block47: {
+                        block45: {
+                            block41: {
+                                block43: {
+                                    block42: {
+                                        block44: {
+                                            v19 = v7 = v4[v18];
+                                            v20 = v2;
                                             v3 = new StringBuilder().append("litebans + ");
-                                            arg6 = AbstractCommand.AsyncBackgroundTask_5;
-                                            arg16 = arg14;
-                                            switch (arg16.hashCode()) {
+                                            v11 = AbstractCommand.AsyncBackgroundTask_5;
+                                            v21 = v19;
+                                            switch (v21.hashCode()) {
                                                 case -1396405339: {
-                                                    if (!arg16.equals("ban-ip")) {
+                                                    if (!v21.equals("ban-ip")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block41;
                                                 }
                                                 case 111426262: {
-                                                    if (arg16.equals("unban")) break;
+                                                    if (v21.equals("unban")) break;
                                                     break;
                                                 }
                                                 case -840127329: {
-                                                    if (!arg16.equals("unwarn")) {
+                                                    if (!v21.equals("unwarn")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block42;
                                                 }
                                                 case 1972486690: {
-                                                    if (!arg16.equals("tempbanip")) {
+                                                    if (!v21.equals("tempbanip")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block41;
                                                 }
                                                 case 93503862: {
-                                                    if (!arg16.equals("banip")) {
+                                                    if (!v21.equals("banip")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block41;
                                                 }
                                                 case -1062781696: {
-                                                    if (!arg16.equals("muteip")) {
+                                                    if (!v21.equals("muteip")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block43;
                                                 }
                                                 case -840405966: {
-                                                    if (!arg16.equals("unmute")) {
+                                                    if (!v21.equals("unmute")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block44;
                                                 }
                                                 case 1351111124: {
-                                                    if (!arg16.equals("tempmuteip")) {
+                                                    if (!v21.equals("tempmuteip")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block43;
                                                 }
                                                 case 1231784084: {
-                                                    if (!arg16.equals("tempipmute")) {
+                                                    if (!v21.equals("tempipmute")) {
                                                         break;
                                                     }
-                                                    break;
+                                                    break block43;
                                                 }
                                                 case 1979386420: {
-                                                    if (!arg16.equals("tempipban")) {
+                                                    if (!v21.equals("tempipban")) {
                                                         break;
                                                     }
-                                                    break;
-}
+                                                    break block41;
+                                                }
+                                            }
                                             v4 = "unban.own";
-                                            break;
+                                            break block45;
                                         }
                                         v4 = "unmute.own";
-                                        break;
+                                        break block45;
                                     }
                                     v4 = "unwarn.own";
-                                    break;
+                                    break block45;
                                 }
                                 v4 = "ipmute";
-                                break;
+                                break block45;
                             }
                             v4 = "ipban";
-                            break;
-                                                        v4 = arg14;
+                            break block45;
+                                                        v4 = v19;
                         }
-                        arg8   = v3.append((String)v4).toString();
-                        arg6 = arg15;
-                        arg17 = new PunishmentCommand((String)arg14, (String)arg8  , (PunishmentService)arg15);
-                        v5 = arg6.BaseCoreGenericHandler;
-                        v6 = arg17.getPermission();
-                        arg9   = AbstractCommand.AsyncBackgroundTask_5;
-                        arg18 = arg17.getName();
-                        arg19 = arg18;
-                        switch (arg19.hashCode()) {
+                        v13   = v3.append((String)v4).toString();
+                        v11 = v20;
+                        v22 = new PunishmentCommand((String)v19, (String)v13  , (PunishmentService)v20);
+                        v5 = v11.BaseCoreGenericHandler;
+                        v6 = v22.getPermission();
+                        v14   = AbstractCommand.AsyncBackgroundTask_5;
+                        v23 = v22.getName();
+                        v24 = v23;
+                        switch (v24.hashCode()) {
                             case -1320563219: {
-                                if (arg19.equals("dupeip")) break;
+                                if (v24.equals("dupeip")) break;
                                 break;
                             }
                             case 712910260: {
-                                if (!arg19.equals("staffhistory")) {
+                                if (!v24.equals("staffhistory")) {
                                     break;
                                 }
-                                break;
+                                break block46;
                             }
                             case 926934164: {
-                                if (!arg19.equals("history")) {
+                                if (!v24.equals("history")) {
                                     break;
                                 }
-                                break;
-}
-                        arg20 = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
-                        v7 = arg20;
-                        break;
+                                break block47;
+                            }
+                        }
+                        v25 = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
+                        v7 = v25;
+                        break block48;
                     }
-                    arg20 = new String[]{"hist", "litebans:history"};
-                    v7 = arg20;
-                    break;
+                    v25 = new String[]{"hist", "litebans:history"};
+                    v7 = v25;
+                    break block48;
                 }
-                arg20 = new String[]{"staffhist", "litebans:staffhistory"};
-                v7 = arg20;
-                break;
-                                arg20 = new String[]{"litebans:" + arg18};
-                v7 = arg20;
+                v25 = new String[]{"staffhist", "litebans:staffhistory"};
+                v7 = v25;
+                break block48;
+                                v25 = new String[]{"litebans:" + v23};
+                v7 = v25;
             }
-            arg21 = v7;
-            arg15.LiteBansModule_31(new LiteBansModule_265(arg17, v5, v6, Arrays.copyOf(arg21, arg21.length)));
-}
+            v26 = v7;
+            v20.LiteBansModule_31(new LiteBansModule_266(v22, v5, v6, Arrays.copyOf(v26, v26.length)));
+        }
+    }
 
     @Override
     public void e() {
@@ -301,65 +317,71 @@ extends CommandModule {
     @Override
     public void LiteBansModule_31() {
         v1 = this.e();
-        v3 = v1;
-        arg22   = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler(v1, 10));
-        arg23 = v3.iterator();
-        while (arg23.hasNext()) {
-{
-                        arg24 = arg23.next();
-                        arg25 = (LiteCommand)arg24;
-                        arg26 = arg22  ;
-                                                v0 = arg27.BaseCoreGenericHandler;
-                        v1 = arg25.getPermission();
-                        arg28 = AbstractCommand.AsyncBackgroundTask_5;
-                        arg29 = arg25.getName();
-                        arg30 = arg29;
-                        switch (arg30.hashCode()) {
+        v27 = v1;
+        v28   = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler(v1, 10));
+        v29 = v27.iterator();
+        while (v29.hasNext()) {
+            block11: {
+                block9: {
+                    block10: {
+                        v30 = v29.next();
+                        v31 = (LiteCommand)v30;
+                        v32 = v28  ;
+                        v33 = this;
+                        v0 = v33.BaseCoreGenericHandler;
+                        v1 = v31.getPermission();
+                        v34 = AbstractCommand.AsyncBackgroundTask_5;
+                        v35 = v31.getName();
+                        v36 = v35;
+                        switch (v36.hashCode()) {
                             case -1320563219: {
-                                if (arg30.equals("dupeip")) break;
+                                if (v36.equals("dupeip")) break;
                                 break;
                             }
                             case 712910260: {
-                                if (!arg30.equals("staffhistory")) {
+                                if (!v36.equals("staffhistory")) {
                                     break;
                                 }
-                                break;
+                                break block9;
                             }
                             case 926934164: {
-                                if (!arg30.equals("history")) {
+                                if (!v36.equals("history")) {
                                     break;
                                 }
-                                break;
-}
-                        arg31 = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
-                        v2 = arg31;
-                        break;
+                                break block10;
+                            }
+                        }
+                        v37 = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
+                        v2 = v37;
+                        break block11;
                     }
-                    arg31 = new String[]{"hist", "litebans:history"};
-                    v2 = arg31;
-                    break;
+                    v37 = new String[]{"hist", "litebans:history"};
+                    v2 = v37;
+                    break block11;
                 }
-                arg31 = new String[]{"staffhist", "litebans:staffhistory"};
-                v2 = arg31;
-                break;
-                                arg31 = new String[]{"litebans:" + arg29};
-                v2 = arg31;
+                v37 = new String[]{"staffhist", "litebans:staffhistory"};
+                v2 = v37;
+                break block11;
+                                v37 = new String[]{"litebans:" + v35};
+                v2 = v37;
             }
-            arg32 = v2;
-            arg26.add(new LiteBansModule_265(arg25, v0, v1, Arrays.copyOf(arg32, arg32.length)));
+            v38 = v2;
+            v32.add(new LiteBansModule_266(v31, v0, v1, Arrays.copyOf(v38, v38.length)));
         }
-        v1 = (List)arg22  ;
-        for (Collection arg22 : v1) {
-            arg33 = (LiteCommand)arg22  ;
-            this.LiteBansModule_31(arg33);
-}
+        v1 = (List)v28  ;
+        for (Collection v28 : v1) {
+            v39 = (LiteCommand)v28  ;
+            this.LiteBansModule_31(v39);
+        }
+    }
 
     @Override
     public void LiteBansModule_31(@Nullable LiteCommand command) {
-        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
-        if (command instanceof LiteBansModule_265 && configService.e(((LiteBansModule_265)command).getName())) {
+        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        if (command instanceof LiteBansModule_266 && configService.e(((LiteBansModule_266)command).getName())) {
             super.LiteBansModule_31(command);
-}
+        }
+    }
 
     /*
      * Enabled aggressive block sorting
@@ -373,20 +395,26 @@ extends CommandModule {
             if (senderWrapper.e(string2)) {
                 list = AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(command, string, sender, this.plugin, args);
                 return list;
-}
+            }
+        }
         list = CollectionUtilities.e();
         return list;
     }
 
     private static final boolean BaseCoreGenericHandler(LiteCommand command) {
-        return ObjectUtilities.BaseCoreGenericHandler(command.getName(), (Object)"togglechat");
+        return ObjectUtilities.BaseCoreGenericHandler((Object)command.getName(), (Object)"togglechat");
     }
 
-    private static final boolean BaseCoreGenericHandler(LiteBansModule_178 eo_02, Object targetObj) {
+    private static final boolean BaseCoreGenericHandler(LiteBansModule_179 eo_02, Object targetObj) {
         return (Boolean)eo_02.BaseCoreGenericHandler(targetObj);
     }
 
     private static final void g() {
         e = new String[]{"ban", "litebans:", "ban", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", "", "ban-ip", "unban", "unwarn", "tempbanip", "banip", "muteip", "unmute", "tempmuteip", "tempipmute", "tempipban", "unban.own", "unmute.own", "unwarn.own", "ipmute", "ipban", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", "", "ban-ip", "unban", "unwarn", "tempbanip", "banip", "muteip", "unmute", "tempmuteip", "tempipmute", "tempipban", "unban.own", "unmute.own", "unwarn.own", "ipmute", "ipban", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", "", "ban-ip", "unban", "unwarn", "tempbanip", "banip", "muteip", "unmute", "tempmuteip", "tempipmute", "tempipban", "unban.own", "unmute.own", "unwarn.own", "ipmute", "ipban", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", "litebans.tabcomplete", "togglechat"};
+    }
+
+    static {
+        PunishmentService.g();
+    }
 }
 

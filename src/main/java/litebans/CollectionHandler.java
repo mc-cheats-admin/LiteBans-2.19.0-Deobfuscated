@@ -10,10 +10,10 @@ import org.jetbrains.annotations.Nullable;
 public final class CollectionHandler {
     private static final Object[] LiteBansModule_31;
     private static final int BaseCoreGenericHandler;
-    public static final Object[] BaseCoreGenericHandler(@NotNull Collection collection) {
+        public static final Object[] BaseCoreGenericHandler(@NotNull Collection collection) {
         Object[] objectArray;
-{
-            ObjectUtilities.BaseCoreGenericHandler(collection, "collection");
+        block9: {
+            ObjectUtilities.BaseCoreGenericHandler((Object)collection, "collection");
             int n = collection.size();
             if (n == 0) {
                 objectArray = LiteBansModule_31;
@@ -30,7 +30,7 @@ public final class CollectionHandler {
                         if (n3 >= objectArray2.length) {
                             if (!iterator.hasNext()) {
                                 objectArray = objectArray2;
-                                break;
+                                break block9;
                             }
                             int n4 = n3 * 3 + 1 >>> 1;
                             if (n4 <= n3) {
@@ -47,14 +47,16 @@ public final class CollectionHandler {
                     int n5 = n3;
                     Object[] objectArray3 = objectArray2;
                     objectArray = Arrays.copyOf(objectArray3, n5);
-}
+                }
+            }
+        }
         return objectArray;
     }
 
     public static final Object[] BaseCoreGenericHandler(@NotNull Collection collection, @Nullable Object[] objectArray) {
         Object[] objectArray2;
-{
-            ObjectUtilities.BaseCoreGenericHandler(collection, "collection");
+        block16: {
+            ObjectUtilities.BaseCoreGenericHandler((Object)collection, "collection");
             if (objectArray == null) {
                 throw new NullPointerException();
             }
@@ -88,7 +90,7 @@ public final class CollectionHandler {
                         if (n2 >= objectArray4.length) {
                             if (!iterator.hasNext()) {
                                 objectArray2 = objectArray4;
-                                break;
+                                break block16;
                             }
                             n3 = n2 * 3 + 1 >>> 1;
                             if (n3 <= n2) {
@@ -109,7 +111,10 @@ public final class CollectionHandler {
                         objectArray2 = objectArray;
                     } else {
                         objectArray2 = Arrays.copyOf(objectArray5, n4);
-}
+                    }
+                }
+            }
+        }
         return objectArray2;
     }
 
@@ -121,5 +126,6 @@ public final class CollectionHandler {
 
     private static final void BaseCoreGenericHandler() {
         c = new String[]{"collection", "collection", ""};
+    }
 }
 

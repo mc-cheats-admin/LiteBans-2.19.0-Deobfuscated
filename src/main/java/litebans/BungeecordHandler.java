@@ -12,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class BungeecordHandler
 implements CommandSenderWrapper {
-    private final ConfigYmlHandler LiteBansModule_194;
+    private final ConfigYmlHandler LiteBansModule_195;
     private final WeakReference g;
     private final Supplier Utf8Handler_2;
     private final String c;
@@ -20,16 +20,16 @@ implements CommandSenderWrapper {
     private UUID i = LiteBansModule_31;
     private String e = null;
     private String AsyncBackgroundTask_5;
-    public BungeecordHandler(ConfigYmlHandler fabricPlugin, Object targetObj, @Nullable Supplier supplier) {
-        this.LiteBansModule_194 = fabricPlugin;
+        public BungeecordHandler(ConfigYmlHandler fabricPlugin, Object targetObj, @Nullable Supplier supplier) {
+        this.LiteBansModule_195 = fabricPlugin;
         this.g = new WeakReference<Object>(targetObj);
         this.Utf8Handler_2 = supplier;
-        this.GnuSparseMapHandler = targetObj instanceof class_2168 && targetObj.method_43737();
-        this.c = this.GnuSparseMapHandler ? targetObj.method_9214() : "[Console]";
+        this.GnuSparseMapHandler = targetObj instanceof class_2168 && ((class_2168)targetObj).method_43737();
+        this.c = this.GnuSparseMapHandler ? ((class_2168)targetObj).method_9214() : "[Console]";
     }
 
     public boolean equals(Object targetObj) {
-        return this == targetObj || targetObj instanceof BungeecordHandler && targetObj.AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
+        return this == targetObj || targetObj instanceof BungeecordHandler && ((BungeecordHandler)targetObj).AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
     }
 
     @Override
@@ -38,7 +38,7 @@ implements CommandSenderWrapper {
         if (!(targetObj instanceof class_2168) || string.isEmpty()) {
             return;
         }
-        this.LiteBansModule_194.g().LiteBansModule_31(this.c(), string);
+        this.LiteBansModule_195.g().LiteBansModule_31(this.c(), string);
     }
 
     @Override
@@ -60,7 +60,7 @@ implements CommandSenderWrapper {
         String string = this.AsyncBackgroundTask_5;
         if (string == null) {
             Object targetObj = this.c();
-            this.AsyncBackgroundTask_5 = string = this.LiteBansModule_194.g().BaseCoreGenericHandler(targetObj);
+            this.AsyncBackgroundTask_5 = string = this.LiteBansModule_195.g().BaseCoreGenericHandler(targetObj);
         }
         return string;
     }
@@ -71,7 +71,7 @@ implements CommandSenderWrapper {
     }
 
     @Override
-    public @Nullable String LiteBansModule_240() {
+    public @Nullable String LiteBansModule_241() {
         return null;
     }
 
@@ -101,17 +101,17 @@ implements CommandSenderWrapper {
         if (targetObj == null) {
             return false;
         }
-        if (!this.LiteBansModule_194.AsyncBackgroundTask_5() || !this.GnuSparseMapHandler && targetObj instanceof class_2168) {
-            return targetObj.method_9259(3);
+        if (!this.LiteBansModule_195.AsyncBackgroundTask_5() || !this.GnuSparseMapHandler && targetObj instanceof class_2168) {
+            return ((class_2168)targetObj).method_9259(3);
         }
         if (!(targetObj instanceof class_2168) || !this.GnuSparseMapHandler()) {
             return false;
         }
-        return (Boolean)Permissions.check(this.AsyncBackgroundTask_5(), (String)string).get();
+        return (Boolean)Permissions.check((UUID)this.AsyncBackgroundTask_5(), (String)string).get();
     }
 
     @Override
-    public boolean LiteBansModule_194() {
+    public boolean LiteBansModule_195() {
         return !this.GnuSparseMapHandler;
     }
 
@@ -124,7 +124,7 @@ implements CommandSenderWrapper {
     }
 
     private final class_3222 BaseCoreGenericHandler() {
-        return (this.c()).method_44023();
+        return ((class_2168)this.c()).method_44023();
     }
 
     @Override
@@ -142,25 +142,27 @@ implements CommandSenderWrapper {
             return;
         }
         if (this.e()) {
-            if (this.LiteBansModule_194.ServerSyncService()) {
-                this.LiteBansModule_194.g().BaseCoreGenericHandler(this.plugin(), string);
+            if (this.LiteBansModule_195.ServerSyncService()) {
+                this.LiteBansModule_195.g().BaseCoreGenericHandler((Object)this.plugin(), string);
             } else {
-                this.LiteBansModule_194.c(() -> this.AsyncBackgroundTask_5(string));
-}
+                this.LiteBansModule_195.c(() -> this.AsyncBackgroundTask_5(string));
+            }
+        }
+    }
 
     @Override
     public void LiteBansModule_31(String string) {
         Object targetObj = this.c();
-        this.LiteBansModule_194.g().c(targetObj, string);
+        this.LiteBansModule_195.g().c(targetObj, string);
     }
 
     @Override
     public void BaseCoreGenericHandler(String string) {
         V116Handler g82 = V116Handler.c;
-        if (this.LiteBansModule_194.g().LiteBansModule_31() >= 770) {
+        if (this.LiteBansModule_195.g().LiteBansModule_31() >= 770) {
             g82 = V116Handler.BaseCoreGenericHandler;
         }
-        this.LiteBansModule_31(LiteBansModule_147.BaseCoreGenericHandler(g82).BaseCoreGenericHandler(LiteBansModule_182.BaseCoreGenericHandler(string)));
+        this.LiteBansModule_31(LiteBansModule_148.BaseCoreGenericHandler(g82).BaseCoreGenericHandler(LiteBansModule_183.BaseCoreGenericHandler(string)));
     }
 
     @Override
@@ -173,6 +175,16 @@ implements CommandSenderWrapper {
             if (string.equals("BungeeCord")) {
                 string = "bungeecord:main";
             }
-            this.LiteBansModule_194.g().BaseCoreGenericHandler(this.plugin(), string, byArray);
+            this.LiteBansModule_195.g().BaseCoreGenericHandler(this.plugin(), string, byArray);
+        }
+    }
+
+    private static final void LiteBansModule_31() {
+        LiteBansModule_241 = new String[]{"[Console]", "00000000-0000-0000-0000-000000000000", "reason is marked non-null but is null", "BungeeCord", "bungeecord:main"};
+    }
+
+    static {
+        BungeecordHandler.LiteBansModule_31();
+    }
 }
 

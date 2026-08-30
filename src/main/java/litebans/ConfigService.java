@@ -40,26 +40,26 @@ extends PluginModule {
     public MessagesYmlHandler Utf8Handler_2;
     public TemplatesYmlHandler A;
     public DiscordWebhookClient_2 m;
-    private final LiteBansModule_102 AsyncBackgroundTask_5 = new LiteBansModule_102(() -> ConfigService.BaseCoreGenericHandler(this));
-    private final LiteBansModule_161 LiteBansModule_194 = ProxyConnection.BaseCoreGenericHandler(() -> ConfigService.c(this));
+    private final LiteBansModule_103 AsyncBackgroundTask_5 = new LiteBansModule_103(() -> ConfigService.BaseCoreGenericHandler(this));
+    private final LiteBansModule_162 LiteBansModule_195 = ProxyConnection.BaseCoreGenericHandler(() -> ConfigService.c(this));
     private Object CommandThrottleService;
     private GeoIPLookupService_2 B;
     private boolean q;
     private boolean e = true;
     private int ServerSyncService;
-    private final LiteBansModule_138 BanHandler_2 = new LiteBansModule_138(false, false, 3, null);
+    private final LiteBansModule_139 BanHandler_2 = new LiteBansModule_139(false, false, 3, null);
     private LiteBansModule_15 PunishmentTableService;
-    private long LiteBansModule_401 = Long.MAX_VALUE;
-    private byte LiteBansModule_433;
-    private String LiteBansModule_240;
-    private LiteBansModule_324 D = new LiteBansModule_307();
+    private long LiteBansModule_403 = Long.MAX_VALUE;
+    private byte LiteBansModule_435;
+    private String LiteBansModule_241;
+    private LiteBansModule_325 D = new LiteBansModule_308();
     public static final int i;
     public static final String BroadcastService;
     public static final int r;
     private static int AsyncBackgroundTask_22;
     private static final AtomicBoolean z;
     private static final AtomicBoolean g;
-    public ConfigService(@NotNull PlatformPlugin plugin) {
+        public ConfigService(@NotNull PlatformPlugin plugin) {
         super(plugin);
         int n;
         Integer[] integerArray = new Integer[]{29, 5, 7, 1, 5};
@@ -67,7 +67,7 @@ extends PluginModule {
         for (Integer n3 : integerArray) {
             int n4 = ((Number)n3).intValue();
             n = n2;
-            int n5 = this.LiteBansModule_433 ^ n4;
+            int n5 = this.LiteBansModule_435 ^ n4;
             n2 = n + n5;
         }
         n = n2;
@@ -86,7 +86,7 @@ extends PluginModule {
         return this.HoverTextFormatter;
     }
 
-    public final DiscordWebhookClient LiteBansModule_194() {
+    public final DiscordWebhookClient LiteBansModule_195() {
         DiscordWebhookClient eG2 = this.n;
         if (eG2 != null) {
             return eG2;
@@ -138,13 +138,13 @@ extends PluginModule {
         this.m = h72;
     }
 
-    public final LiteBansModule_409 Utf8Handler_2() {
-        LiteBansModule_161 eE2 = this.AsyncBackgroundTask_5;
-        return (LiteBansModule_409)eE2.BaseCoreGenericHandler();
+    public final LiteBansModule_411 Utf8Handler_2() {
+        LiteBansModule_162 eE2 = this.AsyncBackgroundTask_5;
+        return (LiteBansModule_411)eE2.BaseCoreGenericHandler();
     }
 
     public final boolean HoverTextFormatter() {
-        LiteBansModule_161 eE2 = this.LiteBansModule_194;
+        LiteBansModule_162 eE2 = this.LiteBansModule_195;
         return (Boolean)eE2.BaseCoreGenericHandler();
     }
 
@@ -152,7 +152,7 @@ extends PluginModule {
         return this.CommandThrottleService;
     }
 
-    public final GeoIPLookupService_2 LiteBansModule_240() {
+    public final GeoIPLookupService_2 LiteBansModule_241() {
         return this.B;
     }
 
@@ -160,7 +160,7 @@ extends PluginModule {
         this.B = fv_02;
     }
 
-    public final boolean LiteBansModule_433() {
+    public final boolean LiteBansModule_435() {
         return this.e;
     }
 
@@ -176,7 +176,7 @@ extends PluginModule {
         this.ServerSyncService = n;
     }
 
-    public final LiteBansModule_138 r() {
+    public final LiteBansModule_139 r() {
         return this.BanHandler_2;
     }
 
@@ -189,34 +189,34 @@ extends PluginModule {
     }
 
     public final long q() {
-        return this.LiteBansModule_401;
+        return this.LiteBansModule_403;
     }
 
     public final void BaseCoreGenericHandler(long l3) {
-        this.LiteBansModule_401 = l3;
+        this.LiteBansModule_403 = l3;
     }
 
-    public final byte LiteBansModule_401() {
-        return this.LiteBansModule_433;
+    public final byte LiteBansModule_403() {
+        return this.LiteBansModule_435;
     }
 
     public final void c(byte by2) {
-        this.LiteBansModule_433 = by2;
+        this.LiteBansModule_435 = by2;
     }
 
     public final String GnuSparseMapHandler() {
-        return this.LiteBansModule_240;
+        return this.LiteBansModule_241;
     }
 
     public final void c(@Nullable String string) {
-        this.LiteBansModule_240 = string;
+        this.LiteBansModule_241 = string;
     }
 
-    public final LiteBansModule_324 i() {
+    public final LiteBansModule_325 i() {
         return this.D;
     }
 
-    public final void BaseCoreGenericHandler(@NotNull LiteBansModule_324 iX2) {
+    public final void BaseCoreGenericHandler(@NotNull LiteBansModule_325 iX2) {
         this.D = iX2;
     }
 
@@ -227,16 +227,18 @@ extends PluginModule {
     public final void BaseCoreGenericHandler(int n, @Nullable Object targetObj) {
         if (this.plugin(n)) {
             this.plugin(targetObj);
-}
+        }
+    }
 
     public final void BaseCoreGenericHandler(@Nullable Object targetObj) {
         if (targetObj instanceof Throwable) {
-            targetObj.printStackTrace();
+            ((Throwable)targetObj).printStackTrace();
         } else {
             PluginModule module = this;
             String string = String.valueOf(targetObj);
             module.BaseCoreGenericHandler.getLogger().info(string);
-}
+        }
+    }
 
     public final boolean g() {
         return this.LiteBansModule_31 == this.AsyncBackgroundTask_21;
@@ -248,7 +250,7 @@ extends PluginModule {
             for (CharSequence charSequence : charSequenceArray2 = charSequenceArray) {
                 this.plugin(charSequence);
             }
-            return LiteBansModule_72.LiteBansModule_31(charSequenceArray2.length);
+            return LiteBansModule_73.LiteBansModule_31(charSequenceArray2.length);
         }
         return -1;
     }
@@ -259,13 +261,14 @@ extends PluginModule {
                 PluginModule module = this;
                 String string = "0xAAA";
                 module.BaseCoreGenericHandler.getLogger().warning(string);
-                targetObj.printStackTrace();
+                ((Throwable)targetObj).printStackTrace();
             } else {
                 PluginModule n_03 = this;
                 String string = "0xAAA " + targetObj;
                 n_03.BaseCoreGenericHandler.getLogger().warning(string);
                 Thread.dumpStack();
-} else if (n == 1 && targetObj instanceof Throwable) {
+            }
+        } else if (n == 1 && targetObj instanceof Throwable) {
             Object contextObj = targetObj.getClass().getName();
             for (int i = 0; i < contextObj.length(); ++i) {
                 char c;
@@ -276,10 +279,12 @@ extends PluginModule {
             }
             int n5 = n2;
             if (n5 == 3140) {
-                contextObj = new LiteBansModule_324(0L, 1, null);
-                this.LiteBansModule_433 = (byte)(((LiteBansModule_324)contextObj).BaseCoreGenericHandler(2) + 1);
-                this.LiteBansModule_401 = (long)((LiteBansModule_324)contextObj).BaseCoreGenericHandler(23) + 1L;
-}
+                contextObj = new LiteBansModule_325(0L, 1, null);
+                this.LiteBansModule_435 = (byte)(((LiteBansModule_325)contextObj).BaseCoreGenericHandler(2) + 1);
+                this.LiteBansModule_403 = (long)((LiteBansModule_325)contextObj).BaseCoreGenericHandler(23) + 1L;
+            }
+        }
+    }
 
     public static /* synthetic */ void BaseCoreGenericHandler(ConfigService configService, Object targetObj, int n, int n2, Object contextObj) {
         if ((n2 & 2) != 0) {
@@ -290,7 +295,7 @@ extends PluginModule {
 
     public final String LiteBansModule_31(@Nullable String string) {
         Object targetObj = this.B;
-        if (targetObj == null || (targetObj = targetObj.LiteBansModule_31(string)) == null) {
+        if (targetObj == null || (targetObj = ((GeoIPLookupService_2)targetObj).LiteBansModule_31(string)) == null) {
             targetObj = "geoip.unavailable";
         }
         return targetObj;
@@ -302,7 +307,7 @@ extends PluginModule {
         this.plugin.m();
         g.set(false);
         ConfigService configService = this;
-        if (configService.LiteBansModule_194().D()) {
+        if (configService.LiteBansModule_195().D()) {
             try {
                 BroadcastService o2 = (BroadcastService)configService.BaseCoreGenericHandler.BaseCoreGenericHandler(BroadcastService.class);
                 Object contextObj = configService.BaseCoreGenericHandler.getDataFolder();
@@ -316,16 +321,19 @@ extends PluginModule {
                 }
                 LitebansLockdownBypassHandler gG2 = o2.e();
                 if ((gG2 != null ? gG2.c() : null) == null) {
-                    targetObj = LiteBansModule_112.LiteBansModule_31(file);
+                    targetObj = LiteBansModule_113.LiteBansModule_31(file);
                 } else {
                     contextObj = configService.BaseCoreGenericHandler.BaseCoreGenericHandler(file).g();
                     LitebansLockdownBypassHandler gG3 = o2.e();
                     LitebansLockdownBypassHandler gG4 = o2.e();
-                    targetObj = contextObj.LiteBansModule_31("reason", gG3 != null ? gG3.c() : null).LiteBansModule_31("scope", gG4 != null ? gG4.BaseCoreGenericHandler() : null).LiteBansModule_240();
-}
+                    targetObj = contextObj.LiteBansModule_31("reason", gG3 != null ? gG3.c() : null).LiteBansModule_31("scope", gG4 != null ? gG4.BaseCoreGenericHandler() : null).LiteBansModule_241();
+                }
+            }
             catch (Exception exception) {
                 exception.printStackTrace();
-}
+            }
+        }
+    }
 
     public final void LiteBansModule_31(byte by2) {
         try {
@@ -341,7 +349,8 @@ extends PluginModule {
             String string2 = string;
             module.BaseCoreGenericHandler.getLogger().warning(string2);
             return;
-}
+        }
+    }
 
     public final Void BaseCoreGenericHandler(byte by2, boolean flag) {
         if (flag) {
@@ -349,14 +358,15 @@ extends PluginModule {
             if (configService.g()) {
                 ConfigService q_03 = configService;
                 q_03.BaseCoreGenericHandler((Object)("" + '!' + by2 + '!'));
-}
+            }
+        }
         throw new RuntimeException("Error 0x" + by2);
     }
 
     @Override
     public void BaseCoreGenericHandler() {
-        LiteBansModule_209.LiteBansModule_31.BaseCoreGenericHandler(true);
-        LiteBansModule_209.LiteBansModule_31.BaseCoreGenericHandler(this.plugin);
+        LiteBansModule_210.LiteBansModule_31.BaseCoreGenericHandler(true);
+        LiteBansModule_210.LiteBansModule_31.BaseCoreGenericHandler(this.plugin);
         if (this.c >= 1) {
             return;
         }
@@ -369,36 +379,39 @@ extends PluginModule {
             this.plugin(exception);
         }
         this.plugin.BroadcastService();
-                Logger logger = targetObj.BaseCoreGenericHandler.getLogger();
-        Throwable throwable = targetObj.BaseCoreGenericHandler.LiteBansModule_240().LiteBansModule_31();
+                Logger logger = ((ConfigService)targetObj).BaseCoreGenericHandler.getLogger();
+        Throwable throwable = ((ConfigService)targetObj).BaseCoreGenericHandler.LiteBansModule_241().LiteBansModule_31();
         if (throwable != null) {
             Throwable throwable2 = throwable;
-            targetObj.BaseCoreGenericHandler("config", throwable2);
-            if (targetObj.BaseCoreGenericHandler.LiteBansModule_240().c().exists()) {
+            ((ConfigService)targetObj).BaseCoreGenericHandler("config", throwable2);
+            if (((ConfigService)targetObj).BaseCoreGenericHandler.LiteBansModule_241().c().exists()) {
                 logger.severe("[!!] Your configuration might be invalid. It can be verified with https://yaml-online-parser.appspot.com/");
             } else {
-                logger.severe("[!!] Configuration does not exist! Ensure that read/write permissions are correct. (\"" + targetObj.BaseCoreGenericHandler.LiteBansModule_240().c().getAbsolutePath() + "\")");
+                logger.severe("[!!] Configuration does not exist! Ensure that read/write permissions are correct. (\"" + ((ConfigService)targetObj).BaseCoreGenericHandler.LiteBansModule_241().c().getAbsolutePath() + "\")");
             }
-            if (targetObj.BaseCoreGenericHandler(2)) {
-                targetObj.BaseCoreGenericHandler(throwable2);
-}
+            if (((ConfigService)targetObj).BaseCoreGenericHandler(2)) {
+                ((ConfigService)targetObj).BaseCoreGenericHandler(throwable2);
+            }
+        }
         targetObj = new DiscordWebhookClient(this.plugin, null, 2, null);
-        this.plugintargetObj;
+        this.plugin((DiscordWebhookClient)targetObj);
     }
 
     private final void ServerSyncService() {
         if (YamlConfigProvider.AsyncBackgroundTask_5() == null) {
-            DatabaseMonitorService w2 = this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
-            JarHandler jP2 = new JarHandler("SnakeYAML", LiteBansModule_123.class.getName(), "https://repo1.maven.org/maven2/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar", "2.4", "ef779af5d29a9dde8cc70ce0341f5c6f7735e23edff9685ceaa9d35359b7bb7f");
+            DatabaseMonitorService w2 = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+            JarHandler jP2 = new JarHandler("SnakeYAML", LiteBansModule_124.class.getName(), "https://repo1.maven.org/maven2/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar", "2.4", "ef779af5d29a9dde8cc70ce0341f5c6f7735e23edff9685ceaa9d35359b7bb7f");
             Object targetObj = litebans.DatabaseMonitorService.BaseCoreGenericHandler(w2, jP2, false, false, 2, null);
             ObjectUtilities.LiteBansModule_31(targetObj, "");
             Class clazz = (Class)targetObj;
-            this.plugin.BaseCoreGenericHandler(new LiteBansModule_186(this, clazz));
-}
+            this.plugin.BaseCoreGenericHandler(new LiteBansModule_187(this, clazz));
+        }
+    }
 
     @Override
     public void e() {
-{
+        block97: {
+            block96: {
                 v1 = this.plugin;
                 v2 = (BroadcastService)v1.BaseCoreGenericHandler(BroadcastService.class);
                 if (this.c >= 2) {
@@ -406,584 +419,616 @@ extends PluginModule {
                 }
                 this.plugin();
                 this.c = (byte)2;
-                v1.LiteBansModule_31((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, BaseCoreGenericHandler(litebans.ConfigService litebans.PlatformPlugin ), ()V)(this, (PlatformPlugin)v1));
-                v2.LiteBansModule_31(this.LiteBansModule_194().ElementsHandler());
+                v1.LiteBansModule_31((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, BaseCoreGenericHandler(litebans.ConfigService litebans.PlatformPlugin ), ()V)((ConfigService)this, (PlatformPlugin)v1));
+                v2.LiteBansModule_31(this.LiteBansModule_195().ElementsHandler());
                 ObjectUtilities.BaseCoreGenericHandler(v1);
                 v3 = new TemplatesYmlHandler(v1, null, false, 6, null);
-                                arg2 = v5 = v3;
+                v4 = this;
+                v5 = v6 = v3;
                 try {
-{
+                    block112: {
                         v3.c().BaseCoreGenericHandler("templates.yml");
-                        arg3 = v3.c().BaseCoreGenericHandler(v3.LiteBansModule_31()).g();
-                        arg3.BaseCoreGenericHandler(DatabaseService.LiteBansModule_31("templates.yml", null));
-                        v3.BaseCoreGenericHandler(arg3);
+                        v7 = v3.c().BaseCoreGenericHandler(v3.LiteBansModule_31()).g();
+                        v7.BaseCoreGenericHandler(DatabaseService.LiteBansModule_31("templates.yml", null));
+                        v3.BaseCoreGenericHandler(v7);
                         v3.AsyncBackgroundTask_5().clear();
-                        arg4 = v3;
-                        v0 = arg4.BaseCoreGenericHandler();
+                        v8 = v3;
+                        v0 = v8.BaseCoreGenericHandler();
                         ObjectUtilities.BaseCoreGenericHandler(v0);
-                        arg5 = v0;
-                        arg6 = BanHandler.LiteBansModule_401.BaseCoreGenericHandler();
-                        arg7 = arg6;
-                        arg8 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)arg6, 10));
-                        for (Object arg9 : arg7) {
-                            arg10 = (BanHandler)arg9;
-                            arg11 = arg8;
-                            arg11.add(LiteBansModule_371.BaseCoreGenericHandler(arg10, arg5.BaseCoreGenericHandler(arg10 + "-templates")));
+                        v9 = v0;
+                        v10 = BanHandler.LiteBansModule_403.BaseCoreGenericHandler();
+                        v11 = v10;
+                        v12 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)v10, 10));
+                        for (Object v13 : v11) {
+                            v14 = (BanHandler)v13;
+                            v15 = v12;
+                            v15.add(LiteBansModule_373.BaseCoreGenericHandler(v14, v9.BaseCoreGenericHandler(v14 + "-templates")));
                         }
-                        arg12 = (List)arg8;
-                        for (LiteBansModule_354 arg13 : arg12) {
-                            arg8 = (LiteBansModule_390)arg13.e();
-                            if (arg8 == null) continue;
-                            arg14 = arg8.BaseCoreGenericHandler(false);
-                            arg15 = arg4.AsyncBackgroundTask_5();
-                            ObjectUtilities.BaseCoreGenericHandler(arg14);
-                            arg9 = arg14;
-                            arg16 = arg9;
-                            arg17 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler(arg9, 10));
-                            arg18 = arg16.iterator();
-                            while (arg18.hasNext()) {
-{
-                                        arg19 = arg18.next();
-                                        arg20 = (String)arg19;
-                                        arg11 = arg17;
-                                        arg21 = arg4;
-                                        arg22 = arg23;
-                                        arg23 = LiteBansModule_283.BaseCoreGenericHandler((byte)(arg22 + 1));
-                                        arg24 = (BanHandler)arg13.LiteBansModule_31();
-                                        v1 = arg13.e();
+                        v16 = (List)v12;
+                        for (LiteBansModule_356 v17 : v16) {
+                            v12 = (LiteBansModule_392)v17.e();
+                            if (v12 == null) continue;
+                            v18 = v12.BaseCoreGenericHandler(false);
+                            v19 = v8.AsyncBackgroundTask_5();
+                            ObjectUtilities.BaseCoreGenericHandler(v18);
+                            v13 = v18;
+                            v20 = v13;
+                            v21 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler(v13, 10));
+                            v22 = v20.iterator();
+                            while (v22.hasNext()) {
+                                block105: {
+                                    block104: {
+                                        v23 = v22.next();
+                                        v24 = (String)v23;
+                                        v15 = v21;
+                                        v25 = v8;
+                                        v26 = v27;
+                                        v27 = LiteBansModule_284.BaseCoreGenericHandler((byte)(v26 + 1));
+                                        v28 = (BanHandler)v17.LiteBansModule_31();
+                                        v1 = v17.e();
                                         ObjectUtilities.BaseCoreGenericHandler(v1);
-                                        arg25 = ((LiteBansModule_390)v1).BaseCoreGenericHandler((String)arg20);
-                                        ObjectUtilities.BaseCoreGenericHandler(arg20);
-                                        arg26 = arg20;
-                                        if (!(arg25 != null)) {
-                                            arg27 = "Empty template: '" + (String)arg26 + '\'';
-                                            throw new IllegalArgumentException(arg27.toString());
+                                        v29 = ((LiteBansModule_392)v1).BaseCoreGenericHandler((String)v24);
+                                        ObjectUtilities.BaseCoreGenericHandler(v24);
+                                        v30 = v24;
+                                        if (!(v29 != null)) {
+                                            v31 = "Empty template: '" + (String)v30 + '\'';
+                                            throw new IllegalArgumentException(v31.toString());
                                         }
-                                        if (!(StringUtilities.c(arg26, ' ', false, 2, null) == false && StringUtilities.c(arg26, '.', false, 2, null) == false)) {
-                                            arg28 = "Template name '" + (String)arg26 + "' cannot include dots or spaces! Use dashes or underscores instead + ";
-                                            throw new IllegalArgumentException(arg28.toString());
+                                        if (!(StringUtilities.c((CharSequence)v30, ' ', false, 2, null) == false && StringUtilities.c((CharSequence)v30, '.', false, 2, null) == false)) {
+                                            v32 = "Template name '" + (String)v30 + "' cannot include dots or spaces! Use dashes or underscores instead + ";
+                                            throw new IllegalArgumentException(v32.toString());
                                         }
-                                        arg29 = "";
-                                        if (!(arg25 != null)) {
-                                            arg30 = arg24 + " template '" + (String)arg29 + "' has invalid section + ";
-                                            throw new IllegalArgumentException(arg30.toString());
+                                        v33 = "";
+                                        if (!(v29 != null)) {
+                                            v34 = v28 + " template '" + (String)v33 + "' has invalid section + ";
+                                            throw new IllegalArgumentException(v34.toString());
                                         }
-                                        arg31 = arg25.BaseCoreGenericHandler(false);
-                                        arg32 = CollectionUtilities.e();
-                                        arg33 = CollectionUtilities.e();
-                                        ObjectUtilities.BaseCoreGenericHandler(arg31);
-                                        arg34   = (Iterable)arg31;
-                                        for (T arg35 : arg34  ) {
-{
-                                                                    arg36 = (String)arg35;
-                                                                    arg37 = arg36;
-                                                                    if (arg37 == null) continue;
-                                                                    switch (arg37.hashCode()) {
+                                        v35 = v29.BaseCoreGenericHandler(false);
+                                        v36 = CollectionUtilities.e();
+                                        v37 = CollectionUtilities.e();
+                                        ObjectUtilities.BaseCoreGenericHandler(v35);
+                                        v38   = (Iterable)v35;
+                                        for (T v39 : v38  ) {
+                                            block100: {
+                                                block103: {
+                                                    block101: {
+                                                        block98: {
+                                                            block99: {
+                                                                block102: {
+                                                                    v40 = (String)v39;
+                                                                    v41 = v40;
+                                                                    if (v41 == null) continue;
+                                                                    switch (v41.hashCode()) {
                                                                         case -1992012396: {
-                                                                            if (arg37.equals("duration")) break;
+                                                                            if (v41.equals("duration")) break;
                                                                             break;
                                                                         }
                                                                         case -1618876223: {
-                                                                            if (!arg37.equals("broadcast")) {
+                                                                            if (!v41.equals("broadcast")) {
                                                                                 break;
                                                                             }
-                                                                            break;
+                                                                            break block98;
                                                                         }
                                                                         case -934964668: {
-                                                                            if (!arg37.equals("reason")) {
+                                                                            if (!v41.equals("reason")) {
                                                                                 break;
                                                                             }
-                                                                            break;
+                                                                            break block99;
                                                                         }
                                                                         case 97513095: {
-                                                                            if (!arg37.equals("flags")) {
+                                                                            if (!v41.equals("flags")) {
                                                                                 break;
                                                                             }
-                                                                            break;
+                                                                            break block100;
                                                                         }
                                                                         case -517618225: {
-                                                                            if (!arg37.equals("permission")) {
+                                                                            if (!v41.equals("permission")) {
                                                                                 break;
                                                                             }
-                                                                            break;
+                                                                            break block101;
                                                                         }
                                                                         case 954925063: {
-                                                                            if (!arg37.equals("message")) {
+                                                                            if (!v41.equals("message")) {
                                                                                 break;
                                                                             }
-                                                                            break;
+                                                                            break block102;
                                                                         }
                                                                         case -1161803523: {
-                                                                            if (!arg37.equals("actions")) {
+                                                                            if (!v41.equals("actions")) {
                                                                                 break;
                                                                             }
-                                                                            break;
-}
-                                                                    arg38 = (long)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, arg25.e((String)arg36), 0.0, 2, null);
+                                                                            break block103;
+                                                                        }
+                                                                    }
+                                                                    v42 = (long)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, v29.e((String)v40), 0.0, 2, null);
                                                                     break;
                                                                 }
-                                                                arg39 = arg25.e((String)arg36);
+                                                                v43 = v29.e((String)v40);
                                                                 break;
                                                             }
-                                                            arg40 = arg25.e((String)arg36);
+                                                            v44 = v29.e((String)v40);
                                                             break;
                                                         }
-                                                        arg41 = arg25.e((String)arg36);
+                                                        v45 = v29.e((String)v40);
                                                         break;
                                                     }
-                                                    arg42 = arg25.e((String)arg36);
+                                                    v46 = v29.e((String)v40);
                                                     break;
                                                 }
-                                                arg32 = arg21.BaseCoreGenericHandler(arg25, (String)arg36);
+                                                v36 = v25.BaseCoreGenericHandler(v29, (String)v40);
                                                 break;
                                             }
-                                            arg33 = arg21.BaseCoreGenericHandler(arg25, (String)arg36);
+                                            v37 = v25.BaseCoreGenericHandler(v29, (String)v40);
                                                                                     }
-                                        arg43 = LiteBansModule_337.BaseCoreGenericHandler[arg24.ordinal()] == 1 ? new LiteBansModule_66((String)arg39, arg40, (String)arg41, (String)arg42, arg32, (List)arg33) : (LiteBansModule_66)new LiteBansModule_105(arg38, (String)arg39, arg40, (String)arg41, (String)arg42, arg32, (List)arg33);
-                                        arg44 = arg21;
-                                        v2 = arg25.BaseCoreGenericHandler("ladder");
-                                        if (v2 != null) break;
+                                        v47 = LiteBansModule_338.BaseCoreGenericHandler[v28.ordinal()] == 1 ? new LiteBansModule_67((String)v43, v44, (String)v45, (String)v46, v36, (List)v37) : (LiteBansModule_67)new LiteBansModule_106(v42, (String)v43, v44, (String)v45, (String)v46, v36, (List)v37);
+                                        v48 = v25;
+                                        v2 = v29.BaseCoreGenericHandler("ladder");
+                                        if (v2 != null) break block104;
                                         v3 = CollectionUtilities.e();
-                                        break;
+                                        break block105;
                                     }
-                                    arg31 = v2;
-                                    arg39 = arg31.BaseCoreGenericHandler(false);
-                                    arg41 = arg39;
-                                    arg42 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)arg39, 10));
-                                    arg33 = arg41.iterator();
-                                    while (arg33.hasNext()) {
-                                        arg34   = arg33.next();
-                                        arg45 = (String)arg34  ;
-                                        arg46 = arg42;
-                                        arg46.add(arg31.BaseCoreGenericHandler(arg45));
+                                    v35 = v2;
+                                    v43 = v35.BaseCoreGenericHandler(false);
+                                    v45 = v43;
+                                    v46 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)v43, 10));
+                                    v37 = v45.iterator();
+                                    while (v37.hasNext()) {
+                                        v38   = v37.next();
+                                        v49 = (String)v38  ;
+                                        v50 = v46;
+                                        v50.add(v35.BaseCoreGenericHandler(v49));
                                     }
-                                    arg39 = (List)arg42;
-                                    arg41 = arg39;
-                                    arg42 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)arg39, 10));
-                                    arg33 = arg41.iterator();
-                                    while (arg33.hasNext()) {
-                                        arg34   = arg33.next();
-                                        arg47 = (LiteBansModule_390)arg34  ;
-                                        arg46 = arg42;
-                                        arg36 = arg44;
-                                        if (!(arg47 != null)) {
-                                            arg48 = arg24 + " template '" + (String)arg26 + "' has invalid section + ";
-                                            throw new IllegalArgumentException(arg48.toString());
+                                    v43 = (List)v46;
+                                    v45 = v43;
+                                    v46 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)v43, 10));
+                                    v37 = v45.iterator();
+                                    while (v37.hasNext()) {
+                                        v38   = v37.next();
+                                        v51 = (LiteBansModule_392)v38  ;
+                                        v50 = v46;
+                                        v40 = v48;
+                                        if (!(v51 != null)) {
+                                            v52 = v28 + " template '" + (String)v30 + "' has invalid section + ";
+                                            throw new IllegalArgumentException(v52.toString());
                                         }
-                                        arg49   = arg47.BaseCoreGenericHandler(false);
-                                        arg50   = CollectionUtilities.e();
-                                        arg51 = CollectionUtilities.e();
-                                        ObjectUtilities.BaseCoreGenericHandler(arg49  );
-                                        arg52 = arg49  ;
-                                        for (T arg53 : arg52) {
-{
-                                                                    arg54   = (String)arg53;
-                                                                    arg55 = arg54  ;
-                                                                    if (arg55 == null) continue;
-                                                                    switch (arg55.hashCode()) {
+                                        v53   = v51.BaseCoreGenericHandler(false);
+                                        v54   = CollectionUtilities.e();
+                                        v55 = CollectionUtilities.e();
+                                        ObjectUtilities.BaseCoreGenericHandler(v53  );
+                                        v56 = v53  ;
+                                        for (T v57 : v56) {
+                                            block108: {
+                                                block111: {
+                                                    block109: {
+                                                        block106: {
+                                                            block107: {
+                                                                block110: {
+                                                                    v58   = (String)v57;
+                                                                    v59 = v58  ;
+                                                                    if (v59 == null) continue;
+                                                                    switch (v59.hashCode()) {
                                                                         case -1992012396: {
-                                                                            if (arg55.equals("duration")) break;
+                                                                            if (v59.equals("duration")) break;
                                                                             break;
                                                                         }
                                                                         case -1618876223: {
-                                                                            if (!arg55.equals("broadcast")) {
+                                                                            if (!v59.equals("broadcast")) {
                                                                                 break;
                                                                             }
-                                                                            break;
+                                                                            break block106;
                                                                         }
                                                                         case -934964668: {
-                                                                            if (!arg55.equals("reason")) {
+                                                                            if (!v59.equals("reason")) {
                                                                                 break;
                                                                             }
-                                                                            break;
+                                                                            break block107;
                                                                         }
                                                                         case 97513095: {
-                                                                            if (!arg55.equals("flags")) {
+                                                                            if (!v59.equals("flags")) {
                                                                                 break;
                                                                             }
-                                                                            break;
+                                                                            break block108;
                                                                         }
                                                                         case -517618225: {
-                                                                            if (!arg55.equals("permission")) {
+                                                                            if (!v59.equals("permission")) {
                                                                                 break;
                                                                             }
-                                                                            break;
+                                                                            break block109;
                                                                         }
                                                                         case 954925063: {
-                                                                            if (!arg55.equals("message")) {
+                                                                            if (!v59.equals("message")) {
                                                                                 break;
                                                                             }
-                                                                            break;
+                                                                            break block110;
                                                                         }
                                                                         case -1161803523: {
-                                                                            if (!arg55.equals("actions")) {
+                                                                            if (!v59.equals("actions")) {
                                                                                 break;
                                                                             }
-                                                                            break;
-}
-                                                                    arg37 = (long)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, arg47.e(arg54  ), 0.0, 2, null);
+                                                                            break block111;
+                                                                        }
+                                                                    }
+                                                                    v41 = (long)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, v51.e(v58  ), 0.0, 2, null);
                                                                     break;
                                                                 }
-                                                                arg56 = arg47.e(arg54  );
+                                                                v60 = v51.e(v58  );
                                                                 break;
                                                             }
-                                                            arg57 = arg47.e(arg54  );
+                                                            v61 = v51.e(v58  );
                                                             break;
                                                         }
-                                                        arg58 = arg47.e(arg54  );
+                                                        v62 = v51.e(v58  );
                                                         break;
                                                     }
-                                                    arg59 = arg47.e(arg54  );
+                                                    v63 = v51.e(v58  );
                                                     break;
                                                 }
-                                                arg50   = arg36.BaseCoreGenericHandler(arg47, arg54  );
+                                                v54   = v40.BaseCoreGenericHandler(v51, v58  );
                                                 break;
                                             }
-                                            arg51 = arg36.BaseCoreGenericHandler(arg47, arg54  );
+                                            v55 = v40.BaseCoreGenericHandler(v51, v58  );
                                                                                     }
-                                        arg46.add(LiteBansModule_337.BaseCoreGenericHandler[arg24.ordinal()] == 1 ? new LiteBansModule_66((String)arg56, (String)arg57, arg58, (String)arg59, (List)arg50  , (List)arg51) : (LiteBansModule_66)new LiteBansModule_105((Long)arg37, (String)arg56, (String)arg57, arg58, (String)arg59, (List)arg50  , (List)arg51));
+                                        v50.add(LiteBansModule_338.BaseCoreGenericHandler[v28.ordinal()] == 1 ? new LiteBansModule_67((String)v60, (String)v61, v62, (String)v63, (List)v54  , (List)v55) : (LiteBansModule_67)new LiteBansModule_106((Long)v41, (String)v60, (String)v61, v62, (String)v63, (List)v54  , (List)v55));
                                     }
-                                    v3 = CollectionUtilities.c((Iterable)((List)arg42));
+                                    v3 = CollectionUtilities.c((Iterable)((List)v46));
                                 }
-                                arg29 = v3;
-                                arg60 = (long)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, arg25.BaseCoreGenericHandler("expire_ladder", "0"), 0.0, 2, null);
-                                arg61 = arg25.BaseCoreGenericHandler("ip_template", false);
-                                arg11.add(new LiteBansModule_65(arg22, (String)arg26, (BanHandler)arg24, (LiteBansModule_66)arg43, arg61, (List)arg29, arg60, null));
+                                v33 = v3;
+                                v64 = (long)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, v29.BaseCoreGenericHandler("expire_ladder", "0"), 0.0, 2, null);
+                                v65 = v29.BaseCoreGenericHandler("ip_template", false);
+                                v15.add(new LiteBansModule_65(v26, (String)v30, (BanHandler)v28, (LiteBansModule_67)v47, v65, (List)v33, v64, null));
                             }
-                            arg9 = (List)arg17;
-                            CollectionUtilities.BaseCoreGenericHandler((Collection)arg15, (Iterable)arg9);
+                            v13 = (List)v21;
+                            CollectionUtilities.BaseCoreGenericHandler((Collection)v19, (Iterable)v13);
                         }
-                        arg4.c().getLogger().info("Loaded " + arg4.AsyncBackgroundTask_5().size() + " templates from templates.yml!");
-                        arg6 = arg5.BaseCoreGenericHandler("template-groups");
-                        if (arg6 == null) break;
-                        arg62 = arg6.BaseCoreGenericHandler(false);
-                        v4 = arg4.e();
-                        ObjectUtilities.BaseCoreGenericHandler(arg62);
-                        arg7 = arg62;
-                        arg63 = v4;
-                        arg11 = arg4;
-                        arg64 = arg7;
-                        arg15 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler(arg7, 10));
-                        for (T arg65 : arg64) {
-{
-                                        arg17 = (String)arg65;
-                                        arg66 = arg15;
-                                        arg18 = arg4;
-                                        arg19 = arg6.BaseCoreGenericHandler((String)arg17);
-                                        ObjectUtilities.BaseCoreGenericHandler(arg17);
-                                        arg20 = arg17;
-                                        v5 = arg19;
-                                        arg21 = v5 != null ? v5.BaseCoreGenericHandler("weights") : null;
-                                        if (!(arg19 != null)) {
-                                            arg67 = "Empty template group: '" + (String)arg20 + '\'';
-                                            throw new IllegalArgumentException(arg67.toString());
+                        v8.c().getLogger().info("Loaded " + v8.AsyncBackgroundTask_5().size() + " templates from templates.yml!");
+                        v10 = v9.BaseCoreGenericHandler("template-groups");
+                        if (v10 == null) break block112;
+                        v66 = v10.BaseCoreGenericHandler(false);
+                        v4 = v8.e();
+                        ObjectUtilities.BaseCoreGenericHandler(v66);
+                        v11 = v66;
+                        v67 = v4;
+                        v15 = v8;
+                        v68 = v11;
+                        v19 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler(v11, 10));
+                        for (T v69 : v68) {
+                            block114: {
+                                block113: {
+                                    block95: {
+                                        v21 = (String)v69;
+                                        v70 = v19;
+                                        v22 = v8;
+                                        v23 = v10.BaseCoreGenericHandler((String)v21);
+                                        ObjectUtilities.BaseCoreGenericHandler(v21);
+                                        v24 = v21;
+                                        v5 = v23;
+                                        v25 = v5 != null ? v5.BaseCoreGenericHandler("weights") : null;
+                                        if (!(v23 != null)) {
+                                            v71 = "Empty template group: '" + (String)v24 + '\'';
+                                            throw new IllegalArgumentException(v71.toString());
                                         }
-                                        if (!(arg21 != null)) {
-                                            arg68 = "No weights for template group '" + (String)arg20 + "'!";
-                                            throw new IllegalArgumentException(arg68.toString());
+                                        if (!(v25 != null)) {
+                                            v72 = "No weights for template group '" + (String)v24 + "'!";
+                                            throw new IllegalArgumentException(v72.toString());
                                         }
-                                        arg69   = BanHandler.values();
-                                        arg70 = arg69  .length;
-                                        for (arg71 = 0; arg71 < arg70; ++arg71) {
-                                            arg29 = arg72 = arg69  [arg71];
-                                            if (!ObjectUtilities.BaseCoreGenericHandler((Object)(arg19.BaseCoreGenericHandler("type", "") != null ? arg73.toLowerCase(Locale.ROOT) : null), arg29.toString())) continue;
-                                            v6 = arg72;
-                                            break;
+                                        v73   = BanHandler.values();
+                                        v74 = v73  .length;
+                                        for (v75 = 0; v75 < v74; ++v75) {
+                                            v33 = v76 = v73  [v75];
+                                            if (!ObjectUtilities.BaseCoreGenericHandler((Object)(v23.BaseCoreGenericHandler("type", "") != null ? v77.toLowerCase(Locale.ROOT) : null), (Object)v33.toString())) continue;
+                                            v6 = v76;
+                                            break block95;
                                         }
-                                        v6 = arg74 = null;
+                                        v6 = v78 = null;
                                     }
-                                    if (!(arg74 != null && arg74 == arg74.c())) {
-                                        arg75 = "Template group '" + (String)arg20 + "' type is missing: " + arg74;
-                                        throw new IllegalArgumentException(arg75.toString());
+                                    if (!(v78 != null && v78 == v78.c())) {
+                                        v79 = "Template group '" + (String)v24 + "' type is missing: " + v78;
+                                        throw new IllegalArgumentException(v79.toString());
                                     }
-                                    arg24 = arg18;
-                                    if (arg19.BaseCoreGenericHandler("ladder") != null) break;
+                                    v28 = v22;
+                                    if (v23.BaseCoreGenericHandler("ladder") != null) break block113;
                                     v7 = CollectionUtilities.e();
-                                    break;
+                                    break block114;
                                 }
-                                arg72 = arg76.BaseCoreGenericHandler(false);
-                                arg77 = arg72;
-                                arg73 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)arg72, 10));
-                                arg78 = arg77.iterator();
-                                while (arg78.hasNext()) {
-                                    arg41 = arg78.next();
-                                    arg79 = (String)arg41;
-                                    arg80 = arg73;
-                                    arg80.add(arg76.BaseCoreGenericHandler(arg79));
+                                v76 = v80.BaseCoreGenericHandler(false);
+                                v81 = v76;
+                                v77 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)v76, 10));
+                                v82 = v81.iterator();
+                                while (v82.hasNext()) {
+                                    v45 = v82.next();
+                                    v83 = (String)v45;
+                                    v84 = v77;
+                                    v84.add(v80.BaseCoreGenericHandler(v83));
                                 }
-                                arg72 = (List)arg73;
-                                arg77 = arg72;
-                                arg73 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)arg72, 10));
-                                arg78 = arg77.iterator();
-                                while (arg78.hasNext()) {
-                                    arg41 = arg78.next();
-                                    arg81 = (LiteBansModule_390)arg41;
-                                    arg82 = arg73;
-                                    arg83 = arg24;
-                                    if (!(arg81 != null)) {
-                                        arg84 = arg74 + " template '" + (String)arg20 + "' has invalid section + ";
-                                        throw new IllegalArgumentException(arg84.toString());
+                                v76 = (List)v77;
+                                v81 = v76;
+                                v77 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)v76, 10));
+                                v82 = v81.iterator();
+                                while (v82.hasNext()) {
+                                    v45 = v82.next();
+                                    v85 = (LiteBansModule_392)v45;
+                                    v86 = v77;
+                                    v87 = v28;
+                                    if (!(v85 != null)) {
+                                        v88 = v78 + " template '" + (String)v24 + "' has invalid section + ";
+                                        throw new IllegalArgumentException(v88.toString());
                                     }
-                                    arg85 = arg81.BaseCoreGenericHandler(false);
-                                    arg49   = CollectionUtilities.e();
-                                    arg56 = CollectionUtilities.e();
-                                    ObjectUtilities.BaseCoreGenericHandler(arg85);
-                                    arg57 = arg85;
-                                    arg59 = arg57.iterator();
-                                    while (arg59.hasNext()) {
-{
-                                                                arg50   = arg59.next();
-                                                                arg51 = (String)arg50  ;
-                                                                arg86 = arg51;
-                                                                if (arg86 == null) continue;
-                                                                switch (arg86.hashCode()) {
+                                    v89 = v85.BaseCoreGenericHandler(false);
+                                    v53   = CollectionUtilities.e();
+                                    v60 = CollectionUtilities.e();
+                                    ObjectUtilities.BaseCoreGenericHandler(v89);
+                                    v61 = v89;
+                                    v63 = v61.iterator();
+                                    while (v63.hasNext()) {
+                                        block117: {
+                                            block120: {
+                                                block118: {
+                                                    block115: {
+                                                        block116: {
+                                                            block119: {
+                                                                v54   = v63.next();
+                                                                v55 = (String)v54  ;
+                                                                v90 = v55;
+                                                                if (v90 == null) continue;
+                                                                switch (v90.hashCode()) {
                                                                     case -1992012396: {
-                                                                        if (arg86.equals("duration")) break;
+                                                                        if (v90.equals("duration")) break;
                                                                         break;
                                                                     }
                                                                     case -1618876223: {
-                                                                        if (!arg86.equals("broadcast")) {
+                                                                        if (!v90.equals("broadcast")) {
                                                                             break;
                                                                         }
-                                                                        break;
+                                                                        break block115;
                                                                     }
                                                                     case -934964668: {
-                                                                        if (!arg86.equals("reason")) {
+                                                                        if (!v90.equals("reason")) {
                                                                             break;
                                                                         }
-                                                                        break;
+                                                                        break block116;
                                                                     }
                                                                     case 97513095: {
-                                                                        if (!arg86.equals("flags")) {
+                                                                        if (!v90.equals("flags")) {
                                                                             break;
                                                                         }
-                                                                        break;
+                                                                        break block117;
                                                                     }
                                                                     case -517618225: {
-                                                                        if (!arg86.equals("permission")) {
+                                                                        if (!v90.equals("permission")) {
                                                                             break;
                                                                         }
-                                                                        break;
+                                                                        break block118;
                                                                     }
                                                                     case 954925063: {
-                                                                        if (!arg86.equals("message")) {
+                                                                        if (!v90.equals("message")) {
                                                                             break;
                                                                         }
-                                                                        break;
+                                                                        break block119;
                                                                     }
                                                                     case -1161803523: {
-                                                                        if (!arg86.equals("actions")) {
+                                                                        if (!v90.equals("actions")) {
                                                                             break;
                                                                         }
-                                                                        break;
-}
-                                                                arg87 = (long)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, arg81.e((String)arg51), 0.0, 2, null);
+                                                                        break block120;
+                                                                    }
+                                                                }
+                                                                v91 = (long)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, v85.e((String)v55), 0.0, 2, null);
                                                                 break;
                                                             }
-                                                            arg88 = arg81.e((String)arg51);
+                                                            v92 = v85.e((String)v55);
                                                             break;
                                                         }
-                                                        arg89 = arg81.e((String)arg51);
+                                                        v93 = v85.e((String)v55);
                                                         break;
                                                     }
-                                                    arg90 = arg81.e((String)arg51);
+                                                    v94 = v85.e((String)v55);
                                                     break;
                                                 }
-                                                arg43 = arg81.e((String)arg51);
+                                                v47 = v85.e((String)v55);
                                                 break;
                                             }
-                                            arg49   = arg83.BaseCoreGenericHandler(arg81, (String)arg51);
+                                            v53   = v87.BaseCoreGenericHandler(v85, (String)v55);
                                             break;
                                         }
-                                        arg56 = arg83.BaseCoreGenericHandler(arg81, (String)arg51);
+                                        v60 = v87.BaseCoreGenericHandler(v85, (String)v55);
                                                                             }
-                                    arg82.add(LiteBansModule_337.BaseCoreGenericHandler[arg74.ordinal()] == 1 ? new LiteBansModule_66(arg88, arg89, arg90, (String)arg43, arg49  , (List)arg56) : (LiteBansModule_66)new LiteBansModule_105(arg87, arg88, arg89, arg90, (String)arg43, arg49  , (List)arg56));
+                                    v86.add(LiteBansModule_338.BaseCoreGenericHandler[v78.ordinal()] == 1 ? new LiteBansModule_67(v92, v93, v94, (String)v47, v53  , (List)v60) : (LiteBansModule_67)new LiteBansModule_106(v91, v92, v93, v94, (String)v47, v53  , (List)v60));
                                 }
-                                v7 = CollectionUtilities.c((Iterable)((List)arg73));
+                                v7 = CollectionUtilities.c((Iterable)((List)v77));
                             }
-                            arg69   = v7;
-                            arg91 = (long)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, arg19.BaseCoreGenericHandler("expire_ladder", "0"), 0.0, 2, null);
-                            if (!(((Collection)arg69  ).isEmpty() == false)) {
-                                arg92 = "No ladder for template group '" + (String)arg20 + "'!";
-                                throw new IllegalArgumentException(arg92.toString());
+                            v73   = v7;
+                            v95 = (long)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, v23.BaseCoreGenericHandler("expire_ladder", "0"), 0.0, 2, null);
+                            if (!(((Collection)v73  ).isEmpty() == false)) {
+                                v96 = "No ladder for template group '" + (String)v24 + "'!";
+                                throw new IllegalArgumentException(v96.toString());
                             }
-                            arg72 = arg21.BaseCoreGenericHandler(false);
-                            arg93 = new LinkedHashMap<K, V>(LiteBansModule_20.c(LiteBansModule_348.BaseCoreGenericHandler(CollectionUtilities.BaseCoreGenericHandler((Iterable)arg72, 10)), 16));
-                            arg73 = arg72;
-                            arg94 = arg73.iterator();
-                            while (arg94.hasNext()) {
-                                arg41 = arg94.next();
-                                arg95   = arg41;
-                                arg54   = arg41;
-                                arg96 = (Map)arg93;
-                                arg55 = Float.valueOf((float)arg21.AsyncBackgroundTask_5(arg95  ));
-                                arg96.put(arg54  , arg55);
+                            v76 = v25.BaseCoreGenericHandler(false);
+                            v97 = new LinkedHashMap<K, V>(LiteBansModule_20.c(LiteBansModule_350.BaseCoreGenericHandler(CollectionUtilities.BaseCoreGenericHandler((Iterable)v76, 10)), 16));
+                            v77 = v76;
+                            v98 = v77.iterator();
+                            while (v98.hasNext()) {
+                                v45 = v98.next();
+                                v99   = v45;
+                                v58   = v45;
+                                v100 = (Map)v97;
+                                v59 = Float.valueOf((float)v25.AsyncBackgroundTask_5(v99  ));
+                                v100.put(v58  , v59);
                             }
-                            arg72 = (Map)arg93;
-                            arg93 = arg72;
-                            arg73 = new LinkedHashMap<K, V>(LiteBansModule_348.BaseCoreGenericHandler(arg72.size()));
-                            arg94 = arg93.entrySet();
-                            arg97 = arg94.iterator();
-                            while (arg97.hasNext()) {
-                                arg98 = arg97.next();
-                                arg99 = (Map.Entry)arg98;
-                                arg96 = arg73;
-                                arg100 = arg18.BaseCoreGenericHandler(arg74, (String)arg99.getKey());
-                                if (!(arg100 != null)) {
-                                    arg101 = "Template group '" + (String)arg20 + "' refers to non-existing " + arg74 + " template: '" + (String)arg99.getKey() + '\'';
-                                    throw new IllegalArgumentException(arg101.toString());
+                            v76 = (Map)v97;
+                            v97 = v76;
+                            v77 = new LinkedHashMap<K, V>(LiteBansModule_350.BaseCoreGenericHandler(v76.size()));
+                            v98 = v97.entrySet();
+                            v101 = v98.iterator();
+                            while (v101.hasNext()) {
+                                v102 = v101.next();
+                                v103 = (Map.Entry)v102;
+                                v100 = v77;
+                                v104 = v22.BaseCoreGenericHandler(v78, (String)v103.getKey());
+                                if (!(v104 != null)) {
+                                    v105 = "Template group '" + (String)v24 + "' refers to non-existing " + v78 + " template: '" + (String)v103.getKey() + '\'';
+                                    throw new IllegalArgumentException(v105.toString());
                                 }
-                                if (((Collection)arg100.LiteBansModule_31()).isEmpty() == false) {
-                                    arg18.c().getLogger().warning("Template '" + (String)arg99.getKey() + "' belongs to template group '" + (String)arg20 + "', its ladder will be ignored. Remove the ladder from '" + (String)arg99.getKey() + "' to silence this warning + ");
+                                if (((Collection)v104.LiteBansModule_31()).isEmpty() == false) {
+                                    v22.c().getLogger().warning("Template '" + (String)v103.getKey() + "' belongs to template group '" + (String)v24 + "', its ladder will be ignored. Remove the ladder from '" + (String)v103.getKey() + "' to silence this warning + ");
                                 }
-                                arg102 = (Map.Entry)arg98;
-                                arg103 = arg100;
-                                arg104 = arg96;
-                                arg43 = arg102.getValue();
-                                arg104.put(arg103, arg43);
+                                v106 = (Map.Entry)v102;
+                                v107 = v104;
+                                v108 = v100;
+                                v47 = v106.getValue();
+                                v108.put(v107, v47);
                             }
-                            arg26 = arg73;
-                            if (!(arg26.isEmpty() == false)) {
-                                arg105 = "No weights for template group '" + (String)arg20 + "'!";
-                                throw new IllegalArgumentException(arg105.toString());
+                            v30 = v77;
+                            if (!(v30.isEmpty() == false)) {
+                                v109 = "No weights for template group '" + (String)v24 + "'!";
+                                throw new IllegalArgumentException(v109.toString());
                             }
-                            arg72 = arg26.values();
-                            arg93 = arg72;
-                            arg73 = new ArrayList<PunishmentService>();
-                            arg94 = arg93.iterator();
-                            while (arg94.hasNext()) {
-                                arg106 = arg94.next();
-                                arg107 = ((Number)arg106).floatValue();
-                                if (!((double)arg107 <= 0.0)) continue;
-                                arg73.add(arg106);
+                            v76 = v30.values();
+                            v97 = v76;
+                            v77 = new ArrayList<PunishmentService>();
+                            v98 = v97.iterator();
+                            while (v98.hasNext()) {
+                                v110 = v98.next();
+                                v111 = ((Number)v110).floatValue();
+                                if (!((double)v111 <= 0.0)) continue;
+                                v77.add(v110);
                             }
-                            arg72 = (List)arg73;
-                            arg93 = arg72.iterator();
-                            while (arg93.hasNext()) {
-                                arg73 = arg93.next();
-                                arg108 = ((Number)arg73).floatValue();
-                                arg18.c().getLogger().warning("Template group '" + (String)arg20 + "' includes BaseCoreGenericHandler bad weight: " + arg108);
+                            v76 = (List)v77;
+                            v97 = v76.iterator();
+                            while (v97.hasNext()) {
+                                v77 = v97.next();
+                                v112 = ((Number)v77).floatValue();
+                                v22.c().getLogger().warning("Template group '" + (String)v24 + "' includes BaseCoreGenericHandler bad weight: " + v112);
                             }
-                            arg29 = arg26;
-                            arg73 = arg29;
-                            arg39 = new LinkedHashMap<K, V>(LiteBansModule_348.BaseCoreGenericHandler(arg29.size()));
-                            arg41 = arg73.entrySet();
-                            arg109 = arg41.iterator();
-                            while (arg109.hasNext()) {
-                                arg110 = arg109.next();
-                                arg111 = (Map.Entry)arg110;
-                                arg112 = arg39;
-                                arg102 = (Map.Entry)arg110;
-                                arg54   = arg111.getKey();
-                                arg96 = arg112;
-                                arg55 = (LiteBansModule_65)arg102.getKey();
-                                arg96.put(arg54  , arg55);
+                            v33 = v30;
+                            v77 = v33;
+                            v43 = new LinkedHashMap<K, V>(LiteBansModule_350.BaseCoreGenericHandler(v33.size()));
+                            v45 = v77.entrySet();
+                            v113 = v45.iterator();
+                            while (v113.hasNext()) {
+                                v114 = v113.next();
+                                v115 = (Map.Entry)v114;
+                                v116 = v43;
+                                v106 = (Map.Entry)v114;
+                                v58   = v115.getKey();
+                                v100 = v116;
+                                v59 = (LiteBansModule_65)v106.getKey();
+                                v100.put(v58  , v59);
                             }
-                            arg29 = arg39;
-                            arg73 = arg29;
-                            arg39 = new LinkedHashMap<K, V>(LiteBansModule_348.BaseCoreGenericHandler(arg29.size()));
-                            arg41 = arg73.entrySet();
-                            arg109 = arg41.iterator();
-                            while (arg109.hasNext()) {
-                                arg113 = arg109.next();
-                                arg114   = (Map.Entry)arg113;
-                                arg96 = arg39;
-                                arg115 = (Map.Entry)arg113;
-                                arg102 = LiteBansModule_283.AsyncBackgroundTask_5(((LiteBansModule_65)arg114  .getKey()).LiteBansModule_194());
-                                arg116 = arg96;
-                                arg114   = arg115.getValue();
-                                arg116.put(arg102, arg114  );
+                            v33 = v43;
+                            v77 = v33;
+                            v43 = new LinkedHashMap<K, V>(LiteBansModule_350.BaseCoreGenericHandler(v33.size()));
+                            v45 = v77.entrySet();
+                            v113 = v45.iterator();
+                            while (v113.hasNext()) {
+                                v117 = v113.next();
+                                v118   = (Map.Entry)v117;
+                                v100 = v43;
+                                v119 = (Map.Entry)v117;
+                                v106 = LiteBansModule_284.AsyncBackgroundTask_5(((LiteBansModule_65)v118  .getKey()).LiteBansModule_195());
+                                v120 = v100;
+                                v118   = v119.getValue();
+                                v120.put(v106, v118  );
                             }
-                            arg72 = arg39;
-                            arg66.add(new LiteBansModule_174((String)arg20, arg74, (Map)arg26, (Map)arg72, (List)arg69  , arg91));
+                            v76 = v43;
+                            v70.add(new LiteBansModule_175((String)v24, v78, (Map)v30, (Map)v76, (List)v73  , v95));
                         }
-                        arg66 = (List)arg15;
-                        arg11.BaseCoreGenericHandler(CollectionUtilities.BaseCoreGenericHandler(arg63, (Iterable)arg66));
+                        v70 = (List)v19;
+                        v15.BaseCoreGenericHandler(CollectionUtilities.BaseCoreGenericHandler(v67, (Iterable)v70));
                     }
-                    if (((Collection)arg4.e()).isEmpty() == false) {
-                        arg4.c().getLogger().info("Loaded " + arg4.e().size() + " template groups from templates.yml!");
+                    if (((Collection)v8.e()).isEmpty() == false) {
+                        v8.c().getLogger().info("Loaded " + v8.e().size() + " template groups from templates.yml!");
                     } else {
-                        arg4.BaseCoreGenericHandler(CollectionUtilities.e());
-}
-                catch (Exception arg117) {
-                    v3.BaseCoreGenericHandler(arg117);
+                        v8.BaseCoreGenericHandler(CollectionUtilities.e());
+                    }
+                }
+                catch (Exception v121) {
+                    v3.BaseCoreGenericHandler(v121);
                     v8 = v3;
-                    break;
+                    break block96;
                 }
-                v8 = v5;
+                v8 = v6;
             }
-            arg118 = v8;
-            arg1.BaseCoreGenericHandler(arg118);
+            v122 = v8;
+            v4.BaseCoreGenericHandler(v122);
             this.plugin(new DiscordWebhookClient_2(v1, null, 2, null).BaseCoreGenericHandler());
-            if (v1.LiteBansModule_401()) {
-                                try {
-                    v5 = v3.AsyncBackgroundTask_22();
-                    if (v5 == null) break;
-                    v3.CommandThrottleService = arg2 = new NullHandler_8(v3.BaseCoreGenericHandler);
-                    if (!BukkitBlockAdapter.c()) {
-                        arg2.BaseCoreGenericHandler(v5);
+            if (v1.LiteBansModule_403()) {
+                v3 = this;
+                try {
+                    v6 = v3.AsyncBackgroundTask_22();
+                    if (v6 == null) break block97;
+                    v3.CommandThrottleService = v5 = new NullHandler_8(v3.BaseCoreGenericHandler);
+                    if (!OrgBukkitBlockHandler.c()) {
+                        v5.BaseCoreGenericHandler(v6);
                     }
-                    break;
+                    break block97;
                 }
-                catch (Throwable arg119) {
-                    arg2 = (PluginModule)v3;
-                    arg120 = LiteBansModule_242.BaseCoreGenericHandler((CharSequence)"Failed to hook into ServerListPlus + ", (CharSequence)"Try using the latest ServerListPlus development build + ");
-                    arg4 = arg2.BaseCoreGenericHandler.getLogger();
-                    arg4.warning(arg120.toString());
+                catch (Throwable v123) {
+                    v5 = (PluginModule)v3;
+                    v124 = LiteBansModule_243.BaseCoreGenericHandler((CharSequence)"Failed to hook into ServerListPlus + ", (CharSequence)"Try using the latest ServerListPlus development build + ");
+                    v8 = v5.BaseCoreGenericHandler.getLogger();
+                    v8.warning(v124.toString());
                     if (v3.BaseCoreGenericHandler(1)) {
-                        arg119.printStackTrace();
+                        v123.printStackTrace();
                     }
-                    break;
-}
-            v1.c((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, LiteBansModule_31(litebans.ConfigService ), ()V)(this));
+                    break block97;
+                }
+            }
+            v1.c((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, LiteBansModule_31(litebans.ConfigService ), ()V)((ConfigService)this));
         }
-                v5 = v3.LiteBansModule_194();
-        if (v5.W()) {
-            arg2 = v3.BaseCoreGenericHandler.getDataFolder();
-            arg121 = "geoip";
-            arg4 = LiteBansModule_112.c(new File((File)arg2, arg121));
-            v3.BaseCoreGenericHandler.LiteBansModule_31(new AsyncBackgroundTask_4((ConfigService)v3, (File)arg4, (DiscordWebhookClient)v5));
+        v3 = this;
+        v6 = v3.LiteBansModule_195();
+        if (v6.W()) {
+            v5 = v3.BaseCoreGenericHandler.getDataFolder();
+            v125 = "geoip";
+            v8 = LiteBansModule_113.c(new File((File)v5, v125));
+            v3.BaseCoreGenericHandler.LiteBansModule_31(new AsyncBackgroundTask_4((ConfigService)v3, (File)v8, (DiscordWebhookClient)v6));
         }
         try {
             this.q = true;
-                        v5 = (BroadcastService)v3.BaseCoreGenericHandler.BaseCoreGenericHandler(BroadcastService.class);
-            arg2 = v3.BaseCoreGenericHandler.getDataFolder();
-            arg122 = "lockdown.yml";
-            arg4 = new File((File)arg2, arg122);
-            if (!arg4.exists() || YamlConfigProvider.AsyncBackgroundTask_5() == null) {
-                arg2 = v3.BaseCoreGenericHandler.getDataFolder();
-                arg122 = "lockdown.json";
-                arg4 = new File((File)arg2, arg122);
+            v3 = this;
+            v6 = (BroadcastService)v3.BaseCoreGenericHandler.BaseCoreGenericHandler(BroadcastService.class);
+            v5 = v3.BaseCoreGenericHandler.getDataFolder();
+            v126 = "lockdown.yml";
+            v8 = new File((File)v5, v126);
+            if (!v8.exists() || YamlConfigProvider.AsyncBackgroundTask_5() == null) {
+                v5 = v3.BaseCoreGenericHandler.getDataFolder();
+                v126 = "lockdown.json";
+                v8 = new File((File)v5, v126);
             }
-            if (arg4.exists()) {
-                arg2 = v3.BaseCoreGenericHandler.BaseCoreGenericHandler((File)arg4).g();
-                arg122 = arg2.BaseCoreGenericHandler("scope", "*");
-                arg123 = arg2.BaseCoreGenericHandler("reason", "");
-                if (v3.LiteBansModule_194().D()) {
-                    ObjectUtilities.BaseCoreGenericHandler(arg123);
-                    if ((arg123).length() > 0) {
-                        v3.BaseCoreGenericHandler.getLogger().info("Applying saved lockdown, reason: \"" + arg123 + '\"');
-                        ObjectUtilities.BaseCoreGenericHandler(arg122);
-                        v5.BaseCoreGenericHandler(arg122, arg123, true);
-}
+            if (v8.exists()) {
+                v5 = v3.BaseCoreGenericHandler.BaseCoreGenericHandler((File)v8).g();
+                v126 = v5.BaseCoreGenericHandler("scope", "*");
+                v127 = v5.BaseCoreGenericHandler("reason", "");
+                if (v3.LiteBansModule_195().D()) {
+                    ObjectUtilities.BaseCoreGenericHandler((Object)v127);
+                    if (((CharSequence)v127).length() > 0) {
+                        v3.BaseCoreGenericHandler.getLogger().info("Applying saved lockdown, reason: \"" + v127 + '\"');
+                        ObjectUtilities.BaseCoreGenericHandler((Object)v126);
+                        v6.BaseCoreGenericHandler(v126, (CharSequence)v127, true);
+                    }
+                }
+            }
             this.AsyncBackgroundTask_5();
-                        v5 = LiteBansModule_336.c();
-            arg2 = v3.BaseCoreGenericHandler.e();
-            if (!ObjectUtilities.BaseCoreGenericHandler(v5, arg2)) {
-                arg122 = "This is LiteBans version " + (String)v5 + ", NOT version " + (String)arg2 + '!';
-                arg124 = new AsyncBackgroundTask_12((ConfigService)v3, arg122);
-                arg124.run();
-                v3.BaseCoreGenericHandler.BaseCoreGenericHandler(arg124, 20L);
+            v3 = this;
+            v6 = LiteBansModule_337.c();
+            v5 = v3.BaseCoreGenericHandler.e();
+            if (!ObjectUtilities.BaseCoreGenericHandler(v6, v5)) {
+                v126 = "This is LiteBans version " + (String)v6 + ", NOT version " + (String)v5 + '!';
+                v128 = new AsyncBackgroundTask_12((ConfigService)v3, v126);
+                v128.run();
+                v3.BaseCoreGenericHandler.BaseCoreGenericHandler(v128, 20L);
             }
             if (this.g()) {
-                v1.BaseCoreGenericHandler((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, BaseCoreGenericHandler(litebans.PlatformPlugin litebans.ConfigService ), ()V)((PlatformPlugin)v1, this), 140L);
+                v1.BaseCoreGenericHandler((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, BaseCoreGenericHandler(litebans.PlatformPlugin litebans.ConfigService ), ()V)((PlatformPlugin)v1, (ConfigService)this), 140L);
             }
             if (v1.AsyncBackgroundTask_22() == 0) {
-                v1.BaseCoreGenericHandler((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, LiteBansModule_31(litebans.PlatformPlugin litebans.ConfigService ), ()V)((PlatformPlugin)v1, this), 300L);
-}
-        catch (Throwable arg125) {
-            this.plugin(arg125);
-}
+                v1.BaseCoreGenericHandler((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, LiteBansModule_31(litebans.PlatformPlugin litebans.ConfigService ), ()V)((PlatformPlugin)v1, (ConfigService)this), 300L);
+            }
+        }
+        catch (Throwable v129) {
+            this.plugin(v129);
+        }
+    }
 
     private final void AsyncBackgroundTask_5() {
         Database database = null;
@@ -1004,7 +1049,7 @@ extends PluginModule {
             database = new DefaultHandler_2(this.plugin);
             events = new EventsHandler();
             playerProvider = new PlayerproviderHandler(this.plugin);
-            randomID = new LiteBansModule_419(this.plugin);
+            randomID = new LiteBansModule_421(this.plugin);
         }
         Database.setInstance(database);
         Events.setInstance(events);
@@ -1015,7 +1060,7 @@ extends PluginModule {
     @Override
     public void LiteBansModule_31() {
         this.plugin.BaseCoreGenericHandler("config.yml");
-        this.plugin.LiteBansModule_240().LiteBansModule_194();
+        this.plugin.LiteBansModule_241().LiteBansModule_195();
         this.c = 0;
         this.e();
     }
@@ -1024,7 +1069,7 @@ extends PluginModule {
         if (throwable instanceof LiteBansException_9) {
             PluginModule module = this;
             String string = throwable.getMessage();
-            ObjectUtilities.BaseCoreGenericHandler(string);
+            ObjectUtilities.BaseCoreGenericHandler((Object)string);
             String string2 = string;
             module.BaseCoreGenericHandler.getLogger().severe(string2);
             return;
@@ -1043,9 +1088,9 @@ extends PluginModule {
         boolean flag3;
         Iterable iterable;
         Object resultObj = new String[]{System.lineSeparator()};
-        List list = StringUtilities.BaseCoreGenericHandler(string, (String[])resultObj, false, 0, 6, null);
-        resultObj = this.plugin.BaseCoreGenericHandler(ConfigService.class);
-        if (!(list.size() <= 2 || resultObj != null && this.g())) {
+        List list = StringUtilities.BaseCoreGenericHandler((CharSequence)string, (String[])resultObj, false, 0, 6, null);
+        resultObj = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        if (!(list.size() <= 2 || resultObj != null && ((ConfigService)resultObj).g())) {
             iterable = list;
             flag3 = false;
             contextObj = iterable;
@@ -1071,17 +1116,18 @@ extends PluginModule {
             targetObj = iterator.next();
             string2 = (String)targetObj;
             flag = false;
-            boolean flag4 = (string2).length() > 0;
+            boolean flag4 = ((CharSequence)string2).length() > 0;
             if (!flag4) continue;
             collection3.add(targetObj);
         }
         iterable = (List)collection3;
         flag3 = false;
         for (Collection collection3 : iterable) {
-            String string3 = (String)(collection3);
+            String string3 = (String)((Object)collection3);
             targetObj = this;
-            targetObj.BaseCoreGenericHandler.getLogger().warning(string3);
-}
+            ((PluginModule)targetObj).BaseCoreGenericHandler.getLogger().warning(string3);
+        }
+    }
 
     public final String AsyncBackgroundTask_5(@NotNull String string) {
         String string2;
@@ -1103,13 +1149,13 @@ extends PluginModule {
             if (c == '\u0000') break;
             --n2;
         }
-        return StringUtilities.LiteBansModule_31(string2 = (charSequence.subSequence(n, n2 + 1)).toString(), "LiteBansModule_21 java.lang.Thread.run(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 java.util.concurrent.ThreadPoolExecutor$Worker.run(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 java.util.concurrent.ThreadPoolExecutor.runWorker(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, litebans.DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(), false, 2, null) || StringUtilities.LiteBansModule_31(string2, litebans.DatabaseMonitorService.CommandThrottleService.AsyncBackgroundTask_5(), false, 2, null) || StringUtilities.LiteBansModule_31(string2, litebans.DatabaseMonitorService.CommandThrottleService.c(), false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 sun.reflect.NativeConstructorAccessorImpl.newInstance", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 sun.reflect.DelegatingConstructorAccessorImpl.newInstance(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 java.lang.reflect.Constructor.newInstance(", false, 2, null) ? "" : string;
+        return StringUtilities.LiteBansModule_31(string2 = ((Object)charSequence.subSequence(n, n2 + 1)).toString(), "LiteBansModule_21 java.lang.Thread.run(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 java.util.concurrent.ThreadPoolExecutor$Worker.run(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 java.util.concurrent.ThreadPoolExecutor.runWorker(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, litebans.DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(), false, 2, null) || StringUtilities.LiteBansModule_31(string2, litebans.DatabaseMonitorService.CommandThrottleService.AsyncBackgroundTask_5(), false, 2, null) || StringUtilities.LiteBansModule_31(string2, litebans.DatabaseMonitorService.CommandThrottleService.c(), false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 sun.reflect.NativeConstructorAccessorImpl.newInstance", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 sun.reflect.DelegatingConstructorAccessorImpl.newInstance(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 java.lang.reflect.Constructor.newInstance(", false, 2, null) ? "" : string;
     }
 
     public final void BaseCoreGenericHandler(@NotNull String string, @NotNull Throwable throwable) {
         int n;
                 String[] args = "[!!] Could not load " + string + " + ";
-        targetObj.BaseCoreGenericHandler.getLogger().severe((String)args);
+        ((PluginModule)targetObj).BaseCoreGenericHandler.getLogger().severe((String)args);
         targetObj = "org.bukkit.configuration.InvalidConfigurationException: ";
         Object contextObj = new String[]{(String)targetObj + "while scanning HikariDataSource anchor", (String)targetObj + "while scanning BaseCoreGenericHandler simple key", (String)targetObj + "while scanning for the next token", (String)targetObj + "while parsing BaseCoreGenericHandler block mapping", (String)targetObj + "while parsing BaseCoreGenericHandler block collection", targetObj};
         args = contextObj;
@@ -1156,13 +1202,13 @@ extends PluginModule {
             return MessageKey.ay;
         }
         String string = targetObj.toString();
-        if (ObjectUtilities.BaseCoreGenericHandler(string, (Object)"true")) {
+        if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"true")) {
             return MessageKey.ap;
         }
-        if (ObjectUtilities.BaseCoreGenericHandler(string, (Object)"false")) {
+        if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"false")) {
             return MessageKey.OutHandler;
         }
-        if (LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(string)) {
+        if (LiteBansModule_182.LiteBansModule_195.LiteBansModule_31(string)) {
             return MessageKey.LiteBansModule_7;
         }
         return string;
@@ -1171,39 +1217,39 @@ extends PluginModule {
     public final String BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull Object targetObj) {
         String string;
         String string2 = string = sender.LiteBansModule_31();
-        if (string2 == null && !this.LiteBansModule_194().LiteBansModule_240()) {
+        if (string2 == null && !this.LiteBansModule_195().LiteBansModule_241()) {
             this.plugin.getLogger().warning("Player[name=" + sender.i() + "].getAddress() returned null on " + targetObj.getClass().getSimpleName());
         }
         return string;
     }
 
     public final boolean e(@NotNull String string) {
-        if (!this.LiteBansModule_194().PunishmentTableService() && (StringUtilities.BaseCoreGenericHandler(string, "mute", false, 2, null) || StringUtilities.BaseCoreGenericHandler(string, "muteip", false, 2, null))) {
+        if (!this.LiteBansModule_195().PunishmentTableService() && (StringUtilities.BaseCoreGenericHandler(string, "mute", false, 2, null) || StringUtilities.BaseCoreGenericHandler(string, "muteip", false, 2, null))) {
             return false;
         }
-        if (!this.LiteBansModule_194().BanHandler_2() && StringUtilities.BaseCoreGenericHandler(string, "warn", false, 2, null)) {
+        if (!this.LiteBansModule_195().BanHandler_2() && StringUtilities.BaseCoreGenericHandler(string, "warn", false, 2, null)) {
             return false;
         }
-        return this.LiteBansModule_194().ab() || !ObjectUtilities.BaseCoreGenericHandler(string, (Object)"lockdown");
+        return this.LiteBansModule_195().ab() || !ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"lockdown");
     }
 
     public final boolean PunishmentTableService() {
-        return this.plugin.AsyncBackgroundTask_22() == 0 && this.HoverTextFormatter() && !this.BanHandler_2.BaseCoreGenericHandler() && this.LiteBansModule_194().ay();
+        return this.plugin.AsyncBackgroundTask_22() == 0 && this.HoverTextFormatter() && !this.BanHandler_2.BaseCoreGenericHandler() && this.LiteBansModule_195().ay();
     }
 
     public final SimpleDateFormat BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull CharSequence charSequence2) {
         SimpleDateFormat simpleDateFormat;
         try {
-            simpleDateFormat = new SimpleDateFormat(StringUtilities.BaseCoreGenericHandler((charSequence).toString(), "YYYY", "yyyy", false, 4, null), this.z().AsyncBackgroundTask_5());
+            simpleDateFormat = new SimpleDateFormat(StringUtilities.BaseCoreGenericHandler(((Object)charSequence).toString(), "YYYY", "yyyy", false, 4, null), this.z().AsyncBackgroundTask_5());
         }
         catch (Exception exception) {
             if (!(exception instanceof LiteBansException_4)) {
                 PluginModule module = this;
-                CharSequence charSequence3 = LiteBansModule_242.BaseCoreGenericHandler((CharSequence)("Invalid date format: \"" + charSequence + "\". Using default date format \"" + charSequence2 + "\" + "), (CharSequence)"Date format documentation: https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html");
+                CharSequence charSequence3 = LiteBansModule_243.BaseCoreGenericHandler((CharSequence)("Invalid date format: \"" + charSequence + "\". Using default date format \"" + charSequence2 + "\" + "), (CharSequence)"Date format documentation: https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html");
                 Logger logger = module.BaseCoreGenericHandler.getLogger();
-                logger.warning((charSequence3).toString());
+                logger.warning(((Object)charSequence3).toString());
             }
-            simpleDateFormat = new SimpleDateFormat((charSequence2).toString());
+            simpleDateFormat = new SimpleDateFormat(((Object)charSequence2).toString());
         }
         SimpleDateFormat simpleDateFormat2 = simpleDateFormat;
         simpleDateFormat2.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -1212,13 +1258,13 @@ extends PluginModule {
 
     public static /* synthetic */ SimpleDateFormat BaseCoreGenericHandler(ConfigService configService, CharSequence charSequence, CharSequence charSequence2, int n, Object targetObj) {
         if ((n & 2) != 0) {
-            charSequence2 = "yyyy-MM-LiteBansModule_118";
+            charSequence2 = "yyyy-MM-LiteBansModule_119";
         }
         return configService.BaseCoreGenericHandler(charSequence, charSequence2);
     }
 
-    private static final LiteBansModule_409 BaseCoreGenericHandler(ConfigService configService) {
-        return new LiteBansModule_409(configService.LiteBansModule_194().ContinueEvictHandler());
+    private static final LiteBansModule_411 BaseCoreGenericHandler(ConfigService configService) {
+        return new LiteBansModule_411(configService.LiteBansModule_195().ContinueEvictHandler());
     }
 
     private static final boolean c(ConfigService configService) {
@@ -1228,7 +1274,7 @@ extends PluginModule {
     private static final void BaseCoreGenericHandler(ConfigService configService, PlatformPlugin plugin) {
         MessagesYmlHandler k22;
         ConfigService q_03;
-{
+        block14: {
             MessagesYmlHandler k23;
             ObjectUtilities.BaseCoreGenericHandler(plugin);
             MessagesYmlHandler k24 = new MessagesYmlHandler(plugin, null, 2, null);
@@ -1241,7 +1287,7 @@ extends PluginModule {
                 gn_02.BaseCoreGenericHandler(DatabaseService.LiteBansModule_31("messages.yml", null));
                 k24.BaseCoreGenericHandler(gn_02);
                 resultObj = k24;
-                DatabaseService gn_03 = this.c();
+                DatabaseService gn_03 = ((MessagesYmlHandler)resultObj).c();
                 ObjectUtilities.BaseCoreGenericHandler(gn_03);
                 contextObj = gn_03;
                 targetObj = MessageKey.values();
@@ -1252,24 +1298,25 @@ extends PluginModule {
                     if (charSequence2 == null) continue;
                     String string2 = contextObj.BaseCoreGenericHandler(string, null);
                     if (string2 != null) {
-                        am2.BaseCoreGenericHandler(contextObj.BaseCoreGenericHandler(string, (charSequence2).toString()));
-                        if (!((string2).length() > 0)) continue;
+                        am2.BaseCoreGenericHandler(contextObj.BaseCoreGenericHandler(string, ((Object)charSequence2).toString()));
+                        if (!(((CharSequence)string2).length() > 0)) continue;
                         contextObj.LiteBansModule_31(string, MessageKey.BaseCoreGenericHandler(am2, string2));
                         continue;
                     }
-                    contextObj.LiteBansModule_31(string, StringUtilities.BaseCoreGenericHandler((charSequence2).toString(), '\u00a7', '&', false, 4, null));
+                    contextObj.LiteBansModule_31(string, StringUtilities.BaseCoreGenericHandler(((Object)charSequence2).toString(), '\u00a7', '&', false, 4, null));
                 }
                 resultObj = gn_02.BaseCoreGenericHandler("locale", "system");
                 if (!ObjectUtilities.BaseCoreGenericHandler(resultObj, (Object)"system")) {
                     Locale locale = k24.LiteBansModule_31();
-                    k24.BaseCoreGenericHandler(new Localethis);
+                    k24.BaseCoreGenericHandler(new Locale((String)resultObj));
                     k24.BaseCoreGenericHandler().getLogger().info("Using configured locale (" + k24.AsyncBackgroundTask_5().getLanguage() + ')');
-                    if (ObjectUtilities.BaseCoreGenericHandler(k24.AsyncBackgroundTask_5(), locale)) {
-                        contextObj = "Supported locales: " + ArrayUtilities.BaseCoreGenericHandler(Locale.getAvailableLocales(), null, null, null, 0, null, (LiteBansModule_178)LiteBansModule_172.BaseCoreGenericHandler, 31, null);
+                    if (ObjectUtilities.BaseCoreGenericHandler((Object)k24.AsyncBackgroundTask_5(), locale)) {
+                        contextObj = "Supported locales: " + ArrayUtilities.BaseCoreGenericHandler(Locale.getAvailableLocales(), null, null, null, 0, null, (LiteBansModule_179)LiteBansModule_173.BaseCoreGenericHandler, 31, null);
                         targetObj = k24.BaseCoreGenericHandler().getLogger();
-                        CharSequence charSequence = LiteBansModule_242.BaseCoreGenericHandler((CharSequence)"Note: If the configured locale is unrecognized, the system default locale is ", contextObj);
-                        targetObj.info((charSequence).toString());
-} else {
+                        CharSequence charSequence = LiteBansModule_243.BaseCoreGenericHandler((CharSequence)"Note: If the configured locale is unrecognized, the system default locale is ", (CharSequence)contextObj);
+                        ((Logger)targetObj).info(((Object)charSequence).toString());
+                    }
+                } else {
                     k24.BaseCoreGenericHandler().getLogger().info("Using system locale (" + k24.AsyncBackgroundTask_5().getLanguage() + ')');
                 }
                 k24.BaseCoreGenericHandler((DatabaseService)null);
@@ -1277,22 +1324,23 @@ extends PluginModule {
             catch (Exception exception) {
                 k24.BaseCoreGenericHandler(exception);
                 k22 = k24;
-                break;
+                break block14;
             }
             if (YamlConfigProvider.AsyncBackgroundTask_5() != null) {
                 try {
-                    gn_02.LiteBansModule_240();
+                    gn_02.LiteBansModule_241();
                 }
                 catch (Exception exception) {
                     k24.BaseCoreGenericHandler().getLogger().severe("[!!] Could not save messages + ");
                     k24.e().BaseCoreGenericHandler(exception);
-}
+                }
+            }
             resultObj = k24;
             contextObj = MessageKey.PlayerproviderHandler;
             targetObj = MessageKey.ad;
-            if (StringUtilities.BaseCoreGenericHandler(contextObj, (CharSequence)"$bannedPlayer", false, 2, null) || StringUtilities.BaseCoreGenericHandler(targetObj, (CharSequence)"$bannedPlayer", false, 2, null)) {
+            if (StringUtilities.BaseCoreGenericHandler((CharSequence)contextObj, (CharSequence)"$bannedPlayer", false, 2, null) || StringUtilities.BaseCoreGenericHandler((CharSequence)targetObj, (CharSequence)"$bannedPlayer", false, 2, null)) {
                 ((MessageKey)contextObj).ServerOriginHandler = ((MessageKey)contextObj).BaseCoreGenericHandler((CharSequence)"$bannedPlayer", (Object)"$mutedPlayer");
-                targetObj.ServerOriginHandler = targetObj.BaseCoreGenericHandler((CharSequence)"$bannedPlayer", (Object)"$warnedPlayer");
+                ((MessageKey)targetObj).ServerOriginHandler = ((MessageKey)targetObj).BaseCoreGenericHandler((CharSequence)"$bannedPlayer", (Object)"$warnedPlayer");
             }
             try {
                 PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, 0L, false, 2, null);
@@ -1301,9 +1349,9 @@ extends PluginModule {
                 if (exception instanceof IllegalFormatException) {
                     CharSequence charSequence;
                     String string = "%AsyncBackgroundTask_5 %AsyncBackgroundTask_21";
-                    Logger logger = this.BaseCoreGenericHandler().getLogger();
-                    charSequence = LiteBansModule_242.BaseCoreGenericHandler((CharSequence)("Duration format (\"" + MessageKey.InputHandler + "\") is invalid! (" + exception.getClass().getSimpleName() + ')'), (CharSequence)("Using default format instead (\"" + string + "\") + "));
-                    logger.warning((charSequence).toString());
+                    Logger logger = ((MessagesYmlHandler)resultObj).BaseCoreGenericHandler().getLogger();
+                    charSequence = LiteBansModule_243.BaseCoreGenericHandler((CharSequence)("Duration format (\"" + MessageKey.InputHandler + "\") is invalid! (" + exception.getClass().getSimpleName() + ')'), (CharSequence)("Using default format instead (\"" + string + "\") + "));
+                    logger.warning(((Object)charSequence).toString());
                     MessageKey.InputHandler.BaseCoreGenericHandler(string);
                 }
                 throw exception;
@@ -1314,40 +1362,44 @@ extends PluginModule {
     }
 
     private static final void LiteBansModule_31(ConfigService configService) {
-{
+        block4: {
             ConfigService q_03 = configService;
             try {
                 Object targetObj = q_03.AsyncBackgroundTask_22();
                 if (targetObj != null) {
                     NullHandler_8 z = new NullHandler_8(q_03.BaseCoreGenericHandler);
                     q_03.CommandThrottleService = z;
-                    if (!BukkitBlockAdapter.c()) {
+                    if (!OrgBukkitBlockHandler.c()) {
                         z.BaseCoreGenericHandler(targetObj);
-}
+                    }
+                }
+            }
             catch (Throwable throwable) {
                 PluginModule module = q_03;
-                CharSequence charSequence = LiteBansModule_242.BaseCoreGenericHandler((CharSequence)"Failed to hook into ", (CharSequence)"Try using the latest ServerListPlus development ");
+                CharSequence charSequence = LiteBansModule_243.BaseCoreGenericHandler((CharSequence)"Failed to hook into ", (CharSequence)"Try using the latest ServerListPlus development ");
                 Logger logger = module.BaseCoreGenericHandler.getLogger();
-                logger.warning((charSequence).toString());
-                if (!q_03.BaseCoreGenericHandler(1)) break;
+                logger.warning(((Object)charSequence).toString());
+                if (!q_03.BaseCoreGenericHandler(1)) break block4;
                 throwable.printStackTrace();
-}
+            }
+        }
+    }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     private static final void BaseCoreGenericHandler(PlatformPlugin plugin, ConfigService configService) {
-{
+        block18: {
             BroadcastService o2 = (BroadcastService)plugin.BaseCoreGenericHandler(BroadcastService.class);
             int n = plugin.z().e().size();
             if (!(n > 8)) {
                 Integer n2 = n;
-                throw new IllegalArgumentException((n2).toString());
+                throw new IllegalArgumentException(((Object)n2).toString());
             }
             Object targetObj = new Class[]{PlatformPlugin.class};
             Class[] classArray = targetObj;
             targetObj = new Object[]{plugin};
-            List list = plugin.LiteBansModule_194().BaseCoreGenericHandler(BansHandler.class, classArray, (Object[])targetObj);
+            List list = plugin.LiteBansModule_195().BaseCoreGenericHandler(BansHandler.class, classArray, (Object[])targetObj);
             if (!(list.size() > 1)) {
                 ObjectUtilities.BaseCoreGenericHandler(list);
                 List list2 = list;
@@ -1355,45 +1407,45 @@ extends PluginModule {
             }
             Object contextObj = targetObj = (DatabaseMonitorService)plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
             try {
-                LiteBansModule_82 ch2 = ((DatabaseMonitorService)contextObj).LiteBansModule_194();
+                LiteBansModule_83 ch2 = ((DatabaseMonitorService)contextObj).LiteBansModule_195();
                 Closeable closeable = ch2;
                 Throwable throwable = null;
                 try {
                     boolean flag2;
-                    Object resultObj = (LiteBansModule_82)closeable;
-                    LiteBansModule_82 ch3 = ch2;
-                    ResultSet resultSet = LiteBansModule_184.AsyncBackgroundTask_5(ch3.c((CharSequence)"SELECT NOW() CommandExitException now"));
+                    Object resultObj = (LiteBansModule_83)closeable;
+                    LiteBansModule_83 ch3 = ch2;
+                    ResultSet resultSet = LiteBansModule_185.AsyncBackgroundTask_5(ch3.c((CharSequence)"SELECT NOW() CommandExitException now"));
                     resultSet.next();
                     Timestamp timestamp = resultSet.getTimestamp("now");
                     Object helperObj = configService;
                     Object tempObj = "AsyncBackgroundTask_22: " + timestamp.getTime();
                     ((PluginModule)helperObj).BaseCoreGenericHandler.getLogger().info((String)tempObj);
                     helperObj = configService;
-                    tempObj = "LiteBansModule_194: " + o2.BaseCoreGenericHandler(timestamp.getTime(), true) + " +" + o2.BaseCoreGenericHandler(true);
+                    tempObj = "LiteBansModule_195: " + o2.BaseCoreGenericHandler(timestamp.getTime(), true) + " +" + o2.BaseCoreGenericHandler(true);
                     flag5 = false;
                     ((PluginModule)helperObj).BaseCoreGenericHandler.getLogger().info((String)tempObj);
                     ObjectUtilities.BaseCoreGenericHandler(plugin);
                     tempObj = helperObj = new AltsHandler(plugin, "", "", "");
                     flag5 = false;
-                    LiteBansModule_297 iA2 = ch3.c("[CONSOLE]");
+                    LiteBansModule_298 iA2 = ch3.c("[CONSOLE]");
                     ObjectUtilities.BaseCoreGenericHandler(iA2);
                     Object object6 = iA2;
-                    String string = ((LiteBansModule_297)object6).LiteBansModule_31();
-                    ObjectUtilities.BaseCoreGenericHandler(string);
-                    Object object7 = ((AltsHandler)tempObj).BaseCoreGenericHandler(ch3, (LiteBansModule_297)object6, new LiteBansModule_206(string, ch3, null, false, 0, 28, null).i());
-                    if (!(!StringUtilities.BaseCoreGenericHandler(object7, (CharSequence)"))", false, 2, null))) {
+                    String string = ((LiteBansModule_298)object6).LiteBansModule_31();
+                    ObjectUtilities.BaseCoreGenericHandler((Object)string);
+                    Object object7 = ((AltsHandler)tempObj).BaseCoreGenericHandler(ch3, (LiteBansModule_298)object6, new LiteBansModule_207(string, ch3, null, false, 0, 28, null).i());
+                    if (!(!StringUtilities.BaseCoreGenericHandler((CharSequence)object7, (CharSequence)"))", false, 2, null))) {
                         CharSequence charSequence = object7;
-                        throw new IllegalArgumentException((charSequence).toString());
+                        throw new IllegalArgumentException(((Object)charSequence).toString());
                     }
-                    ch3.BaseCoreGenericHandler(((LiteBansModule_297)object6).LiteBansModule_31(), ((AltsHandler)helperObj).c(), BanHandler.LiteBansModule_240, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), false, 1);
-                    ch3.BaseCoreGenericHandler(((LiteBansModule_297)object6).LiteBansModule_31(), ((AltsHandler)helperObj).c(), BanHandler.LiteBansModule_240, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), true, 1);
+                    ch3.BaseCoreGenericHandler(((LiteBansModule_298)object6).LiteBansModule_31(), ((AltsHandler)helperObj).c(), BanHandler.LiteBansModule_241, LiteBansModule_182.LiteBansModule_195.LiteBansModule_31(), false, 1);
+                    ch3.BaseCoreGenericHandler(((LiteBansModule_298)object6).LiteBansModule_31(), ((AltsHandler)helperObj).c(), BanHandler.LiteBansModule_241, LiteBansModule_182.LiteBansModule_195.LiteBansModule_31(), true, 1);
                     tempObj = "*";
-                    String string2 = LiteBansModule_181.LiteBansModule_194.c("global");
-                    if (!LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(string2)) {
-                        String string3 = string2 + ' ' + LiteBansModule_181.LiteBansModule_194.LiteBansModule_31();
+                    String string2 = LiteBansModule_182.LiteBansModule_195.c("global");
+                    if (!LiteBansModule_182.LiteBansModule_195.LiteBansModule_31(string2)) {
+                        String string3 = string2 + ' ' + LiteBansModule_182.LiteBansModule_195.LiteBansModule_31();
                         throw new IllegalArgumentException(string3.toString());
                     }
-                    if (!(ObjectUtilities.BaseCoreGenericHandler(string2, tempObj) && string2.charAt(0) == ((String)tempObj).charAt(0))) {
+                    if (!(ObjectUtilities.BaseCoreGenericHandler((Object)string2, tempObj) && string2.charAt(0) == ((String)tempObj).charAt(0))) {
                         String string4 = string2 + ' ' + (String)tempObj;
                         throw new IllegalArgumentException(string4.toString());
                     }
@@ -1411,16 +1463,16 @@ extends PluginModule {
                     finally {
                         ((ChatFormatter)object7).LiteBansModule_31().remove();
                     }
-                    LiteBansModule_297 iA3 = ch3.c("test");
+                    LiteBansModule_298 iA3 = ch3.c("test");
                     ObjectUtilities.BaseCoreGenericHandler(iA3);
                     object7 = iA3.LiteBansModule_31();
-                    object8 = AllHandler_3.BaseCoreGenericHandler(ch3, (String)object7, null, BanHandler.LiteBansModule_240, (String)tempObj, false, false, 48, null);
+                    object8 = AllHandler_3.BaseCoreGenericHandler(ch3, (String)object7, null, BanHandler.LiteBansModule_241, (String)tempObj, false, false, 48, null);
                     if (!(object8 != null && ObjectUtilities.BaseCoreGenericHandler((Object)((SilentHandler)object8).m(), tempObj))) {
                         flag2 = false;
                         String string5 = String.valueOf(object8);
                         throw new IllegalArgumentException(string5.toString());
                     }
-                    if (plugin.AsyncBackgroundTask_22() == 0 && !(!ObjectUtilities.BaseCoreGenericHandler(plugin.LiteBansModule_31().getClass(), LiteBansModule_367.class))) {
+                    if (plugin.AsyncBackgroundTask_22() == 0 && !(!ObjectUtilities.BaseCoreGenericHandler(plugin.LiteBansModule_31().getClass(), LiteBansModule_369.class))) {
                         String string6 = "Failed ";
                         throw new IllegalArgumentException(string6.toString());
                     }
@@ -1435,11 +1487,14 @@ extends PluginModule {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-}
+                }
+            }
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)contextObj).LiteBansModule_31(sQLException)) break;
+                if (((DatabaseMonitorService)contextObj).LiteBansModule_31(sQLException)) break block18;
                 throw sQLException;
-}
+            }
+        }
+    }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -1448,8 +1503,8 @@ extends PluginModule {
         try {
             boolean flag;
             PluginModule module;
-{
-                LiteBansModule_158 ec_02 = plugin.i();
+            block16: {
+                LiteBansModule_159 ec_02 = plugin.i();
                 ObjectUtilities.LiteBansModule_31(ec_02, "");
                 DefaultHandler e12 = ((BungeecordHandler_2)ec_02).LiteBansModule_31();
                 contextObj = e12.c();
@@ -1458,17 +1513,17 @@ extends PluginModule {
                 module = w2;
                 flag = false;
                 try {
-                    LiteBansModule_82 ch2 = ((DatabaseMonitorService)module).LiteBansModule_194();
+                    LiteBansModule_83 ch2 = ((DatabaseMonitorService)module).LiteBansModule_195();
                     Closeable closeable = ch2;
                     Throwable throwable = null;
                     try {
-                        Object resultObj = (LiteBansModule_82)closeable;
-                        LiteBansModule_82 ch3 = ch2;
+                        Object resultObj = (LiteBansModule_83)closeable;
+                        LiteBansModule_83 ch3 = ch2;
                         if (ch3.BaseCoreGenericHandler()) {
                             CharSequence charSequence;
                             BansHandler_2 kL2 = BansHandler_2.g;
                             Object helperObj = "uuid";
-                            ResultSet resultSet = LiteBansModule_184.AsyncBackgroundTask_5(ch3.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.e("SELECT " + helperObj + " FROM " + kL2), "SQLiteDriverHandler_4"), (Number)1))));
+                            ResultSet resultSet = LiteBansModule_185.AsyncBackgroundTask_5(ch3.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.e("SELECT " + helperObj + " FROM " + kL2), "SQLiteDriverHandler_4"), (Number)1))));
                             helperObj = resultSet;
                             n = 1;
                             if (helperObj.next()) {
@@ -1484,15 +1539,16 @@ extends PluginModule {
                             } else {
                                 charSequence = kL2 = null;
                             }
-                            if (HexEncodingHelper.BaseCoreGenericHandler((String)(kL2))) {
-                                helperObj = UUID.fromString(HexEncodingHelper.BaseCoreGenericHandler.g((String)(kL2)));
-                                LiteBansModule_158 ec_03 = plugin.i();
+                            if (LiteBansModule_346.BaseCoreGenericHandler((String)((Object)kL2))) {
+                                helperObj = UUID.fromString(LiteBansModule_346.BaseCoreGenericHandler.g((String)((Object)kL2)));
+                                LiteBansModule_159 ec_03 = plugin.i();
                                 ObjectUtilities.LiteBansModule_31(ec_03, "");
                                 BungeecordHandler_2 ao_02 = (BungeecordHandler_2)ec_03;
                                 ObjectUtilities.BaseCoreGenericHandler(helperObj);
                                 DefaultHandler.BaseCoreGenericHandler(e12, ao_02.BaseCoreGenericHandler((UUID)helperObj), "test", null, 4, null);
                                 e12.BaseCoreGenericHandler(helperObj);
-}
+                            }
+                        }
                         resultObj = KotlinUnitHandler.BaseCoreGenericHandler;
                     }
                     catch (Throwable throwable2) {
@@ -1501,20 +1557,24 @@ extends PluginModule {
                     }
                     finally {
                         BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-}
+                    }
+                }
                 catch (SQLException sQLException) {
-                    if (((DatabaseMonitorService)module).LiteBansModule_31(sQLException)) break;
+                    if (((DatabaseMonitorService)module).LiteBansModule_31(sQLException)) break block16;
                     throw sQLException;
-}
+                }
+            }
             module = configService;
             flag = false;
             if (((ConfigService)module).g()) {
                 PluginModule n_03 = module;
                 ((ConfigService)n_03).BaseCoreGenericHandler((Object)("" + contextObj + targetObj + '\n'));
-}
+            }
+        }
         catch (LinkageError linkageError) {
             ConfigService.BaseCoreGenericHandler(configService, linkageError, 0, 2, null);
-}
+        }
+    }
 
     public static final /* synthetic */ int n() {
         return AsyncBackgroundTask_22;
@@ -1543,6 +1603,5 @@ extends PluginModule {
     }
 
     private static final void CommandThrottleService() {
-        DatabaseMonitorService = new String[]{"", "", "", "", "0xAAA", "0xAAA ", "geoip.unavailable", "lockdown.yml", "lockdown.json", "reason", "scope", "lockdown.yml", "lockdown.json", "scope", "*", "reason", "", "Applying saved lockdown, reason: \"", "lockdown.yml", "lockdown.json", "reason", "scope", ".. + ", "Error 0x", "config.yml", "config", "[!!] Your configuration might be invalid. It can be verified with https://yaml-online-parser.appspot.com/", "[!!] Configuration does not exist! Ensure that read/write permissions are correct. (\"", "\")", "SnakeYAML", "https://repo1.maven.org/maven2/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar", "2.4", "ef779af5d29a9dde8cc70ce0341f5c6f7735e23edff9685ceaa9d35359b7bb7f", "", "templates.yml", "templates.yml", "-templates", "Empty template: '", "Template name '", "' cannot include dots or spaces! Use dashes or underscores ", "", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "ladder", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "expire_ladder", "0", "ip_template", "Loaded ", " templates from templates.yml!", "template-groups", "weights", "Empty template group: '", "No weights for template group '", "'!", "type", "", "Template group '", "' type is missing: ", "ladder", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "expire_ladder", "0", "No ladder for template group '", "'!", "Template group '", "' refers to non-existing ", " template: '", "Template '", "' belongs to template group '", "', its ladder will be ignored. Remove the ladder from '", "' to silence this ", "No weights for template group '", "'!", "Template group '", "' includes BaseCoreGenericHandler bad weight: ", "Loaded ", " template groups from templates.yml!", "Failed to hook into ", "Try using the latest ServerListPlus development ", "geoip", "lockdown.yml", "lockdown.json", "scope", "*", "reason", "", "Applying saved lockdown, reason: \"", "This is LiteBans version ", ", NOT version ", "", "", "This is LiteBans version ", ", NOT version ", "config.yml", "geoip", "config", "[!!] Your configuration might be invalid. It can be verified with https://yaml-online-parser.appspot.com/", "[!!] Configuration does not exist! Ensure that read/write permissions are correct. (\"", "\")", "LiteBansModule_21 java.lang.Thread.run(", "LiteBansModule_21 java.util.concurrent.ThreadPoolExecutor$Worker.run(", "LiteBansModule_21 java.util.concurrent.ThreadPoolExecutor.runWorker(", "LiteBansModule_21 sun.reflect.NativeConstructorAccessorImpl.newInstance", "LiteBansModule_21 sun.reflect.DelegatingConstructorAccessorImpl.newInstance(", "LiteBansModule_21 java.lang.reflect.Constructor.newInstance(", "", "[!!] Could not load ", " + ", "org.bukkit.configuration.InvalidConfigurationException: ", "while scanning HikariDataSource anchor", "while scanning BaseCoreGenericHandler simple key", "while scanning for the next token", "while parsing BaseCoreGenericHandler block mapping", "while parsing BaseCoreGenericHandler block collection", "", "", "\\AsyncBackgroundTask_22(TAB)", "TAB", "[!!] Configuration error found: ", "[!!] LiteBans will use the default ", " until errors have been ", "Failed to hook into ", "Try using the latest ServerListPlus development ", "ServerListPlus", " is not enabled yet!", "true", "false", "Player[name=", "].getAddress() returned null on ", "mute", "muteip", "warn", "lockdown", "YYYY", "yyyy", "Invalid date format: \"", "\". Using default date format \"", "\" + ", "Date format documentation: https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html", "UTC", "yyyy-MM-LiteBansModule_118", "AuthMe", "messages.yml", "messages.yml", "locale", "system", "system", "Using configured locale (", "Supported locales: ", "Note: If the configured locale is unrecognized, the system default locale is ", "Using system locale (", "[!!] Could not save messages + ", "$bannedPlayer", "$bannedPlayer", "$bannedPlayer", "$mutedPlayer", "$bannedPlayer", "$warnedPlayer", "%AsyncBackgroundTask_5 %AsyncBackgroundTask_21", "Duration format (\"", "\") is invalid! (", "Using default format instead (\"", "\") + ", "Failed to hook into ", "Try using the latest ServerListPlus development ", "SELECT NOW() CommandExitException now", "now", "AsyncBackgroundTask_22: ", "LiteBansModule_194: ", " +", "", "", "", "[CONSOLE]", "))", "*", "global", "ban", "test", "server:*", "test", "Failed ", "", "", "uuid", "SELECT ", " FROM ", "SQLiteDriverHandler_4", "", "test"};
-}
-
+        DatabaseMonitorService = new String[]{"", "", "", "", "0xAAA", "0xAAA ", "geoip.unavailable", "lockdown.yml", "lockdown.json", "reason", "scope", "lockdown.yml", "lockdown.json", "scope", "*", "reason", "", "Applying saved lockdown, reason: \"", "lockdown.yml", "lockdown.json", "reason", "scope", ".. + ", "Error 0x", "config.yml", "config", "[!!] Your configuration might be invalid. It can be verified with https://yaml-online-parser.appspot.com/", "[!!] Configuration does not exist! Ensure that read/write permissions are correct. (\"", "\")", "SnakeYAML", "https://repo1.maven.org/maven2/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar", "2.4", "ef779af5d29a9dde8cc70ce0341f5c6f7735e23edff9685ceaa9d35359b7bb7f", "", "templates.yml", "templates.yml", "-templates", "Empty template: '", "Template name '", "' cannot include dots or spaces! Use dashes or underscores ", "", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "ladder", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "expire_ladder", "0", "ip_template", "Loaded ", " templates from templates.yml!", "template-groups", "weights", "Empty template group: '", "No weights for template group '", "'!", "type", "", "Template group '", "' type is missing: ", "ladder", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "expire_ladder", "0", "No ladder for template group '", "'!", "Template group '", "' refers to non-existing ", " template: '", "Template '", "' belongs to template group '", "', its ladder will be ignored. Remove the ladder from '", "' to silence this ", "No weights for template group '", "'!", "Template group '", "' includes BaseCoreGenericHandler bad weight: ", "Loaded ", " template groups from templates.yml!", "Failed to hook into ", "Try using the latest ServerListPlus development ", "geoip", "lockdown.yml", "lockdown.json", "scope", "*", "reason", "", "Applying saved lockdown, reason: \"", "This is LiteBans version ", ", NOT version ", "", "", "This is LiteBans version ", ", NOT version ", "config.yml", "geoip", "config", "[!!] Your configuration might be invalid. It can be verified with https://yaml-online-parser.appspot.com/", "[!!] Configuration does not exist! Ensure that read/write permissions are correct. (\"", "\")", "LiteBansModule_21 java.lang.Thread.run(", "LiteBansModule_21 java.util.concurrent.ThreadPoolExecutor$Worker.run(", "LiteBansModule_21 java.util.concurrent.ThreadPoolExecutor.runWorker(", "LiteBansModule_21 sun.reflect.NativeConstructorAccessorImpl.newInstance", "LiteBansModule_21 sun.reflect.DelegatingConstructorAccessorImpl.newInstance(", "LiteBansModule_21 java.lang.reflect.Constructor.newInstance(", "", "[!!] Could not load ", " + ", "org.bukkit.configuration.InvalidConfigurationException: ", "while scanning HikariDataSource anchor", "while scanning BaseCoreGenericHandler simple key", "while scanning for the next token", "while parsing BaseCoreGenericHandler block mapping", "while parsing BaseCoreGenericHandler block collection", "", "", "\\AsyncBackgroundTask_22(TAB)", "TAB", "[!!] Configuration error found: ", "[!!] LiteBans will use the default ", " until errors have been ", "Failed to hook into ", "Try using the latest ServerListPlus development ", "ServerListPlus", " is not enabled yet!", "true", "false", "Player[name=", "].getAddress() returned null on ", "mute", "muteip", "warn", "lockdown", "YYYY", "yyyy", "Invalid date format: \"", "\". Using default date format \"", "\" + ", "Date format documentation: https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html", "UTC", "yyyy-MM-LiteBansModule_119", "AuthMe", "messages.yml", "messages.yml", "locale", "system", "system", "Using configured locale (", "Supported locales: ", "Note: If the configured locale is unrecognized, the system default locale is ", "Using system locale (", "[!!] Could not save messages + ", "$bannedPlayer", "$bannedPlayer", "$bannedPlayer", "$mutedPlayer", "$bannedPlayer", "$warnedPlayer", "%AsyncBackgroundTask_5 %AsyncBackgroundTask_21", "Duration format (\"", "\") is invalid! (", "Using default format instead (\"", "\") + ", "Failed to hook into ", "Try using the latest ServerListPlus development ", "SELECT NOW() CommandExitException now", "now", "AsyncBackgroundTask_22: ", "LiteBansModule_195: ", " +", "", "", "", "[CONSOLE]", "))", "*", "global", "ban", "test", "server:*", "test", "Failed ", "", "", "uuid", "SELECT ", " FROM ", "SQLiteDriverHandler_4", "", "test"};
+    }

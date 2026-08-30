@@ -1,66 +1,24 @@
 package litebans;
 
-import java.util.ListIterator;
-import java.util.NoSuchElementException;
-public final class LiteBansModule_410
-implements ListIterator,
-LiteBansModule_122 {
-    public static final LiteBansModule_410 BaseCoreGenericHandler;
-    private LiteBansModule_410() {
+public class LiteBansModule_410 {
+    public final String LiteBansModule_31;
+    public final byte[] BaseCoreGenericHandler;
+        public LiteBansModule_410(String string, byte[] byArray) {
+        this.LiteBansModule_31 = string;
+        this.plugin = byArray;
     }
 
-    @Override
-    public boolean hasNext() {
-        return false;
+    public LiteBansModule_410() {
+        this.LiteBansModule_31 = "";
+        this.plugin = new byte[0];
     }
 
-    @Override
-    public boolean hasPrevious() {
-        return false;
-    }
-
-    @Override
-    public int nextIndex() {
-        return 0;
-    }
-
-    @Override
-    public int previousIndex() {
-        return -1;
-    }
-
-    public Void LiteBansModule_31() {
-        throw new NoSuchElementException();
-    }
-
-    public Void BaseCoreGenericHandler() {
-        throw new NoSuchElementException();
-    }
-
-    @Override
-    public void remove() {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
-    }
-
-    @Override
-    public Object next() {
-        return this.LiteBansModule_31();
-    }
-
-    public Object previous() {
-        return this.plugin();
-    }
-
-    public void set(Object targetObj) {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
-    }
-
-    public void add(Object targetObj) {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
+    private static final void yYR() {
+        c = new String[]{""};
     }
 
     static {
-        LiteBansModule_410.c();
-        BaseCoreGenericHandler = new LiteBansModule_410();
+        LiteBansModule_410.yYR();
+    }
 }
 

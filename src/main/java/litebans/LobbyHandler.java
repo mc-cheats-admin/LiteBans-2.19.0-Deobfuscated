@@ -10,7 +10,7 @@ import net.md_5.bungee.api.config.ServerInfo;
 
 public final class LobbyHandler
 implements ServerInfo {
-    public String getName() {
+        public String getName() {
         return "lobby";
     }
 
@@ -58,5 +58,10 @@ implements ServerInfo {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"lobby", ""};
+    }
+
+    static {
+        LobbyHandler.BaseCoreGenericHandler();
+    }
 }
 

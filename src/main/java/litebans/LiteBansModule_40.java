@@ -3,7 +3,7 @@ package litebans;
 import java.sql.PreparedStatement;
 public final class LiteBansModule_40
 extends LiteBansModule_60 {
-    private LiteBansModule_40(LiteBansModule_82 ch2, PreparedStatement preparedStatement, String string) {
+    private LiteBansModule_40(LiteBansModule_83 ch2, PreparedStatement preparedStatement, String string) {
         super(ch2, preparedStatement, string, null);
     }
 
@@ -22,7 +22,8 @@ extends LiteBansModule_60 {
         return this.plugin(flag);
     }
 
-    public /* synthetic */ LiteBansModule_40(LiteBansModule_82 ch2, PreparedStatement preparedStatement, String string, LiteBansModule_14 aJ2) {
+    public /* synthetic */ LiteBansModule_40(LiteBansModule_83 ch2, PreparedStatement preparedStatement, String string, LiteBansModule_14 aJ2) {
         this(ch2, preparedStatement, string);
+    }
 }
 

@@ -10,10 +10,10 @@ import org.jetbrains.annotations.NotNull;
 
 public final class RemoteUpdateService
 extends PluginModule {
-    public static final LiteBansModule_379 LiteBansModule_31;
+    public static final LiteBansModule_381 LiteBansModule_31;
     private ScheduledExecutorService c;
     private static String AsyncBackgroundTask_5;
-    public RemoteUpdateService(@NotNull PlatformPlugin plugin) {
+        public RemoteUpdateService(@NotNull PlatformPlugin plugin) {
         super(plugin);
     }
 
@@ -27,7 +27,8 @@ extends PluginModule {
             }
             catch (Throwable throwable) {
                 throwable.printStackTrace();
-}
+            }
+        }
         this.c = null;
     }
 
@@ -37,10 +38,10 @@ extends PluginModule {
         ConfigService configService = (ConfigService)plugin.BaseCoreGenericHandler(ConfigService.class);
         configService.e();
         String string = AsyncBackgroundTask_5;
-        if (string == null || (string).length() == 0) {
+        if (string == null || ((CharSequence)string).length() == 0) {
             return;
         }
-        ThreadPoolExecutor threadPoolExecutor = plugin.LiteBansModule_433();
+        ThreadPoolExecutor threadPoolExecutor = plugin.LiteBansModule_435();
         ObjectUtilities.LiteBansModule_31(threadPoolExecutor, "");
         ThreadFactory threadFactory = threadPoolExecutor.getThreadFactory();
         this.c = Executors.newScheduledThreadPool(1, threadFactory);
@@ -54,21 +55,23 @@ extends PluginModule {
 
     static {
         RemoteUpdateService.AsyncBackgroundTask_5();
-        LiteBansModule_31 = new LiteBansModule_379(null);
+        LiteBansModule_31 = new LiteBansModule_381(null);
         try {
             AsyncBackgroundTask_5 = "https://litebans.AsyncBackgroundTask_5-n-AsyncBackgroundTask_21.name/update.php";
             AsyncBackgroundTask_5 = AsyncBackgroundTask_5 + LitebansHandler.LiteBansModule_31.c();
-            AsyncBackgroundTask_5 = AsyncBackgroundTask_5 + LiteBansModule_179.BaseCoreGenericHandler;
+            AsyncBackgroundTask_5 = AsyncBackgroundTask_5 + LiteBansModule_180.BaseCoreGenericHandler;
             AsyncBackgroundTask_5 = AsyncBackgroundTask_5 + LitebansHandler.LiteBansModule_31.BaseCoreGenericHandler();
-            AsyncBackgroundTask_5 = AsyncBackgroundTask_5 + LiteBansModule_145.BaseCoreGenericHandler;
-            AsyncBackgroundTask_5 = AsyncBackgroundTask_5 + LitebansHandler.LiteBansModule_31.LiteBansModule_194();
-            AsyncBackgroundTask_5 = AsyncBackgroundTask_5 + StringUtilities.BaseCoreGenericHandler(LiteBansModule_180.AsyncBackgroundTask_5, " + ", "", false, 4, null);
+            AsyncBackgroundTask_5 = AsyncBackgroundTask_5 + LiteBansModule_146.BaseCoreGenericHandler;
+            AsyncBackgroundTask_5 = AsyncBackgroundTask_5 + LitebansHandler.LiteBansModule_31.LiteBansModule_195();
+            AsyncBackgroundTask_5 = AsyncBackgroundTask_5 + StringUtilities.BaseCoreGenericHandler(LiteBansModule_181.AsyncBackgroundTask_5, " + ", "", false, 4, null);
         }
         catch (Throwable throwable) {
             throwable.printStackTrace();
-}
+        }
+    }
 
     private static final void AsyncBackgroundTask_5() {
         e = new String[]{"", "", "https://litebans.AsyncBackgroundTask_5-n-AsyncBackgroundTask_21.name/update.php", " + ", ""};
+    }
 }
-
+}

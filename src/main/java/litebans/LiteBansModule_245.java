@@ -1,107 +1,326 @@
 package litebans;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-public final class LiteBansModule_245 {
-    public static final int BaseCoreGenericHandler(@NotNull int[] nArray, @NotNull LiteBansModule_324 iX2) {
-        if (nArray.length <= 1) {
-            return ArrayUtilities.LiteBansModule_31(nArray);
-        }
-        return nArray[iX2.BaseCoreGenericHandler(nArray.length)];
+public final class LiteBansModule_245
+implements LiteBansModule_83 {
+    private final PlatformPlugin BaseCoreGenericHandler;
+
+    public LiteBansModule_245(@NotNull PlatformPlugin plugin) {
+        this.plugin = plugin;
     }
 
-    public static final byte c(@NotNull byte[] byArray, @NotNull LiteBansModule_324 iX2) {
-        if (byArray.length <= 1) {
-            return ArrayUtilities.BaseCoreGenericHandler(byArray);
-        }
-        return byArray[iX2.LiteBansModule_31(byArray.length)];
+    @Override
+    public PlatformPlugin e() {
+        return this.plugin;
     }
 
-    public static final byte AsyncBackgroundTask_5(@NotNull byte[] byArray, @NotNull LiteBansModule_324 iX2) {
-        return byArray[iX2.LiteBansModule_31(byArray.length)];
+    @Override
+    public boolean LiteBansModule_31() {
+        return true;
     }
 
-    public static final byte LiteBansModule_31(@NotNull byte[] byArray, @NotNull LiteBansModule_324 iX2) {
-        if (ElementsHandler_3.BaseCoreGenericHandler(byArray) <= 1) {
-            return LiteBansModule_283.BaseCoreGenericHandler(ArrayUtilities.BaseCoreGenericHandler(byArray));
-        }
-        return ElementsHandler_3.BaseCoreGenericHandler(byArray, iX2.BaseCoreGenericHandler(ElementsHandler_3.BaseCoreGenericHandler(byArray)));
+    @Override
+    public void BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, @NotNull CharSequence charSequence, @NotNull SilentHandler dZ2, boolean flag) {
     }
 
-    public static final Object BaseCoreGenericHandler(@NotNull Object[] objectArray, @NotNull LiteBansModule_324 iX2) {
-        if (objectArray.length <= 1) {
-            return ArrayUtilities.LiteBansModule_31(objectArray);
-        }
-        return objectArray[iX2.BaseCoreGenericHandler(objectArray.length)];
+    @Override
+    public void BaseCoreGenericHandler(@NotNull SilentHandler dZ2, @Nullable String string, @Nullable String string2, @NotNull CharSequence charSequence, boolean flag) {
     }
 
-    public static final byte[] BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull LiteBansModule_324 iX2) {
-        byte[] byArray2;
-        byte[] byArray3 = byArray2 = byArray;
-        for (int i = ArrayUtilities.LiteBansModule_31(byArray3); 0 < i; --i) {
-            int n = iX2.LiteBansModule_31(i + 1);
-            byte by2 = byArray3[i];
-            byArray3[i] = byArray3[n];
-            byArray3[n] = by2;
-        }
-        return byArray2;
+    @Override
+    public long c() {
+        return 0L;
     }
 
-    public static final byte[] BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull LiteBansModule_324 iX2, int n) {
-        byte[] byArray2;
-        byte[] byArray3 = byArray2 = byArray;
-        while (n2 < n) {
-            byte by2;
-            int n3 = n2++;
-            int n4 = iX2.LiteBansModule_31(byArray3.length);
-            int n5 = iX2.LiteBansModule_31(byArray3.length - 1);
-            byArray3[n4] = by2 = byArray3[n5];
-            byArray3[n5 + 1] = by2;
-        }
-        return byArray2;
+    @Override
+    public int BaseCoreGenericHandler(@NotNull LiteBansModule_65 c12, @Nullable String string, @Nullable String string2) {
+        return 0;
     }
 
-    public static final List LiteBansModule_31(@NotNull List list, @NotNull LiteBansModule_324 iX2) {
-        List list2;
-        List list3 = list2 = list;
-        for (int i = CollectionUtilities.LiteBansModule_31(list3); 0 < i; --i) {
-            int n = iX2.LiteBansModule_31(i + 1);
-            list3.set(n, list3.set(i, list3.get(n)));
-        }
-        return list2;
+    @Override
+    public LiteBansModule_356 BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, @NotNull LiteBansModule_175 eM2, @NotNull LiteBansModule_65 c12) {
+        return LiteBansModule_373.BaseCoreGenericHandler(0.0, 0.0);
     }
 
-    public static final Object c(@NotNull List list, @NotNull LiteBansModule_324 iX2) {
-        if (list.size() <= 1) {
-            return CollectionUtilities.LiteBansModule_31(list);
-        }
-        return list.get(iX2.LiteBansModule_31(list.size()));
+    @Override
+    public void c(@NotNull SilentHandler dZ2) {
     }
 
-    public static final Object LiteBansModule_31(@NotNull Collection collection, @NotNull LiteBansModule_324 iX2) {
-        if (collection.size() <= 1) {
-            return CollectionUtilities.LiteBansModule_240(collection);
-        }
-        return CollectionUtilities.LiteBansModule_31((Iterable)collection, iX2.LiteBansModule_31(collection.size()));
+    @Override
+    public void BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, @Nullable String string3, boolean flag, boolean flag2) {
     }
 
-    public static final Object BaseCoreGenericHandler(@NotNull Collection collection, @NotNull LiteBansModule_324 iX2) {
-        if (collection.isEmpty()) {
-            return null;
-        }
-        return LiteBansModule_245.LiteBansModule_31(collection, iX2);
+    @Override
+    public LiteBansModule_298 BaseCoreGenericHandler(@NotNull LiteBansModule_298 iA2, boolean flag) {
+        return new LiteBansModule_298(null, null, null, new Date());
     }
 
-    public static final void BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull LiteBansModule_324 iX2, @NotNull Number number) {
-        byArray[iX2.LiteBansModule_31((int)byArray.length)] = number.byteValue();
+    @Override
+    public int BaseCoreGenericHandler(@NotNull LiteBansModule_298 iA2) {
+        return 0;
     }
 
-    public static final List BaseCoreGenericHandler(@NotNull List list, @NotNull LiteBansModule_324 iX2) {
-        List list2;
-        List list3 = list2 = list;
-        list3.remove(iX2.LiteBansModule_31(list3.size()));
-        return list2;
+    @Override
+    public void close() {
+    }
+
+    @Override
+    public List BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, @NotNull BanHandler a_2, @Nullable String string3, boolean flag, int n) {
+        return CollectionUtilities.e();
+    }
+
+    @Override
+    public List BaseCoreGenericHandler(@NotNull SilentHandler dZ2, int n) {
+        return CollectionUtilities.e();
+    }
+
+    @Override
+    public List BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull BanHandler a_2, boolean flag, int n) {
+        return CollectionUtilities.e();
+    }
+
+    @Override
+    public int BaseCoreGenericHandler(@NotNull DescHandler hc2, @NotNull BanHandler a_2) {
+        return 0;
+    }
+
+    @Override
+    public List BaseCoreGenericHandler(@NotNull String string, @NotNull BanHandler a_2, @NotNull String string2, int n) {
+        return CollectionUtilities.e();
+    }
+
+    @Override
+    public List BaseCoreGenericHandler(@Nullable String string, int n) {
+        return CollectionUtilities.e();
+    }
+
+    @Override
+    public Collection BaseCoreGenericHandler(@NotNull BanHandler a_2, long l3, long l5, boolean flag) {
+        return CollectionUtilities.e();
+    }
+
+    @Override
+    public SilentHandler BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, @NotNull BanHandler a_2, @Nullable String string3, boolean flag, boolean flag2) {
+        return null;
+    }
+
+    @Override
+    public SilentHandler BaseCoreGenericHandler(@NotNull String string, @Nullable String string2, @Nullable String string3, @NotNull BanHandler a_2) {
+        return null;
+    }
+
+    @Override
+    public List BaseCoreGenericHandler(@NotNull String string, @Nullable String string2, @Nullable String string3, @NotNull BanHandler a_2, boolean flag) {
+        return CollectionUtilities.e();
+    }
+
+    @Override
+    public SilentHandler BaseCoreGenericHandler(long l3, @NotNull BanHandler a_2, @NotNull String string, boolean flag) {
+        return null;
+    }
+
+    @Override
+    public SilentHandler BaseCoreGenericHandler(@NotNull String string, @NotNull BanHandler a_2, @NotNull String string2, boolean flag) {
+        return null;
+    }
+
+    @Override
+    public SilentHandler BaseCoreGenericHandler(@NotNull SilentHandler dZ2, boolean flag) {
+        return null;
+    }
+
+    @Override
+    public SilentHandler BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, @NotNull BanHandler a_2, boolean flag, boolean flag2) {
+        return null;
+    }
+
+    @Override
+    public long BaseCoreGenericHandler(@NotNull BansHandler_2 kL2, @NotNull String string, boolean flag) {
+        return 0L;
+    }
+
+    @Override
+    public boolean BaseCoreGenericHandler(@NotNull UUID uUID, @NotNull BanHandler a_2) {
+        return false;
+    }
+
+    @Override
+    public LiteBansModule_388 BaseCoreGenericHandler(@NotNull UUID uUID, int n) {
+        return LiteBansModule_399.BaseCoreGenericHandler();
+    }
+
+    @Override
+    public LiteBansModule_388 BaseCoreGenericHandler(@NotNull UUID uUID) {
+        return LiteBansModule_399.BaseCoreGenericHandler();
+    }
+
+    @Override
+    public List BaseCoreGenericHandler(@NotNull String string) {
+        return CollectionUtilities.e();
+    }
+
+    @Override
+    public LiteBansModule_298 c(@Nullable String string) {
+        return null;
+    }
+
+    @Override
+    public List LiteBansModule_31(@Nullable String string, int n) {
+        return CollectionUtilities.e();
+    }
+
+    @Override
+    public long LiteBansModule_31(@NotNull SilentHandler dZ2) {
+        return 0L;
+    }
+
+    @Override
+    public void BaseCoreGenericHandler(@Nullable Connection connection, @NotNull BansHandler_2 kL2, boolean flag) {
+    }
+
+    @Override
+    public SilentHandler BaseCoreGenericHandler(@NotNull ResultSet resultSet, @NotNull BanHandler a_2) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public LiteBansModule_60 c(@NotNull CharSequence charSequence) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void BaseCoreGenericHandler(@Nullable String string, long l3) {
+    }
+
+    @Override
+    public ResultSet BaseCoreGenericHandler(@NotNull BansHandler_2 kL2, @NotNull String string, int n) {
+        return LiteBansModule_399.BaseCoreGenericHandler();
+    }
+
+    @Override
+    public ResultSet BaseCoreGenericHandler(@NotNull BansHandler_2 kL2) {
+        return LiteBansModule_399.BaseCoreGenericHandler();
+    }
+
+    @Override
+    public void BaseCoreGenericHandler(@NotNull CharSequence charSequence, long l3, @NotNull SilentHandler dZ2) {
+    }
+
+    @Override
+    public long BaseCoreGenericHandler(@NotNull String string, long l3, @NotNull String string2) {
+        return -1L;
+    }
+
+    @Override
+    public ResultSet LiteBansModule_31(@NotNull String string) {
+        return new LiteBansModule_388();
+    }
+
+    @Override
+    public void BaseCoreGenericHandler(boolean flag) {
+    }
+
+    @Override
+    public boolean LiteBansModule_31(@NotNull BansHandler_2 kL2, @NotNull String string, boolean flag) {
+        return false;
+    }
+
+    @Override
+    public boolean BaseCoreGenericHandler() {
+        return AllHandler_3.LiteBansModule_31(this);
+    }
+
+    @Override
+    public DatabaseMonitorService AsyncBackgroundTask_5() {
+        return AllHandler_3.BaseCoreGenericHandler(this);
+    }
+
+    @Override
+    public List BaseCoreGenericHandler(@NotNull LiteBansModule_298 iA2, @NotNull BanHandler a_2, @NotNull String string, boolean flag, int n) {
+        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)this, iA2, a_2, string, flag, n);
+    }
+
+    @Override
+    public List LiteBansModule_31(@NotNull ResultSet resultSet, @NotNull BanHandler a_2) {
+        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)this, resultSet, a_2);
+    }
+
+    @Override
+    public String BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender) {
+        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)this, sender);
+    }
+
+    @Override
+    public CharSequence LiteBansModule_31(@NotNull CharSequence charSequence, @NotNull CommandSenderWrapper sender) {
+        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)this, charSequence, sender);
+    }
+
+    @Override
+    public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable String string, @Nullable String string2, boolean flag) {
+        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)this, charSequence, string, string2, flag);
+    }
+
+    @Override
+    public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence) {
+        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)this, charSequence);
+    }
+
+    @Override
+    public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable LiteBansModule_298 iA2, boolean flag) {
+        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)this, charSequence, iA2, flag);
+    }
+
+    @Override
+    public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable CommandSenderWrapper sender) {
+        return AllHandler_3.LiteBansModule_31(this, charSequence, sender);
+    }
+
+    @Override
+    public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull LiteBansModule_114 d92) {
+        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)this, charSequence, d92);
+    }
+
+    @Override
+    public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable SilentHandler dZ2, boolean flag) {
+        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)this, charSequence, dZ2, flag);
+    }
+
+    @Override
+    public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable SilentHandler dZ2, @Nullable LiteBansModule_298 iA2, boolean flag) {
+        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)this, charSequence, dZ2, iA2, flag);
+    }
+
+    @Override
+    public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable String string, @Nullable String string2, @Nullable String string3, @Nullable String string4, @Nullable String string5) {
+        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)this, charSequence, string, string2, string3, string4, string5);
+    }
+
+    @Override
+    public boolean BaseCoreGenericHandler(@NotNull SilentHandler dZ2, @NotNull CommandSenderWrapper sender) {
+        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)this, dZ2, sender);
+    }
+
+    @Override
+    public boolean BaseCoreGenericHandler(@Nullable SilentHandler dZ2) {
+        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_83)this, dZ2);
+    }
+
+    @Override
+    public ResultSet BaseCoreGenericHandler(UUID uUID, int n) {
+        return this.plugin(uUID, n);
+    }
+
+    @Override
+    public ResultSet BaseCoreGenericHandler(UUID uUID) {
+        return this.plugin(uUID);
+    }
 }
 

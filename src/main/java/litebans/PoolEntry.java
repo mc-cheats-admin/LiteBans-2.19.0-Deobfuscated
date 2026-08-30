@@ -24,8 +24,8 @@ static abstract class PoolEntry {
     volatile String c;
     final AtomicReference DatabaseMonitorService;
     long AsyncBackgroundTask_21;
-    long LiteBansModule_194;
-    LiteBansModule_99 CommandThrottleService;
+    long LiteBansModule_195;
+    LiteBansModule_100 CommandThrottleService;
     private static final String[] i;
     private static final int BaseCoreGenericHandler;
     private static final int r;
@@ -37,29 +37,29 @@ static abstract class PoolEntry {
     private int m;
     private Executor Utf8Handler_2;
     private DataSource BroadcastService;
-    private final String LiteBansModule_401;
+    private final String LiteBansModule_403;
     private final boolean ServerSyncService;
     private final boolean HoverTextFormatter;
-    private final boolean LiteBansModule_433;
+    private final boolean LiteBansModule_435;
     private final boolean PunishmentTableService;
-    private volatile boolean LiteBansModule_240;
+    private volatile boolean LiteBansModule_241;
 
     PoolEntry(HikariConfig aB2) {
         this.AsyncBackgroundTask_22 = aB2;
         this.LiteBansModule_31 = -1;
         this.c = aB2.AsyncBackgroundTask_5();
-        this.LiteBansModule_401 = aB2.PunishmentTableService();
+        this.LiteBansModule_403 = aB2.PunishmentTableService();
         this.ServerSyncService = aB2.Utf8Handler_2();
         this.HoverTextFormatter = aB2.CommandThrottleService();
-        this.CommandThrottleService = (LiteBansModule_99)LiteBansModule_131.BaseCoreGenericHandler(aB2.q(), LiteBansModule_99.class, new Object[0]);
-        this.m = LiteBansModule_131.BaseCoreGenericHandler(aB2.BanHandler_2());
+        this.CommandThrottleService = (LiteBansModule_100)LiteBansModule_132.BaseCoreGenericHandler(aB2.q(), LiteBansModule_100.class, new Object[0]);
+        this.m = LiteBansModule_132.BaseCoreGenericHandler(aB2.BanHandler_2());
         this.n = -1;
         this.g = -1;
-        this.LiteBansModule_433 = aB2.LiteBansModule_433() == null;
+        this.LiteBansModule_435 = aB2.LiteBansModule_435() == null;
         this.PunishmentTableService = aB2.GnuSparseMapHandler();
         this.e = aB2.e();
         this.AsyncBackgroundTask_21 = aB2.c();
-        this.LiteBansModule_194 = aB2.LiteBansModule_240();
+        this.LiteBansModule_195 = aB2.LiteBansModule_241();
         this.DatabaseMonitorService = new AtomicReference();
         this.e();
     }
@@ -84,10 +84,13 @@ static abstract class PoolEntry {
                 }
                 finally {
                     connection.close();
-}
+                }
+            }
             catch (Exception exception) {
                 this.q.LiteBansModule_31("%AsyncBackgroundTask_21 - Closing connection %AsyncBackgroundTask_21 failed", new Object[]{this.e, connection.toString(), exception});
-}
+            }
+        }
+    }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -98,9 +101,9 @@ static abstract class PoolEntry {
     boolean AsyncBackgroundTask_5(Connection connection) {
         try {
             try {
-                this.plugin(connection, this.LiteBansModule_194);
-                int n = (int)Math.max(1000L, this.LiteBansModule_194) / 1000;
-                if (this.LiteBansModule_433) {
+                this.plugin(connection, this.LiteBansModule_195);
+                int n = (int)Math.max(1000L, this.LiteBansModule_195) / 1000;
+                if (this.LiteBansModule_435) {
                     boolean flag = connection.isValid(n);
                     return flag;
                 }
@@ -108,22 +111,26 @@ static abstract class PoolEntry {
                     if (this.g != 1) {
                         this.plugin(statement, n);
                     }
-                    statement.execute(this.AsyncBackgroundTask_22.LiteBansModule_433());
+                    statement.execute(this.AsyncBackgroundTask_22.LiteBansModule_435());
                     return true;
-}
+                }
+            }
             finally {
-                this.plugin(connection, this.LiteBansModule_31);
+                this.plugin(connection, (long)this.LiteBansModule_31);
                 if (this.PunishmentTableService && !this.HoverTextFormatter) {
                     connection.rollback();
-}
+                }
+            }
+        }
         catch (Exception exception) {
             this.DatabaseMonitorService.set(exception);
             this.q.c("%AsyncBackgroundTask_21 - Failed to validate connection %AsyncBackgroundTask_21 (%AsyncBackgroundTask_21). Possibly consider using BaseCoreGenericHandler shorter maxLifetime ", new Object[]{this.e, connection.toString(), exception.getMessage()});
             return false;
-}
+        }
+    }
 
     Exception g() {
-        return this.DatabaseMonitorService.get();
+        return (Exception)this.DatabaseMonitorService.get();
     }
 
     public DataSource c() {
@@ -131,11 +138,11 @@ static abstract class PoolEntry {
     }
 
     InUseHandler AsyncBackgroundTask_5() {
-        return new InUseHandler(this.LiteBansModule_194(), this, this.ServerSyncService, this.HoverTextFormatter);
+        return new InUseHandler(this.LiteBansModule_195(), this, this.ServerSyncService, this.HoverTextFormatter);
     }
 
-    void BaseCoreGenericHandler(Connection connection, HexEncodingHelper c22, int n) {
-        if ((n & 1) != 0 && c22.LiteBansModule_194() != this.ServerSyncService) {
+    void BaseCoreGenericHandler(Connection connection, LiteBansModule_66 c22, int n) {
+        if ((n & 1) != 0 && c22.LiteBansModule_195() != this.ServerSyncService) {
             connection.setReadOnly(this.ServerSyncService);
             n2 |= 1;
         }
@@ -147,37 +154,40 @@ static abstract class PoolEntry {
             connection.setTransactionIsolation(this.m);
             n2 |= 4;
         }
-        if ((n & 8) != 0 && this.c != null && !this.c.equals(c22.LiteBansModule_240())) {
+        if ((n & 8) != 0 && this.c != null && !this.c.equals(c22.LiteBansModule_241())) {
             connection.setCatalog(this.c);
             n2 |= 8;
         }
         if ((n & 0x10) != 0 && c22.g() != this.LiteBansModule_31) {
-            this.plugin(connection, this.LiteBansModule_31);
+            this.plugin(connection, (long)this.LiteBansModule_31);
             n2 |= 0x10;
         }
-        if ((n & 0x20) != 0 && this.LiteBansModule_401 != null && !this.LiteBansModule_401.equals(c22.c())) {
-            connection.setSchema(this.LiteBansModule_401);
+        if ((n & 0x20) != 0 && this.LiteBansModule_403 != null && !this.LiteBansModule_403.equals(c22.c())) {
+            connection.setSchema(this.LiteBansModule_403);
             n2 |= 0x20;
         }
         if (n2 != 0 && this.q.BaseCoreGenericHandler()) {
             this.q.LiteBansModule_31("%AsyncBackgroundTask_21 - Reset (%AsyncBackgroundTask_21) on connection %AsyncBackgroundTask_21", new Object[]{this.e, this.plugin(n2), connection.toString()});
-}
+        }
+    }
 
     void LiteBansModule_31() {
         if (this.Utf8Handler_2 instanceof ThreadPoolExecutor) {
-            (this.Utf8Handler_2).shutdownNow();
-}
+            ((ThreadPoolExecutor)this.Utf8Handler_2).shutdownNow();
+        }
+    }
 
-    long LiteBansModule_240() {
+    long LiteBansModule_241() {
         try {
-            return this.BroadcastService != null ? this.BroadcastService.getLoginTimeout() : TimeUnit.SECONDS.toSeconds(5L);
+            return this.BroadcastService != null ? (long)this.BroadcastService.getLoginTimeout() : TimeUnit.SECONDS.toSeconds(5L);
         }
         catch (SQLException sQLException) {
             return TimeUnit.SECONDS.toSeconds(5L);
-}
+        }
+    }
 
     void BaseCoreGenericHandler(HikariPool dr2, boolean flag) {
-        if (!this.AsyncBackgroundTask_22.LiteBansModule_240()) {
+        if (!this.AsyncBackgroundTask_22.LiteBansModule_241()) {
             return;
         }
         try {
@@ -197,25 +207,28 @@ static abstract class PoolEntry {
                     mBeanServer.registerMBean(dr2, objectName);
                 } else {
                     this.q.BaseCoreGenericHandler("{} - JMX name ({}) is already ", new Object[]{this.e, this.e});
-} else if (mBeanServer.isRegistered(objectName2)) {
+                }
+            } else if (mBeanServer.isRegistered(objectName2)) {
                 mBeanServer.unregisterMBean(objectName2);
                 mBeanServer.unregisterMBean(objectName);
-}
+            }
+        }
         catch (Exception exception) {
             this.q.c("{} - Failed to {} management ", new Object[]{this.e, flag ? "register" : "unregister", exception});
-}
+        }
+    }
 
     private final void e() {
         String string = this.AsyncBackgroundTask_22.m();
         String string2 = this.AsyncBackgroundTask_22.B();
         String string3 = this.AsyncBackgroundTask_22.AsyncBackgroundTask_21();
         String string4 = this.AsyncBackgroundTask_22.DatabaseMonitorService();
-        String string5 = this.AsyncBackgroundTask_22.LiteBansModule_194();
+        String string5 = this.AsyncBackgroundTask_22.LiteBansModule_195();
         String string6 = this.AsyncBackgroundTask_22.i();
         Properties properties = this.AsyncBackgroundTask_22.A();
         DataSource dataSource = this.AsyncBackgroundTask_22.AsyncBackgroundTask_22();
         if (string4 != null && dataSource == null) {
-            dataSource = (DataSource)LiteBansModule_131.BaseCoreGenericHandler(string4, DataSource.class, new Object[0]);
+            dataSource = (DataSource)LiteBansModule_132.BaseCoreGenericHandler(string4, DataSource.class, new Object[0]);
             SetHandler.BaseCoreGenericHandler(dataSource, properties);
         } else if (string != null && dataSource == null) {
             dataSource = new UserHandler(string, string5, properties, string2, string3);
@@ -226,7 +239,8 @@ static abstract class PoolEntry {
             }
             catch (NamingException namingException) {
                 throw new LiteBansException_3(namingException);
-}
+            }
+        }
         if (dataSource != null) {
             this.plugin(dataSource);
             this.plugin(dataSource, string4, string);
@@ -234,8 +248,8 @@ static abstract class PoolEntry {
         this.BroadcastService = dataSource;
     }
 
-    private final Connection LiteBansModule_194() {
-        long l3 = LiteBansModule_149.LiteBansModule_31();
+    private final Connection LiteBansModule_195() {
+        long l3 = LiteBansModule_150.LiteBansModule_31();
         Connection connection = null;
         try {
             String string = this.AsyncBackgroundTask_22.B();
@@ -256,14 +270,15 @@ static abstract class PoolEntry {
             }
             this.DatabaseMonitorService.set(exception);
             throw exception;
-}
+        }
+    }
 
     private final void e(Connection connection) {
         try {
             if (this.LiteBansModule_31 == -1) {
-                this.LiteBansModule_31 = this.LiteBansModule_31(connection, this.LiteBansModule_194);
+                this.LiteBansModule_31 = this.LiteBansModule_31(connection, this.LiteBansModule_195);
             } else {
-                this.plugin(connection, this.LiteBansModule_194);
+                this.plugin(connection, this.LiteBansModule_195);
             }
             if (connection.isReadOnly() != this.ServerSyncService) {
                 connection.setReadOnly(this.ServerSyncService);
@@ -278,63 +293,73 @@ static abstract class PoolEntry {
             if (this.c != null) {
                 connection.setCatalog(this.c);
             }
-            if (this.LiteBansModule_401 != null) {
-                connection.setSchema(this.LiteBansModule_401);
+            if (this.LiteBansModule_403 != null) {
+                connection.setSchema(this.LiteBansModule_403);
             }
             this.plugin(connection, this.AsyncBackgroundTask_22.LiteBansModule_31(), true);
-            this.plugin(connection, this.LiteBansModule_31);
+            this.plugin(connection, (long)this.LiteBansModule_31);
         }
         catch (SQLException sQLException) {
             throw new LiteBansException_6(sQLException);
-}
+        }
+    }
 
     private final void c(Connection connection) {
-        if (!this.LiteBansModule_240) {
+        if (!this.LiteBansModule_241) {
             this.plugin(connection);
             this.LiteBansModule_31(connection);
-            this.LiteBansModule_240 = true;
-}
+            this.LiteBansModule_241 = true;
+        }
+    }
 
     private final void BaseCoreGenericHandler(Connection connection) {
         try {
-            if (this.LiteBansModule_433) {
+            if (this.LiteBansModule_435) {
                 connection.isValid(1);
             } else {
-                this.plugin(connection, this.AsyncBackgroundTask_22.LiteBansModule_433(), false);
-}
+                this.plugin(connection, this.AsyncBackgroundTask_22.LiteBansModule_435(), false);
+            }
+        }
         catch (AbstractMethodError | Exception throwable) {
-            this.q.BaseCoreGenericHandler("%AsyncBackgroundTask_21 - Failed to execute%AsyncBackgroundTask_21 connection test query (%AsyncBackgroundTask_21) + ", new Object[]{this.e, this.LiteBansModule_433 ? " isValid() for connection, configure" : "", throwable.getMessage()});
+            this.q.BaseCoreGenericHandler("%AsyncBackgroundTask_21 - Failed to execute%AsyncBackgroundTask_21 connection test query (%AsyncBackgroundTask_21) + ", new Object[]{this.e, this.LiteBansModule_435 ? " isValid() for connection, configure" : "", throwable.getMessage()});
             throw throwable;
-}
+        }
+    }
 
     private final void LiteBansModule_31(Connection connection) {
-{
+        block3: {
             try {
                 this.AsyncBackgroundTask_5 = connection.getTransactionIsolation();
                 if (this.m == -1) {
                     this.m = this.AsyncBackgroundTask_5;
-}
+                }
+            }
             catch (SQLException sQLException) {
                 this.q.c("%AsyncBackgroundTask_21 - Default transaction isolation level detection failed (%AsyncBackgroundTask_21) + ", new Object[]{this.e, sQLException.getMessage()});
-                if (sQLException.getSQLState() == null || sQLException.getSQLState().startsWith("08")) break;
+                if (sQLException.getSQLState() == null || sQLException.getSQLState().startsWith("08")) break block3;
                 throw sQLException;
-}
+            }
+        }
+    }
 
     private final void BaseCoreGenericHandler(Statement statement, int n) {
-{
+        block3: {
             if (this.n != 0) {
                 try {
                     statement.setQueryTimeout(n);
                     this.n = 1;
                 }
                 catch (Exception exception) {
-                    if (this.n != -1) break;
+                    if (this.n != -1) break block3;
                     this.n = 0;
                     this.q.AsyncBackgroundTask_5("%AsyncBackgroundTask_21 - Failed to set query timeout for statement. (%AsyncBackgroundTask_21)", new Object[]{this.e, exception.getMessage()});
-}
+                }
+            }
+        }
+    }
 
     private final int LiteBansModule_31(Connection connection, long l3) {
-{
+        block4: {
             if (this.g != 0) {
                 try {
                     int n = connection.getNetworkTimeout();
@@ -343,22 +368,25 @@ static abstract class PoolEntry {
                     return n;
                 }
                 catch (AbstractMethodError | Exception throwable) {
-                    if (this.g != -1) break;
+                    if (this.g != -1) break block4;
                     this.g = 0;
                     this.q.AsyncBackgroundTask_5("%AsyncBackgroundTask_21 - Driver does not support get/set network timeout for connections. (%AsyncBackgroundTask_21)", new Object[]{this.e, throwable.getMessage()});
-                    if (this.LiteBansModule_194 < TimeUnit.SECONDS.toMillis(1L)) {
+                    if (this.LiteBansModule_195 < TimeUnit.SECONDS.toMillis(1L)) {
                         this.q.c("%AsyncBackgroundTask_21 - A validationTimeout of less than 1 second cannot be honored on drivers without setNetworkTimeout() ", new Object[]{this.e});
                     }
-                    if (this.LiteBansModule_194 % TimeUnit.SECONDS.toMillis(1L) == 0L) break;
+                    if (this.LiteBansModule_195 % TimeUnit.SECONDS.toMillis(1L) == 0L) break block4;
                     this.q.c("%AsyncBackgroundTask_21 - A validationTimeout with fractional second granularity cannot be honored on drivers without setNetworkTimeout() ", new Object[]{this.e});
-}
+                }
+            }
+        }
         return 0;
     }
 
     private final void BaseCoreGenericHandler(Connection connection, long l3) {
         if (this.g == 1) {
             connection.setNetworkTimeout(this.Utf8Handler_2, (int)l3);
-}
+        }
+    }
 
     private final void BaseCoreGenericHandler(Connection connection, String string, boolean flag) {
         if (string != null) {
@@ -370,19 +398,23 @@ static abstract class PoolEntry {
                     connection.commit();
                 } else {
                     connection.rollback();
-}
+                }
+            }
+        }
+    }
 
     private final void BaseCoreGenericHandler(DataSource dataSource, String string, String string2) {
         if (string != null && string.contains("Mysql") || string2 != null && string2.contains("mysql") || dataSource != null && dataSource.getClass().getName().contains("Mysql")) {
-            this.Utf8Handler_2 = new LiteBansModule_151(null);
+            this.Utf8Handler_2 = new LiteBansModule_152(null);
         } else {
             ThreadFactory threadFactory = this.AsyncBackgroundTask_22.ServerSyncService();
-            threadFactory = threadFactory != null ? threadFactory : new LiteBansModule_216(this.e + " network timeout executor", true);
+            threadFactory = threadFactory != null ? threadFactory : new LiteBansModule_217(this.e + " network timeout executor", true);
             ThreadPoolExecutor threadPoolExecutor = (ThreadPoolExecutor)Executors.newCachedThreadPool(threadFactory);
             threadPoolExecutor.setKeepAliveTime(15L, TimeUnit.SECONDS);
             threadPoolExecutor.allowCoreThreadTimeOut(true);
             this.Utf8Handler_2 = threadPoolExecutor;
-}
+        }
+    }
 
     private final void BaseCoreGenericHandler(DataSource dataSource) {
         if (this.AsyncBackgroundTask_21 != Integer.MAX_VALUE) {
@@ -391,7 +423,9 @@ static abstract class PoolEntry {
             }
             catch (Exception exception) {
                 this.q.AsyncBackgroundTask_5("%AsyncBackgroundTask_21 - Failed to set login timeout for data source. (%AsyncBackgroundTask_21)", new Object[]{this.e, exception.getMessage()});
-}
+            }
+        }
+    }
 
     private final String BaseCoreGenericHandler(int n) {
         StringBuilder stringBuilder = new StringBuilder();
@@ -408,5 +442,6 @@ static abstract class PoolEntry {
         r = 1;
         BaseCoreGenericHandler = -1;
         i = new String[]{"readOnly", "autoCommit", "isolation", "catalog", "netTimeout", "schema"};
+    }
 }
 

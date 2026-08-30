@@ -1,26 +1,23 @@
 package litebans;
 
-import java.text.DecimalFormat;
-public class LiteBansModule_287 {
-    public static final DecimalFormat LiteBansModule_31;
-    public static final DecimalFormat BaseCoreGenericHandler;
-    public static final DecimalFormat AsyncBackgroundTask_5;
-    public static String LiteBansModule_31(double d10) {
-        return LiteBansModule_31.format(d10);
+import java.nio.ByteBuffer;
+import java.util.UUID;
+import org.jetbrains.annotations.NotNull;
+
+public final class LiteBansModule_287 {
+    public static final byte[] BaseCoreGenericHandler(@NotNull UUID uUID) {
+        return ByteBuffer.wrap(new byte[16]).putLong(uUID.getMostSignificantBits()).putLong(uUID.getLeastSignificantBits()).array();
     }
 
-    public static String BaseCoreGenericHandler(double d10) {
-        return BaseCoreGenericHandler.format(d10);
+    public static final UUID BaseCoreGenericHandler(@NotNull byte[] byArray) {
+        if (!(byArray.length == 16)) {
+            Integer n = byArray.length;
+            throw new IllegalArgumentException(((Object)n).toString());
+        }
+        ByteBuffer byteBuffer = ByteBuffer.wrap(byArray);
+        long l3 = byteBuffer.getLong();
+        long l5 = byteBuffer.getLong();
+        return new UUID(l3, l5);
     }
-
-    static {
-        LiteBansModule_287.BaseCoreGenericHandler();
-        LiteBansModule_31 = new DecimalFormat("#.#");
-        BaseCoreGenericHandler = new DecimalFormat("#.##");
-        AsyncBackgroundTask_5 = new DecimalFormat("#.###");
-    }
-
-    private static final void BaseCoreGenericHandler() {
-        c = new String[]{"#.#", "#.##", "#.###"};
 }
 

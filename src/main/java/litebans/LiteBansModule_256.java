@@ -1,16 +1,26 @@
 package litebans;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-public final class LiteBansModule_256
-implements Comparator {
-    public final int compare(Object targetObj, Object contextObj) {
-        Map.Entry entry = (Map.Entry)contextObj;
-        Comparable comparable = Integer.valueOf(((List)entry.getValue()).size());
-        entry = (Map.Entry)targetObj;
-        Comparable comparable2 = comparable;
-        flag = false;
-        return LiteBansModule_261.BaseCoreGenericHandler(comparable2, Integer.valueOf(((List)entry.getValue()).size()));
+import com.mojang.serialization.DynamicOps;
+import com.mojang.serialization.JsonOps;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.ComponentSerialization;
+import net.minecraft.util.StrictJsonParser;
+
+public class LiteBansModule_256
+implements LiteBansModule_253 {
+    @Override
+    public Object BaseCoreGenericHandler(CharSequence charSequence) {
+        return Component.literal((String)charSequence.toString());
+    }
+
+    @Override
+    public Object LiteBansModule_31(CharSequence charSequence) {
+        return this.plugin(charSequence);
+    }
+
+    private final Component BaseCoreGenericHandler(CharSequence charSequence) {
+        return (Component)ComponentSerialization.CODEC.parse((DynamicOps)RegistryAccess.EMPTY.createSerializationContext((DynamicOps)JsonOps.INSTANCE), (Object)StrictJsonParser.parse((String)charSequence.toString())).getOrThrow(IllegalArgumentException::new);
+    }
 }
 

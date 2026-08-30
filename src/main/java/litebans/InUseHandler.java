@@ -5,16 +5,16 @@ import java.sql.Statement;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 static final class InUseHandler
-implements LiteBansModule_315 {
-    private static final HikariLogger LiteBansModule_401 = HikariLogger.BaseCoreGenericHandler(InUseHandler.class);
+implements LiteBansModule_316 {
+    private static final HikariLogger LiteBansModule_403 = HikariLogger.BaseCoreGenericHandler(InUseHandler.class);
     private static final AtomicIntegerFieldUpdater n = AtomicIntegerFieldUpdater.newUpdater(InUseHandler.class, "i");
     Connection g;
     long e;
     private volatile int i = 0;
-    private volatile boolean LiteBansModule_194;
+    private volatile boolean LiteBansModule_195;
     private volatile ScheduledFuture GnuSparseMapHandler;
-    private volatile ScheduledFuture LiteBansModule_240;
-    private final LiteBansModule_226 BroadcastService;
+    private volatile ScheduledFuture LiteBansModule_241;
+    private final LiteBansModule_227 BroadcastService;
     private final HikariPool PunishmentTableService;
     private final boolean Utf8Handler_2;
     private final boolean m;
@@ -24,29 +24,30 @@ implements LiteBansModule_315 {
         this.PunishmentTableService = (HikariPool)dI2;
         this.Utf8Handler_2 = flag;
         this.m = flag2;
-        this.e = LiteBansModule_149.LiteBansModule_31();
-        this.BroadcastService = new LiteBansModule_226(Statement.class, 16);
+        this.e = LiteBansModule_150.LiteBansModule_31();
+        this.BroadcastService = new LiteBansModule_227(Statement.class, 16);
     }
 
     void BaseCoreGenericHandler(long l3) {
         if (this.g != null) {
             this.e = l3;
             this.PunishmentTableService.BaseCoreGenericHandler(this);
-}
+        }
+    }
 
     void LiteBansModule_31(ScheduledFuture scheduledFuture) {
         this.GnuSparseMapHandler = scheduledFuture;
     }
 
     public void BaseCoreGenericHandler(ScheduledFuture scheduledFuture) {
-        this.LiteBansModule_240 = scheduledFuture;
+        this.LiteBansModule_241 = scheduledFuture;
     }
 
     Connection BaseCoreGenericHandler(AsyncBackgroundTask_15 ja2, long l3) {
         return LiteBansModule_64.BaseCoreGenericHandler(this, this.g, this.BroadcastService, ja2, l3, this.Utf8Handler_2, this.m);
     }
 
-    void BaseCoreGenericHandler(HexEncodingHelper c22, int n) {
+    void BaseCoreGenericHandler(LiteBansModule_66 c22, int n) {
         this.PunishmentTableService.BaseCoreGenericHandler(this.g, c22, n);
     }
 
@@ -55,11 +56,11 @@ implements LiteBansModule_315 {
     }
 
     boolean LiteBansModule_31() {
-        return this.LiteBansModule_194;
+        return this.LiteBansModule_195;
     }
 
-    void LiteBansModule_194() {
-        this.LiteBansModule_194 = true;
+    void LiteBansModule_195() {
+        this.LiteBansModule_195 = true;
     }
 
     void BaseCoreGenericHandler(String string) {
@@ -71,8 +72,8 @@ implements LiteBansModule_315 {
     }
 
     public String toString() {
-        long l3 = LiteBansModule_149.LiteBansModule_31();
-        return this.g + ", accessed " + LiteBansModule_149.e(this.e, l3) + " ago, " + this.c();
+        long l3 = LiteBansModule_150.LiteBansModule_31();
+        return this.g + ", accessed " + LiteBansModule_150.e(this.e, l3) + " ago, " + this.c();
     }
 
     @Override
@@ -94,15 +95,15 @@ implements LiteBansModule_315 {
         ScheduledFuture scheduledFuture;
         ScheduledFuture scheduledFuture2 = this.GnuSparseMapHandler;
         if (scheduledFuture2 != null && !scheduledFuture2.isDone() && !scheduledFuture2.cancel(false)) {
-            LiteBansModule_401.c("%AsyncBackgroundTask_21 - maxLifeTime expiration task cancellation unexpectedly returned false for connection %AsyncBackgroundTask_21", new Object[]{this.e(), this.g.toString()});
+            LiteBansModule_403.c("%AsyncBackgroundTask_21 - maxLifeTime expiration task cancellation unexpectedly returned false for connection %AsyncBackgroundTask_21", new Object[]{this.e(), this.g.toString()});
         }
-        if ((scheduledFuture = this.LiteBansModule_240) != null && !scheduledFuture.isDone() && !scheduledFuture.cancel(false)) {
-            LiteBansModule_401.c("%AsyncBackgroundTask_21 - keepalive task cancellation unexpectedly returned false for connection %AsyncBackgroundTask_21", new Object[]{this.e(), this.g.toString()});
+        if ((scheduledFuture = this.LiteBansModule_241) != null && !scheduledFuture.isDone() && !scheduledFuture.cancel(false)) {
+            LiteBansModule_403.c("%AsyncBackgroundTask_21 - keepalive task cancellation unexpectedly returned false for connection %AsyncBackgroundTask_21", new Object[]{this.e(), this.g.toString()});
         }
         Connection connection = this.g;
         this.g = null;
         this.GnuSparseMapHandler = null;
-        this.LiteBansModule_240 = null;
+        this.LiteBansModule_241 = null;
         return connection;
     }
 
@@ -119,7 +120,9 @@ implements LiteBansModule_315 {
             }
             case -2: {
                 return "RESERVED";
-}
+            }
+        }
         return "Invalid";
+    }
 }
 

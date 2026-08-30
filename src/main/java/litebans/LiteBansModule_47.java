@@ -29,5 +29,7 @@ public abstract class LiteBansModule_47 {
         }
         catch (NoClassDefFoundError noClassDefFoundError) {
             // empty catch block
+        }
+    }
 }
 

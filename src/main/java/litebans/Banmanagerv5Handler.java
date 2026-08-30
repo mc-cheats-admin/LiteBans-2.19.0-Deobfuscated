@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 
 public final class Banmanagerv5Handler
 extends BansHandler {
-    public Banmanagerv5Handler(@NotNull PlatformPlugin plugin) {
+        public Banmanagerv5Handler(@NotNull PlatformPlugin plugin) {
         super(plugin, "BanManagerV5", "bm_", 0, 0L, 24, null);
     }
 
@@ -27,16 +27,16 @@ extends BansHandler {
     }
 
     @Override
-    public void BaseCoreGenericHandler(@NotNull String string, @NotNull Connection connection, @NotNull LiteBansModule_82 ch2, boolean flag) {
-        boolean flag2 = StringUtilities.LiteBansModule_31(string, '7', false, 2, null);
-        this.plugin("bans", BanHandler.LiteBansModule_240, connection, ch2, flag, flag2);
+    public void BaseCoreGenericHandler(@NotNull String string, @NotNull Connection connection, @NotNull LiteBansModule_83 ch2, boolean flag) {
+        boolean flag2 = StringUtilities.LiteBansModule_31((CharSequence)string, '7', false, 2, null);
+        this.plugin("bans", BanHandler.LiteBansModule_241, connection, ch2, flag, flag2);
         this.plugin("mutes", BanHandler.GnuSparseMapHandler, connection, ch2, flag, flag2);
     }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
-    private final void BaseCoreGenericHandler(String string, BanHandler a_2, Connection connection, LiteBansModule_82 ch2, boolean flag, boolean flag2) {
+    private final void BaseCoreGenericHandler(String string, BanHandler a_2, Connection connection, LiteBansModule_83 ch2, boolean flag, boolean flag2) {
         PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM " + this.i() + "player_" + string + " INNER JOIN " + this.i() + "players ON " + this.i() + "player_" + string + ".player_id=" + this.i() + "players.SQLiteDriverHandler_4");
         AutoCloseable autoCloseable = preparedStatement;
         Throwable throwable = null;
@@ -55,25 +55,26 @@ extends BansHandler {
                     flag3 = false;
                     while (autoCloseable3.next()) {
                         helperObj = autoCloseable3.getString("name");
-                        resultObj = LiteBansModule_286.BaseCoreGenericHandler(autoCloseable3.getBytes("player_id"));
+                        resultObj = LiteBansModule_287.BaseCoreGenericHandler(autoCloseable3.getBytes("player_id"));
                         contextObj = autoCloseable3.getString("reason");
-                        targetObj = LiteBansModule_286.BaseCoreGenericHandler(autoCloseable3.getBytes("actor_id"));
+                        targetObj = LiteBansModule_287.BaseCoreGenericHandler(autoCloseable3.getBytes("actor_id"));
                         long l3 = autoCloseable3.getLong("created") * 1000L;
                         long l5 = autoCloseable3.getLong("expires") * 1000L;
-                        String string2 = this.toString();
-                        String string3 = this.plugintargetObj;
+                        String string2 = ((UUID)resultObj).toString();
+                        String string3 = this.plugin((UUID)targetObj);
                         ObjectUtilities.BaseCoreGenericHandler(contextObj);
-                        SilentHandler dZ2 = new SilentHandler(a_2, string2, null, contextObj, targetObj.toString(), string3, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), null, l3, l5, 0, false, false, false, 0L, 31744, null);
+                        SilentHandler dZ2 = new SilentHandler(a_2, string2, null, (CharSequence)contextObj, ((UUID)targetObj).toString(), string3, LiteBansModule_182.LiteBansModule_195.LiteBansModule_31(), null, l3, l5, 0, false, false, false, 0L, 31744, null);
                         if (AllHandler_3.BaseCoreGenericHandler(ch2, string2, null, null, false, false, 30, null) == null) {
                             ch2.c(dZ2);
-                            if (a_2 == BanHandler.LiteBansModule_240) {
+                            if (a_2 == BanHandler.LiteBansModule_241) {
                                 this.g().incrementAndGet();
-} else {
+                            }
+                        } else {
                             this.m().warning("Ignoring duplicate ban for " + string2);
                         }
-                        PlatformPlugin plugin = this.LiteBansModule_240();
+                        PlatformPlugin plugin = this.LiteBansModule_241();
                         ObjectUtilities.BaseCoreGenericHandler(helperObj);
-                        new LiteBansModule_221(plugin, (String)helperObj, string2, "#").run();
+                        new LiteBansModule_222(plugin, (String)helperObj, string2, "#").run();
                     }
                     tempObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
@@ -83,7 +84,8 @@ extends BansHandler {
                 }
                 finally {
                     CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
-}
+                }
+            }
             if (flag) {
                 this.m().info("Importing IP-bans.. + ");
                 autoCloseable3 = connection.prepareStatement("SELECT * FROM " + this.i() + "ip_bans");
@@ -111,7 +113,7 @@ extends BansHandler {
                                 }
                                 String string5 = string4;
                                 object8 = helperObj.getString("reason");
-                                object7 = LiteBansModule_286.BaseCoreGenericHandler(helperObj.getBytes("actor_id"));
+                                object7 = LiteBansModule_287.BaseCoreGenericHandler(helperObj.getBytes("actor_id"));
                                 BansHandler fS2 = this;
                                 long l8 = helperObj.getLong("created");
                                 long l9 = l8 * 1000L;
@@ -119,8 +121,8 @@ extends BansHandler {
                                 long l11 = l10 * 1000L;
                                 object9 = this.plugin((UUID)object7);
                                 ObjectUtilities.BaseCoreGenericHandler(object8);
-                                SilentHandler dZ3 = new SilentHandler(a_2, null, string5, object8, ((UUID)object7).toString(), (String)object9, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), null, l9, l11, 0, false, true, false, 0L, 27648, null);
-                                this.plugin(ch2, dZ3, this.g(), this.LiteBansModule_194());
+                                SilentHandler dZ3 = new SilentHandler(a_2, null, string5, (CharSequence)object8, ((UUID)object7).toString(), (String)object9, LiteBansModule_182.LiteBansModule_195.LiteBansModule_31(), null, l9, l11, 0, false, true, false, 0L, 27648, null);
+                                this.plugin(ch2, dZ3, this.g(), this.LiteBansModule_195());
                             }
                             targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
                         }
@@ -130,7 +132,8 @@ extends BansHandler {
                         }
                         finally {
                             CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)resultObj, (Throwable)contextObj);
-}
+                        }
+                    }
                     tempObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable5) {
@@ -139,7 +142,8 @@ extends BansHandler {
                 }
                 finally {
                     CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
-}
+                }
+            }
             object6 = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable6) {
@@ -148,9 +152,15 @@ extends BansHandler {
         }
         finally {
             CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
-}
+        }
+    }
 
     private static final void BaseCoreGenericHandler() {
         m = new String[]{"BanManagerV5", "bm_", "banmanager5", "banmanager7", "banmanagerv7", "bans", "mutes", "SELECT * FROM ", "player_", " INNER JOIN ", "players ON ", "player_", ".player_id=", "players.SQLiteDriverHandler_4", "name", "player_id", "reason", "actor_id", "created", "expires", "Ignoring duplicate ban for ", "#", "Importing IP-bans.. + ", "SELECT * FROM ", "ip_bans", "ip", "ip", "reason", "actor_id", "created", "expires"};
+    }
+
+    static {
+        Banmanagerv5Handler.BaseCoreGenericHandler();
+    }
 }
 

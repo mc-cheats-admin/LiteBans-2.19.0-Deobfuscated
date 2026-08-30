@@ -12,5 +12,6 @@ extends PluginModule {
 
     @Override
     public void e() {
+    }
 }
 

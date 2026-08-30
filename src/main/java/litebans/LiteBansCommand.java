@@ -28,7 +28,7 @@ public class LiteBansCommand
 extends AbstractCommand {
     public static Object i;
     final Map Utf8Handler_2 = new HashMap();
-    @Override
+        @Override
     public boolean BaseCoreGenericHandler() {
         return false;
     }
@@ -38,7 +38,7 @@ extends AbstractCommand {
     }
 
     private final void BaseCoreGenericHandler(CommandSenderWrapper sender, CharSequence charSequence) {
-        LiteBansCommand.BaseCoreGenericHandler(sender, charSequence, this.LiteBansModule_240());
+        LiteBansCommand.BaseCoreGenericHandler(sender, charSequence, this.LiteBansModule_241());
     }
 
     @Override
@@ -47,13 +47,13 @@ extends AbstractCommand {
             this.plugin(sender);
             return;
         }
-        PlatformPlugin plugin = this.LiteBansModule_240();
+        PlatformPlugin plugin = this.LiteBansModule_241();
         ServerSyncService u2 = (ServerSyncService)plugin.BaseCoreGenericHandler(ServerSyncService.class);
         BroadcastService o2 = this.plugin();
         DatabaseMonitorService w2 = this.g();
         ConfigService configService = this.LiteBansModule_31();
         PunishmentTableService p2 = this.e();
-        DiscordWebhookClient eG2 = configService.LiteBansModule_194();
+        DiscordWebhookClient eG2 = configService.LiteBansModule_195();
         String string2 = args[0].toLowerCase(Locale.ENGLISH);
         if (string2.equals("broadcast")) {
             new LitebansAdminHandler_3(args, plugin).run();
@@ -62,14 +62,14 @@ extends AbstractCommand {
         if (string2.equals("verify")) {
             boolean flag = LiteBansModule_50.c.AsyncBackgroundTask_5(sender.BaseCoreGenericHandler()).equals("2ccd0bb281214361803a945b8f0644ab");
             if (!flag) {
-                CommandArgumentUtils.BaseCoreGenericHandler(this, new String[]{"litebans.admin", "litebans.verify"});
+                CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, new String[]{"litebans.admin", "litebans.verify"});
             } else {
-                this.plugin(sender, BlackHandler.ServerSyncService + LiteBansModule_75.BaseCoreGenericHandler + " " + LiteBansModule_376.BaseCoreGenericHandler + " " + LiteBansModule_237.BaseCoreGenericHandler);
+                this.plugin(sender, BlackHandler.ServerSyncService + LiteBansModule_76.BaseCoreGenericHandler + " " + LiteBansModule_378.BaseCoreGenericHandler + " " + LiteBansModule_238.BaseCoreGenericHandler);
             }
             try {
                 String string = "undefined";
-                String calendar = LiteBansModule_179.BaseCoreGenericHandler;
-                SimpleDateFormat string8 = new SimpleDateFormat("yyyy-MM-LiteBansModule_118");
+                String calendar = LiteBansModule_180.BaseCoreGenericHandler;
+                SimpleDateFormat string8 = new SimpleDateFormat("yyyy-MM-LiteBansModule_119");
                 string8.setTimeZone(TimeZone.getTimeZone("UTC"));
                 String string3 = string8.format(new Date());
                 String string4 = string3 + "A#63rP";
@@ -90,7 +90,8 @@ extends AbstractCommand {
             }
             catch (NoSuchAlgorithmException timeZone) {
                 throw new RuntimeException(timeZone);
-}
+            }
+        }
         if (string2.equals("allow")) {
             new LitebansAdminHandler(args, plugin, true).run();
             return;
@@ -107,14 +108,15 @@ extends AbstractCommand {
             return;
         }
         if (string2.equals("license")) {
-            new LiteBansModule_198(plugin).run();
+            new LiteBansModule_199(plugin).run();
             return;
         }
         CommandArgumentUtils.c(this, "litebans.admin");
         try {
             if (i == null) {
                 throw new IOException();
-}
+            }
+        }
         catch (Exception exception) {
             configService.BaseCoreGenericHandler(exception, 0);
             this.plugin(sender);
@@ -126,7 +128,7 @@ extends AbstractCommand {
                 for (PluginModule k12 : plugin.PunishmentTableService()) {
                     k12.LiteBansModule_31();
                 }
-                Throwable throwable = plugin.LiteBansModule_240().LiteBansModule_31();
+                Throwable throwable = plugin.LiteBansModule_241().LiteBansModule_31();
                 if (throwable != null) {
                     this.plugin(sender, MessageKey.ar);
                     this.plugin(sender, MessageKey.ProxyPreparedStatement);
@@ -135,9 +137,9 @@ extends AbstractCommand {
                 plugin.LiteBansModule_31(() -> {
                     try {
                         w2.c();
-                        o2.LiteBansModule_31(configService.LiteBansModule_194().ElementsHandler());
+                        o2.LiteBansModule_31(configService.LiteBansModule_195().ElementsHandler());
                         w2.e();
-                        try (LiteBansModule_82 ch2 = w2.LiteBansModule_194();){
+                        try (LiteBansModule_83 ch2 = w2.LiteBansModule_195();){
                             if (ch2.LiteBansModule_31()) {
                                 this.plugin(sender, MessageKey.bM);
                                 return;
@@ -153,10 +155,13 @@ extends AbstractCommand {
                             }
                             if (flag) {
                                 this.plugin(sender, MessageKey.aW);
-}
+                            }
+                        }
+                    }
                     catch (Exception exception) {
                         w2.BaseCoreGenericHandler(exception);
-});
+                    }
+                });
             }
             catch (Throwable by3) {
                 w2.BaseCoreGenericHandler(by3);
@@ -165,33 +170,33 @@ extends AbstractCommand {
         }
         if (string2.equals("info")) {
             plugin.LiteBansModule_31(() -> {
-                try (LiteBansModule_82 ch2 = w2.LiteBansModule_194();){
+                try (LiteBansModule_83 ch2 = w2.LiteBansModule_195();){
                     HikariDataSource an2 = w2.HoverTextFormatter();
                     if (ch2.LiteBansModule_31() || an2 == null) {
                         this.plugin(sender, MessageKey.ServerEventListener);
                         return;
                     }
-                    LiteBansModule_305 iI2 = an2.BaseCoreGenericHandler();
-                    String string = configService.LiteBansModule_194().ElementsHandler();
+                    LiteBansModule_306 iI2 = an2.BaseCoreGenericHandler();
+                    String string = configService.LiteBansModule_195().ElementsHandler();
                     String string2 = DatabaseMonitorService.CommandThrottleService.c(string);
                     this.plugin(sender, BlackHandler.c(GnuSparseMapHandler[143]) + BlackHandler.g(string2) + BlackHandler.c(GnuSparseMapHandler[144]));
-                    int n = configService.LiteBansModule_194().LiteBansModule_5();
-                    int n2 = configService.LiteBansModule_194().V();
-                    LiteBansModule_15 aK2 = w2.LiteBansModule_401();
+                    int n = configService.LiteBansModule_195().LiteBansModule_5();
+                    int n2 = configService.LiteBansModule_195().V();
+                    LiteBansModule_15 aK2 = w2.LiteBansModule_403();
                     if (aK2 != null) {
                         String string3 = GnuSparseMapHandler[145] + BlackHandler.m + aK2.BaseCoreGenericHandler();
-                        if (aK2.LiteBansModule_194()) {
+                        if (aK2.LiteBansModule_195()) {
                             string3 = GnuSparseMapHandler[146] + BlackHandler.c + aK2.BaseCoreGenericHandler() + GnuSparseMapHandler[147];
                         }
                         this.plugin(sender, BlackHandler.i + GnuSparseMapHandler[148] + BlackHandler.m + aK2.e());
                         this.plugin(sender, BlackHandler.i + GnuSparseMapHandler[149] + BlackHandler.m + aK2.AsyncBackgroundTask_5() + BlackHandler.i + GnuSparseMapHandler[150] + string3 + BlackHandler.i + GnuSparseMapHandler[151]);
                     }
-                    this.plugin(sender, BlackHandler.i + GnuSparseMapHandler[152] + BlackHandler.m + iI2.LiteBansModule_194() + BlackHandler.i + GnuSparseMapHandler[153] + BlackHandler.m + n + BlackHandler.i + GnuSparseMapHandler[154] + BlackHandler.m + n2 + BlackHandler.i + GnuSparseMapHandler[155] + BlackHandler.m + iI2.LiteBansModule_31() + BlackHandler.i + GnuSparseMapHandler[156]);
+                    this.plugin(sender, BlackHandler.i + GnuSparseMapHandler[152] + BlackHandler.m + iI2.LiteBansModule_195() + BlackHandler.i + GnuSparseMapHandler[153] + BlackHandler.m + n + BlackHandler.i + GnuSparseMapHandler[154] + BlackHandler.m + n2 + BlackHandler.i + GnuSparseMapHandler[155] + BlackHandler.m + iI2.LiteBansModule_31() + BlackHandler.i + GnuSparseMapHandler[156]);
                     int n3 = iI2.c();
                     if (n3 > 0) {
                         this.plugin(sender, BlackHandler.i + GnuSparseMapHandler[157] + BlackHandler.m + n3);
                     }
-                    LiteBansModule_301 id_02 = u2.i();
+                    LiteBansModule_302 id_02 = u2.i();
                     AtomicLong atomicLong = (AtomicLong)id_02.g();
                     long l3 = ((AtomicLong)id_02.e()).get();
                     long l5 = Math.max(0L, ((AtomicLong)id_02.AsyncBackgroundTask_5()).get() - l3);
@@ -199,15 +204,16 @@ extends AbstractCommand {
                 }
                 catch (Exception exception) {
                     w2.BaseCoreGenericHandler(exception);
-});
+                }
+            });
             return;
         }
         if (string2.equals("servers")) {
-            new LiteBansModule_197(plugin).run();
+            new LiteBansModule_198(plugin).run();
             return;
         }
         if (string2.equals("accept")) {
-            new LiteBansModule_205(plugin).run();
+            new LiteBansModule_206(plugin).run();
             return;
         }
         if (string2.equals("debug")) {
@@ -217,12 +223,12 @@ extends AbstractCommand {
                 this.plugin(sender, BlackHandler.i + "Debug level has been set to: " + BlackHandler.m + simpleDateFormat);
             }
             if (configService.g()) {
-                this.plugin(sender, BlackHandler.i + "Debug levels: " + configService.BaseCoreGenericHandler() + " (config); " + configService.q() + "/" + configService.LiteBansModule_401() + " (database) + ");
+                this.plugin(sender, BlackHandler.i + "Debug levels: " + configService.BaseCoreGenericHandler() + " (config); " + configService.q() + "/" + configService.LiteBansModule_403() + " (database) + ");
             }
             return;
         }
         if (string2.equals("timezone")) {
-            SimpleDateFormat uUID = new SimpleDateFormat("yyyy-MM-LiteBansModule_118 HH:mm:ss");
+            SimpleDateFormat uUID = new SimpleDateFormat("yyyy-MM-LiteBansModule_119 HH:mm:ss");
             TimeZone string11 = TimeZone.getTimeZone(w2.n());
             Calendar resultObj = Calendar.getInstance(string11);
             uUID.setCalendar(resultObj);
@@ -234,15 +240,17 @@ extends AbstractCommand {
                     try {
                         w2.BaseCoreGenericHandler(string8);
                         calendar.setTimeZone(TimeZone.getTimeZone(string8));
-                        try (LiteBansModule_82 ch2 = w2.LiteBansModule_194();){
+                        try (LiteBansModule_83 ch2 = w2.LiteBansModule_195();){
                             try (LiteBansModule_60 bT2 = ch2.c((CharSequence)(GnuSparseMapHandler[138] + BansHandler_2.i + GnuSparseMapHandler[139])).BaseCoreGenericHandler(string8);){
                                 w2.LiteBansModule_31(bT2);
                             }
                             this.plugin(sender, BlackHandler.i + GnuSparseMapHandler[140] + BlackHandler.m + w2.n() + GnuSparseMapHandler[141] + BlackHandler.i + GnuSparseMapHandler[142] + BlackHandler.m + simpleDateFormat.format(calendar.getTime()));
-}
+                        }
+                    }
                     catch (Exception exception) {
                         w2.BaseCoreGenericHandler(exception);
-});
+                    }
+                });
             }
             return;
         }
@@ -265,7 +273,7 @@ extends AbstractCommand {
             this.plugin(sender, BlackHandler.i + "Active mutes have been ");
             return;
         }
-        if (string2.equals("listmutes") && sender.LiteBansModule_194()) {
+        if (string2.equals("listmutes") && sender.LiteBansModule_195()) {
             this.plugin(sender, Arrays.toString(p2.BaseCoreGenericHandler().LiteBansModule_31().entrySet().toArray()));
             return;
         }
@@ -282,7 +290,7 @@ extends AbstractCommand {
                     }
                     boolean flag = string.equals(GnuSparseMapHandler[96]) || string.contains(GnuSparseMapHandler[97]) || string.contains(GnuSparseMapHandler[98]);
                     Connection connection = null;
-                    try (LiteBansModule_82 ch2 = w2.LiteBansModule_194();){
+                    try (LiteBansModule_83 ch2 = w2.LiteBansModule_195();){
                         String string2;
                         if (ch2.LiteBansModule_31()) {
                             this.plugin(sender, MessageKey.ServerEventListener);
@@ -311,7 +319,7 @@ extends AbstractCommand {
                                 if (!(flag2 || file.exists() || file2.exists())) {
                                     throw new FileNotFoundException(string3);
                                 }
-                                this.plugin(sender, MessageKey.aO.BaseCoreGenericHandler(GnuSparseMapHandler[109], string3));
+                                this.plugin(sender, MessageKey.aO.BaseCoreGenericHandler(GnuSparseMapHandler[109], (Object)string3));
                                 targetObj = GnuSparseMapHandler[110] + string2 + GnuSparseMapHandler[111] + file.getAbsolutePath();
                             } else {
                                 string2 = GnuSparseMapHandler[112];
@@ -334,7 +342,7 @@ extends AbstractCommand {
                             properties.put(GnuSparseMapHandler[126], GnuSparseMapHandler[127]);
                             properties.put(GnuSparseMapHandler[128], GnuSparseMapHandler[129]);
                             properties.put(GnuSparseMapHandler[130], GnuSparseMapHandler[131]);
-                            if (resultObj != null && !this.isEmpty()) {
+                            if (resultObj != null && !((String)resultObj).isEmpty()) {
                                 properties.put(GnuSparseMapHandler[132], resultObj);
                             }
                             if (contextObj != null && !((String)contextObj).isEmpty()) {
@@ -342,14 +350,14 @@ extends AbstractCommand {
                             }
                             connection = driver.connect((String)targetObj, properties);
                         } else {
-                            this.plugin(sender, MessageKey.aO.BaseCoreGenericHandler(GnuSparseMapHandler[134], GnuSparseMapHandler[135]));
+                            this.plugin(sender, MessageKey.aO.BaseCoreGenericHandler(GnuSparseMapHandler[134], (Object)GnuSparseMapHandler[135]));
                         }
                         boolean flag3 = eG2.X();
-                        targetObj = plugin.LiteBansModule_194().BaseCoreGenericHandler(BansHandler.class, new Class[]{PlatformPlugin.class}, new Object[]{plugin});
+                        targetObj = plugin.LiteBansModule_195().BaseCoreGenericHandler(BansHandler.class, new Class[]{PlatformPlugin.class}, new Object[]{plugin});
                         resultObj = targetObj.iterator();
                         while (resultObj.hasNext()) {
                             contextObj = (BansHandler)resultObj.next();
-                            if (!((BansHandler)contextObj).c(string) || ((BansHandler)contextObj).LiteBansModule_401() && connection == null) continue;
+                            if (!((BansHandler)contextObj).c(string) || ((BansHandler)contextObj).LiteBansModule_403() && connection == null) continue;
                             this.plugin(((BansHandler)contextObj).Utf8Handler_2());
                             string2 = configService.n.az();
                             if (!string2.equals(GnuSparseMapHandler[136])) {
@@ -362,7 +370,7 @@ extends AbstractCommand {
                             return;
                         }
                         if (!flag4) {
-                            this.plugin(sender, MessageKey.GeoIPLookupService.BaseCoreGenericHandler(GnuSparseMapHandler[137], string));
+                            this.plugin(sender, MessageKey.GeoIPLookupService.BaseCoreGenericHandler(GnuSparseMapHandler[137], (Object)string));
                             return;
                         }
                         this.plugin(w2, sender, true);
@@ -381,7 +389,10 @@ extends AbstractCommand {
                             }
                             catch (Exception exception) {
                                 throw new RuntimeException(exception);
-});
+                            }
+                        }
+                    }
+                });
             }
             return;
         }
@@ -390,24 +401,24 @@ extends AbstractCommand {
             return;
         }
         if (string2.equals("reset-templates")) {
-            new LiteBansModule_195(plugin).run();
+            new LiteBansModule_196(plugin).run();
             return;
         }
         if (string2.equals("addhistory") || string2.equals("addiphistory") || string2.equals("add-login")) {
-            new LiteBansModule_204(args, plugin).run();
+            new LiteBansModule_205(args, plugin).run();
             return;
         }
         if (string2.equals("json-disconnect") && args.length >= 3) {
             CommandSenderWrapper senderWrapper;
             String string = args[1];
-            String string6 = LiteBansModule_378.BaseCoreGenericHandler(Arrays.copyOfRange(args, 2, args.length), " ");
+            String string6 = LiteBansModule_380.BaseCoreGenericHandler(Arrays.copyOfRange(args, 2, args.length), " ");
             if (configService.g()) {
                 configService.BaseCoreGenericHandler((Object)("target:" + string + ", reason:" + string6));
             }
             if ((senderWrapper = CommandArgumentUtils.LiteBansModule_31(this, string)) != null) {
                 switch (plugin.AsyncBackgroundTask_22()) {
                     case 0: {
-                        LiteBansModule_139.LiteBansModule_31.BaseCoreGenericHandler(senderWrapper.c(), string6);
+                        LiteBansModule_140.LiteBansModule_31.BaseCoreGenericHandler(senderWrapper.c(), string6);
                         break;
                     }
                     case 1: {
@@ -417,7 +428,9 @@ extends AbstractCommand {
                     }
                     default: {
                         throw new UnsupportedOperationException();
-}
+                    }
+                }
+            }
             return;
         }
         if (string2.equals("test-vault") && args.length >= 2) {
@@ -439,7 +452,7 @@ extends AbstractCommand {
             }
             targetObj = o2.BaseCoreGenericHandler(string7);
             String string8 = configService.n.LiteBansModule_25();
-            if (targetObj != null && (string = targetObj.LiteBansModule_240()) != null) {
+            if (targetObj != null && (string = targetObj.LiteBansModule_241()) != null) {
                 string8 = string;
             }
             string = null;
@@ -452,12 +465,13 @@ extends AbstractCommand {
         }
         if (string2.equals("expiry-update")) {
             plugin.LiteBansModule_31(() -> {
-                try (LiteBansModule_82 ch2 = w2.LiteBansModule_194();){
+                try (LiteBansModule_83 ch2 = w2.LiteBansModule_195();){
                     ch2.BaseCoreGenericHandler(true);
                 }
                 catch (Exception exception) {
                     w2.BaseCoreGenericHandler(exception);
-});
+                }
+            });
             this.plugin(sender, BlackHandler.i + "Expiry update ");
             return;
         }
@@ -465,12 +479,12 @@ extends AbstractCommand {
             this.LiteBansModule_31(sender);
             return;
         }
-        if (string2.equals("benchgen") && sender.LiteBansModule_194() && configService.g()) {
-            new LiteBansModule_238(args, plugin).run();
+        if (string2.equals("benchgen") && sender.LiteBansModule_195() && configService.g()) {
+            new LiteBansModule_239(args, plugin).run();
             return;
         }
-        if (string2.equals("benchjoin") && sender.LiteBansModule_194() && configService.g()) {
-            new LiteBansModule_214(args, plugin).run();
+        if (string2.equals("benchjoin") && sender.LiteBansModule_195() && configService.g()) {
+            new LiteBansModule_215(args, plugin).run();
             return;
         }
         this.plugin(sender);
@@ -487,13 +501,13 @@ extends AbstractCommand {
     }
 
     public void BaseCoreGenericHandler(String string) {
-        this.LiteBansModule_240().getLogger().info("Begin import from: " + string);
+        this.LiteBansModule_241().getLogger().info("Begin import from: " + string);
     }
 
     public void LiteBansModule_31(CommandSenderWrapper sender) {
-        DatabaseMonitorService w2 = this.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
-        this.LiteBansModule_240().LiteBansModule_31(() -> {
-            try (LiteBansModule_82 ch2 = w2.LiteBansModule_194();){
+        DatabaseMonitorService w2 = (DatabaseMonitorService)this.LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class);
+        this.LiteBansModule_241().LiteBansModule_31(() -> {
+            try (LiteBansModule_83 ch2 = w2.LiteBansModule_195();){
                 w2.BaseCoreGenericHandler(ch2, ((SQLiteDriverHandler_3)ch2).LiteBansModule_31(), true, true);
                 ch2.close();
                 w2.c();
@@ -502,11 +516,12 @@ extends AbstractCommand {
             }
             catch (Exception exception) {
                 w2.BaseCoreGenericHandler(exception);
-});
+            }
+        });
     }
 
     void BaseCoreGenericHandler(DatabaseMonitorService w2, CommandSenderWrapper sender, boolean flag) {
-        try (LiteBansModule_82 ch2 = w2.LiteBansModule_194();){
+        try (LiteBansModule_83 ch2 = w2.LiteBansModule_195();){
             if (ch2.LiteBansModule_31()) {
                 return;
             }
@@ -514,7 +529,7 @@ extends AbstractCommand {
                 if (!kL2.BaseCoreGenericHandler()) continue;
                 long l3 = 0L;
                 if (!flag) {
-                    this.plugin(sender, MessageKey.ValueHandler.BaseCoreGenericHandler("table", kL2.toString()));
+                    this.plugin(sender, MessageKey.ValueHandler.BaseCoreGenericHandler("table", (Object)kL2.toString()));
                 }
                 LiteBansModule_60 bT2 = ch2.c((CharSequence)("SELECT * FROM " + kL2));
                 ResultSet resultSet = w2.BaseCoreGenericHandler(bT2);
@@ -527,36 +542,39 @@ extends AbstractCommand {
                         ++l3;
                         continue;
                     }
-                    LiteBansModule_297 iA2 = ch2.c(string2);
-                    if (iA2 != null || (string = LiteBansModule_50.c.LiteBansModule_194(string2)) == null) continue;
+                    LiteBansModule_298 iA2 = ch2.c(string2);
+                    if (iA2 != null || (string = LiteBansModule_50.c.LiteBansModule_195(string2)) == null) continue;
                     ch2.BaseCoreGenericHandler(string, string2, "#", false, true);
                     ++n;
                 }
                 if (!flag) {
-                    this.plugin(sender, MessageKey.LiteBansModule_65.BaseCoreGenericHandler("amount", n));
+                    this.plugin(sender, MessageKey.LiteBansModule_65.BaseCoreGenericHandler("amount", (Object)n));
                 }
                 if (l3 <= 0L || flag) continue;
-                this.plugin(sender, MessageKey.LiteBansModule_25.BaseCoreGenericHandler("amount", l3));
-}
+                this.plugin(sender, MessageKey.LiteBansModule_25.BaseCoreGenericHandler("amount", (Object)l3));
+            }
+        }
         catch (Exception exception) {
             w2.BaseCoreGenericHandler(exception);
-}
+        }
+    }
 
     void BaseCoreGenericHandler(CommandSenderWrapper sender) {
         String string;
-        ConfigService configService = this.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = (ConfigService)this.LiteBansModule_241().BaseCoreGenericHandler(ConfigService.class);
         if (configService.DatabaseMonitorService() != null) {
             this.plugin(sender, BlackHandler.c + "[LiteBans] " + BlackHandler.F + "Plugin access has been disabled!");
             if (configService.GnuSparseMapHandler() != null) {
                 this.plugin(sender, configService.GnuSparseMapHandler());
-}
-        switch (this.LiteBansModule_240().AsyncBackgroundTask_22()) {
+            }
+        }
+        switch (this.LiteBansModule_241().AsyncBackgroundTask_22()) {
             case 0: {
-                if (BukkitBlockAdapter.c()) {
+                if (OrgBukkitBlockHandler.c()) {
                     string = "Folia";
                     break;
                 }
-                if (BukkitBlockAdapter.BaseCoreGenericHandler()) {
+                if (OrgBukkitBlockHandler.BaseCoreGenericHandler()) {
                     string = "Paper";
                     break;
                 }
@@ -582,9 +600,10 @@ extends AbstractCommand {
             }
             default: {
                 string = "Unknown";
-}
-        String string2 = LiteBansModule_120.c.BaseCoreGenericHandler(this.LiteBansModule_240().i().LiteBansModule_31(), new Integer[]{0, 0, 0}).toString();
-        this.plugin(sender, BlackHandler.i + "LiteBans version " + BlackHandler.m + LiteBansModule_180.AsyncBackgroundTask_5 + BlackHandler.i + " running on " + BlackHandler.g(string) + " " + BlackHandler.BaseCoreGenericHandler(string2));
+            }
+        }
+        String string2 = LiteBansModule_121.c.BaseCoreGenericHandler(this.LiteBansModule_241().i().LiteBansModule_31(), new Integer[]{0, 0, 0}).toString();
+        this.plugin(sender, BlackHandler.i + "LiteBans version " + BlackHandler.m + LiteBansModule_181.AsyncBackgroundTask_5 + BlackHandler.i + " running on " + BlackHandler.g(string) + " " + BlackHandler.BaseCoreGenericHandler(string2));
         this.plugin(sender, BlackHandler.m.toString() + BlackHandler.r + GnuSparseMapHandler[87]);
     }
 
@@ -595,6 +614,11 @@ extends AbstractCommand {
     }
 
     private static final void BaseCoreGenericHandler() {
-        GnuSparseMapHandler = new String[]{"litebans", "version", "broadcast", "verify", "2ccd0bb281214361803a945b8f0644ab", "litebans.admin", "litebans.verify", " ", " ", "undefined", "yyyy-MM-LiteBansModule_118", "UTC", "A#63rP", "SHA-512", "q", "Verification code: ", "allow", "unlink", "clearhistory", "cleariphistory", "reveal", "license", "litebans.admin", "reload", "info", "servers", "accept", "debug", "Debug level has been set to: ", "Debug levels: ", " (config); ", "/", " (database) + ", "timezone", "yyyy-MM-LiteBansModule_118 HH:mm:ss", "Current timezone: ", "\n", "Current time: ", "fixhistory", "fixiphistory", "clearmute", "Removed active mute for ", " ", "No mute found for ", "Active mutes have been ", "listmutes", "import", "start", "reset-database", "reset-templates", "addhistory", "addiphistory", "add-login", "json-disconnect", " ", "target:", ", reason:", "test-vault", "Command is not supported on this ", "refresh", "Refreshed player: '", "', server: ", "expiry-update", "Expiry update ", "upgrade", "benchgen", "benchjoin", "Begin import from: ", "table", "SELECT * FROM ", "#", "amount", "amount", "[LiteBans] ", "Plugin access has been disabled!", "Folia", "Paper", "Bukkit", "org.spigotmc.SpigotConfig", "Spigot", "BungeeCord", "Velocity", "Fabric", "Unknown", "LiteBans version ", " running on ", " ", "https://www.spigotmc.org/resources/litebans.3715/ {url: https://www.spigotmc.org/resources/litebans.3715/}", "Upgrade check executed ", "litebans.test", "litebans.test: ", "true", "false", " ", " ", "", "vanilla", "banned-players", "essentials", "sqlite", "litebans", "LiteBansModule_243", "litebans", "banmanager7", "banmanagerv7", "LiteBansModule_243", "plugins/BanManager", "local_bans", ".mv.LiteBansModule_116", "LiteBansModule_116", "jdbc:", "://", "mysql", "jdbc:mysql://", "LiteBansModule_116", "30000", "connectTimeout", "socketTimeout", "autoReconnect", "true", "useUnicode", "true", "connectionCollation", "utf8mb4_unicode_ci", "characterEncoding", "utf-8", "characterSetResults", "utf-8", "serverTimezone", "UTC", "timezone", "UTC", "user", "password", "LiteBansModule_116", "banned-players.json", "default", "name", "UPDATE ", " SET timezone=?", "Timezone updated: ", "\n", "Current time: ", "LiteBans is connected to BaseCoreGenericHandler ", " ", "", "", "!!!", "Server name: ", "Server UUID: ", " <", ">", "Pooled connections: ", "/", " (minimum: ", ", idle: ", ")", "Threads awaiting connection: ", "Sync events InitializerHandler_3/out/skipped: ", ", ", ", "};
-}
+        GnuSparseMapHandler = new String[]{"litebans", "version", "broadcast", "verify", "2ccd0bb281214361803a945b8f0644ab", "litebans.admin", "litebans.verify", " ", " ", "undefined", "yyyy-MM-LiteBansModule_119", "UTC", "A#63rP", "SHA-512", "q", "Verification code: ", "allow", "unlink", "clearhistory", "cleariphistory", "reveal", "license", "litebans.admin", "reload", "info", "servers", "accept", "debug", "Debug level has been set to: ", "Debug levels: ", " (config); ", "/", " (database) + ", "timezone", "yyyy-MM-LiteBansModule_119 HH:mm:ss", "Current timezone: ", "\n", "Current time: ", "fixhistory", "fixiphistory", "clearmute", "Removed active mute for ", " ", "No mute found for ", "Active mutes have been ", "listmutes", "import", "start", "reset-database", "reset-templates", "addhistory", "addiphistory", "add-login", "json-disconnect", " ", "target:", ", reason:", "test-vault", "Command is not supported on this ", "refresh", "Refreshed player: '", "', server: ", "expiry-update", "Expiry update ", "upgrade", "benchgen", "benchjoin", "Begin import from: ", "table", "SELECT * FROM ", "#", "amount", "amount", "[LiteBans] ", "Plugin access has been disabled!", "Folia", "Paper", "Bukkit", "org.spigotmc.SpigotConfig", "Spigot", "BungeeCord", "Velocity", "Fabric", "Unknown", "LiteBans version ", " running on ", " ", "https://www.spigotmc.org/resources/litebans.3715/ {url: https://www.spigotmc.org/resources/litebans.3715/}", "Upgrade check executed ", "litebans.test", "litebans.test: ", "true", "false", " ", " ", "", "vanilla", "banned-players", "essentials", "sqlite", "litebans", "LiteBansModule_244", "litebans", "banmanager7", "banmanagerv7", "LiteBansModule_244", "plugins/BanManager", "local_bans", ".mv.LiteBansModule_117", "LiteBansModule_117", "jdbc:", "://", "mysql", "jdbc:mysql://", "LiteBansModule_117", "30000", "connectTimeout", "socketTimeout", "autoReconnect", "true", "useUnicode", "true", "connectionCollation", "utf8mb4_unicode_ci", "characterEncoding", "utf-8", "characterSetResults", "utf-8", "serverTimezone", "UTC", "timezone", "UTC", "user", "password", "LiteBansModule_117", "banned-players.json", "default", "name", "UPDATE ", " SET timezone=?", "Timezone updated: ", "\n", "Current time: ", "LiteBans is connected to BaseCoreGenericHandler ", " ", "", "", "!!!", "Server name: ", "Server UUID: ", " <", ">", "Pooled connections: ", "/", " (minimum: ", ", idle: ", ")", "Threads awaiting connection: ", "Sync events InitializerHandler_3/out/skipped: ", ", ", ", "};
+    }
 
+    static {
+        LiteBansCommand.BaseCoreGenericHandler();
+    }
+}
+}

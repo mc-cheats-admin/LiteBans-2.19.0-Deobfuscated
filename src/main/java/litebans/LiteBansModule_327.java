@@ -1,82 +1,52 @@
 package litebans;
 
-import java.util.Date;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
+import java.io.Closeable;
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.jar.JarEntry;
+import java.util.jar.JarInputStream;
+import java.util.zip.ZipEntry;
 public final class LiteBansModule_327 {
-    private final CharSequence g;
-    private final String AsyncBackgroundTask_5;
-    private final String LiteBansModule_31;
-    private final Date LiteBansModule_194;
-    private final SilentHandler e;
-    private final SilentHandler BaseCoreGenericHandler;
-    public LiteBansModule_327(@NotNull CharSequence charSequence, @NotNull String string, @NotNull String string2, @NotNull Date date, @Nullable SilentHandler dZ2, @Nullable SilentHandler dZ3) {
-        this.g = charSequence;
-        this.AsyncBackgroundTask_5 = string;
-        this.LiteBansModule_31 = string2;
-        this.LiteBansModule_194 = date;
-        this.e = dZ2;
-        this.plugin = dZ3;
+    public static final LiteBansModule_327 BaseCoreGenericHandler = new LiteBansModule_327();
+
+    private LiteBansModule_327() {
     }
 
-    public final CharSequence AsyncBackgroundTask_5() {
-        return this.g;
-    }
-
-    public final String e() {
-        return this.AsyncBackgroundTask_5;
-    }
-
-    public final String LiteBansModule_31() {
-        return this.LiteBansModule_31;
-    }
-
-    public final SilentHandler c() {
-        return this.e;
-    }
-
-    public String toString() {
-        return "DupeIPResult(prefix=" + this.g + ", name=" + this.AsyncBackgroundTask_5 + ", uuid=" + this.LiteBansModule_31 + ", date=" + this.LiteBansModule_194 + ", ban=" + this.e + ", mute=" + this.plugin + ')';
-    }
-
-    public int hashCode() {
-        int n = this.g.hashCode();
-        n = n * 31 + this.AsyncBackgroundTask_5.hashCode();
-        n = n * 31 + this.LiteBansModule_31.hashCode();
-        n = n * 31 + this.LiteBansModule_194.hashCode();
-        n = n * 31 + (this.e == null ? 0 : this.e.hashCode());
-        n = n * 31 + (this.plugin == null ? 0 : this.plugin.hashCode());
-        return n;
-    }
-
-    public boolean equals(@Nullable Object targetObj) {
-        if (this == targetObj) {
-            return true;
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
+    public final long BaseCoreGenericHandler() {
+        long l3 = 0L;
+        l3 = -1L;
+        String string = StackTraceAnalyzer.BaseCoreGenericHandler(RemoteUpdateService.class);
+        File file = new File(string);
+        JarInputStream jarInputStream = new JarInputStream(new FileInputStream(file));
+        Closeable closeable = jarInputStream;
+        Throwable throwable = null;
+        try {
+            Object contextObj = (JarInputStream)closeable;
+            JarEntry jarEntry = null;
+            while ((targetObj = (jarEntry = jarInputStream.getNextJarEntry())) != null && (targetObj = ((ZipEntry)targetObj).getName()) != null) {
+                Object resultObj = targetObj;
+                if (((String)resultObj).length() > 6) {
+                    resultObj = StringUtilities.BaseCoreGenericHandler((String)resultObj, '/', '.', false, 4, null).substring(0, ((String)resultObj).length() - 6);
+                }
+                long l5 = jarEntry.getTime();
+                if (!ObjectUtilities.BaseCoreGenericHandler(resultObj, (Object)RemoteUpdateService.class.getName())) continue;
+                l3 = l5;
+            }
+            contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
         }
-        if (!(targetObj instanceof LiteBansModule_327)) {
-            return false;
+        catch (Throwable throwable2) {
+            throwable = throwable2;
+            throw throwable2;
         }
-        LiteBansModule_327 j02 = (LiteBansModule_327)targetObj;
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.g, j02.g)) {
-            return false;
+        finally {
+            LiteBansModule_259.BaseCoreGenericHandler(1);
+            BlockHandler.BaseCoreGenericHandler(closeable, throwable);
+            LiteBansModule_259.LiteBansModule_31(1);
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, j02.AsyncBackgroundTask_5)) {
-            return false;
-        }
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_31, j02.LiteBansModule_31)) {
-            return false;
-        }
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_194, j02.LiteBansModule_194)) {
-            return false;
-        }
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.e, j02.e)) {
-            return false;
-        }
-        return ObjectUtilities.BaseCoreGenericHandler(this.plugin, j02.BaseCoreGenericHandler);
+        return l3 / 1000L;
     }
-
-    private static final void BaseCoreGenericHandler() {
-        c = new String[]{"DupeIPResult(prefix=", ", name=", ", uuid=", ", date=", ", ban=", ", mute="};
 }
 

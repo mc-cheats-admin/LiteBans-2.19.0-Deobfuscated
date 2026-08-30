@@ -24,9 +24,9 @@ public class StackTraceAnalyzer {
     private boolean e = false;
     private boolean g = false;
     private String i;
-    private String LiteBansModule_240;
+    private String LiteBansModule_241;
     private List LiteBansModule_31;
-    public StackTraceAnalyzer(PlatformPlugin plugin) {
+        public StackTraceAnalyzer(PlatformPlugin plugin) {
         this.AsyncBackgroundTask_5 = plugin;
     }
 
@@ -41,7 +41,8 @@ public class StackTraceAnalyzer {
         catch (URISyntaxException uRISyntaxException) {
             uRISyntaxException.printStackTrace();
             throw new AssertionError((Object)("CodeSource.getLocation(): " + uRL));
-}
+        }
+    }
 
     public static boolean BaseCoreGenericHandler(String string) {
         try {
@@ -50,7 +51,8 @@ public class StackTraceAnalyzer {
         }
         catch (ClassNotFoundException classNotFoundException) {
             return false;
-}
+        }
+    }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -69,7 +71,9 @@ public class StackTraceAnalyzer {
                     stringWriter.close();
                 }
                 catch (IOException iOException) {}
-}
+            }
+        }
+    }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -85,7 +89,9 @@ public class StackTraceAnalyzer {
                 }
                 if ((throwable = throwable.getCause()) == null) continue;
                 printWriter.print("Caused LiteBansModule_61: ");
-}
+            }
+        }
+    }
 
     public void BaseCoreGenericHandler(String string, boolean flag) {
         List list = this.plugin(string, "");
@@ -97,7 +103,9 @@ public class StackTraceAnalyzer {
             }
             catch (Throwable throwable) {
                 this.plugin(string2, throwable);
-}
+            }
+        }
+    }
 
     public List BaseCoreGenericHandler(File file, List list, String string) {
         File[] fileArray = file.listFiles();
@@ -125,7 +133,7 @@ public class StackTraceAnalyzer {
     public List BaseCoreGenericHandler(String string, String string2) {
         long l3 = System.nanoTime();
         string2 = string2.replace('.', '/');
-        if (this.c && this.LiteBansModule_31 != null && string2.equals(this.LiteBansModule_240) && string.equals(this.i)) {
+        if (this.c && this.LiteBansModule_31 != null && string2.equals(this.LiteBansModule_241) && string.equals(this.i)) {
             return this.LiteBansModule_31;
         }
         List<String> list = new ArrayList();
@@ -141,9 +149,11 @@ public class StackTraceAnalyzer {
                     string3 = string3.replace('/', '.');
                     string3 = string3.substring(0, string3.length() - 6);
                     list.add(string3);
-} else {
+                }
+            } else {
                 list = this.plugin(file, list, "");
-}
+            }
+        }
         catch (Exception exception) {
             exception.printStackTrace();
         }
@@ -154,14 +164,16 @@ public class StackTraceAnalyzer {
                 }
                 catch (IOException iOException) {
                     iOException.printStackTrace();
-}
+                }
+            }
+        }
         if (this.c) {
             this.i = string;
-            this.LiteBansModule_240 = string2;
+            this.LiteBansModule_241 = string2;
             this.LiteBansModule_31 = list;
         }
         if (this.e) {
-            System.out.println("1: returned InitializerHandler_3 " + LiteBansModule_287.LiteBansModule_31((double)(System.nanoTime() - l3) / 1000.0 / 1000.0) + " ms");
+            System.out.println("1: returned InitializerHandler_3 " + LiteBansModule_288.LiteBansModule_31((double)(System.nanoTime() - l3) / 1000.0 / 1000.0) + " ms");
         }
         return list;
     }
@@ -184,9 +196,10 @@ public class StackTraceAnalyzer {
             }
             catch (Throwable throwable) {
                 this.plugin(string3, throwable);
-}
+            }
+        }
         if (this.e) {
-            System.out.println("2: returned InitializerHandler_3 " + LiteBansModule_287.LiteBansModule_31((double)(System.nanoTime() - l3) / 1000.0 / 1000.0) + " ms");
+            System.out.println("2: returned InitializerHandler_3 " + LiteBansModule_288.LiteBansModule_31((double)(System.nanoTime() - l3) / 1000.0 / 1000.0) + " ms");
         }
         return arrayList;
     }
@@ -209,7 +222,8 @@ public class StackTraceAnalyzer {
                     constructor = clazz2.getDeclaredConstructor(classArray);
                     if (!Modifier.isPublic(constructor.getModifiers())) {
                         constructor.setAccessible(true);
-}
+                    }
+                }
                 catch (Throwable throwable) {
                     constructor = clazz2.getConstructor(classArray);
                 }
@@ -225,9 +239,10 @@ public class StackTraceAnalyzer {
                 }
                 System.err.println(clazz2.getName() + " does not accept " + string3);
                 throwable.printStackTrace();
-}
+            }
+        }
         if (this.e) {
-            System.out.println("3: returned InitializerHandler_3 " + LiteBansModule_287.LiteBansModule_31((double)(System.nanoTime() - l3) / 1000.0 / 1000.0) + " ms");
+            System.out.println("3: returned InitializerHandler_3 " + LiteBansModule_288.LiteBansModule_31((double)(System.nanoTime() - l3) / 1000.0 / 1000.0) + " ms");
         }
         return arrayList;
     }
@@ -275,7 +290,17 @@ public class StackTraceAnalyzer {
         this.c = flag;
         if (!flag) {
             this.i = null;
-            this.LiteBansModule_240 = null;
+            this.LiteBansModule_241 = null;
             this.LiteBansModule_31 = null;
+        }
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        LiteBansModule_195 = new String[]{"CodeSource.getLocation(): ", "\tat ", "Caused LiteBansModule_61: ", "", "", " + ", ".class", " + ", ".class", "", "1: returned InitializerHandler_3 ", " ms", "", "2: returned InitializerHandler_3 ", " ms", "", "Constructor not found: ", " does not accept ", "3: returned InitializerHandler_3 ", " ms", "**Failed to load: ", "**Failed to load: ", "kotlin + ", "", "", "NoClassDefFoundError", "ClassNotFoundException", "loader constraint violation:", "kotlin.internal."};
+    }
+
+    static {
+        StackTraceAnalyzer.BaseCoreGenericHandler();
+    }
 }
 

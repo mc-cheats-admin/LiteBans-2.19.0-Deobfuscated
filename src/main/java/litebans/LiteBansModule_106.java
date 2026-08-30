@@ -1,22 +1,20 @@
 package litebans;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonSerializationContext;
-import com.google.gson.JsonSerializer;
-import java.lang.reflect.Type;
-static class LiteBansModule_106
-implements JsonSerializer {
-    final /* synthetic */ LiteBansModule_54 BaseCoreGenericHandler;
+import java.util.List;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-    LiteBansModule_106(LiteBansModule_54 bn_02) {
-        this.plugin = bn_02;
+public final class LiteBansModule_106
+extends LiteBansModule_67 {
+    private final Long g;
+
+    public LiteBansModule_106(@Nullable Long l3, @Nullable String string, @Nullable String string2, @Nullable String string3, @Nullable String string4, @NotNull List list, @NotNull List list2) {
+        super(string, string2, string3, string4, list, list2);
+        this.g = l3;
     }
 
-    public JsonElement BaseCoreGenericHandler(NullHandler_4 ie_02, Type type, JsonSerializationContext jsonSerializationContext) {
-        return jsonSerializationContext.serialize(ie_02.AsyncBackgroundTask_5);
+    public final Long BaseCoreGenericHandler() {
+        return this.g;
     }
-
-    public JsonElement serialize(Object targetObj, Type type, JsonSerializationContext jsonSerializationContext) {
-        return this.plugin((NullHandler_4)targetObj, type, jsonSerializationContext);
 }
 

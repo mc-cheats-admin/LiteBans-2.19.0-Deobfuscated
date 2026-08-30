@@ -11,8 +11,8 @@ import org.jetbrains.annotations.Nullable;
 
 public final class HistoryCommand
 extends AbstractCommand
-implements LiteBansModule_359 {
-    public HistoryCommand(@NotNull PlatformPlugin plugin) {
+implements LiteBansModule_361 {
+        public HistoryCommand(@NotNull PlatformPlugin plugin) {
         super("history", plugin);
     }
 
@@ -26,38 +26,38 @@ implements LiteBansModule_359 {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
-{
-                        targetObj = (DatabaseMonitorService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+        block9: {
+                        targetObj = (DatabaseMonitorService)((MessageHandler)targetObj).LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class);
             flag = false;
             try {
-                LiteBansModule_82 ch2 = targetObj.LiteBansModule_194();
+                LiteBansModule_83 ch2 = ((DatabaseMonitorService)targetObj).LiteBansModule_195();
                 Closeable closeable = ch2;
                 Throwable throwable = null;
                 try {
-                    Object contextObj = (LiteBansModule_82)closeable;
-                    LiteBansModule_82 ch3 = ch2;
+                    Object contextObj = (LiteBansModule_83)closeable;
+                    LiteBansModule_83 ch3 = ch2;
                                         String string = CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)resultObj, (String)ArrayUtilities.LiteBansModule_31(args));
                     resultObj = CommandArgumentUtils.BaseCoreGenericHandler(ch3, string, false);
                     String string2 = (String)ArrayUtilities.BaseCoreGenericHandler((Object[])args, 1);
-                    BanHandler a_2 = BanHandler.LiteBansModule_401.BaseCoreGenericHandler(string2);
+                    BanHandler a_2 = BanHandler.LiteBansModule_403.BaseCoreGenericHandler(string2);
                     String string3 = CommandArgumentUtils.BaseCoreGenericHandler(this, sender, args, null, 4, null);
-                    if (this.LiteBansModule_31() == null) {
+                    if (((LiteBansModule_298)resultObj).LiteBansModule_31() == null) {
                         MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(string + "'AsyncBackgroundTask_21 uuid is null");
                         throw new CommandExitException();
                     }
-                    int n = LimitHandler.BaseCoreGenericHandler(this, ch3.e(), args, CollectionUtilities.e(), 0, 8, null);
+                    int n = LimitHandler.BaseCoreGenericHandler((LiteBansModule_361)this, ch3.e(), args, CollectionUtilities.e(), 0, 8, null);
                     BanHandler a_3 = a_2;
-                    List list = a_3 != null ? CollectionUtilities.BaseCoreGenericHandler(a_3) : BanHandler.LiteBansModule_401.BaseCoreGenericHandler();
+                    List list = a_3 != null ? CollectionUtilities.BaseCoreGenericHandler(a_3) : BanHandler.LiteBansModule_403.BaseCoreGenericHandler();
                     Iterable iterable = list;
                     Iterable iterable2 = iterable;
                     Collection collection = new ArrayList();
                     for (Object t2 : iterable2) {
                         BanHandler a_4 = (BanHandler)t2;
-                        Iterable iterable3 = ch3.BaseCoreGenericHandler((LiteBansModule_297)resultObj, a_4, string3, false, n);
+                        Iterable iterable3 = ch3.BaseCoreGenericHandler((LiteBansModule_298)resultObj, a_4, string3, false, n);
                         CollectionUtilities.BaseCoreGenericHandler(collection, iterable3);
                     }
                     List list2 = CollectionUtilities.e((List)collection);
-                    LimitHandler.BaseCoreGenericHandler(this, ch3, list2, (LiteBansModule_297)resultObj, args, null, 0, 24, null);
+                    LimitHandler.BaseCoreGenericHandler(this, ch3, list2, (LiteBansModule_298)resultObj, args, null, 0, 24, null);
                     contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable2) {
@@ -66,11 +66,14 @@ implements LiteBansModule_359 {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-}
+                }
+            }
             catch (SQLException sQLException) {
-                if (targetObj.LiteBansModule_31(sQLException)) break;
+                if (((DatabaseMonitorService)targetObj).LiteBansModule_31(sQLException)) break block9;
                 throw sQLException;
-}
+            }
+        }
+    }
 
     @Override
     public int BaseCoreGenericHandler(@NotNull PlatformPlugin plugin, @Nullable String[] args, @NotNull Collection collection, int n) {
@@ -78,16 +81,21 @@ implements LiteBansModule_359 {
     }
 
     @Override
-    public void BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull Collection collection, @Nullable LiteBansModule_297 iA2, @Nullable String[] args, @NotNull AbstractCommand abstractCommand, int n) {
-        LimitHandler.BaseCoreGenericHandler(this, ch2, collection, iA2, args, abstractCommand, n);
+    public void BaseCoreGenericHandler(@NotNull LiteBansModule_83 ch2, @NotNull Collection collection, @Nullable LiteBansModule_298 iA2, @Nullable String[] args, @NotNull AbstractCommand abstractCommand, int n) {
+        LimitHandler.BaseCoreGenericHandler((LiteBansModule_361)this, ch2, collection, iA2, args, abstractCommand, n);
     }
 
     @Override
-    public LiteBansModule_297 BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull HashMap hashMap, @Nullable String string) {
+    public LiteBansModule_298 BaseCoreGenericHandler(@NotNull LiteBansModule_83 ch2, @NotNull HashMap hashMap, @Nullable String string) {
         return LimitHandler.BaseCoreGenericHandler(this, ch2, hashMap, string);
     }
 
     private static final void BaseCoreGenericHandler() {
         i = new String[]{"history", "'AsyncBackgroundTask_21 uuid is null"};
+    }
+
+    static {
+        HistoryCommand.BaseCoreGenericHandler();
+    }
 }
 

@@ -4,13 +4,13 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public final class LiteBansModule_23 {
-    private final long LiteBansModule_194;
+    private final long LiteBansModule_195;
     private final long e;
     private final long AsyncBackgroundTask_5;
     private final long BaseCoreGenericHandler;
     private final long c;
-    public LiteBansModule_23(long l3, long l5, long l7, long l8, long l9) {
-        this.LiteBansModule_194 = l3;
+        public LiteBansModule_23(long l3, long l5, long l7, long l8, long l9) {
+        this.LiteBansModule_195 = l3;
         this.e = l5;
         this.AsyncBackgroundTask_5 = l7;
         this.plugin = l8;
@@ -23,9 +23,9 @@ public final class LiteBansModule_23 {
 
     public final long BaseCoreGenericHandler(@NotNull SilentHandler dZ2) {
         long l3;
-        switch (LiteBansModule_80.BaseCoreGenericHandler[dZ2.ServerSyncService().ordinal()]) {
+        switch (LiteBansModule_81.BaseCoreGenericHandler[dZ2.ServerSyncService().ordinal()]) {
             case 1: {
-                l3 = this.LiteBansModule_194;
+                l3 = this.LiteBansModule_195;
                 break;
             }
             case 2: {
@@ -43,16 +43,17 @@ public final class LiteBansModule_23 {
             default: {
                 AssertionUtilities.BaseCoreGenericHandler();
                 throw new CommandExitException();
-}
+            }
+        }
         return l3;
     }
 
     public String toString() {
-        return "(BaseCoreGenericHandler=" + this.LiteBansModule_194 + ", mute=" + this.e + ", warn=" + this.AsyncBackgroundTask_5 + ", kick=" + this.plugin + ", redo=" + this.c + ')';
+        return "(BaseCoreGenericHandler=" + this.LiteBansModule_195 + ", mute=" + this.e + ", warn=" + this.AsyncBackgroundTask_5 + ", kick=" + this.plugin + ", redo=" + this.c + ')';
     }
 
     public int hashCode() {
-        int n = Long.hashCode(this.LiteBansModule_194);
+        int n = Long.hashCode(this.LiteBansModule_195);
         n = n * 31 + Long.hashCode(this.e);
         n = n * 31 + Long.hashCode(this.AsyncBackgroundTask_5);
         n = n * 31 + Long.hashCode(this.plugin);
@@ -68,7 +69,7 @@ public final class LiteBansModule_23 {
             return false;
         }
         LiteBansModule_23 au2 = (LiteBansModule_23)targetObj;
-        if (this.LiteBansModule_194 != au2.LiteBansModule_194) {
+        if (this.LiteBansModule_195 != au2.LiteBansModule_195) {
             return false;
         }
         if (this.e != au2.e) {
@@ -81,5 +82,14 @@ public final class LiteBansModule_23 {
             return false;
         }
         return this.c == au2.c;
+    }
+
+    private static final void LiteBansModule_31() {
+        LiteBansModule_31 = new String[]{"(BaseCoreGenericHandler=", ", mute=", ", warn=", ", kick=", ", redo="};
+    }
+
+    static {
+        LiteBansModule_23.LiteBansModule_31();
+    }
 }
 

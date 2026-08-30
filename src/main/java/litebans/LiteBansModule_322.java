@@ -1,36 +1,27 @@
 package litebans;
 
-import java.util.NoSuchElementException;
-public final class LiteBansModule_322
-extends LiteBansModule_290 {
-    private final int c;
-    private final int e;
-    private boolean AsyncBackgroundTask_5;
-    private int LiteBansModule_31;
+import java.util.concurrent.ScheduledExecutorService;
+static class LiteBansModule_322 {
+    private ScheduledExecutorService LiteBansModule_31;
+    private long BaseCoreGenericHandler;
 
-    public LiteBansModule_322(int n, int n2, int n3) {
-        this.c = n3;
-        this.e = n2;
-        this.AsyncBackgroundTask_5 = this.c > 0 ? n <= n2 : n >= n2;
-        this.LiteBansModule_31 = this.AsyncBackgroundTask_5 ? n : this.e;
+    LiteBansModule_322(long l3, ScheduledExecutorService scheduledExecutorService) {
+        this.LiteBansModule_31 = scheduledExecutorService;
+        this.plugin = l3;
     }
 
-    @Override
-    public boolean hasNext() {
-        return this.AsyncBackgroundTask_5;
+    AsyncBackgroundTask_15 LiteBansModule_31(InUseHandler kJ2) {
+        return this.plugin == 0L ? AsyncBackgroundTask_15.g : this.plugin(kJ2);
     }
 
-    @Override
-    public int LiteBansModule_31() {
-        int n = this.LiteBansModule_31;
-        if (n == this.e) {
-            if (!this.AsyncBackgroundTask_5) {
-                throw new NoSuchElementException();
-            }
-            this.AsyncBackgroundTask_5 = false;
-        } else {
-            this.LiteBansModule_31 += this.c;
-        }
-        return n;
+    void BaseCoreGenericHandler(long l3) {
+        this.plugin = l3;
+    }
+
+    private final AsyncBackgroundTask_15 BaseCoreGenericHandler(InUseHandler kJ2) {
+        AsyncBackgroundTask_15 ja2 = new AsyncBackgroundTask_15(kJ2);
+        ja2.BaseCoreGenericHandler(this.LiteBansModule_31, this.plugin);
+        return ja2;
+    }
 }
 

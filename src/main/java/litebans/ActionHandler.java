@@ -8,10 +8,10 @@ public final class ActionHandler {
     private final ShowTextHandler LiteBansModule_31;
     private final List c;
     private boolean AsyncBackgroundTask_5 = false;
-    @Deprecated
-    public ActionHandler(ShowTextHandler eA2, LiteBansModule_432[] v_0Array) {
+        @Deprecated
+    public ActionHandler(ShowTextHandler eA2, LiteBansModule_434[] v_0Array) {
         this.LiteBansModule_31 = eA2;
-        this.c = new ArrayList<LiteBansModule_167>(Collections.singletonList(new LiteBansModule_167(v_0Array)));
+        this.c = new ArrayList<LiteBansModule_168>(Collections.singletonList(new LiteBansModule_168(v_0Array)));
         this.AsyncBackgroundTask_5 = true;
     }
 
@@ -19,8 +19,9 @@ public final class ActionHandler {
         Preconditions.checkArgument((eA2 != null ? 1 : 0) != 0, (Object)"action");
         switch (eA2.ordinal()) {
             case 0: {
-                return flag ? LiteBansModule_167[].class : LiteBansModule_167.class;
-}
+                return flag ? LiteBansModule_168[].class : LiteBansModule_168.class;
+            }
+        }
         throw new UnsupportedOperationException("Action '" + eA2.name() + " not supported");
     }
 
@@ -37,7 +38,7 @@ public final class ActionHandler {
     }
 
     public String toString() {
-        return "HoverEvent(action=" + (Object)(this.AsyncBackgroundTask_5()) + ", contents=" + this.c() + ", legacy=" + this.LiteBansModule_31() + ")";
+        return "HoverEvent(action=" + (Object)((Object)this.AsyncBackgroundTask_5()) + ", contents=" + this.c() + ", legacy=" + this.LiteBansModule_31() + ")";
     }
 
     public boolean equals(Object targetObj) {
@@ -53,12 +54,12 @@ public final class ActionHandler {
         }
         ShowTextHandler eA2 = this.AsyncBackgroundTask_5();
         ShowTextHandler eA3 = eu_02.AsyncBackgroundTask_5();
-        if (eA2 == null ? eA3 != null : !((Object)(eA2)).equals(eA3)) {
+        if (eA2 == null ? eA3 != null : !((Object)((Object)eA2)).equals((Object)eA3)) {
             return false;
         }
         List list = this.c();
         List list2 = eu_02.c();
-        return !(list == null ? list2 != null : !(list).equals(list2));
+        return !(list == null ? list2 != null : !((Object)list).equals(list2));
     }
 
     public int hashCode() {
@@ -66,9 +67,9 @@ public final class ActionHandler {
         int n2 = 1;
         n2 = n2 * 59 + (this.LiteBansModule_31() ? 79 : 97);
         ShowTextHandler eA2 = this.AsyncBackgroundTask_5();
-        n2 = n2 * 59 + (eA2 == null ? 43 : ((Object)(eA2)).hashCode());
+        n2 = n2 * 59 + (eA2 == null ? 43 : ((Object)((Object)eA2)).hashCode());
         List list = this.c();
-        n2 = n2 * 59 + (list == null ? 43 : (list).hashCode());
+        n2 = n2 * 59 + (list == null ? 43 : ((Object)list).hashCode());
         return n2;
     }
 
@@ -79,5 +80,10 @@ public final class ActionHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"action", "Action '", " not supported", "HoverEvent(action=", ", contents=", ", legacy=", ")"};
+    }
+
+    static {
+        ActionHandler.BaseCoreGenericHandler();
+    }
 }
 

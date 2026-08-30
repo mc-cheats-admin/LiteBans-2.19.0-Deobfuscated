@@ -31,7 +31,7 @@ public final class DiscordWebhookClient {
     private final long L;
     private final long i;
     private final long ak;
-    private final long LiteBansModule_433;
+    private final long LiteBansModule_435;
     private final List LockdownCommandHandler;
     private final Set B;
     private final boolean BanHandler_4;
@@ -53,7 +53,7 @@ public final class DiscordWebhookClient {
     private final String MessageKey;
     private final String K;
     private final String PunishmentTableService;
-    private final String LiteBansModule_240;
+    private final String LiteBansModule_241;
     private final String LiteBansModule_12;
     private final String LiteBansModule_15;
     private final byte PlayerproviderHandler;
@@ -73,7 +73,7 @@ public final class DiscordWebhookClient {
     private final boolean aG;
     private final boolean ContinueEvictHandler;
     private final boolean InitHandler;
-    private final boolean LiteBansModule_194;
+    private final boolean LiteBansModule_195;
     private final boolean AsyncBackgroundTask_21;
     private final boolean AsyncBackgroundTask_5;
     private final boolean NullHandler_8;
@@ -89,7 +89,7 @@ public final class DiscordWebhookClient {
     private final boolean SetHandler;
     private final boolean Utf8Handler_2;
     private final boolean V;
-    private final boolean LiteBansModule_430;
+    private final boolean LiteBansModule_432;
     private final boolean ac;
     private final boolean ServerEventListener;
     private final boolean ElementsHandler;
@@ -111,7 +111,7 @@ public final class DiscordWebhookClient {
     private final boolean q;
     private final byte X;
     private final boolean U;
-    private final boolean LiteBansModule_401;
+    private final boolean LiteBansModule_403;
     private final boolean J;
     private final boolean LiteBansModule_10;
     private final boolean LiteBansModule_31;
@@ -135,462 +135,515 @@ public final class DiscordWebhookClient {
     private final int S;
     private final int NullHandler;
     private final byte ah;
-    public DiscordWebhookClient(@NotNull PlatformPlugin v1, @NotNull DatabaseService v2) {
-{
+        public DiscordWebhookClient(@NotNull PlatformPlugin v1, @NotNull DatabaseService v2) {
+        block67: {
+            block71: {
+                block68: {
+                    block70: {
+                        block69: {
                             super();
                             this.ServerSyncService = v1;
                             this.A = v2;
-                            v3 = this.ServerSyncService.BaseCoreGenericHandler(ConfigService.class);
+                            v3 = (ConfigService)this.ServerSyncService.BaseCoreGenericHandler(ConfigService.class);
                             v3.BaseCoreGenericHandler(this);
-                                                        arg2 = System.getenv("LITEBANS_CONFIG");
-                            if (arg2 != null) {
-                                arg1.ServerSyncService.getLogger().info("Loading environment options: " + (String)arg2);
-                                v0 = new LiteBansModule_314().BaseCoreGenericHandler((String)arg2);
+                            v4 = this;
+                            v5 = System.getenv("LITEBANS_CONFIG");
+                            if (v5 != null) {
+                                v4.ServerSyncService.getLogger().info("Loading environment options: " + (String)v5);
+                                v0 = new LiteBansModule_315().BaseCoreGenericHandler((String)v5);
                                 ObjectUtilities.LiteBansModule_31(v0, "");
-                                arg3 = (HashMap)v0;
-                                arg4 = arg3.entrySet();
-                                arg5 = arg4.iterator();
-                                while (arg5.hasNext()) {
-                                    arg6 = arg5.next();
-                                    arg7 = (Map.Entry)arg6;
-                                    arg1.A.LiteBansModule_31((String)arg7.getKey(), arg7.getValue());
-}
-                            SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler(this.A.BaseCoreGenericHandler("online_player_select_limit", 64));
+                                v6 = (HashMap)v0;
+                                v7 = v6.entrySet();
+                                v8 = v7.iterator();
+                                while (v8.hasNext()) {
+                                    v9 = v8.next();
+                                    v10 = (Map.Entry)v9;
+                                    v4.A.LiteBansModule_31((String)v10.getKey(), v10.getValue());
+                                }
+                            }
+                            SQLiteDriverHandler_3.LiteBansModule_403.BaseCoreGenericHandler(this.A.BaseCoreGenericHandler("online_player_select_limit", 64));
                             this.LiteBansModule_31 = this.A.BaseCoreGenericHandler("i_accept_that_dupeip_geoip_iphistory_and_ipban_will_not_work_without_getAddress_and_just_want_to_only_disable_warnings_logged_to_console", false);
                             this.m = this.A.BaseCoreGenericHandler("disable_wildcard_bans", false);
                             this.ExceptionHandler = this.A.BaseCoreGenericHandler("disable_expiry_update", false);
-                                                        arg8 = "database_time_offset";
-                            arg2 = "0 seconds";
-                            this.c = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg1.bc().BaseCoreGenericHandler(arg8, (String)arg2), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg2, 0.0));
-                            this.ah = LiteBansModule_283.BaseCoreGenericHandler(this.A.BaseCoreGenericHandler("username_max_length", 16));
+                            v4 = this;
+                            v11 = "database_time_offset";
+                            v5 = "0 seconds";
+                            this.c = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v4.bc().BaseCoreGenericHandler(v11, (String)v5), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v5, 0.0));
+                            this.ah = LiteBansModule_284.BaseCoreGenericHandler((byte)this.A.BaseCoreGenericHandler("username_max_length", 16));
                             v3.BaseCoreGenericHandler((byte)Math.max(0, this.A.BaseCoreGenericHandler("debug_level", 0)));
                             this.AsyncBackgroundTask_5 = this.A.BaseCoreGenericHandler("bungeecord", false);
                             this.NullHandler_8 = this.A.BaseCoreGenericHandler("online_mode", true);
-                            arg8 = this.A.BaseCoreGenericHandler("sql.driver", "LiteBansModule_243");
-                            arg2 = Locale.ENGLISH;
-                            arg1 = arg8.toLowerCase((Locale)arg2);
-                            if (StringUtilities.LiteBansModule_31((String)arg1, "postgres", false, 2, null)) {
-                                arg1 = "pgsql";
+                            v11 = this.A.BaseCoreGenericHandler("sql.driver", "LiteBansModule_244");
+                            v5 = Locale.ENGLISH;
+                            v4 = v11.toLowerCase((Locale)v5);
+                            if (StringUtilities.LiteBansModule_31((String)v4, "postgres", false, 2, null)) {
+                                v4 = "pgsql";
                             }
-                            this.plugin = arg1;
-                            arg8 = this.A.BaseCoreGenericHandler("sql.address", "localhost:3306");
-                            arg2 = this.A.BaseCoreGenericHandler("sql.database", "litebans");
-                            v7 = this.A.BaseCoreGenericHandler("sql.username", "");
-                            arg4 = this.A.BaseCoreGenericHandler("sql.password", "");
-                            arg9 = this.A.BaseCoreGenericHandler("sql.table_prefix", "litebans_");
-                            if (ObjectUtilities.BaseCoreGenericHandler(arg1, (Object)"LiteBansModule_243")) {
+                            this.plugin = v4;
+                            v11 = this.A.BaseCoreGenericHandler("sql.address", "localhost:3306");
+                            v5 = this.A.BaseCoreGenericHandler("sql.database", "litebans");
+                            v12 = this.A.BaseCoreGenericHandler("sql.username", "");
+                            v7 = this.A.BaseCoreGenericHandler("sql.password", "");
+                            v13 = this.A.BaseCoreGenericHandler("sql.table_prefix", "litebans_");
+                            if (ObjectUtilities.BaseCoreGenericHandler(v4, (Object)"LiteBansModule_244")) {
                                 try {
-                                    arg6 = this.ServerSyncService.getDataFolder();
-                                    arg7 = "LiteBansModule_243.yml";
-                                    arg5 = new File((File)arg6, (String)arg7);
-                                    if (!arg5.exists() || YamlConfigProvider.AsyncBackgroundTask_5() == null) {
-                                        arg6 = this.ServerSyncService.getDataFolder();
-                                        arg7 = "LiteBansModule_243.json";
-                                        arg5 = new File((File)arg6, (String)arg7);
+                                    v9 = this.ServerSyncService.getDataFolder();
+                                    v10 = "LiteBansModule_244.yml";
+                                    v8 = new File((File)v9, (String)v10);
+                                    if (!v8.exists() || YamlConfigProvider.AsyncBackgroundTask_5() == null) {
+                                        v9 = this.ServerSyncService.getDataFolder();
+                                        v10 = "LiteBansModule_244.json";
+                                        v8 = new File((File)v9, (String)v10);
                                     }
-                                    if (arg5.exists()) {
-                                        arg6 = this.ServerSyncService.BaseCoreGenericHandler((File)arg5).g();
-                                        v7 = arg6.BaseCoreGenericHandler("user", v7);
-                                        arg4 = arg6.BaseCoreGenericHandler("password", (String)arg4);
-}
-                                catch (Exception arg10) {
-                                    arg10.printStackTrace();
-}
-                            if (!ObjectUtilities.BaseCoreGenericHandler(arg9, (Object)"litebans_")) {
-                                arg5 = arg9;
-                                ObjectUtilities.BaseCoreGenericHandler(arg5);
-                                arg5 = arg5;
-                                arg6 = new NativepatternHandler("^[0-9a-zA-Z_]*$");
-                                if (!arg6.BaseCoreGenericHandler(arg5)) {
-                                    this.ServerSyncService.getLogger().warning("Table prefix '" + arg9 + "' is invalid! Using default ('litebans_') + ");
-                                    arg9 = "litebans_";
-}
-                            ObjectUtilities.BaseCoreGenericHandler(arg8);
-                            this.SQLiteDriverHandler = arg8;
-                            arg5 = v7;
-                            ObjectUtilities.BaseCoreGenericHandler(arg5);
-                            this.aU = arg5;
-                            arg5 = arg4;
-                            ObjectUtilities.BaseCoreGenericHandler(arg5);
-                            this.aM = arg5;
-                            ObjectUtilities.BaseCoreGenericHandler(arg2);
-                            this.AsyncBackgroundTask_22 = arg2;
-                            arg5 = arg9;
-                            ObjectUtilities.BaseCoreGenericHandler(arg5);
-                            this.LiteBansModule_9 = arg5;
-                                                        arg6 = this.A.BaseCoreGenericHandler("sql.engine", "InnoDB");
-                            this.LiteBansModule_17 = ObjectUtilities.BaseCoreGenericHandler(arg6, (Object)"InnoDB") == false && ArrayUtilities.LiteBansModule_31(arg11 = new String[]{"mysql", "mariadb", "LiteBansModule_243", "sqlite"}, arg6.toLowerCase(Locale.ROOT)) != false ? "InnoDB" : arg6;
-                            this.BanHandler = arg5 = this.A.BaseCoreGenericHandler("sql.options", "useSSL=false&serverTimezone=UTC");
-                            arg5 = "version:8";
-                            arg12   = new String[]{arg5, DiscordWebhookClient.bf[48], DiscordWebhookClient.bf[49], DiscordWebhookClient.bf[50], DiscordWebhookClient.bf[51], DiscordWebhookClient.bf[52]};
-                            arg6 = arg12  ;
-                                                        arg14 = DiscordWebhookClient.bf[53];
-                            arg15 = (String[])Arrays.copyOf(arg6, (arg6).length);
-                            if (!arg13.bc().LiteBansModule_194((String)arg14)) {
-                                v1 = Arrays.copyOf(arg15, ((String[])arg15).length);
+                                    if (v8.exists()) {
+                                        v9 = this.ServerSyncService.BaseCoreGenericHandler((File)v8).g();
+                                        v12 = v9.BaseCoreGenericHandler("user", v12);
+                                        v7 = v9.BaseCoreGenericHandler("password", (String)v7);
+                                    }
+                                }
+                                catch (Exception v14) {
+                                    v14.printStackTrace();
+                                }
+                            }
+                            if (!ObjectUtilities.BaseCoreGenericHandler((Object)v13, (Object)"litebans_")) {
+                                v8 = v13;
+                                ObjectUtilities.BaseCoreGenericHandler(v8);
+                                v8 = (CharSequence)v8;
+                                v9 = new NativepatternHandler("^[0-9a-zA-Z_]*$");
+                                if (!v9.BaseCoreGenericHandler((CharSequence)v8)) {
+                                    this.ServerSyncService.getLogger().warning("Table prefix '" + v13 + "' is invalid! Using default ('litebans_') + ");
+                                    v13 = "litebans_";
+                                }
+                            }
+                            ObjectUtilities.BaseCoreGenericHandler((Object)v11);
+                            this.SQLiteDriverHandler = v11;
+                            v8 = v12;
+                            ObjectUtilities.BaseCoreGenericHandler(v8);
+                            this.aU = v8;
+                            v8 = v7;
+                            ObjectUtilities.BaseCoreGenericHandler(v8);
+                            this.aM = v8;
+                            ObjectUtilities.BaseCoreGenericHandler(v5);
+                            this.AsyncBackgroundTask_22 = v5;
+                            v8 = v13;
+                            ObjectUtilities.BaseCoreGenericHandler(v8);
+                            this.LiteBansModule_9 = v8;
+                            v8 = this;
+                            v9 = this.A.BaseCoreGenericHandler("sql.engine", "InnoDB");
+                            this.LiteBansModule_17 = ObjectUtilities.BaseCoreGenericHandler(v9, (Object)"InnoDB") == false && ArrayUtilities.LiteBansModule_31(v15 = new String[]{"mysql", "mariadb", "LiteBansModule_244", "sqlite"}, v9.toLowerCase(Locale.ROOT)) != false ? "InnoDB" : v9;
+                            this.BanHandler = v8 = this.A.BaseCoreGenericHandler("sql.options", "useSSL=false&serverTimezone=UTC");
+                            v8 = "version:8";
+                            v16   = new String[]{v8, DiscordWebhookClient.bf[48], DiscordWebhookClient.bf[49], DiscordWebhookClient.bf[50], DiscordWebhookClient.bf[51], DiscordWebhookClient.bf[52]};
+                            v9 = v16  ;
+                            v17 = this;
+                            v18 = DiscordWebhookClient.bf[53];
+                            v19 = (String[])Arrays.copyOf(v9, ((Object)v9).length);
+                            if (!v17.bc().LiteBansModule_195((String)v18)) {
+                                v1 = Arrays.copyOf(v19, ((String[])v19).length);
                             } else {
-                                arg16 = arg13.bc().g((String)arg14);
-                                arg17 = arg16;
-                                v1 = arg17.toArray(new String[0]);
+                                v20 = v17.bc().g((String)v18);
+                                v21 = v20;
+                                v1 = v21.toArray(new String[0]);
                             }
-                            if (!ObjectUtilities.BaseCoreGenericHandler(ArrayUtilities.BaseCoreGenericHandler(arg12   = v1, 0), arg5)) {
-                                arg12   = arg6;
-                                v3.BaseCoreGenericHandler((Object)(DiscordWebhookClient.bf[54] + (String)arg5 + DiscordWebhookClient.bf[55]));
+                            if (!ObjectUtilities.BaseCoreGenericHandler(ArrayUtilities.BaseCoreGenericHandler(v16   = v1, 0), v8)) {
+                                v16   = v9;
+                                v3.BaseCoreGenericHandler((Object)(DiscordWebhookClient.bf[54] + (String)v8 + DiscordWebhookClient.bf[55]));
                             }
-                            this.CommandExitException = arg12  ;
+                            this.CommandExitException = v16  ;
                             this.PlayerQuitListener = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[56], 1);
                             this.LiteBansModule_13 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[57], 10);
-                                                        arg14 = DiscordWebhookClient.bf[58];
-                            arg15 = DiscordWebhookClient.bf[59];
-                            this.L = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg13.bc().BaseCoreGenericHandler((String)arg14, (String)arg15), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg15, 0.0));
-                                                        arg14 = DiscordWebhookClient.bf[60];
-                            arg15 = DiscordWebhookClient.bf[61];
-                            this.i = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg13.bc().BaseCoreGenericHandler((String)arg14, (String)arg15), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg15, 0.0));
-                                                        arg14 = DiscordWebhookClient.bf[62];
-                            arg15 = DiscordWebhookClient.bf[63];
-                            this.ak = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg13.bc().BaseCoreGenericHandler((String)arg14, (String)arg15), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg15, 0.0));
-                                                        arg14 = DiscordWebhookClient.bf[64];
-                            arg15 = DiscordWebhookClient.bf[65];
-                            this.LiteBansModule_433 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg13.bc().BaseCoreGenericHandler((String)arg14, (String)arg15), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg15, 0.0));
-                            arg13 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[66]);
-                            arg14 = new ArrayList<PunishmentService>();
-                            if (arg13 != null) {
-                                arg15 = arg13.BaseCoreGenericHandler(false);
-                                ObjectUtilities.BaseCoreGenericHandler(arg15);
-                                arg18 = (Iterable)arg15;
-                                for (Object arg17 : arg18) {
-                                    arg19 = (String)arg17;
-                                    arg20 = arg13.BaseCoreGenericHandler(arg19);
-                                    if (arg20 == null) continue;
-                                                                        arg22   = new String[]{DiscordWebhookClient.bf[67], DiscordWebhookClient.bf[68], DiscordWebhookClient.bf[69]};
-                                    arg23 = arg22  ;
-                                    arg24 = new ArrayList<PunishmentService>();
-                                    arg25 = arg23.length;
-                                    for (arg26 = 0; arg26 < arg25; ++arg26) {
-                                        arg27 = arg28 = arg23[arg26];
-                                        if (!(arg20.LiteBansModule_31((String)arg27) == null)) continue;
-                                        arg24.add(arg28);
+                            v17 = this;
+                            v18 = DiscordWebhookClient.bf[58];
+                            v19 = DiscordWebhookClient.bf[59];
+                            this.L = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v17.bc().BaseCoreGenericHandler((String)v18, (String)v19), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v19, 0.0));
+                            v17 = this;
+                            v18 = DiscordWebhookClient.bf[60];
+                            v19 = DiscordWebhookClient.bf[61];
+                            this.i = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v17.bc().BaseCoreGenericHandler((String)v18, (String)v19), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v19, 0.0));
+                            v17 = this;
+                            v18 = DiscordWebhookClient.bf[62];
+                            v19 = DiscordWebhookClient.bf[63];
+                            this.ak = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v17.bc().BaseCoreGenericHandler((String)v18, (String)v19), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v19, 0.0));
+                            v17 = this;
+                            v18 = DiscordWebhookClient.bf[64];
+                            v19 = DiscordWebhookClient.bf[65];
+                            this.LiteBansModule_435 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v17.bc().BaseCoreGenericHandler((String)v18, (String)v19), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v19, 0.0));
+                            v17 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[66]);
+                            v18 = new ArrayList<PunishmentService>();
+                            if (v17 != null) {
+                                v19 = v17.BaseCoreGenericHandler(false);
+                                ObjectUtilities.BaseCoreGenericHandler(v19);
+                                v22 = (Iterable)v19;
+                                for (Object v21 : v22) {
+                                    v23 = (String)v21;
+                                    v24 = v17.BaseCoreGenericHandler(v23);
+                                    if (v24 == null) continue;
+                                    v25 = this;
+                                    v26   = new String[]{DiscordWebhookClient.bf[67], DiscordWebhookClient.bf[68], DiscordWebhookClient.bf[69]};
+                                    v27 = v26  ;
+                                    v28 = new ArrayList<PunishmentService>();
+                                    v29 = v27.length;
+                                    for (v30 = 0; v30 < v29; ++v30) {
+                                        v31 = v32 = v27[v30];
+                                        if (!(v24.LiteBansModule_31((String)v31) == null)) continue;
+                                        v28.add(v32);
                                     }
-                                    arg22   = (List)arg24;
-                                    arg23 = arg22  ;
-                                    arg24 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)arg22  , 10));
-                                    for (T arg29 : arg23) {
-                                        arg28 = (String)arg29;
-                                        arg30 = arg24;
-                                        arg30.add(LiteBansModule_242.BaseCoreGenericHandler((CharSequence)(DiscordWebhookClient.bf[70] + arg19 + DiscordWebhookClient.bf[71] + (String)arg28 + DiscordWebhookClient.bf[72]), DiscordWebhookClient.bf[73]));
+                                    v26   = (List)v28;
+                                    v27 = v26  ;
+                                    v28 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)v26  , 10));
+                                    for (T v33 : v27) {
+                                        v32 = (String)v33;
+                                        v34 = v28;
+                                        v34.add(LiteBansModule_243.BaseCoreGenericHandler((CharSequence)(DiscordWebhookClient.bf[70] + v23 + DiscordWebhookClient.bf[71] + (String)v32 + DiscordWebhookClient.bf[72]), (CharSequence)DiscordWebhookClient.bf[73]));
                                     }
-                                    arg22   = (List)arg24;
-                                    arg31 = arg21.ServerSyncService.getLogger();
-                                    for (PunishmentService arg32 : arg22  ) {
-                                        arg33 = arg32;
-                                        arg28 = arg31;
-                                        arg28.warning(arg33.toString());
+                                    v26   = (List)v28;
+                                    v35 = v25.ServerSyncService.getLogger();
+                                    for (PunishmentService v36 : v26  ) {
+                                        v37 = (CharSequence)v36;
+                                        v32 = v35;
+                                        v32.warning(v37.toString());
                                     }
-                                    arg21 = DiscordWebhookClient.bf[74];
-                                    arg34 = DiscordWebhookClient.bf[75];
-                                    arg22   = arg20.BaseCoreGenericHandler(DiscordWebhookClient.bf[76], DiscordWebhookClient.bf[77]);
-                                                                        arg35 = arg20;
-                                    arg33 = DiscordWebhookClient.bf[78];
-                                    arg36 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg35.BaseCoreGenericHandler((String)arg33, (String)arg21), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg21, 0.0));
-                                                                        arg37 = arg20;
-                                    arg28 = DiscordWebhookClient.bf[79];
-                                    arg38 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg37.BaseCoreGenericHandler((String)arg28, (String)arg21), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg21, 0.0));
-                                    if (arg36 <= 0L) {
-                                        arg36 = 0x7FFFFFFFFFFFFFFFL;
+                                    v25 = DiscordWebhookClient.bf[74];
+                                    v38 = DiscordWebhookClient.bf[75];
+                                    v26   = v24.BaseCoreGenericHandler(DiscordWebhookClient.bf[76], DiscordWebhookClient.bf[77]);
+                                    v28 = this;
+                                    v39 = v24;
+                                    v37 = DiscordWebhookClient.bf[78];
+                                    v40 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v39.BaseCoreGenericHandler((String)v37, (String)v25), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v25, 0.0));
+                                    v37 = this;
+                                    v41 = v24;
+                                    v32 = DiscordWebhookClient.bf[79];
+                                    v42 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v41.BaseCoreGenericHandler((String)v32, (String)v25), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v25, 0.0));
+                                    if (v40 <= 0L) {
+                                        v40 = 0x7FFFFFFFFFFFFFFFL;
                                     }
-                                    if (arg38 <= 0L) {
-                                        arg38 = 0x7FFFFFFFFFFFFFFFL;
+                                    if (v42 <= 0L) {
+                                        v42 = 0x7FFFFFFFFFFFFFFFL;
                                     }
-                                                                        arg27 = arg20;
-                                    arg39 = DiscordWebhookClient.bf[80];
-                                    arg40 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg27.BaseCoreGenericHandler((String)arg39, (String)arg34), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg34, 0.0));
-                                                                        arg30 = arg20;
-                                    arg41 = DiscordWebhookClient.bf[81];
-                                    arg42 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg30.BaseCoreGenericHandler((String)arg41, (String)arg34), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg34, 0.0));
-                                                                        arg43 = arg20;
-                                    arg44 = DiscordWebhookClient.bf[82];
-                                    arg45 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg43.BaseCoreGenericHandler((String)arg44, (String)arg34), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg34, 0.0));
-                                                                        arg46 = arg20;
-                                    arg47 = DiscordWebhookClient.bf[83];
-                                    arg48 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg46.BaseCoreGenericHandler((String)arg47, (String)arg34), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg34, 0.0));
-                                                                        arg49 = arg20;
-                                    arg50 = DiscordWebhookClient.bf[84];
-                                    arg51 = DiscordWebhookClient.bf[85];
-                                    arg52 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg49.BaseCoreGenericHandler(arg50, arg51), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg51, 0.0));
-                                    arg53 = arg20.BaseCoreGenericHandler(DiscordWebhookClient.bf[86], false);
-                                    ObjectUtilities.BaseCoreGenericHandler(arg22  );
-                                    arg49 = new LiteBansModule_109((String)arg22  , new LiteBansModule_34(arg36, arg38), new LiteBansModule_23(arg40, arg42, arg45, arg48, arg52), new LiteBansModule_3(arg53));
-                                    arg14.add(arg49);
-}
-                            this.g = (List)arg14;
-                                                        arg54   = DiscordWebhookClient.bf[87];
-                            arg16 = DiscordWebhookClient.bf[88];
-                            this.ValueHandler = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg15.bc().BaseCoreGenericHandler((String)arg54  , (String)arg16), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg16, 0.0));
-                                                        arg54   = DiscordWebhookClient.bf[89];
-                            arg16 = DiscordWebhookClient.bf[90];
-                            this.PunishmentService = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg15.bc().BaseCoreGenericHandler((String)arg54  , (String)arg16), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg16, 0.0));
-                            arg15 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[91], DiscordWebhookClient.bf[92]);
-                            if (ObjectUtilities.BaseCoreGenericHandler(arg15, DiscordWebhookClient.bf[93])) {
-                                arg16 = LiteBansModule_179.BaseCoreGenericHandler;
-                                arg54   = StringUtilities.LiteBansModule_31((String)arg16);
-                                if (arg54   != null) {
-                                    arg54   = arg54  .longValue() * (long)127;
+                                    v32 = this;
+                                    v31 = v24;
+                                    v43 = DiscordWebhookClient.bf[80];
+                                    v44 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v31.BaseCoreGenericHandler((String)v43, (String)v38), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v38, 0.0));
+                                    v43 = this;
+                                    v34 = v24;
+                                    v45 = DiscordWebhookClient.bf[81];
+                                    v46 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v34.BaseCoreGenericHandler((String)v45, (String)v38), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v38, 0.0));
+                                    v45 = this;
+                                    v47 = v24;
+                                    v48 = DiscordWebhookClient.bf[82];
+                                    v49 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v47.BaseCoreGenericHandler((String)v48, (String)v38), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v38, 0.0));
+                                    v48 = this;
+                                    v50 = v24;
+                                    v51 = DiscordWebhookClient.bf[83];
+                                    v52 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v50.BaseCoreGenericHandler((String)v51, (String)v38), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v38, 0.0));
+                                    v51 = this;
+                                    v53 = v24;
+                                    v54 = DiscordWebhookClient.bf[84];
+                                    v55 = DiscordWebhookClient.bf[85];
+                                    v56 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v53.BaseCoreGenericHandler(v54, v55), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v55, 0.0));
+                                    v57 = v24.BaseCoreGenericHandler(DiscordWebhookClient.bf[86], false);
+                                    ObjectUtilities.BaseCoreGenericHandler(v26  );
+                                    v53 = new LiteBansModule_110((String)v26  , new LiteBansModule_34(v40, v42), new LiteBansModule_23(v44, v46, v49, v52, v56), new LiteBansModule_3(v57));
+                                    v18.add(v53);
                                 }
-                                if ((v2 = (arg16 = arg54  )) == null || (v2 = (arg55 = v2.toString())) == null) {
+                            }
+                            this.g = (List)v18;
+                            v19 = this;
+                            v58   = DiscordWebhookClient.bf[87];
+                            v20 = DiscordWebhookClient.bf[88];
+                            this.ValueHandler = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v19.bc().BaseCoreGenericHandler((String)v58  , (String)v20), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v20, 0.0));
+                            v19 = this;
+                            v58   = DiscordWebhookClient.bf[89];
+                            v20 = DiscordWebhookClient.bf[90];
+                            this.PunishmentService = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v19.bc().BaseCoreGenericHandler((String)v58  , (String)v20), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v20, 0.0));
+                            v19 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[91], DiscordWebhookClient.bf[92]);
+                            if (ObjectUtilities.BaseCoreGenericHandler(v19, (Object)DiscordWebhookClient.bf[93])) {
+                                v20 = LiteBansModule_180.BaseCoreGenericHandler;
+                                v58   = StringUtilities.LiteBansModule_31((String)v20);
+                                if (v58   != null) {
+                                    v58   = v58  .longValue() * (long)127;
+                                }
+                                if ((v2 = (v20 = v58  )) == null || (v2 = (v59 = v2.toString())) == null) {
                                     v2 = DiscordWebhookClient.bf[94];
                                 }
-                                arg15 = v2;
+                                v19 = v2;
                             }
-                            this.LiteBansModule_27 = arg15.hashCode();
+                            this.LiteBansModule_27 = v19.hashCode();
                             this.aO = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[95], true);
                             this.LiteBansModule_21 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[96], this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[97], true));
                             this.W = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[98], true);
                             this.D = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[99], true);
                             this.aa = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[100], true);
-                                                        arg56 = DiscordWebhookClient.bf[101];
-                            arg17 = new String[]{DiscordWebhookClient.bf[102], DiscordWebhookClient.bf[103], DiscordWebhookClient.bf[104], DiscordWebhookClient.bf[105]};
-                            if (!arg16.bc().LiteBansModule_194(arg56)) {
-                                v3 = Arrays.copyOf(arg17, ((String[])arg17).length);
+                            v20 = this;
+                            v60 = DiscordWebhookClient.bf[101];
+                            v21 = new String[]{DiscordWebhookClient.bf[102], DiscordWebhookClient.bf[103], DiscordWebhookClient.bf[104], DiscordWebhookClient.bf[105]};
+                            if (!v20.bc().LiteBansModule_195(v60)) {
+                                v3 = Arrays.copyOf(v21, ((String[])v21).length);
                             } else {
-                                arg57 = arg16.bc().g(arg56);
-                                arg21 = arg57;
-                                v3 = arg21.toArray(new String[0]);
+                                v61 = v20.bc().g(v60);
+                                v25 = v61;
+                                v3 = v25.toArray(new String[0]);
                             }
-                            arg54   = v3;
-                                                                                    arg17 = LiteBansModule_389.BaseCoreGenericHandler((String[])arg54  );
-                            arg59 = arg17;
-                            arg60 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)arg17, 10));
-                            arg34 = arg59.iterator();
-                            while (arg34.hasNext()) {
-                                arg22   = arg34.next();
-                                arg31 = (String)arg22  ;
-                                arg61 = arg60;
-                                arg61.add(StringUtilities.LiteBansModule_31(arg31, ' ', false, 2, null) != false ? arg31 : (String)arg31 + ' ');
+                            v58   = v3;
+                            v20 = this;
+                            v62 = this;
+                            v21 = LiteBansModule_391.BaseCoreGenericHandler((String[])v58  );
+                            v63 = v21;
+                            v64 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)v21, 10));
+                            v38 = v63.iterator();
+                            while (v38.hasNext()) {
+                                v26   = v38.next();
+                                v35 = (String)v26  ;
+                                v65 = v64;
+                                v65.add(StringUtilities.LiteBansModule_31((CharSequence)v35, ' ', false, 2, null) != false ? v35 : (String)v35 + ' ');
                             }
-                            arg58.LockdownCommandHandler = arg62 = (List)arg60;
-                                                        this.B = CollectionUtilities.g(LiteBansModule_389.BaseCoreGenericHandler((String[])arg54  ));
+                            v62.LockdownCommandHandler = v66 = (List)v64;
+                            v20 = this;
+                            this.B = CollectionUtilities.g(LiteBansModule_391.BaseCoreGenericHandler((String[])v58  ));
                             this.BanHandler_4 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[106], true);
-                            this.aE = arg16 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[107], DiscordWebhookClient.bf[108]);
-                                                        arg63 = DiscordWebhookClient.bf[109];
-                            arg17 = new String[]{ }
-                            if (!arg16.bc().LiteBansModule_194((String)arg63)) {
-                                v4 = (String[])Arrays.copyOf(arg17, (arg17).length);
+                            this.aE = v20 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[107], DiscordWebhookClient.bf[108]);
+                            v20 = this;
+                            v67 = DiscordWebhookClient.bf[109];
+                            v21 = new String[]{};
+                            if (!v20.bc().LiteBansModule_195((String)v67)) {
+                                v4 = (String[])Arrays.copyOf(v21, ((Object)v21).length);
                             } else {
-                                arg59 = arg16.bc().g((String)arg63);
-                                arg64 = arg59;
-                                v4 = arg64.toArray(new String[0]);
+                                v63 = v20.bc().g((String)v67);
+                                v68 = v63;
+                                v4 = v68.toArray(new String[0]);
                             }
                             this.CommandThrottleService = v4;
                             this.bd = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[110], false);
                             this.BanHandler_2 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[111]);
-                            arg63 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[112], DiscordWebhookClient.bf[113]);
-                            v5 = arg63;
-                            arg16 = v5 != null ? v5.toLowerCase(Locale.ROOT) : null;
-                            arg63 = arg16;
-                            if (arg63 == null) break;
-                            switch (arg63.hashCode()) {
+                            v67 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[112], DiscordWebhookClient.bf[113]);
+                            v5 = v67;
+                            v20 = v5 != null ? v5.toLowerCase(Locale.ROOT) : null;
+                            v67 = v20;
+                            if (v67 == null) break block68;
+                            switch (v67.hashCode()) {
                                 case 1841730422: {
-                                    if (!arg63.equals(DiscordWebhookClient.bf[114])) {
+                                    if (!v67.equals(DiscordWebhookClient.bf[114])) {
                                         break;
                                     }
-                                    break;
+                                    break block69;
                                 }
                                 case -1609594047: {
-                                    if (arg63.equals(DiscordWebhookClient.bf[115])) break;
+                                    if (v67.equals(DiscordWebhookClient.bf[115])) break;
                                     break;
                                 }
                                 case -1305285460: {
-                                    if (!arg63.equals(DiscordWebhookClient.bf[116])) {
+                                    if (!v67.equals(DiscordWebhookClient.bf[116])) {
                                         break;
                                     }
-                                    break;
-}
+                                    break block70;
+                                }
+                            }
                             v6 = 1;
-                            break;
+                            break block71;
                         }
                         v6 = 2;
-                        break;
+                        break block71;
                     }
                     v6 = 3;
-                    break;
-}
+                    break block71;
+                }
+                v6 = 0;
+            }
             this.PlayerproviderHandler = v6;
-                        arg17 = this.A;
-            arg65 = DiscordWebhookClient.bf[117];
-            arg59 = DiscordWebhookClient.bf[118];
-            this.F = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg17.BaseCoreGenericHandler((String)arg65, (String)arg59), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg59, 0.0));
+            v67 = this;
+            v21 = this.A;
+            v69 = DiscordWebhookClient.bf[117];
+            v63 = DiscordWebhookClient.bf[118];
+            this.F = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(v21.BaseCoreGenericHandler((String)v69, (String)v63), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)v63, 0.0));
             this.LiteBansModule_2 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[119], 9999999);
             this.T = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[120], 20);
-            this.BuilderactionHandler = arg63 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[121], DiscordWebhookClient.bf[122]);
+            this.BuilderactionHandler = v67 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[121], DiscordWebhookClient.bf[122]);
             this.DatabaseMonitorService = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[123], true);
             this.LiteBansModule_14 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[124], true);
             this.aG = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[125], true) != false || this.PlayerproviderHandler > 1;
             this.ContinueEvictHandler = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[126], true);
             this.InitHandler = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[127], false);
-            this.LiteBansModule_194 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[128], false);
+            this.LiteBansModule_195 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[128], false);
             this.AsyncBackgroundTask_21 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[129], true);
             this.LiteBansModule_25 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[130], true);
             this.aj = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[131], false);
             this.af = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[132], true);
-            this.be = arg63 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[133], DiscordWebhookClient.bf[134]);
-                        arg17 = DiscordWebhookClient.bf[135];
-            arg65 = new String[]{ }
-            if (!arg63.bc().LiteBansModule_194((String)arg17)) {
-                v7 = Arrays.copyOf(arg65, arg65.length);
+            this.be = v67 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[133], DiscordWebhookClient.bf[134]);
+            v67 = this;
+            v21 = DiscordWebhookClient.bf[135];
+            v69 = new String[]{};
+            if (!v67.bc().LiteBansModule_195((String)v21)) {
+                v7 = Arrays.copyOf(v69, v69.length);
             } else {
-                arg66 = arg63.bc().g((String)arg17);
-                arg34 = arg66;
-                v7 = arg34.toArray(new String[0]);
+                v70 = v67.bc().g((String)v21);
+                v38 = v70;
+                v7 = v38.toArray(new String[0]);
             }
             this.LiteBansModule = v7;
-                        arg17 = DiscordWebhookClient.bf[136];
-            arg65 = new String[]{ }
-            if (!arg63.bc().LiteBansModule_194((String)arg17)) {
-                v8 = Arrays.copyOf(arg65, arg65.length);
+            v67 = this;
+            v21 = DiscordWebhookClient.bf[136];
+            v69 = new String[]{};
+            if (!v67.bc().LiteBansModule_195((String)v21)) {
+                v8 = Arrays.copyOf(v69, v69.length);
             } else {
-                arg67 = arg63.bc().g((String)arg17);
-                arg34 = arg67;
-                v8 = arg34.toArray(new String[0]);
+                v71 = v67.bc().g((String)v21);
+                v38 = v71;
+                v8 = v38.toArray(new String[0]);
             }
             this.TapeHandler = v8;
             this.LiteBansModule_7 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[137], false);
-                        arg17 = DiscordWebhookClient.bf[138];
-            arg65 = new String[]{ }
-            if (!arg63.bc().LiteBansModule_194((String)arg17)) {
-                v9 = Arrays.copyOf(arg65, arg65.length);
+            v67 = this;
+            v21 = DiscordWebhookClient.bf[138];
+            v69 = new String[]{};
+            if (!v67.bc().LiteBansModule_195((String)v21)) {
+                v9 = Arrays.copyOf(v69, v69.length);
             } else {
-                arg68 = arg63.bc().g((String)arg17);
-                arg34 = arg68;
-                v9 = arg34.toArray(new String[0]);
+                v72 = v67.bc().g((String)v21);
+                v38 = v72;
+                v9 = v38.toArray(new String[0]);
             }
             this.az = v9;
-                        arg17 = DiscordWebhookClient.bf[139];
-            arg65 = new String[]{ }
-            if (!arg63.bc().LiteBansModule_194((String)arg17)) {
-                v10 = Arrays.copyOf(arg65, arg65.length);
+            v67 = this;
+            v21 = DiscordWebhookClient.bf[139];
+            v69 = new String[]{};
+            if (!v67.bc().LiteBansModule_195((String)v21)) {
+                v10 = Arrays.copyOf(v69, v69.length);
             } else {
-                arg69 = arg63.bc().g((String)arg17);
-                arg34 = arg69;
-                v10 = arg34.toArray(new String[0]);
+                v73 = v67.bc().g((String)v21);
+                v38 = v73;
+                v10 = v38.toArray(new String[0]);
             }
             this.HoverTextFormatter = v10;
-                        arg17 = DiscordWebhookClient.bf[140];
-            arg65 = new String[]{DiscordWebhookClient.bf[141], DiscordWebhookClient.bf[142], DiscordWebhookClient.bf[143], DiscordWebhookClient.bf[144], DiscordWebhookClient.bf[145]};
-            if (!arg63.bc().LiteBansModule_194((String)arg17)) {
-                v11 = Arrays.copyOf(arg65, arg65.length);
+            v67 = this;
+            v21 = DiscordWebhookClient.bf[140];
+            v69 = new String[]{DiscordWebhookClient.bf[141], DiscordWebhookClient.bf[142], DiscordWebhookClient.bf[143], DiscordWebhookClient.bf[144], DiscordWebhookClient.bf[145]};
+            if (!v67.bc().LiteBansModule_195((String)v21)) {
+                v11 = Arrays.copyOf(v69, v69.length);
             } else {
-                arg70 = arg63.bc().g((String)arg17);
-                arg34 = arg70;
-                v11 = arg34.toArray(new String[0]);
+                v74 = v67.bc().g((String)v21);
+                v38 = v74;
+                v11 = v38.toArray(new String[0]);
             }
             this.LiteBansModule_29 = v11;
-            this.n = arg63 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[146], DiscordWebhookClient.bf[147]);
-            this.ad = arg63 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[148], DiscordWebhookClient.bf[149]);
+            this.n = v67 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[146], DiscordWebhookClient.bf[147]);
+            this.ad = v67 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[148], DiscordWebhookClient.bf[149]);
             this.ar = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[150], true);
             this.LiteBansModule_3 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[151], true);
-            this.Y = arg63 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[152], DiscordWebhookClient.bf[153]);
-            this.LiteBansModule_43 = arg63 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[154], DiscordWebhookClient.bf[155]);
-            this.K = arg63 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[156], DiscordWebhookClient.bf[157]);
-            this.PunishmentTableService = arg63 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[158], DiscordWebhookClient.bf[159]);
-            this.MessageKey = arg63 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[160], DiscordWebhookClient.bf[161]);
-            this.LiteBansModule_240 = arg63 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[162], DiscordWebhookClient.bf[163]);
-            arg63 = litebans.MessageKey.BaseCoreGenericHandler(this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[164], DiscordWebhookClient.bf[165]), true);
-            arg63 = arg63;
-            arg71 = this.ah;
-            this.LiteBansModule_15 = LiteBansModule_242.BaseCoreGenericHandler(arg63.toString(), arg71 & 255);
+            this.Y = v67 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[152], DiscordWebhookClient.bf[153]);
+            this.LiteBansModule_43 = v67 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[154], DiscordWebhookClient.bf[155]);
+            this.K = v67 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[156], DiscordWebhookClient.bf[157]);
+            this.PunishmentTableService = v67 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[158], DiscordWebhookClient.bf[159]);
+            this.MessageKey = v67 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[160], DiscordWebhookClient.bf[161]);
+            this.LiteBansModule_241 = v67 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[162], DiscordWebhookClient.bf[163]);
+            v67 = litebans.MessageKey.BaseCoreGenericHandler(this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[164], DiscordWebhookClient.bf[165]), true);
+            v67 = (CharSequence)v67;
+            v75 = this.ah;
+            this.LiteBansModule_15 = LiteBansModule_243.BaseCoreGenericHandler(v67.toString(), v75 & 255);
             this.LiteBansModule_5 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[166], false);
             this.BanHandler_5 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[167], false);
-                        arg72 = this.A;
-            arg73 = DiscordWebhookClient.bf[168];
-            arg74 = 1;
-            this.HikariConfig = (byte)arg72.BaseCoreGenericHandler((String)arg73, arg74);
+            v67 = this;
+            v76 = this.A;
+            v77 = DiscordWebhookClient.bf[168];
+            v78 = 1;
+            this.HikariConfig = (byte)v76.BaseCoreGenericHandler((String)v77, v78);
             this.SetHandler = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[169], true);
             this.Utf8Handler_2 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[170], false);
             this.aT = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[171], true);
-            this.LiteBansModule_430 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[172], false);
+            this.LiteBansModule_432 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[172], false);
             this.V = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[173], false);
             this.H = Math.max(0, this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[174], 5));
-            arg75 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[175], false);
+            v79 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[175], false);
             if (this.ServerSyncService.AsyncBackgroundTask_22() == 0 && this.ServerSyncService.i().BaseCoreGenericHandler(DiscordWebhookClient.bf[176])) {
-                v3.BaseCoreGenericHandler(DiscordWebhookClient.bf[177]);
+                v3.BaseCoreGenericHandler((Object)DiscordWebhookClient.bf[177]);
             }
-            this.ac = arg75;
+            this.ac = v79;
             this.ab = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[178], 12000);
             this.r = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[179], 12000);
             this.ServerEventListener = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[180], false);
             this.ElementsHandler = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[181], false);
             this.LiteBansModule_6 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[182], false);
-            arg72 = DiscordWebhookClient.BaseCoreGenericHandler(this, false, 1, null);
-            this.ai = (String)arg72.LiteBansModule_31();
-            this.BroadcastService = (String)arg72.e();
-            arg73 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[183], DiscordWebhookClient.bf[184]);
-            this.LiteBansModule_12 = LiteBansModule_242.BaseCoreGenericHandler((String)arg73, 32);
+            v76 = DiscordWebhookClient.BaseCoreGenericHandler(this, false, 1, null);
+            this.ai = (String)v76.LiteBansModule_31();
+            this.BroadcastService = (String)v76.e();
+            v77 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[183], DiscordWebhookClient.bf[184]);
+            this.LiteBansModule_12 = LiteBansModule_243.BaseCoreGenericHandler((String)v77, 32);
             this.HikariDataSource = Math.max(40L, this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[185], 55L));
             this.S = Math.max(1, this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[186], 3));
-            arg73 = DiscordWebhookClient.bf[187];
-            arg74 = 1;
-                        arg34 = new String[]{ }
-            if (!arg76.bc().LiteBansModule_194((String)arg73)) {
-                v12 = Arrays.copyOf(arg34, ((String[])arg34).length);
+            v77 = DiscordWebhookClient.bf[187];
+            v78 = 1;
+            v80 = this;
+            v38 = new String[]{};
+            if (!v80.bc().LiteBansModule_195((String)v77)) {
+                v12 = Arrays.copyOf(v38, ((String[])v38).length);
             } else {
-                arg31 = arg76.bc().g((String)arg73);
-                arg77 = arg31;
-                v12 = arg77.toArray(new String[0]);
+                v35 = v80.bc().g((String)v77);
+                v81 = v35;
+                v12 = v81.toArray(new String[0]);
             }
-            this.LiteBansModule_24 = CollectionUtilities.LiteBansModule_31((Iterable)LiteBansModule_389.BaseCoreGenericHandler(v12));
-                        arg78 = DiscordWebhookClient.bf[188];
-            arg79 = new String[]{DiscordWebhookClient.bf[189]};
-            if (!arg73.bc().LiteBansModule_194(arg78)) {
-                v13 = Arrays.copyOf(arg79, arg79.length);
+            this.LiteBansModule_24 = CollectionUtilities.LiteBansModule_31((Iterable)LiteBansModule_391.BaseCoreGenericHandler(v12));
+            v77 = this;
+            v82 = DiscordWebhookClient.bf[188];
+            v83 = new String[]{DiscordWebhookClient.bf[189]};
+            if (!v77.bc().LiteBansModule_195(v82)) {
+                v13 = Arrays.copyOf(v83, v83.length);
             } else {
-                arg34 = arg73.bc().g(arg78);
-                arg31 = arg34;
-                v13 = arg31.toArray(new String[0]);
+                v38 = v77.bc().g(v82);
+                v35 = v38;
+                v13 = v35.toArray(new String[0]);
             }
-            this.GnuSparseMapHandler = LiteBansModule_389.BaseCoreGenericHandler(v13);
-                        arg78 = DiscordWebhookClient.bf[190];
-                        arg34 = DiscordWebhookClient.bf[191];
-            arg81 = new String[]{ }
-            if (!arg80.bc().LiteBansModule_194((String)arg34)) {
-                v14 = Arrays.copyOf(arg81, arg81.length);
+            this.GnuSparseMapHandler = LiteBansModule_391.BaseCoreGenericHandler(v13);
+            v77 = this;
+            v82 = DiscordWebhookClient.bf[190];
+            v84 = this;
+            v38 = DiscordWebhookClient.bf[191];
+            v85 = new String[]{};
+            if (!v84.bc().LiteBansModule_195((String)v38)) {
+                v14 = Arrays.copyOf(v85, v85.length);
             } else {
-                arg82 = arg80.bc().g((String)arg34);
-                arg35 = arg82;
-                v14 = arg35.toArray(new String[0]);
+                v86 = v84.bc().g((String)v38);
+                v39 = v86;
+                v14 = v39.toArray(new String[0]);
             }
-            arg79 = v14;
-            arg79 = Arrays.copyOf(arg79, arg79.length);
-            if (!arg73.bc().LiteBansModule_194(arg78)) {
-                v15 = Arrays.copyOf(arg79, arg79.length);
+            v83 = v14;
+            v83 = Arrays.copyOf(v83, v83.length);
+            if (!v77.bc().LiteBansModule_195(v82)) {
+                v15 = Arrays.copyOf(v83, v83.length);
             } else {
-                arg34 = arg73.bc().g(arg78);
-                arg83 = arg34;
-                v15 = arg83.toArray(new String[0]);
+                v38 = v77.bc().g(v82);
+                v87 = v38;
+                v15 = v87.toArray(new String[0]);
             }
-            this.z = LiteBansModule_389.BaseCoreGenericHandler(v15);
-            arg73 = DiscordWebhookClient.bf[192];
-                        arg34 = new String[]{ }
-            if (!arg84.bc().LiteBansModule_194((String)arg73)) {
-                v16 = (String[])Arrays.copyOf(arg34, (arg34).length);
+            this.z = LiteBansModule_391.BaseCoreGenericHandler(v15);
+            v77 = DiscordWebhookClient.bf[192];
+            v88 = this;
+            v38 = new String[]{};
+            if (!v88.bc().LiteBansModule_195((String)v77)) {
+                v16 = (String[])Arrays.copyOf(v38, ((Object)v38).length);
             } else {
-                arg85 = arg84.bc().g((String)arg73);
-                arg86 = arg85;
-                v16 = arg86.toArray(new String[0]);
+                v89 = v88.bc().g((String)v77);
+                v90 = v89;
+                v16 = v90.toArray(new String[0]);
             }
-            this.P = CollectionUtilities.LiteBansModule_31((Iterable)LiteBansModule_389.BaseCoreGenericHandler(v16));
-            arg73 = LiteBansModule_181.LiteBansModule_194;
-            arg87 = this.z;
-                        arg84 = arg87;
-            if (arg84 instanceof Collection && ((Collection)arg84).isEmpty()) {
+            this.P = CollectionUtilities.LiteBansModule_31((Iterable)LiteBansModule_391.BaseCoreGenericHandler(v16));
+            v77 = LiteBansModule_182.LiteBansModule_195;
+            v91 = this.z;
+            v62 = this;
+            v88 = v91;
+            if (v88 instanceof Collection && ((Collection)v88).isEmpty()) {
+                v17 = false;
             } else {
-                arg88 = arg84.iterator();
-                while (arg88.hasNext()) {
-                    arg89 = arg88.next();
-                    arg90 = (String)arg89;
-                    if (!LiteBansModule_181.LiteBansModule_194.BaseCoreGenericHandler(arg90)) continue;
-                    break;
-}
-        arg58.aL = (arg91 = v17) != false || this.z.contains(arg72.LiteBansModule_31()) != false;
+                v92 = v88.iterator();
+                while (v92.hasNext()) {
+                    v93 = v92.next();
+                    v94 = (String)v93;
+                    if (!LiteBansModule_182.LiteBansModule_195.BaseCoreGenericHandler(v94)) continue;
+                    v17 = true;
+                    break block67;
+                }
+                v17 = false;
+            }
+        }
+        v62.aL = (v95 = v17) != false || this.z.contains(v76.LiteBansModule_31()) != false;
         this.NullHandler = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[193], 10);
         this.ap = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[194], true);
         this.ax = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[195], true);
@@ -610,42 +663,45 @@ public final class DiscordWebhookClient {
         this.ay = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[209], true);
         this.aq = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[210], true);
         this.U = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[211], false);
-        this.LiteBansModule_401 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[212], false);
+        this.LiteBansModule_403 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[212], false);
         this.J = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[213], true);
         this.q = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[214], true);
         this.X = (byte)Math.min(this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[215], 1), 2);
         this.aW = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[216], false) != false && this.ServerSyncService.AsyncBackgroundTask_22() == 0;
-                arg92 = arg73.ServerSyncService.getLogger();
-        if (!arg73.PluginHookService) {
-            arg92.warning(DiscordWebhookClient.bf[217]);
+        v77 = this;
+        v96 = v77.ServerSyncService.getLogger();
+        if (!v77.PluginHookService) {
+            v96.warning(DiscordWebhookClient.bf[217]);
         }
-        if (arg73.aW) {
-            arg92.warning(DiscordWebhookClient.bf[218]);
+        if (v77.aW) {
+            v96.warning(DiscordWebhookClient.bf[218]);
         }
-        if (arg73.m) {
-            arg92.warning(DiscordWebhookClient.bf[219]);
+        if (v77.m) {
+            v96.warning(DiscordWebhookClient.bf[219]);
         }
-        if (arg73.ExceptionHandler) {
-            arg92.warning(DiscordWebhookClient.bf[220]);
+        if (v77.ExceptionHandler) {
+            v96.warning(DiscordWebhookClient.bf[220]);
         }
-        if (arg73.PlayerproviderHandler == 0) {
-            v18 = arg73.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[221], DiscordWebhookClient.bf[222]);
+        if (v77.PlayerproviderHandler == 0) {
+            v18 = v77.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[221], DiscordWebhookClient.bf[222]);
             if (v18 == null || (v18 = v18.toLowerCase(Locale.ROOT)) == null) {
                 v18 = DiscordWebhookClient.bf[223];
             }
-            if (((CharSequence)(arg93 = v18)).length() > 0 && !ObjectUtilities.BaseCoreGenericHandler(arg93, DiscordWebhookClient.bf[224])) {
-                arg92.warning(DiscordWebhookClient.bf[225] + arg93 + DiscordWebhookClient.bf[226]);
-}
-        arg73 = v3;
-        if (arg73.g()) {
-            arg58 = arg73;
-            arg94 = LiteBansModule_242.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler(CollectionUtilities.BaseCoreGenericHandler(this.g, null, null, null, 0, null, null, 63, null), (CharSequence)(DiscordWebhookClient.bf[227] + Arrays.toString(arg54  ))), (CharSequence)(DiscordWebhookClient.bf[228] + Arrays.toString(this.HoverTextFormatter)));
-            arg58.BaseCoreGenericHandler(arg94);
-}
+            if (((CharSequence)(v97 = v18)).length() > 0 && !ObjectUtilities.BaseCoreGenericHandler((Object)v97, (Object)DiscordWebhookClient.bf[224])) {
+                v96.warning(DiscordWebhookClient.bf[225] + v97 + DiscordWebhookClient.bf[226]);
+            }
+        }
+        v77 = v3;
+        if (v77.g()) {
+            v62 = v77;
+            v98 = LiteBansModule_243.BaseCoreGenericHandler(LiteBansModule_243.BaseCoreGenericHandler((CharSequence)CollectionUtilities.BaseCoreGenericHandler(this.g, null, null, null, 0, null, null, 63, null), (CharSequence)(DiscordWebhookClient.bf[227] + Arrays.toString(v58  ))), (CharSequence)(DiscordWebhookClient.bf[228] + Arrays.toString(this.HoverTextFormatter)));
+            v62.BaseCoreGenericHandler(v98);
+        }
+    }
 
     public /* synthetic */ DiscordWebhookClient(PlatformPlugin plugin, DatabaseService gn_02, int n, LiteBansModule_14 aJ2) {
         if ((n & 2) != 0) {
-            gn_02 = plugin.LiteBansModule_240();
+            gn_02 = plugin.LiteBansModule_241();
         }
         this(plugin, gn_02);
     }
@@ -722,7 +778,7 @@ public final class DiscordWebhookClient {
         return this.LiteBansModule_13;
     }
 
-    public final long LiteBansModule_401() {
+    public final long LiteBansModule_403() {
         return this.L;
     }
 
@@ -770,7 +826,7 @@ public final class DiscordWebhookClient {
         return this.aj;
     }
 
-    public final boolean LiteBansModule_430() {
+    public final boolean LiteBansModule_432() {
         return this.af;
     }
 
@@ -819,7 +875,7 @@ public final class DiscordWebhookClient {
     }
 
     public final String az() {
-        return this.LiteBansModule_240;
+        return this.LiteBansModule_241;
     }
 
     public final String BuilderactionHandler() {
@@ -899,7 +955,7 @@ public final class DiscordWebhookClient {
     }
 
     public final boolean ak() {
-        return this.LiteBansModule_194;
+        return this.LiteBansModule_195;
     }
 
     public final boolean LiteBansModule_14() {
@@ -963,7 +1019,7 @@ public final class DiscordWebhookClient {
     }
 
     public final boolean SetHandler() {
-        return this.LiteBansModule_430;
+        return this.LiteBansModule_432;
     }
 
     public final boolean NullHandler() {
@@ -986,7 +1042,7 @@ public final class DiscordWebhookClient {
         return this.aS;
     }
 
-    public final boolean LiteBansModule_433() {
+    public final boolean LiteBansModule_435() {
         return this.LiteBansModule_21;
     }
 
@@ -1050,8 +1106,8 @@ public final class DiscordWebhookClient {
         return this.U;
     }
 
-    public final boolean LiteBansModule_194() {
-        return this.LiteBansModule_401;
+    public final boolean LiteBansModule_195() {
+        return this.LiteBansModule_403;
     }
 
     public final boolean LiteBansModule_24() {
@@ -1062,7 +1118,7 @@ public final class DiscordWebhookClient {
         return this.LiteBansModule_10;
     }
 
-    public final boolean LiteBansModule_240() {
+    public final boolean LiteBansModule_241() {
         return this.LiteBansModule_31;
     }
 
@@ -1146,11 +1202,11 @@ public final class DiscordWebhookClient {
         return this.ah;
     }
 
-    public final LiteBansModule_354 BaseCoreGenericHandler(boolean flag) {
+    public final LiteBansModule_356 BaseCoreGenericHandler(boolean flag) {
         String string;
-        ConfigService configService = this.ServerSyncService.BaseCoreGenericHandler(ConfigService.class);
-        String string2 = LiteBansModule_242.BaseCoreGenericHandler(this.A.BaseCoreGenericHandler(bf[255], bf[256]), 32);
-        if (LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(string2)) {
+        ConfigService configService = (ConfigService)this.ServerSyncService.BaseCoreGenericHandler(ConfigService.class);
+        String string2 = LiteBansModule_243.BaseCoreGenericHandler(this.A.BaseCoreGenericHandler(bf[255], bf[256]), 32);
+        if (LiteBansModule_182.LiteBansModule_195.LiteBansModule_31(string2)) {
             configService.BaseCoreGenericHandler((Object)(bf[257] + string2 + bf[258]));
             string2 = bf[259];
         }
@@ -1176,10 +1232,11 @@ public final class DiscordWebhookClient {
             }
             if (flag3) {
                 targetObj.LiteBansModule_31(bf[263], string3);
-                targetObj.LiteBansModule_240();
+                ((DatabaseService)targetObj).LiteBansModule_241();
             } else {
                 configService.BaseCoreGenericHandler(false);
-}
+            }
+        }
         catch (Exception exception) {
             exception.printStackTrace();
             configService.BaseCoreGenericHandler(false);
@@ -1187,17 +1244,17 @@ public final class DiscordWebhookClient {
         if ((string = string3) == null) {
             string = this.T();
         }
-        LiteBansModule_354 jT2 = LiteBansModule_371.BaseCoreGenericHandler(string2, string);
+        LiteBansModule_356 jT2 = LiteBansModule_373.BaseCoreGenericHandler(string2, string);
         targetObj = configService;
         int n = 10;
-        if (targetObj.BaseCoreGenericHandler(n)) {
+        if (((ConfigService)targetObj).BaseCoreGenericHandler(n)) {
             Object contextObj = targetObj;
             ((ConfigService)contextObj).BaseCoreGenericHandler((Object)(bf[264] + (String)jT2.e() + '\"'));
         }
         return jT2;
     }
 
-    public static /* synthetic */ LiteBansModule_354 BaseCoreGenericHandler(DiscordWebhookClient eG2, boolean flag, int n, Object targetObj) {
+    public static /* synthetic */ LiteBansModule_356 BaseCoreGenericHandler(DiscordWebhookClient eG2, boolean flag, int n, Object targetObj) {
         if ((n & 1) != 0) {
             flag = false;
         }
@@ -1209,6 +1266,11 @@ public final class DiscordWebhookClient {
     }
 
     private static final void ba() {
-        bf = new String[]{"LITEBANS_CONFIG", "Loading environment options: ", "", "online_player_select_limit", "i_accept_that_dupeip_geoip_iphistory_and_ipban_will_not_work_without_getAddress_and_just_want_to_only_disable_warnings_logged_to_console", "disable_wildcard_bans", "disable_expiry_update", "database_time_offset", "0 seconds", "username_max_length", "debug_level", "bungeecord", "online_mode", "sql.driver", "LiteBansModule_243", "postgres", "pgsql", "sql.address", "localhost:3306", "sql.database", "litebans", "sql.username", "", "sql.password", "", "sql.table_prefix", "litebans_", "LiteBansModule_243", "LiteBansModule_243.yml", "LiteBansModule_243.json", "user", "password", "litebans_", "^[0-9a-zA-Z_]*$", "Table prefix '", "' is invalid! Using default ('litebans_') + ", "litebans_", "sql.engine", "InnoDB", "InnoDB", "mysql", "mariadb", "LiteBansModule_243", "sqlite", "InnoDB", "sql.options", "useSSL=false&serverTimezone=UTC", "version:8", "mysql:com.mysql.cj.jdbc.Driver:https://repo1.maven.org/maven2/mysql/mysql-connector-java/{}/mysql-connector-java-{}.jar:8.0.29:d4e32d2a6026b5acc00300b73a86c28fb92681ae9629b21048ee67014c911db6", "pgsql:org.postgresql.Driver:https://repo1.maven.org/maven2/org/postgresql/postgresql/{}/postgresql-{}.jar:42.4.0:fe25b9c0a2c59458504ec88862853df522ee87f8a02564835d537c29ae4cb125", "mariadb:org.mariadb.jdbc.Driver:https://repo1.maven.org/maven2/org/mariadb/jdbc/mariadb-java-client/{}/mariadb-java-client-{}.jar:3.1.2:aaec1ad348d030a65b25c93c65cdaf472bf8b4b6b314b965e5ba13aec81bc622", "sqlite:org.sqlite.JDBC:https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/{}/sqlite-jdbc-{}.jar:3.8.11.1:58ab29176a24a85a0c76177561257a986c4865e45730b79882c688846371d341", "LiteBansModule_243:org.LiteBansModule_243.Driver:https://repo1.maven.org/maven2/com/h2database/LiteBansModule_243/{}/LiteBansModule_243-{}.jar:1.4.197:37f5216e14af2772930dff9b8734353f0a80e89ba3f33e065441de6537c5e842", "sql.drivers", "Using default database drivers (", ") + ", "sql.pool.min_connections", "sql.pool.max_connections", "sql.pool.keepalive", "0 seconds", "sql.pool.timeout", "95 seconds", "sql.pool.idle_timeout", "1 minute", "sql.pool.max_lifetime", "15 minutes", "durations.limits", "permission", "tempban", "tempmute", "The duration limit group \"", "\" does not have the \"", "\" option ", "Note that tempban/tempmute durations will default to 27 seconds and the permission will default to ", "27 seconds", "5 seconds", "permission", "none", "tempban", "tempmute", "cooldown_ban", "cooldown_mute", "cooldown_warn", "cooldown_kick", "cooldown_redo", "1 second", "require_template", "durations.console_cooldown", "1 second", "durations.effective_ipban_duration", "permanent", "security.obscure_seed", "0", "0", "1", "mutes.enabled", "durations.reduce_to_limit", "durations.round_down", "mutes.prevent_bypass", "lockdown.enabled", "lockdown.persist_enabled", "mutes.command_blacklist", "/me", "/say", "/msg", "/tell", "warnings.enabled", "warnings.expire_after", "3 days", "warnings.actions", "warnings.actions_execute_as_console", "warnings.delete_warnings_after_action", "ban_alts", "", "enhanced", "enabled", "extreme", "notify.dupeip_scan_filter_duration", "7d", "notify.dupeip_on_join_threshold", "notify.dupeip_scan_limit", "notify.notify_discord", "", "notify.banned_player_join", "notify.muted_player_chat", "notify.dupeip_on_join", "notify.dupeip_on_banned_account", "notify.dupeip_on_muted_account", "notify.dupeip_show_muted_accounts", "notify.notify_console", "exempt.enable", "exempt.use_group_weights", "exempt.permit_same_weight", "exempt.permission_world", "default", "exempt.exempt_groups", "exempt.exempt_players", "geoip.enable", "geoip.blacklist", "geoip.whitelist", "geoip.download.api", "https://repo1.maven.org/maven2/com/maxmind/geoip2/geoip2/2.1.0/geoip2-2.1.0.jar:81035e738fc392bcfb00be5d39f50fde56692ba305b21338412da9c0fc98e3fb", "https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.4.3/jackson-annotations-2.4.3.jar:3c680cfafad00cfe1432514f19c5c13fde17913aa2269a9844882404242f6452", "https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.4.3/jackson-core-2.4.3.jar:2c77b1c9441f257eb9e3dda476758a034a9383ef848f97b9949287a0519923e6", "https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.4.3/jackson-databind-2.4.3.jar:d7ac4f5ce138ce63478673e64378c2efd27f0294602f0fc69cb867685c723797", "https://repo1.maven.org/maven2/com/maxmind/LiteBansModule_116/maxmind-LiteBansModule_116/1.0.0/maxmind-LiteBansModule_116-1.0.0.jar:3cd5c1c731d8d9cb561d4e53ad6017862e4917cc08c24f45111061b1c2170b06", "geoip.download.LiteBansModule_116", "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=YOUR_LICENSE_KEY&suffix=tar.gz", "import.from", "vanilla", "import.sqlite", "import.import_ipbans", "import.sqlite_file", "plugins/MaxBans/bans.LiteBansModule_116", "import.import_mysql_address", "localhost:3306", "import.import_mysql_username", "", "import.import_mysql_password", StringDecryptor.BaseCoreGenericHandler("", 0x1E1BB1B1), "import.import_mysql_database", "maxbans", "import.import_table_prefix", "default", "console_sender_name", "Console", "autocomplete_online_player_names", "dupeip_scan_all_ips", "ipreport_minimum_accounts", "delete_previous_history", "unban_all_history", "support_authme", "use_display_names", "banlist_show_active_only", "banlist_bans_per_page", "ban_names", "FastLogin", "FastLogin detected; forcing `ban_names=true` + ", "offline_tab_size", "notification_throttle_ticks", "require_kick_reason", "require_ban_mute_reason", "require_unban_unmute_reason", "default_server_scope", "*", "sync_poll_ticks", "sync_poll_skip", "hidden_dupeip_players", "ignored_kick_messages", "restarting", "ignored_iphistory_servers", "ignored_history_servers", "disable_login_ban_check_servers", "default_history_limit", "sync", "sync_broadcasts", "sync_notifications", "sync_dupeip_notifications", "use_database_time", "local_messages", "check_after_join", "use_protocollib", "override_lower_duration", "allow_exempt_bypass", "silent", "punish_ip", "use_timezone", "update_check", "security.dupeip", "security.iphistory", "security.staffrollback", "security.modify", "security.prunehistory", "security.sender_custom", "security.ipban", "security.ipban_command", "disable_login_ban_check", "Local messages are disabled! If you don'AsyncBackgroundTask_22 see any broadcasts, try enabling ", "Login ban checks are disabled! Bans will not take effect ", "Wildcard bans are disabled! Wildcard IP-bans and IP-mutes will not take ", "Expiry update query is disabled! One instance should have this enabled, LiteBansModule_21 ", "ban_alts", "", "", "disabled", "Unrecognized setting for ban_alts: \"", "\". This option will be ", "m:", "LiteBansModule_238: ", "LITEBANS_CONFIG", "Loading environment options: ", "", "InnoDB", "mysql", "mariadb", "LiteBansModule_243", "sqlite", "InnoDB", "Local messages are disabled! If you don'AsyncBackgroundTask_22 see any broadcasts, try enabling ", "Login ban checks are disabled! Bans will not take effect ", "Wildcard bans are disabled! Wildcard IP-bans and IP-mutes will not take ", "Expiry update query is disabled! One instance should have this enabled, LiteBansModule_21 ", "ban_alts", "", "", "disabled", "Unrecognized setting for ban_alts: \"", "\". This option will be ", "permission", "tempban", "tempmute", "The duration limit group \"", "\" does not have the \"", "\" option ", "Note that tempban/tempmute durations will default to 27 seconds and the permission will default to ", "server_name", "litebans", "[Sync] Server name cannot be \"", "\" (global context)! Reverting to ", "litebans", "server.yml", "server.json", "uuid", "uuid", "Server UUID: \""};
-}
+        bf = new String[]{"LITEBANS_CONFIG", "Loading environment options: ", "", "online_player_select_limit", "i_accept_that_dupeip_geoip_iphistory_and_ipban_will_not_work_without_getAddress_and_just_want_to_only_disable_warnings_logged_to_console", "disable_wildcard_bans", "disable_expiry_update", "database_time_offset", "0 seconds", "username_max_length", "debug_level", "bungeecord", "online_mode", "sql.driver", "LiteBansModule_244", "postgres", "pgsql", "sql.address", "localhost:3306", "sql.database", "litebans", "sql.username", "", "sql.password", "", "sql.table_prefix", "litebans_", "LiteBansModule_244", "LiteBansModule_244.yml", "LiteBansModule_244.json", "user", "password", "litebans_", "^[0-9a-zA-Z_]*$", "Table prefix '", "' is invalid! Using default ('litebans_') + ", "litebans_", "sql.engine", "InnoDB", "InnoDB", "mysql", "mariadb", "LiteBansModule_244", "sqlite", "InnoDB", "sql.options", "useSSL=false&serverTimezone=UTC", "version:8", "mysql:com.mysql.cj.jdbc.Driver:https://repo1.maven.org/maven2/mysql/mysql-connector-java/{}/mysql-connector-java-{}.jar:8.0.29:d4e32d2a6026b5acc00300b73a86c28fb92681ae9629b21048ee67014c911db6", "pgsql:org.postgresql.Driver:https://repo1.maven.org/maven2/org/postgresql/postgresql/{}/postgresql-{}.jar:42.4.0:fe25b9c0a2c59458504ec88862853df522ee87f8a02564835d537c29ae4cb125", "mariadb:org.mariadb.jdbc.Driver:https://repo1.maven.org/maven2/org/mariadb/jdbc/mariadb-java-client/{}/mariadb-java-client-{}.jar:3.1.2:aaec1ad348d030a65b25c93c65cdaf472bf8b4b6b314b965e5ba13aec81bc622", "sqlite:org.sqlite.JDBC:https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/{}/sqlite-jdbc-{}.jar:3.8.11.1:58ab29176a24a85a0c76177561257a986c4865e45730b79882c688846371d341", "LiteBansModule_244:org.LiteBansModule_244.Driver:https://repo1.maven.org/maven2/com/h2database/LiteBansModule_244/{}/LiteBansModule_244-{}.jar:1.4.197:37f5216e14af2772930dff9b8734353f0a80e89ba3f33e065441de6537c5e842", "sql.drivers", "Using default database drivers (", ") + ", "sql.pool.min_connections", "sql.pool.max_connections", "sql.pool.keepalive", "0 seconds", "sql.pool.timeout", "95 seconds", "sql.pool.idle_timeout", "1 minute", "sql.pool.max_lifetime", "15 minutes", "durations.limits", "permission", "tempban", "tempmute", "The duration limit group \"", "\" does not have the \"", "\" option ", "Note that tempban/tempmute durations will default to 27 seconds and the permission will default to ", "27 seconds", "5 seconds", "permission", "none", "tempban", "tempmute", "cooldown_ban", "cooldown_mute", "cooldown_warn", "cooldown_kick", "cooldown_redo", "1 second", "require_template", "durations.console_cooldown", "1 second", "durations.effective_ipban_duration", "permanent", "security.obscure_seed", "0", "0", "1", "mutes.enabled", "durations.reduce_to_limit", "durations.round_down", "mutes.prevent_bypass", "lockdown.enabled", "lockdown.persist_enabled", "mutes.command_blacklist", "/me", "/say", "/msg", "/tell", "warnings.enabled", "warnings.expire_after", "3 days", "warnings.actions", "warnings.actions_execute_as_console", "warnings.delete_warnings_after_action", "ban_alts", "", "enhanced", "enabled", "extreme", "notify.dupeip_scan_filter_duration", "7d", "notify.dupeip_on_join_threshold", "notify.dupeip_scan_limit", "notify.notify_discord", "", "notify.banned_player_join", "notify.muted_player_chat", "notify.dupeip_on_join", "notify.dupeip_on_banned_account", "notify.dupeip_on_muted_account", "notify.dupeip_show_muted_accounts", "notify.notify_console", "exempt.enable", "exempt.use_group_weights", "exempt.permit_same_weight", "exempt.permission_world", "default", "exempt.exempt_groups", "exempt.exempt_players", "geoip.enable", "geoip.blacklist", "geoip.whitelist", "geoip.download.api", "https://repo1.maven.org/maven2/com/maxmind/geoip2/geoip2/2.1.0/geoip2-2.1.0.jar:81035e738fc392bcfb00be5d39f50fde56692ba305b21338412da9c0fc98e3fb", "https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.4.3/jackson-annotations-2.4.3.jar:3c680cfafad00cfe1432514f19c5c13fde17913aa2269a9844882404242f6452", "https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.4.3/jackson-core-2.4.3.jar:2c77b1c9441f257eb9e3dda476758a034a9383ef848f97b9949287a0519923e6", "https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.4.3/jackson-databind-2.4.3.jar:d7ac4f5ce138ce63478673e64378c2efd27f0294602f0fc69cb867685c723797", "https://repo1.maven.org/maven2/com/maxmind/LiteBansModule_117/maxmind-LiteBansModule_117/1.0.0/maxmind-LiteBansModule_117-1.0.0.jar:3cd5c1c731d8d9cb561d4e53ad6017862e4917cc08c24f45111061b1c2170b06", "geoip.download.LiteBansModule_117", "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=YOUR_LICENSE_KEY&suffix=tar.gz", "import.from", "vanilla", "import.sqlite", "import.import_ipbans", "import.sqlite_file", "plugins/MaxBans/bans.LiteBansModule_117", "import.import_mysql_address", "localhost:3306", "import.import_mysql_username", "", "import.import_mysql_password", StringDecryptor.BaseCoreGenericHandler("", 0x1E1BB1B1), "import.import_mysql_database", "maxbans", "import.import_table_prefix", "default", "console_sender_name", "Console", "autocomplete_online_player_names", "dupeip_scan_all_ips", "ipreport_minimum_accounts", "delete_previous_history", "unban_all_history", "support_authme", "use_display_names", "banlist_show_active_only", "banlist_bans_per_page", "ban_names", "FastLogin", "FastLogin detected; forcing `ban_names=true` + ", "offline_tab_size", "notification_throttle_ticks", "require_kick_reason", "require_ban_mute_reason", "require_unban_unmute_reason", "default_server_scope", "*", "sync_poll_ticks", "sync_poll_skip", "hidden_dupeip_players", "ignored_kick_messages", "restarting", "ignored_iphistory_servers", "ignored_history_servers", "disable_login_ban_check_servers", "default_history_limit", "sync", "sync_broadcasts", "sync_notifications", "sync_dupeip_notifications", "use_database_time", "local_messages", "check_after_join", "use_protocollib", "override_lower_duration", "allow_exempt_bypass", "silent", "punish_ip", "use_timezone", "update_check", "security.dupeip", "security.iphistory", "security.staffrollback", "security.modify", "security.prunehistory", "security.sender_custom", "security.ipban", "security.ipban_command", "disable_login_ban_check", "Local messages are disabled! If you don'AsyncBackgroundTask_22 see any broadcasts, try enabling ", "Login ban checks are disabled! Bans will not take effect ", "Wildcard bans are disabled! Wildcard IP-bans and IP-mutes will not take ", "Expiry update query is disabled! One instance should have this enabled, LiteBansModule_21 ", "ban_alts", "", "", "disabled", "Unrecognized setting for ban_alts: \"", "\". This option will be ", "m:", "LiteBansModule_239: ", "LITEBANS_CONFIG", "Loading environment options: ", "", "InnoDB", "mysql", "mariadb", "LiteBansModule_244", "sqlite", "InnoDB", "Local messages are disabled! If you don'AsyncBackgroundTask_22 see any broadcasts, try enabling ", "Login ban checks are disabled! Bans will not take effect ", "Wildcard bans are disabled! Wildcard IP-bans and IP-mutes will not take ", "Expiry update query is disabled! One instance should have this enabled, LiteBansModule_21 ", "ban_alts", "", "", "disabled", "Unrecognized setting for ban_alts: \"", "\". This option will be ", "permission", "tempban", "tempmute", "The duration limit group \"", "\" does not have the \"", "\" option ", "Note that tempban/tempmute durations will default to 27 seconds and the permission will default to ", "server_name", "litebans", "[Sync] Server name cannot be \"", "\" (global context)! Reverting to ", "litebans", "server.yml", "server.json", "uuid", "uuid", "Server UUID: \""};
+    }
 
+    static {
+        DiscordWebhookClient.ba();
+    }
+}
+}

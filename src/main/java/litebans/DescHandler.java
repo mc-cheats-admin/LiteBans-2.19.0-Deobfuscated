@@ -6,31 +6,31 @@ import org.jetbrains.annotations.Nullable;
 
 public class DescHandler
 implements CharSequence {
-    public static final LiteBansModule_121 GnuSparseMapHandler;
-    private final LiteBansModule_82 g;
-    private final String LiteBansModule_194;
+    public static final LiteBansModule_122 GnuSparseMapHandler;
+    private final LiteBansModule_83 g;
+    private final String LiteBansModule_195;
     private final UuidHandler BaseCoreGenericHandler;
     private final boolean Utf8Handler_2;
-    private final AllHandler LiteBansModule_401;
+    private final AllHandler LiteBansModule_403;
     private final String LiteBansModule_31;
     private final boolean e;
-    private final Number LiteBansModule_240;
+    private final Number LiteBansModule_241;
     private final Number c;
-    private LiteBansModule_178 AsyncBackgroundTask_5;
-    public DescHandler(@NotNull LiteBansModule_82 ch2, @Nullable String string, @NotNull UuidHandler jR2, boolean flag, @NotNull AllHandler jJ2, @Nullable String string2, boolean flag2, @NotNull Number number, @NotNull Number number2) {
+    private LiteBansModule_179 AsyncBackgroundTask_5;
+        public DescHandler(@NotNull LiteBansModule_83 ch2, @Nullable String string, @NotNull UuidHandler jR2, boolean flag, @NotNull AllHandler jJ2, @Nullable String string2, boolean flag2, @NotNull Number number, @NotNull Number number2) {
         this.g = ch2;
-        this.LiteBansModule_194 = string;
+        this.LiteBansModule_195 = string;
         this.plugin = jR2;
         this.Utf8Handler_2 = flag;
-        this.LiteBansModule_401 = jJ2;
+        this.LiteBansModule_403 = jJ2;
         this.LiteBansModule_31 = string2;
         this.e = flag2;
-        this.LiteBansModule_240 = number;
+        this.LiteBansModule_241 = number;
         this.c = number2;
-        this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_401.c();
+        this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_403.c();
     }
 
-    public /* synthetic */ DescHandler(LiteBansModule_82 ch2, String string, UuidHandler jR2, boolean flag, AllHandler jJ2, String string2, boolean flag2, Number number, Number number2, int n, LiteBansModule_14 aJ2) {
+    public /* synthetic */ DescHandler(LiteBansModule_83 ch2, String string, UuidHandler jR2, boolean flag, AllHandler jJ2, String string2, boolean flag2, Number number, Number number2, int n, LiteBansModule_14 aJ2) {
         if ((n & 4) != 0) {
             jR2 = UuidHandler.g;
         }
@@ -53,14 +53,14 @@ implements CharSequence {
     }
 
     public final String c() {
-        return this.LiteBansModule_194;
+        return this.LiteBansModule_195;
     }
 
-    public final LiteBansModule_178 BaseCoreGenericHandler() {
+    public final LiteBansModule_179 BaseCoreGenericHandler() {
         return this.AsyncBackgroundTask_5;
     }
 
-    public final void BaseCoreGenericHandler(@NotNull LiteBansModule_178 eo_02) {
+    public final void BaseCoreGenericHandler(@NotNull LiteBansModule_179 eo_02) {
         this.AsyncBackgroundTask_5 = eo_02;
     }
 
@@ -88,63 +88,65 @@ implements CharSequence {
             CharSequence charSequence3 = " ORDER BY " + this.LiteBansModule_31 + ' ' + (String)targetObj;
             charSequence = "" + charSequence2 + charSequence3;
         }
-        targetObj = this.LiteBansModule_240;
-        if (ObjectUtilities.BaseCoreGenericHandler(targetObj.intValue(), n) > 0) {
+        targetObj = this.LiteBansModule_241;
+        if (ObjectUtilities.BaseCoreGenericHandler(((Number)targetObj).intValue(), n) > 0) {
             targetObj = charSequence;
             CharSequence charSequence4 = " LIMIT ? OFFSET ?";
             flag = false;
             charSequence = "" + targetObj + charSequence4;
-            this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, arg_0 -> DescHandler.LiteBansModule_31(this, arg_0));
+            this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_403.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, arg_0 -> DescHandler.LiteBansModule_31(this, arg_0));
         }
-        return (charSequence).toString();
+        return ((Object)charSequence).toString();
     }
 
     private final CharSequence c(CharSequence charSequence) {
         if (this.Utf8Handler_2) {
-            this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, DescHandler::BaseCoreGenericHandler);
-            return this.plugin(charSequence, i[5]);
+            this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_403.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, DescHandler::BaseCoreGenericHandler);
+            return this.plugin(charSequence, (CharSequence)i[5]);
         }
         return charSequence;
     }
 
     private final CharSequence LiteBansModule_31(CharSequence charSequence) {
-        this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, arg_0 -> DescHandler.BaseCoreGenericHandler(this, arg_0));
+        this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_403.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, arg_0 -> DescHandler.BaseCoreGenericHandler(this, arg_0));
         CharSequence charSequence2 = charSequence;
-        CharSequence charSequence3 = this.LiteBansModule_401;
+        CharSequence charSequence3 = this.LiteBansModule_403;
         return "" + charSequence2 + charSequence3;
     }
 
     public void e() {
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler())) {
-            this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_401.c();
-}
+        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5, SQLiteDriverHandler_3.LiteBansModule_403.BaseCoreGenericHandler())) {
+            this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_403.c();
+        }
+    }
 
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence) {
-        if (this.LiteBansModule_194 == null) {
+        if (this.LiteBansModule_195 == null) {
             return charSequence;
         }
-        switch (LiteBansModule_85.BaseCoreGenericHandler[this.plugin.ordinal()]) {
+        switch (LiteBansModule_86.BaseCoreGenericHandler[this.plugin.ordinal()]) {
             case 1: {
-                return this.plugin(this.LiteBansModule_194, i[6], charSequence);
+                return this.plugin(this.LiteBansModule_195, i[6], charSequence);
             }
             case 2: {
-                return this.plugin(this.LiteBansModule_194, i[7], charSequence);
+                return this.plugin(this.LiteBansModule_195, i[7], charSequence);
             }
             case 3: {
                 DescHandler hc2 = this;
                 Object targetObj = hc2.c();
-                return this.plugin(targetObj != null && (targetObj = StringUtilities.LiteBansModule_31targetObj) != null ? (Long)targetObj : -1L, i[8], charSequence);
-}
-        return this.plugin(charSequence, (CharSequence)('(' + this.LiteBansModule_194 + ')'));
+                return this.plugin(targetObj != null && (targetObj = StringUtilities.LiteBansModule_31((String)targetObj)) != null ? (Long)targetObj : -1L, i[8], charSequence);
+            }
+        }
+        return this.plugin(charSequence, (CharSequence)('(' + this.LiteBansModule_195 + ')'));
     }
 
     private final CharSequence BaseCoreGenericHandler(String string, String string2, CharSequence charSequence) {
-        this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, arg_0 -> DescHandler.BaseCoreGenericHandler(string, arg_0));
+        this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_403.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, arg_0 -> DescHandler.BaseCoreGenericHandler(string, arg_0));
         return this.plugin(charSequence, (CharSequence)(string2 + i[9]));
     }
 
     private final CharSequence BaseCoreGenericHandler(long l3, String string, CharSequence charSequence) {
-        this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, arg_0 -> DescHandler.BaseCoreGenericHandler(l3, arg_0));
+        this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_403.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, arg_0 -> DescHandler.BaseCoreGenericHandler(l3, arg_0));
         return this.plugin(charSequence, (CharSequence)(string + i[10]));
     }
 
@@ -167,19 +169,19 @@ implements CharSequence {
     }
 
     public final ResultSet BaseCoreGenericHandler(@NotNull BansHandler_2 kL2, @NotNull CharSequence charSequence) {
-        if (this.g instanceof LiteBansModule_244) {
-            return LiteBansModule_397.BaseCoreGenericHandler();
+        if (this.g instanceof LiteBansModule_245) {
+            return LiteBansModule_399.BaseCoreGenericHandler();
         }
-        LiteBansModule_82 ch2 = this.g;
+        LiteBansModule_83 ch2 = this.g;
         ObjectUtilities.LiteBansModule_31(ch2, i[14]);
         BansHandler_2 kL3 = kL2;
-        return LiteBansModule_184.BaseCoreGenericHandler(((SQLiteDriverHandler_3)ch2).c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(i[15] + charSequence + i[16] + kL3 + i[17] + this))), this);
+        return LiteBansModule_185.BaseCoreGenericHandler(((SQLiteDriverHandler_3)ch2).c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(i[15] + charSequence + i[16] + kL3 + i[17] + this))), this);
     }
 
     private static final LiteBansModule_60 LiteBansModule_31(DescHandler hc2, LiteBansModule_60 bT2) {
         LiteBansModule_60 bT3;
         LiteBansModule_60 bT4 = bT2;
-        Number[] numberArray = new Number[]{hc2.LiteBansModule_240, hc2.c};
+        Number[] numberArray = new Number[]{hc2.LiteBansModule_241, hc2.c};
         LiteBansModule_60 bT5 = bT3 = bT4;
         Number[] numberArray2 = numberArray;
         int n = numberArray2.length;
@@ -192,13 +194,13 @@ implements CharSequence {
     }
 
     private static final LiteBansModule_60 BaseCoreGenericHandler(LiteBansModule_60 bT2) {
-        return LiteBansModule_184.BaseCoreGenericHandler(bT2);
+        return LiteBansModule_185.BaseCoreGenericHandler(bT2);
     }
 
     private static final LiteBansModule_60 BaseCoreGenericHandler(DescHandler hc2, LiteBansModule_60 bT2) {
         LiteBansModule_60 bT3;
         LiteBansModule_60 bT4 = bT2;
-        AllHandler jJ2 = hc2.LiteBansModule_401;
+        AllHandler jJ2 = hc2.LiteBansModule_403;
         LiteBansModule_60 bT5 = bT3 = bT4;
         jJ2.BaseCoreGenericHandler(bT5);
         return bT3;
@@ -224,10 +226,11 @@ implements CharSequence {
 
     static {
         DescHandler.AsyncBackgroundTask_5();
-        GnuSparseMapHandler = new LiteBansModule_121(null);
+        GnuSparseMapHandler = new LiteBansModule_122(null);
     }
 
     private static final void AsyncBackgroundTask_5() {
         i = new String[]{"", "DESC", "ASC", " ORDER BY ", " LIMIT ? OFFSET ?", "(active={true} AND(until<1 OR until>?))", "uuid", "banned_by_uuid", "SQLiteDriverHandler_4", "=?", "=?", " AND ", "", "*", "", "SELECT ", " FROM ", " WHERE ", "", "*"};
+    }
 }
 

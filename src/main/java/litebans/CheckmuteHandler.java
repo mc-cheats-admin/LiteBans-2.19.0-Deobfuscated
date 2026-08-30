@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 public final class CheckmuteHandler
 extends CheckBanCommand {
-    public CheckmuteHandler(@NotNull PlatformPlugin plugin) {
+        public CheckmuteHandler(@NotNull PlatformPlugin plugin) {
         super(plugin);
     }
 
@@ -30,5 +30,10 @@ extends CheckBanCommand {
 
     private static final void BaseCoreGenericHandler() {
         GnuSparseMapHandler = new String[]{"checkmute"};
+    }
+
+    static {
+        CheckmuteHandler.BaseCoreGenericHandler();
+    }
 }
 

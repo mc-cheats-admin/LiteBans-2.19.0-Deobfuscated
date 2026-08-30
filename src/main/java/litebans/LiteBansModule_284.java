@@ -1,66 +1,70 @@
 package litebans;
 
-static class LiteBansModule_284 {
-    private TapeHandler AsyncBackgroundTask_5;
-    private int LiteBansModule_31;
-    private int c;
-    private int BaseCoreGenericHandler;
-    private int e;
-    private final byte[] LiteBansModule_194 = new byte[512];
+public final class LiteBansModule_284
+implements Comparable {
+    public static final LiteBansModule_9 e;
+    private final byte c;
+    public static final byte LiteBansModule_31;
+    public static final byte BaseCoreGenericHandler;
+    public static final int LiteBansModule_195;
+    public static final int AsyncBackgroundTask_5;
 
-    LiteBansModule_284() {
+    public static String LiteBansModule_31(byte by2) {
+        return String.valueOf(by2 & 0xFF);
     }
 
-    public TapeHandler BaseCoreGenericHandler() {
-        return this.AsyncBackgroundTask_5;
+    public String toString() {
+        return LiteBansModule_284.LiteBansModule_31(this.c);
     }
 
-    public int c() {
-        return this.LiteBansModule_31;
+    public static int c(byte by2) {
+        return Byte.hashCode(by2);
     }
 
-    public int LiteBansModule_31() {
-        return this.plugin;
+    public int hashCode() {
+        return LiteBansModule_284.c(this.c);
     }
 
-    public int BaseCoreGenericHandler(int n) {
-        return this.LiteBansModule_194[n];
+    public static boolean BaseCoreGenericHandler(byte by2, Object targetObj) {
+        if (!(targetObj instanceof LiteBansModule_284)) {
+            return false;
+        }
+        byte by3 = ((LiteBansModule_284)targetObj).BaseCoreGenericHandler();
+        return by2 == by3;
     }
 
-    static final /* synthetic */ TapeHandler BaseCoreGenericHandler(LiteBansModule_284 hz2, TapeHandler ao2) {
-        hz2.AsyncBackgroundTask_5 = ao2;
-        return hz2.AsyncBackgroundTask_5;
+    public boolean equals(Object targetObj) {
+        return LiteBansModule_284.BaseCoreGenericHandler(this.c, targetObj);
     }
 
-    static final /* synthetic */ int AsyncBackgroundTask_5(LiteBansModule_284 hz2, int n) {
-        hz2.LiteBansModule_31 = n;
-        return hz2.LiteBansModule_31;
+    private /* synthetic */ LiteBansModule_284(byte by2) {
+        this.c = by2;
     }
 
-    static final /* synthetic */ int c(LiteBansModule_284 hz2, int n) {
-        hz2.c = n;
-        return hz2.c;
+    public static byte BaseCoreGenericHandler(byte by2) {
+        return by2;
     }
 
-    static final /* synthetic */ int LiteBansModule_31(LiteBansModule_284 hz2, int n) {
-        hz2.BaseCoreGenericHandler = n;
-        return hz2.BaseCoreGenericHandler;
+    public static final /* synthetic */ LiteBansModule_284 AsyncBackgroundTask_5(byte by2) {
+        return new LiteBansModule_284(by2);
     }
 
-    static final /* synthetic */ int BaseCoreGenericHandler(LiteBansModule_284 hz2, int n) {
-        hz2.e = n;
-        return hz2.e;
+    public final /* synthetic */ byte BaseCoreGenericHandler() {
+        return this.c;
     }
 
-    static final /* synthetic */ int LiteBansModule_31(LiteBansModule_284 hz2) {
-        return hz2.BaseCoreGenericHandler;
+    public int compareTo(Object targetObj) {
+        LiteBansModule_284 hy_02 = this;
+        byte by2 = ((LiteBansModule_284)targetObj).BaseCoreGenericHandler();
+        return ObjectUtilities.BaseCoreGenericHandler(hy_02.BaseCoreGenericHandler() & 0xFF, by2 & 0xFF);
     }
 
-    static final /* synthetic */ int BaseCoreGenericHandler(LiteBansModule_284 hz2) {
-        return hz2.e++;
+    static {
+        AsyncBackgroundTask_5 = 8;
+        LiteBansModule_195 = 1;
+        BaseCoreGenericHandler = (byte)-1;
+        LiteBansModule_31 = 0;
+        e = new LiteBansModule_9(null);
     }
-
-    static final /* synthetic */ byte[] c(LiteBansModule_284 hz2) {
-        return hz2.LiteBansModule_194;
 }
 

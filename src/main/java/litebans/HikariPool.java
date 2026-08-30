@@ -19,8 +19,8 @@ import java.util.concurrent.TimeUnit;
 import javax.sql.DataSource;
 public final class HikariPool
 extends PoolEntry
-implements LiteBansModule_305,
-LiteBansModule_270 {
+implements LiteBansModule_306,
+LiteBansModule_271 {
     public static final int F;
     public static final int L;
     public static final int BanHandler_2;
@@ -29,42 +29,43 @@ LiteBansModule_270 {
     private final HikariLogger z = HikariLogger.BaseCoreGenericHandler(HikariPool.class);
     private final long PlayerQuitListener = Long.getLong("com.zaxxer.hikari.aliveBypassWindowMs", TimeUnit.MILLISECONDS.toMillis(500L));
     private final long J = Long.getLong("com.zaxxer.hikari.housekeeping.periodMs", TimeUnit.SECONDS.toMillis(30L));
-    private final LiteBansModule_116 O = new LiteBansModule_116(this, null);
-    private final LiteBansModule_116 B = new LiteBansModule_116(this, "After adding ");
+    private final LiteBansModule_117 O = new LiteBansModule_117(this, null);
+    private final LiteBansModule_117 B = new LiteBansModule_117(this, "After adding ");
     private final Collection H;
     private final ThreadPoolExecutor D;
     private final ThreadPoolExecutor K;
     private final ConcurrentBag A = new ConcurrentBag(this);
-    private final LiteBansModule_321 BanHandler_5;
-    private final PoolInitializationException LiteBansModule_430;
+    private final LiteBansModule_322 BanHandler_5;
+    private final PoolInitializationException LiteBansModule_432;
     private final ScheduledExecutorService LockdownService;
     public volatile int P;
     private ScheduledFuture PluginHookService;
 
     public HikariPool(HikariConfig aB2) {
         super(aB2);
-        this.LiteBansModule_430 = aB2.BaseCoreGenericHandler() ? new PoolInitializationException() : PoolInitializationException.LiteBansModule_31;
+        this.LiteBansModule_432 = aB2.BaseCoreGenericHandler() ? new PoolInitializationException() : PoolInitializationException.LiteBansModule_31;
         this.LockdownService = this.i();
         this.c();
         this.plugin(this, true);
         ThreadFactory threadFactory = aB2.ServerSyncService();
-        int n = aB2.LiteBansModule_194();
+        int n = aB2.LiteBansModule_195();
         LinkedBlockingQueue linkedBlockingQueue = new LinkedBlockingQueue(n);
         this.H = Collections.unmodifiableCollection(linkedBlockingQueue);
-        this.D = LiteBansModule_131.BaseCoreGenericHandler(linkedBlockingQueue, this.e + " innocent connection adder (Async)", threadFactory, (RejectedExecutionHandler)new ThreadPoolExecutor.DiscardOldestPolicy());
-        this.K = LiteBansModule_131.BaseCoreGenericHandler(n, this.e + " innocent connection closer (Async)", threadFactory, (RejectedExecutionHandler)new ThreadPoolExecutor.CallerRunsPolicy());
-        this.BanHandler_5 = new LiteBansModule_321(aB2.g(), this.LockdownService);
+        this.D = LiteBansModule_132.BaseCoreGenericHandler(linkedBlockingQueue, this.e + " innocent connection adder (Async)", threadFactory, (RejectedExecutionHandler)new ThreadPoolExecutor.DiscardOldestPolicy());
+        this.K = LiteBansModule_132.BaseCoreGenericHandler(n, this.e + " innocent connection closer (Async)", threadFactory, (RejectedExecutionHandler)new ThreadPoolExecutor.CallerRunsPolicy());
+        this.BanHandler_5 = new LiteBansModule_322(aB2.g(), this.LockdownService);
         this.PluginHookService = this.LockdownService.scheduleWithFixedDelay(new HistoryCleanupTask(this, null), 100L, this.J, TimeUnit.MILLISECONDS);
         if (Boolean.getBoolean("com.zaxxer.hikari.blockUntilFilled") && aB2.AsyncBackgroundTask_5() > 1L) {
             this.D.setMaximumPoolSize(Math.min(16, Runtime.getRuntime().availableProcessors()));
             this.D.setCorePoolSize(Math.min(16, Runtime.getRuntime().availableProcessors()));
-            long l3 = LiteBansModule_149.LiteBansModule_31();
-            while (LiteBansModule_149.AsyncBackgroundTask_5(l3) < aB2.AsyncBackgroundTask_5() && this.LiteBansModule_194() < aB2.i()) {
-                LiteBansModule_131.BaseCoreGenericHandler(TimeUnit.MILLISECONDS.toMillis(100L));
+            long l3 = LiteBansModule_150.LiteBansModule_31();
+            while (LiteBansModule_150.AsyncBackgroundTask_5(l3) < aB2.AsyncBackgroundTask_5() && this.LiteBansModule_195() < aB2.i()) {
+                LiteBansModule_132.BaseCoreGenericHandler(TimeUnit.MILLISECONDS.toMillis(100L));
             }
             this.D.setCorePoolSize(1);
             this.D.setMaximumPoolSize(1);
-}
+        }
+    }
 
     public Connection LiteBansModule_31() {
         return this.plugin(this.AsyncBackgroundTask_21);
@@ -76,7 +77,7 @@ LiteBansModule_270 {
     public Connection BaseCoreGenericHandler(long v1) {
         /*
          * This method has failed to decompile.  When submitting BaseCoreGenericHandler bug report, please provide this stack trace, and (if you hold appropriate legal rights) the relevant class file.
-         *
+         * 
          * org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [6[WHILELOOP]], but top level block is 2[TRYBLOCK]
          *     LiteBansModule_21 org.benf.cfr.reader.bytecode.analysis.opgraph.Op04StructuredStatement.processEndingBlocks(Op04StructuredStatement.java:435)
          *     LiteBansModule_21 org.benf.cfr.reader.bytecode.analysis.opgraph.Op04StructuredStatement.buildNestedBlocks(Op04StructuredStatement.java:484)
@@ -99,10 +100,10 @@ LiteBansModule_270 {
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
-    public synchronized void LiteBansModule_240() {
-{
+    public synchronized void LiteBansModule_241() {
+        block8: {
             this.P = 2;
-            if (this.D != null) break;
+            if (this.D != null) break block8;
             this.plugin(new String[]{"After shutdown "});
             this.plugin(this, false);
             return;
@@ -115,16 +116,16 @@ LiteBansModule_270 {
             }
             this.plugin();
             this.D.shutdown();
-            this.D.awaitTermination(this.LiteBansModule_240(), TimeUnit.SECONDS);
-            this.LiteBansModule_194();
+            this.D.awaitTermination(this.LiteBansModule_241(), TimeUnit.SECONDS);
+            this.LiteBansModule_195();
             this.A.close();
-            ThreadPoolExecutor threadPoolExecutor = LiteBansModule_131.BaseCoreGenericHandler(this.AsyncBackgroundTask_22.LiteBansModule_194(), this.e + " connection assassinator", this.AsyncBackgroundTask_22.ServerSyncService(), (RejectedExecutionHandler)new ThreadPoolExecutor.CallerRunsPolicy());
+            ThreadPoolExecutor threadPoolExecutor = LiteBansModule_132.BaseCoreGenericHandler(this.AsyncBackgroundTask_22.LiteBansModule_195(), this.e + " connection assassinator", this.AsyncBackgroundTask_22.ServerSyncService(), (RejectedExecutionHandler)new ThreadPoolExecutor.CallerRunsPolicy());
             try {
-                long l3 = LiteBansModule_149.LiteBansModule_31();
+                long l3 = LiteBansModule_150.LiteBansModule_31();
                 do {
                     this.plugin(threadPoolExecutor);
                     this.plugin();
-                } while (this.LiteBansModule_194() > 0 && LiteBansModule_149.AsyncBackgroundTask_5(l3) < TimeUnit.SECONDS.toMillis(10L));
+                } while (this.LiteBansModule_195() > 0 && LiteBansModule_150.AsyncBackgroundTask_5(l3) < TimeUnit.SECONDS.toMillis(10L));
             }
             finally {
                 threadPoolExecutor.shutdown();
@@ -151,7 +152,8 @@ LiteBansModule_270 {
             this.D.submit(this.O);
         } else {
             this.z.LiteBansModule_31("%AsyncBackgroundTask_21 - Add connection elided, waiting %AsyncBackgroundTask_5, queue %AsyncBackgroundTask_5", new Object[]{this.e, n, this.H.size()});
-}
+        }
+    }
 
     @Override
     public int e() {
@@ -164,8 +166,8 @@ LiteBansModule_270 {
     }
 
     @Override
-    public int LiteBansModule_194() {
-        return this.A.LiteBansModule_194();
+    public int LiteBansModule_195() {
+        return this.A.LiteBansModule_195();
     }
 
     @Override
@@ -180,30 +182,33 @@ LiteBansModule_270 {
 
     @Override
     public synchronized void g() {
-        if (this.LiteBansModule_430 == PoolInitializationException.LiteBansModule_31) {
+        if (this.LiteBansModule_432 == PoolInitializationException.LiteBansModule_31) {
             throw new IllegalStateException(this.e + " - is not suspendable");
         }
         if (this.P != 1) {
-            this.LiteBansModule_430.LiteBansModule_31();
+            this.LiteBansModule_432.LiteBansModule_31();
             this.P = 1;
-}
+        }
+    }
 
     @Override
     public synchronized void AsyncBackgroundTask_5() {
         if (this.P == 1) {
             this.P = 0;
             this.GnuSparseMapHandler();
-            this.LiteBansModule_430.c();
-}
+            this.LiteBansModule_432.c();
+        }
+    }
 
     void BaseCoreGenericHandler(String[] args) {
         if (this.z.BaseCoreGenericHandler()) {
-            this.z.LiteBansModule_31("{} - {}stats (total={}, active={}, idle={}, waiting={})", new Object[]{this.e, args.length > 0 ? args[0] : "", this.LiteBansModule_194(), this.e(), this.LiteBansModule_31(), this.c()});
-}
+            this.z.LiteBansModule_31("{} - {}stats (total={}, active={}, idle={}, waiting={})", new Object[]{this.e, args.length > 0 ? args[0] : "", this.LiteBansModule_195(), this.e(), this.LiteBansModule_31(), this.c()});
+        }
+    }
 
     @Override
     void BaseCoreGenericHandler(InUseHandler kJ2) {
-        this.A.LiteBansModule_194(kJ2);
+        this.A.LiteBansModule_195(kJ2);
     }
 
     void BaseCoreGenericHandler(InUseHandler kJ2, String string) {
@@ -213,11 +218,13 @@ LiteBansModule_270 {
                 this.plugin(connection, string);
                 if (this.P == 0) {
                     this.GnuSparseMapHandler();
-});
-}
+                }
+            });
+        }
+    }
 
     private final InUseHandler BaseCoreGenericHandler() {
-{
+        block6: {
             try {
                 long l3;
                 long l5;
@@ -239,22 +246,25 @@ LiteBansModule_270 {
                 if (this.P == 0) {
                     this.z.BaseCoreGenericHandler("%AsyncBackgroundTask_21 - Error thrown while acquiring connection from data source", new Object[]{this.e, fP2.getCause()});
                     this.DatabaseMonitorService.set(fP2);
-}
+                }
+            }
             catch (Exception exception) {
-                if (this.P != 0) break;
+                if (this.P != 0) break block6;
                 this.z.LiteBansModule_31("%AsyncBackgroundTask_21 - Cannot acquire connection from data source", new Object[]{this.e, exception});
-}
+            }
+        }
         return null;
     }
 
     private final synchronized void GnuSparseMapHandler() {
-        int n = Math.min(this.AsyncBackgroundTask_22.LiteBansModule_194() - this.LiteBansModule_194(), this.AsyncBackgroundTask_22.i() - this.LiteBansModule_31()) - this.H.size();
+        int n = Math.min(this.AsyncBackgroundTask_22.LiteBansModule_195() - this.LiteBansModule_195(), this.AsyncBackgroundTask_22.i() - this.LiteBansModule_31()) - this.H.size();
         if (n <= 0) {
             this.z.LiteBansModule_31("%AsyncBackgroundTask_21 - Fill pool skipped, pool is LiteBansModule_21 sufficient ", new Object[]{this.e});
         }
         for (int i = 0; i < n; ++i) {
             this.D.submit(i < n - 1 ? this.O : this.B);
-}
+        }
+    }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -270,14 +280,16 @@ LiteBansModule_270 {
             }
             finally {
                 this.A.e(kJ2);
-}
+            }
+        }
+    }
 
     private final void c() {
         long l3 = this.AsyncBackgroundTask_22.AsyncBackgroundTask_5();
         if (l3 < 0L) {
             return;
         }
-        long l5 = LiteBansModule_149.LiteBansModule_31();
+        long l5 = LiteBansModule_150.LiteBansModule_31();
         do {
             InUseHandler kJ2;
             if ((kJ2 = this.plugin()) != null) {
@@ -292,19 +304,20 @@ LiteBansModule_270 {
             if (this.g() instanceof LiteBansException_6) {
                 this.plugin(this.g().getCause());
             }
-            LiteBansModule_131.BaseCoreGenericHandler(TimeUnit.SECONDS.toMillis(1L));
-        } while (LiteBansModule_149.AsyncBackgroundTask_5(l5) < l3);
+            LiteBansModule_132.BaseCoreGenericHandler(TimeUnit.SECONDS.toMillis(1L));
+        } while (LiteBansModule_150.AsyncBackgroundTask_5(l5) < l3);
         if (l3 > 0L) {
             this.plugin(this.g());
-}
+        }
+    }
 
     private final void BaseCoreGenericHandler(Throwable throwable) {
-        this.LiteBansModule_194();
+        this.LiteBansModule_195();
         throw new LiteBansException_3(throwable);
     }
 
     private final boolean BaseCoreGenericHandler(InUseHandler kJ2, String string, boolean flag) {
-        kJ2.LiteBansModule_194();
+        kJ2.LiteBansModule_195();
         if (flag || this.A.BaseCoreGenericHandler(kJ2)) {
             this.plugin(kJ2, string);
             return true;
@@ -313,20 +326,21 @@ LiteBansModule_270 {
     }
 
     private final ScheduledExecutorService i() {
-        if (this.AsyncBackgroundTask_22.LiteBansModule_401() == null) {
-            ThreadFactory threadFactory = Optional.ofNullable(this.AsyncBackgroundTask_22.ServerSyncService()).orElseGet(() -> new LiteBansModule_216(this.e + " housekeeper", true));
+        if (this.AsyncBackgroundTask_22.LiteBansModule_403() == null) {
+            ThreadFactory threadFactory = Optional.ofNullable(this.AsyncBackgroundTask_22.ServerSyncService()).orElseGet(() -> new LiteBansModule_217(this.e + " housekeeper", true));
             ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1, threadFactory, new ThreadPoolExecutor.DiscardPolicy());
             scheduledThreadPoolExecutor.setExecuteExistingDelayedTasksAfterShutdownPolicy(false);
             scheduledThreadPoolExecutor.setRemoveOnCancelPolicy(true);
             return scheduledThreadPoolExecutor;
         }
-        return this.AsyncBackgroundTask_22.LiteBansModule_401();
+        return this.AsyncBackgroundTask_22.LiteBansModule_403();
     }
 
-    private final void LiteBansModule_194() {
-        if (this.AsyncBackgroundTask_22.LiteBansModule_401() == null) {
+    private final void LiteBansModule_195() {
+        if (this.AsyncBackgroundTask_22.LiteBansModule_403() == null) {
             this.LockdownService.shutdownNow();
-}
+        }
+    }
 
     private final SQLException LiteBansModule_31(long l3) {
         this.plugin(new String[]{"Timeout failure "});
@@ -335,7 +349,7 @@ LiteBansModule_270 {
         if (exception instanceof SQLException) {
             string = ((SQLException)exception).getSQLState();
         }
-        SQLTransientConnectionException sQLTransientConnectionException = new SQLTransientConnectionException(this.e + " - Connection is not available, request timed out after " + LiteBansModule_149.AsyncBackgroundTask_5(l3) + "", string, exception);
+        SQLTransientConnectionException sQLTransientConnectionException = new SQLTransientConnectionException(this.e + " - Connection is not available, request timed out after " + LiteBansModule_150.AsyncBackgroundTask_5(l3) + "", string, exception);
         if (exception instanceof SQLException) {
             sQLTransientConnectionException.setNextException((SQLException)exception);
         }
@@ -368,7 +382,7 @@ LiteBansModule_270 {
         return dr2.J;
     }
 
-    static /* synthetic */ LiteBansModule_321 LiteBansModule_194(HikariPool dr2) {
+    static /* synthetic */ LiteBansModule_322 LiteBansModule_195(HikariPool dr2) {
         return dr2.BanHandler_5;
     }
 
@@ -386,5 +400,6 @@ LiteBansModule_270 {
         BanHandler_2 = 2;
         L = 1;
         F = 0;
+    }
 }
 

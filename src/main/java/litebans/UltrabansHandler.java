@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 public final class UltrabansHandler
 extends BansHandler {
-    public UltrabansHandler(@NotNull PlatformPlugin plugin) {
+        public UltrabansHandler(@NotNull PlatformPlugin plugin) {
         super(plugin, "Ultrabans", null, 0, 0L, 28, null);
     }
 
@@ -15,7 +15,7 @@ extends BansHandler {
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     @Override
-    public void BaseCoreGenericHandler(@NotNull String string, @NotNull Connection connection, @NotNull LiteBansModule_82 ch2, boolean flag) {
+    public void BaseCoreGenericHandler(@NotNull String string, @NotNull Connection connection, @NotNull LiteBansModule_83 ch2, boolean flag) {
         String string2;
         boolean flag2;
         AutoCloseable autoCloseable;
@@ -42,7 +42,7 @@ extends BansHandler {
                         long l3 = contextObj.getLong("time") * 1000L;
                         long l5 = contextObj.getLong("temptime") * 1000L;
                         BansHandler fS2 = this;
-                        ObjectUtilities.BaseCoreGenericHandler(string3);
+                        ObjectUtilities.BaseCoreGenericHandler((Object)string3);
                         BansHandler.BaseCoreGenericHandler(fS2, ch2, (String)targetObj, string3, l3, l5, string2, null, null, null, null, null, 1984, null);
                     }
                     resultObj = KotlinUnitHandler.BaseCoreGenericHandler;
@@ -53,7 +53,8 @@ extends BansHandler {
                 }
                 finally {
                     CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable2);
-}
+                }
+            }
             tempObj = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable4) {
@@ -66,7 +67,7 @@ extends BansHandler {
         if (flag) {
             tempObj = this;
             flag4 = false;
-            long l7 = DatabaseMonitorService.BaseCoreGenericHandler((DatabaseMonitorService)((MessageHandler)tempObj).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class), false, 1, null);
+            long l7 = DatabaseMonitorService.BaseCoreGenericHandler((DatabaseMonitorService)((MessageHandler)tempObj).LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class), false, 1, null);
             tempObj = connection.prepareStatement("SELECT * FROM banlistip");
             Throwable throwable5 = null;
             try {
@@ -86,12 +87,12 @@ extends BansHandler {
                             long l8 = -1L;
                             String string5 = "#imported#";
                             String string6 = this.LiteBansModule_31(string2);
-                            SilentHandler dZ2 = new SilentHandler(BanHandler.LiteBansModule_240, string6, string4, "#", this.LiteBansModule_31(string5), string5, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), null, l7, l8, 0, false, true, false, 0L, 27648, null);
-                            this.plugin(ch2, dZ2, this.g(), this.LiteBansModule_194());
+                            SilentHandler dZ2 = new SilentHandler(BanHandler.LiteBansModule_241, string6, string4, "#", this.LiteBansModule_31(string5), string5, LiteBansModule_182.LiteBansModule_195.LiteBansModule_31(), null, l7, l8, 0, false, true, false, 0L, 27648, null);
+                            this.plugin(ch2, dZ2, this.g(), this.LiteBansModule_195());
                             if (string6 == null) continue;
-                            PlatformPlugin plugin = this.LiteBansModule_240();
-                            ObjectUtilities.BaseCoreGenericHandler(string2);
-                            new LiteBansModule_221(plugin, string2, string6, "#").run();
+                            PlatformPlugin plugin = this.LiteBansModule_241();
+                            ObjectUtilities.BaseCoreGenericHandler((Object)string2);
+                            new LiteBansModule_222(plugin, string2, string6, "#").run();
                         }
                         contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
                     }
@@ -101,7 +102,8 @@ extends BansHandler {
                     }
                     finally {
                         CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)resultObj, throwable6);
-}
+                    }
+                }
                 helperObj = KotlinUnitHandler.BaseCoreGenericHandler;
             }
             catch (Throwable throwable8) {
@@ -110,9 +112,16 @@ extends BansHandler {
             }
             finally {
                 CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)tempObj, throwable5);
-}
+            }
+        }
+    }
 
     private static final void BaseCoreGenericHandler() {
         m = new String[]{"Ultrabans", "SELECT * FROM banlist WHERE type=0", "name", "reason", "admin", "time", "temptime", "SELECT * FROM banlistip", "name", "lastip", "#imported#", "#", "#"};
+    }
+
+    static {
+        UltrabansHandler.BaseCoreGenericHandler();
+    }
 }
 

@@ -20,11 +20,11 @@ public final class ContentHandler {
     private String AsyncBackgroundTask_5;
     private String g;
     private String e;
-    private boolean LiteBansModule_194;
+    private boolean LiteBansModule_195;
     private List i;
     private final NullHandler_3 c;
-    private static final Character[] LiteBansModule_240;
-    public ContentHandler(@NotNull String string) {
+    private static final Character[] LiteBansModule_241;
+        public ContentHandler(@NotNull String string) {
         this.LiteBansModule_31 = string;
         this.i = CollectionUtilities.e();
         this.c = new NullHandler_3();
@@ -49,13 +49,14 @@ public final class ContentHandler {
         }
         String string3 = string2;
         if (!flag) {
-            Character[] characterArray = LiteBansModule_240;
+            Character[] characterArray = LiteBansModule_241;
             int n = characterArray.length;
             for (int i = 0; i < n; ++i) {
                 char c = characterArray[i].charValue();
-                if (!StringUtilities.c(string3, c, false, 2, null)) continue;
+                if (!StringUtilities.c((CharSequence)string3, c, false, 2, null)) continue;
                 string3 = StringUtilities.BaseCoreGenericHandler(string3, String.valueOf(c), "" + '\\' + c, false, 4, null);
-}
+            }
+        }
         return string3;
     }
 
@@ -64,27 +65,27 @@ public final class ContentHandler {
      * Loose catch block
      */
     public final void c() {
-{
+        block13: {
             boolean flag;
-            (this.c).put("content", this.plugin(this.AsyncBackgroundTask_5, false));
-            (this.c).put("username", this.g);
-            (this.c).put("avatar_url", this.e);
-            (this.c).put("tts", this.LiteBansModule_194);
+            ((Map)this.c).put("content", this.plugin(this.AsyncBackgroundTask_5, false));
+            ((Map)this.c).put("username", this.g);
+            ((Map)this.c).put("avatar_url", this.e);
+            ((Map)this.c).put("tts", this.LiteBansModule_195);
             Object helperObj = this.c;
             Object tempObj = "embeds";
             Object object6 = this.i;
             Iterable iterable = object6;
             Object object7 = new ArrayList(CollectionUtilities.BaseCoreGenericHandler((Iterable)object6, 10));
             for (Object t2 : iterable) {
-                resultObj = (LiteBansModule_211)t2;
+                resultObj = (LiteBansModule_212)t2;
                 Collection collection = object7;
                 flag = false;
-                collection.add(this.pluginthis);
+                collection.add(this.plugin((LiteBansModule_212)resultObj));
             }
             object6 = (List)object7;
             flag2 = false;
             try {
-                contextObj = new LiteBansModule_314().BaseCoreGenericHandler(NullHandler_7.BaseCoreGenericHandler((List)object6));
+                contextObj = new LiteBansModule_315().BaseCoreGenericHandler(NullHandler_7.BaseCoreGenericHandler((List)object6));
             }
             catch (Throwable throwable) {
                 System.err.println(NullHandler_7.BaseCoreGenericHandler((List)object6));
@@ -95,18 +96,18 @@ public final class ContentHandler {
             helperObj = this;
             tempObj = this.c;
             targetObj = helperObj;
-            URLConnection uRLConnection = URI.create(targetObj.LiteBansModule_31).toURL().openConnection();
+            URLConnection uRLConnection = URI.create(((ContentHandler)targetObj).LiteBansModule_31).toURL().openConnection();
             ObjectUtilities.LiteBansModule_31(uRLConnection, "");
             Object object8 = object7 = (HttpsURLConnection)uRLConnection;
             ((URLConnection)object8).addRequestProperty("Content-Type", "application/json");
-            ((URLConnection)object8).addRequestProperty("User-Agent", "Java (LiteBans " + LiteBansModule_336.c() + ')');
+            ((URLConnection)object8).addRequestProperty("User-Agent", "Java (LiteBans " + LiteBansModule_337.c() + ')');
             ((URLConnection)object8).setConnectTimeout(80000);
             ((URLConnection)object8).setReadTimeout(80000);
             ((URLConnection)object8).setDoOutput(true);
             ((HttpURLConnection)object8).setRequestMethod("POST");
             targetObj = (HttpURLConnection)object7;
             flag5 = false;
-            object7 = targetObj.getOutputStream();
+            object7 = ((URLConnection)targetObj).getOutputStream();
             object8 = null;
             OutputStream outputStream = (OutputStream)object7;
             ObjectUtilities.BaseCoreGenericHandler(outputStream);
@@ -114,10 +115,10 @@ public final class ContentHandler {
             flag = false;
             Object object9 = resultObj;
             Object object10 = tempObj;
-            ((OutputStream)object9).write(((NullHandler_3)object10).toString().getBytes(LiteBansModule_344.LiteBansModule_31));
+            ((OutputStream)object9).write(((NullHandler_3)object10).toString().getBytes(LiteBansModule_345.LiteBansModule_31));
             KotlinUnitHandler iv_02 = KotlinUnitHandler.BaseCoreGenericHandler;
             resultObj = iv_02;
-            break;
+            break block13;
             {
                 catch (Throwable throwable) {
                     object8 = throwable;
@@ -129,24 +130,27 @@ public final class ContentHandler {
                 {
                     catch (Throwable throwable) {
                         try {
-                            targetObj.getInputStream().close();
-                            targetObj.disconnect();
+                            ((URLConnection)targetObj).getInputStream().close();
+                            ((HttpURLConnection)targetObj).disconnect();
                         }
                         catch (Throwable throwable2) {
                             throw new RuntimeException(throwable2);
                         }
                         throw throwable;
-}
-        targetObj.getInputStream().close();
-        targetObj.disconnect();
+                    }
+                }
+            }
+        }
+        ((URLConnection)targetObj).getInputStream().close();
+        ((HttpURLConnection)targetObj).disconnect();
     }
 
-    private final NullHandler_3 BaseCoreGenericHandler(LiteBansModule_211 g92) {
+    private final NullHandler_3 BaseCoreGenericHandler(LiteBansModule_212 g92) {
         Map map;
         NullHandler_3 gr_02 = new NullHandler_3();
-        LiteBansModule_211 g93 = g92;
-        ((Map)gr_02).put("title", this.plugin(g93.LiteBansModule_194(), true));
-        ((Map)gr_02).put("description", this.plugin(g93.LiteBansModule_240(), true));
+        LiteBansModule_212 g93 = g92;
+        ((Map)gr_02).put("title", this.plugin(g93.LiteBansModule_195(), true));
+        ((Map)gr_02).put("description", this.plugin(g93.LiteBansModule_241(), true));
         Object contextObj = gr_02;
         Object resultObj = "url";
         String string = g93.LiteBansModule_31();
@@ -158,7 +162,7 @@ public final class ContentHandler {
         contextObj = g93.g();
         resultObj = g93.AsyncBackgroundTask_5();
         string2 = g93.e();
-        LiteBansModule_141 dw2 = g93.c();
+        LiteBansModule_142 dw2 = g93.c();
         List list = g93.i();
         int n = g93.BaseCoreGenericHandler();
         if (contextObj != null) {
@@ -169,7 +173,7 @@ public final class ContentHandler {
         }
         if (resultObj != null) {
             map = new NullHandler_3();
-            ((Map)map).put("url", this.BaseCoreGenericHandler());
+            ((Map)map).put("url", ((LiteBansModule_6)resultObj).BaseCoreGenericHandler());
             ((Map)gr_02).put("image", map);
         }
         if (dw2 != null) {
@@ -206,7 +210,7 @@ public final class ContentHandler {
         helperObj = (List)collection;
         flag2 = false;
         try {
-            targetObj = new LiteBansModule_314().BaseCoreGenericHandler(NullHandler_7.BaseCoreGenericHandler((List)helperObj));
+            targetObj = new LiteBansModule_315().BaseCoreGenericHandler(NullHandler_7.BaseCoreGenericHandler((List)helperObj));
         }
         catch (Throwable throwable) {
             System.err.println(NullHandler_7.BaseCoreGenericHandler((List)helperObj));
@@ -221,10 +225,11 @@ public final class ContentHandler {
         ContentHandler.BaseCoreGenericHandler();
         GnuSparseMapHandler = new DiscordEmbedBuilder(null);
         Character[] characterArray = new Character[]{Character.valueOf('_'), Character.valueOf('*'), Character.valueOf('`'), Character.valueOf('~'), Character.valueOf('#'), Character.valueOf('-')};
-        LiteBansModule_240 = characterArray;
+        LiteBansModule_241 = characterArray;
     }
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"content", "username", "avatar_url", "tts", "embeds", "", "Content-Type", "application/json", "User-Agent", "Java (LiteBans ", "POST", "", "Content-Type", "application/json", "User-Agent", "Java (LiteBans ", "POST", "", "Content-Type", "application/json", "User-Agent", "Java (LiteBans ", "POST", "title", "description", "url", "", "text", "icon_url", "footer", "url", "image", "name", "url", "icon_url", "author", "url", "thumbnail", "color", "fields", "name", "value", "inline"};
+    }
 }
 

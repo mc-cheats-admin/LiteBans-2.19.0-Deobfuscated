@@ -8,13 +8,13 @@ public final class JarHandler {
     private final String e;
     private final String AsyncBackgroundTask_5;
     private final String BaseCoreGenericHandler;
-    private final String LiteBansModule_194;
-    public JarHandler(@NotNull String string, @NotNull String string2, @Nullable String string3, @Nullable String string4, @Nullable String string5) {
+    private final String LiteBansModule_195;
+        public JarHandler(@NotNull String string, @NotNull String string2, @Nullable String string3, @Nullable String string4, @Nullable String string5) {
         this.c = string;
         this.e = string2;
         this.AsyncBackgroundTask_5 = string3;
         this.plugin = string4;
-        this.LiteBansModule_194 = string5;
+        this.LiteBansModule_195 = string5;
     }
 
     public final String AsyncBackgroundTask_5() {
@@ -30,7 +30,7 @@ public final class JarHandler {
     }
 
     public final String c() {
-        return this.LiteBansModule_194;
+        return this.LiteBansModule_195;
     }
 
     public String toString() {
@@ -42,7 +42,7 @@ public final class JarHandler {
         n = n * 31 + this.e.hashCode();
         n = n * 31 + (this.AsyncBackgroundTask_5 == null ? 0 : this.AsyncBackgroundTask_5.hashCode());
         n = n * 31 + (this.plugin == null ? 0 : this.plugin.hashCode());
-        n = n * 31 + (this.LiteBansModule_194 == null ? 0 : this.LiteBansModule_194.hashCode());
+        n = n * 31 + (this.LiteBansModule_195 == null ? 0 : this.LiteBansModule_195.hashCode());
         return n;
     }
 
@@ -54,18 +54,27 @@ public final class JarHandler {
             return false;
         }
         JarHandler jP2 = (JarHandler)targetObj;
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.c, jP2.c)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.c, (Object)jP2.c)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.e, jP2.e)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.e, (Object)jP2.e)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, jP2.AsyncBackgroundTask_5)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5, (Object)jP2.AsyncBackgroundTask_5)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.plugin, jP2.BaseCoreGenericHandler)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.plugin, (Object)jP2.BaseCoreGenericHandler)) {
             return false;
         }
-        return ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_194, jP2.LiteBansModule_194);
+        return ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_195, (Object)jP2.LiteBansModule_195);
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        LiteBansModule_31 = new String[]{".jar", ".jar", ".jar"};
+    }
+
+    static {
+        JarHandler.BaseCoreGenericHandler();
+    }
 }
 

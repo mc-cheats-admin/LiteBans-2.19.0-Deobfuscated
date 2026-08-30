@@ -1,54 +1,45 @@
 package litebans;
 
-import com.mojang.authlib.GameProfile;
-import litebans.mixin.AccessLoginData_26_;
-import net.fabricmc.fabric.api.networking.v1.PacketSender;
-import net.fabricmc.fabric.api.networking.v1.ServerLoginConnectionEvents;
-import net.fabricmc.fabric.api.networking.v1.ServerLoginNetworking;
-import net.minecraft.network.Connection;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.network.ServerLoginPacketListenerImpl;
-import org.jetbrains.annotations.NotNull;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.minecraft.class_2540;
+import net.minecraft.class_2561;
+import net.minecraft.class_2960;
+import net.minecraft.class_3222;
 
-public final class LiteBansModule_407
-implements LiteBansModule_51 {
-    private final PlatformPlugin c;
-    private final LiteBansModule_98 BaseCoreGenericHandler;
-    public LiteBansModule_407(@NotNull PlatformPlugin plugin, @NotNull LiteBansModule_98 cr_02) {
-        this.c = plugin;
-        this.plugin = cr_02;
-    }
+public class LiteBansModule_407
+extends ArgsHandler_2 {
+    protected final LiteBansModule_253 e = new LiteBansModule_80(this);
 
-    public final PlatformPlugin AsyncBackgroundTask_5() {
-        return this.c;
-    }
-
-    public final LiteBansModule_98 LiteBansModule_31() {
-        return this.plugin;
-    }
-
-    public LiteBansModule_407 c() {
-        LiteBansModule_407 ld2;
-        LiteBansModule_407 ld3 = ld2 = this;
-        ServerLoginConnectionEvents.QUERY_START.register(ld3::BaseCoreGenericHandler);
-        return ld2;
-    }
-
-    public final void BaseCoreGenericHandler(@NotNull ServerLoginPacketListenerImpl serverLoginPacketListenerImpl, @NotNull MinecraftServer minecraftServer, @NotNull PacketSender packetSender, @NotNull ServerLoginNetworking.LoginSynchronizer loginSynchronizer) {
-        PluginModule module = this.c.LiteBansModule_31(AbstractModule.class);
-        ObjectUtilities.LiteBansModule_31(module, "");
-        LiteBansModule_247 h82 = (LiteBansModule_247)(module);
-        if (!(serverLoginPacketListenerImpl instanceof AccessLoginData_26_)) {
-            AssertionUtilities.BaseCoreGenericHandler();
-            throw new CommandExitException();
-        }
-        GameProfile gameProfile = ((AccessLoginData_26_)serverLoginPacketListenerImpl).getProfile();
-        Connection connection = ((AccessLoginData_26_)serverLoginPacketListenerImpl).getConnection();
-        h82.BaseCoreGenericHandler(serverLoginPacketListenerImpl, loginSynchronizer, new LiteBansModule_95(gameProfile.name(), gameProfile.SQLiteDriverHandler_4().toString(), this.plugin.BaseCoreGenericHandler(connection)), connection);
+    public LiteBansModule_407(PlatformPlugin plugin) {
+        super(plugin);
     }
 
     @Override
-    public LiteBansModule_175 BaseCoreGenericHandler() {
-        return this.c();
+    public Object AsyncBackgroundTask_5(Object targetObj) {
+        if (targetObj instanceof class_3222) {
+            return ((class_3222)targetObj).method_5671();
+        }
+        return targetObj;
+    }
+
+    @Override
+    public LiteBansModule_253 AsyncBackgroundTask_5() {
+        return this.e;
+    }
+
+    @Override
+    public void BaseCoreGenericHandler(Object targetObj, String string) {
+        int n = this.LiteBansModule_31();
+        V116Handler g82 = n >= 770 ? V116Handler.BaseCoreGenericHandler : V116Handler.c;
+        ((class_3222)targetObj).field_13987.method_14367((class_2561)this.e.LiteBansModule_31(LiteBansModule_165.BaseCoreGenericHandler(string, g82)));
+    }
+
+    @Override
+    public void BaseCoreGenericHandler(Object targetObj, String string, byte[] byArray) {
+        class_2540 class_25402 = PacketByteBufs.create();
+        class_25402.writeBytes(byArray);
+        ((class_3222)targetObj).field_13987.method_14364(ServerPlayNetworking.createS2CPacket((class_2960)class_2960.method_12829((String)string), (class_2540)class_25402));
+    }
 }
 

@@ -1,16 +1,12 @@
 package litebans;
 
-import org.jetbrains.annotations.NotNull;
+public interface LiteBansModule_236 {
+    public static final long BaseCoreGenericHandler = -1L;
 
-public final class LiteBansModule_236
-extends GeoIPLookupService_3 {
-    public LiteBansModule_236(@NotNull PlatformPlugin plugin) {
-        super(plugin);
-    }
+    public String getName();
 
-    @Override
-    public String c(@NotNull Object targetObj) {
-        MessageHandler messageHandler = this;
-        return ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService();
+    public long getSize();
+
+    public boolean isDirectory();
 }
 

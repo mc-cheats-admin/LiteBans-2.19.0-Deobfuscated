@@ -12,7 +12,7 @@ extends Enum {
     public static final StoredHandler m;
     public static final StoredHandler Utf8Handler_2;
     public static final StoredHandler e;
-    public static final StoredHandler LiteBansModule_401;
+    public static final StoredHandler LiteBansModule_403;
     public static final StoredHandler ServerSyncService;
     public static final StoredHandler BroadcastService;
     public static final StoredHandler c;
@@ -21,13 +21,13 @@ extends Enum {
     public static final StoredHandler AsyncBackgroundTask_21;
     public static final StoredHandler r;
     public static final StoredHandler PunishmentTableService;
-    public static final StoredHandler LiteBansModule_194;
+    public static final StoredHandler LiteBansModule_195;
     public static final StoredHandler AsyncBackgroundTask_22;
     public static final StoredHandler g;
     public static final StoredHandler i;
     static final int n;
     private final int BaseCoreGenericHandler;
-    private static final Map LiteBansModule_240;
+    private static final Map LiteBansModule_241;
     private static final /* synthetic */ StoredHandler[] DatabaseMonitorService;
 
     public static final StoredHandler[] values() {
@@ -53,10 +53,10 @@ extends Enum {
      * WARNING - void declaration
      */
     private StoredHandler() {
-        void arg1;
+        void v1;
         void var2_-1;
         void var1_-1;
-        this.plugin = arg1;
+        this.plugin = v1;
     }
 
     public int BaseCoreGenericHandler() {
@@ -64,7 +64,7 @@ extends Enum {
     }
 
     public static final StoredHandler BaseCoreGenericHandler(int n) {
-        return (StoredHandler)(LiteBansModule_240.get(n));
+        return (StoredHandler)((Object)LiteBansModule_241.get(n));
     }
 
     static {
@@ -75,7 +75,7 @@ extends Enum {
         m = new StoredHandler("EXPANDING_LEVEL_2", 3, 3);
         Utf8Handler_2 = new StoredHandler("EXPANDING_LEVEL_3", 4, 4);
         e = new StoredHandler("EXPANDING_LEVEL_4", 5, 5);
-        LiteBansModule_401 = new StoredHandler("IMPLODING", 6, 6);
+        LiteBansModule_403 = new StoredHandler("IMPLODING", 6, 6);
         ServerSyncService = new StoredHandler("TOKENIZATION", 7, 7);
         BroadcastService = new StoredHandler("DEFLATED", 8, 8);
         c = new StoredHandler("ENHANCED_DEFLATED", 9, 9);
@@ -84,15 +84,16 @@ extends Enum {
         AsyncBackgroundTask_21 = new StoredHandler("LZMA", 12, 14);
         r = new StoredHandler("XZ", 13, 95);
         PunishmentTableService = new StoredHandler("JPEG", 14, 96);
-        LiteBansModule_194 = new StoredHandler("WAVPACK", 15, 97);
+        LiteBansModule_195 = new StoredHandler("WAVPACK", 15, 97);
         AsyncBackgroundTask_22 = new StoredHandler("PPMD", 16, 98);
         g = new StoredHandler("AES_ENCRYPTED", 17, 99);
         i = new StoredHandler("UNKNOWN", 18);
-        DatabaseMonitorService = new StoredHandler[]{GnuSparseMapHandler, CommandThrottleService, AsyncBackgroundTask_5, m, Utf8Handler_2, e, LiteBansModule_401, ServerSyncService, BroadcastService, c, LiteBansModule_31, q, AsyncBackgroundTask_21, r, PunishmentTableService, LiteBansModule_194, AsyncBackgroundTask_22, g, i};
+        DatabaseMonitorService = new StoredHandler[]{GnuSparseMapHandler, CommandThrottleService, AsyncBackgroundTask_5, m, Utf8Handler_2, e, LiteBansModule_403, ServerSyncService, BroadcastService, c, LiteBansModule_31, q, AsyncBackgroundTask_21, r, PunishmentTableService, LiteBansModule_195, AsyncBackgroundTask_22, g, i};
         HashMap<Integer, StoredHandler> hashMap = new HashMap<Integer, StoredHandler>();
         for (StoredHandler dq_02 : StoredHandler.values()) {
             hashMap.put(dq_02.BaseCoreGenericHandler(), dq_02);
         }
-        LiteBansModule_240 = Collections.unmodifiableMap(hashMap);
+        LiteBansModule_241 = Collections.unmodifiableMap(hashMap);
+    }
 }
 

@@ -12,5 +12,6 @@ public class LiteBansModule_28 {
             flag |= collection.add(iterator.next());
         }
         return flag;
+    }
 }
 

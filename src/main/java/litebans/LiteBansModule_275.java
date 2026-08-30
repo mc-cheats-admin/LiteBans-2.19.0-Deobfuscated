@@ -1,26 +1,35 @@
 package litebans;
 
-import java.util.function.Supplier;
-public final class LiteBansModule_275
-implements Supplier {
-    final /* synthetic */ FabricNetworkHandler BaseCoreGenericHandler;
-    final /* synthetic */ LiteBansModule_98 LiteBansModule_31;
+public final class LiteBansModule_275 {
+    public static final /* synthetic */ int[] BaseCoreGenericHandler;
 
-    public LiteBansModule_275(FabricNetworkHandler t_02, LiteBansModule_98 cr_02) {
-        this.plugin = t_02;
-        this.LiteBansModule_31 = cr_02;
+    static {
+        int[] nArray = new int[BanHandler.values().length];
+        try {
+            nArray[BanHandler.LiteBansModule_241.ordinal()] = 1;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            nArray[BanHandler.GnuSparseMapHandler.ordinal()] = 2;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            nArray[BanHandler.c.ordinal()] = 3;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            nArray[BanHandler.g.ordinal()] = 4;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        BaseCoreGenericHandler = nArray;
     }
-
-    public final LiteBansModule_175[] BaseCoreGenericHandler() {
-        LiteBansModule_353[] jSArray = new LiteBansModule_353[1];
-        PlatformPlugin plugin = this.plugin.BaseCoreGenericHandler;
-        LiteBansModule_98 cr_02 = this.LiteBansModule_31;
-        ObjectUtilities.BaseCoreGenericHandler(cr_02);
-        jSArray[0] = new LiteBansModule_353(plugin, cr_02);
-        return jSArray;
-    }
-
-    public Object get() {
-        return this.plugin();
 }
 

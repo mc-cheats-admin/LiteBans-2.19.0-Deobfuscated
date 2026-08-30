@@ -11,16 +11,16 @@ static class LiteBansModule_22 {
     int AsyncBackgroundTask_5;
     int g;
     int AsyncBackgroundTask_22;
-    int LiteBansModule_194;
+    int LiteBansModule_195;
     long GnuSparseMapHandler;
     long BaseCoreGenericHandler;
-    long LiteBansModule_240;
+    long LiteBansModule_241;
     int i;
     int m;
     int c;
     int n;
     int e;
-    int LiteBansModule_401;
+    int LiteBansModule_403;
     int PunishmentTableService;
     int CommandThrottleService;
     String ServerSyncService;
@@ -47,13 +47,13 @@ static class LiteBansModule_22 {
         stringBuilder.append(", reserved=");
         stringBuilder.append(this.AsyncBackgroundTask_22);
         stringBuilder.append(", dateTimeModified=");
-        stringBuilder.append(this.LiteBansModule_194);
+        stringBuilder.append(this.LiteBansModule_195);
         stringBuilder.append(", compressedSize=");
         stringBuilder.append(this.GnuSparseMapHandler);
         stringBuilder.append(", originalSize=");
         stringBuilder.append(this.plugin);
         stringBuilder.append(", originalCrc32=");
-        stringBuilder.append(this.LiteBansModule_240);
+        stringBuilder.append(this.LiteBansModule_241);
         stringBuilder.append(", fileSpecPosition=");
         stringBuilder.append(this.i);
         stringBuilder.append(", fileAccessMode=");
@@ -65,7 +65,7 @@ static class LiteBansModule_22 {
         stringBuilder.append(", extendedFilePosition=");
         stringBuilder.append(this.e);
         stringBuilder.append(", dateTimeAccessed=");
-        stringBuilder.append(this.LiteBansModule_401);
+        stringBuilder.append(this.LiteBansModule_403);
         stringBuilder.append(", dateTimeCreated=");
         stringBuilder.append(this.PunishmentTableService);
         stringBuilder.append(", originalSizeEvenForVolumes=");
@@ -92,6 +92,7 @@ static class LiteBansModule_22 {
             return false;
         }
         LiteBansModule_22 at_02 = (LiteBansModule_22)targetObj;
-        return this.r == at_02.r && this.LiteBansModule_31 == at_02.LiteBansModule_31 && this.Utf8Handler_2 == at_02.Utf8Handler_2 && this.BroadcastService == at_02.BroadcastService && this.AsyncBackgroundTask_5 == at_02.AsyncBackgroundTask_5 && this.g == at_02.g && this.AsyncBackgroundTask_22 == at_02.AsyncBackgroundTask_22 && this.LiteBansModule_194 == at_02.LiteBansModule_194 && this.GnuSparseMapHandler == at_02.GnuSparseMapHandler && this.plugin == at_02.BaseCoreGenericHandler && this.LiteBansModule_240 == at_02.LiteBansModule_240 && this.i == at_02.i && this.m == at_02.m && this.c == at_02.c && this.n == at_02.n && this.e == at_02.e && this.LiteBansModule_401 == at_02.LiteBansModule_401 && this.PunishmentTableService == at_02.PunishmentTableService && this.CommandThrottleService == at_02.CommandThrottleService && Objects.equals(this.ServerSyncService, at_02.ServerSyncService) && Objects.equals(this.AsyncBackgroundTask_21, at_02.AsyncBackgroundTask_21) && Arrays.deepEquals((Object[])this.q, (Object[])at_02.q);
+        return this.r == at_02.r && this.LiteBansModule_31 == at_02.LiteBansModule_31 && this.Utf8Handler_2 == at_02.Utf8Handler_2 && this.BroadcastService == at_02.BroadcastService && this.AsyncBackgroundTask_5 == at_02.AsyncBackgroundTask_5 && this.g == at_02.g && this.AsyncBackgroundTask_22 == at_02.AsyncBackgroundTask_22 && this.LiteBansModule_195 == at_02.LiteBansModule_195 && this.GnuSparseMapHandler == at_02.GnuSparseMapHandler && this.plugin == at_02.BaseCoreGenericHandler && this.LiteBansModule_241 == at_02.LiteBansModule_241 && this.i == at_02.i && this.m == at_02.m && this.c == at_02.c && this.n == at_02.n && this.e == at_02.e && this.LiteBansModule_403 == at_02.LiteBansModule_403 && this.PunishmentTableService == at_02.PunishmentTableService && this.CommandThrottleService == at_02.CommandThrottleService && Objects.equals(this.ServerSyncService, at_02.ServerSyncService) && Objects.equals(this.AsyncBackgroundTask_21, at_02.AsyncBackgroundTask_21) && Arrays.deepEquals((Object[])this.q, (Object[])at_02.q);
+    }
 }
 

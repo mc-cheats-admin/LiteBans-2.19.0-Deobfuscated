@@ -1,14 +1,34 @@
 package litebans;
 
-public final class LiteBansModule_299 {
-    private LiteBansModule_299() {
-    }
+static class LiteBansModule_299 {
+    static final /* synthetic */ int[] BaseCoreGenericHandler;
 
-    public final LiteBansModule_166 BaseCoreGenericHandler() {
-        return LiteBansModule_166.AsyncBackgroundTask_5();
+    static {
+        BaseCoreGenericHandler = new int[BanHandler.values().length];
+        try {
+            LiteBansModule_299.BaseCoreGenericHandler[BanHandler.LiteBansModule_241.ordinal()] = 1;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            LiteBansModule_299.BaseCoreGenericHandler[BanHandler.GnuSparseMapHandler.ordinal()] = 2;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            LiteBansModule_299.BaseCoreGenericHandler[BanHandler.c.ordinal()] = 3;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
+        try {
+            LiteBansModule_299.BaseCoreGenericHandler[BanHandler.g.ordinal()] = 4;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {
+            // empty catch block
+        }
     }
-
-    public /* synthetic */ LiteBansModule_299(LiteBansModule_14 aJ2) {
-        this();
 }
 

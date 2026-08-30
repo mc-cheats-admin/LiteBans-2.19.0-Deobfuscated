@@ -4,10 +4,10 @@ import java.awt.Color;
 public final class LiteBansModule_10 {
     private LiteBansType e;
     private Color c;
-    private String LiteBansModule_194;
+    private String LiteBansModule_195;
     private Boolean BaseCoreGenericHandler;
     private Boolean LiteBansModule_31;
-    private Boolean LiteBansModule_240;
+    private Boolean LiteBansModule_241;
     private Boolean g;
     private Boolean AsyncBackgroundTask_5;
 
@@ -22,7 +22,7 @@ public final class LiteBansModule_10 {
     }
 
     public LiteBansModule_10 BaseCoreGenericHandler(String string) {
-        this.LiteBansModule_194 = string;
+        this.LiteBansModule_195 = string;
         return this;
     }
 
@@ -37,7 +37,7 @@ public final class LiteBansModule_10 {
     }
 
     public LiteBansModule_10 e(Boolean flag) {
-        this.LiteBansModule_240 = flag;
+        this.LiteBansModule_241 = flag;
         return this;
     }
 
@@ -51,7 +51,8 @@ public final class LiteBansModule_10 {
         return this;
     }
 
-    public LiteBansModule_368 BaseCoreGenericHandler() {
-        return new LiteBansModule_368(this.e, this.c, this.LiteBansModule_194, this.plugin, this.LiteBansModule_31, this.LiteBansModule_240, this.g, this.AsyncBackgroundTask_5);
+    public LiteBansModule_370 BaseCoreGenericHandler() {
+        return new LiteBansModule_370(this.e, this.c, this.LiteBansModule_195, this.plugin, this.LiteBansModule_31, this.LiteBansModule_241, this.g, this.AsyncBackgroundTask_5);
+    }
 }
 

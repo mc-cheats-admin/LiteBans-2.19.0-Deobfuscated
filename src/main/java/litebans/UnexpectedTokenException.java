@@ -3,7 +3,7 @@ package litebans;
 public class UnexpectedTokenException
 extends Exception {
     private static final long e;
-    public static final int LiteBansModule_194;
+    public static final int LiteBansModule_195;
     public static final int BaseCoreGenericHandler;
     public static final int AsyncBackgroundTask_5;
     private int LiteBansModule_31;
@@ -33,14 +33,16 @@ extends Exception {
             }
             default: {
                 stringBuffer.append("Unkown error LiteBansModule_21 position ").append(this.c).append(".");
-}
+            }
+        }
         return stringBuffer.toString();
     }
 
     static {
         AsyncBackgroundTask_5 = 2;
         BaseCoreGenericHandler = 1;
-        LiteBansModule_194 = 0;
+        LiteBansModule_195 = 0;
         e = -7880698968187728548L;
+    }
 }
 

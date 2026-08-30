@@ -22,10 +22,11 @@ public final class SetHandler {
         List<Method> list = Arrays.asList(targetObj.getClass().getMethods());
         properties.forEach((contextObj, resultObj) -> {
             if (targetObj instanceof HikariConfig && contextObj.toString().startsWith("")) {
-                targetObj.BaseCoreGenericHandler(contextObj.toString().substring("".length()), resultObj);
+                ((HikariConfig)targetObj).BaseCoreGenericHandler(contextObj.toString().substring("".length()), resultObj);
             } else {
                 SetHandler.BaseCoreGenericHandler(targetObj, contextObj.toString(), resultObj, list);
-});
+            }
+        });
     }
 
     public static Set BaseCoreGenericHandler(Class clazz) {
@@ -42,7 +43,8 @@ public final class SetHandler {
             }
             catch (Exception exception) {
                 // empty catch block
-}
+            }
+        }
         return hashSet;
     }
 
@@ -60,7 +62,9 @@ public final class SetHandler {
             }
             catch (Exception exception2) {
                 return null;
-}
+            }
+        }
+    }
 
     public static Properties BaseCoreGenericHandler(Properties properties) {
         Properties properties2 = new Properties();
@@ -100,13 +104,17 @@ public final class SetHandler {
                 catch (ClassNotFoundException | InstantiationException reflectiveOperationException) {
                     kI2.LiteBansModule_31("Class \"{}\" not found or could not instantiate UpdateCheckTask (Default constructor)", new Object[]{contextObj});
                     method2.invoke(targetObj, contextObj);
-}
+                }
+            }
+        }
         catch (Exception exception) {
             kI2.BaseCoreGenericHandler("Failed to set property %AsyncBackgroundTask_21 on target %AsyncBackgroundTask_21", new Object[]{string, targetObj.getClass().toString(), exception});
             throw new RuntimeException(exception);
-}
+        }
+    }
 
     private static final /* synthetic */ boolean LiteBansModule_31(String string, Method method) {
         return method.getName().equals(string) && method.getParameterCount() == 1;
+    }
 }
 

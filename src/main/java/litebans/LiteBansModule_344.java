@@ -1,29 +1,28 @@
 package litebans;
 
-import java.nio.charset.Charset;
+import org.jetbrains.annotations.NotNull;
+
 public final class LiteBansModule_344 {
-    public static final LiteBansModule_344 LiteBansModule_194;
-    public static final Charset LiteBansModule_31;
-    public static final Charset e;
-    public static final Charset LiteBansModule_240;
-    public static final Charset BaseCoreGenericHandler;
-    public static final Charset AsyncBackgroundTask_5;
-    public static final Charset c;
-    private LiteBansModule_344() {
+        private LiteBansModule_344() {
+    }
+
+    public final Utf8mb4UnicodeCiHandler BaseCoreGenericHandler(@NotNull String string, @NotNull String string2) {
+        if (DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(string)) {
+            return new Utf8mb4UnicodeCiHandler(string, StringUtilities.LiteBansModule_31((CharSequence)string2) ? "" : "ENGINE=" + string2, " CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci", " UNSIGNED");
+        }
+        return new Utf8mb4UnicodeCiHandler(string, "", "", " ");
+    }
+
+    public /* synthetic */ LiteBansModule_344(LiteBansModule_14 aJ2) {
+        this();
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        BaseCoreGenericHandler = new String[]{"", "ENGINE=", " CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci", " UNSIGNED", "", "", " "};
     }
 
     static {
         LiteBansModule_344.BaseCoreGenericHandler();
-        LiteBansModule_194 = new LiteBansModule_344();
-        LiteBansModule_31 = Charset.forName("UTF-8");
-        e = Charset.forName("UTF-16");
-        LiteBansModule_240 = Charset.forName("UTF-16BE");
-        BaseCoreGenericHandler = Charset.forName("UTF-16LE");
-        AsyncBackgroundTask_5 = Charset.forName("US-ASCII");
-        c = Charset.forName("ISO-8859-1");
     }
-
-    private static final void BaseCoreGenericHandler() {
-        g = new String[]{"UTF-32", "UTF-32LE", "UTF-32BE", "UTF-8", "UTF-16", "UTF-16BE", "UTF-16LE", "US-ASCII", "ISO-8859-1"};
 }
 

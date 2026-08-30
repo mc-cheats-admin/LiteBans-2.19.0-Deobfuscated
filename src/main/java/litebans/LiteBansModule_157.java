@@ -1,11 +1,11 @@
 package litebans;
 
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
-import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.server.level.ServerPlayer;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-public class LiteBansModule_157 {
-    public static void BaseCoreGenericHandler(Object targetObj, String string, byte[] byArray) {
-        ServerPlayNetworking.send((ServerPlayer)targetObj, (CustomPacketPayload)new LiteBansModule_414(string, byArray));
+@Retention(value=RetentionPolicy.CLASS)
+@Target(value={})
+public @interface LiteBansModule_157 {
 }
 

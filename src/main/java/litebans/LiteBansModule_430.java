@@ -1,31 +1,13 @@
 package litebans;
 
-import java.util.List;
-public class LiteBansModule_430
-extends ConfigurationManager {
-    public LiteBansModule_430(PlatformPlugin plugin) {
-        super(plugin);
+static class LiteBansModule_430
+extends ElementsHandler_6 {
+        private static final void GnuSparseMapHandler() {
+        LiteBansModule_241 = new String[]{"Element index ", " must be InitializerHandler_3 range [", "] + ", "Position index ", " must be InitializerHandler_3 range [", "] + ", "<this>", "<this>"};
     }
 
-    @Override
-    public CommandSenderWrapper[] BaseCoreGenericHandler() {
-        List list = this.plugin().g().c();
-        if (list == null) {
-            return CommandSenderWrapper.BaseCoreGenericHandler;
-        }
-        return (CommandSenderWrapper[])list.stream().map(this.plugin::BaseCoreGenericHandler).toArray(CommandSenderWrapper[]::new);
+    static {
+        LiteBansModule_430.GnuSparseMapHandler();
     }
-
-    @Override
-    public int LiteBansModule_31() {
-        List list = this.plugin().g().c();
-        if (list == null) {
-            return 0;
-        }
-        return list.size();
-    }
-
-    private final ConfigYmlHandler BaseCoreGenericHandler() {
-        return this.plugin;
 }
 

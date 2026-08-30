@@ -3,16 +3,16 @@ package litebans;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public final class MySqlCharsetHelper {
-    public static final LiteBansModule_343 g;
+public final class Utf8mb4UnicodeCiHandler {
+    public static final LiteBansModule_344 g;
     private final String AsyncBackgroundTask_5;
     private final String BaseCoreGenericHandler;
     private final String c;
     private final String e;
-    public static final String LiteBansModule_240;
+    public static final String LiteBansModule_241;
     public static final String LiteBansModule_31;
     public static final String i;
-    public MySqlCharsetHelper(@NotNull String string, @NotNull String string2, @NotNull String string3, @NotNull String string4) {
+        public Utf8mb4UnicodeCiHandler(@NotNull String string, @NotNull String string2, @NotNull String string3, @NotNull String string4) {
         this.AsyncBackgroundTask_5 = string;
         this.plugin = string2;
         this.c = string3;
@@ -51,27 +51,32 @@ public final class MySqlCharsetHelper {
         if (this == targetObj) {
             return true;
         }
-        if (!(targetObj instanceof MySqlCharsetHelper)) {
+        if (!(targetObj instanceof Utf8mb4UnicodeCiHandler)) {
             return false;
         }
-        MySqlCharsetHelper lq2 = (MySqlCharsetHelper)targetObj;
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, lq2.AsyncBackgroundTask_5)) {
+        Utf8mb4UnicodeCiHandler lq2 = (Utf8mb4UnicodeCiHandler)targetObj;
+        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5, (Object)lq2.AsyncBackgroundTask_5)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.plugin, lq2.BaseCoreGenericHandler)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.plugin, (Object)lq2.BaseCoreGenericHandler)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.c, lq2.c)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.c, (Object)lq2.c)) {
             return false;
         }
-        return ObjectUtilities.BaseCoreGenericHandler(this.e, lq2.e);
+        return ObjectUtilities.BaseCoreGenericHandler((Object)this.e, (Object)lq2.e);
     }
 
     static {
         i = " CHARACTER SET ascii COLLATE ascii_general_ci";
         LiteBansModule_31 = " CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";
-        LiteBansModule_240 = "utf8mb4_unicode_ci";
-        MySqlCharsetHelper.LiteBansModule_31();
-        g = new LiteBansModule_343(null);
+        LiteBansModule_241 = "utf8mb4_unicode_ci";
+        Utf8mb4UnicodeCiHandler.LiteBansModule_31();
+        g = new LiteBansModule_344(null);
+    }
+
+    private static final void LiteBansModule_31() {
+        LiteBansModule_195 = new String[]{"(BaseCoreGenericHandler=", ", engine=", ", charset=", ", unsigned="};
+    }
 }
 

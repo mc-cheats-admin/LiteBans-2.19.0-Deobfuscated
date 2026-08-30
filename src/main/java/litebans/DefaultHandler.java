@@ -13,26 +13,26 @@ import org.jetbrains.annotations.Nullable;
 
 @ModulePriority(priority=0)
 public final class DefaultHandler {
-    private final LiteBansModule_158 LiteBansModule_31;
-    private final LiteBansModule_161 c;
-    private final LiteBansModule_161 BaseCoreGenericHandler;
-    public DefaultHandler(@NotNull LiteBansModule_158 ec_02) {
+    private final LiteBansModule_159 LiteBansModule_31;
+    private final LiteBansModule_162 c;
+    private final LiteBansModule_162 BaseCoreGenericHandler;
+        public DefaultHandler(@NotNull LiteBansModule_159 ec_02) {
         this.LiteBansModule_31 = ec_02;
         this.c = ProxyConnection.BaseCoreGenericHandler(() -> DefaultHandler.LiteBansModule_31(this));
         this.plugin = ProxyConnection.BaseCoreGenericHandler(() -> DefaultHandler.BaseCoreGenericHandler(this));
     }
 
-    public final LiteBansModule_158 BaseCoreGenericHandler() {
+    public final LiteBansModule_159 BaseCoreGenericHandler() {
         return this.LiteBansModule_31;
     }
 
     public final Object c() {
-        LiteBansModule_161 eE2 = this.c;
+        LiteBansModule_162 eE2 = this.c;
         return eE2.BaseCoreGenericHandler();
     }
 
     public final Object LiteBansModule_31() {
-        LiteBansModule_161 eE2 = this.plugin;
+        LiteBansModule_162 eE2 = this.plugin;
         return eE2.BaseCoreGenericHandler();
     }
 
@@ -41,11 +41,11 @@ public final class DefaultHandler {
      * Lifted jumps to return sites
      */
     public final boolean BaseCoreGenericHandler(@NotNull String string, @NotNull UUID uUID, @NotNull String string2, @NotNull String string3, @NotNull String string4, @NotNull String[] args) {
-        if (StringUtilities.BaseCoreGenericHandler(string, '#', false, 2, null)) {
+        if (StringUtilities.BaseCoreGenericHandler((CharSequence)string, '#', false, 2, null)) {
             return false;
         }
         DefaultHandler e12 = this;
-        LiteBansModule_158 ec_02 = e12.BaseCoreGenericHandler().c().i();
+        LiteBansModule_159 ec_02 = e12.BaseCoreGenericHandler().c().i();
         ObjectUtilities.LiteBansModule_31(ec_02, "");
         BungeecordHandler_2 ao_02 = (BungeecordHandler_2)ec_02;
         Object targetObj = this.c();
@@ -63,7 +63,7 @@ public final class DefaultHandler {
         }
         e12 = offlinePlayer;
         try {
-            targetObj = ObjectUtilities.BaseCoreGenericHandler(string4, (Object)"default") ? null : string4;
+            targetObj = ObjectUtilities.BaseCoreGenericHandler((Object)string4, (Object)"default") ? null : string4;
             if (!(args.length == 0) && permission2.hasGroupSupport()) {
                 objectArray = permission2.getPlayerGroups((String)targetObj, (OfflinePlayer)e12);
                 for (String string5 : args) {
@@ -72,7 +72,9 @@ public final class DefaultHandler {
                         String string6 = (String)iterator.next();
                         if (!StringUtilities.BaseCoreGenericHandler(string5, string6, true)) continue;
                         return true;
-}
+                    }
+                }
+            }
             if (permission2.playerHas((String)targetObj, (OfflinePlayer)e12, string3)) return true;
             objectArray = string2;
             if (!permission2.playerHas((String)targetObj, (OfflinePlayer)e12, string3 + '.' + objectArray.toLowerCase(Locale.ENGLISH))) return false;
@@ -83,7 +85,8 @@ public final class DefaultHandler {
         }
         catch (NoSuchMethodError noSuchMethodError) {
             return false;
-}
+        }
+    }
 
     public final boolean BaseCoreGenericHandler(@Nullable Object targetObj, @NotNull String string, @Nullable String string2) {
         Object contextObj = this.c();
@@ -107,7 +110,7 @@ public final class DefaultHandler {
         if (targetObj == null) {
             return "";
         }
-        LiteBansModule_158 ec_02 = this.LiteBansModule_31;
+        LiteBansModule_159 ec_02 = this.LiteBansModule_31;
         ObjectUtilities.LiteBansModule_31(ec_02, "");
         BungeecordHandler_2 ao_02 = (BungeecordHandler_2)ec_02;
         Object contextObj = this.c();
@@ -123,7 +126,7 @@ public final class DefaultHandler {
         }
         Chat chat2 = chat;
         if (targetObj instanceof UUID) {
-            Object helperObj = ao_02.BaseCoreGenericHandlertargetObj;
+            Object helperObj = ao_02.BaseCoreGenericHandler((UUID)targetObj);
             OfflinePlayer offlinePlayer = helperObj instanceof OfflinePlayer ? (OfflinePlayer)helperObj : null;
             if (offlinePlayer == null) {
                 return "";
@@ -135,9 +138,9 @@ public final class DefaultHandler {
             }
             return string;
         }
-        String string = chat2.getPlayerPrefixtargetObj;
+        String string = chat2.getPlayerPrefix((Player)targetObj);
         if (string == null) {
-            string = chat2.getGroupPrefix(targetObj.getWorld().getName(), permission2.getPrimaryGrouptargetObj);
+            string = chat2.getGroupPrefix(((Player)targetObj).getWorld().getName(), permission2.getPrimaryGroup((Player)targetObj));
         }
         return string;
     }
@@ -146,7 +149,7 @@ public final class DefaultHandler {
         if (targetObj == null) {
             return "";
         }
-        LiteBansModule_158 ec_02 = this.LiteBansModule_31;
+        LiteBansModule_159 ec_02 = this.LiteBansModule_31;
         ObjectUtilities.LiteBansModule_31(ec_02, "");
         BungeecordHandler_2 ao_02 = (BungeecordHandler_2)ec_02;
         Object contextObj = this.c();
@@ -162,7 +165,7 @@ public final class DefaultHandler {
         }
         Chat chat2 = chat;
         if (targetObj instanceof UUID) {
-            Object helperObj = ao_02.BaseCoreGenericHandlertargetObj;
+            Object helperObj = ao_02.BaseCoreGenericHandler((UUID)targetObj);
             OfflinePlayer offlinePlayer = helperObj instanceof OfflinePlayer ? (OfflinePlayer)helperObj : null;
             if (offlinePlayer == null) {
                 return "";
@@ -174,15 +177,15 @@ public final class DefaultHandler {
             }
             return string;
         }
-        String string = chat2.getPlayerSuffixtargetObj;
+        String string = chat2.getPlayerSuffix((Player)targetObj);
         if (string == null) {
-            string = chat2.getGroupSuffix(targetObj.getWorld().getName(), permission2.getPrimaryGrouptargetObj);
+            string = chat2.getGroupSuffix(((Player)targetObj).getWorld().getName(), permission2.getPrimaryGroup((Player)targetObj));
         }
         return string;
     }
 
     public final Object BaseCoreGenericHandler(@NotNull String string) {
-        LiteBansModule_158 ec_02 = this.LiteBansModule_31;
+        LiteBansModule_159 ec_02 = this.LiteBansModule_31;
         ObjectUtilities.LiteBansModule_31(ec_02, "");
         BungeecordHandler_2 ao_02 = (BungeecordHandler_2)ec_02;
         try {
@@ -190,7 +193,8 @@ public final class DefaultHandler {
             RegisteredServiceProvider registeredServiceProvider = ao_02.BaseCoreGenericHandler(e12.BaseCoreGenericHandler().c()).getServer().getServicesManager().getRegistration(Class.forName(string));
             if (registeredServiceProvider != null) {
                 return registeredServiceProvider.getProvider();
-}
+            }
+        }
         catch (NoClassDefFoundError noClassDefFoundError) {
         }
         catch (ClassNotFoundException classNotFoundException) {
@@ -221,5 +225,10 @@ public final class DefaultHandler {
 
     private static final void AsyncBackgroundTask_5() {
         AsyncBackgroundTask_5 = new String[]{"", "default", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "zip file", "Zip file was closed during access: ", "net.milkbowl.vault.permission.Permission", "net.milkbowl.vault.chat.Chat"};
+    }
+
+    static {
+        DefaultHandler.AsyncBackgroundTask_5();
+    }
 }
 

@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 public final class Banmanagerv4Handler
 extends BansHandler {
-    public Banmanagerv4Handler(@NotNull PlatformPlugin plugin) {
+        public Banmanagerv4Handler(@NotNull PlatformPlugin plugin) {
         super(plugin, "BanManagerV4", "bm_", 0, 0L, 24, null);
     }
 
@@ -20,7 +20,7 @@ extends BansHandler {
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     @Override
-    public void BaseCoreGenericHandler(@NotNull String string, @NotNull Connection connection, @NotNull LiteBansModule_82 ch2, boolean flag) {
+    public void BaseCoreGenericHandler(@NotNull String string, @NotNull Connection connection, @NotNull LiteBansModule_83 ch2, boolean flag) {
         PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM " + this.i() + "bans");
         AutoCloseable autoCloseable = preparedStatement;
         Throwable throwable = null;
@@ -46,17 +46,17 @@ extends BansHandler {
                         long l5 = autoCloseable3.getLong("ban_expires_on") * 1000L;
                         string2 = this.LiteBansModule_31((String)helperObj);
                         ObjectUtilities.BaseCoreGenericHandler(contextObj);
-                        targetObj = new SilentHandler(BanHandler.LiteBansModule_240, string2, null, contextObj, this.LiteBansModule_31this, (String)resultObj, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), null, l3, l5, 0, false, false, false, 0L, 31744, null);
+                        targetObj = new SilentHandler(BanHandler.LiteBansModule_241, string2, null, (CharSequence)contextObj, this.LiteBansModule_31((String)resultObj), (String)resultObj, LiteBansModule_182.LiteBansModule_195.LiteBansModule_31(), null, l3, l5, 0, false, false, false, 0L, 31744, null);
                         if (AllHandler_3.BaseCoreGenericHandler(ch2, string2, null, null, false, false, 30, null) == null) {
-                            ch2.ctargetObj;
+                            ch2.c((SilentHandler)targetObj);
                             this.g().incrementAndGet();
                         } else {
                             this.m().warning("Ignoring duplicate ban for " + (String)helperObj);
                         }
                         if (string2 == null) continue;
-                        PlatformPlugin plugin = this.LiteBansModule_240();
+                        PlatformPlugin plugin = this.LiteBansModule_241();
                         ObjectUtilities.BaseCoreGenericHandler(helperObj);
-                        new LiteBansModule_221(plugin, (String)helperObj, string2, "#").run();
+                        new LiteBansModule_222(plugin, (String)helperObj, string2, "#").run();
                     }
                     tempObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
@@ -66,7 +66,8 @@ extends BansHandler {
                 }
                 finally {
                     CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
-}
+                }
+            }
             if (flag) {
                 this.m().info("Importing IP-bans.. + ");
                 autoCloseable3 = connection.prepareStatement("SELECT * FROM " + this.i() + "ip_bans");
@@ -90,9 +91,9 @@ extends BansHandler {
                                 long l8 = l7 * 1000L;
                                                                 long l9 = helperObj.getLong("ban_expires_on");
                                 long l10 = l9 * 1000L;
-                                ObjectUtilities.BaseCoreGenericHandler(string2);
-                                object8 = new SilentHandler(BanHandler.LiteBansModule_240, null, string3, string2, this.LiteBansModule_31(string4), string4, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), null, l8, l10, 0, false, true, false, 0L, 27648, null);
-                                this.plugin(ch2, (SilentHandler)object8, this.g(), this.LiteBansModule_194());
+                                ObjectUtilities.BaseCoreGenericHandler((Object)string2);
+                                object8 = new SilentHandler(BanHandler.LiteBansModule_241, null, string3, string2, this.LiteBansModule_31(string4), string4, LiteBansModule_182.LiteBansModule_195.LiteBansModule_31(), null, l8, l10, 0, false, true, false, 0L, 27648, null);
+                                this.plugin(ch2, (SilentHandler)object8, this.g(), this.LiteBansModule_195());
                             }
                             object7 = KotlinUnitHandler.BaseCoreGenericHandler;
                         }
@@ -102,7 +103,8 @@ extends BansHandler {
                         }
                         finally {
                             CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)resultObj, (Throwable)contextObj);
-}
+                        }
+                    }
                     tempObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable5) {
@@ -111,7 +113,8 @@ extends BansHandler {
                 }
                 finally {
                     CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
-}
+                }
+            }
             object6 = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable6) {
@@ -120,9 +123,15 @@ extends BansHandler {
         }
         finally {
             CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
-}
+        }
+    }
 
     private static final void BaseCoreGenericHandler() {
         m = new String[]{"BanManagerV4", "bm_", "banmanager4", "SELECT * FROM ", "bans", "banned", "banned_by", "ban_reason", "ban_time", "ban_expires_on", "Ignoring duplicate ban for ", "#", "Importing IP-bans.. + ", "SELECT * FROM ", "ip_bans", "banned", "banned_by", "ban_reason", "ban_time", "ban_expires_on"};
+    }
+
+    static {
+        Banmanagerv4Handler.BaseCoreGenericHandler();
+    }
 }
 

@@ -6,8 +6,8 @@ import org.jetbrains.annotations.NotNull;
 
 public abstract class ElementsHandler_4
 implements Collection,
-LiteBansModule_122 {
-    protected ElementsHandler_4() {
+LiteBansModule_123 {
+        protected ElementsHandler_4() {
     }
 
     public abstract int BaseCoreGenericHandler();
@@ -18,7 +18,7 @@ LiteBansModule_122 {
     @Override
     public boolean contains(Object targetObj) {
         boolean flag;
-{
+        block3: {
             Iterable iterable = this;
             if (iterable instanceof Collection && ((Collection)iterable).isEmpty()) {
                 flag = false;
@@ -29,17 +29,18 @@ LiteBansModule_122 {
                     Object t3 = t2 = iterator.next();
                     if (!ObjectUtilities.BaseCoreGenericHandler(t3, targetObj)) continue;
                     flag = true;
-                    break;
+                    break block3;
                 }
                 flag = false;
-}
+            }
+        }
         return flag;
     }
 
     public boolean containsAll(@NotNull Collection collection) {
         boolean flag;
-{
-            ObjectUtilities.BaseCoreGenericHandler(collection, "elements");
+        block3: {
+            ObjectUtilities.BaseCoreGenericHandler((Object)collection, "elements");
             Iterable iterable = collection;
             if (((Collection)iterable).isEmpty()) {
                 flag = true;
@@ -50,10 +51,11 @@ LiteBansModule_122 {
                     Object t3 = t2 = iterator.next();
                     if (this.contains(t3)) continue;
                     flag = false;
-                    break;
+                    break block3;
                 }
                 flag = true;
-}
+            }
+        }
         return flag;
     }
 
@@ -72,7 +74,7 @@ LiteBansModule_122 {
     }
 
     public Object[] toArray(@NotNull Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler(objectArray, "array");
+        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "array");
         return CollectionHandler.BaseCoreGenericHandler(this, objectArray);
     }
 
@@ -103,7 +105,7 @@ LiteBansModule_122 {
     }
 
     private static final CharSequence BaseCoreGenericHandler(ElementsHandler_4 gb_02, Object targetObj) {
-        return targetObj == gb_02 ? (CharSequence)"(this Collection)" : String.valueOf(targetObj);
+        return targetObj == gb_02 ? (CharSequence)"(this Collection)" : (CharSequence)String.valueOf(targetObj);
     }
 
     @Override
@@ -113,5 +115,10 @@ LiteBansModule_122 {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"elements", ", ", "[", "]", "array", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "(this Collection)"};
+    }
+
+    static {
+        ElementsHandler_4.LiteBansModule_31();
+    }
 }
 

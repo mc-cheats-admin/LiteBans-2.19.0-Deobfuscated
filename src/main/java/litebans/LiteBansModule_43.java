@@ -24,7 +24,7 @@ public final class LiteBansModule_43 {
             // empty catch block
         }
         try {
-            nArray[BanHandler.LiteBansModule_240.ordinal()] = 4;
+            nArray[BanHandler.LiteBansModule_241.ordinal()] = 4;
         }
         catch (NoSuchFieldError noSuchFieldError) {
             // empty catch block
@@ -48,5 +48,6 @@ public final class LiteBansModule_43 {
             // empty catch block
         }
         BaseCoreGenericHandler = nArray;
+    }
 }
 

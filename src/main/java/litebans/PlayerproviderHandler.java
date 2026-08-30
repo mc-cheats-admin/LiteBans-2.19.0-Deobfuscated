@@ -7,9 +7,9 @@ public final class PlayerproviderHandler
 extends PlayerProvider {
     private final PlatformPlugin LiteBansModule_31;
     private final ConfigService c;
-    public PlayerproviderHandler(@NotNull PlatformPlugin plugin) {
+        public PlayerproviderHandler(@NotNull PlatformPlugin plugin) {
         this.LiteBansModule_31 = plugin;
-        this.c = this.LiteBansModule_31.BaseCoreGenericHandler(ConfigService.class);
+        this.c = (ConfigService)this.LiteBansModule_31.BaseCoreGenericHandler(ConfigService.class);
     }
 
     @Override
@@ -23,5 +23,10 @@ extends PlayerProvider {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"PlayerProvider"};
+    }
+
+    static {
+        PlayerproviderHandler.BaseCoreGenericHandler();
+    }
 }
 

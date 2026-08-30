@@ -17,7 +17,7 @@ public final class DefaultHandler_2
 extends Database {
     private final PlatformPlugin BaseCoreGenericHandler;
     private int LiteBansModule_31;
-    public DefaultHandler_2(@NotNull PlatformPlugin plugin) {
+        public DefaultHandler_2(@NotNull PlatformPlugin plugin) {
         this.plugin = plugin;
     }
 
@@ -27,7 +27,7 @@ extends Database {
 
     @Override
     public boolean isPlayerBanned(@Nullable UUID uUID, @Nullable String string, @Nullable String string2) {
-        return this.plugin(uUID, string, string2, BanHandler.LiteBansModule_240) != null;
+        return this.plugin(uUID, string, string2, BanHandler.LiteBansModule_241) != null;
     }
 
     @Override
@@ -45,28 +45,29 @@ extends Database {
         if (uUID == null && string == null) {
             return null;
         }
-        DatabaseMonitorService w2 = this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
-        if (ObjectUtilities.BaseCoreGenericHandler(string2, (Object)"__DEFAULT__")) {
+        DatabaseMonitorService w2 = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        if (ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)"__DEFAULT__")) {
             string4 = w2.ServerSyncService();
         } else {
             string4 = string2;
             if (string4 == null) {
                 string4 = string3 = w2.ServerSyncService();
-}
-        if (uUID != null && a_2 == BanHandler.GnuSparseMapHandler && (contextObj = ((PunishmentTableService)(targetObj = this.plugin.BaseCoreGenericHandler(PunishmentTableService.class))).BaseCoreGenericHandler(uUID, string, string2)) != null) {
-            return LiteBansModule_268.BaseCoreGenericHandler.BaseCoreGenericHandler(this.plugin, (SilentHandler)contextObj);
+            }
         }
-        targetObj = w2.LiteBansModule_194();
+        if (uUID != null && a_2 == BanHandler.GnuSparseMapHandler && (contextObj = ((PunishmentTableService)(targetObj = (PunishmentTableService)this.plugin.BaseCoreGenericHandler(PunishmentTableService.class))).BaseCoreGenericHandler(uUID, string, string2)) != null) {
+            return LiteBansModule_269.BaseCoreGenericHandler.BaseCoreGenericHandler(this.plugin, (SilentHandler)contextObj);
+        }
+        targetObj = w2.LiteBansModule_195();
         contextObj = null;
         try {
             SilentHandler dZ2;
-            LiteBansModule_82 ch2 = (LiteBansModule_82)targetObj;
+            LiteBansModule_83 ch2 = (LiteBansModule_83)targetObj;
             if (AllHandler_3.BaseCoreGenericHandler(ch2, Objects.toString(uUID), string, a_2, string3, false, false, 48, null) == null) {
                 Entry entry = null;
                 return entry;
             }
             SilentHandler dZ3 = dZ2;
-            Entry entry = LiteBansModule_268.BaseCoreGenericHandler.BaseCoreGenericHandler(this.plugin, dZ3);
+            Entry entry = LiteBansModule_269.BaseCoreGenericHandler.BaseCoreGenericHandler(this.plugin, dZ3);
             return entry;
         }
         catch (Throwable throwable) {
@@ -75,7 +76,8 @@ extends Database {
         }
         finally {
             BlockHandler.BaseCoreGenericHandler((Closeable)targetObj, (Throwable)contextObj);
-}
+        }
+    }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -86,13 +88,13 @@ extends Database {
             String string2 = "Negative ID: " + l3;
             throw new IllegalArgumentException(string2.toString());
         }
-        DatabaseMonitorService w2 = this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
-        String string3 = ObjectUtilities.BaseCoreGenericHandler(string, (Object)"__DEFAULT__") ? w2.ServerSyncService() : string;
-        Closeable closeable = w2.LiteBansModule_194();
+        DatabaseMonitorService w2 = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        String string3 = ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"__DEFAULT__") ? w2.ServerSyncService() : string;
+        Closeable closeable = w2.LiteBansModule_195();
         Throwable throwable = null;
         try {
             SilentHandler dZ2;
-            LiteBansModule_82 ch2 = (LiteBansModule_82)closeable;
+            LiteBansModule_83 ch2 = (LiteBansModule_83)closeable;
             String string4 = string3;
             if (string4 == null) {
                 string4 = w2.ServerSyncService();
@@ -102,7 +104,7 @@ extends Database {
                 return entry;
             }
             SilentHandler dZ3 = dZ2;
-            Entry entry = LiteBansModule_268.BaseCoreGenericHandler.BaseCoreGenericHandler(this.plugin, dZ3);
+            Entry entry = LiteBansModule_269.BaseCoreGenericHandler.BaseCoreGenericHandler(this.plugin, dZ3);
             return entry;
         }
         catch (Throwable throwable2) {
@@ -111,7 +113,8 @@ extends Database {
         }
         finally {
             BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-}
+        }
+    }
 
     @Override
     public boolean isPlayerBanned(@Nullable UUID uUID, @Nullable String string) {
@@ -125,12 +128,12 @@ extends Database {
 
     @Override
     public Entry getBan(@Nullable UUID uUID, @Nullable String string, @Nullable String string2) {
-        return this.plugin(uUID, string, string2, BanHandler.LiteBansModule_240);
+        return this.plugin(uUID, string, string2, BanHandler.LiteBansModule_241);
     }
 
     @Override
     public Entry getBan(long l3, @Nullable String string) {
-        return this.plugin(l3, string, BanHandler.LiteBansModule_240);
+        return this.plugin(l3, string, BanHandler.LiteBansModule_241);
     }
 
     @Override
@@ -167,21 +170,22 @@ extends Database {
     public PreparedStatement prepareStatement(@NotNull String string) {
         String string2 = string;
         this.LiteBansModule_31();
-        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
-        DatabaseMonitorService w2 = this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
-        LiteBansModule_82 ch2 = w2.LiteBansModule_194();
+        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        DatabaseMonitorService w2 = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        LiteBansModule_83 ch2 = w2.LiteBansModule_195();
         if (ch2.LiteBansModule_31()) {
             throw new IllegalStateException("Database connection not available");
         }
-        if (StringUtilities.c(string2, '{', false, 2, null)) {
-            string2 = StringUtilities.BaseCoreGenericHandler(string2, c[6], configService.LiteBansModule_194().AsyncBackgroundTask_5(), false, 4, null);
+        if (StringUtilities.c((CharSequence)string2, '{', false, 2, null)) {
+            string2 = StringUtilities.BaseCoreGenericHandler(string2, c[6], configService.LiteBansModule_195().AsyncBackgroundTask_5(), false, 4, null);
             for (BansHandler_2 kL2 : BansHandler_2.values()) {
                 String string3 = kL2.name();
                 string2 = StringUtilities.BaseCoreGenericHandler(string2, '{' + string3.toLowerCase(Locale.ENGLISH) + '}', kL2.toString(), false, 4, null);
-}
+            }
+        }
         int n = this.LiteBansModule_31;
         this.LiteBansModule_31 = n + 1;
-        return new LiteBansModule_29(ch2.c(string2).LiteBansModule_31(), ch2);
+        return new LiteBansModule_29(ch2.c((CharSequence)string2).LiteBansModule_31(), ch2);
     }
 
     /*
@@ -189,21 +193,22 @@ extends Database {
      */
     @Override
     public Collection getUsersByIP(@Nullable String string) {
-{
+        block13: {
+            block12: {
                 this.LiteBansModule_31();
-                if (string == null) break;
+                if (string == null) break block12;
                 targetObj = string;
-                if (HexEncodingHelper.BaseCoreGenericHandler.itargetObj && !HexEncodingHelper.BaseCoreGenericHandler(string)) break;
+                if (LiteBansModule_346.BaseCoreGenericHandler.i((String)targetObj) && !LiteBansModule_346.BaseCoreGenericHandler(string)) break block13;
             }
             throw new IllegalArgumentException(c[7] + string);
         }
-        targetObj = this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
-        Closeable closeable = targetObj.LiteBansModule_194();
+        targetObj = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        Closeable closeable = ((DatabaseMonitorService)targetObj).LiteBansModule_195();
         Throwable throwable = null;
         try {
             boolean flag;
-            LiteBansModule_297 iA2;
-            LiteBansModule_82 ch2 = (LiteBansModule_82)closeable;
+            LiteBansModule_298 iA2;
+            LiteBansModule_83 ch2 = (LiteBansModule_83)closeable;
             List list = AllHandler_3.LiteBansModule_31(ch2, string, 0, 2, null);
             if (list.isEmpty()) {
                 Collection collection = CollectionUtilities.e();
@@ -213,9 +218,9 @@ extends Database {
             Iterable iterable2 = iterable;
             Collection collection = new ArrayList();
             for (Object t2 : iterable2) {
-                iA2 = (LiteBansModule_297)t2;
+                iA2 = (LiteBansModule_298)t2;
                 flag = false;
-                if (!HexEncodingHelper.BaseCoreGenericHandler(iA2.LiteBansModule_31())) continue;
+                if (!LiteBansModule_346.BaseCoreGenericHandler(iA2.LiteBansModule_31())) continue;
                 collection.add(t2);
             }
             iterable = (List)collection;
@@ -224,7 +229,7 @@ extends Database {
             collection = new ArrayList(CollectionUtilities.BaseCoreGenericHandler(iterable, 10));
             flag4 = false;
             for (Object t2 : iterable2) {
-                iA2 = (LiteBansModule_297)t2;
+                iA2 = (LiteBansModule_298)t2;
                 Collection collection2 = collection;
                 flag = false;
                 collection2.add(UUID.fromString(iA2.LiteBansModule_31()));
@@ -238,7 +243,8 @@ extends Database {
         }
         finally {
             BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-}
+        }
+    }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -246,12 +252,12 @@ extends Database {
     @Override
     public String getPlayerName(@NotNull UUID uUID) {
         this.LiteBansModule_31();
-        DatabaseMonitorService w2 = this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
-        Closeable closeable = w2.LiteBansModule_194();
+        DatabaseMonitorService w2 = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        Closeable closeable = w2.LiteBansModule_195();
         Throwable throwable = null;
         try {
-            LiteBansModule_82 ch2 = (LiteBansModule_82)closeable;
-            LiteBansModule_297 iA2 = ch2.c(uUID.toString());
+            LiteBansModule_83 ch2 = (LiteBansModule_83)closeable;
+            LiteBansModule_298 iA2 = ch2.c(uUID.toString());
             String string = iA2 != null ? iA2.BaseCoreGenericHandler() : null;
             return string;
         }
@@ -261,7 +267,8 @@ extends Database {
         }
         finally {
             BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-}
+        }
+    }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -269,14 +276,14 @@ extends Database {
     @Override
     public UUID getPlayerUUID(@NotNull String string) {
         this.LiteBansModule_31();
-        DatabaseMonitorService w2 = this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
-        Closeable closeable = w2.LiteBansModule_194();
+        DatabaseMonitorService w2 = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        Closeable closeable = w2.LiteBansModule_195();
         Throwable throwable = null;
         try {
-            LiteBansModule_82 ch2 = (LiteBansModule_82)closeable;
-            LiteBansModule_297 iA2 = ch2.c(string);
-            String string2 = HexEncodingHelper.BaseCoreGenericHandler.g(iA2 != null ? iA2.LiteBansModule_31() : null);
-            if (HexEncodingHelper.BaseCoreGenericHandler(string2)) {
+            LiteBansModule_83 ch2 = (LiteBansModule_83)closeable;
+            LiteBansModule_298 iA2 = ch2.c(string);
+            String string2 = LiteBansModule_346.BaseCoreGenericHandler.g(iA2 != null ? iA2.LiteBansModule_31() : null);
+            if (LiteBansModule_346.BaseCoreGenericHandler(string2)) {
                 UUID uUID = UUID.fromString(string2);
                 return uUID;
             }
@@ -289,7 +296,8 @@ extends Database {
         }
         finally {
             BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-}
+        }
+    }
 
     public String toString() {
         return c[8];
@@ -298,9 +306,15 @@ extends Database {
     private final void LiteBansModule_31() {
         if (this.plugin.ServerSyncService()) {
             throw new IllegalStateException(c[9]);
-}
+        }
+    }
 
     private static final void BaseCoreGenericHandler() {
         c = new String[]{"__DEFAULT__", "Negative ID: ", "__DEFAULT__", "__DEFAULT__", "__DEFAULT__", "Database connection not available", "{table_prefix}", "Target is not HikariDataSource IP address: ", "Database", "Database queries cannot be executed on the main server thread!"};
+    }
+
+    static {
+        DefaultHandler_2.BaseCoreGenericHandler();
+    }
 }
 

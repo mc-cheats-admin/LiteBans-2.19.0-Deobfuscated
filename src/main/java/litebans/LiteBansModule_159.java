@@ -1,69 +1,28 @@
 package litebans;
 
-import java.util.Iterator;
-import org.jetbrains.annotations.Nullable;
+import java.util.Collection;
+import java.util.List;
+import org.jetbrains.annotations.NotNull;
 
-public class LiteBansModule_159
-implements Iterable,
-LiteBansModule_122 {
-    public static final LiteBansModule_189 BaseCoreGenericHandler;
-    private final int c;
-    private final int e;
-    private final int LiteBansModule_31;
-    public LiteBansModule_159(int n, int n2, int n3) {
-        if (n3 == 0) {
-            throw new IllegalArgumentException("Step must be non-");
-        }
-        if (n3 == Integer.MIN_VALUE) {
-            throw new IllegalArgumentException("Step must be greater than Int.MIN_VALUE to avoid overflow on ");
-        }
-        this.c = n;
-        this.e = LiteBansModule_78.LiteBansModule_31(n, n2, n3);
-        this.LiteBansModule_31 = n3;
-    }
+public interface LiteBansModule_159 {
+    public PlatformPlugin c();
 
-    public final int c() {
-        return this.c;
-    }
+    public Object c(@NotNull String var1);
 
-    public final int LiteBansModule_31() {
-        return this.e;
-    }
+    public List LiteBansModule_31(@NotNull String var1);
 
-    public final int BaseCoreGenericHandler() {
-        return this.LiteBansModule_31;
-    }
+    public Collection BaseCoreGenericHandler();
 
-    public LiteBansModule_290 e() {
-        return new LiteBansModule_322(this.c, this.e, this.LiteBansModule_31);
-    }
+    public String LiteBansModule_31();
 
-    public boolean BaseCoreGenericHandler() {
-        return this.LiteBansModule_31 > 0 ? this.c > this.e : this.c < this.e;
-    }
+    public void BaseCoreGenericHandler(@NotNull Object var1, @NotNull CharSequence var2, @NotNull String var3, boolean var4, @NotNull String var5);
 
-    public boolean equals(@Nullable Object targetObj) {
-        return targetObj instanceof LiteBansModule_159 && (this.plugin() && targetObj.BaseCoreGenericHandler() || this.c == targetObj.c && this.e == targetObj.e && this.LiteBansModule_31 == targetObj.LiteBansModule_31);
-    }
+    public LiteBansModule_96 BaseCoreGenericHandler(@NotNull Object var1, boolean var2);
 
-    public int hashCode() {
-        return this.plugin() ? -1 : 31 * (31 * this.c + this.e) + this.LiteBansModule_31;
-    }
+    public void BaseCoreGenericHandler(@NotNull Object var1, @NotNull CharSequence var2);
 
-    public String toString() {
-        return this.LiteBansModule_31 > 0 ? this.c + ". + " + this.e + " step " + this.LiteBansModule_31 : this.c + " downTo " + this.e + " step " + -this.LiteBansModule_31;
-    }
+    public String BaseCoreGenericHandler(@NotNull Object var1);
 
-    public Iterator iterator() {
-        return this.e();
-    }
-
-    static {
-        LiteBansModule_159.AsyncBackgroundTask_5();
-        BaseCoreGenericHandler = new LiteBansModule_189(null);
-    }
-
-    private static final void AsyncBackgroundTask_5() {
-        AsyncBackgroundTask_5 = new String[]{"Step must be non-", "Step must be greater than Int.MIN_VALUE to avoid overflow on ", ". + ", " step ", " downTo ", " step "};
+    public boolean BaseCoreGenericHandler(@NotNull String var1);
 }
 

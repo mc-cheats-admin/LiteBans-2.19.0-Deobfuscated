@@ -1,6 +1,6 @@
 package litebans;
 
-public interface LiteBansModule_270 {
-    public void BaseCoreGenericHandler(int var1);
+public interface LiteBansModule_270
+extends LiteBansModule_313 {
 }
 

@@ -1,70 +1,27 @@
 package litebans;
 
-import java.io.Serializable;
-public final class LiteBansModule_288
-implements Cloneable,
-Serializable {
-    public static final LiteBansModule_288 c;
-    private static final long LiteBansModule_31;
-    private final int BaseCoreGenericHandler;
-
-    public LiteBansModule_288(int n) {
-        this.plugin = n;
+import java.text.DecimalFormat;
+public class LiteBansModule_288 {
+    public static final DecimalFormat LiteBansModule_31;
+    public static final DecimalFormat BaseCoreGenericHandler;
+    public static final DecimalFormat AsyncBackgroundTask_5;
+        public static String LiteBansModule_31(double d10) {
+        return LiteBansModule_31.format(d10);
     }
 
-    public LiteBansModule_288(byte[] byArray, int n) {
-        this.plugin = LiteBansModule_288.BaseCoreGenericHandler(byArray, n);
-    }
-
-    public byte[] LiteBansModule_31() {
-        byte[] byArray = new byte[2];
-        LiteBansModule_267.BaseCoreGenericHandler(byArray, this.plugin, 0, 2);
-        return byArray;
-    }
-
-    public int BaseCoreGenericHandler() {
-        return this.plugin;
-    }
-
-    public static final byte[] BaseCoreGenericHandler(int n) {
-        byte[] byArray = new byte[2];
-        LiteBansModule_288.BaseCoreGenericHandler(n, byArray, 0);
-        return byArray;
-    }
-
-    public static final void BaseCoreGenericHandler(int n, byte[] byArray, int n2) {
-        LiteBansModule_267.BaseCoreGenericHandler(byArray, n, n2, 2);
-    }
-
-    public static final int BaseCoreGenericHandler(byte[] byArray, int n) {
-        return (int)LiteBansModule_267.BaseCoreGenericHandler(byArray, n, 2);
-    }
-
-    public boolean equals(Object targetObj) {
-        if (targetObj == null || !(targetObj instanceof LiteBansModule_288)) {
-            return false;
-        }
-        return this.plugin == targetObj.BaseCoreGenericHandler();
-    }
-
-    public int hashCode() {
-        return this.plugin;
-    }
-
-    public Object clone() {
-        try {
-            return super.clone();
-        }
-        catch (CloneNotSupportedException cloneNotSupportedException) {
-            throw new RuntimeException(cloneNotSupportedException);
-}
-
-    public String toString() {
-        return "ZipShort value: " + this.plugin;
+    public static String BaseCoreGenericHandler(double d10) {
+        return BaseCoreGenericHandler.format(d10);
     }
 
     static {
-        LiteBansModule_31 = 1L;
-        c = new LiteBansModule_288(0);
+        LiteBansModule_288.BaseCoreGenericHandler();
+        LiteBansModule_31 = new DecimalFormat("#.#");
+        BaseCoreGenericHandler = new DecimalFormat("#.##");
+        AsyncBackgroundTask_5 = new DecimalFormat("#.###");
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        c = new String[]{"#.#", "#.##", "#.###"};
+    }
 }
 

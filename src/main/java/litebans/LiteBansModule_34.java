@@ -6,7 +6,7 @@ import org.jetbrains.annotations.Nullable;
 public final class LiteBansModule_34 {
     private final long c;
     private final long LiteBansModule_31;
-    public LiteBansModule_34(long l3, long l5) {
+        public LiteBansModule_34(long l3, long l5) {
         this.c = l3;
         this.LiteBansModule_31 = l5;
     }
@@ -25,7 +25,8 @@ public final class LiteBansModule_34 {
             default: {
                 AssertionUtilities.BaseCoreGenericHandler();
                 throw new CommandExitException();
-}
+            }
+        }
         return l3;
     }
 
@@ -55,5 +56,10 @@ public final class LiteBansModule_34 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"(BaseCoreGenericHandler=", ", mute="};
+    }
+
+    static {
+        LiteBansModule_34.BaseCoreGenericHandler();
+    }
 }
 

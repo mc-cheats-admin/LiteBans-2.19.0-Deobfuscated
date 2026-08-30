@@ -13,15 +13,15 @@ public final class ElementHandler
 implements List,
 Serializable,
 RandomAccess,
-LiteBansModule_122 {
+LiteBansModule_123 {
     public static final ElementHandler c;
     private static final long LiteBansModule_31;
-    private ElementHandler() {
+        private ElementHandler() {
     }
 
     @Override
     public boolean equals(@Nullable Object targetObj) {
-        return targetObj instanceof List && targetObj.isEmpty();
+        return targetObj instanceof List && ((List)targetObj).isEmpty();
     }
 
     @Override
@@ -43,13 +43,13 @@ LiteBansModule_122 {
     }
 
     public boolean LiteBansModule_31(@NotNull Void void_) {
-        ObjectUtilities.BaseCoreGenericHandler(void_, "element");
+        ObjectUtilities.BaseCoreGenericHandler((Object)void_, "element");
         return false;
     }
 
     @Override
     public boolean containsAll(@NotNull Collection collection) {
-        ObjectUtilities.BaseCoreGenericHandler(collection, "elements");
+        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "elements");
         return collection.isEmpty();
     }
 
@@ -58,29 +58,29 @@ LiteBansModule_122 {
     }
 
     public int c(@NotNull Void void_) {
-        ObjectUtilities.BaseCoreGenericHandler(void_, "element");
+        ObjectUtilities.BaseCoreGenericHandler((Object)void_, "element");
         return -1;
     }
 
     public int BaseCoreGenericHandler(@NotNull Void void_) {
-        ObjectUtilities.BaseCoreGenericHandler(void_, "element");
+        ObjectUtilities.BaseCoreGenericHandler((Object)void_, "element");
         return -1;
     }
 
     @Override
     public Iterator iterator() {
-        return LiteBansModule_410.BaseCoreGenericHandler;
+        return LiteBansModule_412.BaseCoreGenericHandler;
     }
 
     public ListIterator listIterator() {
-        return LiteBansModule_410.BaseCoreGenericHandler;
+        return LiteBansModule_412.BaseCoreGenericHandler;
     }
 
     public ListIterator listIterator(int n) {
         if (n != 0) {
             throw new IndexOutOfBoundsException("Index: " + n);
         }
-        return LiteBansModule_410.BaseCoreGenericHandler;
+        return LiteBansModule_412.BaseCoreGenericHandler;
     }
 
     public List subList(int n, int n2) {
@@ -137,7 +137,7 @@ LiteBansModule_122 {
         if (!(targetObj instanceof Void)) {
             return false;
         }
-        return this.LiteBansModule_31targetObj;
+        return this.LiteBansModule_31((Void)targetObj);
     }
 
     public Object get(int n) {
@@ -149,7 +149,7 @@ LiteBansModule_122 {
         if (!(targetObj instanceof Void)) {
             return -1;
         }
-        return this.ctargetObj;
+        return this.c((Void)targetObj);
     }
 
     @Override
@@ -157,7 +157,7 @@ LiteBansModule_122 {
         if (!(targetObj instanceof Void)) {
             return -1;
         }
-        return this.plugintargetObj;
+        return this.plugin((Void)targetObj);
     }
 
     @Override
@@ -175,7 +175,7 @@ LiteBansModule_122 {
 
     @Override
     public Object[] toArray(Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler(objectArray, "array");
+        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "array");
         return CollectionHandler.BaseCoreGenericHandler(this, objectArray);
     }
 
@@ -192,5 +192,6 @@ LiteBansModule_122 {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"[]", "element", "elements", "Empty list doesn'AsyncBackgroundTask_22 contain element LiteBansModule_21 index ", "element", "element", "Index: ", "fromIndex: ", ", toIndex: ", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "array"};
+    }
 }
 

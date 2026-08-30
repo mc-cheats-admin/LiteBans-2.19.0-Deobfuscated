@@ -1,77 +1,37 @@
 package litebans;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
-public final class LiteBansModule_109 {
-    private final String e;
-    private final LiteBansModule_34 c;
-    private final LiteBansModule_23 BaseCoreGenericHandler;
-    private final LiteBansModule_3 LiteBansModule_31;
-    public LiteBansModule_109(@NotNull String string, @NotNull LiteBansModule_34 b32, @NotNull LiteBansModule_23 au2, @NotNull LiteBansModule_3 a42) {
-        this.e = string;
-        this.c = b32;
-        this.plugin = au2;
-        this.LiteBansModule_31 = a42;
-    }
-
-    public final String BaseCoreGenericHandler() {
-        return this.e;
-    }
-
-    public final LiteBansModule_34 c() {
-        return this.c;
-    }
-
-    public final LiteBansModule_23 LiteBansModule_194() {
-        return this.plugin;
-    }
-
-    public final LiteBansModule_3 e() {
-        return this.LiteBansModule_31;
-    }
-
-    public final LiteBansModule_34 AsyncBackgroundTask_5() {
-        return this.c;
-    }
-
-    public final LiteBansModule_23 g() {
-        return this.plugin;
-    }
-
-    public String toString() {
-        return "(BaseCoreGenericHandler=" + this.e + ", duration=" + this.c + ", cooldown=" + this.plugin + ", other=" + this.LiteBansModule_31 + ')';
-    }
-
-    public int hashCode() {
-        int n = this.e.hashCode();
-        n = n * 31 + this.c.hashCode();
-        n = n * 31 + this.plugin.hashCode();
-        n = n * 31 + this.LiteBansModule_31.hashCode();
-        return n;
-    }
-
-    public boolean equals(@Nullable Object targetObj) {
-        if (this == targetObj) {
-            return true;
+import java.util.Arrays;
+static class LiteBansModule_109 {
+    public static final int LiteBansModule_31(byte[] byArray) {
+        for (int i = 0; i < 256; ++i) {
+            n += LiteBansModule_109.LiteBansModule_31(byArray, 4 * i);
         }
-        if (!(targetObj instanceof LiteBansModule_109)) {
+        return 84446 - (n - LiteBansModule_109.LiteBansModule_31(byArray, 28));
+    }
+
+    public static final boolean BaseCoreGenericHandler(byte[] byArray) {
+        int n = LiteBansModule_109.LiteBansModule_31(byArray, 24);
+        if (n != 60012) {
             return false;
         }
-        LiteBansModule_109 cy2 = (LiteBansModule_109)targetObj;
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.e, cy2.e)) {
-            return false;
-        }
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.c, cy2.c)) {
-            return false;
-        }
-        if (!ObjectUtilities.BaseCoreGenericHandler(this.plugin, cy2.BaseCoreGenericHandler)) {
-            return false;
-        }
-        return ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_31, cy2.LiteBansModule_31);
+        int n2 = LiteBansModule_109.LiteBansModule_31(byArray, 28);
+        return n2 == LiteBansModule_109.LiteBansModule_31(byArray);
     }
 
-    private static final void LiteBansModule_31() {
-        AsyncBackgroundTask_5 = new String[]{"(BaseCoreGenericHandler=", ", duration=", ", cooldown=", ", other="};
+    public static final long BaseCoreGenericHandler(byte[] byArray, int n) {
+        return LiteBansModule_268.BaseCoreGenericHandler(byArray, n, 8);
+    }
+
+    public static final int LiteBansModule_31(byte[] byArray, int n) {
+        return (int)LiteBansModule_268.BaseCoreGenericHandler(byArray, n, 4);
+    }
+
+    public static final int c(byte[] byArray, int n) {
+        return (int)LiteBansModule_268.BaseCoreGenericHandler(byArray, n, 2);
+    }
+
+    static final String BaseCoreGenericHandler(LiteBansModule_120 dd_02, byte[] byArray, int n, int n2) {
+        return dd_02.BaseCoreGenericHandler(Arrays.copyOfRange(byArray, n, n + n2));
+    }
 }
 

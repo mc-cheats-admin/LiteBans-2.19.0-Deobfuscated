@@ -1,15 +1,26 @@
 package litebans;
 
-import java.util.ArrayList;
 import java.util.Iterator;
-public class LiteBansModule_291 {
-    public static final ArrayList BaseCoreGenericHandler() {
-        return new ArrayList();
+public abstract class LiteBansModule_291
+implements Iterator,
+LiteBansModule_123 {
+        public abstract int LiteBansModule_31();
+
+    @Override
+    public void remove() {
+        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
-    public static final ArrayList BaseCoreGenericHandler(Iterator iterator) {
-        ArrayList arrayList = LiteBansModule_291.BaseCoreGenericHandler();
-        LiteBansModule_28.BaseCoreGenericHandler(arrayList, iterator);
-        return arrayList;
+    public Object next() {
+        return this.LiteBansModule_31();
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        BaseCoreGenericHandler = new String[]{"Operation is not supported for read-only collection"};
+    }
+
+    static {
+        LiteBansModule_291.BaseCoreGenericHandler();
+    }
 }
 

@@ -7,8 +7,8 @@ import org.jetbrains.annotations.NotNull;
 
 static class DefaultvalueHandler_4
 extends CharsetHandler {
-    public static final List BaseCoreGenericHandler(@NotNull Object[][] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler(objectArray, "<this>");
+        public static final List BaseCoreGenericHandler(@NotNull Object[][] objectArray) {
+        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
         Object[] objectArray2 = (Object[])objectArray;
         for (Object targetObj : objectArray2) {
             Object[] objectArray3 = (Object[])targetObj;
@@ -24,5 +24,14 @@ extends CharsetHandler {
             CollectionUtilities.BaseCoreGenericHandler((Collection)arrayList, objectArray4);
         }
         return arrayList;
+    }
+
+    private static final void LiteBansModule_31() {
+        LiteBansModule_31 = new String[]{"<this>", "<this>", "defaultValue", "null", "[...]", ", ", "null"};
+    }
+
+    static {
+        DefaultvalueHandler_4.LiteBansModule_31();
+    }
 }
 

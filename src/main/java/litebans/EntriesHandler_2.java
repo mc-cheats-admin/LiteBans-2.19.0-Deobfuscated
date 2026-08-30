@@ -4,12 +4,12 @@ import java.io.Serializable;
 import org.jetbrains.annotations.NotNull;
 
 static final class EntriesHandler_2
-extends LiteBansModule_230
-implements LiteBansModule_372,
+extends LiteBansModule_231
+implements LiteBansModule_374,
 Serializable {
     private final Enum[] e;
-    public EntriesHandler_2(@NotNull Enum[] enumArray) {
-        ObjectUtilities.BaseCoreGenericHandler(enumArray, "entries");
+        public EntriesHandler_2(@NotNull Enum[] enumArray) {
+        ObjectUtilities.BaseCoreGenericHandler((Object)enumArray, "entries");
         this.e = enumArray;
     }
 
@@ -19,25 +19,25 @@ Serializable {
     }
 
     public Enum BaseCoreGenericHandler(int n) {
-        LiteBansModule_230.LiteBansModule_31.BaseCoreGenericHandler(n, this.e.length);
+        LiteBansModule_231.LiteBansModule_31.BaseCoreGenericHandler(n, this.e.length);
         return this.e[n];
     }
 
     public boolean c(@NotNull Enum enum_) {
-        ObjectUtilities.BaseCoreGenericHandler(enum_, "element");
+        ObjectUtilities.BaseCoreGenericHandler((Object)enum_, "element");
         Enum enum_2 = (Enum)ArrayUtilities.BaseCoreGenericHandler((Object[])this.e, enum_.ordinal());
         return enum_2 == enum_;
     }
 
     public int LiteBansModule_31(@NotNull Enum enum_) {
-        ObjectUtilities.BaseCoreGenericHandler(enum_, "element");
+        ObjectUtilities.BaseCoreGenericHandler((Object)enum_, "element");
         int n = enum_.ordinal();
         Enum enum_2 = (Enum)ArrayUtilities.BaseCoreGenericHandler((Object[])this.e, n);
         return enum_2 == enum_ ? n : -1;
     }
 
     public int BaseCoreGenericHandler(@NotNull Enum enum_) {
-        ObjectUtilities.BaseCoreGenericHandler(enum_, "element");
+        ObjectUtilities.BaseCoreGenericHandler((Object)enum_, "element");
         return this.indexOf(enum_);
     }
 
@@ -55,7 +55,7 @@ Serializable {
         if (!(targetObj instanceof Enum)) {
             return false;
         }
-        return this.ctargetObj;
+        return this.c((Enum)targetObj);
     }
 
     @Override
@@ -63,7 +63,7 @@ Serializable {
         if (!(targetObj instanceof Enum)) {
             return -1;
         }
-        return this.LiteBansModule_31targetObj;
+        return this.LiteBansModule_31((Enum)targetObj);
     }
 
     @Override
@@ -71,6 +71,15 @@ Serializable {
         if (!(targetObj instanceof Enum)) {
             return -1;
         }
-        return this.plugintargetObj;
+        return this.plugin((Enum)targetObj);
+    }
+
+    private static final void c() {
+        LiteBansModule_195 = new String[]{"entries", "element", "element", "element"};
+    }
+
+    static {
+        EntriesHandler_2.c();
+    }
 }
 

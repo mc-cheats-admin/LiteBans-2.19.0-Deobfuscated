@@ -5,7 +5,7 @@ extends Enum {
     public static final V116Handler c;
     public static final V116Handler BaseCoreGenericHandler;
     private static final /* synthetic */ V116Handler[] LiteBansModule_31;
-    public static V116Handler[] values() {
+        public static V116Handler[] values() {
         return (V116Handler[])LiteBansModule_31.clone();
     }
 
@@ -35,5 +35,6 @@ extends Enum {
 
     private static final void LiteBansModule_31() {
         AsyncBackgroundTask_5 = new String[]{"V1_16", "V1_21_5"};
+    }
 }
 

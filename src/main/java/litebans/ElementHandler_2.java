@@ -10,15 +10,15 @@ import org.jetbrains.annotations.Nullable;
 public final class ElementHandler_2
 implements Set,
 Serializable,
-LiteBansModule_122 {
+LiteBansModule_123 {
     public static final ElementHandler_2 LiteBansModule_31;
     private static final long BaseCoreGenericHandler;
-    private ElementHandler_2() {
+        private ElementHandler_2() {
     }
 
     @Override
     public boolean equals(@Nullable Object targetObj) {
-        return targetObj instanceof Set && targetObj.isEmpty();
+        return targetObj instanceof Set && ((Set)targetObj).isEmpty();
     }
 
     @Override
@@ -40,19 +40,19 @@ LiteBansModule_122 {
     }
 
     public boolean BaseCoreGenericHandler(@NotNull Void void_) {
-        ObjectUtilities.BaseCoreGenericHandler(void_, "element");
+        ObjectUtilities.BaseCoreGenericHandler((Object)void_, "element");
         return false;
     }
 
     @Override
     public boolean containsAll(@NotNull Collection collection) {
-        ObjectUtilities.BaseCoreGenericHandler(collection, "elements");
+        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "elements");
         return collection.isEmpty();
     }
 
     @Override
     public Iterator iterator() {
-        return LiteBansModule_410.BaseCoreGenericHandler;
+        return LiteBansModule_412.BaseCoreGenericHandler;
     }
 
     private final Object c() {
@@ -94,7 +94,7 @@ LiteBansModule_122 {
         if (!(targetObj instanceof Void)) {
             return false;
         }
-        return this.plugintargetObj;
+        return this.plugin((Void)targetObj);
     }
 
     @Override
@@ -104,7 +104,7 @@ LiteBansModule_122 {
 
     @Override
     public Object[] toArray(Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler(objectArray, "array");
+        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "array");
         return CollectionHandler.BaseCoreGenericHandler(this, objectArray);
     }
 
@@ -121,5 +121,6 @@ LiteBansModule_122 {
 
     private static final void LiteBansModule_31() {
         c = new String[]{"[]", "element", "elements", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "array"};
+    }
 }
 

@@ -1,15 +1,24 @@
 package litebans;
 
-public final class LiteBansModule_209 {
-    public static final LiteBansModule_254 LiteBansModule_31 = new LiteBansModule_254(null);
-    private static boolean BaseCoreGenericHandler;
-    public static PlatformPlugin c;
+public interface LiteBansModule_209 {
+    public static final int LiteBansModule_195;
+    public static final int c;
+    public static final int e;
+    public static final int LiteBansModule_241;
+    public static final int g;
+    public static final int AsyncBackgroundTask_5;
+    public static final int LiteBansModule_31;
+    public static final int BaseCoreGenericHandler;
 
-    public static final /* synthetic */ boolean BaseCoreGenericHandler() {
-        return BaseCoreGenericHandler;
+    static {
+        BaseCoreGenericHandler = 420;
+        LiteBansModule_31 = 493;
+        AsyncBackgroundTask_5 = 511;
+        g = 16384;
+        LiteBansModule_241 = 32768;
+        e = 40960;
+        c = 61440;
+        LiteBansModule_195 = 4095;
     }
-
-    public static final /* synthetic */ void BaseCoreGenericHandler(boolean flag) {
-        BaseCoreGenericHandler = flag;
 }
 

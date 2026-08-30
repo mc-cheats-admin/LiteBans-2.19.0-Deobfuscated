@@ -4,7 +4,7 @@ public final class ShowTextHandler
 extends Enum {
     public static final ShowTextHandler c;
     private static final /* synthetic */ ShowTextHandler[] LiteBansModule_31;
-    public static ShowTextHandler[] values() {
+        public static ShowTextHandler[] values() {
         return (ShowTextHandler[])LiteBansModule_31.clone();
     }
 
@@ -33,5 +33,6 @@ extends Enum {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"SHOW_TEXT"};
+    }
 }
 

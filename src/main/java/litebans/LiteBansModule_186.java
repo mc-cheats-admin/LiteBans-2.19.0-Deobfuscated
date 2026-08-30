@@ -1,19 +1,32 @@
 package litebans;
 
-import java.io.File;
-public final class LiteBansModule_186
-implements LiteBansModule_417 {
-    final /* synthetic */ ConfigService LiteBansModule_31;
-    final /* synthetic */ Class BaseCoreGenericHandler;
+import java.util.Map;
+import org.yaml.snakeyaml.DumperOptions;
+import org.yaml.snakeyaml.nodes.Node;
+import org.yaml.snakeyaml.representer.Represent;
+import org.yaml.snakeyaml.representer.Representer;
 
-    LiteBansModule_186(ConfigService configService, Class clazz) {
-        this.LiteBansModule_31 = configService;
-        this.plugin = clazz;
+public final class LiteBansModule_186
+extends Representer {
+        LiteBansModule_186(DumperOptions dumperOptions) {
+        super(dumperOptions);
+        Map map = this.representers;
+        Class<NullHandler_4> clazz = NullHandler_4.class;
+        Represent represent = arg_0 -> LiteBansModule_186.BaseCoreGenericHandler(this, arg_0);
+        map.put(clazz, represent);
     }
 
-    @Override
-    public DatabaseService BaseCoreGenericHandler(PlatformPlugin plugin, File file) {
-        JsonHandler bb_02 = new JsonHandler(file, this.plugin);
-        return new YamlConfigProvider(this.LiteBansModule_31.BaseCoreGenericHandler, bb_02).c(file);
+    private static final Node BaseCoreGenericHandler(LiteBansModule_186 et_02, Object targetObj) {
+        ObjectUtilities.LiteBansModule_31(targetObj, "");
+        return et_02.represent(((NullHandler_4)targetObj).AsyncBackgroundTask_5);
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        BaseCoreGenericHandler = new String[]{""};
+    }
+
+    static {
+        LiteBansModule_186.BaseCoreGenericHandler();
+    }
 }
 

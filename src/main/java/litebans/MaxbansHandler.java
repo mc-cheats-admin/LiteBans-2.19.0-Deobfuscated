@@ -7,12 +7,12 @@ import org.jetbrains.annotations.NotNull;
 
 public final class MaxbansHandler
 extends BansHandler {
-    public MaxbansHandler(@NotNull PlatformPlugin plugin) {
+        public MaxbansHandler(@NotNull PlatformPlugin plugin) {
         super(plugin, "MaxBans", null, 0, 0L, 28, null);
     }
 
     @Override
-    public void BaseCoreGenericHandler(@NotNull String string, @NotNull Connection connection, @NotNull LiteBansModule_82 ch2, boolean flag) {
+    public void BaseCoreGenericHandler(@NotNull String string, @NotNull Connection connection, @NotNull LiteBansModule_83 ch2, boolean flag) {
         this.plugin(connection, ch2);
         this.plugin(flag, connection, ch2);
     }
@@ -20,7 +20,7 @@ extends BansHandler {
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
-    private final void BaseCoreGenericHandler(Connection connection, LiteBansModule_82 ch2) {
+    private final void BaseCoreGenericHandler(Connection connection, LiteBansModule_83 ch2) {
         while (true) {
             AutoCloseable autoCloseable = connection.prepareStatement("SELECT * FROM bans ORDER BY time LIMIT " + this.GnuSparseMapHandler() + " OFFSET " + n);
             Throwable throwable = null;
@@ -41,12 +41,13 @@ extends BansHandler {
             }
             n += this.GnuSparseMapHandler();
             Thread.sleep(this.AsyncBackgroundTask_5());
-}
+        }
+    }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
-    private final void BaseCoreGenericHandler(boolean flag, Connection connection, LiteBansModule_82 ch2) {
+    private final void BaseCoreGenericHandler(boolean flag, Connection connection, LiteBansModule_83 ch2) {
         if (flag) {
             AutoCloseable autoCloseable = connection.prepareStatement("SELECT * FROM ipbans");
             Throwable throwable = null;
@@ -70,7 +71,8 @@ extends BansHandler {
                     }
                     finally {
                         CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
-}
+                    }
+                }
                 targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
             }
             catch (Throwable throwable4) {
@@ -79,12 +81,14 @@ extends BansHandler {
             }
             finally {
                 CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
-}
+            }
+        }
+    }
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
-    private final int BaseCoreGenericHandler(PreparedStatement preparedStatement, LiteBansModule_82 ch2) {
+    private final int BaseCoreGenericHandler(PreparedStatement preparedStatement, LiteBansModule_83 ch2) {
         if (preparedStatement.execute()) {
             ResultSet resultSet = preparedStatement.getResultSet();
             AutoCloseable autoCloseable = resultSet;
@@ -100,8 +104,9 @@ extends BansHandler {
                     catch (Exception exception) {
                         this.m().warning("Import failed for ban on '" + resultSet2.getString("name") + "'; name changed, perhaps?");
                         MessageHandler messageHandler = this;
-                        ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(exception);
-}
+                        ((DatabaseMonitorService)messageHandler.LiteBansModule_241().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(exception);
+                    }
+                }
                 targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
             }
             catch (Throwable throwable2) {
@@ -110,11 +115,17 @@ extends BansHandler {
             }
             finally {
                 CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
-}
+            }
+        }
         return n;
     }
 
     private static final void BaseCoreGenericHandler() {
         m = new String[]{"MaxBans", "SELECT * FROM bans ORDER BY time LIMIT ", " OFFSET ", "SELECT * FROM ipbans", "reason", "time", "expires", "banner", "ip", "name", "reason", "time", "expires", "banner", "Import failed for ban on '", "name", "'; name changed, perhaps?"};
+    }
+
+    static {
+        MaxbansHandler.BaseCoreGenericHandler();
+    }
 }
 

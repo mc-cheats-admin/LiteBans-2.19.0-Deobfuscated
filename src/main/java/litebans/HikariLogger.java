@@ -281,5 +281,6 @@ extends Logger {
 
     public void warning(Supplier supplier) {
         BaseCoreGenericHandler.warning(supplier);
+    }
 }
 

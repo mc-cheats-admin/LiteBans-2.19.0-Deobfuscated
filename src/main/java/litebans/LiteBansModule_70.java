@@ -1,28 +1,53 @@
 package litebans;
 
-import org.jetbrains.annotations.NotNull;
+import java.net.InetSocketAddress;
+import java.net.SocketAddress;
+import net.md_5.bungee.api.chat.BaseComponent;
+import net.md_5.bungee.api.config.ServerInfo;
+import net.md_5.bungee.api.connection.Connection;
+import net.md_5.bungee.api.connection.Server;
 
-public final class LiteBansModule_70 {
-    private final Object BaseCoreGenericHandler;
-    private boolean LiteBansModule_31;
+public final class LiteBansModule_70
+implements Server {
+    final /* synthetic */ ServerInfo BaseCoreGenericHandler;
 
-    public LiteBansModule_70(@NotNull Object targetObj, boolean flag) {
-        this.plugin = targetObj;
-        this.LiteBansModule_31 = flag;
+    public LiteBansModule_70(ServerInfo serverInfo) {
+        this.plugin = serverInfo;
     }
 
-    public /* synthetic */ LiteBansModule_70(Object targetObj, boolean flag, int n, LiteBansModule_14 aJ2) {
-        if ((n & 2) != 0) {
-            flag = false;
-        }
-        this(targetObj, flag);
+    public InetSocketAddress getAddress() {
+        AssertionUtilities.BaseCoreGenericHandler();
+        throw new CommandExitException();
     }
 
-    public final boolean BaseCoreGenericHandler() {
-        return this.LiteBansModule_31;
+    public SocketAddress getSocketAddress() {
+        AssertionUtilities.BaseCoreGenericHandler();
+        throw new CommandExitException();
     }
 
-    public final void BaseCoreGenericHandler(boolean flag) {
-        this.LiteBansModule_31 = flag;
+    public void disconnect(String string) {
+    }
+
+    public void disconnect(BaseComponent[] baseComponentArray) {
+    }
+
+    public void disconnect(BaseComponent baseComponent) {
+    }
+
+    public boolean isConnected() {
+        return false;
+    }
+
+    public Connection.Unsafe unsafe() {
+        AssertionUtilities.BaseCoreGenericHandler();
+        throw new CommandExitException();
+    }
+
+    public ServerInfo getInfo() {
+        return this.plugin;
+    }
+
+    public void sendData(String string, byte[] byArray) {
+    }
 }
 

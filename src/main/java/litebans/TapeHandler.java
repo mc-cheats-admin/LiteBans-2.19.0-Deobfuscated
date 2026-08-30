@@ -3,8 +3,8 @@ package litebans;
 public final class TapeHandler
 extends Enum {
     public static final TapeHandler c = new TapeHandler("TAPE", 0, 1);
-    public static final TapeHandler LiteBansModule_194 = new TapeHandler("INODE", 1, 2);
-    public static final TapeHandler LiteBansModule_240 = new TapeHandler("BITS", 2, 3);
+    public static final TapeHandler LiteBansModule_195 = new TapeHandler("INODE", 1, 2);
+    public static final TapeHandler LiteBansModule_241 = new TapeHandler("BITS", 2, 3);
     public static final TapeHandler LiteBansModule_31 = new TapeHandler("ADDR", 3, 4);
     public static final TapeHandler BaseCoreGenericHandler = new TapeHandler("END", 4, 5);
     public static final TapeHandler AsyncBackgroundTask_5 = new TapeHandler("CLRI", 5, 6);
@@ -24,10 +24,10 @@ extends Enum {
      * WARNING - void declaration
      */
     private TapeHandler() {
-        void arg1;
+        void v1;
         void var2_-1;
         void var1_-1;
-        this.g = arg1;
+        this.g = v1;
     }
 
     public static final TapeHandler BaseCoreGenericHandler(int n) {
@@ -39,6 +39,7 @@ extends Enum {
     }
 
     static {
-        e = new TapeHandler[]{c, LiteBansModule_194, LiteBansModule_240, LiteBansModule_31, BaseCoreGenericHandler, AsyncBackgroundTask_5};
+        e = new TapeHandler[]{c, LiteBansModule_195, LiteBansModule_241, LiteBansModule_31, BaseCoreGenericHandler, AsyncBackgroundTask_5};
+    }
 }
 

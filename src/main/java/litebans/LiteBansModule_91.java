@@ -1,20 +1,200 @@
 package litebans;
 
-import java.util.UUID;
-public final class LiteBansModule_91 {
-    private static final UUID c = new UUID(0L, 0L);
-    private static final String BaseCoreGenericHandler = c.toString();
-    private static final LiteBansModule_89 LiteBansModule_31 = new LiteBansModule_89(null, c);
+import com.velocitypowered.api.event.command.CommandExecuteEvent;
+import com.velocitypowered.api.event.player.PlayerChatEvent;
+import com.velocitypowered.api.event.player.ServerPreConnectEvent;
+import com.velocitypowered.api.plugin.PluginContainer;
+import com.velocitypowered.api.plugin.PluginDescription;
+import com.velocitypowered.api.plugin.meta.PluginDependency;
+import com.velocitypowered.api.proxy.Player;
+import com.velocitypowered.api.proxy.server.RegisteredServer;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Locale;
+import java.util.Optional;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.TextComponent;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
+import org.jetbrains.annotations.NotNull;
 
-    public static final UUID c() {
-        return c;
+public final class LiteBansModule_91
+implements LiteBansModule_159 {
+    private final PlatformPlugin BaseCoreGenericHandler;
+        public LiteBansModule_91(@NotNull PlatformPlugin plugin) {
+        this.plugin = plugin;
     }
 
-    public static final String BaseCoreGenericHandler() {
-        return BaseCoreGenericHandler;
+    @Override
+    public PlatformPlugin c() {
+        return this.plugin;
     }
 
-    public static final LiteBansModule_89 LiteBansModule_31() {
-        return LiteBansModule_31;
+    public final VelocityPlugin BaseCoreGenericHandler(@NotNull PlatformPlugin plugin) {
+        ObjectUtilities.LiteBansModule_31(plugin, "");
+        return (VelocityPlugin)plugin;
+    }
+
+    public static /* synthetic */ VelocityPlugin BaseCoreGenericHandler(LiteBansModule_91 cm_02, PlatformPlugin plugin, int n, Object targetObj) {
+        if ((n & 1) != 0) {
+            plugin = cm_02.c();
+        }
+        return cm_02.BaseCoreGenericHandler(plugin);
+    }
+
+    @Override
+    public Object c(@NotNull String string) {
+                targetObj = string;
+        Optional optional = LiteBansModule_91.BaseCoreGenericHandler((LiteBansModule_91)targetObj, null, (int)1, null).c.getPluginManager().getPlugin(((String)targetObj).toLowerCase(Locale.ENGLISH));
+        return optional.isPresent() && ((PluginContainer)optional.get()).getInstance().isPresent() ? ((PluginContainer)optional.get()).getInstance().get() : null;
+    }
+
+    public List LiteBansModule_31() {
+        LiteBansModule_91 cm_02 = this;
+        Iterable iterable = LiteBansModule_91.BaseCoreGenericHandler((LiteBansModule_91)cm_02, null, (int)1, null).c.getAllServers();
+        Iterable iterable2 = iterable;
+        Collection collection = new ArrayList(CollectionUtilities.BaseCoreGenericHandler(iterable, 10));
+        for (Object t2 : iterable2) {
+            RegisteredServer registeredServer = (RegisteredServer)t2;
+            Collection collection2 = collection;
+            collection2.add(registeredServer.getServerInfo().getName());
+        }
+        return (List)collection;
+    }
+
+    @Override
+    public String LiteBansModule_31() {
+        LiteBansModule_91 cm_02 = this;
+        return LiteBansModule_91.BaseCoreGenericHandler((LiteBansModule_91)cm_02, null, (int)1, null).c.getVersion().getVersion();
+    }
+
+    @Override
+    public List LiteBansModule_31(@NotNull String string) {
+        boolean flag;
+        Collection collection;
+        PluginContainer pluginContainer;
+        LiteBansModule_91 cm_02 = this;
+        Iterable iterable = LiteBansModule_91.BaseCoreGenericHandler((LiteBansModule_91)cm_02, null, (int)1, null).c.getPluginManager().getPlugins();
+        Iterable iterable2 = iterable;
+        Collection collection2 = new ArrayList(CollectionUtilities.BaseCoreGenericHandler(iterable, 10));
+        for (Object t2 : iterable2) {
+            pluginContainer = (PluginContainer)t2;
+            collection = collection2;
+            flag = false;
+            collection.add(pluginContainer.getDescription());
+        }
+        iterable = (List)collection2;
+        flag3 = false;
+        iterable2 = iterable;
+        collection2 = new ArrayList();
+        flag4 = false;
+        for (Object t2 : iterable2) {
+            boolean flag5;
+            block7: {
+                pluginContainer = (PluginDescription)t2;
+                flag = false;
+                Iterable iterable3 = pluginContainer.getDependencies();
+                if (iterable3 instanceof Collection && ((Collection)iterable3).isEmpty()) {
+                    flag5 = false;
+                } else {
+                    for (Object t3 : iterable3) {
+                        PluginDependency pluginDependency = (PluginDependency)t3;
+                        String string2 = string;
+                        if (!ObjectUtilities.BaseCoreGenericHandler((Object)pluginDependency.getId(), (Object)string2.toLowerCase(Locale.ENGLISH))) continue;
+                        flag5 = true;
+                        break block7;
+                    }
+                    flag5 = false;
+                }
+            }
+            if (!flag5) continue;
+            collection2.add(t2);
+        }
+        iterable = (List)collection2;
+        flag3 = false;
+        iterable2 = iterable;
+        collection2 = new ArrayList();
+        flag4 = false;
+        for (Object t2 : iterable2) {
+            pluginContainer = (PluginDescription)t2;
+            flag = false;
+            if (!pluginContainer.getName().isPresent()) continue;
+            collection2.add(t2);
+        }
+        iterable = (List)collection2;
+        flag3 = false;
+        iterable2 = iterable;
+        collection2 = new ArrayList(CollectionUtilities.BaseCoreGenericHandler(iterable, 10));
+        flag4 = false;
+        for (Object t2 : iterable2) {
+            pluginContainer = (PluginDescription)t2;
+            collection = collection2;
+            flag = false;
+            collection.add((String)pluginContainer.getName().get());
+        }
+        return (List)collection2;
+    }
+
+    @Override
+    public void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence) {
+        if (!(targetObj instanceof ServerPreConnectEvent)) {
+            throw new UnsupportedOperationException();
+        }
+        ((ServerPreConnectEvent)targetObj).getPlayer().sendMessage((Component)this.plugin(charSequence));
+    }
+
+    @Override
+    public void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence, @NotNull String string, boolean flag, @NotNull String string2) {
+        Object contextObj = targetObj;
+        if (contextObj instanceof PlayerChatEvent) {
+            ((PlayerChatEvent)targetObj).setResult(PlayerChatEvent.ChatResult.denied());
+        } else if (contextObj instanceof CommandExecuteEvent) {
+            ((CommandExecuteEvent)targetObj).setResult(CommandExecuteEvent.CommandResult.denied());
+        } else if (contextObj instanceof ServerPreConnectEvent) {
+            ((ServerPreConnectEvent)targetObj).setResult(ServerPreConnectEvent.ServerResult.denied());
+            if (flag && !((ServerPreConnectEvent)targetObj).getPlayer().getCurrentServer().isPresent()) {
+                ((ServerPreConnectEvent)targetObj).getPlayer().disconnect((Component)this.plugin(charSequence));
+            }
+        }
+    }
+
+    public final TextComponent BaseCoreGenericHandler(@NotNull CharSequence charSequence) {
+        return LegacyComponentSerializer.legacySection().deserialize(((Object)charSequence).toString());
+    }
+
+    @Override
+    public LiteBansModule_96 BaseCoreGenericHandler(@NotNull Object targetObj, boolean flag) {
+        if (!(targetObj instanceof ServerPreConnectEvent)) {
+            throw new UnsupportedOperationException();
+        }
+        Player player = ((ServerPreConnectEvent)targetObj).getPlayer();
+        return new LiteBansModule_96(player.getUsername(), player.getUniqueId().toString(), player.getRemoteAddress().getAddress().getHostAddress());
+    }
+
+    @Override
+    public String BaseCoreGenericHandler(@NotNull Object targetObj) {
+        if (!(targetObj instanceof ServerPreConnectEvent)) {
+            throw new UnsupportedOperationException();
+        }
+        return ((RegisteredServer)((ServerPreConnectEvent)targetObj).getResult().getServer().get()).getServerInfo().getName();
+    }
+
+    @Override
+    public boolean BaseCoreGenericHandler(@NotNull String string) {
+        return KickBannedHandler.BaseCoreGenericHandler(this, string);
+    }
+
+    @Override
+    public Collection BaseCoreGenericHandler() {
+        return this.LiteBansModule_31();
+    }
+
+    private static final void BaseCoreGenericHandler() {
+        LiteBansModule_31 = new String[]{""};
+    }
+
+    static {
+        LiteBansModule_91.BaseCoreGenericHandler();
+    }
 }
 

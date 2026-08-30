@@ -6,11 +6,11 @@ import org.jetbrains.annotations.NotNull;
 
 static final class ArrayHandler_2
 implements Iterator,
-LiteBansModule_122 {
+LiteBansModule_123 {
     private final Object[] LiteBansModule_31;
     private int c;
-    public ArrayHandler_2(@NotNull Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler(objectArray, "array");
+        public ArrayHandler_2(@NotNull Object[] objectArray) {
+        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "array");
         this.LiteBansModule_31 = objectArray;
     }
 
@@ -39,5 +39,10 @@ LiteBansModule_122 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"array", "Operation is not supported for read-only collection"};
+    }
+
+    static {
+        ArrayHandler_2.BaseCoreGenericHandler();
+    }
 }
 

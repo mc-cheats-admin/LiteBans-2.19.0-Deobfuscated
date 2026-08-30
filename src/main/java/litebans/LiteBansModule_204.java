@@ -1,70 +1,56 @@
 package litebans;
 
-import java.util.Iterator;
-import java.util.UUID;
 import org.jetbrains.annotations.NotNull;
 
-public final class LiteBansModule_204
-extends MessageHandler {
-    private final String[] AsyncBackgroundTask_5;
-    public LiteBansModule_204(@NotNull String[] args, @NotNull PlatformPlugin plugin) {
-        super(plugin);
-        this.AsyncBackgroundTask_5 = args;
+public final class LiteBansModule_204 {
+    private LiteBansModule_204() {
     }
 
-    @Override
-    public void run() {
-        Object targetObj = MessageHandler.BaseCoreGenericHandler;
-        boolean flag = this.AsyncBackgroundTask_5.length < 2;
-        CharSequence charSequence = BlackHandler.LiteBansModule_194("$command add-login <name> <UUID> <IP>");
-        ChatFormatter chatFormatter = targetObj;
-        if (flag) {
-            ChatFormatter fo_03 = chatFormatter;
-            fo_03.BaseCoreGenericHandler(charSequence);
-            throw new CommandExitException();
-        }
-        targetObj = this;
-        flag = false;
-        ((DatabaseMonitorService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> LiteBansModule_204.BaseCoreGenericHandler(this, arg_0));
+    public final BroadcastHandler BaseCoreGenericHandler(int n) {
+        BroadcastHandler[] ijArray = BroadcastHandler.e();
+        return ijArray.length <= n ? null : ijArray[n];
     }
 
-    private final void LiteBansModule_31() {
-        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, this.AsyncBackgroundTask_5(), BlackHandler.c("Login record(AsyncBackgroundTask_21) "), null, 4, null);
-    }
-
-    private static final KotlinUnitHandler BaseCoreGenericHandler(LiteBansModule_204 fL2, LiteBansModule_82 ch2) {
-        Iterator iterator = MessageHandler.BaseCoreGenericHandler;
-        boolean flag = ch2.LiteBansModule_31();
-        Object targetObj = MessageKey.ServerEventListener;
-        ChatFormatter chatFormatter = iterator;
-        if (flag) {
-            ChatFormatter fo_03 = chatFormatter;
-            fo_03.BaseCoreGenericHandler(targetObj);
-            throw new CommandExitException();
-        }
-        if (fL2.AsyncBackgroundTask_5.length == 2) {
-            Object contextObj = new char[]{','};
-            iterator = StringUtilities.BaseCoreGenericHandler(fL2.AsyncBackgroundTask_5[1], contextObj, false, 0, 6, null).iterator();
-            while (iterator.hasNext()) {
-                contextObj = (String)iterator.next();
-                Object resultObj = LiteBansModule_50.c.BaseCoreGenericHandler((String)contextObj);
-                if (resultObj == null || (resultObj = this.BaseCoreGenericHandler()) == null || (resultObj = this.toString()) == null) continue;
-                targetObj = resultObj;
-                ch2.BaseCoreGenericHandler((String)contextObj, (String)targetObj, (String)null, false, true);
+    public final BroadcastHandler BaseCoreGenericHandler(@NotNull BanHandler a_2) {
+        BroadcastHandler ij2;
+        switch (LiteBansModule_244.BaseCoreGenericHandler[a_2.ordinal()]) {
+            case 1: {
+                ij2 = BroadcastHandler.DatabaseMonitorService;
+                break;
             }
-            fL2.LiteBansModule_31();
-            return KotlinUnitHandler.BaseCoreGenericHandler;
+            case 2: {
+                ij2 = BroadcastHandler.ServerSyncService;
+                break;
+            }
+            case 3: {
+                ij2 = BroadcastHandler.LiteBansModule_435;
+                break;
+            }
+            case 4: {
+                ij2 = BroadcastHandler.GnuSparseMapHandler;
+                break;
+            }
+            case 5: {
+                ij2 = BroadcastHandler.AsyncBackgroundTask_21;
+                break;
+            }
+            case 6: {
+                ij2 = BroadcastHandler.LiteBansModule_195;
+                break;
+            }
+            case 7: {
+                AssertionUtilities.BaseCoreGenericHandler();
+                throw new CommandExitException();
+            }
+            default: {
+                throw new LiteBansException_5();
+            }
         }
-        iterator = null;
-        if (fL2.AsyncBackgroundTask_5.length >= 4) {
-            iterator = fL2.AsyncBackgroundTask_5[3];
-        }
-        ch2.BaseCoreGenericHandler(fL2.AsyncBackgroundTask_5[1], fL2.AsyncBackgroundTask_5[2], (String)(iterator), false, true);
-        fL2.LiteBansModule_31();
-        return KotlinUnitHandler.BaseCoreGenericHandler;
+        return ij2;
     }
 
-    private static final void BaseCoreGenericHandler() {
-        e = new String[]{"$command add-login <name> <UUID> <IP>", "Login record(AsyncBackgroundTask_21) added."};
+    public /* synthetic */ LiteBansModule_204(LiteBansModule_14 aJ2) {
+        this();
+    }
 }
 

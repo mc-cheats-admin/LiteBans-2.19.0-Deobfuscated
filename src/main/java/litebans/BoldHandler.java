@@ -11,7 +11,7 @@ import java.lang.reflect.Type;
 public class BoldHandler
 implements JsonSerializer,
 JsonDeserializer {
-    private static final boolean BaseCoreGenericHandler(JsonElement jsonElement) {
+        private static final boolean BaseCoreGenericHandler(JsonElement jsonElement) {
         if (jsonElement.isJsonPrimitive()) {
             Number number;
             JsonPrimitive jsonPrimitive = (JsonPrimitive)jsonElement;
@@ -20,11 +20,12 @@ JsonDeserializer {
             }
             if (jsonPrimitive.isNumber() && (number = jsonPrimitive.getAsNumber()) instanceof Byte) {
                 return number.byteValue() != 0;
-}
+            }
+        }
         return false;
     }
 
-    static void BaseCoreGenericHandler(LiteBansModule_368 ka_02, JsonObject jsonObject) {
+    static void BaseCoreGenericHandler(LiteBansModule_370 ka_02, JsonObject jsonObject) {
         if (ka_02.q() != null) {
             jsonObject.addProperty("bold", ka_02.q());
         }
@@ -40,7 +41,7 @@ JsonDeserializer {
         if (ka_02.n() != null) {
             jsonObject.addProperty("obfuscated", ka_02.n());
         }
-        if (ka_02.LiteBansModule_240() && ka_02.AsyncBackgroundTask_5().c() != null) {
+        if (ka_02.LiteBansModule_241() && ka_02.AsyncBackgroundTask_5().c() != null) {
             jsonObject.addProperty("color", ka_02.AsyncBackgroundTask_5().BaseCoreGenericHandler());
         }
         if (ka_02.m()) {
@@ -48,15 +49,16 @@ JsonDeserializer {
         }
         if (ka_02.r()) {
             jsonObject.addProperty("font", ka_02.g());
-}
+        }
+    }
 
     /*
      * Exception decompiling
      */
-    public LiteBansModule_368 BaseCoreGenericHandler(JsonElement v1, Type v2, JsonDeserializationContext v3) {
+    public LiteBansModule_370 BaseCoreGenericHandler(JsonElement v1, Type v2, JsonDeserializationContext v3) {
         /*
          * This method has failed to decompile.  When submitting BaseCoreGenericHandler bug report, please provide this stack trace, and (if you hold appropriate legal rights) the relevant class file.
-         *
+         * 
          * org.benf.cfr.reader.bytecode.analysis.opgraph.op4rewriters.SwitchStringRewriter$TooOptimisticMatchException
          *     LiteBansModule_21 org.benf.cfr.reader.bytecode.analysis.opgraph.op4rewriters.SwitchStringRewriter.getString(SwitchStringRewriter.java:404)
          *     LiteBansModule_21 org.benf.cfr.reader.bytecode.analysis.opgraph.op4rewriters.SwitchStringRewriter.access$600(SwitchStringRewriter.java:53)
@@ -82,14 +84,14 @@ JsonDeserializer {
         throw new IllegalStateException("Decompilation failed");
     }
 
-    public JsonElement BaseCoreGenericHandler(LiteBansModule_368 ka_02, Type type, JsonSerializationContext jsonSerializationContext) {
+    public JsonElement BaseCoreGenericHandler(LiteBansModule_370 ka_02, Type type, JsonSerializationContext jsonSerializationContext) {
         JsonObject jsonObject = new JsonObject();
         BoldHandler.BaseCoreGenericHandler(ka_02, jsonObject);
         return jsonObject;
     }
 
     public JsonElement serialize(Object targetObj, Type type, JsonSerializationContext jsonSerializationContext) {
-        return this.plugin((LiteBansModule_368)targetObj, type, jsonSerializationContext);
+        return this.plugin((LiteBansModule_370)targetObj, type, jsonSerializationContext);
     }
 
     public Object deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) {
@@ -98,5 +100,10 @@ JsonDeserializer {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"bold", "italic", "underlined", "strikethrough", "obfuscated", "color", "shadow_color", "font", "bold", "italic", "underlined", "strikethrough", "obfuscated", "color", "shadow_color", "font"};
+    }
+
+    static {
+        BoldHandler.BaseCoreGenericHandler();
+    }
 }
 

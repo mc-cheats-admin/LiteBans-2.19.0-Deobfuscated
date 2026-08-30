@@ -38,7 +38,8 @@ SimpleCommand {
         }
         catch (Throwable throwable) {
             throwable.printStackTrace();
-}
+        }
+    }
 
     @Override
     public String getName() {
@@ -78,5 +79,6 @@ SimpleCommand {
 
     public void execute(CommandInvocation commandInvocation) {
         this.LiteBansModule_31((SimpleCommand.Invocation)commandInvocation);
+    }
 }
 

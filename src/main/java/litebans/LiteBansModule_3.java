@@ -4,7 +4,7 @@ import org.jetbrains.annotations.Nullable;
 
 public final class LiteBansModule_3 {
     private final boolean BaseCoreGenericHandler;
-    public LiteBansModule_3(boolean flag) {
+        public LiteBansModule_3(boolean flag) {
         this.plugin = flag;
     }
 
@@ -29,5 +29,14 @@ public final class LiteBansModule_3 {
         }
         LiteBansModule_3 a42 = (LiteBansModule_3)targetObj;
         return this.plugin == a42.BaseCoreGenericHandler;
+    }
+
+    private static final void LiteBansModule_31() {
+        LiteBansModule_31 = new String[]{"GroupLimitOther(templateOnly="};
+    }
+
+    static {
+        LiteBansModule_3.LiteBansModule_31();
+    }
 }
 

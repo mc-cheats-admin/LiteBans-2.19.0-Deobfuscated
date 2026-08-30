@@ -1,6 +1,7 @@
 package litebans;
 
-public class LiteBansModule_179 {
-    public static String BaseCoreGenericHandler = "444444";
+public interface LiteBansModule_179
+extends LiteBansModule_272 {
+    public Object BaseCoreGenericHandler(Object var1);
 }
 

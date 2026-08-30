@@ -9,30 +9,30 @@ extends Enum {
     public static final double m;
     private static final NativepatternHandler c;
     private static final NativepatternHandler e;
-    public static final SecHandler LiteBansModule_194;
+    public static final SecHandler LiteBansModule_195;
     public static final SecHandler i;
     public static final SecHandler n;
     public static final SecHandler BaseCoreGenericHandler;
     public static final SecHandler GnuSparseMapHandler;
     public static final SecHandler g;
-    public static final SecHandler LiteBansModule_240;
-    private static final /* synthetic */ SecHandler[] LiteBansModule_401;
-    private static final /* synthetic */ LiteBansModule_372 Utf8Handler_2;
-    /*
+    public static final SecHandler LiteBansModule_241;
+    private static final /* synthetic */ SecHandler[] LiteBansModule_403;
+    private static final /* synthetic */ LiteBansModule_374 Utf8Handler_2;
+        /*
      * WARNING - Possible parameter corruption
      * WARNING - void declaration
      */
     private SecHandler() {
-        void arg1;
+        void v1;
         void var2_-1;
         void var1_-1;
-        this.BroadcastService = arg1;
+        this.BroadcastService = v1;
     }
 
     public final long LiteBansModule_31(double d10) {
         double d11;
         double d12 = d10 * 1000.0;
-        switch (LiteBansModule_192.BaseCoreGenericHandler[this.ordinal()]) {
+        switch (LiteBansModule_193.BaseCoreGenericHandler[this.ordinal()]) {
             case 1: {
                 d11 = d12;
                 break;
@@ -63,13 +63,14 @@ extends Enum {
             }
             default: {
                 throw new LiteBansException_5();
-}
+            }
+        }
         return (long)d11;
     }
 
     public final boolean LiteBansModule_31(@NotNull String string) {
         boolean flag;
-        switch (LiteBansModule_192.BaseCoreGenericHandler[this.ordinal()]) {
+        switch (LiteBansModule_193.BaseCoreGenericHandler[this.ordinal()]) {
             case 1: {
                 flag = PermanentHandler.BaseCoreGenericHandler(AsyncBackgroundTask_5, string, MessageKey.dC, MessageKey.bu);
                 break;
@@ -83,7 +84,7 @@ extends Enum {
                 break;
             }
             case 4: {
-                flag = PermanentHandler.BaseCoreGenericHandler(AsyncBackgroundTask_5, string, MessageKey.LiteBansModule_125, MessageKey.aq);
+                flag = PermanentHandler.BaseCoreGenericHandler(AsyncBackgroundTask_5, string, MessageKey.LiteBansModule_126, MessageKey.aq);
                 break;
             }
             case 5: {
@@ -100,49 +101,51 @@ extends Enum {
             }
             default: {
                 throw new LiteBansException_5();
-}
+            }
+        }
         return flag;
     }
 
     public final CharSequence BaseCoreGenericHandler(double d10) {
         CharSequence charSequence;
-        switch (LiteBansModule_192.BaseCoreGenericHandler[this.ordinal()]) {
+        switch (LiteBansModule_193.BaseCoreGenericHandler[this.ordinal()]) {
             case 1: {
-                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, MessageKey.dC, MessageKey.bu);
+                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, (Object)MessageKey.dC, (Object)MessageKey.bu);
                 break;
             }
             case 2: {
-                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, MessageKey.r, MessageKey.cB);
+                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, (Object)MessageKey.r, (Object)MessageKey.cB);
                 break;
             }
             case 3: {
-                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, MessageKey.cH, MessageKey.SetHandler);
+                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, (Object)MessageKey.cH, (Object)MessageKey.SetHandler);
                 break;
             }
             case 4: {
-                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, MessageKey.LiteBansModule_125, MessageKey.aq);
+                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, (Object)MessageKey.LiteBansModule_126, (Object)MessageKey.aq);
                 break;
             }
             case 5: {
-                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, MessageKey.ElementsHandler_3, MessageKey.aU);
+                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, (Object)MessageKey.ElementsHandler_3, (Object)MessageKey.aU);
                 break;
             }
             case 6: {
-                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, MessageKey.LiteBansModule_10, MessageKey.aT);
+                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, (Object)MessageKey.LiteBansModule_10, (Object)MessageKey.aT);
                 break;
             }
             case 7: {
-                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, MessageKey.AsyncBackgroundTask_6, MessageKey.q);
+                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, (Object)MessageKey.AsyncBackgroundTask_6, (Object)MessageKey.q);
                 break;
             }
             default: {
                 throw new LiteBansException_5();
-}
+            }
+        }
         return charSequence;
     }
 
     public static SecHandler[] values() {
-        return (SecHandler[])LiteBansModule_401.clone();
+        return (SecHandler[])LiteBansModule_403.clone();
     }
 
     public static SecHandler BaseCoreGenericHandler(String string) {
@@ -165,10 +168,10 @@ extends Enum {
         m = 0.0;
         SecHandler.LiteBansModule_31();
         String[] args = new String[]{"AsyncBackgroundTask_21", "se", "sc", "sec", "secs", "second", "seconds"};
-        LiteBansModule_194 = new SecHandler("SECONDS", 0, args);
+        LiteBansModule_195 = new SecHandler("SECONDS", 0, args);
         args = new String[]{"m", "mi", "min", "mins", "minute", "minutes"};
         i = new SecHandler("MINUTES", 1, args);
-        args = new String[]{"LiteBansModule_240", "hr", "hrs", "hour", "hours"};
+        args = new String[]{"LiteBansModule_241", "hr", "hrs", "hour", "hours"};
         n = new SecHandler("HOURS", 2, args);
         args = new String[]{"AsyncBackgroundTask_5", "CommandExecutionTask", "PlayerJoinListener", "day", "days"};
         BaseCoreGenericHandler = new SecHandler("DAYS", 3, args);
@@ -177,11 +180,16 @@ extends Enum {
         args = new String[]{"mo", "mh", "mon", "month", "months"};
         g = new SecHandler("MONTHS", 5, args);
         args = new String[]{"HoverTextFormatter", "ye", "yr", "yrs", "year", "years"};
-        LiteBansModule_240 = new SecHandler("YEARS", 6, args);
-        LiteBansModule_401 = dkArray = new SecHandler[]{SecHandler.LiteBansModule_194, SecHandler.i, SecHandler.n, SecHandler.BaseCoreGenericHandler, SecHandler.GnuSparseMapHandler, SecHandler.g, SecHandler.LiteBansModule_240};
-        Utf8Handler_2 = EntriesHandler_3.BaseCoreGenericHandler(LiteBansModule_401);
+        LiteBansModule_241 = new SecHandler("YEARS", 6, args);
+        LiteBansModule_403 = dkArray = new SecHandler[]{SecHandler.LiteBansModule_195, SecHandler.i, SecHandler.n, SecHandler.BaseCoreGenericHandler, SecHandler.GnuSparseMapHandler, SecHandler.g, SecHandler.LiteBansModule_241};
+        Utf8Handler_2 = EntriesHandler_3.BaseCoreGenericHandler(LiteBansModule_403);
         AsyncBackgroundTask_5 = new PermanentHandler(null);
         c = new NativepatternHandler("[0-9.]");
         e = new NativepatternHandler("[^0-9.]");
+    }
+
+    private static final void LiteBansModule_31() {
+        LiteBansModule_31 = new String[]{"SECONDS", "AsyncBackgroundTask_21", "se", "sc", "sec", "secs", "second", "seconds", "MINUTES", "m", "mi", "min", "mins", "minute", "minutes", "HOURS", "LiteBansModule_241", "hr", "hrs", "hour", "hours", "DAYS", "AsyncBackgroundTask_5", "CommandExecutionTask", "PlayerJoinListener", "day", "days", "WEEKS", "DatabaseMonitorService", "we", "wk", "wks", "week", "weeks", "MONTHS", "mo", "mh", "mon", "month", "months", "YEARS", "HoverTextFormatter", "ye", "yr", "yrs", "year", "years", "[0-9.]", "[^0-9.]"};
+    }
 }
 

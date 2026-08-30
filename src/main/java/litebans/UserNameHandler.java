@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 public class UserNameHandler
-implements LiteBansModule_235,
-LiteBansModule_411 {
+implements LiteBansModule_236,
+LiteBansModule_413 {
     private static final UserNameHandler[] ContinueEvictHandler;
     public static final long aL;
     private String LiteBansModule_7 = "";
@@ -50,7 +50,7 @@ LiteBansModule_411 {
         this.HikariConfig = flag;
     }
 
-    public UserNameHandler(byte[] byArray, LiteBansModule_119 dd_02, boolean flag) {
+    public UserNameHandler(byte[] byArray, LiteBansModule_120 dd_02, boolean flag) {
         this(false);
         this.plugin(byArray, dd_02, false, flag);
     }
@@ -63,7 +63,7 @@ LiteBansModule_411 {
         if (targetObj == null || this.getClass() != targetObj.getClass()) {
             return false;
         }
-        return this.plugintargetObj;
+        return this.plugin((UserNameHandler)targetObj);
     }
 
     public int hashCode() {
@@ -112,7 +112,7 @@ LiteBansModule_411 {
         this.ay = list;
     }
 
-    public List LiteBansModule_194() {
+    public List LiteBansModule_195() {
         return this.ay;
     }
 
@@ -146,13 +146,13 @@ LiteBansModule_411 {
     }
 
     public long g() {
-        if (!this.LiteBansModule_401()) {
+        if (!this.LiteBansModule_403()) {
             return this.ElementsHandler;
         }
         return this.ar;
     }
 
-    public boolean LiteBansModule_240() {
+    public boolean LiteBansModule_241() {
         return this.AsyncBackgroundTask_5() || this.GnuSparseMapHandler();
     }
 
@@ -195,8 +195,8 @@ LiteBansModule_411 {
         return !this.c() && !this.plugin() && this.getName().endsWith("/");
     }
 
-    public boolean LiteBansModule_401() {
-        return this.LiteBansModule_240() || this.e();
+    public boolean LiteBansModule_403() {
+        return this.LiteBansModule_241() || this.e();
     }
 
     void c(Map map) {
@@ -204,7 +204,8 @@ LiteBansModule_411 {
             String string = (String)entry.getKey();
             String string2 = (String)entry.getValue();
             this.plugin(string, string2, map);
-}
+        }
+    }
 
     private final void BaseCoreGenericHandler(String string, String string2, Map map) {
         switch (string) {
@@ -263,28 +264,30 @@ LiteBansModule_411 {
             }
             default: {
                 this.aM.put(string, string2);
-}
+            }
+        }
+    }
 
-    private final void BaseCoreGenericHandler(byte[] byArray, LiteBansModule_119 dd_02, boolean flag, boolean flag2) {
-        this.LiteBansModule_7 = flag ? LiteBansModule_355.LiteBansModule_31(byArray, n, 100) : LiteBansModule_355.BaseCoreGenericHandler(byArray, n, 100, dd_02);
-        this.LiteBansModule_24 = this.plugin(byArray, n += 100, 8, flag2);
-        this.LiteBansModule_15 = this.plugin(byArray, n += 8, 8, flag2);
-        this.LiteBansModule_9 = this.plugin(byArray, n += 8, 8, flag2);
-        this.ElementsHandler = LiteBansModule_355.BaseCoreGenericHandler(byArray, n += 8, 12);
+    private final void BaseCoreGenericHandler(byte[] byArray, LiteBansModule_120 dd_02, boolean flag, boolean flag2) {
+        this.LiteBansModule_7 = flag ? LiteBansModule_357.LiteBansModule_31(byArray, n, 100) : LiteBansModule_357.BaseCoreGenericHandler(byArray, n, 100, dd_02);
+        this.LiteBansModule_24 = (int)this.plugin(byArray, n += 100, 8, flag2);
+        this.LiteBansModule_15 = (int)this.plugin(byArray, n += 8, 8, flag2);
+        this.LiteBansModule_9 = (int)this.plugin(byArray, n += 8, 8, flag2);
+        this.ElementsHandler = LiteBansModule_357.BaseCoreGenericHandler(byArray, n += 8, 12);
         this.aE = this.plugin(byArray, n += 12, 12, flag2);
         n += 12;
-        this.LiteBansModule_14 = LiteBansModule_355.BaseCoreGenericHandler(byArray);
+        this.LiteBansModule_14 = LiteBansModule_357.BaseCoreGenericHandler(byArray);
         n += 8;
         this.SQLiteDriverHandler = byArray[n++];
-        this.aG = flag ? LiteBansModule_355.LiteBansModule_31(byArray, n, 100) : LiteBansModule_355.BaseCoreGenericHandler(byArray, n, 100, dd_02);
-        this.InitHandler = LiteBansModule_355.LiteBansModule_31(byArray, n += 100, 6);
-        this.CommandExitException = LiteBansModule_355.LiteBansModule_31(byArray, n += 6, 2);
-        this.LiteBansModule_23 = flag ? LiteBansModule_355.LiteBansModule_31(byArray, n, 32) : LiteBansModule_355.BaseCoreGenericHandler(byArray, n += 2, 32, dd_02);
-        this.LockdownCommandHandler = flag ? LiteBansModule_355.LiteBansModule_31(byArray, n, 32) : LiteBansModule_355.BaseCoreGenericHandler(byArray, n += 32, 32, dd_02);
+        this.aG = flag ? LiteBansModule_357.LiteBansModule_31(byArray, n, 100) : LiteBansModule_357.BaseCoreGenericHandler(byArray, n, 100, dd_02);
+        this.InitHandler = LiteBansModule_357.LiteBansModule_31(byArray, n += 100, 6);
+        this.CommandExitException = LiteBansModule_357.LiteBansModule_31(byArray, n += 6, 2);
+        this.LiteBansModule_23 = flag ? LiteBansModule_357.LiteBansModule_31(byArray, n, 32) : LiteBansModule_357.BaseCoreGenericHandler(byArray, n += 2, 32, dd_02);
+        this.LockdownCommandHandler = flag ? LiteBansModule_357.LiteBansModule_31(byArray, n, 32) : LiteBansModule_357.BaseCoreGenericHandler(byArray, n += 32, 32, dd_02);
         n += 32;
         if (this.SQLiteDriverHandler == 51 || this.SQLiteDriverHandler == 52) {
-            this.LiteBansModule_25 = this.plugin(byArray, n, 8, flag2);
-            this.LiteBansModule_18 = this.plugin(byArray, n += 8, 8, flag2);
+            this.LiteBansModule_25 = (int)this.plugin(byArray, n, 8, flag2);
+            this.LiteBansModule_18 = (int)this.plugin(byArray, n += 8, 8, flag2);
             n += 8;
         } else {
             n += 16;
@@ -299,41 +302,44 @@ LiteBansModule_411 {
                 ++n;
                 this.ay = new ArrayList();
                 for (int i = 0; i < 4; ++i) {
-                    LiteBansModule_292 i72 = LiteBansModule_355.LiteBansModule_31(byArray, n + i * 24);
+                    LiteBansModule_293 i72 = LiteBansModule_357.LiteBansModule_31(byArray, n + i * 24);
                     if (i72.BaseCoreGenericHandler() <= 0L && i72.LiteBansModule_31() <= 0L) continue;
                     this.ay.add(i72);
                 }
-                this.ax = LiteBansModule_355.BaseCoreGenericHandler(byArray, n += 96);
-                this.ar = LiteBansModule_355.c(byArray, ++n, 12);
+                this.ax = LiteBansModule_357.BaseCoreGenericHandler(byArray, n += 96);
+                this.ar = LiteBansModule_357.c(byArray, ++n, 12);
                 n += 12;
                 break;
             }
             case 4: {
                 String string;
-                String string2 = string = flag ? LiteBansModule_355.LiteBansModule_31(byArray, n, 131) : LiteBansModule_355.BaseCoreGenericHandler(byArray, n, 131, dd_02);
+                String string2 = string = flag ? LiteBansModule_357.LiteBansModule_31(byArray, n, 131) : LiteBansModule_357.BaseCoreGenericHandler(byArray, n, 131, dd_02);
                 if (string.length() <= 0) break;
                 this.LiteBansModule_7 = string + "/" + this.LiteBansModule_7;
                 break;
             }
             default: {
                 String string;
-                String string3 = string = flag ? LiteBansModule_355.LiteBansModule_31(byArray, n, 155) : LiteBansModule_355.BaseCoreGenericHandler(byArray, n, 155, dd_02);
+                String string3 = string = flag ? LiteBansModule_357.LiteBansModule_31(byArray, n, 155) : LiteBansModule_357.BaseCoreGenericHandler(byArray, n, 155, dd_02);
                 if (this.isDirectory() && !this.LiteBansModule_7.endsWith("/")) {
                     this.LiteBansModule_7 = this.LiteBansModule_7 + "/";
                 }
                 if (string.length() <= 0) break;
                 this.LiteBansModule_7 = string + "/" + this.LiteBansModule_7;
-}
+            }
+        }
+    }
 
     private final long BaseCoreGenericHandler(byte[] byArray, int n, int n2, boolean flag) {
         if (flag) {
             try {
-                return LiteBansModule_355.BaseCoreGenericHandler(byArray, n, n2);
+                return LiteBansModule_357.BaseCoreGenericHandler(byArray, n, n2);
             }
             catch (IllegalArgumentException illegalArgumentException) {
                 return -1L;
-}
-        return LiteBansModule_355.BaseCoreGenericHandler(byArray, n, n2);
+            }
+        }
+        return LiteBansModule_357.BaseCoreGenericHandler(byArray, n, n2);
     }
 
     private static final String BaseCoreGenericHandler(String string, boolean flag) {
@@ -346,9 +352,12 @@ LiteBansModule_411 {
                     char c = string.charAt(1);
                     if (c == ':' && (n >= 97 && n <= 122 || n >= 65 && n <= 90)) {
                         string = string.substring(2);
-} else if (string2.contains("netware") && (n = string.indexOf(58)) != -1) {
+                    }
+                }
+            } else if (string2.contains("netware") && (n = string.indexOf(58)) != -1) {
                 string = string.substring(n + 1);
-}
+            }
+        }
         string = string.replace(File.separatorChar, '/');
         while (!flag && string.startsWith("/")) {
             string = string.substring(1);
@@ -357,11 +366,11 @@ LiteBansModule_411 {
     }
 
     private final int BaseCoreGenericHandler(byte[] byArray) {
-        if (LiteBansModule_76.BaseCoreGenericHandler("ustar ", byArray, 257, 6)) {
+        if (LiteBansModule_77.BaseCoreGenericHandler("ustar ", byArray, 257, 6)) {
             return 2;
         }
-        if (LiteBansModule_76.BaseCoreGenericHandler("ustar\u0000", byArray, 257, 6)) {
-            if (LiteBansModule_76.BaseCoreGenericHandler("tar\u0000", byArray, 508, 4)) {
+        if (LiteBansModule_77.BaseCoreGenericHandler("ustar\u0000", byArray, 257, 6)) {
+            if (LiteBansModule_77.BaseCoreGenericHandler("tar\u0000", byArray, 508, 4)) {
                 return 4;
             }
             return 3;
@@ -374,7 +383,8 @@ LiteBansModule_411 {
         this.ar = Integer.parseInt((String)map.get("GNU.sparse.size"));
         if (map.containsKey("GNU.sparse.name")) {
             this.LiteBansModule_7 = (String)map.get("GNU.sparse.name");
-}
+        }
+    }
 
     void LiteBansModule_31(Map map) {
         this.ap = true;
@@ -387,7 +397,8 @@ LiteBansModule_411 {
         this.aq = true;
         if (map.containsKey("SCHILY.realsize")) {
             this.ar = Long.parseLong((String)map.get("SCHILY.realsize"));
-}
+        }
+    }
 
     static {
         az = 1000;
@@ -396,5 +407,6 @@ LiteBansModule_411 {
         LiteBansModule_21 = 31;
         aL = -1L;
         ContinueEvictHandler = new UserNameHandler[0];
+    }
 }
 

@@ -1,19 +1,29 @@
 package litebans;
 
-public final class LiteBansModule_141 {
-    private final String LiteBansModule_31;
-    private final String BaseCoreGenericHandler;
-    private final String c;
+import java.util.concurrent.RejectedExecutionHandler;
+import java.util.concurrent.ThreadPoolExecutor;
+public final class LiteBansModule_141
+implements RejectedExecutionHandler {
+    final /* synthetic */ DatabaseMonitorService BaseCoreGenericHandler;
 
-    public final String c() {
-        return this.LiteBansModule_31;
+    public LiteBansModule_141(DatabaseMonitorService w2) {
+        this.plugin = w2;
     }
 
-    public final String LiteBansModule_31() {
-        return this.plugin;
+    @Override
+    public final void rejectedExecution(Runnable runnable, ThreadPoolExecutor threadPoolExecutor) {
+        if (!threadPoolExecutor.isShutdown()) {
+            try {
+                if (this.plugin.BaseCoreGenericHandler.ServerSyncService()) {
+                    this.plugin.BaseCoreGenericHandler.BaseCoreGenericHandler(runnable);
+                } else {
+                    runnable.run();
+                }
+            }
+            catch (InterruptedException interruptedException) {
+                // empty catch block
+            }
+        }
     }
-
-    public final String BaseCoreGenericHandler() {
-        return this.c;
 }
 
