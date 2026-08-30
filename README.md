@@ -1,41 +1,41 @@
-# 🛡️ LiteBans 2.19.0 — Clean Deobfuscated & Structured Source Code
+# 🛡️ LiteBans 2.19.0 — Полная деобфускация и чистый исходный код
 
 [![Java](https://img.shields.io/badge/Java-8%2B-orange.svg)](https://www.oracle.com/java/)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.8--1.21.x-blue.svg)](https://spigotmc.org/)
-[![Deobfuscation](https://img.shields.io/badge/Deobf-11%2C554%20Strings%20Decrypted-brightgreen.svg)]()
-[![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)]()
-[![Platforms](https://img.shields.io/badge/Platforms-Bukkit%20%7C%20Bungee%20%7C%20Velocity%20%7C%20Fabric-blue.svg)]()
+[![Деобфускация](https://img.shields.io/badge/Деобфускация-11%2C554%20Строк%20Расшифровано-brightgreen.svg)]()
+[![Сборка](https://img.shields.io/badge/Сборка-Успешно-brightgreen.svg)]()
+[![Платформы](https://img.shields.io/badge/Платформы-Bukkit%20%7C%20Bungee%20%7C%20Velocity%20%7C%20Fabric-blue.svg)]()
 
-Fully extracted, decrypted, and deobfuscated source code of **LiteBans** version **2.19.0** (by Ruan).
-Structured into a standard Maven layout (src/main/java), free of obfuscation strings and decompilation artifacts, 100% human-readable.
-
----
-
-## ⚡ Deobfuscation Achievements
-
-* 🔓 **11,554 Encrypted Strings Decrypted:** All XOR key-based encrypted strings in hl.a() decrypted into direct Unicode/ASCII text literals.
-* 🧩 **3,190 String Array References Inlined:** Static table lookups (g[0], c[1]) replaced with direct string constants.
-* 🧹 **Clean Class Declarations:** Fixed 670 top-level static modifier issues and cleaned CFR synthetic comments across 799 Java files.
-* 🗂️ **Maven Layout & Multi-Platform Descriptors:** Full support for Bukkit/Spigot, BungeeCord, Velocity, and Fabric.
+Полностью извлечённый, расшифрованный и деобфусцированный исходный код плагина **LiteBans** версии **2.19.0** (автор Ruan).
+Кодовая база приведена к стандартной структуре Maven (src/main/java), очищена от строкового шифрования и артефактов декомпилятора — 100% человекочитаемый Java-код.
 
 ---
 
-## 🔍 Core Architecture & Features
+## ⚡ Результаты деобфускации
 
-LiteBans is an industry-leading multi-platform punishment management system for Minecraft servers:
+* 🔓 **Расшифровано 11,554 строк:** Вскрыт встроенный алгоритм шифрования hl.a(). Все строки (SQL-запросы, команды, права доступа, сообщения и служебные ключи) переведены в открытый текст.
+* 🧩 **Инлайнинг 3,190 массивов:** Табличные обращения к строкам (g[0], c[1]) заменены на прямые строковые константы.
+* 🧹 **Коррекция структуры классов:** Исправлены некорректные модификаторы public static class на верхнем уровне в 670 файлах, удалены синтетические предупреждения CFR.
+* 🗂️ **Maven-структура и мультиплатформенность:** Поддержка всех 4 целевых платформ (Spigot/Paper/Folia, BungeeCord, Velocity, Fabric).
 
-### 1. Multi-Platform Support
-* **Bukkit / Spigot / Paper / Folia:** Native command hooks, event listeners, and chat formatters (litebans.BukkitPlugin).
-* **BungeeCord / Waterfall:** Proxy-wide network synchronization and channel messaging (litebans.BungeePlugin).
-* **Velocity:** High-performance proxy player interceptor (litebans.VelocityPlugin).
-* **Fabric:** Dedicated server Fabric mod loader (litebans.FabricMod).
+---
 
-### 2. Database & Sync Engine
-* **Supported Drivers:** MySQL, MariaDB, PostgreSQL, SQLite, H2.
-* **Sync Channels:** Instant cross-server broadcast via Plugin Messaging Channels and direct SQL polling.
-* **UUID & IP History:** Historical tracking of player aliases, GeoIP data, and duplicate accounts.
+## 🔍 Архитектура и основные компоненты
 
-### 3. Moderation Commands
+LiteBans — флагманская система управления наказаниями игроков и синхронизации серверов:
+
+### 1. Поддержка платформ
+* **Bukkit / Spigot / Paper / Folia:** Нативные обработчики команд, события чата и входа (litebans.BukkitPlugin).
+* **BungeeCord / Waterfall:** Сетевая синхронизация через каналы плагинов (litebans.BungeePlugin).
+* **Velocity:** Высокопроизводительный перехват игроков на уровне прокси (litebans.VelocityPlugin).
+* **Fabric:** Серверный мод для Fabric (litebans.FabricMod).
+
+### 2. Движок баз данных и синхронизации
+* **Поддерживаемые СУБД:** MySQL, MariaDB, PostgreSQL, SQLite, H2.
+* **Каналы синхронизации:** Мгновенный обмен данными между серверами сети через Plugin Messaging и прямой SQL-опрос.
+* **История UUID и IP:** Полное отслеживание смены ников, альтов, дубликатов IP и интеграция с GeoIP2/MaxMind.
+
+### 3. Команды модерации
 * /ban, /tempban, /ipban, /tempipban
 * /mute, /tempmute, /ipmute, /tempipmute
 * /warn, /unwarn, /kick, /history, /checkban, /checkmute, /dupeip
@@ -43,48 +43,48 @@ LiteBans is an industry-leading multi-platform punishment management system for 
 
 ---
 
-## 📦 Project Structure
+## 📦 Структура репозитория
 
 `
 LiteBans/
 ├── src/
 │   ├── main/
-│   │   ├── java/                # 799 clean .java source files
+│   │   ├── java/                # 799 деобфусцированных исходников .java
 │   │   │   └── litebans/
-│   │   │       ├── api/         # Public LiteBans API & Events
-│   │   │       ├── mixin/       # Fabric Mixin hooks
-│   │   │       └── [core]/      # Database pool, commands, webhooks, sync engine
+│   │   │       ├── api/         # Публичный LiteBans API и события
+│   │   │       ├── mixin/       # Fabric Mixin хуки
+│   │   │       └── [core]/      # Модули БД, команды, вебхуки, кэши
 │   │   └── resources/           # plugin.yml, bungee.yml, velocity-plugin.json, config.yml, messages.yml
-├── tools/                       # Build tools and CFR decompiler
-├── pom.xml                      # Standard Maven POM
-└── README.md                    # Project documentation
+├── tools/                       # Скрипты сборки
+├── pom.xml                      # Стандартный файл сборки Maven
+└── README.md                    # Документация проекта
 `
 
 ---
 
-## ⚡ Build Instructions
+## ⚡ Инструкция по сборке
 
-### Standalone Package Script
+### Быстрая упаковка (Python)
 `ash
 python tools/build.py
 `
 
-### Maven Build
+### Сборка через Maven
 `ash
 mvn clean package
 `
 
 ---
 
-## 📋 Requirements & Dependencies
+## 📋 Системные требования
 
-| Component | Requirement |
+| Компонент | Требование |
 |---|---|
 | **Java** | Java 8, 11, 17, 21+ |
-| **Server Platforms** | Spigot/Paper (1.8–1.21.x), BungeeCord, Velocity, Fabric |
-| **Database** | MySQL / MariaDB / PostgreSQL / SQLite / H2 |
+| **Платформы** | Spigot/Paper (1.8–1.21.x), BungeeCord, Velocity, Fabric |
+| **Базы данных** | MySQL / MariaDB / PostgreSQL / SQLite / H2 |
 
 ---
 
-## ⚖️ Disclaimer
-This repository is published for research and educational purposes to study multi-platform plugin architecture, database synchronization protocols, and server administration tools.
+## ⚖️ Дисклеймер
+Данный репозиторий опубликован исключительно в исследовательских и образовательных целях для изучения архитектуры мультиплатформенных плагинов и протоколов синхронизации баз данных.
