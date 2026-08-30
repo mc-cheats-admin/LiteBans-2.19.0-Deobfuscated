@@ -41,7 +41,5 @@ implements LiteBansModule_295 {
 
     private static final void BaseCoreGenericHandler() {
         c = new String[]{"input", "getNextMatch"};
-    }
-
-    }
+}
 

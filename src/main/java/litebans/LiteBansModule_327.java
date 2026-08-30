@@ -78,7 +78,5 @@ public final class LiteBansModule_327 {
 
     private static final void BaseCoreGenericHandler() {
         c = new String[]{"DupeIPResult(prefix=", ", name=", ", uuid=", ", date=", ", ban=", ", mute="};
-    }
-
-    }
+}
 

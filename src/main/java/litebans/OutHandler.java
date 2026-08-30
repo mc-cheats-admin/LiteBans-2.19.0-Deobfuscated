@@ -36,7 +36,5 @@ public final class OutHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"<this>", "<this>", "charset", "<this>", "charset", "<this>", "<this>", "<this>", "<this>", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "<this>", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "charset", "<this>", "out", "<this>", "<this>"};
-    }
-
-    }
+}
 

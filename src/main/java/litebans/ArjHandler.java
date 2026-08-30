@@ -34,8 +34,7 @@ implements LiteBansModule_128 {
     static final void BaseCoreGenericHandler(Set set, LiteBansModule_128 dm_02, TreeMap treeMap) {
         for (String string : set) {
             treeMap.put(ArjHandler.BaseCoreGenericHandler(string), dm_02);
-        }
-    }
+}
 
     private static final Iterator LiteBansModule_194() {
         return new LiteBansModule_346(LiteBansModule_128.class);
@@ -152,6 +151,5 @@ implements LiteBansModule_128 {
         LiteBansModule_31 = 32;
         n = 512;
         AsyncBackgroundTask_5 = new ArjHandler();
-    }
 }
 

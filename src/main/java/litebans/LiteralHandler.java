@@ -10,7 +10,5 @@ public final class LiteralHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"literal", "literal", "literal"};
-    }
-
-    }
+}
 

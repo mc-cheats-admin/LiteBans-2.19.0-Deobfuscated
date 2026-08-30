@@ -34,8 +34,7 @@ public final class LiteBansModule_183 {
                 n2 = n5 != null ? n5 : n2;
                 Integer n6 = StringUtilities.BaseCoreGenericHandler((String)list.get(2));
                 n3 = n6 != null ? n6 : n3;
-            }
-        } else {
+} else {
             Integer n7 = StringUtilities.BaseCoreGenericHandler(string2);
             n = n7 != null ? n7 : n;
         }
@@ -56,7 +55,5 @@ public final class LiteBansModule_183 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"git:"};
-    }
-
-    }
+}
 

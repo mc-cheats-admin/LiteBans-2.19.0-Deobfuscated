@@ -32,6 +32,5 @@ extends LiteBansModule_290 {
             this.LiteBansModule_31 += this.c;
         }
         return n;
-    }
 }
 

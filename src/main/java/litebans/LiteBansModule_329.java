@@ -17,6 +17,5 @@ extends AsyncBackgroundTask_15 {
 
     @Override
     public void BaseCoreGenericHandler() {
-    }
 }
 

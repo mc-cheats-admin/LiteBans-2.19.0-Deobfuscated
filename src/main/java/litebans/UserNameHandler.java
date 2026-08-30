@@ -204,8 +204,7 @@ LiteBansModule_411 {
             String string = (String)entry.getKey();
             String string2 = (String)entry.getValue();
             this.plugin(string, string2, map);
-        }
-    }
+}
 
     private final void BaseCoreGenericHandler(String string, String string2, Map map) {
         switch (string) {
@@ -264,12 +263,9 @@ LiteBansModule_411 {
             }
             default: {
                 this.aM.put(string, string2);
-            }
-        }
-    }
+}
 
     private final void BaseCoreGenericHandler(byte[] byArray, LiteBansModule_119 dd_02, boolean flag, boolean flag2) {
-        int n = 0;
         this.LiteBansModule_7 = flag ? LiteBansModule_355.LiteBansModule_31(byArray, n, 100) : LiteBansModule_355.BaseCoreGenericHandler(byArray, n, 100, dd_02);
         this.LiteBansModule_24 = (int)this.plugin(byArray, n += 100, 8, flag2);
         this.LiteBansModule_15 = (int)this.plugin(byArray, n += 8, 8, flag2);
@@ -327,9 +323,7 @@ LiteBansModule_411 {
                 }
                 if (string.length() <= 0) break;
                 this.LiteBansModule_7 = string + "/" + this.LiteBansModule_7;
-            }
-        }
-    }
+}
 
     private final long BaseCoreGenericHandler(byte[] byArray, int n, int n2, boolean flag) {
         if (flag) {
@@ -338,8 +332,7 @@ LiteBansModule_411 {
             }
             catch (IllegalArgumentException illegalArgumentException) {
                 return -1L;
-            }
-        }
+}
         return LiteBansModule_355.BaseCoreGenericHandler(byArray, n, n2);
     }
 
@@ -353,12 +346,9 @@ LiteBansModule_411 {
                     char c = string.charAt(1);
                     if (c == ':' && (n >= 97 && n <= 122 || n >= 65 && n <= 90)) {
                         string = string.substring(2);
-                    }
-                }
-            } else if (string2.contains("netware") && (n = string.indexOf(58)) != -1) {
+} else if (string2.contains("netware") && (n = string.indexOf(58)) != -1) {
                 string = string.substring(n + 1);
-            }
-        }
+}
         string = string.replace(File.separatorChar, '/');
         while (!flag && string.startsWith("/")) {
             string = string.substring(1);
@@ -384,8 +374,7 @@ LiteBansModule_411 {
         this.ar = Integer.parseInt((String)map.get("GNU.sparse.size"));
         if (map.containsKey("GNU.sparse.name")) {
             this.LiteBansModule_7 = (String)map.get("GNU.sparse.name");
-        }
-    }
+}
 
     void LiteBansModule_31(Map map) {
         this.ap = true;
@@ -398,8 +387,7 @@ LiteBansModule_411 {
         this.aq = true;
         if (map.containsKey("SCHILY.realsize")) {
             this.ar = Long.parseLong((String)map.get("SCHILY.realsize"));
-        }
-    }
+}
 
     static {
         az = 1000;
@@ -408,6 +396,5 @@ LiteBansModule_411 {
         LiteBansModule_21 = 31;
         aL = -1L;
         ContinueEvictHandler = new UserNameHandler[0];
-    }
 }
 

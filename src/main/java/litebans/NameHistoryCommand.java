@@ -19,14 +19,11 @@ extends AbstractCommand {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
-        block10: {
+{
             MessageHandler messageHandler = this;
-            boolean flag = false;
             String string = CommandArgumentUtils.BaseCoreGenericHandler(messageHandler, (String)ArrayUtilities.LiteBansModule_31(args));
-            int n = 0;
             n = LiteBansModule_389.BaseCoreGenericHandler(args, 1, 10);
             Object object = this;
-            boolean flag2 = false;
             object = (DatabaseMonitorService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
             flag2 = false;
             try {
@@ -35,35 +32,27 @@ extends AbstractCommand {
                 Throwable throwable = null;
                 try {
                     Object object2 = (LiteBansModule_82)closeable;
-                    boolean flag3 = false;
                     LiteBansModule_82 ch3 = ch2;
-                    boolean flag4 = false;
                     List list = ch3.BaseCoreGenericHandler(string);
                     Object object3 = MessageHandler.BaseCoreGenericHandler;
                     boolean flag5 = list.isEmpty();
                     CharSequence charSequence = MessageKey.PlayerQuitListener;
-                    int n2 = 0;
                     Object object42 = object3;
-                    boolean flag6 = false;
                     if (flag5) {
                         ChatFormatter chatFormatter = object42;
-                        boolean flag7 = false;
                         chatFormatter.BaseCoreGenericHandler(charSequence);
                         throw new CommandExitException();
                     }
                     CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, ch3.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)MessageKey.dH.BaseCoreGenericHandler("target", (Object)string), (CharSequence)"limit", n)));
                     Iterable iterable = list;
-                    boolean flag8 = false;
                     n2 = LiteBansModule_20.c(LiteBansModule_348.BaseCoreGenericHandler(CollectionUtilities.BaseCoreGenericHandler(iterable, 10)), 16);
                     object42 = iterable;
                     Object object5 = new LinkedHashMap(n2);
-                    boolean bl9 = false;
                     Iterator iterator = object42.iterator();
                     while (iterator.hasNext()) {
                         Object t2 = iterator.next();
                         LiteBansModule_297 iA2 = (LiteBansModule_297)t2;
                         Map map = object5;
-                        boolean bl10 = false;
                         map.put(iA2.BaseCoreGenericHandler(), t2);
                     }
                     object3 = object5;
@@ -82,18 +71,13 @@ extends AbstractCommand {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-                }
-            }
+}
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break block10;
+                if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break;
                 throw sQLException;
-            }
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         i = new String[]{"namehistory", "target", "limit"};
-    }
-
-    }
+}
 

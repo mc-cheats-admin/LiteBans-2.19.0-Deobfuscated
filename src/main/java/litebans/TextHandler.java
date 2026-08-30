@@ -144,9 +144,7 @@ implements CommandSenderWrapper {
                 player.kickPlayer(string);
             } else {
                 this.GnuSparseMapHandler.c(new AsyncBackgroundTask_13(this, player, string));
-            }
-        }
-    }
+}
 
     @Override
     public void LiteBansModule_31(String string) {
@@ -160,11 +158,9 @@ implements CommandSenderWrapper {
                 BukkitBlockAdapter.BaseCoreGenericHandler(player, string);
             } else {
                 this.plugin(this.plugin(string));
-            }
-        } else {
+} else {
             this.plugin(this.plugin(string));
-        }
-    }
+}
 
     @Override
     public void BaseCoreGenericHandler(String string) {
@@ -187,8 +183,7 @@ implements CommandSenderWrapper {
         }
         if (this.c) {
             ((Player)commandSender).sendPluginMessage((Plugin)this.GnuSparseMapHandler, string, byArray);
-        }
-    }
+}
 
     private final String BaseCoreGenericHandler(String string) {
         NullHandler_3 gr_02 = (NullHandler_3)new LiteBansModule_314().BaseCoreGenericHandler(string);
@@ -202,7 +197,5 @@ implements CommandSenderWrapper {
             return inetAddress.getHostAddress();
         }
         return null;
-    }
-
-    }
+}
 

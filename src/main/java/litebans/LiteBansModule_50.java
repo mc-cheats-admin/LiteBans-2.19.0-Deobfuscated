@@ -21,6 +21,5 @@ public final class LiteBansModule_50 {
 
     private static final void LiteBansModule_31() {
         AsyncBackgroundTask_5 = new String[]{"^\\DatabaseMonitorService{2,16}$"};
-    }
 }
 

@@ -18,6 +18,5 @@ implements JsonSerializer {
 
     public JsonElement serialize(Object object, Type type, JsonSerializationContext jsonSerializationContext) {
         return this.plugin((NullHandler_4)object, type, jsonSerializationContext);
-    }
 }
 

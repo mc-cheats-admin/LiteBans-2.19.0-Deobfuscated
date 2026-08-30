@@ -76,12 +76,10 @@ public final class LiteBansModule_113 {
         String string = this.LiteBansModule_194;
         if (string != null) {
             String string2 = string;
-            boolean flag2 = false;
             flag = HexEncodingHelper.BaseCoreGenericHandler.i(string2);
         } else {
             flag = false;
         }
         return flag;
-    }
 }
 

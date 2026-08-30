@@ -26,8 +26,7 @@ implements JsonDeserializer {
             }
             case BaseCoreGenericHandler: {
                 return c;
-            }
-        }
+}
         throw new IllegalArgumentException("Unknown version " + (Object)((Object)g82));
     }
 
@@ -71,7 +70,5 @@ implements JsonDeserializer {
         AsyncBackgroundTask_5 = new LiteBansModule_147(V116Handler.c);
         c = new LiteBansModule_147(V116Handler.BaseCoreGenericHandler);
         BaseCoreGenericHandler = new ThreadLocal();
-    }
-
-    }
+}
 

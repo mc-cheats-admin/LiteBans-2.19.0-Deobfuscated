@@ -18,6 +18,5 @@ implements Comparator {
 
     public int compare(Object object, Object object2) {
         return this.plugin((LiteBansModule_398)object, (LiteBansModule_398)object2);
-    }
 }
 

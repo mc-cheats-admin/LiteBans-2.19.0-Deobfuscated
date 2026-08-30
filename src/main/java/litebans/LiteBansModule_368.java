@@ -202,6 +202,5 @@ implements Cloneable {
 
     public Object clone() {
         return this.LiteBansModule_194();
-    }
 }
 

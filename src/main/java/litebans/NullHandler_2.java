@@ -104,28 +104,25 @@ implements ProxiedPlayer {
     }
 
     public void disconnect(@NotNull String string) {
-        block0: {
+{
             PendingConnection pendingConnection = this.LiteBansModule_31;
-            if (pendingConnection == null) break block0;
+            if (pendingConnection == null) break;
             pendingConnection.disconnect(string);
-        }
-    }
+}
 
     public void disconnect(@NotNull BaseComponent[] baseComponentArray) {
-        block0: {
+{
             PendingConnection pendingConnection = this.LiteBansModule_31;
-            if (pendingConnection == null) break block0;
+            if (pendingConnection == null) break;
             pendingConnection.disconnect(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
-        }
-    }
+}
 
     public void disconnect(@NotNull BaseComponent baseComponent) {
-        block0: {
+{
             PendingConnection pendingConnection = this.LiteBansModule_31;
-            if (pendingConnection == null) break block0;
+            if (pendingConnection == null) break;
             pendingConnection.disconnect(baseComponent);
-        }
-    }
+}
 
     public InetSocketAddress getAddress() {
         PendingConnection pendingConnection = this.LiteBansModule_31;
@@ -327,7 +324,5 @@ implements ProxiedPlayer {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"null", ""};
-    }
-
-    }
+}
 

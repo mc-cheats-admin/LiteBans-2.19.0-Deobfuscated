@@ -15,6 +15,5 @@ public final class LiteBansModule_141 {
 
     public final String BaseCoreGenericHandler() {
         return this.c;
-    }
 }
 

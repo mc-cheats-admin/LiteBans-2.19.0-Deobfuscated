@@ -38,23 +38,19 @@ implements BanProvider {
      */
     public final SilentHandler BaseCoreGenericHandler(@NotNull UUID uUID) {
         SilentHandler dZ2;
-        block9: {
+{
             Object object = this;
-            boolean flag = false;
             WeakHashMap weakHashMap = (WeakHashMap)((NullHandler_8)object).LiteBansModule_31().get();
             object = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
             dZ2 = null;
             Object object2 = object;
-            boolean flag2 = false;
             try {
                 LiteBansModule_82 ch2 = ((DatabaseMonitorService)object2).LiteBansModule_194();
                 Closeable closeable = ch2;
                 Throwable throwable = null;
                 try {
                     Object object3 = (LiteBansModule_82)closeable;
-                    boolean flag3 = false;
                     LiteBansModule_82 ch3 = ch2;
-                    boolean flag4 = false;
                     SilentHandler dZ3 = dZ2 = AllHandler_3.BaseCoreGenericHandler(ch3, uUID.toString(), null, BanHandler.LiteBansModule_240, ((DatabaseMonitorService)object).ServerSyncService(), false, false, 48, null);
                     boolean flag5 = dZ3 != null ? dZ3.BaseCoreGenericHandler(uUID.toString(), null, DatabaseMonitorService.BaseCoreGenericHandler((DatabaseMonitorService)object, false, 1, null)) : false;
                     if (flag5) {
@@ -74,22 +70,18 @@ implements BanProvider {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-                }
-            }
+}
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object2).LiteBansModule_31(sQLException)) break block9;
+                if (((DatabaseMonitorService)object2).LiteBansModule_31(sQLException)) break;
                 throw sQLException;
-            }
-        }
+}
         return dZ2;
     }
 
     public String getBanReason(@NotNull PlayerIdentity playerIdentity) {
         NullHandler_8 z = this;
         UUID uUID = playerIdentity.getUuid();
-        boolean flag = false;
         NullHandler_8 z2 = z;
-        boolean flag2 = false;
         SilentHandler dZ2 = (SilentHandler)((WeakHashMap)z2.LiteBansModule_31().get()).get(uUID);
         Object object = dZ2;
         if (object == null || (object = ((SilentHandler)object).LiteBansModule_31()) == null) {
@@ -107,9 +99,7 @@ implements BanProvider {
     public String getBanOperator(@NotNull PlayerIdentity playerIdentity) {
         Object object = this;
         UUID uUID = playerIdentity.getUuid();
-        boolean flag = false;
         NullHandler_8 z = object;
-        boolean flag2 = false;
         SilentHandler dZ2 = (SilentHandler)((WeakHashMap)z.LiteBansModule_31().get()).get(uUID);
         if (dZ2 != null) {
             return dZ2.LiteBansModule_433();
@@ -121,9 +111,7 @@ implements BanProvider {
     public Date getBanExpiration(@NotNull PlayerIdentity playerIdentity) {
         Object object = this;
         UUID uUID = playerIdentity.getUuid();
-        boolean flag = false;
         NullHandler_8 z = object;
-        boolean flag2 = false;
         SilentHandler dZ2 = (SilentHandler)((WeakHashMap)z.LiteBansModule_31().get()).get(uUID);
         if (dZ2 != null) {
             if (dZ2.LiteBansModule_401() <= 0L) {
@@ -155,7 +143,5 @@ implements BanProvider {
 
     private static final void BaseCoreGenericHandler() {
         AsyncBackgroundTask_5 = new String[]{"null", "", "core", "Registered CommandExitException ServerListPlus ban provider."};
-    }
-
-    }
+}
 

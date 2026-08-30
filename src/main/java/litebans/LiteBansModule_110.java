@@ -25,7 +25,6 @@ implements LiteBansModule_51 {
     public LiteBansModule_110 BaseCoreGenericHandler() {
         LiteBansModule_110 cy_02;
         LiteBansModule_110 cy_03 = cy_02 = this;
-        boolean flag = false;
         ServerMessageEvents.ALLOW_CHAT_MESSAGE.register(cy_03::BaseCoreGenericHandler);
         ServerMessageEvents.ALLOW_COMMAND_MESSAGE.register(cy_03::BaseCoreGenericHandler);
         return cy_02;
@@ -56,6 +55,5 @@ implements LiteBansModule_51 {
     @Override
     public LiteBansModule_175 BaseCoreGenericHandler() {
         return this.plugin();
-    }
 }
 

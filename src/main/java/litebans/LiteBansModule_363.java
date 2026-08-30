@@ -56,8 +56,7 @@ implements LiteBansModule_177 {
             }
             LiteBansModule_288 i23 = new LiteBansModule_288(byArray, n);
             n += 2 + i23.BaseCoreGenericHandler();
-        }
-    }
+}
 
     @Override
     public void LiteBansModule_31(byte[] byArray, int n, int n2) {
@@ -117,8 +116,7 @@ implements LiteBansModule_177 {
             this.LiteBansModule_240 = new LiteBansModule_323(byArray, n += 2);
             this.LiteBansModule_194 = new LiteBansModule_323(byArray, n += 8);
             this.g = new LiteBansModule_323(byArray, n += 8);
-        }
-    }
+}
 
     private static final Date BaseCoreGenericHandler(LiteBansModule_323 iw_02) {
         if (iw_02 == null || LiteBansModule_323.BaseCoreGenericHandler.equals(iw_02)) {
@@ -133,6 +131,5 @@ implements LiteBansModule_177 {
         e = new LiteBansModule_288(10);
         AsyncBackgroundTask_5 = new LiteBansModule_288(1);
         c = new LiteBansModule_288(24);
-    }
 }
 

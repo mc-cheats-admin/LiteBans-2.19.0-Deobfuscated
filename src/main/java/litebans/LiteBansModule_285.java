@@ -152,8 +152,7 @@ implements CommandSenderWrapper {
         }
         if (this.e()) {
             ((Player)commandSource).disconnect((Component)LiteBansModule_304.BaseCoreGenericHandler(string));
-        }
-    }
+}
 
     @Override
     public void LiteBansModule_31(String string) {
@@ -181,8 +180,7 @@ implements CommandSenderWrapper {
         }
         if (this.e()) {
             ((Player)commandSource).sendPluginMessage((ChannelIdentifier)new LegacyChannelIdentifier(string), byArray);
-        }
-    }
+}
 
     private final String BaseCoreGenericHandler(CommandSource commandSource) {
         InetAddress inetAddress;
@@ -191,7 +189,5 @@ implements CommandSenderWrapper {
             return inetAddress.getHostAddress();
         }
         return null;
-    }
-
-    }
+}
 

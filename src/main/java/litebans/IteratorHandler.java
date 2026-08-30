@@ -11,7 +11,5 @@ extends LiteBansModule_224 {
 
     private static final void c() {
         i = new String[]{"iterator", "<this>", "elements", "<this>", "defaultValue", "<this>", "<this>", "<this>", "<this>", "<this>", "random", "source", "transform", "iterator", "<this>", "nextFunction", "nextFunction", "seedFunction", "nextFunction", "UpdateCheckTask", "UpdateCheckTask", "UpdateCheckTask"};
-    }
-
-    }
+}
 

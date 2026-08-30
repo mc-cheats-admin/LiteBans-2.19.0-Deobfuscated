@@ -17,7 +17,5 @@ static class BuilderactionHandler_3 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"builderAction", "builderAction", "builder", "<this>", "<this>", "<this>", "random", "collection", "collection", "array", "array", "<this>"};
-    }
-
-    }
+}
 

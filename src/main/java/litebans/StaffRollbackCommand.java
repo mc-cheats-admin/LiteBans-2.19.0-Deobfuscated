@@ -15,33 +15,27 @@ extends AbstractCommand {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
-        block15: {
+{
             boolean flag;
             Object object;
             Object object2;
             Object object3 = this;
-            boolean flag2 = false;
             Object object4 = object3;
-            boolean flag3 = false;
             if (((ConfigService)((MessageHandler)object4).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().AsyncBackgroundTask_22()) {
                 object3 = this;
                 flag2 = false;
                 object4 = MessageHandler.BaseCoreGenericHandler;
                 flag3 = ((MessageHandler)object3).AsyncBackgroundTask_5().LiteBansModule_194();
                 object2 = MessageKey.LiteBansModule_31;
-                boolean flag4 = false;
                 object = object4;
                 boolean flag5 = !flag3;
                 flag = false;
                 if (flag5) {
                     Object object5 = object;
-                    boolean flag6 = false;
                     ((ChatFormatter)object5).BaseCoreGenericHandler(object2);
                     throw new CommandExitException();
-                }
-            }
+}
             Object object6 = this;
-            boolean flag7 = false;
             object3 = CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)object6, (String)ArrayUtilities.LiteBansModule_31(args));
             object6 = CommandArgumentUtils.BaseCoreGenericHandler(this, sender, args, null, 4, null);
             Object object7 = this;
@@ -61,7 +55,6 @@ extends AbstractCommand {
                     Object object8 = (LiteBansModule_82)closeable;
                     flag = false;
                     Object object9 = object2;
-                    boolean bl9 = false;
                     LiteBansModule_297 iA2 = CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_82)object9, (String)object3, false, 2, null);
                     StringBuilder stringBuilder2 = new StringBuilder();
                     String[] filteredArgs = args;
@@ -92,12 +85,9 @@ extends AbstractCommand {
                     Object object10 = MessageHandler.BaseCoreGenericHandler;
                     flag8 = d10 == Double.MIN_VALUE && !StringUtilities.LiteBansModule_31((CharSequence)string3);
                     CharSequence charSequence = MessageKey.aL;
-                    boolean bl10 = false;
                     ChatFormatter chatFormatter = object10;
-                    boolean bl11 = false;
                     if (flag8) {
                         ChatFormatter fo_03 = chatFormatter;
-                        boolean bl12 = false;
                         fo_03.BaseCoreGenericHandler(charSequence);
                         throw new CommandExitException();
                     }
@@ -118,18 +108,13 @@ extends AbstractCommand {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler(closeable, (Throwable)object);
-                }
-            }
+}
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object7).LiteBansModule_31(sQLException)) break block15;
+                if (((DatabaseMonitorService)object7).LiteBansModule_31(sQLException)) break;
                 throw sQLException;
-            }
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         i = new String[]{"staffrollback", "", "", StringDecryptor.BaseCoreGenericHandler("\uaa80\uaa8c\uaa8e\uaa94\uaa8f\uaa95", 0xE1EAAE1)};
-    }
-
-    }
+}
 

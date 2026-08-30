@@ -15,6 +15,5 @@ extends LiteBansModule_24 {
         super.LiteBansModule_31(byArray, n, n2);
         this.LiteBansModule_194 = LiteBansModule_288.BaseCoreGenericHandler(byArray, n);
         this.e = NoneHandler.BaseCoreGenericHandler(LiteBansModule_288.BaseCoreGenericHandler(byArray, n + 2));
-    }
 }
 

@@ -11,6 +11,5 @@ public class OsNameHandler {
 
     static /* synthetic */ LiteBansModule_149 LiteBansModule_31() {
         return OsNameHandler.BaseCoreGenericHandler();
-    }
 }
 

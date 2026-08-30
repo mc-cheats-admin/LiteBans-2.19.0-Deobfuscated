@@ -22,8 +22,7 @@ public class LiteBansModule_8 {
         }
         catch (IllegalAccessException illegalAccessException) {
             throw new RuntimeException(clazz + "'AsyncBackgroundTask_21 no-arg constructor is not public");
-        }
-    }
+}
 
     public static final LiteBansModule_177 BaseCoreGenericHandler(LiteBansModule_288 i22) {
         LiteBansModule_177 en_02 = LiteBansModule_8.LiteBansModule_31(i22);
@@ -64,8 +63,7 @@ public class LiteBansModule_8 {
             }
             catch (IllegalAccessException | InstantiationException reflectiveOperationException) {
                 throw (ZipException)new ZipException(reflectiveOperationException.getMessage()).initCause(reflectiveOperationException);
-            }
-        }
+}
         object = new LiteBansModule_177[arrayList.size()];
         return arrayList.toArray((T[])object);
     }
@@ -79,7 +77,6 @@ public class LiteBansModule_8 {
             n2 += en_02.LiteBansModule_31().BaseCoreGenericHandler();
         }
         byte[] byArray2 = new byte[n2];
-        int n3 = 0;
         for (int byArray3 = 0; byArray3 < n; ++byArray3) {
             System.arraycopy(en_0Array[byArray3].c().LiteBansModule_31(), 0, byArray2, n3, 2);
             System.arraycopy(en_0Array[byArray3].LiteBansModule_31().LiteBansModule_31(), 0, byArray2, n3 + 2, 2);
@@ -104,7 +101,6 @@ public class LiteBansModule_8 {
             n2 += en_02.BaseCoreGenericHandler().BaseCoreGenericHandler();
         }
         byte[] byArray2 = new byte[n2];
-        int n3 = 0;
         for (int byArray3 = 0; byArray3 < n; ++byArray3) {
             System.arraycopy(en_0Array[byArray3].c().LiteBansModule_31(), 0, byArray2, n3, 2);
             System.arraycopy(en_0Array[byArray3].BaseCoreGenericHandler().LiteBansModule_31(), 0, byArray2, n3 + 2, 2);
@@ -131,8 +127,7 @@ public class LiteBansModule_8 {
         }
         catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
             throw (ZipException)new ZipException("Failed to parse corrupt ZIP extra field of type " + Integer.toHexString(en_02.c().BaseCoreGenericHandler())).initCause(arrayIndexOutOfBoundsException);
-        }
-    }
+}
 
     static {
         LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_306.class);
@@ -149,6 +144,5 @@ public class LiteBansModule_8 {
         LiteBansModule_8.BaseCoreGenericHandler(IvsizeHandler.class);
         LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_17.class);
         LiteBansModule_8.BaseCoreGenericHandler(LiteBansModule_170.class);
-    }
 }
 

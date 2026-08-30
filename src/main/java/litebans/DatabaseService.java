@@ -50,14 +50,14 @@ Closeable {
 
     public static String LiteBansModule_31(@NonNull String string, @Nullable String string2) {
         String string3;
-        block9: {
+{
             if (string == null) {
                 throw new NullPointerException("resource is marked non-null but is null");
             }
             InputStream inputStream = DatabaseService.BaseCoreGenericHandler(string, string2);
             try {
                 string3 = DatabaseService.LiteBansModule_31(inputStream);
-                if (inputStream == null) break block9;
+                if (inputStream == null) break;
             }
             catch (Throwable throwable) {
                 try {
@@ -67,15 +67,13 @@ Closeable {
                         }
                         catch (Throwable throwable2) {
                             throwable.addSuppressed(throwable2);
-                        }
-                    }
+}
                     throw throwable;
                 }
                 catch (IOException iOException) {
                     iOException.printStackTrace();
                     return "#Header 404" + System.lineSeparator();
-                }
-            }
+}
             inputStream.close();
         }
         return string3;
@@ -97,14 +95,13 @@ Closeable {
             }
             string2 = stringBuilder.toString();
             return string2;
-        }
-    }
+}
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     public static void BaseCoreGenericHandler(@NotNull File file, @NotNull String string, @Nullable String string2, boolean flag) {
-        block16: {
+{
             try (InputStream inputStream = DatabaseService.BaseCoreGenericHandler(string, string2);){
                 if (inputStream == null) {
                     return;
@@ -115,17 +112,13 @@ Closeable {
                 if (!file3.exists() && !file3.mkdirs()) {
                     throw new IOException("mkdir failed: " + file3.getAbsolutePath());
                 }
-                if (file2.exists() && file2.length() != 0L && !flag) break block16;
+                if (file2.exists() && file2.length() != 0L && !flag) break;
                 try (FileOutputStream fileOutputStream = new FileOutputStream(file2);){
                     int n2;
                     byte[] byArray = new byte[8192];
                     while ((n2 = inputStream.read(byArray)) > 0) {
                         fileOutputStream.write(byArray, 0, n2);
-                    }
-                }
-            }
-        }
-    }
+}
 
     public static String LiteBansModule_31(String string) {
         String[] args;
@@ -186,8 +179,7 @@ Closeable {
         try (OutputStreamWriter outputStreamWriter = new OutputStreamWriter((OutputStream)new FileOutputStream(file), Charsets.UTF_8);){
             outputStreamWriter.write(this.e() + DatabaseService.LiteBansModule_31(string));
             outputStreamWriter.flush();
-        }
-    }
+}
 
     public File c() {
         return this.LiteBansModule_31;
@@ -211,7 +203,5 @@ Closeable {
 
     private static final void AsyncBackgroundTask_5() {
         e = new String[]{"", "resource is marked non-null but is null", "#Header 404", "", "#", "mkdir failed: ", "\\r?\\n", "#", ".yml generated LiteBansModule_61 version", "\\r?\\n", "#"};
-    }
-
-    }
+}
 

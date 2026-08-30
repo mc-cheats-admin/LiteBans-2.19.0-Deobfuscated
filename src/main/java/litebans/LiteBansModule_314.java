@@ -54,8 +54,7 @@ public class LiteBansModule_314 {
         }
         catch (IOException iOException) {
             throw new UnexpectedTokenException(-1, 2, iOException);
-        }
-    }
+}
 
     public Object LiteBansModule_31(Reader reader) {
         return this.plugin(reader, (LiteBansModule_357)null);
@@ -67,28 +66,27 @@ public class LiteBansModule_314 {
         LinkedList<Object> linkedList2 = new LinkedList<Object>();
         do {
             this.plugin();
-            block1 : switch (this.c) {
+switch (this.c) {
                 case 0: {
                     switch (this.GnuSparseMapHandler.LiteBansModule_240) {
                         case 0: {
                             this.c = 1;
                             linkedList.addFirst(new Integer(this.c));
                             linkedList2.addFirst(this.GnuSparseMapHandler.e);
-                            break block1;
+                            break;
                         }
                         case 1: {
                             this.c = 2;
                             linkedList.addFirst(new Integer(this.c));
                             linkedList2.addFirst(this.LiteBansModule_31(ju_02));
-                            break block1;
+                            break;
                         }
                         case 3: {
                             this.c = 3;
                             linkedList.addFirst(new Integer(this.c));
                             linkedList2.addFirst(this.plugin(ju_02));
-                            break block1;
-                        }
-                    }
+                            break;
+}
                     this.c = -1;
                     break;
                 }
@@ -102,7 +100,7 @@ public class LiteBansModule_314 {
                     Object object;
                     switch (this.GnuSparseMapHandler.LiteBansModule_240) {
                         case 5: {
-                            break block1;
+                            break;
                         }
                         case 0: {
                             if (this.GnuSparseMapHandler.e instanceof String) {
@@ -110,22 +108,21 @@ public class LiteBansModule_314 {
                                 linkedList2.addFirst(object);
                                 this.c = 4;
                                 linkedList.addFirst(new Integer(this.c));
-                                break block1;
+                                break;
                             }
                             this.c = -1;
-                            break block1;
+                            break;
                         }
                         case 2: {
                             if (linkedList2.size() > 1) {
                                 linkedList.removeFirst();
                                 linkedList2.removeFirst();
                                 this.c = this.plugin(linkedList);
-                                break block1;
+                                break;
                             }
                             this.c = 1;
-                            break block1;
-                        }
-                    }
+                            break;
+}
                     this.c = -1;
                     break;
                 }
@@ -135,7 +132,7 @@ public class LiteBansModule_314 {
                     Object object;
                     switch (this.GnuSparseMapHandler.LiteBansModule_240) {
                         case 6: {
-                            break block1;
+                            break;
                         }
                         case 0: {
                             linkedList.removeFirst();
@@ -143,7 +140,7 @@ public class LiteBansModule_314 {
                             map = (Map)linkedList2.getFirst();
                             map.put(object, this.GnuSparseMapHandler.e);
                             this.c = this.plugin(linkedList);
-                            break block1;
+                            break;
                         }
                         case 3: {
                             linkedList.removeFirst();
@@ -154,7 +151,7 @@ public class LiteBansModule_314 {
                             this.c = 3;
                             linkedList.addFirst(new Integer(this.c));
                             linkedList2.addFirst(list);
-                            break block1;
+                            break;
                         }
                         case 1: {
                             linkedList.removeFirst();
@@ -165,9 +162,8 @@ public class LiteBansModule_314 {
                             this.c = 2;
                             linkedList.addFirst(new Integer(this.c));
                             linkedList2.addFirst(map2);
-                            break block1;
-                        }
-                    }
+                            break;
+}
                     this.c = -1;
                     break;
                 }
@@ -177,22 +173,22 @@ public class LiteBansModule_314 {
                     Object object;
                     switch (this.GnuSparseMapHandler.LiteBansModule_240) {
                         case 5: {
-                            break block1;
+                            break;
                         }
                         case 0: {
                             object = (List)linkedList2.getFirst();
                             object.add(this.GnuSparseMapHandler.e);
-                            break block1;
+                            break;
                         }
                         case 4: {
                             if (linkedList2.size() > 1) {
                                 linkedList.removeFirst();
                                 linkedList2.removeFirst();
                                 this.c = this.plugin(linkedList);
-                                break block1;
+                                break;
                             }
                             this.c = 1;
-                            break block1;
+                            break;
                         }
                         case 1: {
                             object = (List)linkedList2.getFirst();
@@ -201,7 +197,7 @@ public class LiteBansModule_314 {
                             this.c = 2;
                             linkedList.addFirst(new Integer(this.c));
                             linkedList2.addFirst(map);
-                            break block1;
+                            break;
                         }
                         case 3: {
                             object = (List)linkedList2.getFirst();
@@ -210,16 +206,14 @@ public class LiteBansModule_314 {
                             this.c = 3;
                             linkedList.addFirst(new Integer(this.c));
                             linkedList2.addFirst(list);
-                            break block1;
-                        }
-                    }
+                            break;
+}
                     this.c = -1;
                     break;
                 }
                 case -1: {
                     throw new UnexpectedTokenException(this.c(), 1, this.GnuSparseMapHandler);
-                }
-            }
+}
             if (this.c != -1) continue;
             throw new UnexpectedTokenException(this.c(), 1, this.GnuSparseMapHandler);
         } while (this.GnuSparseMapHandler.LiteBansModule_240 != -1);
@@ -230,8 +224,7 @@ public class LiteBansModule_314 {
         this.GnuSparseMapHandler = this.LiteBansModule_194.e();
         if (this.GnuSparseMapHandler == null) {
             this.GnuSparseMapHandler = new LiteBansModule_55(-1, null);
-        }
-    }
+}
 
     private final Map LiteBansModule_31(LiteBansModule_357 ju_02) {
         if (ju_02 == null) {
@@ -264,6 +257,5 @@ public class LiteBansModule_314 {
         LiteBansModule_401 = 2;
         LiteBansModule_240 = 1;
         Utf8Handler_2 = 0;
-    }
 }
 

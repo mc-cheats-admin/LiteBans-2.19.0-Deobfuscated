@@ -20,7 +20,5 @@ extends BanListCommand {
 
     private static final void BaseCoreGenericHandler() {
         GnuSparseMapHandler = new String[]{"mutelist"};
-    }
-
-    }
+}
 

@@ -25,6 +25,5 @@ extends RandomID {
         }
         ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
         return configService.Utf8Handler_2().LiteBansModule_31(string);
-    }
 }
 

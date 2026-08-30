@@ -21,6 +21,5 @@ implements Iterator {
             return LiteBansModule_226.BaseCoreGenericHandler(this.LiteBansModule_31)[this.plugin++];
         }
         throw new NoSuchElementException("No more elements InitializerHandler_3 FastList");
-    }
 }
 

@@ -26,12 +26,10 @@ extends LiteBansModule_153 {
             }
             if ((this.g.LiteBansModule_240 & 4) != 0) {
                 throw new LiteBansException_8("Multi-volume ARJ files are unsupported");
-            }
-        }
+}
         catch (IOException iOException) {
             throw new LiteBansException_8(iOException.getMessage(), iOException);
-        }
-    }
+}
 
     public Cp437Handler(InputStream inputStream) {
         this(inputStream, "CP437");
@@ -72,8 +70,7 @@ extends LiteBansModule_153 {
             }
             String string = new String(byteArrayOutputStream.toByteArray());
             return string;
-        }
-    }
+}
 
     private final void BaseCoreGenericHandler(DataInputStream dataInputStream, byte[] byArray) {
         dataInputStream.readFully(byArray);
@@ -81,10 +78,8 @@ extends LiteBansModule_153 {
     }
 
     private final byte[] BaseCoreGenericHandler() {
-        boolean flag = false;
         byte[] byArray = null;
         do {
-            int n = 0;
             int n2 = this.c(this.GnuSparseMapHandler);
             do {
                 n = n2;
@@ -150,8 +145,7 @@ extends LiteBansModule_153 {
             cRC32.update(jl_02.e);
             if (l3 != cRC32.getValue()) {
                 throw new IOException("Extended header CRC32 verification failure");
-            }
-        }
+}
         return jl_02;
     }
 
@@ -172,6 +166,5 @@ extends LiteBansModule_153 {
     static {
         LiteBansModule_194 = 234;
         LiteBansModule_240 = 96;
-    }
 }
 

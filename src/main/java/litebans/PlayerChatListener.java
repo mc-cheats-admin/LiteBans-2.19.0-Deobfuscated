@@ -48,7 +48,6 @@ implements LiteBansModule_171 {
     public PlayerChatListener BaseCoreGenericHandler() {
         PlayerChatListener e72;
         PlayerChatListener e73 = e72 = this;
-        boolean flag = false;
         LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{e73};
         e73.LiteBansModule_31.LiteBansModule_31(em_0Array);
         return e72;
@@ -57,6 +56,5 @@ implements LiteBansModule_171 {
     @Override
     public LiteBansModule_175 BaseCoreGenericHandler() {
         return this.plugin();
-    }
 }
 

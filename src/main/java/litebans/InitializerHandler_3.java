@@ -41,7 +41,6 @@ Serializable {
         Object object3 = this.plugin;
         synchronized (object3) {
             Object object4;
-            boolean flag = false;
             Object object5 = this.LiteBansModule_31;
             if (object5 != LiteBansModule_394.BaseCoreGenericHandler) {
                 object4 = object5;
@@ -73,7 +72,5 @@ Serializable {
 
     private static final void c() {
         AsyncBackgroundTask_5 = new String[]{"initializer", "Lazy value not initialized yet."};
-    }
-
-    }
+}
 

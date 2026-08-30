@@ -27,8 +27,7 @@ extends PluginModule {
             }
             catch (Throwable throwable) {
                 throwable.printStackTrace();
-            }
-        }
+}
         this.c = null;
     }
 
@@ -67,11 +66,9 @@ extends PluginModule {
         }
         catch (Throwable throwable) {
             throwable.printStackTrace();
-        }
-    }
+}
 
     private static final void AsyncBackgroundTask_5() {
         e = new String[]{"", "", "https://litebans.AsyncBackgroundTask_5-n-AsyncBackgroundTask_21.name/update.php", " + ", ""};
-    }
 }
 

@@ -29,10 +29,8 @@ extends MessageHandler {
         boolean flag3;
         UUID uUID = sender.AsyncBackgroundTask_5();
         Object object2 = this;
-        boolean flag4 = false;
         String string2 = ((ConfigService)((MessageHandler)object2).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).BaseCoreGenericHandler(sender, object);
         Object object3 = this;
-        int n = 0;
         PunishmentTableService p2 = (PunishmentTableService)((MessageHandler)object3).LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class);
         String string3 = sender.LiteBansModule_240();
         if (string3 == null) {
@@ -60,7 +58,7 @@ extends MessageHandler {
             boolean flag5;
             Object object5;
             Object object6;
-            block11: {
+{
                 object6 = new char[]{' '};
                 object3 = (String)StringUtilities.BaseCoreGenericHandler((CharSequence)string, object6, false, 0, 6, null).get(0);
                 object5 = this;
@@ -76,7 +74,6 @@ extends MessageHandler {
                     object5 = this.plugin((String)object5);
                 }
                 object7 = object6.LiteBansModule_10();
-                boolean flag6 = false;
                 if (object7 instanceof Collection && ((Collection)object7).isEmpty()) {
                     flag5 = false;
                 } else {
@@ -84,19 +81,15 @@ extends MessageHandler {
                     while (iterator.hasNext()) {
                         Object t2 = iterator.next();
                         String string4 = (String)t2;
-                        boolean flag7 = false;
                         if (!StringUtilities.LiteBansModule_31((String)object5, string4, false, 2, null)) continue;
                         flag5 = true;
-                        break block11;
+                        break;
                     }
                     flag5 = false;
-                }
-            }
+}
             if (flag5 || object6.LiteBansModule_9().contains(object5)) {
                 this.plugin(object, sender, string, (SilentHandler)object2);
-            }
-        }
-    }
+}
 
     public static /* synthetic */ void BaseCoreGenericHandler(TestHandler_2 f82, Object object, String string, CommandSenderWrapper sender, boolean flag, int n, Object object2) {
         if ((n & 8) != 0) {
@@ -119,15 +112,12 @@ extends MessageHandler {
         KickBannedHandler.BaseCoreGenericHandler(this.LiteBansModule_240().i(), object, null, null, false, null, 30, null);
         if (dZ2 != null) {
             Object object2 = this;
-            boolean flag = false;
             object2 = (PunishmentTableService)((MessageHandler)object2).LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class);
             flag = false;
             ChatFormatter chatFormatter = MessageHandler.BaseCoreGenericHandler;
             CommandSenderWrapper jv_03 = sender;
-            boolean flag2 = false;
             try {
                 chatFormatter.LiteBansModule_31().set(jv_03);
-                boolean flag3 = false;
                 PlatformPlugin plugin = ((PunishmentTableService)object2).BaseCoreGenericHandler;
                 CharSequence charSequence = string;
                 ObjectUtilities.BaseCoreGenericHandler(charSequence);
@@ -135,14 +125,10 @@ extends MessageHandler {
             }
             finally {
                 chatFormatter.LiteBansModule_31().remove();
-            }
-        }
-    }
+}
 
     static {
         TestHandler_2.BaseCoreGenericHandler();
         e = new TestHandler(null);
-    }
-
-    }
+}
 

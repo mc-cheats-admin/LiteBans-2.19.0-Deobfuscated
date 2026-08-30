@@ -34,9 +34,8 @@ implements LiteBansModule_359 {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
-        block8: {
+{
             Object object = this;
-            boolean flag = false;
             object = (DatabaseMonitorService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
             flag = false;
             try {
@@ -46,18 +45,13 @@ implements LiteBansModule_359 {
                 try {
                     double d10;
                     Object object2 = (LiteBansModule_82)closeable;
-                    boolean flag2 = false;
                     LiteBansModule_82 ch3 = ch2;
-                    boolean flag3 = false;
                     MessageHandler messageHandler = this;
-                    boolean flag4 = false;
                     MessageHandler fg_03 = messageHandler;
-                    boolean flag5 = false;
                     double d11 = AllHandler_3.BaseCoreGenericHandler(ch3, ((BanHandler)this.plugin()).BaseCoreGenericHandler(), null, ((ConfigService)fg_03.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_7(), 2, null);
                     fg_03 = this;
                     flag5 = false;
                     MessageHandler fg_04 = fg_03;
-                    boolean flag6 = false;
                     double d12 = ((ConfigService)fg_04.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_29();
                     double d13 = d10 = Math.floor(d11 / d12);
                     double d14 = LiteBansModule_389.BaseCoreGenericHandler(args, 0, d10);
@@ -68,7 +62,6 @@ implements LiteBansModule_359 {
                     }
                     CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, (CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler(ch3.BaseCoreGenericHandler(MessageKey.LiteBansModule_35), (CharSequence)"page", (int)d14), (CharSequence)"total", (int)d13));
                     MessageHandler fg_05 = this;
-                    boolean flag7 = false;
                     Collection collection = ch3.BaseCoreGenericHandler((BanHandler)this.plugin(), (long)d14, (long)d12, ((ConfigService)fg_05.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_7());
                     LimitHandler.BaseCoreGenericHandler(this, ch3, collection, null, null, null, 0, 30, null);
                     object2 = KotlinUnitHandler.BaseCoreGenericHandler;
@@ -79,14 +72,11 @@ implements LiteBansModule_359 {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-                }
-            }
+}
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break block8;
+                if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break;
                 throw sQLException;
-            }
-        }
-    }
+}
 
     @Override
     public int BaseCoreGenericHandler(@NotNull PlatformPlugin plugin, @Nullable String[] args, @NotNull Collection collection, int n) {
@@ -105,7 +95,5 @@ implements LiteBansModule_359 {
 
     private static final void LiteBansModule_31() {
         i = new String[]{"banlist", "", "page", "total"};
-    }
-
-    }
+}
 

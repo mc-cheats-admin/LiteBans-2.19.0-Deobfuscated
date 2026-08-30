@@ -16,27 +16,20 @@ extends AbstractCommand {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
-        block11: {
+{
             Object object = MessageHandler.BaseCoreGenericHandler;
             MessageHandler messageHandler = this;
-            boolean flag = false;
             MessageHandler fg_03 = messageHandler;
-            boolean flag2 = false;
             boolean flag3 = ((ConfigService)fg_03.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().HikariDataSource() && !sender.LiteBansModule_194();
             CharSequence charSequence = MessageKey.LiteBansModule_31;
-            boolean flag4 = false;
             Object object2 = object;
-            boolean flag5 = false;
             if (flag3) {
                 ChatFormatter chatFormatter = object2;
-                boolean flag6 = false;
                 chatFormatter.BaseCoreGenericHandler(charSequence);
                 throw new CommandExitException();
             }
             MessageHandler fg_04 = this;
-            boolean flag7 = false;
             object = CommandArgumentUtils.BaseCoreGenericHandler(fg_04, (String)ArrayUtilities.LiteBansModule_31(args));
-            int n = 0;
             n = LiteBansModule_389.BaseCoreGenericHandler(args, 1, 10);
             Object object3 = this;
             flag4 = false;
@@ -48,19 +41,14 @@ extends AbstractCommand {
                 Throwable throwable = null;
                 try {
                     Object object4 = (LiteBansModule_82)closeable;
-                    boolean flag8 = false;
                     Object object5 = object2;
-                    boolean bl9 = false;
                     List list = object5.BaseCoreGenericHandler((String)object);
                     ChatFormatter fo_03 = MessageHandler.BaseCoreGenericHandler;
                     int n2 = list.isEmpty();
                     Object object6 = MessageKey.PlayerQuitListener.BaseCoreGenericHandler("target", object);
-                    boolean bl10 = false;
                     ChatFormatter fo_04 = fo_03;
-                    boolean bl11 = false;
                     if (n2 != 0) {
                         ChatFormatter fo_05 = fo_04;
-                        boolean bl12 = false;
                         fo_05.BaseCoreGenericHandler(object6);
                         throw new CommandExitException();
                     }
@@ -86,24 +74,18 @@ extends AbstractCommand {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-                }
-            }
+}
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object3).LiteBansModule_31(sQLException)) break block11;
+                if (((DatabaseMonitorService)object3).LiteBansModule_31(sQLException)) break;
                 throw sQLException;
-            }
-        }
-    }
+}
 
     private static final Object BaseCoreGenericHandler(IPHistoryCommand fX2, LiteBansModule_297 iA2) {
         MessageHandler messageHandler = fX2;
-        boolean flag = false;
         return ((BroadcastService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class)).BaseCoreGenericHandler(iA2.LiteBansModule_194().getTime(), true);
     }
 
     private static final void BaseCoreGenericHandler() {
         i = new String[]{"iphistory", "target", "target", "limit", "ip", "date"};
-    }
-
-    }
+}
 

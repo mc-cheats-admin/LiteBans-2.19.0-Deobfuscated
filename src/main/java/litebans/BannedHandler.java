@@ -65,7 +65,6 @@ extends MessageHandler {
     @Override
     public void run() {
         MessageHandler messageHandler = this;
-        boolean flag = false;
         ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> BannedHandler.BaseCoreGenericHandler(this, arg_0));
     }
 
@@ -76,11 +75,9 @@ extends MessageHandler {
         Object object2 = g12;
         LiteBansModule_82 ch4 = ch2;
         Object object3 = g12.GnuSparseMapHandler;
-        boolean flag = false;
         Object object4 = object3;
         if (((BannedHandler)object2).g()) {
             object = MessageKey.LiteBansModule_83;
-            boolean flag2 = false;
             object4 = "" + object + object4;
         }
         if (((BannedHandler)object2).BaseCoreGenericHandler() != null) {
@@ -88,7 +85,6 @@ extends MessageHandler {
         }
         object4 = GeoIPLookupService.BaseCoreGenericHandler(ch4, (CharSequence)object4, ((BannedHandler)object2).LiteBansModule_194());
         object2 = AllHandler_3.BaseCoreGenericHandler(ch4, ch4.BaseCoreGenericHandler((CharSequence)object4, ((BannedHandler)object2).LiteBansModule_31()), ((BannedHandler)object2).LiteBansModule_194().q(), false, 2, null);
-        boolean flag3 = false;
         object3 = g13.LiteBansModule_194();
         flag = false;
         SilentHandler dZ2 = ((NoneHandler_2)object3).q();
@@ -96,10 +92,8 @@ extends MessageHandler {
         object4 = dZ2;
         object = g13;
         LiteBansModule_82 ch5 = ch3;
-        boolean flag4 = false;
         BroadcastHandler ij2 = ((BannedHandler)object).LiteBansModule_194().c() ? BroadcastHandler.Utf8Handler_2 : (((BannedHandler)object).g() ? BroadcastHandler.BroadcastService : BroadcastHandler.AsyncBackgroundTask_22);
         object = g13;
-        boolean flag5 = false;
         Object object5 = (BroadcastService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
         flag4 = false;
         BroadcastService.BaseCoreGenericHandler((BroadcastService)object5, ch3, (CharSequence)object2, ij2.LiteBansModule_194(), ((SilentHandler)object4).ServerSyncService(), ((SilentHandler)object4).GnuSparseMapHandler(), false, false, g13.e(), 48, null);
@@ -108,12 +102,10 @@ extends MessageHandler {
         object5 = ch3;
         flag4 = false;
         NoneHandler_2 cz2 = ((BannedHandler)object).LiteBansModule_194();
-        boolean flag6 = false;
         SilentHandler dZ3 = cz2.q();
         ObjectUtilities.BaseCoreGenericHandler(dZ3);
         SilentHandler dZ4 = dZ3;
         CharSequence charSequence = dZ4.ServerSyncService();
-        boolean flag7 = false;
         if ((charSequence.c() == BanHandler.GnuSparseMapHandler || charSequence.c() == BanHandler.c) && ((BannedHandler)object).LiteBansModule_240() && ((BannedHandler)object).LiteBansModule_31() != null) {
             String string;
             switch (LiteBansModule_58.BaseCoreGenericHandler[dZ4.ServerSyncService().c().ordinal()]) {
@@ -136,13 +128,10 @@ extends MessageHandler {
                 default: {
                     AssertionUtilities.BaseCoreGenericHandler();
                     throw new CommandExitException();
-                }
-            }
+}
             charSequence = string;
             MessageHandler messageHandler = (MessageHandler)object;
-            boolean flag8 = false;
             BroadcastService o2 = (BroadcastService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
-            boolean bl9 = false;
             o2.BaseCoreGenericHandler((LiteBansModule_82)object5, ((BannedHandler)object).LiteBansModule_31(), dZ4, cz2.D(), (String)charSequence);
         }
         object5 = g13;
@@ -156,7 +145,5 @@ extends MessageHandler {
 
     private static final void c() {
         e = new String[]{"banned", "muted", "warned", "kicked", "banned", "muted", "warned", "kicked", "banned", "muted", "warned", "kicked"};
-    }
-
-    }
+}
 

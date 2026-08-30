@@ -11,8 +11,6 @@ extends GeoIPLookupService_3 {
     @Override
     public String c(@NotNull Object object) {
         MessageHandler messageHandler = this;
-        boolean flag = false;
         return ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService();
-    }
 }
 

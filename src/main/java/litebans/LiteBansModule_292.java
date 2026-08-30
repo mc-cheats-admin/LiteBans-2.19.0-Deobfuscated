@@ -36,6 +36,5 @@ public final class LiteBansModule_292 {
 
     public long LiteBansModule_31() {
         return this.plugin;
-    }
 }
 

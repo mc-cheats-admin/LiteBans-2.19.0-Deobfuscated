@@ -15,7 +15,6 @@ public class LiteBansModule_228 {
         if (n2 == 0) {
             return BaseCoreGenericHandler;
         }
-        int n4 = 0;
         for (n = 0; n < n2; ++n) {
             if (c[string.charAt(n)] >= 0) continue;
             ++n4;
@@ -31,10 +30,7 @@ public class LiteBansModule_228 {
         }
         n5 = ((n2 - n4) * 6 >> 3) - n;
         byte[] byArray = new byte[n5];
-        int n6 = 0;
-        int n7 = 0;
         while (n7 < n5) {
-            int n8 = 0;
             for (int i = 0; i < 4; ++i) {
                 int n9;
                 if ((n9 = c[string.charAt(n6++)]) >= 0) {
@@ -62,9 +58,6 @@ public class LiteBansModule_228 {
         int n4 = (n - 1) / 3 + 1 << 2;
         int n5 = n4 + (flag ? (n4 - 1) / 76 << 1 : 0);
         char[] cArray = new char[n5];
-        int n6 = 0;
-        int n7 = 0;
-        int n8 = 0;
         while (n6 < n3) {
             int n9 = (byArray[n6++] & 0xFF) << 16 | (byArray[n6++] & 0xFF) << 8 | byArray[n6++] & 0xFF;
             cArray[n7++] = AsyncBackgroundTask_5[n9 >>> 18 & 0x3F];
@@ -103,7 +96,5 @@ public class LiteBansModule_228 {
             LiteBansModule_228.c[LiteBansModule_228.AsyncBackgroundTask_5[i]] = i;
         }
         LiteBansModule_228.c[61] = 0;
-    }
-
-    }
+}
 

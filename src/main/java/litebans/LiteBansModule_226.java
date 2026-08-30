@@ -199,6 +199,5 @@ Serializable {
 
     static /* synthetic */ Object[] BaseCoreGenericHandler(LiteBansModule_226 gk2) {
         return gk2.AsyncBackgroundTask_5;
-    }
 }
 

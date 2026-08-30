@@ -18,8 +18,7 @@ LiteBansModule_122 {
             this.plugin = ReaderHandler.BaseCoreGenericHandler(this.c).readLine();
             if (this.plugin == null) {
                 this.AsyncBackgroundTask_5 = true;
-            }
-        }
+}
         return this.plugin != null;
     }
 
@@ -41,7 +40,5 @@ LiteBansModule_122 {
 
     public Object next() {
         return this.plugin();
-    }
-
-    }
+}
 

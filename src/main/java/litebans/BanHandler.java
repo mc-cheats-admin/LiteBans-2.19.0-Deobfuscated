@@ -25,12 +25,12 @@ implements CharSequence {
      * WARNING - void declaration
      */
     private BanHandler() {
-        void var4_2;
-        void var3_1;
+        void arg1;
+        void arg2;
         void var2_-1;
         void var1_-1;
-        this.LiteBansModule_194 = var3_1;
-        this.m = var4_2;
+        this.LiteBansModule_194 = arg2;
+        this.m = arg1;
     }
 
     /*
@@ -40,20 +40,19 @@ implements CharSequence {
     /* synthetic */ BanHandler(BanHandler a_2, BansHandler_2 kL2, int object, LiteBansModule_14 aJ2) {
         void v4;
         void var1_-1;
-        block4: {
+{
             Object object2;
-            block6: {
-                block5: {
-                    void var5_6;
-                    if ((var5_6 & 1) != 0) {
+{
+                    void arg3;
+                    if ((arg3 & 1) != 0) {
                         object = null;
                     }
-                    if ((var5_6 & 2) == 0) break block4;
+                    if ((arg3 & 2) == 0) break;
                     object2 = object;
-                    if (object2 == null) break block5;
+                    if (object2 == null) break;
                     BansHandler_2 kL3 = object2.m;
                     object2 = kL3;
-                    if (kL3 != null) break block6;
+                    if (kL3 != null) break;
                 }
                 object2 = (BansHandler_2)((Object)AssertionUtilities.BaseCoreGenericHandler());
             }
@@ -138,15 +137,12 @@ implements CharSequence {
         BaseCoreGenericHandler = EntriesHandler_3.BaseCoreGenericHandler(Utf8Handler_2);
         LiteBansModule_401 = new TempHandler(null);
         BanHandler[] a_Array = BanHandler.values();
-        boolean flag = false;
         BanHandler[] a_Array2 = a_Array;
         Collection collection = new ArrayList();
-        boolean flag2 = false;
         int n = a_Array2.length;
         for (int i = 0; i < n; ++i) {
             BanHandler a_2;
             BanHandler a_3 = a_2 = a_Array2[i];
-            boolean flag3 = false;
             if (!(a_3 == a_3.c())) continue;
             collection.add(a_2);
         }
@@ -155,6 +151,5 @@ implements CharSequence {
 
     private static final void LiteBansModule_31() {
         i = new String[]{"un", "temp_", "temp_ip", "ip", "un", "un", "temp_", "temp_ip", "ip", "un", "silent_", "BAN", "MUTE", "WARN", "KICK", "UNBAN", "UNMUTE", "UNWARN"};
-    }
 }
 

@@ -5,6 +5,5 @@ public final class LiteBansModule_397 {
 
     public static final LiteBansModule_386 BaseCoreGenericHandler() {
         return BaseCoreGenericHandler;
-    }
 }
 

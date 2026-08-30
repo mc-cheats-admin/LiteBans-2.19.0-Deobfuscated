@@ -32,6 +32,5 @@ implements PreparedStatement {
     public long executeLargeUpdate() {
         this.LiteBansModule_31.LiteBansModule_31();
         return ((PreparedStatement)this.plugin).executeLargeUpdate();
-    }
 }
 

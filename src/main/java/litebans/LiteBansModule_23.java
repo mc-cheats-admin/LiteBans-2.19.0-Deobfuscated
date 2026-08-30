@@ -43,8 +43,7 @@ public final class LiteBansModule_23 {
             default: {
                 AssertionUtilities.BaseCoreGenericHandler();
                 throw new CommandExitException();
-            }
-        }
+}
         return l3;
     }
 
@@ -82,7 +81,5 @@ public final class LiteBansModule_23 {
             return false;
         }
         return this.c == au2.c;
-    }
-
-    }
+}
 

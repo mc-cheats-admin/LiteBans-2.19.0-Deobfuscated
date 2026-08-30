@@ -15,7 +15,6 @@ extends MessageHandler {
         Object object = new String[]{"litebans.admin", "litebans.unlink"};
         CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, (String[])object);
         object = this;
-        boolean flag = false;
         ((DatabaseMonitorService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> LitebansAdminHandler_4.BaseCoreGenericHandler(this, arg_0));
     }
 
@@ -23,12 +22,9 @@ extends MessageHandler {
         Object object = MessageHandler.BaseCoreGenericHandler;
         boolean flag = ch2.LiteBansModule_31();
         CharSequence charSequence = MessageKey.ServerEventListener;
-        boolean flag2 = false;
         ChatFormatter chatFormatter = object;
-        boolean flag3 = false;
         if (flag) {
             ChatFormatter fo_03 = chatFormatter;
-            boolean flag4 = false;
             fo_03.BaseCoreGenericHandler(charSequence);
             throw new CommandExitException();
         }
@@ -46,7 +42,5 @@ extends MessageHandler {
 
     private static final void BaseCoreGenericHandler() {
         e = new String[]{"litebans.admin", "litebans.unlink", "Player ", " has been unlinked successfully."};
-    }
-
-    }
+}
 

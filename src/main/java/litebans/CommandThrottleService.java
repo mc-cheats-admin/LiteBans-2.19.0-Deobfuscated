@@ -26,8 +26,7 @@ extends PluginModule {
         long l3 = this.e().LiteBansModule_194().bf();
         if (l3 > 0L) {
             this.plugin.LiteBansModule_31(this.LiteBansModule_31::clear, l3, l3);
-        }
-    }
+}
 
     @Override
     public void LiteBansModule_31() {
@@ -44,10 +43,8 @@ extends PluginModule {
         boolean flag = !this.LiteBansModule_31.add("" + by2 + ':' + string);
         ConfigService configService = this.e();
         int n = 10;
-        boolean flag2 = false;
         if (configService.BaseCoreGenericHandler(n)) {
             ConfigService q_03 = configService;
-            boolean flag3 = false;
             q_03.BaseCoreGenericHandler((Object)("Throttled! " + string));
         }
         return flag;
@@ -69,7 +66,5 @@ extends PluginModule {
 
     private static final void AsyncBackgroundTask_5() {
         AsyncBackgroundTask_5 = new String[]{"Throttled! "};
-    }
-
-    }
+}
 

@@ -106,8 +106,7 @@ extends DatabaseService {
         catch (ClassCastException classCastException) {
             this.AsyncBackgroundTask_5.getLogger().severe("CCE getString(\"" + string + "\")");
             throw classCastException;
-        }
-    }
+}
 
     @Override
     public List g(String string) {
@@ -230,7 +229,5 @@ extends DatabaseService {
 
     private static final void LiteBansModule_31() {
         LiteBansModule_194 = new String[]{".yml", "No configuration provider (yaml/json)", "CCE getString(\"", "\")", ".yml", "Could not create folder: ", "Could not create file: ", "java + ", "", "Expected BaseCoreGenericHandler config section LiteBansModule_21 \"", "\" but found BaseCoreGenericHandler ", " (InitializerHandler_3 ", "). This section will be treated CommandExitException empty. Define UpdateCheckTask CommandExitException \"", ": {}\" if you want HikariDataSource empty node list."};
-    }
-
-    }
+}
 

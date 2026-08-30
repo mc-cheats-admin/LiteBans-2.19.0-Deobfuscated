@@ -23,7 +23,6 @@ public final class MessagesYmlHandler {
         if ((n & 2) != 0) {
             File file2 = plugin.getDataFolder();
             String string = "messages.yml";
-            boolean flag = false;
             file = new File(file2, string);
         }
         this(plugin, file);
@@ -63,7 +62,6 @@ public final class MessagesYmlHandler {
 
     public final void BaseCoreGenericHandler(@NotNull Exception exception) {
         Logger logger = this.LiteBansModule_31.getLogger();
-        boolean flag = false;
         String string = "messages";
         this.LiteBansModule_194.BaseCoreGenericHandler(string, exception);
         String string2 = "[!!] " + string + ".yml";
@@ -74,12 +72,9 @@ public final class MessagesYmlHandler {
         }
         if (this.LiteBansModule_194.BaseCoreGenericHandler(1)) {
             this.LiteBansModule_194.BaseCoreGenericHandler(exception);
-        }
-    }
+}
 
     private static final void LiteBansModule_194() {
         c = new String[]{"messages.yml", "messages.yml", "messages.yml", "locale", "system", "system", "Using configured locale (", "Supported locales: ", "Note: If the configured locale is unrecognized, the system default locale is ", "Using system locale (", "[!!] Could not save messages + ", "$bannedPlayer", "$bannedPlayer", "$bannedPlayer", "$mutedPlayer", "$bannedPlayer", "$warnedPlayer", "%AsyncBackgroundTask_5 %AsyncBackgroundTask_21", "Duration format (\"", "\") is invalid! (", "Using default format instead (\"", "\") + ", "$bannedPlayer", "$bannedPlayer", "$bannedPlayer", "$mutedPlayer", "$bannedPlayer", "$warnedPlayer", "%AsyncBackgroundTask_5 %AsyncBackgroundTask_21", "Duration format (\"", "\") is invalid! (", "Using default format instead (\"", "\") + ", "messages", "[!!] ", ".yml", " may be invalid. Check with https://yaml-online-parser.appspot.com", " could not be created InitializerHandler_3 "};
-    }
-
-    }
+}
 

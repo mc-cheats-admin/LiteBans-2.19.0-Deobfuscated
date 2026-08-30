@@ -47,7 +47,5 @@ LiteBansModule_122 {
 
     private static final void BaseCoreGenericHandler() {
         AsyncBackgroundTask_5 = new String[]{"Operation is not supported for read-only collection", "Operation is not supported for read-only collection"};
-    }
-
-    }
+}
 

@@ -21,7 +21,6 @@ extends MessageHandler {
         }
         object = ArrayUtilities.AsyncBackgroundTask_5(this.AsyncBackgroundTask_5);
         MessageHandler messageHandler = this;
-        boolean flag = false;
         ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> LitebansAdminHandler_3.BaseCoreGenericHandler((List)object, this, arg_0));
     }
 
@@ -47,7 +46,6 @@ extends MessageHandler {
         object = gj2;
         n = 0;
         Object object2 = (BroadcastService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
-        boolean flag = false;
         BroadcastService.BaseCoreGenericHandler(object2, ch2, charSequence, (String)dy_02.BaseCoreGenericHandler, null, gj2.AsyncBackgroundTask_5().LiteBansModule_240(), false, false, gj2.AsyncBackgroundTask_5(), 52, null);
         object = ch2;
         object2 = BroadcastHandler.c;
@@ -55,10 +53,8 @@ extends MessageHandler {
         if (object.AsyncBackgroundTask_5().AsyncBackgroundTask_21()) {
             Object object3 = object2;
             Object object4 = object;
-            boolean flag2 = false;
             LiteBansModule_303 iF2 = ServerSyncService.GnuSparseMapHandler;
             Object[] objectArray = new CharSequence[]{dy_02.BaseCoreGenericHandler, charSequence};
-            boolean flag3 = false;
             CharSequence charSequence2 = ArrayUtilities.BaseCoreGenericHandler(objectArray, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
             CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_82)object4, (BroadcastHandler)((Object)object3), charSequence2, null, null, 12, null);
         }
@@ -67,7 +63,5 @@ extends MessageHandler {
 
     private static final void BaseCoreGenericHandler() {
         e = new String[]{"litebans.admin", "litebans.broadcast", "Usage: /litebans broadcast <message>", "broadcast", "broadcast-type:", " ", "\ufeff"};
-    }
-
-    }
+}
 

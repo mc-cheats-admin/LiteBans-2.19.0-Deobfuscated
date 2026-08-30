@@ -29,6 +29,5 @@ JsonDeserializer {
 
     public Object deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) {
         return this.plugin(jsonElement, type, jsonDeserializationContext);
-    }
 }
 

@@ -110,8 +110,7 @@ implements LiteBansModule_98 {
         catch (LinkageError linkageError) {
             this.AsyncBackgroundTask_5.getLogger().warning("Unable to determine server protocol version");
             return 770;
-        }
-    }
+}
 
     @Override
     public Object AsyncBackgroundTask_5(Object object) {
@@ -125,8 +124,7 @@ implements LiteBansModule_98 {
     public void c(Object object, String string) {
         if (object instanceof class_2168) {
             ((class_2168)object).method_45068((class_2561)this.AsyncBackgroundTask_5().LiteBansModule_31(string));
-        }
-    }
+}
 
     @Override
     public void BaseCoreGenericHandler(Object object, String string, byte[] byArray) {
@@ -181,7 +179,5 @@ implements LiteBansModule_98 {
     @Override
     public void BaseCoreGenericHandler(MinecraftServer minecraftServer) {
         this.c = minecraftServer;
-    }
-
-    }
+}
 

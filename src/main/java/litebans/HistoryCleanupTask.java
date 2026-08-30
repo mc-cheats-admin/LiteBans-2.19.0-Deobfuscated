@@ -37,18 +37,15 @@ implements Runnable {
                     if (n <= 0 || LiteBansModule_149.g(kJ2.e, l5) <= l3 || !HikariPool.BaseCoreGenericHandler(this.LiteBansModule_31).BaseCoreGenericHandler(kJ2)) continue;
                     this.LiteBansModule_31.BaseCoreGenericHandler(kJ2, "(connection has passed idleTimeout)");
                     --n;
-                }
-            }
+}
             this.LiteBansModule_31.BaseCoreGenericHandler(new String[]{string});
             HikariPool.c(this.LiteBansModule_31);
         }
         catch (Exception exception) {
             HikariPool.LiteBansModule_31(this.LiteBansModule_31).BaseCoreGenericHandler("Unexpected exception InitializerHandler_3 housekeeping task", new Object[]{exception});
-        }
-    }
+}
 
     /* synthetic */ HistoryCleanupTask(HikariPool dr2, LiteBansModule_332 j92) {
         this(dr2);
-    }
 }
 

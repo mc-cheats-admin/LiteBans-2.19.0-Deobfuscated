@@ -30,7 +30,5 @@ implements RandomAccess {
 
     private static final void c() {
         g = new String[]{"list"};
-    }
-
-    }
+}
 

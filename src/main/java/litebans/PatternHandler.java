@@ -28,6 +28,5 @@ implements Serializable {
 
     private static final void BaseCoreGenericHandler() {
         AsyncBackgroundTask_5 = new String[]{"pattern"};
-    }
 }
 

@@ -29,7 +29,6 @@ extends SelectorHandler {
     public static final String LiteBansModule_31(@NotNull String string, int n) {
         ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
         if (!(n >= 0)) {
-            boolean flag = false;
             String string2 = "Requested character count " + n + " is less than ";
             throw new IllegalArgumentException(string2.toString());
         }
@@ -39,15 +38,11 @@ extends SelectorHandler {
     public static final String BaseCoreGenericHandler(@NotNull String string, int n) {
         ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
         if (!(n >= 0)) {
-            boolean flag = false;
             String string2 = "Requested character count " + n + " is less than ";
             throw new IllegalArgumentException(string2.toString());
         }
         String string3 = string;
-        int n2 = 0;
         int n3 = LiteBansModule_20.AsyncBackgroundTask_5(n, string.length());
         return string3.substring(n2, n3);
-    }
-
-    }
+}
 

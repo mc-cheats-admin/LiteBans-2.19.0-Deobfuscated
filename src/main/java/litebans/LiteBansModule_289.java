@@ -57,7 +57,5 @@ public final class LiteBansModule_289 {
 
     private static final void LiteBansModule_194() {
         g = new String[]{""};
-    }
-
-    }
+}
 

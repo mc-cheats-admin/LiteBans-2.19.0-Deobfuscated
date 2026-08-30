@@ -28,13 +28,11 @@ extends BansHandler {
         Throwable throwable = null;
         try {
             Object object = (PreparedStatement)autoCloseable;
-            boolean flag2 = false;
             ResultSet resultSet = preparedStatement.executeQuery();
             AutoCloseable autoCloseable2 = resultSet;
             Throwable throwable2 = null;
             try {
                 Object object2 = (ResultSet)autoCloseable2;
-                boolean flag3 = false;
                 while (resultSet.next()) {
                     Object object3;
                     try {
@@ -62,14 +60,12 @@ extends BansHandler {
                                 object9 = null;
                                 try {
                                     object8 = (PreparedStatement)object10;
-                                    boolean flag6 = false;
                                     object11.setString(1, string3);
                                     ResultSet resultSet2 = object11.executeQuery();
                                     object7 = resultSet2;
                                     object6 = null;
                                     try {
                                         object5 = (ResultSet)object7;
-                                        boolean flag7 = false;
                                         if (resultSet2.next()) {
                                             string4 = resultSet2.getString(this.i() + "player");
                                             string5 = resultSet2.getString("lastip");
@@ -91,14 +87,11 @@ extends BansHandler {
                                 }
                                 finally {
                                     CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)object10, (Throwable)object9);
-                                }
-                            }
+}
                             catch (Exception exception) {
                                 object10 = this;
-                                boolean flag8 = false;
                                 ((DatabaseMonitorService)((MessageHandler)object10).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(exception);
-                            }
-                        }
+}
                         if (string4 == null && object3 != null) {
                             string4 = this.plugin(UUID.fromString((String)object3));
                         }
@@ -111,14 +104,12 @@ extends BansHandler {
                                 Throwable throwable5 = null;
                                 try {
                                     Object object12 = (PreparedStatement)object8;
-                                    boolean bl9 = false;
                                     preparedStatement2.setString(1, (String)object11);
                                     object6 = preparedStatement2.executeQuery();
                                     object5 = (AutoCloseable)object6;
                                     Throwable throwable6 = null;
                                     try {
                                         Object object13 = object5;
-                                        boolean bl10 = false;
                                         if (object6.next()) {
                                             object10 = LiteBansModule_50.c.e(object6.getString("UUID"));
                                         }
@@ -139,20 +130,16 @@ extends BansHandler {
                                 }
                                 finally {
                                     CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)object8, throwable5);
-                                }
-                            }
+}
                             catch (Exception exception) {
                                 object8 = this;
-                                boolean bl11 = false;
                                 ((DatabaseMonitorService)((MessageHandler)object8).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(exception);
-                            }
-                        }
+}
                         if ((string2 = resultSet.getString("ban_reason")) == null) {
                             string2 = "";
                         }
                         object9 = string2;
                         MessageHandler messageHandler = this;
-                        boolean bl12 = false;
                         BroadcastService o2 = (BroadcastService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
                         ObjectUtilities.BaseCoreGenericHandler(resultSet);
                         messageHandler = this;
@@ -160,7 +147,6 @@ extends BansHandler {
                         object8 = o2.BaseCoreGenericHandler(resultSet, "ban_begin", false, ((ConfigService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().ElementsHandler());
                         long l3 = ((Date)object8).getTime();
                         object6 = this;
-                        boolean bl13 = false;
                         BroadcastService o3 = (BroadcastService)((MessageHandler)object6).LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
                         object6 = this;
                         bl13 = false;
@@ -187,10 +173,8 @@ extends BansHandler {
                     }
                     catch (Exception exception) {
                         object3 = this;
-                        boolean bl14 = false;
                         ((DatabaseMonitorService)((MessageHandler)object3).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(exception);
-                    }
-                }
+}
                 object2 = KotlinUnitHandler.BaseCoreGenericHandler;
             }
             catch (Throwable throwable9) {
@@ -208,12 +192,9 @@ extends BansHandler {
         }
         finally {
             CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         m = new String[]{"BungeeAdminTools", "BAT_", "BAT", "SELECT * FROM ", "ban WHERE ban_state=1", "UUID", "ban_ip", "SELECT ", "player,lastip FROM ", "players WHERE UUID=? ORDER BY lastlogin DESC LIMIT 1", "player", "lastip", "ban_staff", "SELECT UUID FROM ", "players WHERE ", "player=? ORDER BY lastlogin DESC LIMIT 1", "UUID", "ban_reason", "", "ban_begin", "ban_end", "ban_end", "#", "Ignoring duplicate ban for ", "#"};
-    }
-
-    }
+}
 

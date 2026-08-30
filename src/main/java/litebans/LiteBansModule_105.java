@@ -15,6 +15,5 @@ extends LiteBansModule_66 {
 
     public final Long BaseCoreGenericHandler() {
         return this.g;
-    }
 }
 

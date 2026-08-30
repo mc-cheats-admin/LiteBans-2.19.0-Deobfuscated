@@ -8,7 +8,6 @@ implements LiteBansModule_178 {
 
     public final String BaseCoreGenericHandler(BansHandler_2 kL2) {
         BansHandler_2 kL3 = kL2;
-        boolean flag = false;
         return SQLiteDriverHandler.LiteBansModule_194(SQLiteDriverHandler.e("ALTER TABLE " + kL3), "removed_by_date TIMESTAMP");
     }
 
@@ -20,7 +19,5 @@ implements LiteBansModule_178 {
     static {
         LiteBansModule_406.BaseCoreGenericHandler();
         BaseCoreGenericHandler = new LiteBansModule_406();
-    }
-
-    }
+}
 

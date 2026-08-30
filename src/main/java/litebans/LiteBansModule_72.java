@@ -65,6 +65,5 @@ implements Comparable {
         AsyncBackgroundTask_5 = -1;
         c = 0;
         e = new LiteBansModule_413(null);
-    }
 }
 

@@ -15,7 +15,5 @@ public class LiteBansModule_408 {
 
     private static final void yYR() {
         c = new String[]{""};
-    }
-
-    }
+}
 

@@ -11,13 +11,11 @@ implements Comparator {
 
     public final int compare(Object object, Object object2) {
         LiteBansModule_109 cy2 = (LiteBansModule_109)object;
-        boolean flag = false;
         LiteBansModule_23 au2 = cy2.g();
         cy2 = (LiteBansModule_109)object2;
         Comparable comparable = Long.valueOf(au2.BaseCoreGenericHandler(this.plugin));
         flag = false;
         au2 = cy2.g();
         return LiteBansModule_261.BaseCoreGenericHandler(comparable, Long.valueOf(au2.BaseCoreGenericHandler(this.plugin)));
-    }
 }
 

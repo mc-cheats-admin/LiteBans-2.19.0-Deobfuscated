@@ -21,7 +21,7 @@ implements LiteBansModule_171 {
 
     @Subscribe(order=PostOrder.FIRST)
     public final void BaseCoreGenericHandler(@NotNull ServerPreConnectEvent v1) {
-        block12: {
+{
             if (!v1.getResult().isAllowed()) {
                 return;
             }
@@ -33,85 +33,62 @@ implements LiteBansModule_171 {
             v3 = v0;
             v1 = this.c;
             ObjectUtilities.LiteBansModule_31(v1, "");
-            var4_4 = (VelocityPlugin)v1;
-            var5_5 = v3;
-            var6_6 = false;
+            arg1 = (VelocityPlugin)v1;
+            arg2 = v3;
             ObjectUtilities.BaseCoreGenericHandler(v2);
-            var7_7 = v2;
-            var8_8 = "litebans.lockdown.bypass";
-            var9_9 = false;
-            var10_11 = var7_7;
-            var11_14 = false;
-            if (!(var10_11.e((String)var8_8) == false)) break block12;
-            var7_7 = ((RegisteredServer)v1.getResult().getServer().get()).getServerInfo().getName();
-            var8_8 = var5_5;
-            var9_9 = false;
-            if (LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(var8_8.BaseCoreGenericHandler())) ** GOTO lbl-1000
-            var10_11 = var8_8;
-            var11_15 = (MessageHandler)var8_8;
-            var12_16 = false;
-            var11_15 = ((DatabaseMonitorService)var11_15.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService();
-            var12_16 = false;
-            if (StringUtilities.BaseCoreGenericHandler(var10_11.BaseCoreGenericHandler(), (String)var11_15, true)) lbl-1000:
-            // 2 sources
-
-            {
-                v2 = true;
+            arg3 = v2;
+            arg4 = "litebans.lockdown.bypass";
+            arg5 = arg3;
+            if (!(arg5.e((String)arg4) == false)) break;
+            arg3 = ((RegisteredServer)v1.getResult().getServer().get()).getServerInfo().getName();
+            arg4 = arg2;
+            if (LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(arg4.BaseCoreGenericHandler())) ** GOTO lbl-1000
+            arg5 = arg4;
+            arg6 = (MessageHandler)arg4;
+            arg6 = ((DatabaseMonitorService)arg6.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService();
+            if (StringUtilities.BaseCoreGenericHandler(arg5.BaseCoreGenericHandler(), (String)arg6, true)) lbl-1000:
+                        {
             } else {
-                v2 = false;
             }
             if (v2) {
-                ObjectUtilities.BaseCoreGenericHandler(var7_7);
-                LitebansLockdownBypassHandler.BaseCoreGenericHandler(var5_5, v1, var5_5.BaseCoreGenericHandler((String)var7_7, true), false, 4, null);
+                ObjectUtilities.BaseCoreGenericHandler(arg3);
+                LitebansLockdownBypassHandler.BaseCoreGenericHandler(arg2, v1, arg2.BaseCoreGenericHandler((String)arg3, true), false, 4, null);
             }
-            var8_8 = var5_5;
-            ObjectUtilities.BaseCoreGenericHandler(var7_7);
-            var9_10 = var7_7;
-            var10_12 = false;
-            if (StringUtilities.BaseCoreGenericHandler(var8_8.BaseCoreGenericHandler(), (String)var9_10, true)) {
-                var8_8 = var5_5.BaseCoreGenericHandler((String)var7_7, false);
+            arg4 = arg2;
+            ObjectUtilities.BaseCoreGenericHandler(arg3);
+            arg7 = arg3;
+            if (StringUtilities.BaseCoreGenericHandler(arg4.BaseCoreGenericHandler(), (String)arg7, true)) {
+                arg4 = arg2.BaseCoreGenericHandler((String)arg3, false);
                 if (v2.LiteBansModule_240() == null) {
-                    block11: {
-                        var10_13 = var4_4.c.getConfiguration().getAttemptConnectionOrder();
-                        var11_14 = false;
-                        var12_17 = var10_13.iterator();
-                        while (var12_17.hasNext()) {
-                            var13_18 = var12_17.next();
-                            var14_19 = (String)var13_18;
-                            var15_20 = false;
-                            var16_21 = var5_5;
-                            ObjectUtilities.BaseCoreGenericHandler((Object)var14_19);
-                            var17_22 = var14_19;
-                            var18_23 = false;
-                            if (!(StringUtilities.BaseCoreGenericHandler(var16_21.BaseCoreGenericHandler(), var17_22, true) == false)) continue;
-                            v3 = var13_18;
-                            break block11;
-                        }
-                        v3 = null;
-                    }
-                    var9_10 = v3;
-                    if (var9_10 == null) {
-                        LitebansLockdownBypassHandler.BaseCoreGenericHandler(var5_5, v1, (String)var8_8, false, 4, null);
+{
+                        arg8 = arg1.c.getConfiguration().getAttemptConnectionOrder();
+                        arg9 = arg8.iterator();
+                        while (arg9.hasNext()) {
+                            arg10 = arg9.next();
+                            arg11 = (String)arg10;
+                            arg12 = arg2;
+                            ObjectUtilities.BaseCoreGenericHandler((Object)arg11);
+                            arg13 = arg11;
+                            if (!(StringUtilities.BaseCoreGenericHandler(arg12.BaseCoreGenericHandler(), arg13, true) == false)) continue;
+                            v3 = arg10;
+                            break;
+}
+                    arg7 = v3;
+                    if (arg7 == null) {
+                        LitebansLockdownBypassHandler.BaseCoreGenericHandler(arg2, v1, (String)arg4, false, 4, null);
                     } else {
-                        v1.setResult(ServerPreConnectEvent.ServerResult.allowed((RegisteredServer)((RegisteredServer)CollectionUtilities.LiteBansModule_240(var4_4.c.matchServer((String)var9_10)))));
-                        var10_13 = v2;
-                        var11_14 = false;
-                        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)var10_13, (CharSequence)var8_8, null, 4, null);
-                    }
-                } else {
-                    LitebansLockdownBypassHandler.BaseCoreGenericHandler(var5_5, v1, null, false, 2, null);
-                    var9_10 = v2;
-                    var10_12 = false;
-                    ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)var9_10, (CharSequence)var8_8, null, 4, null);
-                }
-            }
-        }
-    }
+                        v1.setResult(ServerPreConnectEvent.ServerResult.allowed((RegisteredServer)((RegisteredServer)CollectionUtilities.LiteBansModule_240(arg1.c.matchServer((String)arg7)))));
+                        arg8 = v2;
+                        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)arg8, (CharSequence)arg4, null, 4, null);
+} else {
+                    LitebansLockdownBypassHandler.BaseCoreGenericHandler(arg2, v1, null, false, 2, null);
+                    arg7 = v2;
+                    ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)arg7, (CharSequence)arg4, null, 4, null);
+}
 
     public ServerEventListener_3 c() {
         ServerEventListener_3 jm2;
         ServerEventListener_3 jm3 = jm2 = this;
-        boolean flag = false;
         LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{jm3};
         jm3.c.LiteBansModule_31(em_0Array);
         return jm2;
@@ -120,7 +97,5 @@ implements LiteBansModule_171 {
     @Override
     public LiteBansModule_175 BaseCoreGenericHandler() {
         return this.c();
-    }
-
-    }
+}
 

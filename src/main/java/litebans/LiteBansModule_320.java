@@ -6,6 +6,5 @@ extends LiteBansModule_300 {
 
     public LiteBansModule_320() {
         super("unexpected EOF");
-    }
 }
 

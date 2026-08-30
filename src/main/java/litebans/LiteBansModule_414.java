@@ -26,7 +26,5 @@ implements CustomPacketPayload {
 
     private static final void BaseCoreGenericHandler() {
         AsyncBackgroundTask_5 = new String[]{""};
-    }
-
-    }
+}
 

@@ -25,8 +25,7 @@ public final class LiteBansModule_34 {
             default: {
                 AssertionUtilities.BaseCoreGenericHandler();
                 throw new CommandExitException();
-            }
-        }
+}
         return l3;
     }
 
@@ -56,7 +55,5 @@ public final class LiteBansModule_34 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"(BaseCoreGenericHandler=", ", mute="};
-    }
-
-    }
+}
 

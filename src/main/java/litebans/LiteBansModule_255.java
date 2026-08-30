@@ -21,6 +21,5 @@ implements LiteBansModule_252 {
 
     private final Component BaseCoreGenericHandler(CharSequence charSequence) {
         return (Component)ComponentSerialization.CODEC.parse((DynamicOps)RegistryAccess.EMPTY.createSerializationContext((DynamicOps)JsonOps.INSTANCE), (Object)StrictJsonParser.parse((String)charSequence.toString())).getOrThrow(IllegalArgumentException::new);
-    }
 }
 

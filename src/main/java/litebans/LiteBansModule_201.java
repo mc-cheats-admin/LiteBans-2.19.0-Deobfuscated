@@ -50,7 +50,5 @@ implements IMixinConfigPlugin {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"", "_", "_", "fabric-api", "\\+", " + ", "_", "_", "_", "_", ""};
-    }
-
-    }
+}
 

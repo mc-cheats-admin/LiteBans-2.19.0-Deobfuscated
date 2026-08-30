@@ -14,7 +14,5 @@ LiteBansModule_122 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"elements", "elements", "UByteArray(storage=", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "storage", "Operation is not supported for read-only collection", "array"};
-    }
-
-    }
+}
 

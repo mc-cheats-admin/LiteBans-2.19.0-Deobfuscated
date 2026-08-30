@@ -29,7 +29,5 @@ public final class LiteBansModule_3 {
         }
         LiteBansModule_3 a42 = (LiteBansModule_3)object;
         return this.plugin == a42.BaseCoreGenericHandler;
-    }
-
-    }
+}
 

@@ -15,8 +15,7 @@ extends LiteBansModule_262 {
         ObjectUtilities.LiteBansModule_31(ec_02, "");
         if (((GetcancelreasoncomponentsHandler)ec_02).BaseCoreGenericHandler()) {
             this.setPermissionMessage(HoverTextFormatter.LiteBansModule_31.BaseCoreGenericHandler(MessageKey.cZ.toString()));
-        }
-    }
+}
 
     @Override
     public List suggest(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
@@ -27,7 +26,5 @@ extends LiteBansModule_262 {
 
     private static final void BaseCoreGenericHandler() {
         AsyncBackgroundTask_5 = new String[]{"", ""};
-    }
-
-    }
+}
 

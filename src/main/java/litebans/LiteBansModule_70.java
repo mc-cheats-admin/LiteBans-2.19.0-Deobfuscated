@@ -24,6 +24,5 @@ public final class LiteBansModule_70 {
 
     public final void BaseCoreGenericHandler(boolean flag) {
         this.LiteBansModule_31 = flag;
-    }
 }
 

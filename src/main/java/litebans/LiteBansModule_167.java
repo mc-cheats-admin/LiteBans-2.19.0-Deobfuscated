@@ -36,7 +36,5 @@ extends LiteBansModule_160 {
 
     private static final void LiteBansModule_31() {
         c = new String[]{"Text(value=", ")"};
-    }
-
-    }
+}
 

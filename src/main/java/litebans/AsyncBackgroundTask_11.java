@@ -19,7 +19,5 @@ extends ThreadLocal {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"yyyy-MM-LiteBansModule_118 HH:mm:ss", "UTC"};
-    }
-
-    }
+}
 

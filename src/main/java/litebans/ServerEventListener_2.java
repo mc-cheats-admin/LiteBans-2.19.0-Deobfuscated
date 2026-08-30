@@ -63,27 +63,22 @@ implements LiteBansModule_171 {
             return;
         }
         object = sender;
-        boolean flag = false;
         new LiteBansModule_221(this.AsyncBackgroundTask_5, object.i(), object.BaseCoreGenericHandler(), object.LiteBansModule_31()).run();
         ObjectUtilities.BaseCoreGenericHandler(sender);
         Object object2 = sender;
         Object object3 = "litebans.exempt.dupeip_join";
-        boolean flag2 = false;
         CommandSenderWrapper jv_03 = object2;
-        boolean flag3 = false;
         if (!jv_03.e((String)object3)) {
             object2 = this.LiteBansModule_194;
             ObjectUtilities.BaseCoreGenericHandler(object);
             object3 = object;
             flag2 = false;
             ((AsyncBackgroundTask_22)object2).BaseCoreGenericHandler(object3.i(), object3.BaseCoreGenericHandler(), object3.LiteBansModule_31());
-        }
-    }
+}
 
     public ServerEventListener_2 LiteBansModule_31() {
         ServerEventListener_2 d12;
         ServerEventListener_2 d13 = d12 = this;
-        boolean flag = false;
         LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{d13};
         d13.AsyncBackgroundTask_5.LiteBansModule_31(em_0Array);
         return d12;
@@ -100,7 +95,5 @@ implements LiteBansModule_171 {
 
     private static final void c() {
         e = new String[]{"litebans.exempt.dupeip_join"};
-    }
-
-    }
+}
 

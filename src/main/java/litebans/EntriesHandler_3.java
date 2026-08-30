@@ -10,7 +10,5 @@ public final class EntriesHandler_3 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"entriesProvider", "entries"};
-    }
-
-    }
+}
 

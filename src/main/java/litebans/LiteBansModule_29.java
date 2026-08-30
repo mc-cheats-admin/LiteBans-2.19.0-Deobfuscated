@@ -28,8 +28,5 @@ extends LiteBansModule_13 {
             }
             catch (Exception exception) {
                 throw new RuntimeException(exception);
-            }
-        }
-    }
 }
 

@@ -35,13 +35,11 @@ implements LiteBansModule_88 {
             LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{this};
             this.plugin.BaseCoreGenericHandler(em_0Array);
             configService.r().BaseCoreGenericHandler(true);
-        }
-    }
+}
 
     public ServerEventListener_4 LiteBansModule_31() {
         ServerEventListener_4 lX2;
         ServerEventListener_4 lX3 = lX2 = this;
-        boolean flag = false;
         LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{lX3};
         lX3.BaseCoreGenericHandler.LiteBansModule_31(em_0Array);
         return lX2;
@@ -50,7 +48,5 @@ implements LiteBansModule_88 {
     @Override
     public LiteBansModule_175 BaseCoreGenericHandler() {
         return this.LiteBansModule_31();
-    }
-
-    }
+}
 

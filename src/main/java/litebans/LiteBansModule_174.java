@@ -91,7 +91,5 @@ public final class LiteBansModule_174 {
 
     private static final void g() {
         e = new String[]{"TemplateGroup(name=", ", type=", ", weights=", ", templates=", ", ladder=", ", ladderExpiry="};
-    }
-
-    }
+}
 

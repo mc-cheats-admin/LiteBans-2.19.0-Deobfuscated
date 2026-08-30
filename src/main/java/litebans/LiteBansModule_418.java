@@ -6,6 +6,5 @@ extends LiteBansModule_424
 implements CallableStatement {
     protected LiteBansModule_418(HexEncodingHelper c22, CallableStatement callableStatement) {
         super(c22, callableStatement);
-    }
 }
 

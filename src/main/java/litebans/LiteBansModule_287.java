@@ -22,6 +22,5 @@ public class LiteBansModule_287 {
 
     private static final void BaseCoreGenericHandler() {
         c = new String[]{"#.#", "#.##", "#.###"};
-    }
 }
 

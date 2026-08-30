@@ -13,11 +13,9 @@ public final class CommandArgumentUtils {
     public static final String BaseCoreGenericHandler(@NotNull MessageHandler messageHandler, @NotNull CommandSenderWrapper sender, @NotNull String[] args, @NotNull String string) {
         GlobalHandler_2 jG2 = LiteBansModule_181.LiteBansModule_194;
         Object object = messageHandler;
-        boolean flag = false;
         object = ((DatabaseMonitorService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService();
         flag = false;
         LiteBansModule_181 eq_02 = jG2.BaseCoreGenericHandler(sender, CollectionUtilities.AsyncBackgroundTask_5(Arrays.copyOf(args, args.length)), (String)object, false);
-        boolean flag2 = false;
         CharSequence charSequence = eq_02.BaseCoreGenericHandler();
         return charSequence == null || charSequence.length() == 0 ? LiteBansModule_181.LiteBansModule_194.BaseCoreGenericHandler(string, (String)object, sender) : eq_02.BaseCoreGenericHandler();
     }
@@ -25,9 +23,7 @@ public final class CommandArgumentUtils {
     public static /* synthetic */ String BaseCoreGenericHandler(MessageHandler messageHandler, CommandSenderWrapper sender, String[] args, String string, int n, Object object) {
         if ((n & 4) != 0) {
             MessageHandler fg_03 = messageHandler;
-            boolean flag = false;
             MessageHandler fg_04 = fg_03;
-            boolean flag2 = false;
             string = ((ConfigService)fg_04.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().BuilderactionHandler();
         }
         return CommandArgumentUtils.BaseCoreGenericHandler(messageHandler, sender, args, string);
@@ -37,13 +33,11 @@ public final class CommandArgumentUtils {
         CommandSenderWrapper sender = (CommandSenderWrapper)MessageHandler.BaseCoreGenericHandler.LiteBansModule_31().get();
         if (sender != null) {
             MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(sender, charSequence, messageHandler.LiteBansModule_240());
-        }
-    }
+}
 
     public static final SilentHandler BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull SilentHandler dZ2, boolean flag, boolean flag2) {
         SilentHandler dZ3;
         SilentHandler dZ4 = dZ3 = dZ2;
-        boolean flag3 = false;
         if (flag) {
             LiteBansModule_268.BaseCoreGenericHandler.LiteBansModule_31(ch2, ch2.e(), dZ2);
             PunishmentTableService p2 = (PunishmentTableService)ch2.e().BaseCoreGenericHandler(PunishmentTableService.class);
@@ -83,7 +77,6 @@ public final class CommandArgumentUtils {
                 string2 = "";
             }
             objectArray[2] = string2;
-            boolean flag = false;
             charSequence2 = ArrayUtilities.BaseCoreGenericHandler(objectArray, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
         }
         ServerSyncService.BaseCoreGenericHandler(u2, ij2, ch2, charSequence2, 0, 8, null);
@@ -114,15 +107,12 @@ public final class CommandArgumentUtils {
             return;
         }
         Object object = jv_0Array;
-        boolean flag = false;
         Object object2 = object;
         Collection<CommandSenderWrapper> collection = new ArrayList();
-        boolean flag2 = false;
         int n3 = ((CommandSenderWrapper[])object2).length;
         for (n2 = 0; n2 < n3; ++n2) {
             CommandSenderWrapper sender;
             CommandSenderWrapper jv_03 = sender = object2[n2];
-            boolean flag3 = false;
             ObjectUtilities.BaseCoreGenericHandler(jv_03);
             if (!(ch2.BaseCoreGenericHandler(dZ2, jv_03) && CommandArgumentUtils.BaseCoreGenericHandler(ch2, dZ2, jv_03))) continue;
             collection.add(sender);
@@ -137,8 +127,7 @@ public final class CommandArgumentUtils {
             ObjectUtilities.BaseCoreGenericHandler(jv_04);
             CharSequence charSequence = GeoIPLookupService.BaseCoreGenericHandler(ch2, dZ2, jv_04, n);
             o2.BaseCoreGenericHandler(jv_04, charSequence);
-        }
-    }
+}
 
     public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_82 ch2, SilentHandler dZ2, int n, int n2, Object object) {
         if ((n2 & 2) != 0) {
@@ -153,7 +142,6 @@ public final class CommandArgumentUtils {
 
     public static final SilentHandler BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull LiteBansModule_327 j02, @NotNull SilentHandler dZ2, @Nullable String string, @Nullable String string2, @Nullable String string3, @Nullable String string4, boolean flag) {
         SilentHandler dZ3 = dZ2;
-        boolean flag2 = false;
         BroadcastService o2 = (BroadcastService)ch2.e().BaseCoreGenericHandler(BroadcastService.class);
         ConfigService configService = (ConfigService)ch2.e().BaseCoreGenericHandler(ConfigService.class);
         CommandSenderWrapper sender = (CommandSenderWrapper)MessageHandler.BaseCoreGenericHandler.LiteBansModule_31().get();
@@ -193,7 +181,6 @@ public final class CommandArgumentUtils {
         cz2.LiteBansModule_31(dZ4);
         ((NoneHandler_2)object).BaseCoreGenericHandler(InitHandler.i);
         BroadcastService o3 = o2;
-        boolean flag4 = false;
         CommandArgumentUtils.BaseCoreGenericHandler(ch2, dZ4, false, false, 6, null);
         ((NoneHandler_2)object).BaseCoreGenericHandler(InitHandler.c);
         CommandArgumentUtils.BaseCoreGenericHandler(ch2, dZ4, 0, 2, null);
@@ -251,10 +238,7 @@ public final class CommandArgumentUtils {
                     long l10 = CommandArgumentUtils.LiteBansModule_31(dZ5, l3, l7);
                     MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(CommandArgumentUtils.BaseCoreGenericHandler(ch2, dZ5, iA2, l10));
                     throw new CommandExitException();
-                }
-            }
-        }
-    }
+}
 
     public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_82 ch2, LiteBansModule_82 ch3, SilentHandler dZ2, long l3, long l5, long l7, LiteBansModule_297 iA2, boolean flag, int n, Object object) {
         if ((n & 0x40) != 0) {
@@ -282,7 +266,6 @@ public final class CommandArgumentUtils {
             return string;
         }
         MessageHandler fg_03 = messageHandler;
-        boolean flag = false;
         long l3 = ((ConfigService)fg_03.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).Utf8Handler_2().LiteBansModule_31(string);
         if (l3 == -1L) {
             return string;
@@ -294,15 +277,13 @@ public final class CommandArgumentUtils {
         NameHandler_3 jp_02 = HexEncodingHelper.BaseCoreGenericHandler.Utf8Handler_2(string);
         if (jp_02.AsyncBackgroundTask_5() == 1) {
             Object object;
-            block5: {
+{
                 MessageHandler fg_03 = messageHandler;
-                boolean flag = false;
                 for (Object object2 : (Object[])fg_03.LiteBansModule_240().q()) {
                     CommandSenderWrapper sender = (CommandSenderWrapper)object2;
-                    boolean flag2 = false;
                     if (!ObjectUtilities.BaseCoreGenericHandler((Object)sender.BaseCoreGenericHandler(), (Object)string)) continue;
                     object = object2;
-                    break block5;
+                    break;
                 }
                 object = null;
             }
@@ -311,9 +292,7 @@ public final class CommandArgumentUtils {
         String string2 = null;
         string2 = string;
         Object object = messageHandler;
-        boolean flag = false;
         MessageHandler fg_04 = object;
-        int n = 0;
         boolean flag3 = ((ConfigService)fg_04.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().F();
         if (flag3) {
             object = string2;
@@ -321,11 +300,9 @@ public final class CommandArgumentUtils {
         }
         object = null;
         Object[] objectArray = messageHandler.LiteBansModule_240().q();
-        boolean flag4 = false;
         for (Object object3 : objectArray) {
             String string3;
             CommandSenderWrapper jv_03 = (CommandSenderWrapper)object3;
-            boolean flag5 = false;
             String string4 = jv_03.i();
             if (flag3 && StringUtilities.LiteBansModule_31((string3 = string4).toLowerCase(Locale.ENGLISH), string2, false, 2, null)) {
                 object = jv_03;
@@ -337,26 +314,18 @@ public final class CommandArgumentUtils {
     }
 
     public static final void c(@NotNull MessageHandler messageHandler, @NotNull String string) {
-        boolean flag = false;
         CommandSenderWrapper sender = messageHandler.AsyncBackgroundTask_5();
-        boolean flag2 = false;
         ChatFormatter chatFormatter = MessageHandler.BaseCoreGenericHandler;
         CommandSenderWrapper jv_03 = sender;
-        boolean flag3 = false;
         CommandSenderWrapper jv_04 = jv_03;
-        boolean flag4 = false;
         boolean flag5 = !jv_04.e(string);
         CharSequence charSequence = MessageKey.cZ;
-        boolean flag6 = false;
         ChatFormatter fo_03 = chatFormatter;
-        boolean flag7 = false;
         if (flag5) {
             ChatFormatter fo_04 = fo_03;
-            boolean flag8 = false;
             fo_04.BaseCoreGenericHandler(charSequence);
             throw new CommandExitException();
-        }
-    }
+}
 
     public static final void BaseCoreGenericHandler(@NotNull MessageHandler messageHandler, @NotNull String[] args) {
         boolean flag;
@@ -364,24 +333,21 @@ public final class CommandArgumentUtils {
         boolean flag2;
         Object object2;
         ChatFormatter chatFormatter;
-        block2: {
+{
             chatFormatter = MessageHandler.BaseCoreGenericHandler;
             CommandSenderWrapper sender = messageHandler.AsyncBackgroundTask_5();
             object2 = Arrays.copyOf(args, args.length);
             flag2 = false;
             object = sender;
             String[] filteredArgs = Arrays.copyOf(object2, ((String[])object2).length);
-            boolean flag3 = false;
             String[] parsedArgs = filteredArgs;
-            boolean flag4 = false;
             int n = parsedArgs.length;
             for (int i = 0; i < n; ++i) {
                 String string;
                 String string2 = string = parsedArgs[i];
-                boolean flag5 = false;
                 if (!object.e(string2)) continue;
                 flag = true;
-                break block2;
+                break;
             }
             flag = false;
         }
@@ -389,69 +355,47 @@ public final class CommandArgumentUtils {
         object2 = MessageKey.cZ;
         flag2 = false;
         object = chatFormatter;
-        boolean flag7 = false;
         if (flag6) {
             Object object3 = object;
-            boolean flag8 = false;
             ((ChatFormatter)object3).BaseCoreGenericHandler(object2);
             throw new CommandExitException();
-        }
-    }
+}
 
     public static final void BaseCoreGenericHandler(@NotNull MessageHandler var0, @NotNull LiteBansModule_65 v1, @NotNull LiteBansModule_66 v2) {
         v3 = v1.LiteBansModule_240().c();
-        var4_4 = v2.c();
-        var5_5 = MessageHandler.BaseCoreGenericHandler;
+        arg1 = v2.c();
+        arg2 = MessageHandler.BaseCoreGenericHandler;
         if (v3 == null) ** GOTO lbl-1000
-        var6_6 = var0.AsyncBackgroundTask_5();
-        v7 = false;
-        var8_14 = var6_6;
-        var9_18 = false;
-        if (var8_14.e(v3) == false) {
-            v0 = true;
+        arg3 = var0.AsyncBackgroundTask_5();
+        arg4 = arg3;
+        if (arg4.e(v3) == false) {
         } else lbl-1000:
-        // 2 sources
-
-        {
-            v0 = false;
+                {
         }
-        var6_7 = v0;
-        var7_11 = MessageKey.cZ;
-        var8_15 = false;
-        var9_19 = var5_5;
-        var10_22 = false;
-        if (var6_7) {
-            var11_23 = var9_19;
-            var12_25 = false;
-            var11_23.BaseCoreGenericHandler(var7_11);
+        arg5 = v0;
+        arg6 = MessageKey.cZ;
+        arg7 = arg2;
+        if (arg5) {
+            arg8 = arg7;
+            arg8.BaseCoreGenericHandler(arg6);
             throw new CommandExitException();
         }
-        var5_5 = MessageHandler.BaseCoreGenericHandler;
-        if (var4_4 == null) ** GOTO lbl-1000
+        arg2 = MessageHandler.BaseCoreGenericHandler;
+        if (arg1 == null) ** GOTO lbl-1000
         v6 = var0.AsyncBackgroundTask_5();
-        var7_12 = false;
-        var8_16 = v6;
-        var9_20 = false;
-        if (var8_16.e(var4_4) == false) {
-            v1 = true;
+        arg9 = v6;
+        if (arg9.e(arg1) == false) {
         } else lbl-1000:
-        // 2 sources
-
-        {
-            v1 = false;
+                {
         }
-        var6_9 = v1;
-        var7_13 = MessageKey.cZ;
-        var8_17 = false;
-        var9_21 = var5_5;
-        var10_22 = false;
-        if (var6_9) {
-            var11_24 = var9_21;
-            var12_26 = false;
-            var11_24.BaseCoreGenericHandler(var7_13);
+        arg10 = v1;
+        arg11 = MessageKey.cZ;
+        arg12 = arg2;
+        if (arg10) {
+            arg13 = arg12;
+            arg13.BaseCoreGenericHandler(arg11);
             throw new CommandExitException();
-        }
-    }
+}
 
     private static final LiteBansModule_297 BaseCoreGenericHandler(LiteBansModule_82 ch2, String string) {
         LiteBansModule_297 iA2 = ch2.c(string);
@@ -462,33 +406,27 @@ public final class CommandArgumentUtils {
     }
 
     public static final LiteBansModule_297 BaseCoreGenericHandler(@NotNull LiteBansModule_82 var0, @NotNull String v1, boolean v2) {
-        block4: {
+{
             v3 = v1;
             if (StringUtilities.c((CharSequence)v3, ':', false, 2, null)) {
                 v3 = StringUtilities.BaseCoreGenericHandler(v3, "user:", null, 2, null);
             }
-            var4_4 = CommandArgumentUtils.BaseCoreGenericHandler(var0, v3);
-            if (!v2) break block4;
-            var5_5 = var4_4.LiteBansModule_31();
-            var6_6 = false;
-            if (var5_5 == null) ** GOTO lbl-1000
-            v0 = StringUtilities.BaseCoreGenericHandler((CharSequence)var5_5, 14);
-            var7_7 = '4';
-            if (v0 != null && v0.charValue() == var7_7) {
-                v1 = true;
+            arg1 = CommandArgumentUtils.BaseCoreGenericHandler(var0, v3);
+            if (!v2) break;
+            arg2 = arg1.LiteBansModule_31();
+            if (arg2 == null) ** GOTO lbl-1000
+            v0 = StringUtilities.BaseCoreGenericHandler((CharSequence)arg2, 14);
+            arg14 = '4';
+            if (v0 != null && v0.charValue() == arg14) {
             } else lbl-1000:
-            // 2 sources
-
-            {
-                v1 = false;
+                        {
             }
             if (v1 && !HexEncodingHelper.BaseCoreGenericHandler(v3)) {
-                v2 = var4_4.LiteBansModule_31();
+                v2 = arg1.LiteBansModule_31();
                 ObjectUtilities.BaseCoreGenericHandler((Object)v2);
                 return CommandArgumentUtils.BaseCoreGenericHandler(var0, v2);
-            }
-        }
-        return var4_4;
+}
+        return arg1;
     }
 
     public static /* synthetic */ LiteBansModule_297 BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, boolean flag, int n, Object object) {
@@ -499,127 +437,114 @@ public final class CommandArgumentUtils {
     }
 
     public static final String[] BaseCoreGenericHandler(@NotNull MuteHandler var0, @NotNull String v1, @NotNull String[] v2) {
-        block33: {
-            block29: {
-                block28: {
-                    block32: {
-                        block31: {
-                            block30: {
-                                block27: {
+{
                                     v3 = v1;
-                                    var4_4 = v2.length;
-                                    var5_5 = StringUtilities.LiteBansModule_31((String)v3, "temp", false, 2, null);
-                                    if (var5_5) {
+                                    arg1 = v2.length;
+                                    arg2 = StringUtilities.LiteBansModule_31((String)v3, "temp", false, 2, null);
+                                    if (arg2) {
                                         v3 = v3.substring(4);
                                     }
-                                    if (var6_6 = StringUtilities.LiteBansModule_31((String)v3, "litebans:", false, 2, null)) {
+                                    if (arg3 = StringUtilities.LiteBansModule_31((String)v3, "litebans:", false, 2, null)) {
                                         v3 = v3.substring(9);
                                     }
-                                    var8_7 = v3;
-                                    switch (var8_7.hashCode()) {
+                                    arg15 = v3;
+                                    switch (arg15.hashCode()) {
                                         case -1396405339: {
-                                            if (!var8_7.equals("ban-ip")) {
-                                                ** break;
+                                            if (!arg15.equals("ban-ip")) {
+                                                break;
                                             }
-                                            break block27;
+                                            break;
                                         }
                                         case 3641990: {
-                                            if (!var8_7.equals("warn")) {
-                                                ** break;
+                                            if (!arg15.equals("warn")) {
+                                                break;
                                             }
-                                            break block28;
+                                            break;
                                         }
                                         case 111426262: {
-                                            if (var8_7.equals("unban")) break;
-                                            ** break;
+                                            if (arg15.equals("unban")) break;
+                                            break;
                                         }
                                         case -840127329: {
-                                            if (!var8_7.equals("unwarn")) {
-                                                ** break;
+                                            if (!arg15.equals("unwarn")) {
+                                                break;
                                             }
-                                            break block29;
+                                            break;
                                         }
                                         case 100403592: {
-                                            if (!var8_7.equals("ipban")) {
-                                                ** break;
+                                            if (!arg15.equals("ipban")) {
+                                                break;
                                             }
-                                            break block27;
+                                            break;
                                         }
                                         case 93503862: {
-                                            if (!var8_7.equals("banip")) {
-                                                ** break;
+                                            if (!arg15.equals("banip")) {
+                                                break;
                                             }
-                                            break block27;
+                                            break;
                                         }
                                         case -1062781696: {
-                                            if (!var8_7.equals("muteip")) {
-                                                ** break;
+                                            if (!arg15.equals("muteip")) {
+                                                break;
                                             }
-                                            break block30;
+                                            break;
                                         }
                                         case -1182108736: {
-                                            if (!var8_7.equals("ipmute")) {
-                                                ** break;
+                                            if (!arg15.equals("ipmute")) {
+                                                break;
                                             }
-                                            break block30;
+                                            break;
                                         }
                                         case 3363353: {
-                                            if (!var8_7.equals("mute")) {
-                                                ** break;
+                                            if (!arg15.equals("mute")) {
+                                                break;
                                             }
-                                            break block31;
+                                            break;
                                         }
                                         case -840405966: {
-                                            if (!var8_7.equals("unmute")) {
-                                                ** break;
+                                            if (!arg15.equals("unmute")) {
+                                                break;
                                             }
-                                            break block32;
-                                        }
-                                    }
+                                            break;
+}
                                     v0 = "-U";
-                                    break block33;
+                                    break;
                                 }
                                 v0 = "-BanHandler_5";
-                                break block33;
+                                break;
                             }
                             v0 = "-IM";
-                            break block33;
+                            break;
                         }
                         v0 = "-PlayerQuitListener";
-                        break block33;
+                        break;
                     }
                     v0 = "-MU";
-                    break block33;
+                    break;
                 }
                 v0 = "-W";
-                break block33;
+                break;
             }
             v0 = "-WU";
-            break block33;
-lbl69:
-            // 11 sources
-
-            if (!var6_6) {
+            break;
+                        if (!arg3) {
                 v0 = "-";
             } else {
                 return v2;
-            }
+}
+        arg16 = v0;
+        if (arg2) {
+            arg16 = arg16 + 'T';
         }
-        var7_8 = v0;
-        if (var5_5) {
-            var7_8 = var7_8 + 'T';
-        }
-        var8_7 = (String[])ArrayUtilities.BaseCoreGenericHandler(v2, new String[var4_4 + 1], 1, 0, 0, 12, null);
-        var8_7[0] = var7_8;
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)var7_8, (Object)"-")) {
+        arg15 = (String[])ArrayUtilities.BaseCoreGenericHandler(v2, new String[arg1 + 1], 1, 0, 0, 12, null);
+        arg15[0] = arg16;
+        if (ObjectUtilities.BaseCoreGenericHandler((Object)arg16, (Object)"-")) {
             return v2;
         }
-        return var8_7;
+        return arg15;
     }
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"", "\ufeff", "Banning linked account: ", " (linked to ", " via ", "duration", "seconds", "user:", "#", "#", "#", "#", "#", "#", "temp", "litebans:", "ban-ip", "warn", "unban", "unwarn", "ipban", "banip", "muteip", "ipmute", "mute", "unmute", "-U", "-BanHandler_5", "-IM", "-PlayerQuitListener", "-MU", "-W", "-WU", "-", "-"};
-    }
-
-    }
+}
 

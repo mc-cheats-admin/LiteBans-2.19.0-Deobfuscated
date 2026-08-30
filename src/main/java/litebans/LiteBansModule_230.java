@@ -28,18 +28,15 @@ LiteBansModule_122 {
     @Override
     public int indexOf(Object object) {
         int n;
-        block2: {
+{
             List list = this;
-            boolean flag = false;
-            int n2 = 0;
             Iterator iterator = list.iterator();
             while (iterator.hasNext()) {
                 Object e;
                 Object e10 = e = iterator.next();
-                boolean flag2 = false;
                 if (ObjectUtilities.BaseCoreGenericHandler(e10, object)) {
                     n = n2;
-                    break block2;
+                    break;
                 }
                 ++n2;
             }
@@ -51,16 +48,14 @@ LiteBansModule_122 {
     @Override
     public int lastIndexOf(Object object) {
         int n;
-        block1: {
+{
             List list = this;
-            boolean flag = false;
             ListIterator listIterator = list.listIterator(list.size());
             while (listIterator.hasPrevious()) {
                 Object e = listIterator.previous();
-                boolean flag2 = false;
                 if (!ObjectUtilities.BaseCoreGenericHandler(e, object)) continue;
                 n = listIterator.nextIndex();
-                break block1;
+                break;
             }
             n = -1;
         }
@@ -119,6 +114,5 @@ LiteBansModule_122 {
 
     private static final void BaseCoreGenericHandler() {
         AsyncBackgroundTask_5 = new String[]{"Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection"};
-    }
 }
 

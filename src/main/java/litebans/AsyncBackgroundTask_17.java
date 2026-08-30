@@ -13,6 +13,5 @@ implements Runnable {
     @Override
     public final void run() {
         this.plugin.c(this.LiteBansModule_31);
-    }
 }
 

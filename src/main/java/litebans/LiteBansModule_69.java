@@ -48,6 +48,5 @@ implements Server {
     }
 
     public void sendData(String string, byte[] byArray) {
-    }
 }
 

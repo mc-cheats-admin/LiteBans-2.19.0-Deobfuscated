@@ -17,9 +17,7 @@ implements Comparator {
         char c10;
         int n3;
         String string = (String)object2;
-        boolean flag2 = false;
         CharSequence charSequence = string;
-        int n4 = 0;
         for (n3 = 0; n3 < charSequence.length(); ++n3) {
             c = c10 = charSequence.charAt(n3);
             n2 = n4;
@@ -40,6 +38,5 @@ implements Comparator {
             n4 = n2 + n;
         }
         return LiteBansModule_261.BaseCoreGenericHandler(comparable, Integer.valueOf(n4));
-    }
 }
 

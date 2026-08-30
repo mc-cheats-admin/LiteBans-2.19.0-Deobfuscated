@@ -40,11 +40,9 @@ implements Runnable {
         this.c.cancel(false);
         if (this.LiteBansModule_31) {
             BaseCoreGenericHandler.AsyncBackgroundTask_5("Previously reported leaked connection %AsyncBackgroundTask_21 on thread %AsyncBackgroundTask_21 was returned to the pool (unleaked)", new Object[]{this.e, this.LiteBansModule_194});
-        }
-    }
+}
 
     /* synthetic */ AsyncBackgroundTask_15(LiteBansModule_329 j22) {
         this();
-    }
 }
 

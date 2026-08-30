@@ -16,7 +16,6 @@ public final class LiteBansModule_326 {
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     public final long BaseCoreGenericHandler() {
-        boolean flag = false;
         long l3 = 0L;
         l3 = -1L;
         String string = StackTraceAnalyzer.BaseCoreGenericHandler(RemoteUpdateService.class);
@@ -27,7 +26,6 @@ public final class LiteBansModule_326 {
         try {
             Object object;
             Object object2 = (JarInputStream)closeable;
-            boolean flag2 = false;
             JarEntry jarEntry = null;
             while ((object = (jarEntry = jarInputStream.getNextJarEntry())) != null && (object = ((ZipEntry)object).getName()) != null) {
                 Object object3 = object;
@@ -50,6 +48,5 @@ public final class LiteBansModule_326 {
             LiteBansModule_258.LiteBansModule_31(1);
         }
         return l3 / 1000L;
-    }
 }
 

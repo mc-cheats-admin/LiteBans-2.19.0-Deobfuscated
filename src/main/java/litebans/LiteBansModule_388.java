@@ -135,6 +135,5 @@ public final class LiteBansModule_388 {
             // empty catch block
         }
         LiteBansModule_31 = nArray;
-    }
 }
 

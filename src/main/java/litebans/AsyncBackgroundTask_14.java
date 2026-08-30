@@ -14,6 +14,5 @@ extends ThreadLocal {
 
     public Object initialValue() {
         return this.plugin();
-    }
 }
 

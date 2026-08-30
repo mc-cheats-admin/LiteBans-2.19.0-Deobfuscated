@@ -21,6 +21,5 @@ public abstract class Events {
     @Generated
     public static void setInstance(Events events) {
         instance = events;
-    }
 }
 

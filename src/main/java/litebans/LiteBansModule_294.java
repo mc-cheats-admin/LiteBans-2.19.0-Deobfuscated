@@ -6,6 +6,5 @@ extends LiteBansModule_300 {
 
     public LiteBansModule_294() {
         super("this is not BaseCoreGenericHandler recognized format.");
-    }
 }
 

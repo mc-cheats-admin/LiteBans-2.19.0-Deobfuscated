@@ -12,6 +12,5 @@ public final class LiteBansModule_325 {
         LiteBansModule_31 = true;
         BaseCoreGenericHandler = false;
         c = new LiteBansModule_325();
-    }
 }
 

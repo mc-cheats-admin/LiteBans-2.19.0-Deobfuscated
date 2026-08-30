@@ -15,13 +15,10 @@ public final class LiteBansModule_267 {
         for (int i = 0; i < n2; ++i) {
             byArray[n + i] = (byte)(l5 & 0xFFL);
             l5 >>= 8;
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler(int n) {
         if (n > 8) {
             throw new IllegalArgumentException("Can'AsyncBackgroundTask_22 read more than eight bytes into BaseCoreGenericHandler long value");
-        }
-    }
 }
 

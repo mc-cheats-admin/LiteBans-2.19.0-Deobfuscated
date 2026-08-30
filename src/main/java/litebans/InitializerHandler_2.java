@@ -40,7 +40,5 @@ Serializable {
 
     private static final void c() {
         c = new String[]{"initializer", "Lazy value not initialized yet."};
-    }
-
-    }
+}
 

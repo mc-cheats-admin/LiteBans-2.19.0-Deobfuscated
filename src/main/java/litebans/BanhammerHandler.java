@@ -22,21 +22,18 @@ extends BansHandler {
         Throwable throwable = null;
         try {
             Object object = (PreparedStatement)autoCloseable;
-            boolean flag2 = false;
             if (preparedStatement.execute()) {
                 ResultSet resultSet = preparedStatement.getResultSet();
                 AutoCloseable autoCloseable2 = resultSet;
                 Throwable throwable2 = null;
                 try {
                     Object object2 = (ResultSet)autoCloseable2;
-                    boolean flag3 = false;
                     while (resultSet.next()) {
                         PreparedStatement preparedStatement2 = connection.prepareStatement("SELECT * FROM " + this.i() + "players WHERE SQLiteDriverHandler_4=?");
                         AutoCloseable autoCloseable3 = preparedStatement2;
                         Throwable throwable3 = null;
                         try {
                             Object object3 = (PreparedStatement)autoCloseable3;
-                            boolean flag4 = false;
                             preparedStatement2.setInt(1, resultSet.getInt("player_id"));
                             preparedStatement2.execute();
                             ResultSet resultSet2 = preparedStatement2.getResultSet();
@@ -44,7 +41,6 @@ extends BansHandler {
                                 String string2 = resultSet2.getString("name");
                                 String string3 = resultSet.getString("reason");
                                 MessageHandler messageHandler = this;
-                                boolean flag5 = false;
                                 BroadcastService o2 = (BroadcastService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
                                 ObjectUtilities.BaseCoreGenericHandler(resultSet);
                                 messageHandler = this;
@@ -52,7 +48,6 @@ extends BansHandler {
                                 Date date = o2.BaseCoreGenericHandler(resultSet, "created_at", false, ((ConfigService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().ElementsHandler());
                                 long l3 = date.getTime();
                                 MessageHandler fg_03 = this;
-                                boolean flag6 = false;
                                 BroadcastService o3 = (BroadcastService)fg_03.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
                                 fg_03 = this;
                                 flag6 = false;
@@ -70,8 +65,7 @@ extends BansHandler {
                         }
                         finally {
                             CloseactionHandler.BaseCoreGenericHandler(autoCloseable3, throwable3);
-                        }
-                    }
+}
                     object2 = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable5) {
@@ -80,8 +74,7 @@ extends BansHandler {
                 }
                 finally {
                     CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
-                }
-            }
+}
             object = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable6) {
@@ -90,12 +83,9 @@ extends BansHandler {
         }
         finally {
             CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         m = new String[]{"BanHammer", "banhammer_", "SELECT * FROM ", "bans WHERE state=0", "SELECT * FROM ", "players WHERE SQLiteDriverHandler_4=?", "player_id", "name", "reason", "created_at", "expires_at"};
-    }
-
-    }
+}
 

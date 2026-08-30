@@ -24,7 +24,5 @@ public final class LiteBansModule_78 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"Step is ", "Step is zero."};
-    }
-
-    }
+}
 

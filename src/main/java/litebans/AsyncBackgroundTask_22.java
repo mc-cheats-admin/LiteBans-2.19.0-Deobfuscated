@@ -40,7 +40,6 @@ implements Runnable {
     public void c() {
         this.LiteBansModule_194.clear();
         AtomicBoolean atomicBoolean = this.g;
-        boolean flag = false;
         atomicBoolean.set(false);
     }
 
@@ -58,18 +57,14 @@ implements Runnable {
     @Override
     public void run() {
         AtomicBoolean atomicBoolean = this.g;
-        boolean flag = false;
         Object object = atomicBoolean;
-        int n = 0;
         if (!((AtomicBoolean)object).compareAndSet(false, true)) return;
         object = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
         try {
             int n2;
             AsyncBackgroundTask_22 t2 = this;
-            boolean flag2 = false;
             n = t2.LiteBansModule_194.size() >= 256 ? 3 : (t2.LiteBansModule_194.size() >= 128 ? 2 : (t2.LiteBansModule_194.size() >= 64 ? 1 : 0));
             AsyncBackgroundTask_22 t3 = this;
-            boolean flag3 = false;
             switch (n) {
                 case 0: {
                     n2 = 20;
@@ -90,8 +85,7 @@ implements Runnable {
                 default: {
                     AssertionUtilities.BaseCoreGenericHandler();
                     throw new CommandExitException();
-                }
-            }
+}
             int n3 = n2;
             if (((DatabaseMonitorService)object).BaseCoreGenericHandler(2) && n <= 2) {
                 return;
@@ -110,19 +104,15 @@ implements Runnable {
                     if (this.plugin(cp_03)) {
                         this.LiteBansModule_194.offer(cp_03);
                         return;
-                    }
-                }
+}
                 AsyncBackgroundTask_22 t4 = this;
                 ObjectUtilities.BaseCoreGenericHandler(cp_03);
                 LiteBansModule_95 cp_04 = cp_03;
-                boolean flag4 = false;
                 LiteBansModule_95 cp_05 = cp_04;
-                boolean flag5 = false;
                 new AltsHandler(t4.BaseCoreGenericHandler, cp_05.c(), cp_05.g(), cp_05.LiteBansModule_31()).run();
                 if (n4 == n3) return;
                 ++n4;
-            }
-        }
+}
         catch (Exception exception) {
             if (exception instanceof InterruptedException) {
                 return;
@@ -132,29 +122,24 @@ implements Runnable {
         }
         finally {
             AtomicBoolean atomicBoolean2 = atomicBoolean;
-            boolean flag6 = false;
             atomicBoolean2.set(false);
-        }
-    }
+}
 
     private final boolean BaseCoreGenericHandler(LiteBansModule_95 cp_02) {
         boolean flag;
-        block3: {
+{
             Iterable iterable = this.plugin().BaseCoreGenericHandler();
-            boolean flag2 = false;
             if (iterable instanceof Collection && ((Collection)iterable).isEmpty()) {
                 flag = false;
             } else {
                 for (Object t2 : iterable) {
                     LiteBansModule_95 cp_03 = (LiteBansModule_95)t2;
-                    boolean flag3 = false;
                     if (!(ObjectUtilities.BaseCoreGenericHandler((Object)cp_03.c(), (Object)cp_02.c()) || ObjectUtilities.BaseCoreGenericHandler((Object)cp_03.g(), (Object)cp_02.g()) || ObjectUtilities.BaseCoreGenericHandler((Object)cp_03.LiteBansModule_31(), (Object)cp_02.LiteBansModule_31()))) continue;
                     flag = true;
-                    break block3;
+                    break;
                 }
                 flag = false;
-            }
-        }
+}
         return flag;
     }
 
@@ -168,14 +153,10 @@ implements Runnable {
             ObjectUtilities.BaseCoreGenericHandler((Object)string5);
             this.LiteBansModule_194.offer(new LiteBansModule_95(string4, HexEncodingHelper.LiteBansModule_194(string5), string3));
             ConfigService q_03 = configService;
-            boolean flag = false;
             if (q_03.g()) {
                 ConfigService q_04 = q_03;
-                boolean flag2 = false;
                 q_04.BaseCoreGenericHandler((Object)("Offer " + string));
-            }
-        }
-    }
+}
 
     private static final AsyncBackgroundTask_21 BaseCoreGenericHandler(AsyncBackgroundTask_22 t2) {
         return (AsyncBackgroundTask_21)t2.BaseCoreGenericHandler.BaseCoreGenericHandler(AsyncBackgroundTask_21.class);
@@ -191,6 +172,5 @@ implements Runnable {
 
     private static final void AsyncBackgroundTask_5() {
         i = new String[]{"Offer "};
-    }
 }
 

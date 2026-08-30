@@ -16,7 +16,6 @@ extends Entry {
     @Override
     public String getDurationString() {
         long l3 = this.getDuration();
-        boolean flag = false;
         return PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, l3, false, 2, null);
     }
 
@@ -28,7 +27,6 @@ extends Entry {
     @Override
     public String getRemainingDurationString(long l3) {
         long l5 = this.getRemainingDuration(l3);
-        boolean flag = false;
         return PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, l5, false, 2, null);
     }
 
@@ -73,7 +71,5 @@ extends Entry {
     @Override
     public boolean hasTemplate() {
         return this.getTemplateID() != (0xFFFFFFFF & 0xFF);
-    }
-
-    }
+}
 

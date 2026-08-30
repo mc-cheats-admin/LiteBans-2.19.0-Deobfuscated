@@ -31,10 +31,9 @@ LiteBansModule_122 {
 
     public boolean containsAll(@NotNull Collection collection) {
         boolean flag;
-        block3: {
+{
             ObjectUtilities.BaseCoreGenericHandler((Object)collection, "elements");
             Iterable iterable = collection;
-            boolean flag2 = false;
             if (((Collection)iterable).isEmpty()) {
                 flag = true;
             } else {
@@ -42,14 +41,12 @@ LiteBansModule_122 {
                 while (iterator.hasNext()) {
                     Object t2;
                     Object t3 = t2 = iterator.next();
-                    boolean flag3 = false;
                     if (this.contains(t3)) continue;
                     flag = false;
-                    break block3;
+                    break;
                 }
                 flag = true;
-            }
-        }
+}
         return flag;
     }
 
@@ -97,7 +94,5 @@ LiteBansModule_122 {
     public Object[] toArray(Object[] objectArray) {
         ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "array");
         return CollectionHandler.BaseCoreGenericHandler(this, objectArray);
-    }
-
-    }
+}
 

@@ -15,7 +15,6 @@ LiteBansModule_86 {
             return "null";
         }
         StringBuffer stringBuffer = new StringBuffer();
-        boolean flag = true;
         Iterator iterator = map.entrySet().iterator();
         stringBuffer.append('{');
         while (iterator.hasNext()) {
@@ -49,6 +48,5 @@ LiteBansModule_86 {
 
     public String toString() {
         return this.plugin();
-    }
 }
 

@@ -23,6 +23,5 @@ public final class LiteBansModule_403 {
     public final int LiteBansModule_31() {
         CharSequence[] charSequenceArray = this.plugin;
         return this.LiteBansModule_31.BaseCoreGenericHandler(Arrays.copyOf(charSequenceArray, charSequenceArray.length));
-    }
 }
 

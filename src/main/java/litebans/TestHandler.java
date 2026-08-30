@@ -10,7 +10,5 @@ public final class TestHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"test"};
-    }
-
-    }
+}
 

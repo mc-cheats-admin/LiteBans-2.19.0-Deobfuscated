@@ -33,7 +33,5 @@ extends Enum {
         c = new UuidHandler("CUSTOM", 3);
         BaseCoreGenericHandler = jRArray = new UuidHandler[]{UuidHandler.g, UuidHandler.e, UuidHandler.AsyncBackgroundTask_5, UuidHandler.c};
         LiteBansModule_31 = EntriesHandler_3.BaseCoreGenericHandler(BaseCoreGenericHandler);
-    }
-
-    }
+}
 

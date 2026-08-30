@@ -153,13 +153,11 @@ implements LiteBansModule_251 {
             }
             if (n3 == -1) {
                 throw new IOException("Truncated ZIP file");
-            }
-        }
+}
         return n3;
     }
 
     private final int c(byte[] byArray, int n, int n2) {
-        int n3 = 0;
         do {
             if (this.Utf8Handler_2.needsInput()) {
                 int n4 = this.LiteBansModule_31();
@@ -169,15 +167,13 @@ implements LiteBansModule_251 {
                 } else {
                     if (n4 != -1) break;
                     return -1;
-                }
-            }
+}
             try {
                 n3 = this.Utf8Handler_2.inflate(byArray, n, n2);
             }
             catch (DataFormatException dataFormatException) {
                 throw (IOException)new ZipException(dataFormatException.getMessage()).initCause(dataFormatException);
-            }
-        } while (n3 == 0 && this.Utf8Handler_2.needsInput());
+} while (n3 == 0 && this.Utf8Handler_2.needsInput());
         return n3;
     }
 
@@ -190,9 +186,7 @@ implements LiteBansModule_251 {
             }
             finally {
                 this.Utf8Handler_2.end();
-            }
-        }
-    }
+}
 
     @Override
     public long skip(long l3) {
@@ -233,8 +227,7 @@ implements LiteBansModule_251 {
         this.plugin(n3);
         if (n3 < n2) {
             throw new EOFException();
-        }
-    }
+}
 
     private final void BaseCoreGenericHandler() {
         this.plugin(this.LiteBansModule_194);
@@ -253,8 +246,7 @@ implements LiteBansModule_251 {
         } else {
             LiteBansModule_248.AsyncBackgroundTask_5(this.BroadcastService).setCompressedSize(LiteBansModule_323.BaseCoreGenericHandler(this.LiteBansModule_401));
             LiteBansModule_248.AsyncBackgroundTask_5(this.BroadcastService).setSize(LiteBansModule_323.BaseCoreGenericHandler(this.LiteBansModule_401, 8));
-        }
-    }
+}
 
     private final boolean BaseCoreGenericHandler(LiteBansModule_396 kw_02) {
         return !kw_02.AsyncBackgroundTask_5().LiteBansModule_31() || this.A && kw_02.getMethod() == 0 || kw_02.getMethod() == 8 || kw_02.getMethod() == StoredHandler.c.BaseCoreGenericHandler();
@@ -267,8 +259,6 @@ implements LiteBansModule_251 {
     private final void c() {
         int n;
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        int n2 = 0;
-        boolean flag = false;
         int n3 = n = LiteBansModule_248.LiteBansModule_194(this.BroadcastService) ? 20 : 12;
         while (!flag) {
             int n4 = this.q.read(this.z.array(), n2, 512 - n2);
@@ -294,7 +284,6 @@ implements LiteBansModule_251 {
     }
 
     private final boolean BaseCoreGenericHandler(ByteArrayOutputStream byteArrayOutputStream, int n, int n2, int n3) {
-        boolean flag = false;
         for (int i = 0; !flag && i < n + n2 - 4; ++i) {
             if (this.z.array()[i] != BanHandler_2[0] || this.z.array()[i + 1] != BanHandler_2[1]) continue;
             int n4 = i;
@@ -339,6 +328,5 @@ implements LiteBansModule_251 {
         m = LiteBansModule_84.e.c();
         ServerSyncService = new byte[]{65, 80, 75, 32, 83, 105, 103, 32, 66, 108, 111, 99, 107, 32, 52, 50};
         r = BigInteger.valueOf(Long.MAX_VALUE);
-    }
 }
 

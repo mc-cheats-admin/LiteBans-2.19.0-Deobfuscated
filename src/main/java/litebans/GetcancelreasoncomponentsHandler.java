@@ -92,9 +92,7 @@ implements LiteBansModule_158 {
             String string4;
             boolean flag2;
             ConfigurationAdapter configurationAdapter = this.c(this.c()).getConfigurationAdapter();
-            boolean flag3 = false;
             Iterable iterable = configurationAdapter.getGroups(string);
-            boolean flag4 = false;
             if (iterable instanceof Collection && ((Collection)iterable).isEmpty()) {
                 flag2 = false;
             } else {
@@ -124,12 +122,10 @@ implements LiteBansModule_158 {
         }
         catch (IllegalStateException illegalStateException) {
             return false;
-        }
-    }
+}
 
     public final ThreadFactory BaseCoreGenericHandler(@NotNull PlatformPlugin plugin) {
         BungeePlugin bungeePlugin = this.LiteBansModule_31(plugin);
-        boolean flag = false;
         ExecutorService executorService = bungeePlugin.getProxy().getScheduler().unsafe().getExecutorService((Plugin)bungeePlugin);
         ObjectUtilities.LiteBansModule_31(executorService, "");
         return ((ThreadPoolExecutor)executorService).getThreadFactory();
@@ -147,44 +143,34 @@ implements LiteBansModule_158 {
     @Override
     public List LiteBansModule_31(@NotNull String v1) {
         v2 = this.c(this.c()).getPluginManager().getPlugins();
-        v3 = false;
-        var4_4 = v2;
-        var5_5 = new ArrayList<PunishmentService>();
-        var6_6 = false;
-        for (T var8_8 : var4_4) {
-            var9_9 = (Plugin)var8_8;
-            var10_10 = false;
-            v0 = var9_9;
+        arg1 = v2;
+        arg2 = new ArrayList<PunishmentService>();
+        for (T arg3 : arg1) {
+            arg4 = (Plugin)arg3;
+            v0 = arg4;
             if (v0 != null && (v0 = v0.getDescription()) != null && (v0 = v0.getDepends()) != null ? v0.contains(v1) : false) ** GOTO lbl-1000
-            v1 = var9_9;
+            v1 = arg4;
             v2 = v1 != null && (v1 = v1.getDescription()) != null && (v1 = v1.getSoftDepends()) != null ? v1.contains(v1) : false;
             if (v2) lbl-1000:
-            // 2 sources
-
-            {
-                v3 = true;
+                        {
             } else {
-                v3 = false;
             }
             if (!v3) continue;
-            var5_5.add(var8_8);
+            arg2.add(arg3);
         }
-        v2 = (List)var5_5;
-        v3 = false;
-        var4_4 = v2;
-        var5_5 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler(v2, 10));
-        var6_6 = false;
-        for (T var8_8 : var4_4) {
-            var9_9 = (Plugin)var8_8;
-            var11_11 = var5_5;
-            var10_10 = false;
-            v4 /* !! */  = var9_9;
-            if (v4 /* !! */  == null || (v4 /* !! */  = v4 /* !! */ .getDescription()) == null || (v4 /* !! */  = v4 /* !! */ .getName()) == null) {
-                v4 /* !! */  = "";
+        v2 = (List)arg2;
+        arg1 = v2;
+        arg2 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler(v2, 10));
+        for (T arg3 : arg1) {
+            arg4 = (Plugin)arg3;
+            arg5 = arg2;
+            v4   = arg4;
+            if (v4   == null || (v4   = v4  .getDescription()) == null || (v4   = v4  .getName()) == null) {
+                v4   = "";
             }
-            var11_11.add(v4 /* !! */ );
+            arg5.add(v4  );
         }
-        return (List)var5_5;
+        return (List)arg2;
     }
 
     @Override
@@ -207,9 +193,7 @@ implements LiteBansModule_158 {
             String string4;
             boolean flag2;
             ConfigurationAdapter configurationAdapter = this.c(this.c()).getConfigurationAdapter();
-            boolean flag3 = false;
             Iterable iterable = configurationAdapter.getGroups(string);
-            boolean flag4 = false;
             if (iterable instanceof Collection && ((Collection)iterable).isEmpty()) {
                 flag2 = false;
             } else {
@@ -245,8 +229,7 @@ implements LiteBansModule_158 {
             if (exception instanceof IllegalStateException) return false;
             if (!flag) throw exception;
             return false;
-        }
-    }
+}
 
     public final void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String string) {
         Object object = sender.c();
@@ -261,7 +244,6 @@ implements LiteBansModule_158 {
             throw new UnsupportedOperationException();
         }
         ProxiedPlayer proxiedPlayer = ((ServerConnectEvent)object).getPlayer();
-        boolean flag2 = false;
         return new LiteBansModule_95(proxiedPlayer.getName(), proxiedPlayer.getUniqueId().toString(), proxiedPlayer.getAddress().getAddress().getHostAddress());
     }
 
@@ -272,11 +254,9 @@ implements LiteBansModule_158 {
             if (((ServerConnectEvent)object).getPlayer().isConnected()) {
                 BaseComponent[] baseComponentArray = TextComponent.fromLegacyText((String)((Object)charSequence).toString());
                 ((ServerConnectEvent)object).getPlayer().sendMessage(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
-            }
-        } else if (!(object2 instanceof LoginEvent)) {
+} else if (!(object2 instanceof LoginEvent)) {
             throw new UnsupportedOperationException();
-        }
-    }
+}
 
     @Override
     public String BaseCoreGenericHandler(@NotNull Object object) {
@@ -301,17 +281,14 @@ implements LiteBansModule_158 {
                 ((LoginEvent)object).setCancelReason(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
             } else {
                 LiteBansModule_225.BaseCoreGenericHandler.BaseCoreGenericHandler(object, charSequence);
-            }
-        } else if (object2 instanceof ServerConnectEvent && flag && ((ServerConnectEvent)object).getPlayer().getServer() == null) {
+} else if (object2 instanceof ServerConnectEvent && flag && ((ServerConnectEvent)object).getPlayer().getServer() == null) {
             BaseComponent[] baseComponentArray = TextComponent.fromLegacyText((String)((Object)charSequence).toString());
             ((ServerConnectEvent)object).getPlayer().disconnect(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
-        }
-    }
+}
 
     public final ServerInfo BaseCoreGenericHandler(@NotNull Object object) {
         ServerInfo serverInfo;
         ProxyServer proxyServer = this.c(this.c());
-        boolean flag = false;
         if (object instanceof PendingConnection) {
             ReconnectHandler reconnectHandler = proxyServer.getReconnectHandler();
             if (reconnectHandler == null) {
@@ -321,8 +298,7 @@ implements LiteBansModule_158 {
             serverInfo = reconnectHandler2.getServer((ProxiedPlayer)new NullHandler_2(this.c(), (PendingConnection)object));
             if (serverInfo == null) {
                 return this.LiteBansModule_31(object);
-            }
-        } else {
+} else {
             serverInfo = null;
         }
         return serverInfo;
@@ -331,16 +307,13 @@ implements LiteBansModule_158 {
     public final ServerInfo LiteBansModule_31(@NotNull Object object) {
         ServerInfo serverInfo;
         ProxyServer proxyServer = this.c(this.c());
-        boolean flag = false;
         if (object instanceof PendingConnection) {
             GetcancelreasoncomponentsHandler k12 = this;
             ListenerInfo listenerInfo = ((PendingConnection)object).getListener();
-            boolean flag2 = false;
             serverInfo = proxyServer.getServerInfo(listenerInfo.getDefaultServer());
             if (serverInfo == null) {
                 serverInfo = AbstractReconnectHandler.getForcedHost((PendingConnection)((PendingConnection)object));
-            }
-        } else {
+} else {
             serverInfo = null;
         }
         return serverInfo;
@@ -353,7 +326,5 @@ implements LiteBansModule_158 {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"net.md_5.bungee.api.event.LoginEvent", "getCancelReasonComponents", "net.md_5.bungee.api.plugin.Command", "setPermissionMessage", "", "", "", "Bungee permission config (InitializerHandler_3 Bungee config.yml) is invalid, ignoring. No players will be ", "", "/", ""};
-    }
-
-    }
+}
 

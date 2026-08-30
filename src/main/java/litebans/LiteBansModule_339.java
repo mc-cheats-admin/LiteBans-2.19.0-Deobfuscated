@@ -15,8 +15,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean allProceduresAreCallable() {
@@ -25,8 +24,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean allTablesAreSelectable() {
@@ -35,8 +33,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getURL() {
@@ -45,8 +42,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getUserName() {
@@ -55,8 +51,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean isReadOnly() {
@@ -65,8 +60,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean nullsAreSortedHigh() {
@@ -75,8 +69,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean nullsAreSortedLow() {
@@ -85,8 +78,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean nullsAreSortedAtStart() {
@@ -95,8 +87,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean nullsAreSortedAtEnd() {
@@ -105,8 +96,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getDatabaseProductName() {
@@ -115,8 +105,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getDatabaseProductVersion() {
@@ -125,8 +114,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getDriverName() {
@@ -135,8 +123,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getDriverVersion() {
@@ -145,8 +132,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getDriverMajorVersion() {
@@ -165,8 +151,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean usesLocalFilePerTable() {
@@ -175,8 +160,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsMixedCaseIdentifiers() {
@@ -185,8 +169,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean storesUpperCaseIdentifiers() {
@@ -195,8 +178,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean storesLowerCaseIdentifiers() {
@@ -205,8 +187,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean storesMixedCaseIdentifiers() {
@@ -215,8 +196,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsMixedCaseQuotedIdentifiers() {
@@ -225,8 +205,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean storesUpperCaseQuotedIdentifiers() {
@@ -235,8 +214,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean storesLowerCaseQuotedIdentifiers() {
@@ -245,8 +223,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean storesMixedCaseQuotedIdentifiers() {
@@ -255,8 +232,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getIdentifierQuoteString() {
@@ -265,8 +241,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getSQLKeywords() {
@@ -275,8 +250,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getNumericFunctions() {
@@ -285,8 +259,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getStringFunctions() {
@@ -295,8 +268,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getSystemFunctions() {
@@ -305,8 +277,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getTimeDateFunctions() {
@@ -315,8 +286,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getSearchStringEscape() {
@@ -325,8 +295,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getExtraNameCharacters() {
@@ -335,8 +304,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsAlterTableWithAddColumn() {
@@ -345,8 +313,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsAlterTableWithDropColumn() {
@@ -355,8 +322,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsColumnAliasing() {
@@ -365,8 +331,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean nullPlusNonNullIsNull() {
@@ -375,8 +340,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsConvert() {
@@ -385,8 +349,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsConvert(int n, int n2) {
@@ -395,8 +358,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsTableCorrelationNames() {
@@ -405,8 +367,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsDifferentTableCorrelationNames() {
@@ -415,8 +376,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsExpressionsInOrderBy() {
@@ -425,8 +385,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsOrderByUnrelated() {
@@ -435,8 +394,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsGroupBy() {
@@ -445,8 +403,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsGroupByUnrelated() {
@@ -455,8 +412,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsGroupByBeyondSelect() {
@@ -465,8 +421,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsLikeEscapeClause() {
@@ -475,8 +430,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsMultipleResultSets() {
@@ -485,8 +439,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsMultipleTransactions() {
@@ -495,8 +448,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsNonNullableColumns() {
@@ -505,8 +457,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsMinimumSQLGrammar() {
@@ -515,8 +466,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsCoreSQLGrammar() {
@@ -525,8 +475,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsExtendedSQLGrammar() {
@@ -535,8 +484,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsANSI92EntryLevelSQL() {
@@ -545,8 +493,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsANSI92IntermediateSQL() {
@@ -555,8 +502,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsANSI92FullSQL() {
@@ -565,8 +511,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsIntegrityEnhancementFacility() {
@@ -575,8 +520,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsOuterJoins() {
@@ -585,8 +529,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsFullOuterJoins() {
@@ -595,8 +538,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsLimitedOuterJoins() {
@@ -605,8 +547,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getSchemaTerm() {
@@ -615,8 +556,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getProcedureTerm() {
@@ -625,8 +565,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getCatalogTerm() {
@@ -635,8 +574,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean isCatalogAtStart() {
@@ -645,8 +583,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getCatalogSeparator() {
@@ -655,8 +592,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsSchemasInDataManipulation() {
@@ -665,8 +601,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsSchemasInProcedureCalls() {
@@ -675,8 +610,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsSchemasInTableDefinitions() {
@@ -685,8 +619,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsSchemasInIndexDefinitions() {
@@ -695,8 +628,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsSchemasInPrivilegeDefinitions() {
@@ -705,8 +637,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsCatalogsInDataManipulation() {
@@ -715,8 +646,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsCatalogsInProcedureCalls() {
@@ -725,8 +655,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsCatalogsInTableDefinitions() {
@@ -735,8 +664,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsCatalogsInIndexDefinitions() {
@@ -745,8 +673,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsCatalogsInPrivilegeDefinitions() {
@@ -755,8 +682,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsPositionedDelete() {
@@ -765,8 +691,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsPositionedUpdate() {
@@ -775,8 +700,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsSelectForUpdate() {
@@ -785,8 +709,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsStoredProcedures() {
@@ -795,8 +718,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsSubqueriesInComparisons() {
@@ -805,8 +727,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsSubqueriesInExists() {
@@ -815,8 +736,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsSubqueriesInIns() {
@@ -825,8 +745,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsSubqueriesInQuantifieds() {
@@ -835,8 +754,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsCorrelatedSubqueries() {
@@ -845,8 +763,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsUnion() {
@@ -855,8 +772,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsUnionAll() {
@@ -865,8 +781,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsOpenCursorsAcrossCommit() {
@@ -875,8 +790,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsOpenCursorsAcrossRollback() {
@@ -885,8 +799,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsOpenStatementsAcrossCommit() {
@@ -895,8 +808,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsOpenStatementsAcrossRollback() {
@@ -905,8 +817,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxBinaryLiteralLength() {
@@ -915,8 +826,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxCharLiteralLength() {
@@ -925,8 +835,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxColumnNameLength() {
@@ -935,8 +844,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxColumnsInGroupBy() {
@@ -945,8 +853,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxColumnsInIndex() {
@@ -955,8 +862,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxColumnsInOrderBy() {
@@ -965,8 +871,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxColumnsInSelect() {
@@ -975,8 +880,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxColumnsInTable() {
@@ -985,8 +889,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxConnections() {
@@ -995,8 +898,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxCursorNameLength() {
@@ -1005,8 +907,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxIndexLength() {
@@ -1015,8 +916,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxSchemaNameLength() {
@@ -1025,8 +925,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxProcedureNameLength() {
@@ -1035,8 +934,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxCatalogNameLength() {
@@ -1045,8 +943,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxRowSize() {
@@ -1055,8 +952,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean doesMaxRowSizeIncludeBlobs() {
@@ -1065,8 +961,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxStatementLength() {
@@ -1075,8 +970,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxStatements() {
@@ -1085,8 +979,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxTableNameLength() {
@@ -1095,8 +988,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxTablesInSelect() {
@@ -1105,8 +997,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxUserNameLength() {
@@ -1115,8 +1006,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getDefaultTransactionIsolation() {
@@ -1125,8 +1015,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsTransactions() {
@@ -1135,8 +1024,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsTransactionIsolationLevel(int n) {
@@ -1145,8 +1033,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsDataDefinitionAndDataManipulationTransactions() {
@@ -1155,8 +1042,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsDataManipulationTransactionsOnly() {
@@ -1165,8 +1051,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean dataDefinitionCausesTransactionCommit() {
@@ -1175,8 +1060,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean dataDefinitionIgnoredInTransactions() {
@@ -1185,8 +1069,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getProcedures(String string, String string2, String string3) {
@@ -1195,8 +1078,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getProcedureColumns(String string, String string2, String string3, String string4) {
@@ -1205,8 +1087,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getTables(String string, String string2, String string3, String[] args) {
@@ -1215,8 +1096,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getSchemas() {
@@ -1225,8 +1105,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getCatalogs() {
@@ -1235,8 +1114,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getTableTypes() {
@@ -1245,8 +1123,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getColumns(String string, String string2, String string3, String string4) {
@@ -1255,8 +1132,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getColumnPrivileges(String string, String string2, String string3, String string4) {
@@ -1265,8 +1141,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getTablePrivileges(String string, String string2, String string3) {
@@ -1275,8 +1150,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getBestRowIdentifier(String string, String string2, String string3, int n, boolean flag) {
@@ -1285,8 +1159,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getVersionColumns(String string, String string2, String string3) {
@@ -1295,8 +1168,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getPrimaryKeys(String string, String string2, String string3) {
@@ -1305,8 +1177,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getImportedKeys(String string, String string2, String string3) {
@@ -1315,8 +1186,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getExportedKeys(String string, String string2, String string3) {
@@ -1325,8 +1195,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getCrossReference(String string, String string2, String string3, String string4, String string5, String string6) {
@@ -1335,8 +1204,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getTypeInfo() {
@@ -1345,8 +1213,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getIndexInfo(String string, String string2, String string3, boolean flag, boolean flag2) {
@@ -1355,8 +1222,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsResultSetType(int n) {
@@ -1365,8 +1231,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsResultSetConcurrency(int n, int n2) {
@@ -1375,8 +1240,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean ownUpdatesAreVisible(int n) {
@@ -1385,8 +1249,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean ownDeletesAreVisible(int n) {
@@ -1395,8 +1258,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean ownInsertsAreVisible(int n) {
@@ -1405,8 +1267,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean othersUpdatesAreVisible(int n) {
@@ -1415,8 +1276,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean othersDeletesAreVisible(int n) {
@@ -1425,8 +1285,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean othersInsertsAreVisible(int n) {
@@ -1435,8 +1294,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean updatesAreDetected(int n) {
@@ -1445,8 +1303,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean deletesAreDetected(int n) {
@@ -1455,8 +1312,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean insertsAreDetected(int n) {
@@ -1465,8 +1321,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsBatchUpdates() {
@@ -1475,8 +1330,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getUDTs(String string, String string2, String string3, int[] nArray) {
@@ -1485,8 +1339,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsSavepoints() {
@@ -1495,8 +1348,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsNamedParameters() {
@@ -1505,8 +1357,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsMultipleOpenResults() {
@@ -1515,8 +1366,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsGetGeneratedKeys() {
@@ -1525,8 +1375,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getSuperTypes(String string, String string2, String string3) {
@@ -1535,8 +1384,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getSuperTables(String string, String string2, String string3) {
@@ -1545,8 +1393,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getAttributes(String string, String string2, String string3, String string4) {
@@ -1555,8 +1402,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsResultSetHoldability(int n) {
@@ -1565,8 +1411,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getResultSetHoldability() {
@@ -1575,8 +1420,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getDatabaseMajorVersion() {
@@ -1585,8 +1429,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getDatabaseMinorVersion() {
@@ -1595,8 +1438,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getJDBCMajorVersion() {
@@ -1605,8 +1447,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getJDBCMinorVersion() {
@@ -1615,8 +1456,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getSQLStateType() {
@@ -1625,8 +1465,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean locatorsUpdateCopy() {
@@ -1635,8 +1474,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsStatementPooling() {
@@ -1645,8 +1483,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public RowIdLifetime getRowIdLifetime() {
@@ -1655,8 +1492,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getSchemas(String string, String string2) {
@@ -1665,8 +1501,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsStoredFunctionsUsingCallSyntax() {
@@ -1675,8 +1510,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean autoCommitFailureClosesAllResultSets() {
@@ -1685,8 +1519,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getClientInfoProperties() {
@@ -1695,8 +1528,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getFunctions(String string, String string2, String string3) {
@@ -1705,8 +1537,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getFunctionColumns(String string, String string2, String string3, String string4) {
@@ -1715,8 +1546,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getPseudoColumns(String string, String string2, String string3, String string4) {
@@ -1725,8 +1555,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean generatedKeyAlwaysReturned() {
@@ -1735,8 +1564,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public long getMaxLogicalLobSize() {
@@ -1745,8 +1573,7 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean supportsRefCursors() {
@@ -1755,11 +1582,9 @@ DatabaseMetaData {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     LiteBansModule_339(HexEncodingHelper c22, DatabaseMetaData databaseMetaData) {
         super(c22, databaseMetaData);
-    }
 }
 

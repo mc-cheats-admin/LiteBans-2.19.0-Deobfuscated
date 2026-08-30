@@ -15,9 +15,8 @@ extends AbstractCommand {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
-        block7: {
+{
             Object object = this;
-            boolean flag = false;
             String string = CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)object, (String)ArrayUtilities.LiteBansModule_31(args));
             object = this;
             flag = false;
@@ -29,9 +28,7 @@ extends AbstractCommand {
                 Throwable throwable = null;
                 try {
                     Object object2 = (LiteBansModule_82)closeable;
-                    boolean flag2 = false;
                     LiteBansModule_82 ch3 = ch2;
-                    boolean flag3 = false;
                     LiteBansModule_297 iA2 = CommandArgumentUtils.BaseCoreGenericHandler(ch3, string, false, 2, null);
                     CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, AllHandler_3.BaseCoreGenericHandler(ch3, (CharSequence)MessageKey.bI, iA2, false, 2, null));
                     object2 = KotlinUnitHandler.BaseCoreGenericHandler;
@@ -42,18 +39,13 @@ extends AbstractCommand {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-                }
-            }
+}
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break block7;
+                if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break;
                 throw sQLException;
-            }
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         i = new String[]{"lastuuid"};
-    }
-
-    }
+}
 

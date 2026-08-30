@@ -21,7 +21,5 @@ implements LiteBansModule_200 {
 
     private static final void BaseCoreGenericHandler() {
         e = new String[]{"player", "executor"};
-    }
-
-    }
+}
 

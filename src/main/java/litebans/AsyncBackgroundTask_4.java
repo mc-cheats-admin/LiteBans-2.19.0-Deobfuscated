@@ -22,11 +22,9 @@ implements Runnable {
             DiscordWebhookClient eG2 = this.plugin;
             ConfigService configService = this.LiteBansModule_31;
             Logger logger2 = logger;
-            boolean flag = false;
             File[] fileArray = args.listFiles();
             String string = "GeoLite2-Country.mmdb";
             String[] filteredArgs = args;
-            int n = 0;
             File file = new File((File)filteredArgs, string);
             if (fileArray == null || fileArray.length < eG2.g().length + 1 || !file.exists()) {
                 logger2.info("Downloading GeoIP API.. + ");
@@ -54,20 +52,16 @@ implements Runnable {
                         logger2.warning("GeoIP download URL has not yet been ");
                         logger2.warning("https://gitlab.com/ruany/LiteBans/-/wikis/GeoIP#geoip-download-issue");
                         return;
-                    }
-                }
+}
                 MariaDBDriverHandler.BaseCoreGenericHandler(ConfigService.GnuSparseMapHandler, file.getAbsolutePath(), eG2.Utf8Handler_2(), string, null, 8, null);
             }
             configService.BaseCoreGenericHandler(new GeoIPLookupService_2(configService.BaseCoreGenericHandler, (File)args, file));
         }
         catch (Exception exception) {
             this.LiteBansModule_31.BaseCoreGenericHandler(exception);
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         c = new String[]{"GeoLite2-Country.mmdb", "Downloading GeoIP API.. + ", ":(?!(//))", "d4f611abd54f725c67ade1983e5637140fac151dbbbe223ce894b7100d2a090c", "81035e738fc392bcfb00be5d39f50fde56692ba305b21338412da9c0fc98e3fb", "Downloading GeoIP database (", ").. + ", "YOUR_LICENSE_KEY", "/geolite + ", "GeoIP download URL has not yet been ", "https://gitlab.com/ruany/LiteBans/-/wikis/GeoIP#geoip-download-issue"};
-    }
-
-    }
+}
 

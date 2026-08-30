@@ -20,8 +20,7 @@ public final class ActionHandler {
         switch (eA2.ordinal()) {
             case 0: {
                 return flag ? LiteBansModule_167[].class : LiteBansModule_167.class;
-            }
-        }
+}
         throw new UnsupportedOperationException("Action '" + eA2.name() + " not supported");
     }
 
@@ -80,7 +79,5 @@ public final class ActionHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"action", "Action '", " not supported", "HoverEvent(action=", ", contents=", ", legacy=", ")"};
-    }
-
-    }
+}
 

@@ -7,12 +7,10 @@ extends BuilderactionHandler_2 {
     public static final Double LiteBansModule_31(@NotNull String string) {
         String string2;
         ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
-        boolean flag = false;
         try {
             Double d10;
             if (NanHandler.BaseCoreGenericHandler(string)) {
                 string2 = string;
-                boolean flag2 = false;
                 d10 = Double.parseDouble(string2);
             } else {
                 d10 = null;
@@ -37,7 +35,6 @@ extends BuilderactionHandler_2 {
         int n5;
         char c11;
         int n6;
-        int n7 = 0;
         int n8 = string.length() - 1;
         String string2 = string;
         for (n6 = n7; n6 <= n8; ++n6) {
@@ -61,7 +58,6 @@ extends BuilderactionHandler_2 {
         if (n7 > n8) {
             return false;
         }
-        boolean flag3 = false;
         if (string.charAt(n7) == '0') {
             if (++n7 > n8) {
                 return true;
@@ -99,8 +95,7 @@ extends BuilderactionHandler_2 {
                 flag3 = true;
             } else {
                 --n7;
-            }
-        }
+}
         if (!flag3) {
             int n10;
             String string6 = string;
@@ -135,15 +130,13 @@ extends BuilderactionHandler_2 {
                     n10 = string9 == null ? -1 : (StringUtilities.LiteBansModule_31((CharSequence)string6, string9, n5, false) == n5 ? n8 + 1 : -1);
                 } else {
                     n10 = n7 = n5;
-                }
-            }
+}
             if (n7 == -1) {
                 return false;
             }
             if (n7 > n8) {
                 return true;
-            }
-        }
+}
         if ((n = string.charAt(n7++) | 0x20) != (flag3 ? 112 : 101)) {
             return !flag3 && (n == 102 || n == 100) && n7 > n8;
         }
@@ -172,7 +165,5 @@ extends BuilderactionHandler_2 {
 
     private static final void g() {
         g = new String[]{"<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "mathContext", "<this>", "<this>", "mathContext", "NaN", "Infinity", "NaN", "Infinity", "NaN", "Infinity"};
-    }
-
-    }
+}
 

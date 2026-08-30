@@ -14,7 +14,6 @@ LiteBansModule_86 {
         if (list == null) {
             return "null";
         }
-        boolean flag = true;
         StringBuffer stringBuffer = new StringBuffer();
         Iterator iterator = list.iterator();
         stringBuffer.append('[');
@@ -41,6 +40,5 @@ LiteBansModule_86 {
 
     public String toString() {
         return this.plugin();
-    }
 }
 

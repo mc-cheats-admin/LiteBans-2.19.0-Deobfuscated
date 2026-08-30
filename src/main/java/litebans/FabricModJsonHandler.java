@@ -24,8 +24,7 @@ public class FabricModJsonHandler {
         }
         if (this.AsyncBackgroundTask_5 == null) {
             throw new AssertionError((Object)("Missing " + string2));
-        }
-    }
+}
 
     public String toString() {
         return "FabricMeta(SQLiteDriverHandler_4=" + this.c() + ", name=" + this.AsyncBackgroundTask_5() + ", version=" + this.LiteBansModule_31() + ")";
@@ -45,7 +44,5 @@ public class FabricModJsonHandler {
 
     private static final void BaseCoreGenericHandler() {
         c = new String[]{"fabric.mod.json", "SQLiteDriverHandler_4", "name", "version"};
-    }
-
-    }
+}
 

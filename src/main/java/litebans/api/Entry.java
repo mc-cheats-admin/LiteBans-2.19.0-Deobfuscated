@@ -174,6 +174,5 @@ public abstract class Entry {
     @Generated
     protected byte getTemplate() {
         return this.template;
-    }
 }
 

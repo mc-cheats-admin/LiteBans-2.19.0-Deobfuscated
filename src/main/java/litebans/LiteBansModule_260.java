@@ -30,7 +30,6 @@ implements LiteBansModule_51 {
     public LiteBansModule_260 AsyncBackgroundTask_5() {
         LiteBansModule_260 hj2;
         LiteBansModule_260 hj3 = hj2 = this;
-        boolean flag = false;
         ServerLoginConnectionEvents.QUERY_START.register(hj3::BaseCoreGenericHandler);
         return hj2;
     }
@@ -55,7 +54,5 @@ implements LiteBansModule_51 {
 
     private static final void c() {
         BaseCoreGenericHandler = new String[]{""};
-    }
-
-    }
+}
 

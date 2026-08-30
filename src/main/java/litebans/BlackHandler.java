@@ -51,13 +51,13 @@ implements CharSequence {
      * WARNING - void declaration
      */
     private BlackHandler() {
-        void var4_2;
-        void var3_1;
+        void arg1;
+        void arg2;
         void var2_-1;
         void var1_-1;
-        this.q = var3_1;
-        this.A = var4_2;
-        this.B = new String(new char[]{'\u00a7', var3_1});
+        this.q = arg2;
+        this.A = arg1;
+        this.B = new String(new char[]{'\u00a7', arg2});
     }
 
     public static String BaseCoreGenericHandler(CharSequence charSequence) {
@@ -157,11 +157,9 @@ implements CharSequence {
         BaseCoreGenericHandler = new HashMap();
         for (BlackHandler hd_02 : BlackHandler.values()) {
             BaseCoreGenericHandler.put(Character.valueOf(hd_02.q), hd_02);
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         AsyncBackgroundTask_21 = new String[]{"", "0123456789AaBbCcDdEeFfKkLlMmNnOoRrXx", "BLACK", "black", "DARK_BLUE", "dark_blue", "DARK_GREEN", "dark_green", "DARK_AQUA", "dark_aqua", "DARK_RED", "dark_red", "DARK_PURPLE", "dark_purple", "GOLD", "gold", "GRAY", "gray", "DARK_GRAY", "dark_gray", "BLUE", "blue", "GREEN", "green", "AQUA", "aqua", "RED", "red", "LIGHT_PURPLE", "light_purple", "YELLOW", "yellow", "WHITE", "white", "OBFUSCATED", "obfuscated", "BOLD", "bold", "STRIKETHROUGH", "strikethrough", "UNDERLINE", "underline", "ITALIC", "italic", "RESET", "reset", "MAGIC", "magic", "(?i)(?<!<@)[&\u00a7][0-9A-FK-ORX]"};
-    }
 }
 

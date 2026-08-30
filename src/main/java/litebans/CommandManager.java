@@ -65,12 +65,9 @@ extends PluginModule {
         }
         for (LiteCommand command : collection) {
             this.plugin(command);
-        }
-    }
+}
 
     private static final void AsyncBackgroundTask_5() {
         c = new String[]{"command is marked non-null but is null", "No suggest implementation for /"};
-    }
-
-    }
+}
 

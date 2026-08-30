@@ -34,8 +34,7 @@ TabExecutor {
         }
         catch (Throwable throwable) {
             throwable.printStackTrace();
-        }
-    }
+}
 
     @Override
     public @NotNull List suggest(@NotNull CommandSenderWrapper sender, String[] args) {
@@ -49,6 +48,5 @@ TabExecutor {
     @Override
     public String[] getAliases() {
         return this.LiteBansModule_31;
-    }
 }
 

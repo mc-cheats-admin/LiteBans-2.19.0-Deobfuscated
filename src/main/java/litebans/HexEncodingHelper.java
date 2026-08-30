@@ -75,7 +75,6 @@ implements Connection {
     }
 
     final SQLException BaseCoreGenericHandler(SQLException sQLException) {
-        boolean flag = false;
         SQLException sQLException2 = sQLException;
         LiteBansModule_99 cs2 = this.LiteBansModule_240.AsyncBackgroundTask_5().CommandThrottleService;
         for (int n = 0; this.r != IsclosedHandler.BaseCoreGenericHandler && sQLException2 != null && n < 10; sQLException2 = sQLException2.getNextException(), ++n) {
@@ -104,8 +103,7 @@ implements Connection {
             this.CommandThrottleService = LiteBansModule_149.LiteBansModule_31();
         } else {
             this.PunishmentTableService = true;
-        }
-    }
+}
 
     private final synchronized Statement BaseCoreGenericHandler(Statement statement) {
         this.g.add(statement);
@@ -137,11 +135,9 @@ implements Connection {
                     this.i.BaseCoreGenericHandler();
                     this.LiteBansModule_240.BaseCoreGenericHandler("(exception closing Statements during Connection.close())");
                     this.r = IsclosedHandler.BaseCoreGenericHandler;
-                }
-            }
+}
             this.g.clear();
-        }
-    }
+}
 
     @Override
     public final void close() {
@@ -163,14 +159,11 @@ implements Connection {
             catch (SQLException sQLException) {
                 if (!this.LiteBansModule_240.LiteBansModule_31()) {
                     throw this.plugin(sQLException);
-                }
-            }
+}
             finally {
                 this.r = IsclosedHandler.BaseCoreGenericHandler;
                 this.LiteBansModule_240.BaseCoreGenericHandler(this.CommandThrottleService);
-            }
-        }
-    }
+}
 
     @Override
     public boolean isClosed() {
@@ -340,6 +333,5 @@ implements Connection {
         q = new HashSet();
         q.add(500150);
         q.add(2399);
-    }
 }
 

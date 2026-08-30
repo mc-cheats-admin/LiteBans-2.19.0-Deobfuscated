@@ -56,7 +56,5 @@ public abstract class LiteBansModule_188 {
                 throw new LiteBansModule_173(EncryptionHandler.c, kw_02);
             }
             throw new LiteBansModule_173(dq_02, kw_02);
-        }
-    }
 }
 

@@ -26,6 +26,5 @@ extends LiteBansModule_47 {
             linkedHashMap = new LinkedHashMap();
         }
         return new NullHandler_4(linkedHashMap, ie_02);
-    }
 }
 

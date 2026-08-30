@@ -55,7 +55,5 @@ static class LocaleHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"", "locale", "", "", "locale", "", "locale", "", "", "", "radix ", " was not InitializerHandler_3 valid range "};
-    }
-
-    }
+}
 

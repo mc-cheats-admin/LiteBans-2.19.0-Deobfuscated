@@ -9,6 +9,5 @@ public class LiteBansModule_234 {
         HashSet hashSet = new HashSet(objectArray.length);
         Collections.addAll(hashSet, objectArray);
         return hashSet;
-    }
 }
 

@@ -297,6 +297,5 @@ implements DatabaseMetaData {
             return this.plugin.unwrap(clazz);
         }
         throw new SQLException("Wrapped DatabaseMetaData is not HikariDataSource instance of " + clazz);
-    }
 }
 

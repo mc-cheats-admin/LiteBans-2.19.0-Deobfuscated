@@ -15,6 +15,5 @@ implements Runnable {
         }
         StackTraceAnalyzer hb_02 = new StackTraceAnalyzer(this.plugin);
         hb_02.BaseCoreGenericHandler(StackTraceAnalyzer.BaseCoreGenericHandler(StackTraceAnalyzer.class), true);
-    }
 }
 

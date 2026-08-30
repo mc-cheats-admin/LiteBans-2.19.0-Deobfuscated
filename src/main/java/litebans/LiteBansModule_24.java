@@ -62,13 +62,10 @@ implements LiteBansModule_177 {
         this.plugin(byArray2);
         if (this.LiteBansModule_31 == null) {
             this.LiteBansModule_31(byArray2);
-        }
-    }
+}
 
     protected final void BaseCoreGenericHandler(int n, int n2) {
         if (n2 < n) {
             throw new ZipException(this.getClass().getName() + " is too short, only " + n2 + " bytes, expected LiteBansModule_21 least " + n);
-        }
-    }
 }
 

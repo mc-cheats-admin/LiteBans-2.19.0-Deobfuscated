@@ -8,7 +8,6 @@ implements LiteBansModule_178 {
 
     public final String BaseCoreGenericHandler(BansHandler_2 kL2) {
         BansHandler_2 kL3 = kL2;
-        boolean flag = false;
         return SQLiteDriverHandler.LiteBansModule_194(SQLiteDriverHandler.e("ALTER TABLE " + kL3), "removed_by_name VARCHAR(128)");
     }
 
@@ -24,6 +23,5 @@ implements LiteBansModule_178 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"ALTER TABLE ", "removed_by_name VARCHAR(128)"};
-    }
 }
 

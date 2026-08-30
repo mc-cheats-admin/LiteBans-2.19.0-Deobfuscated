@@ -44,13 +44,11 @@ public final class LiteBansModule_203 {
             }
             default: {
                 throw new LiteBansException_5();
-            }
-        }
+}
         return ij2;
     }
 
     public /* synthetic */ LiteBansModule_203(LiteBansModule_14 aJ2) {
         this();
-    }
 }
 

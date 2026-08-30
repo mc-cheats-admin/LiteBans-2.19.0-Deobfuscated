@@ -118,7 +118,6 @@ extends MessageHandler {
             return string4;
         }
         Object object = this;
-        boolean flag = false;
         boolean flag2 = ((ConfigService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().af();
         if (flag2) {
             LiteBansModule_89 cM2 = LiteBansModule_50.c.BaseCoreGenericHandler(string);
@@ -148,19 +147,14 @@ extends MessageHandler {
             ch2.c(dZ2);
             if (dZ2.ServerSyncService() == BanHandler.LiteBansModule_240) {
                 AtomicLong[] atomicLongArray = new AtomicLong[]{atomicLong, atomicLong2};
-                boolean flag = false;
                 int n = atomicLongArray.length;
                 for (int i = 0; i < n; ++i) {
                     AtomicLong atomicLong3;
                     AtomicLong atomicLong4 = atomicLong3 = atomicLongArray[i];
-                    boolean flag2 = false;
                     atomicLong4.incrementAndGet();
-                }
-            }
-        } else {
+} else {
             this.LiteBansModule_240().getLogger().warning("Ignoring duplicate ban for " + string);
-        }
-    }
+}
 
     public final void BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @Nullable String string, @NotNull String string2, long l3, long l5, @Nullable String string3, @Nullable UUID uUID, @Nullable UUID uUID2, @Nullable String string4, @NotNull AtomicLong atomicLong, @NotNull BanHandler a_2) {
         Object object;
@@ -177,15 +171,12 @@ extends MessageHandler {
             return;
         }
         MessageHandler messageHandler = this;
-        boolean flag = false;
         SilentHandler dZ2 = AllHandler_3.BaseCoreGenericHandler(ch2, (String)object3, string4, a_2, ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService(), false, false, 48, null);
         if (a_2 == BanHandler.c || dZ2 == null || !ObjectUtilities.BaseCoreGenericHandler((Object)dZ2.DatabaseMonitorService(), object3)) {
             boolean flag2 = string4 != null;
             Object object5 = this;
-            boolean flag3 = false;
             String string5 = ((ConfigService)((MessageHandler)object5).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_25();
             Object object6 = this;
-            boolean flag4 = false;
             object5 = LiteBansModule_181.LiteBansModule_194.BaseCoreGenericHandler(((ConfigService)((MessageHandler)object6).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().BuilderactionHandler(), string5, this.LiteBansModule_240().HoverTextFormatter());
             object6 = new SilentHandler(a_2, (String)object3, string4, string2, (String)object, string3, (String)object5, string5, l3, l5, 0, false, flag2, false, 0L, 27648, null);
             ch2.c((SilentHandler)object6);
@@ -193,9 +184,7 @@ extends MessageHandler {
                 atomicLong.incrementAndGet();
                 if (flag2) {
                     this.LiteBansModule_194().incrementAndGet();
-                }
-            }
-        } else {
+} else {
             this.LiteBansModule_240().getLogger().warning("Ignoring duplicate " + a_2 + " for " + string + " (ip=" + string4 + ')');
         }
         if (string != null && object3 != null) {
@@ -203,8 +192,7 @@ extends MessageHandler {
         }
         if (string3 != null && object != null) {
             new LiteBansModule_221(this.LiteBansModule_240(), string3, (String)object, "#").run();
-        }
-    }
+}
 
     public static /* synthetic */ void BaseCoreGenericHandler(BansHandler fS2, LiteBansModule_82 ch2, String string, String string2, long l3, long l5, String string3, UUID uUID, UUID uUID2, String string4, AtomicLong atomicLong, BanHandler a_2, int n, Object object) {
         if (object != null) {
@@ -243,7 +231,5 @@ extends MessageHandler {
     @Override
     public void run() {
         this.BroadcastService();
-    }
-
-    }
+}
 

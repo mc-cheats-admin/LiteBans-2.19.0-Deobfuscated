@@ -46,7 +46,5 @@ LiteBansModule_196 {
 
     private static final void BaseCoreGenericHandler() {
         GnuSparseMapHandler = new String[]{"<init>", "constructor (Kotlin reflection is not available)", "function ", " (Kotlin reflection is not available)"};
-    }
-
-    }
+}
 

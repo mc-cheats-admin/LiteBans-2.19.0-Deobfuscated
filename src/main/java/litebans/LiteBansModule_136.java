@@ -8,7 +8,6 @@ implements LiteBansModule_411 {
     private List TapeHandler;
 
     public LiteBansModule_136(byte[] byArray) {
-        int n = 0;
         this.TapeHandler = new ArrayList();
         for (int i = 0; i < 21; ++i) {
             LiteBansModule_292 i72 = LiteBansModule_355.LiteBansModule_31(byArray, n + i * 24);
@@ -24,6 +23,5 @@ implements LiteBansModule_411 {
 
     public List BaseCoreGenericHandler() {
         return this.TapeHandler;
-    }
 }
 

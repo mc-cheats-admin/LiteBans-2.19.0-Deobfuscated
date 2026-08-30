@@ -17,6 +17,5 @@ public class LiteBansModule_304 {
 
     public static @NotNull LegacyComponentSerializer BaseCoreGenericHandler() {
         return LegacyComponentSerializer.builder().useUnusualXRepeatedCharacterHexFormat().build();
-    }
 }
 

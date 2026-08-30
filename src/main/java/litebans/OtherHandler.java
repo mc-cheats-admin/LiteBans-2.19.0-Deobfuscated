@@ -11,14 +11,12 @@ public final class OtherHandler {
     public final void BaseCoreGenericHandler(int n, int n2) {
         if (n < 0 || n >= n2) {
             throw new IndexOutOfBoundsException("index: " + n + ", size: " + n2);
-        }
-    }
+}
 
     public final void LiteBansModule_31(int n, int n2) {
         if (n < 0 || n > n2) {
             throw new IndexOutOfBoundsException("index: " + n + ", size: " + n2);
-        }
-    }
+}
 
     public final void BaseCoreGenericHandler(int n, int n2, int n3) {
         if (n < 0 || n2 > n3) {
@@ -26,8 +24,7 @@ public final class OtherHandler {
         }
         if (n > n2) {
             throw new IllegalArgumentException("fromIndex: " + n + " > toIndex: " + n2);
-        }
-    }
+}
 
     public final int BaseCoreGenericHandler(@NotNull Collection collection) {
         ObjectUtilities.BaseCoreGenericHandler((Object)collection, "c");
@@ -62,7 +59,5 @@ public final class OtherHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"index: ", ", size: ", "index: ", ", size: ", "fromIndex: ", ", toIndex: ", ", size: ", "fromIndex: ", " > toIndex: ", "startIndex: ", ", endIndex: ", ", size: ", "startIndex: ", " > endIndex: ", "c", "c", "other"};
-    }
-
-    }
+}
 

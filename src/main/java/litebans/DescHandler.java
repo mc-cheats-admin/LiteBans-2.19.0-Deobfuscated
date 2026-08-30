@@ -87,12 +87,9 @@ implements CharSequence {
             object = this.e ? "DESC" : "ASC";
             CharSequence charSequence2 = charSequence;
             CharSequence charSequence3 = " ORDER BY " + this.LiteBansModule_31 + ' ' + (String)object;
-            boolean flag = false;
             charSequence = "" + charSequence2 + charSequence3;
         }
         object = this.LiteBansModule_240;
-        int n = 0;
-        boolean flag = false;
         if (ObjectUtilities.BaseCoreGenericHandler(((Number)object).intValue(), n) > 0) {
             object = charSequence;
             CharSequence charSequence4 = " LIMIT ? OFFSET ?";
@@ -115,15 +112,13 @@ implements CharSequence {
         this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, arg_0 -> DescHandler.BaseCoreGenericHandler(this, arg_0));
         CharSequence charSequence2 = charSequence;
         CharSequence charSequence3 = this.LiteBansModule_401;
-        boolean flag = false;
         return "" + charSequence2 + charSequence3;
     }
 
     public void e() {
         if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5, SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler())) {
             this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_401.c();
-        }
-    }
+}
 
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence) {
         if (this.LiteBansModule_194 == null) {
@@ -138,11 +133,9 @@ implements CharSequence {
             }
             case 3: {
                 DescHandler hc2 = this;
-                boolean flag = false;
                 Object object = hc2.c();
                 return this.plugin(object != null && (object = StringUtilities.LiteBansModule_31((String)object)) != null ? (Long)object : -1L, i[8], charSequence);
-            }
-        }
+}
         return this.plugin(charSequence, (CharSequence)('(' + this.LiteBansModule_194 + ')'));
     }
 
@@ -181,7 +174,6 @@ implements CharSequence {
         LiteBansModule_82 ch2 = this.g;
         ObjectUtilities.LiteBansModule_31(ch2, i[14]);
         BansHandler_2 kL3 = kL2;
-        boolean flag = false;
         return LiteBansModule_184.BaseCoreGenericHandler(((SQLiteDriverHandler_3)ch2).c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(i[15] + charSequence + i[16] + kL3 + i[17] + this))), this);
     }
 
@@ -189,16 +181,12 @@ implements CharSequence {
         LiteBansModule_60 bT3;
         LiteBansModule_60 bT4 = bT2;
         Number[] numberArray = new Number[]{hc2.LiteBansModule_240, hc2.c};
-        boolean flag = false;
         LiteBansModule_60 bT5 = bT3 = bT4;
-        boolean flag2 = false;
         Number[] numberArray2 = numberArray;
-        boolean flag3 = false;
         int n = numberArray2.length;
         for (int i = 0; i < n; ++i) {
             Number number;
             Number number2 = number = numberArray2[i];
-            boolean flag4 = false;
             bT4.BaseCoreGenericHandler(number2);
         }
         return bT3;
@@ -212,9 +200,7 @@ implements CharSequence {
         LiteBansModule_60 bT3;
         LiteBansModule_60 bT4 = bT2;
         AllHandler jJ2 = hc2.LiteBansModule_401;
-        boolean flag = false;
         LiteBansModule_60 bT5 = bT3 = bT4;
-        boolean flag2 = false;
         jJ2.BaseCoreGenericHandler(bT5);
         return bT3;
     }
@@ -244,6 +230,5 @@ implements CharSequence {
 
     private static final void AsyncBackgroundTask_5() {
         i = new String[]{"", "DESC", "ASC", " ORDER BY ", " LIMIT ? OFFSET ?", "(active={true} AND(until<1 OR until>?))", "uuid", "banned_by_uuid", "SQLiteDriverHandler_4", "=?", "=?", " AND ", "", "*", "", "SELECT ", " FROM ", " WHERE ", "", "*"};
-    }
 }
 

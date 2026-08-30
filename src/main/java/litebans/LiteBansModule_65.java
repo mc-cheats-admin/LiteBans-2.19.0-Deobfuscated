@@ -125,6 +125,5 @@ public final class LiteBansModule_65 {
 
     private static final void e() {
         c = new String[]{"Template(SQLiteDriverHandler_4=", ", name=", ", type=", ", defaults=", ", ipTemplate=", ", ladder=", ", ladderExpiry=", ""};
-    }
 }
 

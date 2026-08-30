@@ -56,19 +56,16 @@ public final class LiteBansModule_48 {
     public final int BaseCoreGenericHandler(@NotNull Object object, @NotNull Object object2) {
         Object object3;
         Object v0;
-        block2: {
+{
             Set set = this.LiteBansModule_31(object);
             String string = this.e(object2).getCachedData().getMetaData().getPrimaryGroup();
             Iterable iterable = set;
             for (Object t2 : iterable) {
                 Group group = (Group)t2;
-                boolean flag = false;
                 if (!ObjectUtilities.BaseCoreGenericHandler((Object)group.getName(), (Object)string)) continue;
                 v0 = t2;
-                break block2;
-            }
-            v0 = null;
-        }
+                break;
+}
         if ((object3 = (Group)v0) == null || (object3 = object3.getWeight()) == null) {
             object3 = OptionalInt.empty();
         }
@@ -87,6 +84,5 @@ public final class LiteBansModule_48 {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"", ""};
-    }
 }
 

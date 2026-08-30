@@ -135,6 +135,5 @@ public interface LiteBansModule_411 {
         GnuSparseMapHandler = 2;
         HikariDataSource = 10240;
         BaseCoreGenericHandler = 512;
-    }
 }
 

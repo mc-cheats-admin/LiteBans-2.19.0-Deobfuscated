@@ -37,12 +37,10 @@ implements LiteBansModule_177 {
     public void BaseCoreGenericHandler(byte[] byArray, int n, int n2) {
         if (n2 != 0) {
             throw new ZipException("JarMarker doesn'AsyncBackgroundTask_22 expect any data");
-        }
-    }
+}
 
     @Override
     public void LiteBansModule_31(byte[] byArray, int n, int n2) {
         this.plugin(byArray, n, n2);
-    }
 }
 

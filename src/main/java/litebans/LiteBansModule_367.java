@@ -29,6 +29,5 @@ extends ConfigurationManager {
             arrayList.add(this.plugin.BaseCoreGenericHandler(player));
         }
         return arrayList.toArray(CommandSenderWrapper.BaseCoreGenericHandler);
-    }
 }
 

@@ -10,6 +10,5 @@ extends PluginModule {
 
     public @Nullable LiteBansModule_175 BaseCoreGenericHandler(LiteBansModule_360 commandContext) {
         return null;
-    }
 }
 

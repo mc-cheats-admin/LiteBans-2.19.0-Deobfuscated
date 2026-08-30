@@ -33,7 +33,5 @@ public final class LiteBansModule_254 {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{""};
-    }
-
-    }
+}
 

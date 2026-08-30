@@ -11,7 +11,6 @@ import org.jetbrains.annotations.Nullable;
 public final class LiteBansModule_242 {
     public static final String BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull CharSequence[] charSequenceArray) {
         String string = ((Object)charSequence).toString();
-        int n = 0;
         int n2 = charSequenceArray.length;
         if (n2 % 2 == 1) {
             throw new ArrayIndexOutOfBoundsException("Odd arg length " + n2);
@@ -26,13 +25,10 @@ public final class LiteBansModule_242 {
 
     public static final CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, boolean flag, @Nullable CharSequence charSequence2) {
         CharSequence charSequence3;
-        boolean flag2 = false;
         if (charSequence2 != null && charSequence2.length() > 0 && flag) {
             CharSequence charSequence4 = charSequence;
             CharSequence charSequence5 = "\n";
-            boolean flag3 = false;
             charSequence4 = "" + charSequence4 + charSequence5;
-            boolean flag4 = false;
             charSequence3 = "" + charSequence4 + charSequence2;
         } else {
             charSequence3 = charSequence;
@@ -42,13 +38,10 @@ public final class LiteBansModule_242 {
 
     public static final CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable CharSequence charSequence2) {
         CharSequence charSequence3;
-        boolean flag = false;
         if (charSequence2 != null && charSequence2.length() > 0) {
             CharSequence charSequence4 = charSequence;
             CharSequence charSequence5 = "\n";
-            boolean flag2 = false;
             charSequence4 = "" + charSequence4 + charSequence5;
-            boolean flag3 = false;
             charSequence3 = "" + charSequence4 + charSequence2;
         } else {
             charSequence3 = charSequence;
@@ -95,7 +88,6 @@ public final class LiteBansModule_242 {
         }
         ArrayList arrayList = new ArrayList();
         StringBuilder stringBuilder = new StringBuilder();
-        boolean flag = false;
         for (char c : string.toCharArray()) {
             if (c == ' ' && !flag) {
                 ((Collection)arrayList).add(stringBuilder.toString());
@@ -116,7 +108,5 @@ public final class LiteBansModule_242 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"Odd arg length ", "\n", "\n", "\n", "  ", "\\AsyncBackgroundTask_21+", " ", "OfflinePlayer:", " ", ""};
-    }
-
-    }
+}
 

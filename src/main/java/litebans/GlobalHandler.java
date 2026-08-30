@@ -25,23 +25,18 @@ extends MessageHandler {
     public void run() {
         this.LiteBansModule_194 = CommandArgumentUtils.BaseCoreGenericHandler(this, this.AsyncBackgroundTask_5(), this.g, this.LiteBansModule_194);
         Object object = this;
-        boolean flag = false;
         ChatFormatter chatFormatter = MessageHandler.BaseCoreGenericHandler;
         boolean flag2 = ((MessageHandler)object).AsyncBackgroundTask_5().LiteBansModule_194();
         Object object2 = MessageKey.LiteBansModule_31;
-        boolean flag3 = false;
         ChatFormatter fo_03 = chatFormatter;
         boolean flag4 = !flag2;
-        boolean flag5 = false;
         if (flag4) {
             ChatFormatter fo_04 = fo_03;
-            boolean flag6 = false;
             fo_04.BaseCoreGenericHandler(object2);
             throw new CommandExitException();
         }
         object = MessageHandler.BaseCoreGenericHandler;
         flag = !ArrayUtilities.LiteBansModule_31(this.g, "confirm");
-        boolean flag7 = false;
         if (flag) {
             Object object3 = object;
             flag2 = false;
@@ -67,7 +62,7 @@ extends MessageHandler {
         Iterator iterator;
         Object object4;
         Object object5;
-        block23: {
+{
             String string2;
             boolean t7;
             Object v0;
@@ -77,16 +72,14 @@ extends MessageHandler {
             DeleteHandler[] jZArray;
             boolean flag5;
             Object object7;
-            block22: {
+{
                 object7 = MessageHandler.BaseCoreGenericHandler;
                 boolean flag6 = ch2.LiteBansModule_31();
                 object5 = MessageKey.ServerEventListener;
                 flag5 = false;
                 object4 = object7;
-                boolean flag7 = false;
                 if (flag6) {
                     ChatFormatter chatFormatter = object4;
-                    boolean flag8 = false;
                     chatFormatter.BaseCoreGenericHandler(object5);
                     throw new CommandExitException();
                 }
@@ -102,15 +95,12 @@ extends MessageHandler {
                     flag3 = false;
                     if (!(!(ObjectUtilities.BaseCoreGenericHandler((Object)jZArray, (Object)"reset-database") || StringUtilities.LiteBansModule_31((String)jZArray, "exclude:", false, 2, null) || StringUtilities.LiteBansModule_31((String)jZArray, "mode:", false, 2, null) || StringUtilities.LiteBansModule_31((String)jZArray, "server:", false, 2, null) || ObjectUtilities.BaseCoreGenericHandler((Object)jZArray, (Object)"-g") || ObjectUtilities.BaseCoreGenericHandler((Object)jZArray, (Object)"confirm")))) continue;
                     v0 = e;
-                    break block22;
-                }
-                v0 = null;
-            }
+                    break;
+}
             String string3 = v0;
             object5 = MessageHandler.BaseCoreGenericHandler;
             flag5 = string3 != null;
             object4 = BlackHandler.LiteBansModule_194("Unrecognized parameter: " + BlackHandler.AsyncBackgroundTask_5(string3));
-            boolean bl9 = false;
             jZArray = object5;
             flag4 = false;
             if (flag5) {
@@ -126,7 +116,6 @@ extends MessageHandler {
             bl9 = false;
             jZArray = object4;
             Collection collection = new ArrayList();
-            boolean bl10 = false;
             for (Object t2 : jZArray) {
                 iterator = (String)t2;
                 t7 = false;
@@ -146,7 +135,6 @@ extends MessageHandler {
             }
             List list2 = (List)collection;
             jZArray = (Iterable)object7;
-            boolean bl11 = false;
             object2 = jZArray;
             Iterator iterator2 = new ArrayList();
             boolean n2 = false;
@@ -175,7 +163,6 @@ extends MessageHandler {
             bl11 = false;
             object2 = jZArray;
             iterator2 = new ArrayList();
-            boolean bl19 = false;
             iterator = object2.iterator();
             while (iterator.hasNext()) {
                 Object t10 = iterator.next();
@@ -187,7 +174,6 @@ extends MessageHandler {
             object4 = NullHandler_6.c((List)((Object)iterator2));
             if (!((Collection)object4).isEmpty()) {
                 GlobalHandler fm_03 = fm_02;
-                boolean bl13 = false;
                 ((Collection)object4).add("history");
                 ((Collection)object4).add("config");
             }
@@ -196,29 +182,25 @@ extends MessageHandler {
             while (iterator2.hasNext()) {
                 Object t2 = iterator2.next();
                 iterator = (String)t2;
-                boolean flag2 = false;
                 if (!StringUtilities.LiteBansModule_31((String)((Object)iterator), "mode:", false, 2, null)) continue;
                 v1 = t2;
-                break block23;
-            }
-            v1 = null;
-        }
+                break;
+}
         String string3 = v1;
         String string4 = string = string3 != null ? StringUtilities.LiteBansModule_31(string3, ':', null, 2, null) : null;
         if (string != null) {
             DeleteHandler jZ2;
             Object object6;
-            block24: {
+{
                 DeleteHandler[] jZArray = DeleteHandler.values();
                 object3 = fm_02;
                 object2 = jZArray;
                 int n2 = ((DeleteHandler[])object2).length;
                 for (int i = 0; i < n2; ++i) {
                     Iterator iterator2 = iterator = object2[i];
-                    boolean flag3 = false;
                     if (!StringUtilities.BaseCoreGenericHandler(((Enum)((Object)iterator2)).name(), string, true)) continue;
                     object6 = iterator;
-                    break block24;
+                    break;
                 }
                 object6 = jZ2 = null;
             }
@@ -228,13 +210,10 @@ extends MessageHandler {
             ((GlobalHandler)object3).e = jZ2;
         }
         Object object9 = fm_02;
-        boolean bl16 = false;
         if (((GlobalHandler)object9).AsyncBackgroundTask_5) {
             object2 = BansHandler_2.values();
-            boolean bl17 = false;
             Enum[] enumArray = object2;
             iterator = new ArrayList();
-            boolean flag4 = false;
             for (Enum enum_ : enumArray) {
                 object = enum_;
                 flag = false;
@@ -249,7 +228,6 @@ extends MessageHandler {
         bl16 = false;
         object2 = object9;
         Object object10 = new ArrayList();
-        boolean flag5 = false;
         iterator = object2.iterator();
         while (iterator.hasNext()) {
             Object t3 = iterator.next();
@@ -262,7 +240,6 @@ extends MessageHandler {
         bl16 = false;
         object2 = object9;
         object10 = new ArrayList();
-        boolean flag6 = false;
         iterator = object2.iterator();
         while (iterator.hasNext()) {
             Object t4 = iterator.next();
@@ -275,7 +252,6 @@ extends MessageHandler {
         bl16 = false;
         object2 = object9;
         object10 = new ArrayList(CollectionUtilities.BaseCoreGenericHandler((Iterable)object9, 10));
-        boolean flag7 = false;
         iterator = object2.iterator();
         while (iterator.hasNext()) {
             Object t5 = iterator.next();
@@ -287,13 +263,11 @@ extends MessageHandler {
         object9 = (List)object10;
         bl16 = false;
         object10 = object2 = object9;
-        boolean flag8 = false;
         iterator = object10.iterator();
         while (iterator.hasNext()) {
             Object t6 = iterator.next();
             LiteBansModule_354 jT2 = (LiteBansModule_354)t6;
             n = 0;
-            boolean bl9 = false;
             object = fm_02;
             flag = false;
             LiteBansModule_82 ch3 = ((GlobalHandler)object).i;
@@ -306,18 +280,14 @@ extends MessageHandler {
         object9 = object2;
         bl16 = false;
         object10 = object2 = object9;
-        boolean bl10 = false;
         iterator = object10.iterator();
         while (iterator.hasNext()) {
             Object t7 = iterator.next();
             LiteBansModule_354 jT3 = (LiteBansModule_354)t7;
             n = 0;
             GlobalHandler fm_03 = fm_02;
-            boolean bl11 = false;
             GlobalHandler fm_04 = fm_03;
-            boolean bl12 = false;
             LiteBansModule_354 jT4 = jT3;
-            boolean bl13 = false;
             CharSequence[] charSequenceArray = new CharSequence[]{"amount", String.valueOf(((Number)jT4.e()).longValue())};
             CharSequence charSequence = LiteBansModule_242.BaseCoreGenericHandler((CharSequence)MessageKey.LiteBansModule_39.BaseCoreGenericHandler("serverScope", (Object)fm_04.LiteBansModule_194), charSequenceArray);
             charSequenceArray = new CharSequence[]{"type", ((BansHandler_2)jT4.LiteBansModule_31()).name().toLowerCase(Locale.ROOT)};
@@ -325,7 +295,5 @@ extends MessageHandler {
         }
         DatabaseMonitorService.BaseCoreGenericHandler(ch2.AsyncBackgroundTask_5(), 0L, true, true, false, 1, null);
         return KotlinUnitHandler.BaseCoreGenericHandler;
-    }
-
-    }
+}
 

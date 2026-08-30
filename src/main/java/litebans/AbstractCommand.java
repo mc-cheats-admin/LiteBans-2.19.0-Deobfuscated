@@ -46,12 +46,9 @@ implements LiteCommand {
     public final void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args, @NotNull String string) {
         ChatFormatter chatFormatter = MessageHandler.BaseCoreGenericHandler;
         CommandSenderWrapper jv_03 = sender;
-        boolean flag = false;
         try {
             chatFormatter.LiteBansModule_31().set(jv_03);
-            boolean flag2 = false;
             CommandThrottleService v2 = (CommandThrottleService)this.LiteBansModule_240().BaseCoreGenericHandler(CommandThrottleService.class);
-            boolean flag3 = false;
             try {
                 if (this.plugin()) {
                     AbstractCommand.BaseCoreGenericHandler(this, args, null, 2, null);
@@ -59,17 +56,13 @@ implements LiteCommand {
                 if (sender.e() && v2.BaseCoreGenericHandler((byte)3, sender.BaseCoreGenericHandler())) {
                     CommandSenderWrapper jv_04 = sender;
                     String string2 = "litebans.cooldown.bypass";
-                    boolean flag4 = false;
                     CommandSenderWrapper jv_05 = jv_04;
-                    boolean flag5 = false;
                     if (!jv_05.e(string2)) {
                         flag3 = true;
-                    }
-                }
+}
                 if (!flag3) {
                     this.plugin(sender, args);
-                }
-            }
+}
             catch (LiteBansException bi2) {
                 String string3 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)String.valueOf(bi2.BaseCoreGenericHandler()), (CharSequence)"commandArgs", () -> AbstractCommand.BaseCoreGenericHandler(args)), (CharSequence)"command", () -> AbstractCommand.BaseCoreGenericHandler(string));
                 CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, (CharSequence)string3);
@@ -77,29 +70,23 @@ implements LiteCommand {
             catch (Exception exception) {
                 CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, MessageKey.LiteBansModule_67);
                 MessageHandler messageHandler = this;
-                boolean flag6 = false;
                 ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(exception);
             }
             finally {
                 if (sender.e() && !flag3) {
                     v2.LiteBansModule_31((byte)3, sender.BaseCoreGenericHandler());
-                }
-            }
-        }
+}
         finally {
             chatFormatter.LiteBansModule_31().remove();
-        }
-    }
+}
 
     public void BaseCoreGenericHandler(@NotNull String[] args, @NotNull LiteBansModule_146 messageSupplier) {
         ChatFormatter chatFormatter = MessageHandler.BaseCoreGenericHandler;
         boolean flag = args.length == 0;
-        boolean flag2 = false;
         if (flag) {
             chatFormatter.BaseCoreGenericHandler(messageSupplier.BaseCoreGenericHandler());
             throw new CommandExitException();
-        }
-    }
+}
 
     public static /* synthetic */ void BaseCoreGenericHandler(AbstractCommand abstractCommand, String[] args, LiteBansModule_146 messageSupplier, int n, Object object) {
         if (object != null) {
@@ -130,6 +117,5 @@ implements LiteCommand {
 
     private static final void c() {
         g = new String[]{"", "litebans.cooldown.bypass", "commandArgs", "command", "", " ", "_USAGE"};
-    }
 }
 

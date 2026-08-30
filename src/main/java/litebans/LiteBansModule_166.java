@@ -52,6 +52,5 @@ LiteBansModule_239 {
 
     private static final void BaseCoreGenericHandler() {
         g = new String[]{"Cannot return the exclusive upper bound of BaseCoreGenericHandler range that includes ", ".."};
-    }
 }
 

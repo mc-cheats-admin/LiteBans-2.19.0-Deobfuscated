@@ -96,14 +96,11 @@ implements LiteBansModule_158 {
         Collection collection;
         Object object32;
         Object object2 = Bukkit.getServer().getPluginManager().getPlugins();
-        boolean flag = false;
         Object[] objectArray = object2;
         Collection collection2 = new ArrayList(((Object[])object2).length);
-        boolean flag2 = false;
         for (Object object32 : objectArray) {
             Plugin plugin = (Plugin)object32;
             collection = collection2;
-            boolean flag3 = false;
             collection.add(plugin.getDescription());
         }
         object2 = (List)collection2;
@@ -113,7 +110,6 @@ implements LiteBansModule_158 {
         flag2 = false;
         for (Object t2 : objectArray) {
             object32 = (PluginDescriptionFile)t2;
-            boolean flag4 = false;
             if (!(object32.getDepend().contains(string) || object32.getSoftDepend().contains(string))) continue;
             collection2.add(t2);
         }
@@ -125,7 +121,6 @@ implements LiteBansModule_158 {
         for (Object t3 : objectArray) {
             object32 = (PluginDescriptionFile)t3;
             collection = collection2;
-            boolean flag5 = false;
             collection.add(object32.getName());
         }
         return (List)collection2;
@@ -184,8 +179,7 @@ implements LiteBansModule_158 {
                 string = null;
             } else {
                 string = inetAddress.getHostAddress();
-            }
-        } else {
+} else {
             this.plugin(object);
             throw new CommandExitException();
         }
@@ -219,7 +213,6 @@ implements LiteBansModule_158 {
             if (object instanceof AsyncPlayerChatEvent) {
                 BungeecordHandler_2 ao_02 = this;
                 AsyncPlayerChatEvent asyncPlayerChatEvent = (AsyncPlayerChatEvent)object;
-                boolean flag2 = false;
                 try {
                     asyncPlayerChatEvent.getRecipients().clear();
                 }
@@ -228,12 +221,10 @@ implements LiteBansModule_158 {
                 ((AsyncPlayerChatEvent)object).setMessage(string + ((AsyncPlayerChatEvent)object).getMessage());
             } else if (object instanceof PlayerCommandPreprocessEvent) {
                 ((PlayerCommandPreprocessEvent)object).setMessage('/' + string + ((PlayerCommandPreprocessEvent)object).getMessage());
-            }
-        } else {
+} else {
             this.plugin(object);
             throw new CommandExitException();
-        }
-    }
+}
 
     private final Void BaseCoreGenericHandler(Object object) {
         throw new MessageHandler_2(object.getClass().getName());
@@ -255,8 +246,7 @@ implements LiteBansModule_158 {
             byteArrayDataOutput.writeUTF(sender.i());
             byteArrayDataOutput.writeUTF(string);
             sender.BaseCoreGenericHandler("BungeeCord", byteArrayDataOutput.toByteArray());
-        }
-    }
+}
 
     @Override
     public void BaseCoreGenericHandler(Object object, CharSequence charSequence) {
@@ -265,7 +255,5 @@ implements LiteBansModule_158 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"", "BungeeCord", "BungeeCord", "BungeeCord", "Kicking ", " from ", "KickPlayerRaw", "", ".getUniqueId() == null (", ".getAddress() == null (", "KickPlayer", "BungeeCord"};
-    }
-
-    }
+}
 

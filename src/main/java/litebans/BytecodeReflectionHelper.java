@@ -19,8 +19,7 @@ public class BytecodeReflectionHelper {
         }
         catch (Exception | LinkageError throwable) {
             throw new RuntimeException("Compatibility check failed (1.21) for " + string, throwable);
-        }
-    }
+}
 
     private static final @Nullable ArgsHandler BaseCoreGenericHandler(PlatformPlugin plugin, String string) {
         try {
@@ -32,8 +31,7 @@ public class BytecodeReflectionHelper {
         }
         catch (Exception | LinkageError throwable) {
             throw new RuntimeException("Compatibility check failed (26) for " + string, throwable);
-        }
-    }
+}
 
     protected static @NotNull LiteBansModule_98 c(PlatformPlugin plugin, String string) {
         try {
@@ -42,12 +40,9 @@ public class BytecodeReflectionHelper {
         }
         catch (ClassNotFoundException classNotFoundException) {
             return new LiteBansModule_405(plugin);
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"method_64396", "net.minecraft.class_3222", "Compatibility check failed (1.21) for ", "net.minecraft.WorldVersion", "Compatibility check failed (26) for ", "net.minecraft.class_8710"};
-    }
-
-    }
+}
 

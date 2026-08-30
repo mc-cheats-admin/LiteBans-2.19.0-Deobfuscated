@@ -22,8 +22,7 @@ public final class LiteBansModule_131 {
         }
         catch (InterruptedException interruptedException) {
             Thread.currentThread().interrupt();
-        }
-    }
+}
 
     public static Object BaseCoreGenericHandler(String string, Class clazz, Object[] objectArray) {
         if (string == null) {
@@ -43,8 +42,7 @@ public final class LiteBansModule_131 {
         }
         catch (Exception exception) {
             throw new RuntimeException(exception);
-        }
-    }
+}
 
     public static ThreadPoolExecutor BaseCoreGenericHandler(int n, String string, ThreadFactory threadFactory, RejectedExecutionHandler rejectedExecutionHandler) {
         if (threadFactory == null) {
@@ -82,10 +80,7 @@ public final class LiteBansModule_131 {
                 }
                 catch (NumberFormatException numberFormatException) {
                     throw new IllegalArgumentException("Invalid transaction isolation value: " + string, numberFormatException);
-                }
-            }
-        }
+}
         return -1;
-    }
 }
 

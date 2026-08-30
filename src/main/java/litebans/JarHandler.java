@@ -67,7 +67,5 @@ public final class JarHandler {
             return false;
         }
         return ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_194, (Object)jP2.LiteBansModule_194);
-    }
-
-    }
+}
 

@@ -54,6 +54,5 @@ Serializable {
 
     public String AsyncBackgroundTask_5() {
         return this.LiteBansModule_194;
-    }
 }
 

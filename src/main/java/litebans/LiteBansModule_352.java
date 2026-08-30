@@ -44,8 +44,7 @@ SuggestionProvider {
         }
         catch (Throwable throwable) {
             throwable.printStackTrace();
-        }
-    }
+}
 
     @Override
     public String getName() {
@@ -81,7 +80,5 @@ SuggestionProvider {
 
     private static final void LiteBansModule_31() {
         AsyncBackgroundTask_5 = new String[]{" ", " "};
-    }
-
-    }
+}
 

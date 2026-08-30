@@ -23,10 +23,10 @@ extends Enum {
      * WARNING - void declaration
      */
     private SecHandler() {
-        void var3_1;
+        void arg1;
         void var2_-1;
         void var1_-1;
-        this.BroadcastService = var3_1;
+        this.BroadcastService = arg1;
     }
 
     public final long LiteBansModule_31(double d10) {
@@ -63,8 +63,7 @@ extends Enum {
             }
             default: {
                 throw new LiteBansException_5();
-            }
-        }
+}
         return (long)d11;
     }
 
@@ -101,8 +100,7 @@ extends Enum {
             }
             default: {
                 throw new LiteBansException_5();
-            }
-        }
+}
         return flag;
     }
 
@@ -139,8 +137,7 @@ extends Enum {
             }
             default: {
                 throw new LiteBansException_5();
-            }
-        }
+}
         return charSequence;
     }
 
@@ -186,7 +183,5 @@ extends Enum {
         AsyncBackgroundTask_5 = new PermanentHandler(null);
         c = new NativepatternHandler("[0-9.]");
         e = new NativepatternHandler("[^0-9.]");
-    }
-
-    }
+}
 

@@ -58,7 +58,5 @@ implements ServerInfo {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"lobby", ""};
-    }
-
-    }
+}
 

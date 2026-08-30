@@ -40,20 +40,17 @@ implements LiteBansModule_88 {
             if (configService.LiteBansModule_194().aM()) {
                 CharSequence charSequence = ch2.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler(ch2, (CharSequence)MessageKey.LiteBansModule_240, dZ2, false, 2, null), sender);
                 o2.LiteBansModule_31(string, charSequence, true);
-            }
-        }
+}
         finally {
             SilentHandler dZ3 = dZ2;
             ObjectUtilities.BaseCoreGenericHandler(dZ3);
             o2.BaseCoreGenericHandler(sender, GeoIPLookupService.BaseCoreGenericHandler(ch2, dZ3, string2, string, string3, null, -1));
-        }
-    }
+}
 
     @Override
     public PlayerJoinListener BaseCoreGenericHandler() {
         PlayerJoinListener dy2;
         PlayerJoinListener dy3 = dy2 = this;
-        boolean flag = false;
         LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{dy3};
         dy3.LiteBansModule_31.LiteBansModule_31(em_0Array);
         return dy2;
@@ -94,7 +91,5 @@ implements LiteBansModule_88 {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"", "Ban: ", " (valid: "};
-    }
-
-    }
+}
 

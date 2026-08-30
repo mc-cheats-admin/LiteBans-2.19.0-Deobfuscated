@@ -15,6 +15,5 @@ static class BlockHandler_2 {
         LiteBansModule_194 = 1;
         e = 0;
         BlockHandler_2.BaseCoreGenericHandler();
-    }
 }
 

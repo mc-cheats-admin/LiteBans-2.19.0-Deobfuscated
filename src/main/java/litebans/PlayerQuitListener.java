@@ -42,7 +42,6 @@ implements LiteBansModule_426 {
     public PlayerQuitListener e() {
         PlayerQuitListener m;
         PlayerQuitListener m2 = m = this;
-        boolean flag = false;
         LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{m2};
         m2.BaseCoreGenericHandler.LiteBansModule_31(em_0Array);
         return m;
@@ -51,7 +50,5 @@ implements LiteBansModule_426 {
     @Override
     public LiteBansModule_175 BaseCoreGenericHandler() {
         return this.e();
-    }
-
-    }
+}
 

@@ -155,8 +155,7 @@ implements CommandSenderWrapper {
         if (this.e()) {
             ProxiedPlayer proxiedPlayer = (ProxiedPlayer)commandSender;
             proxiedPlayer.disconnect(LiteBansModule_57.BaseCoreGenericHandler(string));
-        }
-    }
+}
 
     @Override
     public void LiteBansModule_31(String string) {
@@ -169,11 +168,9 @@ implements CommandSenderWrapper {
                 commandSender.sendMessage(LiteBansModule_280.BaseCoreGenericHandler(string, ChatVersion.V1_21_5));
             } else {
                 commandSender.sendMessage(LiteBansModule_280.BaseCoreGenericHandler(string, ChatVersion.V1_16));
-            }
-        } else {
+} else {
             commandSender.sendMessage(LiteBansModule_57.LiteBansModule_31(string));
-        }
-    }
+}
 
     @Override
     public void BaseCoreGenericHandler(String string) {
@@ -192,8 +189,7 @@ implements CommandSenderWrapper {
         }
         if (this.e()) {
             ((ProxiedPlayer)commandSender).sendData(string, byArray);
-        }
-    }
+}
 
     private final String BaseCoreGenericHandler(CommandSender commandSender) {
         InetAddress inetAddress;
@@ -202,7 +198,5 @@ implements CommandSenderWrapper {
             return inetAddress.getHostAddress();
         }
         return null;
-    }
-
-    }
+}
 

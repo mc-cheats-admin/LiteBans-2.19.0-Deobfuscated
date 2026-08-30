@@ -26,6 +26,5 @@ extends PluginModule {
         AsyncBackgroundTask_5 = false;
         LiteBansModule_31 = new LiteBansModule_246(null);
         c = new ConcurrentHashMap();
-    }
 }
 

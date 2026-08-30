@@ -30,7 +30,6 @@ implements LiteBansModule_51 {
     public LiteBansModule_353 c() {
         LiteBansModule_353 jS2;
         LiteBansModule_353 jS3 = jS2 = this;
-        boolean flag = false;
         ServerLoginConnectionEvents.QUERY_START.register(jS3::BaseCoreGenericHandler);
         return jS2;
     }
@@ -51,7 +50,5 @@ implements LiteBansModule_51 {
     @Override
     public LiteBansModule_175 BaseCoreGenericHandler() {
         return this.c();
-    }
-
-    }
+}
 

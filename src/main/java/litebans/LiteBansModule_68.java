@@ -91,6 +91,5 @@ implements LiteBansModule_390 {
     @Override
     public List g(String string) {
         return this.LiteBansModule_31.GnuSparseMapHandler(string);
-    }
 }
 

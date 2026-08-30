@@ -47,19 +47,15 @@ implements LiteBansModule_88 {
             if (dZ2 != null) {
                 this.plugin(asyncPlayerChatEvent, sender, dZ2);
                 return;
-            }
-        }
+}
         catch (NullPointerException nullPointerException) {
             PlatformPlugin plugin = this.AsyncBackgroundTask_5;
-            boolean flag = false;
             PlatformPlugin di_03 = plugin;
-            boolean flag2 = false;
             if (!di_03.isEnabled() || plugin.AsyncBackgroundTask_21()) {
                 ConfigService.BaseCoreGenericHandler(this.e, nullPointerException, 0, 2, null);
             }
             throw nullPointerException;
-        }
-    }
+}
 
     @EventHandler(priority=EventPriority.LOW, ignoreCancelled=true)
     public final void BaseCoreGenericHandler(@NotNull PlayerCommandPreprocessEvent playerCommandPreprocessEvent) {
@@ -71,7 +67,7 @@ implements LiteBansModule_88 {
             boolean flag;
             String string2;
             Object object;
-            block7: {
+{
                 Object object2;
                 Object object3;
                 object = new char[]{' '};
@@ -90,7 +86,6 @@ implements LiteBansModule_88 {
                 }
                 object3 = object.LiteBansModule_10();
                 object2 = (Iterable)object3;
-                boolean flag2 = false;
                 if (object2 instanceof Collection && ((Collection)object2).isEmpty()) {
                     flag = false;
                 } else {
@@ -98,20 +93,16 @@ implements LiteBansModule_88 {
                     while (iterator.hasNext()) {
                         Object t2 = iterator.next();
                         String string5 = (String)t2;
-                        boolean flag3 = false;
                         if (!StringUtilities.c(string2, string5, true)) continue;
                         flag = true;
-                        break block7;
+                        break;
                     }
                     flag = false;
-                }
-            }
+}
             if (flag || object.LiteBansModule_9().contains(string2)) {
                 this.plugin(playerCommandPreprocessEvent, sender, dZ2);
                 return;
-            }
-        }
-    }
+}
 
     private final void BaseCoreGenericHandler(Object object, CommandSenderWrapper sender, SilentHandler dZ2) {
         TestHandler_2 f82 = this.c.BaseCoreGenericHandler();
@@ -131,7 +122,6 @@ implements LiteBansModule_88 {
     public PlayerChatListener_2 BaseCoreGenericHandler() {
         PlayerChatListener_2 hE2;
         PlayerChatListener_2 hE3 = hE2 = this;
-        boolean flag = false;
         LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{hE3};
         hE3.AsyncBackgroundTask_5.LiteBansModule_31(em_0Array);
         return hE2;
@@ -144,7 +134,5 @@ implements LiteBansModule_88 {
 
     private static final void AsyncBackgroundTask_5() {
         BaseCoreGenericHandler = new String[]{"^/[^ ]+:", "/", ""};
-    }
-
-    }
+}
 

@@ -26,10 +26,10 @@ implements LiteBansModule_137 {
      * WARNING - void declaration
      */
     private StrictForKnowHandler() {
-        void var3_1;
+        void arg1;
         void var2_-1;
         void var1_-1;
-        this.c = var3_1;
+        this.c = arg1;
     }
 
     @Override
@@ -60,15 +60,14 @@ implements LiteBansModule_137 {
                 y_02.BaseCoreGenericHandler(Arrays.copyOfRange(byArray, n, n + n2));
             }
             return y_02;
-        }
-    }
+}
 
     /*
      * WARNING - void declaration
      */
     /* synthetic */ StrictForKnowHandler(LiteBansModule_400 kz_02, LiteBansModule_94 co_02) {
-        this((String)var1_-1, (int)co_02, (LiteBansModule_400)var3_2);
-        void var3_2;
+        this((String)var1_-1, (int)co_02, (LiteBansModule_400)arg2);
+        void arg2;
         void var1_-1;
     }
 
@@ -78,6 +77,5 @@ implements LiteBansModule_137 {
 
     static {
         AsyncBackgroundTask_5 = new StrictForKnowHandler[]{LiteBansModule_194, g, LiteBansModule_31, BaseCoreGenericHandler, e};
-    }
 }
 

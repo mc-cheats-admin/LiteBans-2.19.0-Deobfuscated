@@ -19,44 +19,30 @@ public final class PermanentHandler {
     }
 
     public final SecHandler BaseCoreGenericHandler(@NotNull String v1) {
-        block5: {
+{
             v2 = SecHandler.values();
-            var4_4 = v2.length;
-            for (v3 = 0; v3 < var4_4; ++v3) {
-                block4: {
-                    var6_6 = var5_5 = v2[v3];
-                    var7_7 = false;
-                    var8_8 = var6_6;
-                    var9_9 = false;
-                    if (var8_8.LiteBansModule_31(v1)) ** GOTO lbl-1000
-                    var10_10 = var8_8;
-                    var11_11 = false;
-                    var12_12 = SecHandler.BaseCoreGenericHandler(var10_10);
-                    var13_13 = false;
-                    var15_15 = var12_12.length;
-                    for (var14_14 = 0; var14_14 < var15_15; ++var14_14) {
-                        var17_17 = var16_16 = var12_12[var14_14];
-                        var18_18 = false;
-                        if (!StringUtilities.BaseCoreGenericHandler(var17_17, v1, true)) continue;
-                        v0 = true;
-                        break block4;
-                    }
-                    v0 = false;
-                }
+            arg1 = v2.length;
+            for (v3 = 0; v3 < arg1; ++v3) {
+{
+                    arg2 = arg3 = v2[v3];
+                    arg4 = arg2;
+                    if (arg4.LiteBansModule_31(v1)) ** GOTO lbl-1000
+                    arg5 = arg4;
+                    arg6 = SecHandler.BaseCoreGenericHandler(arg5);
+                    arg7 = arg6.length;
+                    for (arg8 = 0; arg8 < arg7; ++arg8) {
+                        arg9 = arg10 = arg6[arg8];
+                        if (!StringUtilities.BaseCoreGenericHandler(arg9, v1, true)) continue;
+                        break;
+}
                 if (v0) lbl-1000:
-                // 2 sources
-
-                {
-                    v1 = true;
+                                {
                 } else {
-                    v1 = false;
                 }
                 if (!v1) continue;
-                v2 = var5_5;
-                break block5;
-            }
-            v2 = null;
-        }
+                v2 = arg3;
+                break;
+}
         return v2;
     }
 
@@ -64,26 +50,23 @@ public final class PermanentHandler {
         Double d11;
         List list;
         Object object;
-        block13: {
+{
             Object object2;
-            block12: {
+{
                 List list2;
                 if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"permanent") || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"none") || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"unlimited") || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"never") || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)MessageKey.LiteBansModule_60.toString())) {
                     return 0.0;
                 }
                 object2 = new char[]{' '};
                 object2 = StringUtilities.BaseCoreGenericHandler((CharSequence)string, object2, false, 0, 6, null);
-                boolean flag = false;
                 if (!object2.isEmpty()) {
                     object = object2.listIterator(object2.size());
                     while (object.hasPrevious()) {
                         String string2 = (String)object.previous();
-                        boolean flag2 = false;
                         if (((CharSequence)string2).length() == 0) continue;
                         list2 = CollectionUtilities.BaseCoreGenericHandler((Iterable)object2, object.nextIndex() + 1);
                         break;
-                    }
-                } else {
+} else {
                     list2 = list = CollectionUtilities.e();
                 }
                 if (list.isEmpty()) {
@@ -91,10 +74,10 @@ public final class PermanentHandler {
                 }
                 object2 = StringUtilities.BaseCoreGenericHandler((String)list.get(0), ',', '.', false, 4, null);
                 d11 = StringUtilities.LiteBansModule_31((String)object2);
-                if (d11 == null) break block12;
+                if (d11 == null) break;
                 String string3 = String.valueOf(StringUtilities.LiteBansModule_31((CharSequence)object2));
                 ObjectUtilities.LiteBansModule_31(string3, "");
-                if (!ObjectUtilities.BaseCoreGenericHandler((Object)string3.toLowerCase(Locale.ROOT), (Object)"AsyncBackgroundTask_5")) break block13;
+                if (!ObjectUtilities.BaseCoreGenericHandler((Object)string3.toLowerCase(Locale.ROOT), (Object)"AsyncBackgroundTask_5")) break;
             }
             Double d12 = StringUtilities.LiteBansModule_31(LiteBansModule_81.BaseCoreGenericHandler(this.plugin(), (CharSequence)object2, ""));
             if (d12 == null) {
@@ -162,16 +145,14 @@ public final class PermanentHandler {
                 } else {
                     Object[] objectArray = new Object[]{l9, charSequence3};
                     string = String.format(string2, Arrays.copyOf(objectArray, objectArray.length));
-                }
-            } else if (l9 == 0L) {
+} else if (l9 == 0L) {
                 Object[] objectArray = new Object[]{l8, charSequence2};
                 string = String.format(string2, Arrays.copyOf(objectArray, objectArray.length));
             } else {
                 String string4 = string2 + string3 + string2;
                 Object[] objectArray = new Object[]{l8, charSequence2, l9, charSequence3};
                 string = String.format(string4, Arrays.copyOf(objectArray, objectArray.length));
-            }
-        } else if (l9 == 0L) {
+} else if (l9 == 0L) {
             if (l8 == 0L) {
                 Object[] objectArray = new Object[]{l5, charSequence};
                 string = String.format(string2, Arrays.copyOf(objectArray, objectArray.length));
@@ -179,8 +160,7 @@ public final class PermanentHandler {
                 String string5 = string2 + string3 + string2;
                 Object[] objectArray = new Object[]{l5, charSequence, l8, charSequence2};
                 string = String.format(string5, Arrays.copyOf(objectArray, objectArray.length));
-            }
-        } else if (l8 == 0L) {
+} else if (l8 == 0L) {
             String string6 = string2 + string3 + string2;
             Object[] objectArray = new Object[]{l5, charSequence, l9, charSequence3};
             string = String.format(string6, Arrays.copyOf(objectArray, objectArray.length));
@@ -221,7 +201,5 @@ public final class PermanentHandler {
 
     private static final void c() {
         BaseCoreGenericHandler = new String[]{"permanent", "none", "unlimited", "never", "", "AsyncBackgroundTask_5", "", "", "day", "days", "hour", "hours", "minute", "minutes", "second", "seconds"};
-    }
-
-    }
+}
 

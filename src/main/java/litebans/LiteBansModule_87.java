@@ -9,15 +9,12 @@ public final class LiteBansModule_87 {
 
     public final List BaseCoreGenericHandler() {
         BansHandler_2[] kLArray = BansHandler_2.values();
-        boolean flag = false;
         BansHandler_2[] kLArray2 = kLArray;
         Collection collection = new ArrayList();
-        boolean flag2 = false;
         int n = kLArray2.length;
         for (int i = 0; i < n; ++i) {
             BansHandler_2 kL2;
             BansHandler_2 kL3 = kL2 = kLArray2[i];
-            boolean flag3 = false;
             if (!kL3.BaseCoreGenericHandler()) continue;
             collection.add(kL2);
         }
@@ -26,6 +23,5 @@ public final class LiteBansModule_87 {
 
     public /* synthetic */ LiteBansModule_87(LiteBansModule_14 aJ2) {
         this();
-    }
 }
 

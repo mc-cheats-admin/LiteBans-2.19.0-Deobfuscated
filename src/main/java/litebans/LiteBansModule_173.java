@@ -17,6 +17,5 @@ extends ZipException {
         super("Unsupported compression method " + kw_02.getMethod() + " (" + dq_02.name() + ") used InitializerHandler_3 entry " + kw_02.getName());
         this.plugin = EncryptionHandler.c;
         this.c = kw_02;
-    }
 }
 

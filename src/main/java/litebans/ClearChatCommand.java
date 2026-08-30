@@ -39,7 +39,5 @@ extends AbstractCommand {
 
     private static final void BaseCoreGenericHandler() {
         i = new String[]{"_USAGE"};
-    }
-
-    }
+}
 

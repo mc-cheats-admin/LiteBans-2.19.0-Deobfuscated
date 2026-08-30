@@ -40,6 +40,5 @@ implements Supplier {
 
     public Object get() {
         return this.LiteBansModule_31();
-    }
 }
 

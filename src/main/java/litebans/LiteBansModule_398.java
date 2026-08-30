@@ -126,6 +126,5 @@ implements LiteBansModule_235 {
 
     public void BaseCoreGenericHandler(int n) {
         this.LiteBansModule_401 = n;
-    }
 }
 

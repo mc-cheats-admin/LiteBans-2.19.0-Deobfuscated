@@ -26,8 +26,7 @@ extends AbstractModule {
         new ServerEventListener_2(this.plugin).LiteBansModule_31();
         if (configService.LiteBansModule_194().PunishmentTableService()) {
             new PlayerChatListener(this.plugin).BaseCoreGenericHandler();
-        }
-    }
+}
 
     @Override
     public LiteBansModule_171 BaseCoreGenericHandler(@NotNull LiteBansModule_360 commandContext) {
@@ -40,7 +39,5 @@ extends AbstractModule {
     @Override
     public LiteBansModule_175 BaseCoreGenericHandler(LiteBansModule_360 commandContext) {
         return this.plugin(commandContext);
-    }
-
-    }
+}
 

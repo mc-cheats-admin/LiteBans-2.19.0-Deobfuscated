@@ -27,10 +27,8 @@ extends BansHandler {
         }
         catch (Exception exception) {
             MessageHandler messageHandler = this;
-            boolean flag = false;
             ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(exception);
-        }
-    }
+}
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -41,13 +39,11 @@ extends BansHandler {
         Throwable throwable = null;
         try {
             Object object = (PreparedStatement)autoCloseable;
-            boolean flag2 = false;
             ResultSet resultSet = preparedStatement.executeQuery();
             AutoCloseable autoCloseable2 = resultSet;
             Throwable throwable2 = null;
             try {
                 Object object2 = (ResultSet)autoCloseable2;
-                boolean flag3 = false;
                 while (resultSet.next()) {
                     String string3 = resultSet.getString("name");
                     String string4 = LiteBansModule_50.c.e(resultSet.getString("uuid"));
@@ -60,7 +56,6 @@ extends BansHandler {
                     string8 = null;
                     boolean flag4 = StringUtilities.BaseCoreGenericHandler((CharSequence)string9, (CharSequence)("ip" + string2), false, 2, null);
                     String string10 = string4;
-                    boolean flag5 = false;
                     if (HexEncodingHelper.BaseCoreGenericHandler.i(string10) && !flag4) {
                         this.m().warning("IP was stored InitializerHandler_3 UUID column for " + string7 + '!');
                         flag4 = true;
@@ -84,10 +79,8 @@ extends BansHandler {
                     long l3 = resultSet.getLong("start");
                     long l5 = Math.max(resultSet.getLong("end"), 0L);
                     Object object3 = this;
-                    boolean flag6 = false;
                     String string11 = ((ConfigService)((MessageHandler)object3).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_25();
                     Object object4 = this;
-                    boolean flag7 = false;
                     object3 = LiteBansModule_181.LiteBansModule_194.BaseCoreGenericHandler(((ConfigService)((MessageHandler)object4).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().BuilderactionHandler(), string11, this.LiteBansModule_240().HoverTextFormatter());
                     if (!flag || AllHandler_3.BaseCoreGenericHandler(ch2, string4, null, null, false, false, 30, null) == null) {
                         ObjectUtilities.BaseCoreGenericHandler((Object)string6);
@@ -95,8 +88,7 @@ extends BansHandler {
                         ch2.c((SilentHandler)object4);
                         if (a_2 == BanHandler.LiteBansModule_240) {
                             this.g().incrementAndGet();
-                        }
-                    } else {
+} else {
                         this.m().warning("Ignoring duplicate " + string2 + " for " + string4);
                     }
                     if (string4 == null) continue;
@@ -121,8 +113,7 @@ extends BansHandler {
         }
         finally {
             CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
-        }
-    }
+}
 
     static /* synthetic */ void BaseCoreGenericHandler(AdvancedbanHandler ft2, Connection connection, String string, String string2, LiteBansModule_82 ch2, BanHandler a_2, boolean flag, int n, Object object) {
         if ((n & 0x20) != 0) {
@@ -133,7 +124,5 @@ extends BansHandler {
 
     private static final void BaseCoreGenericHandler() {
         m = new String[]{"AdvancedBan", "ban", "mute", "WHERE punishmentType='", "' OR punishmentType='Temp", "' OR punishmentType='TEMP_", "' OR punishmentType='Ip", "' OR punishmentType='IP_", "' OR punishmentType='Tempip", "' OR punishmentType='TEMP_IP_", "SELECT * FROM Punishments ", "SELECT * FROM PunishmentHistory ", "name", "uuid", "operator", "reason", "punishmentType", "ip", "IP was stored InitializerHandler_3 UUID column for ", "Username ('", "') was stored InitializerHandler_3 UUID column for ", "Failed to import ", " for ", "start", "end", "Ignoring duplicate ", " for "};
-    }
-
-    }
+}
 

@@ -17,6 +17,5 @@ implements Runnable {
     @Override
     public void run() {
         this.LiteBansModule_31.kickPlayer(this.plugin);
-    }
 }
 

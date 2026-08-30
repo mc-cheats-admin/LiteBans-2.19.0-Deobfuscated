@@ -33,8 +33,7 @@ extends Exception {
             }
             default: {
                 stringBuffer.append("Unkown error LiteBansModule_21 position ").append(this.c).append(".");
-            }
-        }
+}
         return stringBuffer.toString();
     }
 
@@ -43,6 +42,5 @@ extends Exception {
         BaseCoreGenericHandler = 1;
         LiteBansModule_194 = 0;
         e = -7880698968187728548L;
-    }
 }
 

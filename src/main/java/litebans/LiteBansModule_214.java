@@ -28,7 +28,6 @@ extends MessageHandler {
         int n5 = LiteBansModule_389.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, 2, 4096);
         int n6 = LiteBansModule_389.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, 3, 6);
         Object object = this;
-        int n7 = 0;
         ServerInfo serverInfo = new LobbyHandler();
         object = new ArrayList(n4);
         for (n7 = 0; n7 < n4; ++n7) {
@@ -40,11 +39,9 @@ extends MessageHandler {
             String string = "" + n8 + '.' + n3 + '.' + n2 + '.' + n;
             String string2 = String.valueOf(iX2.BaseCoreGenericHandler(999999999));
             LiteBansModule_214 ga_02 = this;
-            boolean flag = false;
             object.add((CommandSenderWrapper)new LiteBansModule_46(string2, string, uUID));
         }
         Object object2 = this;
-        boolean flag = false;
         ((ConfigService)((MessageHandler)object2).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).BaseCoreGenericHandler((byte)0);
         object2 = new LiteBansModule_166(1, n6);
         flag = false;
@@ -53,23 +50,17 @@ extends MessageHandler {
             n2 = n3 = ((LiteBansModule_290)iterator).LiteBansModule_31();
             n = 0;
             this.LiteBansModule_240().LiteBansModule_31(() -> LiteBansModule_214.BaseCoreGenericHandler(sender, n5, (List)object, iX2, this, serverInfo));
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler(CommandSenderWrapper sender, int n, List list, LiteBansModule_324 iX2, LiteBansModule_214 ga_02, ServerInfo serverInfo) {
-        boolean flag = false;
         long l3 = System.nanoTime();
-        boolean flag2 = false;
         Iterable iterable = new LiteBansModule_166(1, n);
-        boolean flag3 = false;
         Iterator iterator = iterable.iterator();
         while (iterator.hasNext()) {
             int n2;
             int n3 = n2 = ((LiteBansModule_290)iterator).LiteBansModule_31();
-            boolean flag4 = false;
             CommandSenderWrapper jv_03 = (CommandSenderWrapper)list.get(iX2.BaseCoreGenericHandler(list.size()));
             MessageHandler messageHandler = ga_02;
-            boolean flag5 = false;
             GeoIPLookupService_3 gu2 = ((BroadcastService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class)).c();
             messageHandler = ga_02;
             flag5 = false;
@@ -81,7 +72,5 @@ extends MessageHandler {
 
     private static final void BaseCoreGenericHandler() {
         e = new String[]{" -> ", "ms to process ", " events."};
-    }
-
-    }
+}
 

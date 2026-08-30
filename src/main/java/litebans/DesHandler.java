@@ -33,10 +33,10 @@ extends Enum {
      * WARNING - void declaration
      */
     private DesHandler() {
-        void var3_1;
+        void arg1;
         void var2_-1;
         void var1_-1;
-        this.LiteBansModule_194 = var3_1;
+        this.LiteBansModule_194 = arg1;
     }
 
     public int BaseCoreGenericHandler() {
@@ -54,6 +54,5 @@ extends Enum {
             hashMap.put(ca_02.BaseCoreGenericHandler(), ca_02);
         }
         Utf8Handler_2 = Collections.unmodifiableMap(hashMap);
-    }
 }
 

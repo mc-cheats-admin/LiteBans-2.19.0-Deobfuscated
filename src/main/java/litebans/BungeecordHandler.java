@@ -148,9 +148,7 @@ implements CommandSenderWrapper {
                 this.LiteBansModule_194.g().BaseCoreGenericHandler((Object)this.plugin(), string);
             } else {
                 this.LiteBansModule_194.c(() -> this.AsyncBackgroundTask_5(string));
-            }
-        }
-    }
+}
 
     @Override
     public void LiteBansModule_31(String string) {
@@ -178,8 +176,5 @@ implements CommandSenderWrapper {
                 string = "bungeecord:main";
             }
             this.LiteBansModule_194.g().BaseCoreGenericHandler(this.plugin(), string, byArray);
-        }
-    }
-
-    }
+}
 

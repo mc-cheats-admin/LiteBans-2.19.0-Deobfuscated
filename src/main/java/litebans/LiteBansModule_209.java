@@ -11,6 +11,5 @@ public final class LiteBansModule_209 {
 
     public static final /* synthetic */ void BaseCoreGenericHandler(boolean flag) {
         BaseCoreGenericHandler = flag;
-    }
 }
 

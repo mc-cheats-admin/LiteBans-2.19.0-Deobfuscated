@@ -10,20 +10,17 @@ static class CharsHandler
 extends OldvalueHandler {
     public static final String BaseCoreGenericHandler(@NotNull String string, @NotNull char[] cArray) {
         CharSequence charSequence;
-        block1: {
+{
             ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
             ObjectUtilities.BaseCoreGenericHandler((Object)cArray, "chars");
             String string2 = string;
-            boolean flag = false;
             CharSequence charSequence2 = string2;
-            boolean flag2 = false;
             int n = charSequence2.length();
             for (int i = 0; i < n; ++i) {
                 char c = charSequence2.charAt(i);
-                boolean flag3 = false;
                 if (ArrayUtilities.LiteBansModule_31(cArray, c)) continue;
                 charSequence = charSequence2.subSequence(i, charSequence2.length());
-                break block1;
+                break;
             }
             charSequence = "";
         }
@@ -32,17 +29,15 @@ extends OldvalueHandler {
 
     public static final boolean LiteBansModule_31(@NotNull CharSequence charSequence) {
         boolean flag;
-        block1: {
+{
             ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
             CharSequence charSequence2 = charSequence;
-            boolean flag2 = false;
             for (int i = 0; i < charSequence2.length(); ++i) {
                 char c;
                 char c10 = c = charSequence2.charAt(i);
-                boolean flag3 = false;
                 if (LiteBansModule_338.BaseCoreGenericHandler(c10)) continue;
                 flag = false;
-                break block1;
+                break;
             }
             flag = true;
         }
@@ -69,7 +64,6 @@ extends OldvalueHandler {
             string3 = string2;
         } else {
             String string4 = string;
-            int n2 = 0;
             string3 = string4.substring(n2, n);
         }
         return string3;
@@ -138,7 +132,6 @@ extends OldvalueHandler {
             string3 = string2;
         } else {
             String string4 = string;
-            int n2 = 0;
             string3 = string4.substring(n2, n);
         }
         return string3;
@@ -255,18 +248,16 @@ extends OldvalueHandler {
         if (n3 <= (n2 = StringUtilities.BaseCoreGenericHandler(charSequence))) {
             while (true) {
                 boolean flag2;
-                block5: {
+{
                     char c = charSequence.charAt(n3);
                     char[] cArray2 = cArray;
-                    boolean flag3 = false;
                     int n4 = cArray2.length;
                     for (int i = 0; i < n4; ++i) {
                         char c10;
                         char c11 = c10 = cArray2[i];
-                        boolean flag4 = false;
                         if (!LiteBansModule_338.BaseCoreGenericHandler(c11, c, flag)) continue;
                         flag2 = true;
-                        break block5;
+                        break;
                     }
                     flag2 = false;
                 }
@@ -275,8 +266,7 @@ extends OldvalueHandler {
                 }
                 if (n3 == n2) break;
                 ++n3;
-            }
-        }
+}
         return -1;
     }
 
@@ -289,18 +279,16 @@ extends OldvalueHandler {
         }
         for (int i = LiteBansModule_20.AsyncBackgroundTask_5(n, StringUtilities.BaseCoreGenericHandler(charSequence)); -1 < i; --i) {
             boolean flag2;
-            block3: {
+{
                 char c = charSequence.charAt(i);
                 char[] cArray2 = cArray;
-                boolean flag3 = false;
                 int n2 = cArray2.length;
                 for (int i10 = 0; i10 < n2; ++i10) {
                     char c10;
                     char c11 = c10 = cArray2[i10];
-                    boolean flag4 = false;
                     if (!LiteBansModule_338.BaseCoreGenericHandler(c11, c, flag)) continue;
                     flag2 = true;
-                    break block3;
+                    break;
                 }
                 flag2 = false;
             }
@@ -327,9 +315,7 @@ extends OldvalueHandler {
                         continue;
                     }
                     break;
-                }
-            }
-        } else {
+} else {
             int n6 = ed2.c();
             int n7 = ed2.LiteBansModule_31();
             int n8 = ed2.BaseCoreGenericHandler();
@@ -340,9 +326,7 @@ extends OldvalueHandler {
                     }
                     if (n6 == n7) break;
                     n6 += n8;
-                }
-            }
-        }
+}
         return -1;
     }
 
@@ -368,18 +352,14 @@ extends OldvalueHandler {
             if (n5 > 0 && n3 <= n4 || n5 < 0 && n4 <= n3) {
                 while (true) {
                     Object v1;
-                    block12: {
+{
                         Iterable iterable = collection;
-                        boolean flag3 = false;
                         for (Object t2 : iterable) {
                             String string = (String)t2;
-                            boolean flag4 = false;
                             if (!StringUtilities.BaseCoreGenericHandler(string, 0, (String)charSequence, n3, string.length(), flag)) continue;
                             v1 = t2;
-                            break block12;
-                        }
-                        v1 = null;
-                    }
+                            break;
+}
                     String string = v1;
                     if (string != null) {
                         return LiteBansModule_371.BaseCoreGenericHandler(n3, string);
@@ -389,36 +369,28 @@ extends OldvalueHandler {
                         continue;
                     }
                     break;
-                }
-            }
-        } else {
+} else {
             int n6 = ed2.c();
             int n7 = ed2.LiteBansModule_31();
             int n8 = ed2.BaseCoreGenericHandler();
             if (n8 > 0 && n6 <= n7 || n8 < 0 && n7 <= n6) {
                 while (true) {
                     Object v2;
-                    block14: {
+{
                         Iterable iterable = collection;
-                        boolean flag5 = false;
                         for (Object t3 : iterable) {
                             String string = (String)t3;
-                            boolean flag6 = false;
                             if (!StringUtilities.BaseCoreGenericHandler((CharSequence)string, 0, charSequence, n6, string.length(), flag)) continue;
                             v2 = t3;
-                            break block14;
-                        }
-                        v2 = null;
-                    }
+                            break;
+}
                     String string = v2;
                     if (string != null) {
                         return LiteBansModule_371.BaseCoreGenericHandler(n6, string);
                     }
                     if (n6 == n7) break;
                     n6 += n8;
-                }
-            }
-        }
+}
         return null;
     }
 
@@ -562,11 +534,9 @@ extends OldvalueHandler {
 
     public static final void BaseCoreGenericHandler(int n) {
         if (!(n >= 0)) {
-            boolean flag = false;
             String string = "Limit must be non-negative, but was " + n;
             throw new IllegalArgumentException(string.toString());
-        }
-    }
+}
 
     public static final List BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull String[] args, boolean flag, int n) {
         Object object;
@@ -576,16 +546,13 @@ extends OldvalueHandler {
             return CharsHandler.BaseCoreGenericHandler(charSequence, (String)object, flag, n);
         }
         object = LiteBansModule_233.BaseCoreGenericHandler(CharsHandler.BaseCoreGenericHandler(charSequence, args, 0, flag, n, 2, null));
-        boolean flag2 = false;
         Object object2 = object;
         Collection collection = new ArrayList(CollectionUtilities.BaseCoreGenericHandler((Iterable)object, 10));
-        boolean flag3 = false;
         Iterator iterator = object2.iterator();
         while (iterator.hasNext()) {
             Object t2 = iterator.next();
             LiteBansModule_166 eI2 = (LiteBansModule_166)t2;
             Collection collection2 = collection;
-            boolean flag4 = false;
             collection2.add(StringUtilities.BaseCoreGenericHandler(charSequence, eI2));
         }
         return (List)collection;
@@ -608,14 +575,11 @@ extends OldvalueHandler {
             return CharsHandler.BaseCoreGenericHandler(charSequence, String.valueOf(cArray[0]), flag, n);
         }
         Iterable iterable = LiteBansModule_233.BaseCoreGenericHandler(CharsHandler.BaseCoreGenericHandler(charSequence, cArray, 0, flag, n, 2, null));
-        boolean flag2 = false;
         Iterable iterable2 = iterable;
         Collection collection = new ArrayList(CollectionUtilities.BaseCoreGenericHandler(iterable, 10));
-        boolean flag3 = false;
         for (Object t2 : iterable2) {
             LiteBansModule_166 eI2 = (LiteBansModule_166)t2;
             Collection collection2 = collection;
-            boolean flag4 = false;
             collection2.add(StringUtilities.BaseCoreGenericHandler(charSequence, eI2));
         }
         return (List)collection;
@@ -633,7 +597,6 @@ extends OldvalueHandler {
 
     private static final List BaseCoreGenericHandler(CharSequence charSequence, String string, boolean flag, int n) {
         StringUtilities.BaseCoreGenericHandler(n);
-        int n2 = 0;
         int n3 = StringUtilities.LiteBansModule_31(charSequence, string, n2, flag);
         if (n3 == -1 || n == 1) {
             return CollectionUtilities.BaseCoreGenericHandler(((Object)charSequence).toString());
@@ -651,7 +614,6 @@ extends OldvalueHandler {
     private static final LiteBansModule_354 BaseCoreGenericHandler(char[] cArray, boolean flag, CharSequence charSequence, int n) {
         ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "$this$DelimitedRangesSequence");
         int n2 = StringUtilities.LiteBansModule_31(charSequence, cArray, n, flag);
-        boolean flag2 = false;
         return n2 < 0 ? null : LiteBansModule_371.BaseCoreGenericHandler(n2, 1);
     }
 
@@ -661,7 +623,6 @@ extends OldvalueHandler {
         LiteBansModule_354 jT3 = CharsHandler.BaseCoreGenericHandler(charSequence, list, n, flag, false);
         if (jT3 != null) {
             LiteBansModule_354 jT4 = jT3;
-            boolean flag2 = false;
             jT2 = LiteBansModule_371.BaseCoreGenericHandler(jT4.LiteBansModule_31(), ((String)jT4.e()).length());
         } else {
             jT2 = null;
@@ -671,7 +632,5 @@ extends OldvalueHandler {
 
     private static final void GnuSparseMapHandler() {
         GnuSparseMapHandler = new String[]{"<this>", "predicate", "<this>", "predicate", "<this>", "predicate", "", "<this>", "predicate", "", "<this>", "predicate", "", "<this>", "predicate", "", "<this>", "chars", "<this>", "chars", "<this>", "chars", "", "<this>", "chars", "", "<this>", "chars", "", "<this>", "chars", "", "<this>", "<this>", "<this>", "", "<this>", "<this>", "", "<this>", "<this>", "Desired length ", " is less than ", "<this>", "<this>", "Desired length ", " is less than ", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "", "defaultValue", "defaultValue", "<this>", "<this>", "<this>", "<this>", "range", "<this>", "range", "<this>", "<this>", "<this>", "<this>", "range", "<this>", "missingDelimiterValue", "<this>", "delimiter", "missingDelimiterValue", "<this>", "missingDelimiterValue", "<this>", "delimiter", "missingDelimiterValue", "<this>", "missingDelimiterValue", "<this>", "delimiter", "missingDelimiterValue", "<this>", "missingDelimiterValue", "<this>", "delimiter", "missingDelimiterValue", "<this>", "replacement", "End index (", ") is less than start index (", ") + ", "<this>", "replacement", "<this>", "range", "replacement", "<this>", "range", "replacement", "<this>", "End index (", ") is less than start index (", ") + ", "<this>", "<this>", "range", "<this>", "range", "<this>", "prefix", "<this>", "prefix", "<this>", "suffix", "<this>", "suffix", "<this>", "prefix", "suffix", "<this>", "prefix", "suffix", "<this>", "delimiter", "<this>", "delimiter", "<this>", "replacement", "missingDelimiterValue", "<this>", "delimiter", "replacement", "missingDelimiterValue", "<this>", "replacement", "missingDelimiterValue", "<this>", "delimiter", "replacement", "missingDelimiterValue", "<this>", "delimiter", "replacement", "missingDelimiterValue", "<this>", "replacement", "missingDelimiterValue", "<this>", "replacement", "missingDelimiterValue", "<this>", "delimiter", "replacement", "missingDelimiterValue", "<this>", "regex", "replacement", "<this>", "regex", "transform", "<this>", "regex", "replacement", "<this>", "transform", "<this>", "transform", "<this>", "regex", "<this>", "other", "<this>", "<this>", "<this>", "prefix", "<this>", "prefix", "<this>", "suffix", "<this>", "other", "<this>", "other", "<this>", "chars", "<this>", "chars", "<this>", "strings", "<this>", "strings", "<this>", "strings", "<this>", "strings", "<this>", "<this>", "string", "<this>", "<this>", "string", "<this>", "other", "<this>", "<this>", "regex", "Limit must be non-negative, but was ", "<this>", "delimiters", "<this>", "delimiters", "<this>", "delimiters", "<this>", "delimiters", "<this>", "regex", "<this>", "regex", "<this>", "regex", "<this>", "regex", "<this>", "<this>", "<this>", "true", "false", "The string doesn'AsyncBackgroundTask_22 represent BaseCoreGenericHandler boolean value: ", "<this>", "true", "false", "$this$DelimitedRangesSequence", "$this$DelimitedRangesSequence", "UpdateCheckTask", "UpdateCheckTask"};
-    }
-
-    }
+}
 

@@ -21,10 +21,10 @@ extends Enum {
      * WARNING - void declaration
      */
     private ZlibHandler() {
-        void var3_1;
+        void arg1;
         void var2_-1;
         void var1_-1;
-        this.plugin = var3_1;
+        this.plugin = arg1;
     }
 
     public static final ZlibHandler BaseCoreGenericHandler(int n) {
@@ -37,6 +37,5 @@ extends Enum {
 
     static {
         e = new ZlibHandler[]{c, LiteBansModule_31, AsyncBackgroundTask_5};
-    }
 }
 

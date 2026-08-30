@@ -30,6 +30,5 @@ extends CommandManager {
 
     public void BaseCoreGenericHandler(LiteBansModule_352 jq_02, CommandDispatcher commandDispatcher) {
         ((ConfigYmlHandler)this.plugin).g().BaseCoreGenericHandler(jq_02, commandDispatcher);
-    }
 }
 

@@ -29,6 +29,5 @@ public final class LiteBansModule_64 {
 
     static DatabaseMetaData BaseCoreGenericHandler(HexEncodingHelper c22, DatabaseMetaData databaseMetaData) {
         return new LiteBansModule_339(c22, databaseMetaData);
-    }
 }
 

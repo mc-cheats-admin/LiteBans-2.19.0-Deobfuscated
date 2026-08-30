@@ -41,8 +41,7 @@ public class StackTraceAnalyzer {
         catch (URISyntaxException uRISyntaxException) {
             uRISyntaxException.printStackTrace();
             throw new AssertionError((Object)("CodeSource.getLocation(): " + uRL));
-        }
-    }
+}
 
     public static boolean BaseCoreGenericHandler(String string) {
         try {
@@ -51,8 +50,7 @@ public class StackTraceAnalyzer {
         }
         catch (ClassNotFoundException classNotFoundException) {
             return false;
-        }
-    }
+}
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -71,9 +69,7 @@ public class StackTraceAnalyzer {
                     stringWriter.close();
                 }
                 catch (IOException iOException) {}
-            }
-        }
-    }
+}
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -89,9 +85,7 @@ public class StackTraceAnalyzer {
                 }
                 if ((throwable = throwable.getCause()) == null) continue;
                 printWriter.print("Caused LiteBansModule_61: ");
-            }
-        }
-    }
+}
 
     public void BaseCoreGenericHandler(String string, boolean flag) {
         List list = this.plugin(string, "");
@@ -103,9 +97,7 @@ public class StackTraceAnalyzer {
             }
             catch (Throwable throwable) {
                 this.plugin(string2, throwable);
-            }
-        }
-    }
+}
 
     public List BaseCoreGenericHandler(File file, List list, String string) {
         File[] fileArray = file.listFiles();
@@ -149,11 +141,9 @@ public class StackTraceAnalyzer {
                     string3 = string3.replace('/', '.');
                     string3 = string3.substring(0, string3.length() - 6);
                     list.add(string3);
-                }
-            } else {
+} else {
                 list = this.plugin(file, list, "");
-            }
-        }
+}
         catch (Exception exception) {
             exception.printStackTrace();
         }
@@ -164,9 +154,7 @@ public class StackTraceAnalyzer {
                 }
                 catch (IOException iOException) {
                     iOException.printStackTrace();
-                }
-            }
-        }
+}
         if (this.c) {
             this.i = string;
             this.LiteBansModule_240 = string2;
@@ -196,8 +184,7 @@ public class StackTraceAnalyzer {
             }
             catch (Throwable throwable) {
                 this.plugin(string3, throwable);
-            }
-        }
+}
         if (this.e) {
             System.out.println("2: returned InitializerHandler_3 " + LiteBansModule_287.LiteBansModule_31((double)(System.nanoTime() - l3) / 1000.0 / 1000.0) + " ms");
         }
@@ -222,8 +209,7 @@ public class StackTraceAnalyzer {
                     constructor = clazz2.getDeclaredConstructor(classArray);
                     if (!Modifier.isPublic(constructor.getModifiers())) {
                         constructor.setAccessible(true);
-                    }
-                }
+}
                 catch (Throwable throwable) {
                     constructor = clazz2.getConstructor(classArray);
                 }
@@ -239,8 +225,7 @@ public class StackTraceAnalyzer {
                 }
                 System.err.println(clazz2.getName() + " does not accept " + string3);
                 throwable.printStackTrace();
-            }
-        }
+}
         if (this.e) {
             System.out.println("3: returned InitializerHandler_3 " + LiteBansModule_287.LiteBansModule_31((double)(System.nanoTime() - l3) / 1000.0 / 1000.0) + " ms");
         }
@@ -292,8 +277,5 @@ public class StackTraceAnalyzer {
             this.i = null;
             this.LiteBansModule_240 = null;
             this.LiteBansModule_31 = null;
-        }
-    }
-
-    }
+}
 

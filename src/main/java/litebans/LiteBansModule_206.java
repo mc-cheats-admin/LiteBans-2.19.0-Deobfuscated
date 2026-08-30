@@ -99,86 +99,73 @@ extends MessageHandler {
             try {
                 if (LiteBansCommand.i == null) {
                     throw new LiteBansException_2();
-                }
-            }
+}
             catch (Exception v1) {
-                var2_4 = this;
-                var3_7 = false;
-                ConfigService.BaseCoreGenericHandler((ConfigService)var2_4.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class), v1, 0, 2, null);
+                arg1 = this;
+                ConfigService.BaseCoreGenericHandler((ConfigService)arg1.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class), v1, 0, 2, null);
                 this.AsyncBackgroundTask_5();
                 throw new CommandExitException();
             }
             if (this.AsyncBackgroundTask_5 == 0) {
-                var1_2 = this;
-                var2_5 = false;
-                this.AsyncBackgroundTask_5 = ((ConfigService)var1_2.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().HoverTextFormatter();
+                arg2 = this;
+                this.AsyncBackgroundTask_5 = ((ConfigService)arg2.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().HoverTextFormatter();
             }
-            var3_8 = var1_2 = this.GnuSparseMapHandler;
-            var2_6 = var3_8.toLowerCase(Locale.ENGLISH);
-            var3_8 = this.LiteBansModule_401.BaseCoreGenericHandler((String)var1_2, this.AsyncBackgroundTask_5);
-            v0 = (LiteBansModule_297)CollectionUtilities.AsyncBackgroundTask_5((List)var3_8);
+            arg3 = arg2 = this.GnuSparseMapHandler;
+            arg4 = arg3.toLowerCase(Locale.ENGLISH);
+            arg3 = this.LiteBansModule_401.BaseCoreGenericHandler((String)arg2, this.AsyncBackgroundTask_5);
+            v0 = (LiteBansModule_297)CollectionUtilities.AsyncBackgroundTask_5((List)arg3);
             if (v0 == null) {
                 this.AsyncBackgroundTask_5();
                 throw new CommandExitException();
             }
-            this.Utf8Handler_2 = var4_9 = v0;
-            this.plugin(var2_6);
-            this.plugin(var4_9.LiteBansModule_31());
-            var5_10 = new HashSet<PunishmentService>(var3_8.size());
-            var6_11 = var3_8.iterator();
-            while (var6_11.hasNext()) {
-                var8_12 = ((LiteBansModule_297)var6_11.next()).AsyncBackgroundTask_5();
-                if (var8_12 == null || StringUtilities.BaseCoreGenericHandler((CharSequence)var8_12, '#', false, 2, null)) continue;
-                ((Collection)var5_10).add(var8_12);
+            this.Utf8Handler_2 = arg5 = v0;
+            this.plugin(arg4);
+            this.plugin(arg5.LiteBansModule_31());
+            arg6 = new HashSet<PunishmentService>(arg3.size());
+            arg7 = arg3.iterator();
+            while (arg7.hasNext()) {
+                arg8 = ((LiteBansModule_297)arg7.next()).AsyncBackgroundTask_5();
+                if (arg8 == null || StringUtilities.BaseCoreGenericHandler((CharSequence)arg8, '#', false, 2, null)) continue;
+                ((Collection)arg6).add(arg8);
             }
-            this.g = var5_10.size();
-            this.AsyncBackgroundTask_21 = var4_9.i();
-            var6_11 = this;
-            var7_15 = false;
-            var8_12 = var6_11;
-            var9_17 = false;
-            if (!((ConfigService)var8_12.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().PunishmentService()) ** GOTO lbl-1000
-            var6_11 = this;
-            var7_15 = false;
-            var8_12 = var6_11;
-            var9_17 = false;
-            if (!((ConfigService)var8_12.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_3() && this.g > 1) {
-                v1 = true;
+            this.g = arg6.size();
+            this.AsyncBackgroundTask_21 = arg5.i();
+            arg7 = this;
+            arg8 = arg7;
+            if (!((ConfigService)arg8.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().PunishmentService()) ** GOTO lbl-1000
+            arg7 = this;
+            arg8 = arg7;
+            if (!((ConfigService)arg8.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_3() && this.g > 1) {
             } else lbl-1000:
-            // 2 sources
-
-            {
-                v1 = false;
+                        {
             }
             this.e = v1;
-            var6_11 = null;
-            var7_16 = var1_2;
-            var8_13 = false;
-            if (HexEncodingHelper.BaseCoreGenericHandler.i((String)var7_16)) {
-                var6_11 = var3_8;
-                this.AsyncBackgroundTask_21 = var1_2;
+            arg9 = arg2;
+            if (HexEncodingHelper.BaseCoreGenericHandler.i((String)arg9)) {
+                arg7 = arg3;
+                this.AsyncBackgroundTask_21 = arg2;
             } else {
-                var6_11 = this.LiteBansModule_401.BaseCoreGenericHandler(this.AsyncBackgroundTask_21, this.AsyncBackgroundTask_5);
+                arg7 = this.LiteBansModule_401.BaseCoreGenericHandler(this.AsyncBackgroundTask_21, this.AsyncBackgroundTask_5);
             }
-            if (var6_11.isEmpty()) {
+            if (arg7.isEmpty()) {
                 this.AsyncBackgroundTask_5();
                 throw new CommandExitException();
             }
-            var7_16 = this.LiteBansModule_240().q();
-            var8_14 = new HashSet<PunishmentService>(8);
-            var9_18 = new HashMap<K, V>(8);
+            arg9 = this.LiteBansModule_240().q();
+            arg10 = new HashSet<PunishmentService>(8);
+            arg11 = new HashMap<K, V>(8);
             v2 = this.r;
-            ObjectUtilities.BaseCoreGenericHandler(var7_16);
-            this.plugin(var8_14, var9_18, (List)var6_11, v2, var7_16);
+            ObjectUtilities.BaseCoreGenericHandler(arg9);
+            this.plugin(arg10, arg11, (List)arg7, v2, arg9);
             if (this.e) {
-                this.plugin((List)var3_8, var8_14, var9_18, var7_16);
+                this.plugin((List)arg3, arg10, arg11, arg9);
             }
             this.n = this.r.size();
             this.m = CollectionUtilities.BaseCoreGenericHandler(this.r, MessageKey.ProxyConnection, null, null, 0, null, (LiteBansModule_178)LambdaMetafactory.metafactory(null, null, null, (Ljava/lang/Object;)Ljava/lang/Object;, BaseCoreGenericHandler(litebans.LiteBansModule_327 ), (Llitebans/LiteBansModule_327;)Ljava/lang/CharSequence;)(), 30, null);
         }
-        catch (LiteBansException var1_3) {
+        catch (LiteBansException arg12) {
             if (!this.BroadcastService && this.LiteBansModule_194 != null) {
-                ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, this.LiteBansModule_194, String.valueOf(var1_3.getMessage()), null, 4, null);
+                ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, this.LiteBansModule_194, String.valueOf(arg12.getMessage()), null, 4, null);
             }
             this.PunishmentTableService = true;
         }
@@ -192,14 +179,11 @@ extends MessageHandler {
             List list2 = this.LiteBansModule_401.BaseCoreGenericHandler(string, this.AsyncBackgroundTask_5);
             if (list2.isEmpty()) continue;
             this.plugin(hashSet, hashMap, list2, this.r, jv_0Array);
-        }
-    }
+}
 
     private final void BaseCoreGenericHandler(String string) {
         MessageHandler messageHandler = this;
-        boolean flag = false;
         MessageHandler fg_03 = messageHandler;
-        boolean flag2 = false;
         Set set = ((ConfigService)fg_03.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_23();
         if (set.isEmpty()) {
             return;
@@ -207,8 +191,7 @@ extends MessageHandler {
         if (CollectionUtilities.BaseCoreGenericHandler((Iterable)set, (Object)string)) {
             this.plugin();
             throw new CommandExitException();
-        }
-    }
+}
 
     private final Void AsyncBackgroundTask_5() {
         throw new LiteBansModule_35();
@@ -222,7 +205,7 @@ extends MessageHandler {
         int n;
         Object object3;
         LiteBansModule_297 iA2;
-        block3: {
+{
             iA2 = this.Utf8Handler_2;
             Object object4 = iA2;
             if (object4 == null || (object4 = ((LiteBansModule_297)object4).LiteBansModule_31()) == null) {
@@ -232,14 +215,13 @@ extends MessageHandler {
             CommandSenderWrapper[] jv_0Array = this.LiteBansModule_240().q();
             ObjectUtilities.BaseCoreGenericHandler(jv_0Array);
             object3 = jv_0Array;
-            boolean flag3 = false;
             n = ((CommandSenderWrapper[])object3).length;
             for (int i = 0; i < n; ++i) {
                 object = object2 = object3[i];
                 flag2 = false;
                 if (!ObjectUtilities.BaseCoreGenericHandler((Object)object.BaseCoreGenericHandler(), object5)) continue;
                 flag = true;
-                break block3;
+                break;
             }
             flag = false;
         }
@@ -260,9 +242,7 @@ extends MessageHandler {
 
     public final void BaseCoreGenericHandler(@NotNull HashSet hashSet, @NotNull HashMap hashMap, @NotNull List list, @NotNull List list2, @NotNull CommandSenderWrapper[] jv_0Array) {
         Object object = this;
-        boolean flag = false;
         Object object22 = object;
-        boolean flag2 = false;
         DiscordWebhookClient eG2 = ((ConfigService)((MessageHandler)object22).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194();
         object = eG2.LiteBansModule_23();
         for (Object object22 : list) {
@@ -279,7 +259,7 @@ extends MessageHandler {
             String string;
             String string2;
             String string3;
-            block19: {
+{
                 CommandSenderWrapper jv_03;
                 string3 = ((LiteBansModule_297)object22).LiteBansModule_240();
                 string2 = ((LiteBansModule_297)object22).c();
@@ -294,16 +274,15 @@ extends MessageHandler {
                 } else if (!ObjectUtilities.BaseCoreGenericHandler((Object)string3, (Object)string4)) continue;
                 if (!((Collection)object).isEmpty()) {
                     boolean flag6;
-                    block18: {
+{
                         String[] args = new String[]{string3.toLowerCase(Locale.ROOT), string2, string};
                         flag5 = false;
                         int n2 = args.length;
                         for (n = 0; n < n2; ++n) {
                             object5 = object6 = args[n];
-                            int n3 = 0;
                             if (!CollectionUtilities.BaseCoreGenericHandler((Iterable)object, object5)) continue;
                             flag6 = true;
-                            break block18;
+                            break;
                         }
                         flag6 = false;
                     }
@@ -314,16 +293,14 @@ extends MessageHandler {
                 n = 0;
                 for (CommandSenderWrapper jv_04 : jv_0Array) {
                     object4 = jv_04;
-                    boolean flag7 = false;
                     if (!ObjectUtilities.BaseCoreGenericHandler((Object)object4.BaseCoreGenericHandler(), (Object)string2)) continue;
                     jv_03 = jv_04;
-                    break block19;
+                    break;
                 }
                 jv_03 = sender = null;
             }
             if ((object3 = this.LiteBansModule_194) == null || (object3 = object3.LiteBansModule_240()) == null) {
                 MessageHandler messageHandler = this;
-                boolean flag8 = false;
                 object3 = object6 = ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService();
             }
             if (sender != null) {
@@ -340,8 +317,7 @@ extends MessageHandler {
                         ((Collection)hashSet).add(object5);
                     } else {
                         flag5 = true;
-                    }
-                } else if (!hashSet.contains(string3)) {
+} else if (!hashSet.contains(string3)) {
                     ((Collection)list2).add(new LiteBansModule_327(MessageKey.n, string3, string2, date, null, null));
                     ((Collection)hashSet).add(string3);
                 }
@@ -368,15 +344,11 @@ extends MessageHandler {
             object4 = flag3 ? MessageKey.cd : (n4 != 0 ? MessageKey.DatabaseMonitorService : (n != 0 ? MessageKey.PunishmentTableService : MessageKey.n));
             ((Collection)list2).add(new LiteBansModule_327((CharSequence)object4, string3, string2, date, (SilentHandler)object5, dZ3));
             ((Collection)hashSet).add(string3);
-        }
-    }
+}
 
     private static final CharSequence BaseCoreGenericHandler(LiteBansModule_327 j02) {
         CharSequence charSequence = j02.AsyncBackgroundTask_5();
         CharSequence charSequence2 = j02.e();
-        boolean flag = false;
         return "" + charSequence + charSequence2;
-    }
-
-    }
+}
 

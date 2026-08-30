@@ -57,25 +57,19 @@ LiteBansModule_122 {
             if (object instanceof Object[]) {
                 SQLConnectionHandler dc_02 = this;
                 Object[] objectArray = (Object[])object;
-                boolean flag2 = false;
                 Object[] objectArray2 = objectArray;
-                boolean flag3 = false;
                 int n = objectArray2.length;
                 for (int i = 0; i < n; ++i) {
                     Object object2;
                     Object object3 = object2 = objectArray2[i];
-                    boolean flag4 = false;
                     Collection collection = dc_02.LiteBansModule_31();
                     ObjectUtilities.LiteBansModule_31(object3, "");
                     collection.add((SQLiteDriverHandler)object3);
-                }
-            } else {
+} else {
                 Collection collection = this.plugin;
                 ObjectUtilities.LiteBansModule_31(object, "");
                 collection.add((SQLiteDriverHandler)object);
-            }
-        }
-    }
+}
 
     @Override
     public boolean isEmpty() {
@@ -223,7 +217,5 @@ LiteBansModule_122 {
 
     private static final void AsyncBackgroundTask_5() {
         AsyncBackgroundTask_5 = new String[]{"", "mysql", "", "", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection"};
-    }
-
-    }
+}
 

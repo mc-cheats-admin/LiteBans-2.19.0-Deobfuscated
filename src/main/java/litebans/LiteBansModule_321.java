@@ -22,6 +22,5 @@ static class LiteBansModule_321 {
         AsyncBackgroundTask_15 ja2 = new AsyncBackgroundTask_15(kJ2);
         ja2.BaseCoreGenericHandler(this.LiteBansModule_31, this.plugin);
         return ja2;
-    }
 }
 

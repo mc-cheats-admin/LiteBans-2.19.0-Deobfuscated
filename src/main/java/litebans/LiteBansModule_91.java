@@ -16,6 +16,5 @@ public final class LiteBansModule_91 {
 
     public static final LiteBansModule_89 LiteBansModule_31() {
         return LiteBansModule_31;
-    }
 }
 

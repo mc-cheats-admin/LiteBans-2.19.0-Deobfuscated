@@ -12,7 +12,6 @@ extends AbstractCommand {
 
     public final void BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull SilentHandler dZ2, @NotNull NoneHandler_2 cz2) {
         NoneHandler_2 cz3 = cz2;
-        boolean flag = false;
         if (!cz3.PunishmentService()) {
             return;
         }
@@ -23,18 +22,15 @@ extends AbstractCommand {
                 LiteBansModule_174 eM2 = cz3.i();
                 ObjectUtilities.BaseCoreGenericHandler(eM2);
                 list = eM2.BaseCoreGenericHandler(cz3.D()).AsyncBackgroundTask_5();
-            }
-        } else {
+} else {
             list = cz3.g().BaseCoreGenericHandler(cz3.D()).AsyncBackgroundTask_5();
             if (list.isEmpty()) {
                 list = cz3.g().LiteBansModule_240().AsyncBackgroundTask_5();
-            }
-        }
+}
         Iterator iterator = list.iterator();
         while (iterator.hasNext()) {
             String string;
             String string2 = string = (String)iterator.next();
-            boolean flag2 = false;
             if (StringUtilities.LiteBansModule_31(string, "console:", false, 2, null)) {
                 flag2 = true;
                 string2 = StringUtilities.BaseCoreGenericHandler(string2, "console:", null, 2, null);
@@ -57,17 +53,14 @@ extends AbstractCommand {
             LiteBansModule_82 ch3 = ch2;
             ObjectUtilities.BaseCoreGenericHandler(v2);
             CommandThrottleService v3 = v2;
-            boolean flag4 = false;
             Object object = fV2;
-            boolean flag5 = false;
             ((ConfigService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).BaseCoreGenericHandler(10, (Object)string2);
             Object object2 = object = flag2 ? ch3.e().HoverTextFormatter() : fV2.AsyncBackgroundTask_5();
             if (object.e()) {
                 v3.LiteBansModule_31((byte)3, object.BaseCoreGenericHandler());
             }
             ch3.e().c(new AsyncBackgroundTask_17((CommandSenderWrapper)object, string2));
-        }
-    }
+}
 
     /*
      * Enabled force condition propagation
@@ -77,7 +70,6 @@ extends AbstractCommand {
         if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"ban")) return true;
         if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"kick")) return true;
         MuteHandler et2 = AbstractCommand.AsyncBackgroundTask_5;
-        boolean flag = false;
         Object[] objectArray = new String[]{"mute", "warn", "unban", "unmute", "unwarn", "tempban", "tempmute", "ipban", "banip", "ban-ip", "ipmute", "muteip", "tempipban", "tempbanip", "tempipmute", "tempmuteip"};
         if (!ArrayUtilities.LiteBansModule_31(objectArray, string)) return false;
         return true;
@@ -85,21 +77,16 @@ extends AbstractCommand {
 
     public final void BaseCoreGenericHandler(@NotNull NoneHandler_2 cz2) {
         MessageHandler messageHandler = this;
-        boolean flag = false;
         DatabaseService gn_02 = ((ConfigService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).z().c();
         if ((gn_02 != null ? gn_02.LiteBansModule_31() : null) != null) {
             ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, cz2.BaseCoreGenericHandler(), MessageKey.PropertyHandler, null, 4, null);
         }
         MessageHandler fg_03 = this;
-        boolean flag2 = false;
         if (((ConfigService)fg_03.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).AsyncBackgroundTask_21().BaseCoreGenericHandler() == null) {
             ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, cz2.BaseCoreGenericHandler(), MessageKey.aV, null, 4, null);
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         i = new String[]{"console:", "console:", "--sender", " --sender-uuid=", " --sender=", " --stack=", "ban", "kick", "mute", "warn", "unban", "unmute", "unwarn", "tempban", "tempmute", "ipban", "banip", "ban-ip", "ipmute", "muteip", "tempipban", "tempbanip", "tempipmute", "tempmuteip"};
-    }
-
-    }
+}
 

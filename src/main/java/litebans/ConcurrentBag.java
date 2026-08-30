@@ -68,12 +68,10 @@ implements AutoCloseable {
         }
         finally {
             this.e.decrementAndGet();
-        }
-    }
+}
 
     public void LiteBansModule_194(LiteBansModule_315 iq2) {
         iq2.BaseCoreGenericHandler(0);
-        int n = 0;
         while (this.e.get() > 0) {
             if (iq2.BaseCoreGenericHandler() != 0 || this.c.offer(iq2)) {
                 return;
@@ -88,8 +86,7 @@ implements AutoCloseable {
         List list = (List)this.plugin.get();
         if (list.size() < 50) {
             list.add(this.AsyncBackgroundTask_5 ? new WeakReference<LiteBansModule_315>(iq2) : iq2);
-        }
-    }
+}
 
     public void c(LiteBansModule_315 iq2) {
         if (this.LiteBansModule_240) {
@@ -99,8 +96,7 @@ implements AutoCloseable {
         this.g.add(iq2);
         while (this.e.get() > 0 && iq2.BaseCoreGenericHandler() == 0 && !this.c.offer(iq2)) {
             Thread.yield();
-        }
-    }
+}
 
     public boolean e(LiteBansModule_315 iq2) {
         if (!(iq2.BaseCoreGenericHandler(1, -1) || iq2.BaseCoreGenericHandler(-2, -1) || this.LiteBansModule_240)) {
@@ -138,18 +134,15 @@ implements AutoCloseable {
         if (iq2.BaseCoreGenericHandler(-2, 0)) {
             while (this.e.get() > 0 && !this.c.offer(iq2)) {
                 Thread.yield();
-            }
-        } else {
+} else {
             LiteBansModule_31.c("Attempt to relinquish HikariDataSource object to the bag that was not reserved: {}", new Object[]{iq2});
-        }
-    }
+}
 
     public int c() {
         return this.e.get();
     }
 
     public int BaseCoreGenericHandler(int n) {
-        int n2 = 0;
         for (LiteBansModule_315 iq2 : this.g) {
             if (iq2.BaseCoreGenericHandler() != n) continue;
             ++n2;
@@ -170,11 +163,9 @@ implements AutoCloseable {
         }
         catch (SecurityException securityException) {
             return true;
-        }
-    }
+}
 
     private static final /* synthetic */ void AsyncBackgroundTask_5(LiteBansModule_315 iq2) {
         LiteBansModule_31.info(iq2.toString());
-    }
 }
 

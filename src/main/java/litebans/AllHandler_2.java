@@ -32,7 +32,5 @@ extends AllHandler {
 
     private static final void BaseCoreGenericHandler() {
         e = new String[]{"__ALL__", "__ALL__", "", " AND(server_scope=?)", "server_scope=?"};
-    }
-
-    }
+}
 

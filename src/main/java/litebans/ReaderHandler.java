@@ -19,7 +19,5 @@ implements LiteBansModule_295 {
 
     public static final /* synthetic */ BufferedReader BaseCoreGenericHandler(ReaderHandler b12) {
         return b12.BaseCoreGenericHandler;
-    }
-
-    }
+}
 

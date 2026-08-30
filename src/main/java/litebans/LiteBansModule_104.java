@@ -9,6 +9,5 @@ implements JsonDeserializer {
 
     public static String BaseCoreGenericHandler(LiteBansModule_432[] v_0Array) {
         return LiteBansModule_147.BaseCoreGenericHandler().BaseCoreGenericHandler(v_0Array);
-    }
 }
 

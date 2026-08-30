@@ -12,8 +12,7 @@ LiteBansModule_235 {
     private final void BaseCoreGenericHandler() {
         if ((this.K & 3) == 0) {
             throw new UnsupportedOperationException();
-        }
-    }
+}
 
     public long AsyncBackgroundTask_5() {
         this.plugin();
@@ -60,6 +59,5 @@ LiteBansModule_235 {
             return da_02.L == null;
         }
         return this.L.equals(da_02.L);
-    }
 }
 

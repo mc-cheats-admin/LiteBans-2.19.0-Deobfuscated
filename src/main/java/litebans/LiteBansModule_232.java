@@ -31,7 +31,6 @@ public final class LiteBansModule_232 {
             return null;
         }
         int n4 = -1;
-        int n5 = 0;
         char c = string.charAt(0);
         if (ObjectUtilities.BaseCoreGenericHandler(c, 48) < 0) {
             if (n3 == 1 || c != '+') {
@@ -43,7 +42,6 @@ public final class LiteBansModule_232 {
         }
         int n6 = n2 = 0x71C71C7;
         int n7 = LiteBansModule_72.LiteBansModule_31(n);
-        int n8 = 0;
         for (int i = n5; i < n3; ++i) {
             int n9 = LiteBansModule_338.BaseCoreGenericHandler(string.charAt(i), n);
             if (n9 < 0) {
@@ -54,11 +52,9 @@ public final class LiteBansModule_232 {
                     n6 = Integer.divideUnsigned(n4, n7);
                     if (Integer.compareUnsigned(n8, n6) > 0) {
                         return null;
-                    }
-                } else {
+} else {
                     return null;
-                }
-            }
+}
             int n10 = n8 = LiteBansModule_72.LiteBansModule_31(n8 * n7);
             if (Integer.compareUnsigned(n8 = LiteBansModule_72.LiteBansModule_31(n8 + LiteBansModule_72.LiteBansModule_31(n9)), n10) >= 0) continue;
             return null;
@@ -68,7 +64,5 @@ public final class LiteBansModule_232 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>"};
-    }
-
-    }
+}
 

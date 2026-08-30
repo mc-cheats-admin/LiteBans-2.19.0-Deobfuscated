@@ -33,8 +33,7 @@ implements Iterator {
             catch (ServiceConfigurationError serviceConfigurationError) {
                 if (serviceConfigurationError.getCause() instanceof SecurityException) continue;
                 throw serviceConfigurationError;
-            }
-        }
+}
         return true;
     }
 
@@ -55,6 +54,5 @@ implements Iterator {
     @Override
     public void remove() {
         throw new UnsupportedOperationException("service=" + this.c.getName());
-    }
 }
 

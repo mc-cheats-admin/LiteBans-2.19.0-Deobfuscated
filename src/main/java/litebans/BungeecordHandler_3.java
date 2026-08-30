@@ -153,9 +153,7 @@ implements CommandSenderWrapper {
                 this.AsyncBackgroundTask_5.g().BaseCoreGenericHandler((Object)this.LiteBansModule_31(), string);
             } else {
                 this.AsyncBackgroundTask_5.c(() -> this.AsyncBackgroundTask_5(string));
-            }
-        }
-    }
+}
 
     @Override
     public void LiteBansModule_31(String string) {
@@ -169,15 +167,13 @@ implements CommandSenderWrapper {
             Object object = this.c();
             if (object != null) {
                 ((CommandSourceStack)object).sendSystemMessage((Component)this.AsyncBackgroundTask_5.g().AsyncBackgroundTask_5().BaseCoreGenericHandler(BlackHandler.BaseCoreGenericHandler((CharSequence)string)));
-            }
-        } else {
+} else {
             V116Handler g82 = V116Handler.c;
             if (this.AsyncBackgroundTask_5.g().LiteBansModule_31() >= 770) {
                 g82 = V116Handler.BaseCoreGenericHandler;
             }
             this.LiteBansModule_31(LiteBansModule_147.BaseCoreGenericHandler(g82).BaseCoreGenericHandler(LiteBansModule_182.BaseCoreGenericHandler(string)));
-        }
-    }
+}
 
     @Override
     public void BaseCoreGenericHandler(String string, byte[] byArray) {
@@ -190,12 +186,9 @@ implements CommandSenderWrapper {
                 string = "bungeecord:main";
             }
             this.AsyncBackgroundTask_5.g().BaseCoreGenericHandler(this.LiteBansModule_31(), string, byArray);
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         g = new String[]{"?", "00000000-0000-0000-0000-000000000000", "reason is marked non-null but is null", "BungeeCord", "bungeecord:main"};
-    }
-
-    }
+}
 

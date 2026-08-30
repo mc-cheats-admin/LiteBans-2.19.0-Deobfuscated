@@ -35,6 +35,5 @@ extends Enum {
 
     private static final void LiteBansModule_31() {
         c = new String[]{"SYNCHRONIZED", "PUBLICATION", "NONE"};
-    }
 }
 

@@ -64,8 +64,7 @@ extends LiteBansModule_153 {
         this.LiteBansModule_31(l3);
         if (l3 > 0L) {
             this.BroadcastService += l3;
-        }
-    }
+}
 
     static {
         r = "^/\\AsyncBackgroundTask_5+";
@@ -85,6 +84,5 @@ extends LiteBansModule_153 {
         LiteBansModule_401 = 16;
         ServerSyncService = 0;
         q = "#1/".length();
-    }
 }
 

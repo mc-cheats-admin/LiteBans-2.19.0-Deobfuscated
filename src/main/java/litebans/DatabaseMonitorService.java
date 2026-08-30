@@ -179,41 +179,33 @@ extends PluginModule {
      * Unable to fully structure code
      */
     public final Connection c() {
-        block9: {
+{
             v1 = System.nanoTime();
-            var3_2 = null;
             try {
-                var4_3 = this.LiteBansModule_31;
-                var5_8 = false;
-                if (var4_3 == null) ** GOTO lbl-1000
-                var6_10 = var4_3;
-                var7_12 = false;
-                if (var6_10.LiteBansModule_31() == false) {
-                    v0 = var4_3.getConnection();
+                arg1 = this.LiteBansModule_31;
+                if (arg1 == null) ** GOTO lbl-1000
+                arg2 = arg1;
+                if (arg2.LiteBansModule_31() == false) {
+                    v0 = arg1.getConnection();
                 } else lbl-1000:
-                // 2 sources
-
-                {
-                    v0 = null;
+                                {
                 }
-                var3_2 = v0;
-                var4_4 = System.nanoTime() - v1;
+                arg3 = v0;
+                arg4 = System.nanoTime() - v1;
             }
             catch (SQLException v4) {
                 this.plugin(v4);
-                break block9;
+                break;
             }
             finally {
-                var4_6 = System.nanoTime() - v1;
-                if (var4_6 > 1000000000L) {
+                arg5 = System.nanoTime() - v1;
+                if (arg5 > 1000000000L) {
                     // empty if block
-                }
-            }
-            if (var4_4 > 1000000000L && var3_2 != null && !this.LiteBansModule_240() && (var6_11 = (int)((double)var4_4 / 1.0E9)) > 12) {
-                this.plugin.getLogger().warning(litebans + "Database is slow! Establishing connection took " + var6_11 + litebans + " seconds.");
-            }
-        }
-        return var3_2;
+}
+            if (arg4 > 1000000000L && arg3 != null && !this.LiteBansModule_240() && (arg6 = (int)((double)arg4 / 1.0E9)) > 12) {
+                this.plugin.getLogger().warning(litebans + "Database is slow! Establishing connection took " + arg6 + litebans + " seconds.");
+}
+        return arg3;
     }
 
     public final String BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender) {
@@ -250,11 +242,9 @@ extends PluginModule {
         ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
         Object object2 = this.plugin.getDataFolder();
         String string = ".version";
-        boolean flag3 = false;
         File file = new File((File)object2, string);
         object2 = null;
         object2 = String.valueOf(litebans.DatabaseMonitorService.BaseCoreGenericHandler(this, false, 1, null));
-        boolean flag4 = false;
         flag3 = !file.exists();
         try {
             object = LiteBansModule_112.BaseCoreGenericHandler(file);
@@ -266,7 +256,6 @@ extends PluginModule {
             object3 = null;
             try {
                 Object object5 = (BufferedReader)object;
-                boolean flag5 = false;
                 String string2 = ((BufferedReader)object5).readLine();
                 DiscordWebhookClient eG2 = configService.LiteBansModule_194();
                 try {
@@ -278,8 +267,7 @@ extends PluginModule {
                         objectArray = messageDigest.digest(string3.getBytes(LiteBansModule_344.LiteBansModule_31));
                         messageDigest.reset();
                         object2 = LiteBansModule_228.BaseCoreGenericHandler((byte[])objectArray, false);
-                    }
-                }
+}
                 catch (NoSuchAlgorithmException noSuchAlgorithmException) {
                     String[] args;
                     ConfigService.BaseCoreGenericHandler(configService, noSuchAlgorithmException, 0, 2, null);
@@ -290,7 +278,6 @@ extends PluginModule {
                         string4 = "";
                     }
                     String string5 = string4;
-                    boolean flag6 = false;
                     if (ObjectUtilities.BaseCoreGenericHandler((Object)string5, (Object)"sort")) {
                         String[] filteredArgs = new String[]{"00"};
                         args = filteredArgs;
@@ -303,7 +290,6 @@ extends PluginModule {
                 }
                 if (ObjectUtilities.BaseCoreGenericHandler(object2, (Object)string2) && !flag) {
                     configService.BaseCoreGenericHandler(2, (Object)"Table upgrade checks ");
-                    boolean flag7 = true;
                     return flag7;
                 }
                 object5 = KotlinUnitHandler.BaseCoreGenericHandler;
@@ -314,15 +300,13 @@ extends PluginModule {
             }
             finally {
                 BlockHandler.BaseCoreGenericHandler((Closeable)object, (Throwable)object3);
-            }
-        }
+}
         catch (Exception exception) {
             this.plugin(exception);
             flag4 = true;
         }
         if (jr_02 != null) {
             if (!ch2.BaseCoreGenericHandler()) {
-                boolean flag8 = false;
                 String string6 = "Connection is closed. Only open connections can be used to upgrade ";
                 throw new IllegalArgumentException(string6.toString());
             }
@@ -342,9 +326,7 @@ extends PluginModule {
                 }
                 catch (Throwable throwable) {
                     this.plugin(throwable);
-                }
-            }
-        }
+}
         return false;
     }
 
@@ -368,28 +350,22 @@ extends PluginModule {
         try {
             boolean flag;
             Object object;
-            block13: {
-                boolean flag2 = false;
+{
                 object = this;
                 flag = false;
                 AsyncBackgroundTask_21 s2 = (AsyncBackgroundTask_21)((DatabaseMonitorService)object).BaseCoreGenericHandler.BaseCoreGenericHandler(AsyncBackgroundTask_21.class);
                 if (!((Collection)s2.BaseCoreGenericHandler()).isEmpty()) {
                     DatabaseMonitorService w2 = object;
-                    boolean flag3 = false;
                     try {
                         LiteBansModule_82 ch2 = w2.LiteBansModule_194();
                         Closeable closeable = ch2;
                         Throwable throwable = null;
                         try {
                             Object object2 = (LiteBansModule_82)closeable;
-                            boolean flag4 = false;
                             LiteBansModule_82 ch3 = ch2;
-                            boolean flag5 = false;
                             Iterable iterable = s2.BaseCoreGenericHandler();
-                            boolean flag6 = false;
                             for (Object t2 : iterable) {
                                 LiteBansModule_95 cp_02 = (LiteBansModule_95)t2;
-                                boolean flag7 = false;
                                 AllHandler_3.BaseCoreGenericHandler(ch3, cp_02.c(), cp_02.g(), cp_02.LiteBansModule_31(), false, false, 24, null);
                             }
                             object2 = KotlinUnitHandler.BaseCoreGenericHandler;
@@ -400,14 +376,11 @@ extends PluginModule {
                         }
                         finally {
                             BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-                        }
-                    }
+}
                     catch (SQLException sQLException) {
-                        if (w2.LiteBansModule_31(sQLException)) break block13;
+                        if (w2.LiteBansModule_31(sQLException)) break;
                         throw sQLException;
-                    }
-                }
-            }
+}
             object = this.AsyncBackgroundTask_5;
             flag = false;
             ((AtomicBoolean)object).set(false);
@@ -420,8 +393,7 @@ extends PluginModule {
         }
         finally {
             lock.unlock();
-        }
-    }
+}
 
     public final ResultSet AsyncBackgroundTask_5(@NotNull LiteBansModule_60 bT2) {
         return this.z.c(bT2);
@@ -447,21 +419,17 @@ extends PluginModule {
     public final List LiteBansModule_31(@NotNull ConfigService configService) {
         DiscordWebhookClient eG2 = configService.LiteBansModule_194();
         String[] args = eG2.aV();
-        boolean flag = false;
         String[] filteredArgs = args;
         Collection collection = new ArrayList(args.length);
-        boolean flag2 = false;
         int n = filteredArgs.length;
         for (int i = 0; i < n; ++i) {
             String string;
             String string2 = string = filteredArgs[i];
             Collection collection2 = collection;
-            boolean flag3 = false;
             Object object = string2;
             Object object2 = new NativepatternHandler(":(?!(//))");
             int n2 = 5;
             object = ((NativepatternHandler)object2).BaseCoreGenericHandler((CharSequence)object, n2);
-            boolean flag4 = false;
             Object object3 = object;
             Object[] objectArray = object3.toArray(new String[0]);
             object = (String)ArrayUtilities.BaseCoreGenericHandler(objectArray, 2);
@@ -489,7 +457,6 @@ extends PluginModule {
     public final boolean BaseCoreGenericHandler(int n) {
         int n2 = this.PunishmentTableService().LiteBansModule_194().LiteBansModule_5();
         DatabaseMonitorService w2 = this;
-        boolean flag = false;
         Object object = w2.HoverTextFormatter();
         return (object != null && (object = ((HikariDataSource)object).BaseCoreGenericHandler()) != null ? object.e() : 0) >= n2 - n && n2 >= 3;
     }
@@ -512,17 +479,14 @@ extends PluginModule {
             }
             if (throwable instanceof LiteBansException_9) {
                 PluginModule module = this;
-                boolean flag = false;
                 module.BaseCoreGenericHandler.getLogger().severe(string);
                 return;
             }
             if (throwable instanceof LiteBansException_4) {
                 object = configService;
-                boolean flag = false;
                 if (ObjectUtilities.BaseCoreGenericHandler(LiteBansModule_253.BaseCoreGenericHandler((ConfigService)object), (Object)MessageKey.BaseCoreGenericHandler(object, false, true))) {
                     return;
-                }
-            }
+}
             if (!this.plugin.isEnabled()) {
                 if (throwable instanceof SQLException && StringUtilities.BaseCoreGenericHandler((CharSequence)string, (CharSequence)PunishmentTableService[16], false, 2, null)) {
                     return;
@@ -536,7 +500,6 @@ extends PluginModule {
             object = new StringWriter();
             throwable.printStackTrace(new PrintWriter((Writer)object));
             String string3 = ((StringWriter)object).toString();
-            boolean flag = false;
             if (throwable instanceof SQLException) {
                 boolean flag2;
                 String string4;
@@ -590,8 +553,7 @@ extends PluginModule {
                     string4 = PunishmentTableService[32];
                     flag2 = false;
                     n_03.BaseCoreGenericHandler.getLogger().severe(string4);
-                }
-            }
+}
             if (flag && !configService.BaseCoreGenericHandler(1)) {
                 return;
             }
@@ -600,7 +562,6 @@ extends PluginModule {
         catch (Throwable throwable3) {
             PluginModule n_04 = this;
             String string = PunishmentTableService[33];
-            boolean flag = false;
             n_04.BaseCoreGenericHandler.getLogger().severe(string);
             throwable3.printStackTrace();
             n_04 = this;
@@ -608,12 +569,10 @@ extends PluginModule {
             flag = false;
             n_04.BaseCoreGenericHandler.getLogger().severe(string);
             throwable.printStackTrace();
-        }
-    }
+}
 
     private final boolean LiteBansModule_240() {
         DatabaseMonitorService w2 = this;
-        boolean flag = false;
         Object object = w2.HoverTextFormatter();
         return (object != null && (object = ((HikariDataSource)object).BaseCoreGenericHandler()) != null ? object.e() : 0) >= this.PunishmentTableService().LiteBansModule_194().LiteBansModule_5();
     }
@@ -622,19 +581,16 @@ extends PluginModule {
         if (StringUtilities.BaseCoreGenericHandler((CharSequence)this.PunishmentTableService().LiteBansModule_194().aN(), (CharSequence)PunishmentTableService[35], false, 2, null)) {
             PluginModule module = this;
             String string = PunishmentTableService[36];
-            boolean flag = false;
             module.BaseCoreGenericHandler.getLogger().severe(string);
             module = this;
             string = PunishmentTableService[37];
             flag = false;
             module.BaseCoreGenericHandler.getLogger().severe(string);
-        }
-    }
+}
 
     private final void AsyncBackgroundTask_5() {
         PluginModule module = this;
         String string = PunishmentTableService[38] + this.PunishmentTableService().LiteBansModule_194().aW() + PunishmentTableService[39] + this.PunishmentTableService().LiteBansModule_194().DatabaseMonitorService() + PunishmentTableService[40];
-        boolean flag = false;
         module.BaseCoreGenericHandler.getLogger().severe(string);
         module = this;
         string = PunishmentTableService[41];
@@ -652,30 +608,24 @@ extends PluginModule {
 
     private final void q() {
         Object object = this.LiteBansModule_401;
-        boolean flag = false;
         if (((AtomicBoolean)object).compareAndSet(false, true)) {
             object = this;
             String string = PunishmentTableService[44];
-            boolean flag2 = false;
             ((PluginModule)object).BaseCoreGenericHandler.getLogger().warning(string);
             Object object2 = object = (LiteBansCommand)this.plugin.z().BaseCoreGenericHandler(PunishmentTableService[45]);
             if (object2 != null) {
                 ((LiteBansCommand)object2).LiteBansModule_31(this.plugin.HoverTextFormatter());
-            }
-        } else {
+} else {
             object = this;
             String string = PunishmentTableService[46];
-            boolean flag3 = false;
             ((PluginModule)object).BaseCoreGenericHandler.getLogger().severe(string);
-        }
-    }
+}
 
     private final void LiteBansModule_433() {
         ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
         AsyncBackgroundTask_21 s2 = (AsyncBackgroundTask_21)this.plugin.BaseCoreGenericHandler(AsyncBackgroundTask_21.class);
         int n = configService.LiteBansModule_194().LiteBansModule_5();
         DatabaseMonitorService w2 = this;
-        boolean flag = false;
         Object object = w2.HoverTextFormatter();
         int n2 = object != null && (object = ((HikariDataSource)object).BaseCoreGenericHandler()) != null ? object.e() : 0;
         Database database = Database.get();
@@ -685,7 +635,6 @@ extends PluginModule {
         int n4 = s2.BaseCoreGenericHandler().size();
         PluginModule module = this;
         String string = PunishmentTableService[48] + n2 + PunishmentTableService[49] + n + PunishmentTableService[50] + n4 + ')';
-        boolean flag2 = false;
         module.BaseCoreGenericHandler.getLogger().severe(string);
         if (n3 > 0) {
             module = this;
@@ -701,9 +650,7 @@ extends PluginModule {
                 string = PunishmentTableService[55] + CollectionUtilities.BaseCoreGenericHandler(litebans.DatabaseMonitorService.BaseCoreGenericHandler(eE2), PunishmentTableService[56], null, null, 0, null, null, 62, null) + ']';
                 flag2 = false;
                 module.BaseCoreGenericHandler.getLogger().severe(string);
-            }
-        }
-    }
+}
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -713,10 +660,9 @@ extends PluginModule {
         Lock lock = this.g;
         lock.lock();
         try {
-            block7: {
-                boolean flag = false;
+{
                 this.PunishmentTableService().e();
-                if (!this.LiteBansModule_194) break block7;
+                if (!this.LiteBansModule_194) break;
                 return;
             }
             try {
@@ -730,8 +676,7 @@ extends PluginModule {
         }
         finally {
             lock.unlock();
-        }
-    }
+}
 
     public final Object BaseCoreGenericHandler(@NotNull JarHandler jP2, boolean flag, boolean flag2) {
         String string;
@@ -744,14 +689,12 @@ extends PluginModule {
         String string2 = jP2.AsyncBackgroundTask_5();
         Object object3 = this;
         String string3 = PunishmentTableService[57] + jP2;
-        boolean flag6 = false;
         if (!((DatabaseMonitorService)object3).AsyncBackgroundTask_5.get()) {
             object2 = (PluginModule)object3;
             flag5 = false;
             ((PluginModule)object2).BaseCoreGenericHandler.getLogger().info(string3);
         }
         object3 = configService;
-        boolean flag7 = false;
         if (((ConfigService)object3).g()) {
             String string4;
             PluginModule module = object3;
@@ -771,13 +714,11 @@ extends PluginModule {
                     string4 = ((JarHandler)object4).AsyncBackgroundTask_5() + PunishmentTableService[60];
                 } else {
                     string4 = ((JarHandler)object2).e().substring(n + 1);
-                }
-            }
+}
             ((ConfigService)module).BaseCoreGenericHandler((Object)stringBuilder.append(string4).toString());
         }
         File file = this.plugin.getDataFolder();
         Object object5 = PunishmentTableService[61];
-        boolean flag8 = false;
         object5 = object3 = LiteBansModule_112.c(new File(file, (String)object5));
         Object object6 = jP2;
         flag5 = false;
@@ -793,8 +734,7 @@ extends PluginModule {
                 string = jP3.AsyncBackgroundTask_5() + PunishmentTableService[63];
             } else {
                 string = ((JarHandler)object6).e().substring(n + 1);
-            }
-        }
+}
         object6 = string;
         flag5 = false;
         file = new File((File)object5, (String)object6);
@@ -810,7 +750,6 @@ extends PluginModule {
                 boolean bl9;
                 PluginModule n_03 = this;
                 Object object7 = PunishmentTableService[64] + string2 + PunishmentTableService[65] + (String)object6;
-                boolean bl10 = false;
                 if (!((DatabaseMonitorService)n_03).AsyncBackgroundTask_5.get()) {
                     PluginModule n_04 = n_03;
                     bl9 = false;
@@ -830,7 +769,6 @@ extends PluginModule {
                 catch (Exception exception) {
                     object7 = this;
                     String string5 = PunishmentTableService[68] + string2 + '.';
-                    boolean bl11 = false;
                     ((PluginModule)object7).BaseCoreGenericHandler.getLogger().severe(string5);
                     this.plugin(exception);
                     return null;
@@ -843,37 +781,30 @@ extends PluginModule {
                         PluginModule n_06 = n_03;
                         bl9 = false;
                         n_06.BaseCoreGenericHandler.getLogger().info((String)object7);
-                    }
-                } else {
+} else {
                     n_03 = this;
                     object7 = PunishmentTableService[71];
                     bl10 = false;
                     n_03.BaseCoreGenericHandler.getLogger().warning((String)object7);
-                }
-            }
+}
             if (object5 == null) {
                 try {
                     object5 = this.plugin(jP2, file, flag2);
                     if (object5 == null) {
                         object6 = this;
                         String string6 = PunishmentTableService[72];
-                        boolean bl12 = false;
                         ((PluginModule)object6).BaseCoreGenericHandler.getLogger().severe(string6);
                         return null;
                     }
                     object6 = this;
                     String string7 = PunishmentTableService[73] + string2 + '!';
-                    boolean bl13 = false;
                     if (!((DatabaseMonitorService)object6).AsyncBackgroundTask_5.get()) {
                         PluginModule n_07 = (PluginModule)object6;
-                        boolean bl14 = false;
                         n_07.BaseCoreGenericHandler.getLogger().info(string7);
-                    }
-                }
+}
                 catch (Throwable throwable) {
                     PluginModule n_08 = this;
                     String string8 = PunishmentTableService[74] + jP2 + '.';
-                    boolean bl15 = false;
                     n_08.BaseCoreGenericHandler.getLogger().severe(string8);
                     this.plugin(throwable);
                     if (throwable instanceof ZipException && flag) {
@@ -890,14 +821,12 @@ extends PluginModule {
                         return litebans.DatabaseMonitorService.BaseCoreGenericHandler(this, jP2, false, false, 4, null);
                     }
                     return null;
-                }
-            }
+}
             return object5;
         }
         catch (Exception exception) {
             object6 = this;
             String string9 = PunishmentTableService[77] + file + ':';
-            boolean bl16 = false;
             if (!((DatabaseMonitorService)object6).AsyncBackgroundTask_5.get()) {
                 PluginModule n_09 = (PluginModule)object6;
                 flag3 = false;
@@ -905,8 +834,7 @@ extends PluginModule {
             }
             this.plugin(exception);
             return null;
-        }
-    }
+}
 
     public static /* synthetic */ Object BaseCoreGenericHandler(DatabaseMonitorService w2, JarHandler jP2, boolean flag, boolean flag2, int n, Object object) {
         if ((n & 2) != 0) {
@@ -924,7 +852,7 @@ extends PluginModule {
     public final void BaseCoreGenericHandler(@NotNull LiteBansModule_82 v1, boolean v2) {
         /*
          * This method has failed to decompile.  When submitting BaseCoreGenericHandler bug report, please provide this stack trace, and (if you hold appropriate legal rights) the relevant class file.
-         * 
+         *
          * org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [1[TRYBLOCK]], but top level block is 12[WHILELOOP]
          *     LiteBansModule_21 org.benf.cfr.reader.bytecode.analysis.opgraph.Op04StructuredStatement.processEndingBlocks(Op04StructuredStatement.java:435)
          *     LiteBansModule_21 org.benf.cfr.reader.bytecode.analysis.opgraph.Op04StructuredStatement.buildNestedBlocks(Op04StructuredStatement.java:484)
@@ -975,9 +903,7 @@ extends PluginModule {
         }
         String string2 = string;
         PlatformPlugin plugin = this.plugin;
-        boolean flag = false;
         PlatformPlugin di_03 = plugin;
-        boolean flag2 = false;
         return (!di_03.isEnabled() || plugin.AsyncBackgroundTask_21()) && (StringUtilities.BaseCoreGenericHandler((CharSequence)string2, (CharSequence)PunishmentTableService[89], false, 2, null) || StringUtilities.BaseCoreGenericHandler((CharSequence)string2, (CharSequence)PunishmentTableService[90], false, 2, null) || StringUtilities.BaseCoreGenericHandler((CharSequence)string2, (CharSequence)PunishmentTableService[91], false, 2, null) || StringUtilities.BaseCoreGenericHandler((CharSequence)string2, (CharSequence)PunishmentTableService[92], false, 2, null) || StringUtilities.BaseCoreGenericHandler((CharSequence)string2, (CharSequence)PunishmentTableService[93], false, 2, null));
     }
 
@@ -993,12 +919,10 @@ extends PluginModule {
             Throwable throwable = null;
             try {
                 Object object = (Connection)autoCloseable;
-                boolean flag4 = false;
                 AutoCloseable autoCloseable2 = object.createStatement();
                 Throwable throwable2 = null;
                 try {
                     Object object2 = (Statement)autoCloseable2;
-                    boolean flag5 = false;
                     Closeable closeable = new SQLiteDriverHandler_3(this.plugin, (Connection)object);
                     Throwable throwable3 = null;
                     try {
@@ -1015,18 +939,14 @@ extends PluginModule {
                         byte by2;
                         Object object6;
                         Object object7 = (SQLiteDriverHandler_3)closeable;
-                        boolean flag8 = false;
                         Object object8 = object7;
-                        boolean bl9 = false;
                         Object object9 = ((SQLiteDriverHandler_3)object8).LiteBansModule_31();
                         boolean bl10 = CommandThrottleService.BaseCoreGenericHandler(eG2.ElementsHandler());
                         DatabaseMonitorService w2 = this;
                         SQLiteDriverHandler_3 gZ2 = object8;
                         ObjectUtilities.BaseCoreGenericHandler(object2);
                         Statement statement = object2;
-                        boolean bl11 = false;
                         Statement statement2 = statement;
-                        boolean bl12 = false;
                         if (flag) {
                             object6 = BansHandler_2.AsyncBackgroundTask_5.BaseCoreGenericHandler();
                             by2 = 0;
@@ -1047,19 +967,14 @@ extends PluginModule {
                             while (iterator2.hasNext()) {
                                 iterator = iterator2.next();
                                 CharSequence charSequence = (CharSequence)((Object)iterator);
-                                boolean bl13 = false;
-                                boolean bl14 = false;
                                 object4 = statement2;
                                 n = 0;
                                 Object object10 = object3 = object4;
-                                boolean bl15 = false;
                                 object4.addBatch(((Object)charSequence).toString());
-                            }
-                        }
+}
                         if (flag2) {
                             object6 = statement2;
                             by2 = gZ2.g().LiteBansModule_194().be();
-                            boolean bl16 = false;
                             iterator = object9;
                             flag7 = false;
                             object5 = new String[6];
@@ -1075,7 +990,6 @@ extends PluginModule {
                             int n2 = by2 & 0xFF;
                             String string4 = PunishmentTableService[146];
                             object3 = ((SQLiteDriverHandler_5)((Object)iterator)).LiteBansModule_31().c();
-                            boolean bl17 = false;
                             object5[2] = CommandThrottleService.LiteBansModule_31(((SQLiteDriverHandler_5)((Object)iterator)).LiteBansModule_31().BaseCoreGenericHandler()) ? (String)object11 + PunishmentTableService[147] + n2 + ')' + (String)object3 + string4 : (String)object11 + PunishmentTableService[148] + n2 + ')' + string4;
                             object11 = PunishmentTableService[149];
                             n2 = 36;
@@ -1096,13 +1010,11 @@ extends PluginModule {
                             SQLiteDriverHandler aR2 = SQLiteDriverHandler.AsyncBackgroundTask_5(((SQLiteDriverHandler_5)((Object)iterator)).BaseCoreGenericHandler(BansHandler_2.g, (String[])object5));
                             bl16 = false;
                             Iterator iterator4 = iterator = object6;
-                            boolean bl18 = false;
                             object6.addBatch(((Object)aR2).toString());
                         }
                         if (flag3 && bl10) {
                             object6 = statement2;
                             Object object12 = gZ2;
-                            boolean bl19 = false;
                             iterator = object9;
                             flag7 = false;
                             object5 = new String[5];
@@ -1114,7 +1026,6 @@ extends PluginModule {
                             int n3 = 32;
                             String string5 = PunishmentTableService[164];
                             object3 = ((SQLiteDriverHandler_5)((Object)iterator)).LiteBansModule_31().c();
-                            boolean bl20 = false;
                             Object object14 = iterator;
                             string3 = string5 + PunishmentTableService[165];
                             flag6 = false;
@@ -1130,7 +1041,6 @@ extends PluginModule {
                             object5[2] = CommandThrottleService.LiteBansModule_31(((SQLiteDriverHandler_5)object14).LiteBansModule_31().BaseCoreGenericHandler()) ? (String)object13 + PunishmentTableService[171] + n3 + ')' + (String)object3 + string3 : (String)object13 + PunishmentTableService[172] + n3 + ')' + string3;
                             object13 = PunishmentTableService[173];
                             String string6 = PunishmentTableService[174];
-                            boolean bl21 = false;
                             object5[3] = (String)object13 + PunishmentTableService[175] + string6;
                             object13 = iterator;
                             string6 = PunishmentTableService[176];
@@ -1139,13 +1049,11 @@ extends PluginModule {
                             object12 = SQLiteDriverHandler.AsyncBackgroundTask_5(((SQLiteDriverHandler_5)((Object)iterator)).BaseCoreGenericHandler(BansHandler_2.LiteBansModule_194, (String[])object5));
                             bl19 = false;
                             Iterator iterator5 = iterator = object6;
-                            boolean bl22 = false;
                             object6.addBatch(object12.toString());
                             object6 = iterator;
                             object12 = gZ2;
                             bl19 = false;
                             iterator = object9;
-                            boolean bl23 = false;
                             String[] args = new String[5];
                             object13 = iterator;
                             string6 = PunishmentTableService[178];
@@ -1175,12 +1083,10 @@ extends PluginModule {
                             object12 = SQLiteDriverHandler.AsyncBackgroundTask_5(((SQLiteDriverHandler_5)((Object)iterator)).BaseCoreGenericHandler(BansHandler_2.c, args));
                             bl19 = false;
                             Iterator iterator6 = iterator = object6;
-                            boolean bl24 = false;
                             object6.addBatch(object12.toString());
                         }
                         object6 = statement2;
                         Object object15 = w2;
-                        boolean bl25 = false;
                         iterator = object9;
                         flag7 = false;
                         object5 = new String[3];
@@ -1192,7 +1098,6 @@ extends PluginModule {
                         object16 = iterator;
                         object4 = PunishmentTableService[202];
                         n = 8192;
-                        boolean bl26 = false;
                         if (ObjectUtilities.BaseCoreGenericHandler((Object)((SQLiteDriverHandler_5)object16).LiteBansModule_31().BaseCoreGenericHandler(), (Object)PunishmentTableService[203])) {
                             string2 = (String)object4 + PunishmentTableService[204];
                         } else {
@@ -1208,13 +1113,11 @@ extends PluginModule {
                         object15 = SQLiteDriverHandler.AsyncBackgroundTask_5(((SQLiteDriverHandler_5)((Object)iterator)).BaseCoreGenericHandler(BansHandler_2.n, (String[])object5));
                         bl25 = false;
                         Iterator iterator7 = iterator = object6;
-                        boolean bl27 = false;
                         object6.addBatch(object15.toString());
                         object6 = iterator;
                         object15 = w2;
                         bl25 = false;
                         iterator = object9;
-                        boolean bl28 = false;
                         String[] args = new String[6];
                         object16 = iterator;
                         object4 = PunishmentTableService[210];
@@ -1224,7 +1127,6 @@ extends PluginModule {
                         int n5 = 128;
                         String string9 = PunishmentTableService[215];
                         String string10 = ((SQLiteDriverHandler_5)((Object)iterator)).LiteBansModule_31().c();
-                        boolean bl29 = false;
                         Object object17 = iterator;
                         string3 = string9 + PunishmentTableService[216];
                         flag6 = false;
@@ -1250,23 +1152,19 @@ extends PluginModule {
                         object16 = iterator;
                         String string11 = PunishmentTableService[229];
                         string9 = PunishmentTableService[230];
-                        boolean bl30 = false;
                         String string12 = ((SQLiteDriverHandler_5)object16).LiteBansModule_31().BaseCoreGenericHandler();
                         args[4] = ObjectUtilities.BaseCoreGenericHandler((Object)string12, (Object)PunishmentTableService[231]) || ObjectUtilities.BaseCoreGenericHandler((Object)string12, (Object)PunishmentTableService[232]) ? string11 + PunishmentTableService[233] + string9 : string11 + PunishmentTableService[234] + ((SQLiteDriverHandler_5)object16).LiteBansModule_31().e() + PunishmentTableService[235] + string9;
                         object16 = iterator;
                         string11 = PunishmentTableService[236];
-                        boolean bl31 = false;
                         args[5] = PunishmentTableService[237] + string11 + ')';
                         object15 = SQLiteDriverHandler.AsyncBackgroundTask_5(((SQLiteDriverHandler_5)((Object)iterator)).BaseCoreGenericHandler(BansHandler_2.i, args));
                         bl25 = false;
                         Iterator iterator8 = iterator = object6;
-                        boolean bl32 = false;
                         object6.addBatch(object15.toString());
                         object6 = iterator;
                         object15 = gZ2;
                         bl25 = false;
                         iterator = object9;
-                        boolean bl33 = false;
                         String[] filteredArgs = new String[4];
                         object16 = iterator;
                         string11 = PunishmentTableService[238];
@@ -1294,7 +1192,6 @@ extends PluginModule {
                         object15 = SQLiteDriverHandler.AsyncBackgroundTask_5(((SQLiteDriverHandler_5)((Object)iterator)).BaseCoreGenericHandler(BansHandler_2.LiteBansModule_240, filteredArgs));
                         bl25 = false;
                         Iterator iterator9 = iterator = object6;
-                        boolean bl34 = false;
                         object6.addBatch(object15.toString());
                         try {
                             object6 = w2.BaseCoreGenericHandler(statement);
@@ -1345,8 +1242,7 @@ extends PluginModule {
             iv_02 = KotlinUnitHandler.BaseCoreGenericHandler;
         } else {
             iv_02 = null;
-        }
-    }
+}
 
     public static /* synthetic */ void BaseCoreGenericHandler(DatabaseMonitorService w2, long l3, boolean flag, boolean flag2, boolean flag3, int n, Object object) {
         if ((n & 1) != 0) {
@@ -1397,7 +1293,6 @@ extends PluginModule {
         String string2 = eG2.aG();
         Object object2 = BansHandler_2.LiteBansModule_194;
         CharSequence charSequence2 = PunishmentTableService[376];
-        boolean flag2 = false;
         object2 = SQLiteDriverHandler.e(PunishmentTableService[377] + charSequence2 + PunishmentTableService[378] + object2);
         charSequence2 = PunishmentTableService[379];
         LiteBansModule_82 ch3 = ch2;
@@ -1416,7 +1311,6 @@ extends PluginModule {
             throw new IllegalArgumentException(string3.toString());
         }
         object2 = ch3.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object2) + PunishmentTableService[381] + charSequence2)));
-        boolean flag4 = false;
         object3 = object = object2;
         boolean stringBuilder = false;
         ((LiteBansModule_60)object2).BaseCoreGenericHandler(string2);
@@ -1428,10 +1322,8 @@ extends PluginModule {
                 object2 = BansHandler_2.LiteBansModule_194;
                 String[] args = (String[])PunishmentTableService[382];
                 ch3 = ch2;
-                boolean flag6 = false;
                 object3 = args;
                 char object5 = ',';
-                boolean flag5 = false;
                 Object bl23 = object3;
                 n = 0;
                 n2 = 0;
@@ -1451,20 +1343,17 @@ extends PluginModule {
                     Iterator iterator = iterable.iterator();
                     while (iterator.hasNext()) {
                         n3 = n2 = ((LiteBansModule_290)iterator).LiteBansModule_31();
-                        boolean flag7 = false;
                         object62.append(PunishmentTableService[384]);
                     }
                     object3 = StringUtilities.LiteBansModule_31(object62.toString(), 1);
                 }
                 Object object4 = object2;
-                boolean flag8 = false;
                 object2 = ch3.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(PunishmentTableService[385] + object4 + '(' + args + PunishmentTableService[386] + (CharSequence)object3 + ')')));
                 args = new String[]{string, string2};
                 flag6 = false;
                 Object object6 = object3 = object2;
                 flag8 = false;
                 String[] filteredArgs = args;
-                boolean bl9 = false;
                 n3 = filteredArgs.length;
                 for (n2 = 0; n2 < n3; ++n2) {
                     String string4;
@@ -1479,20 +1368,16 @@ extends PluginModule {
                     int n5;
                     this.PunishmentTableService().BaseCoreGenericHandler((Object)(PunishmentTableService[388] + (String)object2 + PunishmentTableService[389] + string + '\"'));
                     BansHandler_2[] kLArray = BansHandler_2.LiteBansModule_194;
-                    boolean bl12 = false;
                     kLArray = SQLiteDriverHandler.c(SQLiteDriverHandler.e(PunishmentTableService[390] + kLArray), PunishmentTableService[391]);
                     String[] args = (String[])PunishmentTableService[392];
                     ch3 = ch2;
-                    int n6 = 0;
                     CharSequence[] charSequenceArray3 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)kLArray), args};
                     charSequenceArray3 = charSequenceArray3;
-                    boolean bl10 = false;
                     CharSequence[] charSequenceArray4 = charSequenceArray3;
                     n = 0;
                     int n7 = charSequenceArray4.length;
                     for (n2 = 0; n2 < n7; ++n2) {
                         CharSequence charSequence = charSequenceArray6 = charSequenceArray4[n2];
-                        boolean bl11 = false;
                         if (charSequence.length() > 0) continue;
                         String string6 = PunishmentTableService[393];
                         throw new IllegalArgumentException(string6.toString());
@@ -1502,7 +1387,6 @@ extends PluginModule {
                     n6 = 0;
                     BansHandler_2[] kLArray2 = kLArray;
                     Object object7 = kLArray2;
-                    boolean bl13 = false;
                     String[] parsedArgs = args;
                     n2 = 0;
                     int n8 = parsedArgs.length;
@@ -1519,20 +1403,15 @@ extends PluginModule {
                         int n9;
                         if (!kL2.BaseCoreGenericHandler()) continue;
                         object7 = kL2;
-                        boolean bl15 = false;
                         object7 = SQLiteDriverHandler.c(SQLiteDriverHandler.e(PunishmentTableService[395] + object7), PunishmentTableService[396]);
                         String[] stringArray5 = (String[])PunishmentTableService[397];
                         ch3 = ch2;
-                        boolean bl16 = false;
                         CharSequence[] charSequenceArray5 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object7), stringArray5};
-                        boolean bl17 = false;
                         CharSequence[] charSequenceArray7 = charSequenceArray5;
-                        boolean bl18 = false;
                         n5 = charSequenceArray7.length;
                         for (n9 = 0; n9 < n5; ++n9) {
                             CharSequence charSequence3;
                             charSequence = charSequence3 = charSequenceArray7[n9];
-                            boolean bl19 = false;
                             if (charSequence.length() > 0) continue;
                             String string9 = PunishmentTableService[398];
                             throw new IllegalArgumentException(string9.toString());
@@ -1541,7 +1420,6 @@ extends PluginModule {
                         stringArray5 = new String[]{string, object2};
                         bl16 = false;
                         CharSequence[] charSequenceArray8 = charSequenceArray5 = object7;
-                        boolean bl20 = false;
                         String[] stringArray6 = stringArray5;
                         n9 = 0;
                         int n10 = stringArray6.length;
@@ -1552,20 +1430,16 @@ extends PluginModule {
                         }
                         LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)charSequenceArray5);
                         object7 = kL2;
-                        boolean bl21 = false;
                         object7 = SQLiteDriverHandler.c(SQLiteDriverHandler.e(PunishmentTableService[400] + object7), PunishmentTableService[401]);
                         String[] stringArray8 = (String[])PunishmentTableService[402];
                         ch3 = ch2;
                         bl16 = false;
                         charSequenceArray5 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object7), stringArray8};
-                        boolean bl22 = false;
                         CharSequence[] charSequenceArray9 = charSequenceArray5;
-                        boolean bl23 = false;
                         n5 = charSequenceArray9.length;
                         for (n9 = 0; n9 < n5; ++n9) {
                             CharSequence charSequence5;
                             charSequence = charSequence5 = charSequenceArray9[n9];
-                            boolean bl24 = false;
                             if (charSequence.length() > 0) continue;
                             String string10 = PunishmentTableService[403];
                             throw new IllegalArgumentException(string10.toString());
@@ -1584,22 +1458,18 @@ extends PluginModule {
                             ((LiteBansModule_60)object7).BaseCoreGenericHandler((String)charSequence6);
                         }
                         LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)charSequenceArray5);
-                    }
-                }
-            }
+}
             if (l3 <= 0L) {
                 this.plugin(ch2, flag);
             } else {
                 this.plugin.BaseCoreGenericHandler(() -> DatabaseMonitorService.BaseCoreGenericHandler(this, ch2, flag), l3);
-            }
-        }
+}
         catch (Exception exception) {
             if (exception instanceof SQLException) {
                 this.plugin(exception);
             }
             ConfigService.BaseCoreGenericHandler(this.PunishmentTableService(), exception, 0, 2, null);
-        }
-    }
+}
 
     public static /* synthetic */ void BaseCoreGenericHandler(DatabaseMonitorService w2, LiteBansModule_82 ch2, long l3, boolean flag, int n, Object object) {
         if ((n & 2) != 0) {
@@ -1612,15 +1482,13 @@ extends PluginModule {
     }
 
     private final void BaseCoreGenericHandler(String string, long l3) {
-        boolean flag = false;
         if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)PunishmentTableService[408]) && this.e) {
             flag = LiteBansModule_429.LiteBansModule_31.BaseCoreGenericHandler(this);
         }
         if (!flag) {
             this.plugin(this.PunishmentTableService());
             litebans.DatabaseMonitorService.BaseCoreGenericHandler(this, l3, false, false, false, 14, null);
-        }
-    }
+}
 
     static /* synthetic */ void BaseCoreGenericHandler(DatabaseMonitorService w2, String string, long l3, int n, Object object) {
         if ((n & 2) != 0) {
@@ -1630,400 +1498,323 @@ extends PluginModule {
     }
 
     public final void BaseCoreGenericHandler(@NotNull ConfigService v1) {
-        block53: {
-            block52: {
+{
                 v2 = System.nanoTime();
                 this.LiteBansModule_31 = null;
-                var4_3 = v1.LiteBansModule_194();
-                var5_4 = var4_3.ElementsHandler();
-                var6_5 = this.LiteBansModule_31(v1);
-                var7_6 = this.plugin(v1, var5_4);
-                if (var7_6 == null) {
-                    var8_7 = this;
-                    var9_9 = var6_5;
-                    var40_11 = new StringBuilder().append(litebans.DatabaseMonitorService.PunishmentTableService[409]).append(var5_4).append(litebans.DatabaseMonitorService.PunishmentTableService[410]);
-                    var10_13 = false;
-                    var11_15 = var9_9;
-                    var12_17 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)var9_9, 10));
-                    var13_20 = false;
-                    for (T var15_28 : var11_15) {
-                        var16_31 = (JarHandler)var15_28;
-                        var41_27 = var12_17;
-                        var17_32 = false;
-                        var41_27.add(var16_31.AsyncBackgroundTask_5());
+                arg1 = v1.LiteBansModule_194();
+                arg7 = arg1.ElementsHandler();
+                arg8 = this.LiteBansModule_31(v1);
+                arg9 = this.plugin(v1, arg7);
+                if (arg9 == null) {
+                    arg10 = this;
+                    arg11 = arg8;
+                    arg12 = new StringBuilder().append(litebans.DatabaseMonitorService.PunishmentTableService[409]).append(arg7).append(litebans.DatabaseMonitorService.PunishmentTableService[410]);
+                    arg13 = arg11;
+                    arg14 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)arg11, 10));
+                    for (T arg15 : arg13) {
+                        arg16 = (JarHandler)arg15;
+                        arg17 = arg14;
+                        arg17.add(arg16.AsyncBackgroundTask_5());
                     }
-                    var9_9 = var40_11.append((List)var12_17).toString();
-                    var10_13 = false;
-                    var8_7.BaseCoreGenericHandler.getLogger().severe((String)var9_9);
+                    arg11 = arg12.append((List)arg14).toString();
+                    arg10.BaseCoreGenericHandler.getLogger().severe((String)arg11);
                     return;
                 }
-                v0 = litebans.DatabaseMonitorService.BaseCoreGenericHandler(this, var7_6, false, false, 6, null);
+                v0 = litebans.DatabaseMonitorService.BaseCoreGenericHandler(this, arg9, false, false, 6, null);
                 if (v0 == null) {
                     return;
                 }
-                var8_8 = v0;
-                var9_10 = var4_3.q();
-                var11_16 = new String[]{litebans.DatabaseMonitorService.PunishmentTableService[411], litebans.DatabaseMonitorService.PunishmentTableService[412]};
-                var10_14 = LiteBansModule_5.BaseCoreGenericHandler((Object[])var11_16).contains(var5_4);
-                if (!StringUtilities.c((CharSequence)var9_10, ':', false, 2, null)) {
-                    var11_16 = this.PunishmentTableService().LiteBansModule_194().ElementsHandler();
-                    var12_18 = false;
-                    if (litebans.DatabaseMonitorService.CommandThrottleService.LiteBansModule_31((String)var11_16)) {
-                        v1 = var9_10 + litebans.DatabaseMonitorService.PunishmentTableService[413];
+                arg18 = v0;
+                arg19 = arg1.q();
+                arg20 = new String[]{litebans.DatabaseMonitorService.PunishmentTableService[411], litebans.DatabaseMonitorService.PunishmentTableService[412]};
+                arg21 = LiteBansModule_5.BaseCoreGenericHandler((Object[])arg20).contains(arg7);
+                if (!StringUtilities.c((CharSequence)arg19, ':', false, 2, null)) {
+                    arg20 = this.PunishmentTableService().LiteBansModule_194().ElementsHandler();
+                    if (litebans.DatabaseMonitorService.CommandThrottleService.LiteBansModule_31((String)arg20)) {
+                        v1 = arg19 + litebans.DatabaseMonitorService.PunishmentTableService[413];
                     } else {
-                        var13_21 = litebans.DatabaseMonitorService.CommandThrottleService;
-                        var14_23 = false;
-                        v1 = ObjectUtilities.BaseCoreGenericHandler(var11_16, (Object)litebans.DatabaseMonitorService.PunishmentTableService[414]) != false || ObjectUtilities.BaseCoreGenericHandler(var11_16, (Object)litebans.DatabaseMonitorService.PunishmentTableService[415]) != false ? var9_10 + litebans.DatabaseMonitorService.PunishmentTableService[416] : var9_10;
+                        arg22 = litebans.DatabaseMonitorService.CommandThrottleService;
+                        v1 = ObjectUtilities.BaseCoreGenericHandler(arg20, (Object)litebans.DatabaseMonitorService.PunishmentTableService[414]) != false || ObjectUtilities.BaseCoreGenericHandler(arg20, (Object)litebans.DatabaseMonitorService.PunishmentTableService[415]) != false ? arg19 + litebans.DatabaseMonitorService.PunishmentTableService[416] : arg19;
                     }
-                    var9_10 = v1;
+                    arg19 = v1;
                 }
-                var11_16 = var5_4;
-                switch (var11_16.hashCode()) {
+                arg20 = arg7;
+                switch (arg20.hashCode()) {
                     case -894935028: {
-                        if (!var11_16.equals(litebans.DatabaseMonitorService.PunishmentTableService[417])) {
-                            ** break;
+                        if (!arg20.equals(litebans.DatabaseMonitorService.PunishmentTableService[417])) {
+                            break;
                         }
-                        break block52;
+                        break;
                     }
                     case 3274: {
-                        if (var11_16.equals(litebans.DatabaseMonitorService.PunishmentTableService[418])) break;
-                        ** break;
+                        if (arg20.equals(litebans.DatabaseMonitorService.PunishmentTableService[418])) break;
+                        break;
                     }
                     case 106616951: {
-                        if (!var11_16.equals(litebans.DatabaseMonitorService.PunishmentTableService[419])) {
-                            ** break;
+                        if (!arg20.equals(litebans.DatabaseMonitorService.PunishmentTableService[419])) {
+                            break;
                         }
-                        break block53;
-                    }
-                }
-                var13_21 = this.plugin.getDataFolder();
-                var14_24 = litebans.DatabaseMonitorService.PunishmentTableService[420];
-                var15_29 = false;
-                var9_10 = new File((File)var13_21, var14_24).getAbsolutePath();
-                ** break;
+                        break;
+}
+                arg22 = this.plugin.getDataFolder();
+                arg23 = litebans.DatabaseMonitorService.PunishmentTableService[420];
+                arg19 = new File((File)arg22, arg23).getAbsolutePath();
+                break;
             }
-            var13_21 = this.plugin.getDataFolder();
-            var14_25 = litebans.DatabaseMonitorService.PunishmentTableService[421];
-            var15_29 = false;
-            var9_10 = new File((File)var13_21, var14_25).getPath();
+            arg22 = this.plugin.getDataFolder();
+            arg24 = litebans.DatabaseMonitorService.PunishmentTableService[421];
+            arg19 = new File((File)arg22, arg24).getPath();
             this.z = new LiteBansModule_93(this.plugin);
-            ** break;
+            break;
         }
-        var5_4 = litebans.DatabaseMonitorService.PunishmentTableService[422];
-lbl71:
-        // 7 sources
-
-        var9_10 = this.z.BaseCoreGenericHandler(var9_10);
-        var11_16 = null;
-        var11_16 = litebans.DatabaseMonitorService.PunishmentTableService[423] + var5_4 + litebans.DatabaseMonitorService.PunishmentTableService[424] + var9_10;
-        if (!var10_14) {
-            var11_16 = (String)var11_16 + '/' + var4_3.DatabaseMonitorService();
+        arg7 = litebans.DatabaseMonitorService.PunishmentTableService[422];
+                arg19 = this.z.BaseCoreGenericHandler(arg19);
+        arg20 = litebans.DatabaseMonitorService.PunishmentTableService[423] + arg7 + litebans.DatabaseMonitorService.PunishmentTableService[424] + arg19;
+        if (!arg21) {
+            arg20 = (String)arg20 + '/' + arg1.DatabaseMonitorService();
         }
-        if (((CharSequence)(var12_19 = var4_3.aN())).length() > 0) {
-            if (!var10_14 && !StringUtilities.BaseCoreGenericHandler((CharSequence)var12_19, '?', false, 2, null)) {
-                var12_19 = '?' + var12_19;
+        if (((CharSequence)(arg25 = arg1.aN())).length() > 0) {
+            if (!arg21 && !StringUtilities.BaseCoreGenericHandler((CharSequence)arg25, '?', false, 2, null)) {
+                arg25 = '?' + arg25;
             }
-            if (!(ObjectUtilities.BaseCoreGenericHandler((Object)var5_4, (Object)litebans.DatabaseMonitorService.PunishmentTableService[425]) && (ObjectUtilities.BaseCoreGenericHandler((Object)var12_19, (Object)litebans.DatabaseMonitorService.PunishmentTableService[426]) || ObjectUtilities.BaseCoreGenericHandler((Object)var12_19, (Object)litebans.DatabaseMonitorService.PunishmentTableService[427])) || ObjectUtilities.BaseCoreGenericHandler((Object)var5_4, (Object)litebans.DatabaseMonitorService.PunishmentTableService[428]))) {
-                var11_16 = (String)var11_16 + var12_19;
-            }
+            if (!(ObjectUtilities.BaseCoreGenericHandler((Object)arg7, (Object)litebans.DatabaseMonitorService.PunishmentTableService[425]) && (ObjectUtilities.BaseCoreGenericHandler((Object)arg25, (Object)litebans.DatabaseMonitorService.PunishmentTableService[426]) || ObjectUtilities.BaseCoreGenericHandler((Object)arg25, (Object)litebans.DatabaseMonitorService.PunishmentTableService[427])) || ObjectUtilities.BaseCoreGenericHandler((Object)arg7, (Object)litebans.DatabaseMonitorService.PunishmentTableService[428]))) {
+                arg20 = (String)arg20 + arg25;
+}
+        arg22 = arg20;
+        arg26 = StringUtilities.BaseCoreGenericHandler((String)arg22, litebans.DatabaseMonitorService.PunishmentTableService[429], litebans.DatabaseMonitorService.PunishmentTableService[430], false, 4, null);
+        if (ObjectUtilities.BaseCoreGenericHandler((Object)arg7, (Object)litebans.DatabaseMonitorService.PunishmentTableService[431])) {
+            arg20 = (String)arg20 + litebans.DatabaseMonitorService.PunishmentTableService[432];
         }
-        var13_21 = var11_16;
-        var14_26 = StringUtilities.BaseCoreGenericHandler((String)var13_21, litebans.DatabaseMonitorService.PunishmentTableService[429], litebans.DatabaseMonitorService.PunishmentTableService[430], false, 4, null);
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)var5_4, (Object)litebans.DatabaseMonitorService.PunishmentTableService[431])) {
-            var11_16 = (String)var11_16 + litebans.DatabaseMonitorService.PunishmentTableService[432];
+        arg27 = Math.max(2000L, arg1.Y());
+        arg28 = litebans.DatabaseMonitorService.BaseCoreGenericHandler(this, new LiteBansModule_244(this.plugin), null, false, false, 12, null);
+        arg29 = arg28 != false ? arg27 : 0x7FFFFFFFL;
+        arg30 = litebans.DatabaseMonitorService.CommandThrottleService;
+        if (ObjectUtilities.BaseCoreGenericHandler((Object)arg7, (Object)litebans.DatabaseMonitorService.PunishmentTableService[433]) != false || ObjectUtilities.BaseCoreGenericHandler((Object)arg7, (Object)litebans.DatabaseMonitorService.PunishmentTableService[434]) != false) {
+            arg29 = Math.min(arg29, 2147483L);
         }
-        var15_30 = Math.max(2000L, var4_3.Y());
-        var17_33 = litebans.DatabaseMonitorService.BaseCoreGenericHandler(this, new LiteBansModule_244(this.plugin), null, false, false, 12, null);
-        var18_34 = var17_33 != false ? var15_30 : 0x7FFFFFFFL;
-        var20_35 = litebans.DatabaseMonitorService.CommandThrottleService;
-        var21_37 = false;
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)var5_4, (Object)litebans.DatabaseMonitorService.PunishmentTableService[433]) != false || ObjectUtilities.BaseCoreGenericHandler((Object)var5_4, (Object)litebans.DatabaseMonitorService.PunishmentTableService[434]) != false) {
-            var18_34 = Math.min(var18_34, 2147483L);
+        arg30 = v1;
+        if (arg30.g()) {
+            arg31 = arg30;
+            arg31.BaseCoreGenericHandler(arg20);
         }
-        var20_35 = v1;
-        var21_37 = false;
-        if (var20_35.g()) {
-            var40_12 = var20_35;
-            var22_40 = false;
-            var40_12.BaseCoreGenericHandler(var11_16);
+        arg30 = v1;
+        if (arg30.g()) {
+            arg31 = arg30;
+            arg31.BaseCoreGenericHandler((Object)this.plugin.i().LiteBansModule_31());
         }
-        var20_35 = v1;
-        var21_37 = false;
-        if (var20_35.g()) {
-            var40_12 = var20_35;
-            var22_40 = false;
-            var40_12.BaseCoreGenericHandler((Object)this.plugin.i().LiteBansModule_31());
-        }
-        var20_35 = this;
-        var21_38 = litebans.DatabaseMonitorService.PunishmentTableService[435];
-        var22_40 = false;
-        if (!litebans.DatabaseMonitorService.c((DatabaseMonitorService)var20_35).get()) {
-            var23_46 = (PluginModule)var20_35;
-            var24_54 = false;
-            var23_46.BaseCoreGenericHandler.getLogger().info((String)var21_38);
+        arg30 = this;
+        arg32 = litebans.DatabaseMonitorService.PunishmentTableService[435];
+        if (!litebans.DatabaseMonitorService.c((DatabaseMonitorService)arg30).get()) {
+            arg33 = (PluginModule)arg30;
+            arg33.BaseCoreGenericHandler.getLogger().info((String)arg32);
         }
         try {
             HikariLogger.BaseCoreGenericHandler(this.plugin.getLogger());
-            var20_35 = new HikariConfig();
-            var20_35.LiteBansModule_194(litebans.DatabaseMonitorService.PunishmentTableService[436]);
-            var20_35.g((String)var11_16);
-            var21_38 = var20_35;
-            var22_41 = litebans.DatabaseMonitorService.PunishmentTableService[437];
-            var23_46 = var4_3.aW();
-            var24_54 = false;
-            var26_67 = var25_62 = var21_38;
-            var27_70 = false;
-            var21_38.BaseCoreGenericHandler((String)var22_41, var23_46);
-            var21_38 = var25_62;
-            var22_41 = litebans.DatabaseMonitorService.PunishmentTableService[438];
-            var23_46 = var4_3.LiteBansModule_6();
-            var24_54 = false;
-            var26_67 = var25_62 = var21_38;
-            var27_70 = false;
-            var21_38.BaseCoreGenericHandler((String)var22_41, var23_46);
-            var21_38 = var25_62;
-            var22_41 = litebans.DatabaseMonitorService.PunishmentTableService[439];
-            var23_46 = var15_30;
-            var24_54 = false;
-            var25_62 = var21_38;
-            var26_67 = var23_46.toString();
-            var27_70 = false;
-            var29_78 = var28_73 = var25_62;
-            var30_83 = false;
-            var25_62.BaseCoreGenericHandler((String)var22_41, var26_67);
-            var21_38 = var28_73;
-            var22_41 = litebans.DatabaseMonitorService.PunishmentTableService[440];
-            var23_46 = var18_34;
-            var24_54 = false;
-            var25_62 = var21_38;
-            var26_67 = var23_46.toString();
-            var27_70 = false;
-            var29_78 = var28_73 = var25_62;
-            var30_83 = false;
-            var25_62.BaseCoreGenericHandler((String)var22_41, var26_67);
-            var21_38 = var28_73;
-            var22_41 = litebans.DatabaseMonitorService.PunishmentTableService[441];
-            var23_46 = litebans.DatabaseMonitorService.PunishmentTableService[442];
-            var24_54 = false;
-            var26_67 = var25_62 = var21_38;
-            var27_70 = false;
-            var21_38.BaseCoreGenericHandler((String)var22_41, var23_46);
-            var21_38 = var25_62;
-            var22_41 = litebans.DatabaseMonitorService.PunishmentTableService[443];
-            var23_46 = litebans.DatabaseMonitorService.PunishmentTableService[444];
-            var24_54 = true;
-            var25_63 = false;
-            var26_67 = var21_38;
-            var27_71 = litebans.DatabaseMonitorService.PunishmentTableService[445];
-            var28_73 = litebans.DatabaseMonitorService.PunishmentTableService[446];
-            var29_79 = false;
-            var31_86 = var30_84 = var26_67;
-            var32_90 = false;
-            var26_67.BaseCoreGenericHandler((String)var27_71, var28_73);
-            var26_67 = var21_38;
-            var27_71 = litebans.DatabaseMonitorService.PunishmentTableService[447];
-            var28_74 = false;
-            var30_84 = var29_80 = var26_67;
-            var31_87 = false;
-            var26_67.BaseCoreGenericHandler((String)var27_71, var22_41);
-            var26_67 = var29_80;
-            var27_71 = litebans.DatabaseMonitorService.PunishmentTableService[448];
-            var28_74 = false;
-            var30_84 = var29_80 = var26_67;
-            var31_87 = false;
-            var26_67.BaseCoreGenericHandler((String)var27_71, var22_41);
-            var26_67 = var29_80;
-            var27_71 = litebans.DatabaseMonitorService.PunishmentTableService[449];
-            var28_74 = false;
-            var30_84 = var29_80 = var26_67;
-            var31_87 = false;
-            var26_67.BaseCoreGenericHandler((String)var27_71, var23_46);
-            var21_38 = var29_80;
-            var22_41 = litebans.DatabaseMonitorService.PunishmentTableService[450];
-            var23_47 = false;
-            var24_55 = var21_38;
-            var25_64 = litebans.DatabaseMonitorService.PunishmentTableService[451];
-            var26_68 = false;
-            var28_75 = var27_71 = var24_55;
-            var29_81 = 0;
-            var24_55.BaseCoreGenericHandler((String)var22_41, var25_64);
-            var21_38 = var27_71;
-            var22_41 = new String[]{litebans.DatabaseMonitorService.PunishmentTableService[452], litebans.DatabaseMonitorService.PunishmentTableService[453], litebans.DatabaseMonitorService.PunishmentTableService[454], litebans.DatabaseMonitorService.PunishmentTableService[455], litebans.DatabaseMonitorService.PunishmentTableService[456], litebans.DatabaseMonitorService.PunishmentTableService[457]};
-            var23_47 = false;
-            var25_64 = var24_55 = var21_38;
-            var26_68 = false;
-            var27_71 = var22_41;
-            var28_76 = false;
-            var30_85 = var27_71.length;
-            for (var29_81 = 0; var29_81 < var30_85; ++var29_81) {
-                var32_91 = var31_88 = var27_71[var29_81];
-                var33_93 = false;
-                var34_94 = var21_38;
-                var35_95 = litebans.DatabaseMonitorService.PunishmentTableService[458];
-                var36_96 = false;
-                var38_98 = var37_97 = var34_94;
-                var39_99 = false;
-                var34_94.BaseCoreGenericHandler(var32_91, var35_95);
+            arg30 = new HikariConfig();
+            arg30.LiteBansModule_194(litebans.DatabaseMonitorService.PunishmentTableService[436]);
+            arg30.g((String)arg20);
+            arg32 = arg30;
+            arg34 = litebans.DatabaseMonitorService.PunishmentTableService[437];
+            arg33 = arg1.aW();
+            arg35 = arg36 = arg32;
+            arg32.BaseCoreGenericHandler((String)arg34, arg33);
+            arg32 = arg36;
+            arg34 = litebans.DatabaseMonitorService.PunishmentTableService[438];
+            arg33 = arg1.LiteBansModule_6();
+            arg35 = arg36 = arg32;
+            arg32.BaseCoreGenericHandler((String)arg34, arg33);
+            arg32 = arg36;
+            arg34 = litebans.DatabaseMonitorService.PunishmentTableService[439];
+            arg33 = arg27;
+            arg36 = arg32;
+            arg35 = arg33.toString();
+            arg37 = arg38 = arg36;
+            arg36.BaseCoreGenericHandler((String)arg34, arg35);
+            arg32 = arg38;
+            arg34 = litebans.DatabaseMonitorService.PunishmentTableService[440];
+            arg33 = arg29;
+            arg36 = arg32;
+            arg35 = arg33.toString();
+            arg37 = arg38 = arg36;
+            arg36.BaseCoreGenericHandler((String)arg34, arg35);
+            arg32 = arg38;
+            arg34 = litebans.DatabaseMonitorService.PunishmentTableService[441];
+            arg33 = litebans.DatabaseMonitorService.PunishmentTableService[442];
+            arg35 = arg36 = arg32;
+            arg32.BaseCoreGenericHandler((String)arg34, arg33);
+            arg32 = arg36;
+            arg34 = litebans.DatabaseMonitorService.PunishmentTableService[443];
+            arg33 = litebans.DatabaseMonitorService.PunishmentTableService[444];
+            arg35 = arg32;
+            arg39 = litebans.DatabaseMonitorService.PunishmentTableService[445];
+            arg38 = litebans.DatabaseMonitorService.PunishmentTableService[446];
+            arg40 = arg41 = arg35;
+            arg35.BaseCoreGenericHandler((String)arg39, arg38);
+            arg35 = arg32;
+            arg39 = litebans.DatabaseMonitorService.PunishmentTableService[447];
+            arg41 = arg42 = arg35;
+            arg35.BaseCoreGenericHandler((String)arg39, arg34);
+            arg35 = arg42;
+            arg39 = litebans.DatabaseMonitorService.PunishmentTableService[448];
+            arg41 = arg42 = arg35;
+            arg35.BaseCoreGenericHandler((String)arg39, arg34);
+            arg35 = arg42;
+            arg39 = litebans.DatabaseMonitorService.PunishmentTableService[449];
+            arg41 = arg42 = arg35;
+            arg35.BaseCoreGenericHandler((String)arg39, arg33);
+            arg32 = arg42;
+            arg34 = litebans.DatabaseMonitorService.PunishmentTableService[450];
+            arg43 = arg32;
+            arg44 = litebans.DatabaseMonitorService.PunishmentTableService[451];
+            arg45 = arg39 = arg43;
+            arg43.BaseCoreGenericHandler((String)arg34, arg44);
+            arg32 = arg39;
+            arg34 = new String[]{litebans.DatabaseMonitorService.PunishmentTableService[452], litebans.DatabaseMonitorService.PunishmentTableService[453], litebans.DatabaseMonitorService.PunishmentTableService[454], litebans.DatabaseMonitorService.PunishmentTableService[455], litebans.DatabaseMonitorService.PunishmentTableService[456], litebans.DatabaseMonitorService.PunishmentTableService[457]};
+            arg44 = arg43 = arg32;
+            arg39 = arg34;
+            arg46 = arg39.length;
+            for (arg47 = 0; arg47 < arg46; ++arg47) {
+                arg48 = arg49 = arg39[arg47];
+                arg50 = arg32;
+                arg51 = litebans.DatabaseMonitorService.PunishmentTableService[458];
+                arg52 = arg53 = arg50;
+                arg50.BaseCoreGenericHandler(arg48, arg51);
             }
-            var21_38 = var24_55;
-            var22_41 = new String[]{litebans.DatabaseMonitorService.PunishmentTableService[459], litebans.DatabaseMonitorService.PunishmentTableService[460]};
-            var23_47 = false;
-            var25_64 = var24_55 = var21_38;
-            var26_68 = false;
-            var27_71 = var22_41;
-            var28_76 = false;
-            var30_85 = var27_71.length;
-            for (var29_81 = 0; var29_81 < var30_85; ++var29_81) {
-                var32_92 = var31_89 = var27_71[var29_81];
-                var33_93 = false;
-                var34_94 = var21_38;
-                var35_95 = litebans.DatabaseMonitorService.PunishmentTableService[461];
-                var36_96 = false;
-                var38_98 = var37_97 = var34_94;
-                var39_99 = false;
-                var34_94.BaseCoreGenericHandler(var32_92, var35_95);
+            arg32 = arg43;
+            arg34 = new String[]{litebans.DatabaseMonitorService.PunishmentTableService[459], litebans.DatabaseMonitorService.PunishmentTableService[460]};
+            arg44 = arg43 = arg32;
+            arg39 = arg34;
+            arg46 = arg39.length;
+            for (arg47 = 0; arg47 < arg46; ++arg47) {
+                arg54 = arg55 = arg39[arg47];
+                arg50 = arg32;
+                arg51 = litebans.DatabaseMonitorService.PunishmentTableService[461];
+                arg52 = arg53 = arg50;
+                arg50.BaseCoreGenericHandler(arg54, arg51);
             }
-            var20_35.AsyncBackgroundTask_5(var15_30);
-            var20_35.LiteBansModule_194(Math.min(30000L, var15_30));
-            if (var4_3.V() != var4_3.LiteBansModule_5()) {
-                var20_35.e(var4_3.ServerEventListener());
+            arg30.AsyncBackgroundTask_5(arg27);
+            arg30.LiteBansModule_194(Math.min(30000L, arg27));
+            if (arg1.V() != arg1.LiteBansModule_5()) {
+                arg30.e(arg1.ServerEventListener());
             }
-            var20_35.BaseCoreGenericHandler(Math.max(0, var4_3.V()));
-            var20_35.LiteBansModule_31(Math.max(1, var4_3.LiteBansModule_5()));
-            var20_35.g(Math.max(0L, var4_3.LiteBansModule_401()));
-            var21_38 = this;
-            var22_42 = false;
-            var23_48 = var21_38.BaseCoreGenericHandler.LiteBansModule_433();
-            var24_56 = false;
-            var25_65 = Math.max(20, var20_35.LiteBansModule_194() + 8);
-            var23_48.setMaximumPoolSize(var25_65);
-            var23_48.setRejectedExecutionHandler(new LiteBansModule_140((DatabaseMonitorService)var21_38));
-            var23_48.setCorePoolSize(Math.min(var25_65, var20_35.i() + 1));
-            var23_48.setKeepAliveTime(4L, TimeUnit.MINUTES);
-            if (ObjectUtilities.BaseCoreGenericHandler((Object)var5_4, (Object)litebans.DatabaseMonitorService.PunishmentTableService[462])) {
-                var20_35.AsyncBackgroundTask_5(litebans.DatabaseMonitorService.PunishmentTableService[463]);
-            } else if (ObjectUtilities.BaseCoreGenericHandler((Object)var5_4, (Object)litebans.DatabaseMonitorService.PunishmentTableService[464])) {
-                var20_35.LiteBansModule_240(litebans.DatabaseMonitorService.PunishmentTableService[465]);
+            arg30.BaseCoreGenericHandler(Math.max(0, arg1.V()));
+            arg30.LiteBansModule_31(Math.max(1, arg1.LiteBansModule_5()));
+            arg30.g(Math.max(0L, arg1.LiteBansModule_401()));
+            arg32 = this;
+            arg56 = arg32.BaseCoreGenericHandler.LiteBansModule_433();
+            arg57 = Math.max(20, arg30.LiteBansModule_194() + 8);
+            arg56.setMaximumPoolSize(arg57);
+            arg56.setRejectedExecutionHandler(new LiteBansModule_140((DatabaseMonitorService)arg32));
+            arg56.setCorePoolSize(Math.min(arg57, arg30.i() + 1));
+            arg56.setKeepAliveTime(4L, TimeUnit.MINUTES);
+            if (ObjectUtilities.BaseCoreGenericHandler((Object)arg7, (Object)litebans.DatabaseMonitorService.PunishmentTableService[462])) {
+                arg30.AsyncBackgroundTask_5(litebans.DatabaseMonitorService.PunishmentTableService[463]);
+            } else if (ObjectUtilities.BaseCoreGenericHandler((Object)arg7, (Object)litebans.DatabaseMonitorService.PunishmentTableService[464])) {
+                arg30.LiteBansModule_240(litebans.DatabaseMonitorService.PunishmentTableService[465]);
             }
-            var20_35.BaseCoreGenericHandler(new LiteBansModule_187((Driver)var8_8, (HikariConfig)var20_35));
+            arg30.BaseCoreGenericHandler(new LiteBansModule_187((Driver)arg18, (HikariConfig)arg30));
             if (this.plugin.AsyncBackgroundTask_22() == 1) {
                 try {
                     v2 = this.plugin.i();
                     ObjectUtilities.LiteBansModule_31(v2, litebans.DatabaseMonitorService.PunishmentTableService[466]);
-                    var20_35.BaseCoreGenericHandler(((GetcancelreasoncomponentsHandler)v2).BaseCoreGenericHandler(this.plugin));
+                    arg30.BaseCoreGenericHandler(((GetcancelreasoncomponentsHandler)v2).BaseCoreGenericHandler(this.plugin));
                 }
-                catch (Throwable var21_39) {
-                    this.plugin(var21_39);
-                }
-            }
-            this.LiteBansModule_31 = new HikariDataSource((HikariConfig)var20_35);
+                catch (Throwable arg58) {
+                    this.plugin(arg58);
+}
+            this.LiteBansModule_31 = new HikariDataSource((HikariConfig)arg30);
         }
-        catch (Exception var20_36) {
-            var21_38 = this;
-            var22_43 = litebans.DatabaseMonitorService.PunishmentTableService[467] + var14_26 + litebans.DatabaseMonitorService.PunishmentTableService[468];
-            var23_49 = false;
-            var21_38.BaseCoreGenericHandler.getLogger().severe(var22_43);
-            if (!ObjectUtilities.BaseCoreGenericHandler((Object)var5_4, (Object)litebans.DatabaseMonitorService.PunishmentTableService[469]) && StringUtilities.LiteBansModule_31((CharSequence)var4_3.aW()) && StringUtilities.LiteBansModule_31((CharSequence)var4_3.LiteBansModule_6())) {
-                var21_38 = this;
-                var22_43 = litebans.DatabaseMonitorService.PunishmentTableService[470];
-                var23_49 = false;
-                var21_38.BaseCoreGenericHandler.getLogger().severe(var22_43);
+        catch (Exception arg59) {
+            arg32 = this;
+            arg60 = litebans.DatabaseMonitorService.PunishmentTableService[467] + arg26 + litebans.DatabaseMonitorService.PunishmentTableService[468];
+            arg32.BaseCoreGenericHandler.getLogger().severe(arg60);
+            if (!ObjectUtilities.BaseCoreGenericHandler((Object)arg7, (Object)litebans.DatabaseMonitorService.PunishmentTableService[469]) && StringUtilities.LiteBansModule_31((CharSequence)arg1.aW()) && StringUtilities.LiteBansModule_31((CharSequence)arg1.LiteBansModule_6())) {
+                arg32 = this;
+                arg60 = litebans.DatabaseMonitorService.PunishmentTableService[470];
+                arg32.BaseCoreGenericHandler.getLogger().severe(arg60);
             }
-            var21_38 = var20_36.getMessage();
-            v3 = var20_36.getCause();
-            v4 = var22_43 = v3 != null ? v3.getMessage() : null;
-            if (var22_43 == null || var21_38 == null || !StringUtilities.BaseCoreGenericHandler((CharSequence)var21_38, (CharSequence)var22_43, false, 2, null)) {
-                var23_50 = this;
-                var24_57 = litebans.DatabaseMonitorService.PunishmentTableService[471] + var20_36.getMessage();
-                var25_66 = 0;
-                var23_50.BaseCoreGenericHandler.getLogger().severe(var24_57);
+            arg32 = arg59.getMessage();
+            v3 = arg59.getCause();
+            v4 = arg60 = v3 != null ? v3.getMessage() : null;
+            if (arg60 == null || arg32 == null || !StringUtilities.BaseCoreGenericHandler((CharSequence)arg32, (CharSequence)arg60, false, 2, null)) {
+                arg61 = this;
+                arg62 = litebans.DatabaseMonitorService.PunishmentTableService[471] + arg59.getMessage();
+                arg61.BaseCoreGenericHandler.getLogger().severe(arg62);
             }
-            var23_51 = litebans.DatabaseMonitorService.PunishmentTableService[472];
-            var24_58 = var20_36;
-            var25_66 = 16;
-            while (var25_66-- > 0 && var24_58.getCause() != null) {
-                v5 = var24_58.getLocalizedMessage();
+            arg63 = litebans.DatabaseMonitorService.PunishmentTableService[472];
+            arg64 = arg59;
+            arg65 = 16;
+            while (arg65-- > 0 && arg64.getCause() != null) {
+                v5 = arg64.getLocalizedMessage();
                 if (v5 == null) {
                     v5 = litebans.DatabaseMonitorService.PunishmentTableService[473];
                 }
-                if (((CharSequence)(var26_69 = v5)).length() > 0 && (StringUtilities.BaseCoreGenericHandler((CharSequence)var26_69, (CharSequence)litebans.DatabaseMonitorService.PunishmentTableService[474], false, 2, null) || StringUtilities.BaseCoreGenericHandler((CharSequence)var26_69, (CharSequence)litebans.DatabaseMonitorService.PunishmentTableService[475], false, 2, null))) continue;
-                if (((CharSequence)var26_69).length() == 0 && (v6 = var24_58.getMessage()) == null) {
-                    v6 = var26_69 = litebans.DatabaseMonitorService.PunishmentTableService[476];
+                if (((CharSequence)(arg66 = v5)).length() > 0 && (StringUtilities.BaseCoreGenericHandler((CharSequence)arg66, (CharSequence)litebans.DatabaseMonitorService.PunishmentTableService[474], false, 2, null) || StringUtilities.BaseCoreGenericHandler((CharSequence)arg66, (CharSequence)litebans.DatabaseMonitorService.PunishmentTableService[475], false, 2, null))) continue;
+                if (((CharSequence)arg66).length() == 0 && (v6 = arg64.getMessage()) == null) {
+                    v6 = arg66 = litebans.DatabaseMonitorService.PunishmentTableService[476];
                 }
-                if (var24_58 instanceof UnknownHostException) {
-                    var26_69 = litebans.DatabaseMonitorService.PunishmentTableService[477] + var26_69;
+                if (arg64 instanceof UnknownHostException) {
+                    arg66 = litebans.DatabaseMonitorService.PunishmentTableService[477] + arg66;
                 }
-                if (!ObjectUtilities.BaseCoreGenericHandler((Object)var26_69, (Object)litebans.DatabaseMonitorService.PunishmentTableService[478]) && ((CharSequence)var26_69).length() > 0 && !StringUtilities.BaseCoreGenericHandler((CharSequence)var23_51, (CharSequence)var26_69, false, 2, null)) {
-                    var27_72 = this;
-                    var28_77 = litebans.DatabaseMonitorService.PunishmentTableService[479] + var26_69;
-                    var29_82 = false;
-                    var27_72.BaseCoreGenericHandler.getLogger().severe(var28_77);
+                if (!ObjectUtilities.BaseCoreGenericHandler((Object)arg66, (Object)litebans.DatabaseMonitorService.PunishmentTableService[478]) && ((CharSequence)arg66).length() > 0 && !StringUtilities.BaseCoreGenericHandler((CharSequence)arg63, (CharSequence)arg66, false, 2, null)) {
+                    arg67 = this;
+                    arg68 = litebans.DatabaseMonitorService.PunishmentTableService[479] + arg66;
+                    arg67.BaseCoreGenericHandler.getLogger().severe(arg68);
                 }
-                if ((v7 = var24_58.getMessage()) == null) {
+                if ((v7 = arg64.getMessage()) == null) {
                     v7 = litebans.DatabaseMonitorService.PunishmentTableService[480];
                 }
-                if (!(((CharSequence)(var26_69 = v7)).length() > 0)) continue;
-                if (StringUtilities.LiteBansModule_31(var26_69, litebans.DatabaseMonitorService.PunishmentTableService[481], false, 2, null)) {
-                    this.plugin(var4_3);
+                if (!(((CharSequence)(arg66 = v7)).length() > 0)) continue;
+                if (StringUtilities.LiteBansModule_31(arg66, litebans.DatabaseMonitorService.PunishmentTableService[481], false, 2, null)) {
+                    this.plugin(arg1);
                     break;
                 }
-                if (StringUtilities.BaseCoreGenericHandler((CharSequence)var26_69, (CharSequence)litebans.DatabaseMonitorService.PunishmentTableService[482], false, 2, null)) {
+                if (StringUtilities.BaseCoreGenericHandler((CharSequence)arg66, (CharSequence)litebans.DatabaseMonitorService.PunishmentTableService[482], false, 2, null)) {
                     this.z();
                     break;
                 }
-                var23_51 = var26_69;
+                arg63 = arg66;
             }
             if (v1.BaseCoreGenericHandler(1)) {
-                var20_36.printStackTrace();
+                arg59.printStackTrace();
             }
             return;
         }
-        var20_35 = LiteBansModule_287.LiteBansModule_31((double)(System.nanoTime() - v2) / 1000.0 / 1000.0);
+        arg30 = LiteBansModule_287.LiteBansModule_31((double)(System.nanoTime() - v2) / 1000.0 / 1000.0);
         if (v1.BaseCoreGenericHandler(1)) {
-            var21_38 = this;
-            var22_44 = litebans.DatabaseMonitorService.PunishmentTableService[483] + var14_26 + litebans.DatabaseMonitorService.PunishmentTableService[484] + (String)var20_35 + litebans.DatabaseMonitorService.PunishmentTableService[485];
-            var23_52 = false;
-            if (!litebans.DatabaseMonitorService.c((DatabaseMonitorService)var21_38).get()) {
-                var24_59 = (PluginModule)var21_38;
-                var25_65 = 0;
-                var24_59.BaseCoreGenericHandler.getLogger().info((String)var22_44);
-            }
-        } else {
-            var21_38 = this;
-            var22_44 = litebans.DatabaseMonitorService.PunishmentTableService[486] + litebans.DatabaseMonitorService.CommandThrottleService.c(var5_4) + litebans.DatabaseMonitorService.PunishmentTableService[487] + (String)var20_35 + litebans.DatabaseMonitorService.PunishmentTableService[488];
-            var23_52 = false;
-            if (!litebans.DatabaseMonitorService.c((DatabaseMonitorService)var21_38).get()) {
-                var24_60 = (PluginModule)var21_38;
-                var25_65 = 0;
-                var24_60.BaseCoreGenericHandler.getLogger().info((String)var22_44);
-            }
-        }
+            arg32 = this;
+            arg69 = litebans.DatabaseMonitorService.PunishmentTableService[483] + arg26 + litebans.DatabaseMonitorService.PunishmentTableService[484] + (String)arg30 + litebans.DatabaseMonitorService.PunishmentTableService[485];
+            if (!litebans.DatabaseMonitorService.c((DatabaseMonitorService)arg32).get()) {
+                arg70 = (PluginModule)arg32;
+                arg70.BaseCoreGenericHandler.getLogger().info((String)arg69);
+} else {
+            arg32 = this;
+            arg69 = litebans.DatabaseMonitorService.PunishmentTableService[486] + litebans.DatabaseMonitorService.CommandThrottleService.c(arg7) + litebans.DatabaseMonitorService.PunishmentTableService[487] + (String)arg30 + litebans.DatabaseMonitorService.PunishmentTableService[488];
+            if (!litebans.DatabaseMonitorService.c((DatabaseMonitorService)arg32).get()) {
+                arg71 = (PluginModule)arg32;
+                arg71.BaseCoreGenericHandler.getLogger().info((String)arg69);
+}
         this.AsyncBackgroundTask_5.set(true);
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)var5_4, (Object)litebans.DatabaseMonitorService.PunishmentTableService[489])) {
+        if (ObjectUtilities.BaseCoreGenericHandler((Object)arg7, (Object)litebans.DatabaseMonitorService.PunishmentTableService[489])) {
             try {
-                var22_44 = this.plugin.getDataFolder();
-                var23_53 = litebans.DatabaseMonitorService.PunishmentTableService[490];
-                var24_61 = false;
-                var21_38 = new File((File)var22_44, var23_53);
-                if (!var21_38.exists() || YamlConfigProvider.AsyncBackgroundTask_5() == null) {
-                    var22_44 = this.plugin.getDataFolder();
-                    var23_53 = litebans.DatabaseMonitorService.PunishmentTableService[491];
-                    var24_61 = false;
-                    var21_38 = new File((File)var22_44, var23_53);
+                arg69 = this.plugin.getDataFolder();
+                arg72 = litebans.DatabaseMonitorService.PunishmentTableService[490];
+                arg32 = new File((File)arg69, arg72);
+                if (!arg32.exists() || YamlConfigProvider.AsyncBackgroundTask_5() == null) {
+                    arg69 = this.plugin.getDataFolder();
+                    arg72 = litebans.DatabaseMonitorService.PunishmentTableService[491];
+                    arg32 = new File((File)arg69, arg72);
                 }
-                var22_44 = this.plugin.BaseCoreGenericHandler((File)var21_38).g();
-                var22_44.LiteBansModule_31(litebans.DatabaseMonitorService.PunishmentTableService[492], var4_3.aW()).LiteBansModule_31(litebans.DatabaseMonitorService.PunishmentTableService[493], var4_3.LiteBansModule_6()).LiteBansModule_240();
+                arg69 = this.plugin.BaseCoreGenericHandler((File)arg32).g();
+                arg69.LiteBansModule_31(litebans.DatabaseMonitorService.PunishmentTableService[492], arg1.aW()).LiteBansModule_31(litebans.DatabaseMonitorService.PunishmentTableService[493], arg1.LiteBansModule_6()).LiteBansModule_240();
             }
-            catch (Exception var22_45) {
-                var22_45.printStackTrace();
-            }
-        }
-    }
+            catch (Exception arg73) {
+                arg73.printStackTrace();
+}
 
     private final void BaseCoreGenericHandler(DiscordWebhookClient eG2) {
         PluginModule module = this;
         String string = PunishmentTableService[494] + eG2.DatabaseMonitorService() + PunishmentTableService[495];
-        boolean flag = false;
         module.BaseCoreGenericHandler.getLogger().severe(string);
         module = this;
         string = PunishmentTableService[496] + eG2.DatabaseMonitorService() + PunishmentTableService[497];
@@ -2034,22 +1825,18 @@ lbl71:
             string = PunishmentTableService[499];
             flag = false;
             module.BaseCoreGenericHandler.getLogger().severe(string);
-        }
-    }
+}
 
     public final JarHandler BaseCoreGenericHandler(@NotNull ConfigService configService, @NotNull String string) {
         Object v0;
-        block1: {
+{
             Iterable iterable = this.LiteBansModule_31(configService);
             for (Object t2 : iterable) {
                 JarHandler jP2 = (JarHandler)t2;
-                boolean flag = false;
                 if (!ObjectUtilities.BaseCoreGenericHandler((Object)jP2.AsyncBackgroundTask_5(), (Object)string)) continue;
                 v0 = t2;
-                break block1;
-            }
-            v0 = null;
-        }
+                break;
+}
         return v0;
     }
 
@@ -2061,16 +1848,13 @@ lbl71:
             string2 = PunishmentTableService[546];
         }
         Object object = args;
-        boolean flag = false;
         Object object2 = object;
         Collection collection = new ArrayList(((String[])object).length);
-        boolean flag2 = false;
         int n2 = ((String[])object2).length;
         for (n = 0; n < n2; ++n) {
             String string3;
             String string4 = string3 = object2[n];
             Collection collection2 = collection;
-            boolean flag3 = false;
             collection2.add(string2 + PunishmentTableService[547] + kL2 + '_' + string4 + PunishmentTableService[548] + kL2 + PunishmentTableService[549] + string4 + ')');
         }
         object = (List)collection;
@@ -2081,8 +1865,7 @@ lbl71:
             String string5 = (String)((Object)collection);
             n = 0;
             statement.execute(string5);
-        }
-    }
+}
 
     public final void BroadcastService() {
         this.plugin(arg_0 -> DatabaseMonitorService.BaseCoreGenericHandler(this, arg_0));
@@ -2130,20 +1913,16 @@ lbl71:
         ChatFormatter chatFormatter = MessageHandler.BaseCoreGenericHandler;
         ObjectUtilities.BaseCoreGenericHandler(sender);
         CommandSenderWrapper jv_03 = sender;
-        boolean flag = false;
         try {
             chatFormatter.LiteBansModule_31().set(jv_03);
-            boolean flag2 = false;
             try {
                 DatabaseMonitorService w3 = w2;
-                boolean flag3 = false;
                 try {
                     LiteBansModule_82 ch2 = w3.LiteBansModule_194();
                     Closeable closeable = ch2;
                     Throwable throwable = null;
                     try {
                         Object object = (LiteBansModule_82)closeable;
-                        boolean flag4 = false;
                         eo_02.BaseCoreGenericHandler(ch2);
                         object = KotlinUnitHandler.BaseCoreGenericHandler;
                     }
@@ -2153,34 +1932,28 @@ lbl71:
                     }
                     finally {
                         BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-                    }
-                }
+}
                 catch (SQLException sQLException) {
                     if (!w3.LiteBansModule_31(sQLException)) {
                         throw sQLException;
-                    }
-                }
-            }
+}
             catch (LiteBansException bi2) {
                 CommandSenderWrapper jv_04 = sender;
                 CharSequence charSequence = String.valueOf(bi2.BaseCoreGenericHandler());
-                boolean flag5 = false;
                 ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, jv_04, charSequence, null, 4, null);
             }
             catch (SQLException sQLException) {
                 w2.BaseCoreGenericHandler(sQLException);
-            }
-        }
+}
         finally {
             chatFormatter.LiteBansModule_31().remove();
-        }
-    }
+}
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     private static final void BaseCoreGenericHandler(DatabaseMonitorService args, boolean flag) {
-        block51: {
+{
             boolean flag2;
             LiteBansModule_82 ch2;
             boolean flag3;
@@ -2191,7 +1964,6 @@ lbl71:
             boolean flag4;
             String[] filteredArgs;
             String[] parsedArgs = args;
-            boolean flag5 = false;
             try {
                 filteredArgs = parsedArgs;
                 flag4 = false;
@@ -2210,10 +1982,8 @@ lbl71:
                             Throwable throwable2 = null;
                             try {
                                 Object object2 = (Statement)autoCloseable;
-                                boolean flag6 = false;
                                 if (!flag) {
                                     String[] cmdArgs = parsedArgs;
-                                    boolean flag7 = false;
                                     if (cmdArgs.A() <= 674) {
                                         CharSequence[] charSequenceArray;
                                         String[] stringArray5;
@@ -2222,7 +1992,6 @@ lbl71:
                                         if (CommandThrottleService.LiteBansModule_31(cmdArgs.PunishmentTableService().LiteBansModule_194().ElementsHandler())) {
                                             try {
                                                 stringArray5 = cmdArgs;
-                                                boolean flag8 = false;
                                                 try {
                                                     charSequenceArray = stringArray5.LiteBansModule_194();
                                                     Closeable closeable2 = (Closeable)charSequenceArray;
@@ -2233,15 +2002,12 @@ lbl71:
                                                         LiteBansModule_82 object3 = (LiteBansModule_82)closeable2;
                                                         boolean object4 = false;
                                                         String[] stringArray6 = charSequenceArray;
-                                                        boolean bl9 = false;
                                                         ResultSet resultSet = LiteBansModule_184.AsyncBackgroundTask_5(stringArray6.c((CharSequence)PunishmentTableService[552]));
                                                         LiteBansModule_144 dy_03 = dy_02;
                                                         int n = 1;
-                                                        boolean bl10 = false;
                                                         if (resultSet.next()) {
                                                             String string3;
                                                             ResultSet resultSet2 = resultSet;
-                                                            boolean bl11 = false;
                                                             try {
                                                                 string3 = resultSet2.getString(n);
                                                             }
@@ -2264,18 +2030,14 @@ lbl71:
                                                     }
                                                     finally {
                                                         BlockHandler.BaseCoreGenericHandler(closeable2, throwable3);
-                                                    }
-                                                }
+}
                                                 catch (SQLException sQLException) {
                                                     if (!stringArray5.LiteBansModule_31(sQLException)) {
                                                         throw sQLException;
-                                                    }
-                                                }
-                                            }
+}
                                             catch (SQLException sQLException) {
                                                 cmdArgs.BaseCoreGenericHandler(sQLException);
-                                            }
-                                        }
+}
                                         String[] stringArray7 = new String[]{PunishmentTableService[554], PunishmentTableService[555], PunishmentTableService[556], PunishmentTableService[557], PunishmentTableService[558], PunishmentTableService[559], PunishmentTableService[560], PunishmentTableService[561], PunishmentTableService[562]};
                                         stringArray5 = stringArray7;
                                         charSequenceArray = new String[]{PunishmentTableService[563], PunishmentTableService[564], PunishmentTableService[565]};
@@ -2287,16 +2049,12 @@ lbl71:
                                                     continue;
                                                 }
                                                 CharSequence charSequence2 = charSequence;
-                                                boolean bl12 = false;
                                                 if (!(charSequence2 == BansHandler_2.g)) continue;
                                                 ((DatabaseMonitorService)cmdArgs).BaseCoreGenericHandler(stringArray7, (Statement)object2, (BansHandler_2)charSequence, (String)dy_02.BaseCoreGenericHandler);
-                                            }
-                                        }
+}
                                         catch (SQLException sQLException) {
                                             ConfigService.BaseCoreGenericHandler(cmdArgs.PunishmentTableService(), sQLException, 0, 2, null);
-                                        }
-                                    }
-                                }
+}
                                 object2 = KotlinUnitHandler.BaseCoreGenericHandler;
                             }
                             catch (Throwable throwable5) {
@@ -2305,8 +2063,7 @@ lbl71:
                             }
                             finally {
                                 CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable2);
-                            }
-                        }
+}
                         object = KotlinUnitHandler.BaseCoreGenericHandler;
                     }
                     catch (Throwable throwable6) {
@@ -2315,19 +2072,16 @@ lbl71:
                     }
                     finally {
                         BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-                    }
-                }
+}
                 catch (SQLException sQLException) {
                     if (!filteredArgs.LiteBansModule_31(sQLException)) {
                         throw sQLException;
-                    }
-                }
-            }
+}
             catch (Exception exception) {
                 parsedArgs.BaseCoreGenericHandler(exception);
             }
             try {
-                if (flag) break block51;
+                if (flag) break;
                 filteredArgs = parsedArgs;
                 flag4 = false;
                 try {
@@ -2348,19 +2102,14 @@ lbl71:
                     }
                     finally {
                         BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-                    }
-                }
+}
                 catch (SQLException sQLException) {
                     if (!filteredArgs.LiteBansModule_31(sQLException)) {
                         throw sQLException;
-                    }
-                }
-            }
+}
             catch (Throwable throwable8) {
                 parsedArgs.BaseCoreGenericHandler(throwable8);
-            }
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler(DatabaseMonitorService w2, LiteBansModule_82 ch2, boolean flag) {
         w2.BaseCoreGenericHandler(ch2, flag);
@@ -2385,17 +2134,14 @@ lbl71:
             String string3 = PunishmentTableService[572];
             Object object3 = BansHandler_2.i;
             String[] args = (String[])PunishmentTableService[573];
-            boolean flag = false;
             ResultSet resultSet = LiteBansModule_184.c(ch2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.e(PunishmentTableService[574] + args + PunishmentTableService[575] + object3), (Number)1))));
             if (resultSet.next()) {
                 w2.BroadcastService = resultSet.getInt(PunishmentTableService[576]) > 0;
                 w2.DatabaseMonitorService = resultSet.getString(PunishmentTableService[577]);
                 if (!ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)resultSet.getString(PunishmentTableService[578]))) {
                     object3 = BansHandler_2.i;
-                    boolean flag2 = false;
                     LiteBansModule_184.LiteBansModule_31(ch2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.c(SQLiteDriverHandler.e(PunishmentTableService[579] + object3), PunishmentTableService[580] + string + PunishmentTableService[581] + string2 + '\''))));
-                }
-            } else {
+} else {
                 boolean flag3;
                 char c;
                 int n;
@@ -2405,10 +2151,7 @@ lbl71:
                 flag = false;
                 Object object4 = args;
                 char c10 = ',';
-                boolean flag4 = false;
                 String[] filteredArgs = object4;
-                boolean flag5 = false;
-                int n2 = 0;
                 for (n = 0; n < filteredArgs.length(); ++n) {
                     char c11 = c = filteredArgs.charAt(n);
                     flag3 = false;
@@ -2420,7 +2163,6 @@ lbl71:
                 if (n3 > 0) {
                     StringBuilder stringBuilder = new StringBuilder(n3 * 2);
                     Iterable iterable = new LiteBansModule_166(0, n3);
-                    boolean flag6 = false;
                     Iterator iterator = iterable.iterator();
                     while (iterator.hasNext()) {
                         n = n2 = ((LiteBansModule_290)iterator).LiteBansModule_31();
@@ -2446,15 +2188,13 @@ lbl71:
                     ((LiteBansModule_60)object3).BaseCoreGenericHandler(string5);
                 }
                 LiteBansModule_184.LiteBansModule_31((LiteBansModule_60)object4);
-            }
-        }
+}
         catch (Exception exception) {
             w2.BaseCoreGenericHandler(exception);
         }
         if (w2.PunishmentTableService().LiteBansModule_194().e() > 0 && !w2.BroadcastService) {
             object2 = ch2.e().HoverTextFormatter();
             object = MessageKey.LiteBansModule_117;
-            boolean flag = false;
             ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)object2, (CharSequence)object, null, 4, null);
         }
         return KotlinUnitHandler.BaseCoreGenericHandler;
@@ -2483,6 +2223,5 @@ lbl71:
 
     private static final void r() {
         PunishmentTableService = new String[]{"UTC", "Database is slow! Establishing connection took ", " ", ".version", "SHA-512", "\u0001", "", "sort", "00", "01:", "Table upgrade checks ", "Connection is closed. Only open connections can be used to upgrade ", "", ":(?!(//))", "{}", "", "Interrupted during connection acquisition", "Unfortunately, BaseCoreGenericHandler request has failed because your database server did not respond within ", " seconds. (Socket timeout)", "An unexpected database error has ", "max_connections InitializerHandler_3 config.yml is smaller than 5 (max=", ")! This can cause connection pool exhaustion (\"Connection is not available, request timed out ...\") + ", "Unknown column '", "' InitializerHandler_3 '", "Column '", "' not ", ": Column \"", "\" not found", "ALTER command denied to user ", "WARNING: config.yml was not loaded successfully, errors were encountered. Check startup logs for more ", "LiteBansModule_243", "The database is read only", "[!!!] Database is read-only. This indicates that LiteBans does not have write access to its own database!", "Exception InitializerHandler_3 exception handler", "Original exception:", "useSSL=false", "Database SSL connection support is disabled. Enabling SSL should fix this ", "Change \"useSSL=false\" to \"useSSL=true\" InitializerHandler_3 config.yml, and then run \"litebans reload\" + ", "Your database user (", ") is lacking ALTER permission for the ", " database!", "Without this permission, LiteBans cannot upgrade the ", "Please add the necessary permissions!", "The required permissions are SELECT, CREATE, INSERT, UPDATE, DELETE, ALTER, ", "Executing full upgrade check InitializerHandler_3 response to 'Unknown column' ", "litebans", "[!!!] An 'unknown column' exception likely indicates that tables could not be upgraded successfully - consider the following exception CommandExitException BaseCoreGenericHandler consequence of BaseCoreGenericHandler startup error, not the original ", "", "**Connection pool exhaustion detected** (open=", ", max=", ", logins=", "There have been ", " API calls to prepareStatement() + ", "Be aware that plugins which use the LiteBans API incorrectly can create BaseCoreGenericHandler connection leak, which inevitably leads to exhaustion after ", " connections have been ", "Plugin(AsyncBackgroundTask_21) which may be using LiteBans API: [", ", ", "Loading: ", "> ", ".jar", ".jar", "lib", ".jar", ".jar", "Download URL for ", ": ", "Downloading ", ".. + ", "Failed to download ", "Downloaded ", " ", "Something ", "What happened?", "Loaded ", "Failed to load ", "Attempting to recover from this error.. + ", "File removed: ", "Failed to load from ", "*", "SELECT ", " FROM ", "SQLiteDriverHandler_4", "name", "uuid", "[Sync] Server limit reached (", " servers). Resetting server ", "DROP TABLE ", "Main server thread is not permitted to perform database ", "", "Interrupted during connection", "SQLSTATE(08S01)", "Socket closed", "Connection is closed", "closed connection", "LiteBansModule_243", "SQLiteDriverHandler_4", "", "pgsql", "LiteBansModule_243", " SMALLINT NOT NULL", " TINYINT", " NOT NULL", "LiteBansModule_31", "pgsql", " BYTEA NOT NULL", "BINARY", "BLOB", ")NOT NULL", "SQLiteDriverHandler_4", "PRIMARY KEY(", "SQLiteDriverHandler_4", "sqlite", " INTEGER PRIMARY KEY AUTOINCREMENT", " SERIAL", "version", "", " NOT NULL", " VARCHAR(", " VARCHAR(", "build", "", " NOT NULL", " VARCHAR(", " VARCHAR(", "timezone", " DEFAULT '+00:00'", " NOT NULL", " VARCHAR(", " VARCHAR(", "accept", " DEFAULT 0", "pgsql", "LiteBansModule_243", " SMALLINT NOT NULL", " TINYINT", " NOT NULL", "SQLiteDriverHandler_4", "PRIMARY KEY(", "SQLiteDriverHandler_4", "sqlite", " INTEGER PRIMARY KEY AUTOINCREMENT", " SERIAL", "date", " DEFAULT CURRENT_TIMESTAMP", " TIMESTAMP", "name", "", " VARCHAR(", " VARCHAR(", "uuid", "", " VARCHAR(", " VARCHAR(", "ip", "", " VARCHAR(", " VARCHAR(", "SQLiteDriverHandler_4", "PRIMARY KEY(", "SQLiteDriverHandler_4", "sqlite", " INTEGER PRIMARY KEY AUTOINCREMENT", " SERIAL", "name", "", " NOT NULL", " VARCHAR(", " VARCHAR(", "uuid", "", " NOT NULL", " VARCHAR(", " VARCHAR(", "date", " DEFAULT CURRENT_TIMESTAMP", " TIMESTAMP", "SQLiteDriverHandler_4", "PRIMARY KEY(", "SQLiteDriverHandler_4", "sqlite", " INTEGER PRIMARY KEY AUTOINCREMENT", " SERIAL", "info", " INT", " NOT NULL", "msg", "", " NOT NULL", " VARCHAR(", " VARCHAR(", "time", " DEFAULT CURRENT_TIMESTAMP", " TIMESTAMP", "SQLiteDriverHandler_4", "PRIMARY KEY(", "SQLiteDriverHandler_4", "", "pgsql", "LiteBansModule_243", " SMALLINT NOT NULL", " TINYINT", " NOT NULL", "LiteBansModule_31", "pgsql", " BYTEA NOT NULL", "BINARY", "BLOB", ")NOT NULL", "SQLiteDriverHandler_4", "PRIMARY KEY(", "SQLiteDriverHandler_4", "sqlite", " INTEGER PRIMARY KEY AUTOINCREMENT", " SERIAL", "version", "", " NOT NULL", " VARCHAR(", " VARCHAR(", "build", "", " NOT NULL", " VARCHAR(", " VARCHAR(", "timezone", " DEFAULT '+00:00'", " NOT NULL", " VARCHAR(", " VARCHAR(", "accept", " DEFAULT 0", "pgsql", "LiteBansModule_243", " SMALLINT NOT NULL", " TINYINT", " NOT NULL", "SQLiteDriverHandler_4", "PRIMARY KEY(", "SQLiteDriverHandler_4", "sqlite", " INTEGER PRIMARY KEY AUTOINCREMENT", " SERIAL", "uuid", "pgsql", " BYTEA NOT NULL", "BINARY", ")NOT NULL", "type", "", "pgsql", "LiteBansModule_243", " SMALLINT NOT NULL", " TINYINT", " NOT NULL", "SQLiteDriverHandler_4", "PRIMARY KEY(", "Database connection fully initialized (", " ms) + ", "SQLiteDriverHandler_4", "sqlite", " INTEGER PRIMARY KEY AUTOINCREMENT", " SERIAL", "date", " DEFAULT CURRENT_TIMESTAMP", " TIMESTAMP", "name", "", " VARCHAR(", " VARCHAR(", "uuid", "", " VARCHAR(", " VARCHAR(", "ip", "", " VARCHAR(", " VARCHAR(", "SQLiteDriverHandler_4", "PRIMARY KEY(", "SQLiteDriverHandler_4", "sqlite", " INTEGER PRIMARY KEY AUTOINCREMENT", " SERIAL", "name", "", " NOT NULL", " VARCHAR(", " VARCHAR(", "uuid", "", " NOT NULL", " VARCHAR(", " VARCHAR(", "date", " DEFAULT CURRENT_TIMESTAMP", " TIMESTAMP", "SQLiteDriverHandler_4", "PRIMARY KEY(", "SQLiteDriverHandler_4", "sqlite", " INTEGER PRIMARY KEY AUTOINCREMENT", " SERIAL", "info", " INT", " NOT NULL", "msg", "", " NOT NULL", " VARCHAR(", " VARCHAR(", "time", " DEFAULT CURRENT_TIMESTAMP", " TIMESTAMP", "SQLiteDriverHandler_4", "PRIMARY KEY(", "SQLiteDriverHandler_4", "", "pgsql", "LiteBansModule_243", " SMALLINT NOT NULL", " TINYINT", " NOT NULL", "LiteBansModule_31", "pgsql", " BYTEA NOT NULL", "BINARY", "BLOB", ")NOT NULL", "SQLiteDriverHandler_4", "PRIMARY KEY(", "SQLiteDriverHandler_4", "sqlite", " INTEGER PRIMARY KEY AUTOINCREMENT", " SERIAL", "version", "", " NOT NULL", " VARCHAR(", " VARCHAR(", "build", "", " NOT NULL", " VARCHAR(", " VARCHAR(", "timezone", " DEFAULT '+00:00'", " NOT NULL", " VARCHAR(", " VARCHAR(", "accept", " DEFAULT 0", "pgsql", "LiteBansModule_243", " SMALLINT NOT NULL", " TINYINT", " NOT NULL", "SQLiteDriverHandler_4", "PRIMARY KEY(", "SQLiteDriverHandler_4", "sqlite", " INTEGER PRIMARY KEY AUTOINCREMENT", " SERIAL", "uuid", "pgsql", " BYTEA NOT NULL", "BINARY", ")NOT NULL", "type", "", "pgsql", "LiteBansModule_243", " SMALLINT NOT NULL", " TINYINT", " NOT NULL", "SQLiteDriverHandler_4", "PRIMARY KEY(", "*", "SELECT ", " FROM ", "uuid=?", "Failed ", " WHERE ", "name,uuid", "?", "?,", "INSERT INTO ", ")VALUES(", "name", "[Sync] Updating stored server name: \"", "\" -> \"", "UPDATE ", "name=?", "uuid=?", "Failed ", " WHERE ", "UPDATE ", "server_scope=?", "server_scope=?", "Failed ", " WHERE ", "UPDATE ", "server_origin=?", "server_origin=?", "Failed ", " WHERE ", "[Sync] Server limit reached (", " servers). Resetting server ", "DROP TABLE ", "sqlite", "Unknown SQL driver '", "'. Please use one of these drivers: ", "LiteBansModule_243", "sqlite", ":3306", "pgsql", "postgresql", ":5432", "sqlite", "LiteBansModule_243", "pgsql", "litebans", "litebans.sqlite", "postgresql", "jdbc:", "://", "LiteBansModule_243", "useSSL=false", "useSSL=false&serverTimezone=UTC", "sqlite", "?useSSL=", ";useSSL=", "LiteBansModule_243", ";TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0", "pgsql", "postgresql", "Connecting to database.. + ", "litebans-pool", "user", "password", "connectTimeout", "socketTimeout", "timezone", "UTC", "utf-8", "utf8mb4_unicode_ci", "useUnicode", "true", "characterEncoding", "characterSetResults", "connectionCollation", "cachePrepStmts", "true", "useServerPrepStmts", "cacheResultSetMetadata", "cacheServerConfiguration", "elideSetAutoCommits", "useLocalSessionState", "useLocalTransactionState", "true", "maintainTimeStats", "alwaysSendSetIsolation", "false", "sqlite", "SELECT 1", "LiteBansModule_243", "SET IGNORECASE TRUE", "", "Failed to connect to [", "] + ", "LiteBansModule_243", "[!!] No username and password has been provided InitializerHandler_3 the configuration!", "Error: ", "", "", "Connection is not available, request timed out", "The driver has not received any packets from the ", "", "Unknown host: ", "Communications link failure", "Error: ", "", "Access denied for user", "Public Key Retrieval is not allowed", "Connected to [", "] successfully (", " ms) + ", "Connected to ", " database successfully (", " ms) + ", "LiteBansModule_243", "LiteBansModule_243.yml", "LiteBansModule_243.json", "user", "password", "[!] Access to the database \"", "\" was ", "[!] Ensure that the database \"", "\" has been created and that you have granted permission to access this ", "litebans", "[!!] Your database is named \"litebans\"; this is the default database name. Ensure that you have defined the correct database ", ":3306", "pgsql", "postgresql", ":5432", ":3306", "pgsql", "postgresql", ":5432", "", "", "SELECT @@version", "", "template", "ipban_wildcard", "uuid", "ip", "banned_by_uuid", "time", "until", "ipban", StringDecryptor.BaseCoreGenericHandler("\u2bb3\u2bb1\u2ba6\u2bbb\u2ba4\u2bb7", 0x22DD2BD2), "uuid", "name", "ip", "CONSOLE", "CONSOLE", "#", "", "SELECT @@version", "", "template", "ipban_wildcard", "uuid", "ip", "banned_by_uuid", "time", "until", "ipban", "active", "uuid", "name", "ip", "CREATE INDEX IF NOT EXISTS", "", "", "", "CREATE INDEX", " idx_", " ON ", " (", "", "", "SELECT @@version", "", "template", "ipban_wildcard", "uuid", "ip", "banned_by_uuid", "time", "until", "ipban", "active", "uuid", "name", "ip", "CONSOLE", "CONSOLE", "#", "SELECT NOW() CommandExitException now", "now", "UTC", "UTC", "*", "SELECT ", " FROM ", "accept", "timezone", "build", "UPDATE ", "version='", "',build='", "version,build,timezone", "?", "?,", "INSERT INTO ", ")VALUES(", "LiteBansModule_21 ", ".executeQuery(", "LiteBansModule_21 ", ".executeQuery(", "LiteBansModule_21 "};
-    }
 }
 

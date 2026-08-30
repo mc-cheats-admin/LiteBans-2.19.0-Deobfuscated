@@ -20,8 +20,7 @@ JsonDeserializer {
             }
             if (jsonPrimitive.isNumber() && (number = jsonPrimitive.getAsNumber()) instanceof Byte) {
                 return number.byteValue() != 0;
-            }
-        }
+}
         return false;
     }
 
@@ -49,8 +48,7 @@ JsonDeserializer {
         }
         if (ka_02.r()) {
             jsonObject.addProperty("font", ka_02.g());
-        }
-    }
+}
 
     /*
      * Exception decompiling
@@ -58,7 +56,7 @@ JsonDeserializer {
     public LiteBansModule_368 BaseCoreGenericHandler(JsonElement v1, Type v2, JsonDeserializationContext v3) {
         /*
          * This method has failed to decompile.  When submitting BaseCoreGenericHandler bug report, please provide this stack trace, and (if you hold appropriate legal rights) the relevant class file.
-         * 
+         *
          * org.benf.cfr.reader.bytecode.analysis.opgraph.op4rewriters.SwitchStringRewriter$TooOptimisticMatchException
          *     LiteBansModule_21 org.benf.cfr.reader.bytecode.analysis.opgraph.op4rewriters.SwitchStringRewriter.getString(SwitchStringRewriter.java:404)
          *     LiteBansModule_21 org.benf.cfr.reader.bytecode.analysis.opgraph.op4rewriters.SwitchStringRewriter.access$600(SwitchStringRewriter.java:53)
@@ -100,7 +98,5 @@ JsonDeserializer {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"bold", "italic", "underlined", "strikethrough", "obfuscated", "color", "shadow_color", "font", "bold", "italic", "underlined", "strikethrough", "obfuscated", "color", "shadow_color", "font"};
-    }
-
-    }
+}
 

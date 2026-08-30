@@ -11,14 +11,12 @@ public final class TemporaryplayerHandler {
     public static final void BaseCoreGenericHandler(@NotNull PluginModule module, @Nullable Object object) {
         if (object != null) {
             ProtocolLibrary.getProtocolManager().addPacketListener((PacketListener)object);
-        }
-    }
+}
 
     public static final void LiteBansModule_31(@NotNull PluginModule module, @Nullable Object object) {
         if (object != null) {
             ProtocolLibrary.getProtocolManager().removePacketListener((PacketListener)object);
-        }
-    }
+}
 
     public static final boolean LiteBansModule_31(@NotNull Player player) {
         return player.getClass().getSimpleName().length() > 8 && StringUtilities.LiteBansModule_31(player.getClass().getSimpleName(), "TemporaryPlayer", false, 2, null);
@@ -39,7 +37,5 @@ public final class TemporaryplayerHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"TemporaryPlayer"};
-    }
-
-    }
+}
 

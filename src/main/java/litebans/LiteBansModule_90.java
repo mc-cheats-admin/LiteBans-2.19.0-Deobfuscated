@@ -45,7 +45,6 @@ implements LiteBansModule_158 {
     @Override
     public Object c(@NotNull String string) {
         Object object = this;
-        boolean flag = false;
         object = string;
         Optional optional = LiteBansModule_90.BaseCoreGenericHandler((LiteBansModule_90)object, null, (int)1, null).c.getPluginManager().getPlugin(((String)object).toLowerCase(Locale.ENGLISH));
         return optional.isPresent() && ((PluginContainer)optional.get()).getInstance().isPresent() ? ((PluginContainer)optional.get()).getInstance().get() : null;
@@ -53,16 +52,12 @@ implements LiteBansModule_158 {
 
     public List LiteBansModule_31() {
         LiteBansModule_90 cm_02 = this;
-        boolean flag = false;
         Iterable iterable = LiteBansModule_90.BaseCoreGenericHandler((LiteBansModule_90)cm_02, null, (int)1, null).c.getAllServers();
-        boolean flag2 = false;
         Iterable iterable2 = iterable;
         Collection collection = new ArrayList(CollectionUtilities.BaseCoreGenericHandler(iterable, 10));
-        boolean flag3 = false;
         for (Object t2 : iterable2) {
             RegisteredServer registeredServer = (RegisteredServer)t2;
             Collection collection2 = collection;
-            boolean flag4 = false;
             collection2.add(registeredServer.getServerInfo().getName());
         }
         return (List)collection;
@@ -71,7 +66,6 @@ implements LiteBansModule_158 {
     @Override
     public String LiteBansModule_31() {
         LiteBansModule_90 cm_02 = this;
-        boolean flag = false;
         return LiteBansModule_90.BaseCoreGenericHandler((LiteBansModule_90)cm_02, null, (int)1, null).c.getVersion().getVersion();
     }
 
@@ -81,12 +75,9 @@ implements LiteBansModule_158 {
         Collection collection;
         PluginContainer pluginContainer;
         LiteBansModule_90 cm_02 = this;
-        boolean flag2 = false;
         Iterable iterable = LiteBansModule_90.BaseCoreGenericHandler((LiteBansModule_90)cm_02, null, (int)1, null).c.getPluginManager().getPlugins();
-        boolean flag3 = false;
         Iterable iterable2 = iterable;
         Collection collection2 = new ArrayList(CollectionUtilities.BaseCoreGenericHandler(iterable, 10));
-        boolean flag4 = false;
         for (Object t2 : iterable2) {
             pluginContainer = (PluginContainer)t2;
             collection = collection2;
@@ -100,25 +91,22 @@ implements LiteBansModule_158 {
         flag4 = false;
         for (Object t2 : iterable2) {
             boolean flag5;
-            block7: {
+{
                 pluginContainer = (PluginDescription)t2;
                 flag = false;
                 Iterable iterable3 = pluginContainer.getDependencies();
-                boolean flag6 = false;
                 if (iterable3 instanceof Collection && ((Collection)iterable3).isEmpty()) {
                     flag5 = false;
                 } else {
                     for (Object t3 : iterable3) {
                         PluginDependency pluginDependency = (PluginDependency)t3;
-                        boolean flag7 = false;
                         String string2 = string;
                         if (!ObjectUtilities.BaseCoreGenericHandler((Object)pluginDependency.getId(), (Object)string2.toLowerCase(Locale.ENGLISH))) continue;
                         flag5 = true;
-                        break block7;
+                        break;
                     }
                     flag5 = false;
-                }
-            }
+}
             if (!flag5) continue;
             collection2.add(t2);
         }
@@ -166,9 +154,7 @@ implements LiteBansModule_158 {
             ((ServerPreConnectEvent)object).setResult(ServerPreConnectEvent.ServerResult.denied());
             if (flag && !((ServerPreConnectEvent)object).getPlayer().getCurrentServer().isPresent()) {
                 ((ServerPreConnectEvent)object).getPlayer().disconnect((Component)this.plugin(charSequence));
-            }
-        }
-    }
+}
 
     public final TextComponent BaseCoreGenericHandler(@NotNull CharSequence charSequence) {
         return LegacyComponentSerializer.legacySection().deserialize(((Object)charSequence).toString());
@@ -180,7 +166,6 @@ implements LiteBansModule_158 {
             throw new UnsupportedOperationException();
         }
         Player player = ((ServerPreConnectEvent)object).getPlayer();
-        boolean flag2 = false;
         return new LiteBansModule_95(player.getUsername(), player.getUniqueId().toString(), player.getRemoteAddress().getAddress().getHostAddress());
     }
 
@@ -200,7 +185,5 @@ implements LiteBansModule_158 {
     @Override
     public Collection BaseCoreGenericHandler() {
         return this.LiteBansModule_31();
-    }
-
-    }
+}
 

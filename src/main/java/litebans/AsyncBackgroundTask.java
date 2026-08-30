@@ -14,6 +14,5 @@ implements Runnable {
     public final void run() {
         ServerSyncService u2 = (ServerSyncService)this.LiteBansModule_31.LiteBansModule_240().BaseCoreGenericHandler(ServerSyncService.class);
         u2.LiteBansModule_31(this.plugin);
-    }
 }
 

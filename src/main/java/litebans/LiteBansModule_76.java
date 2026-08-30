@@ -31,13 +31,11 @@ public class LiteBansModule_76 {
                 for (n5 = n4; n5 < n2; ++n5) {
                     if (byArray[n + n5] == 0) continue;
                     return false;
-                }
-            } else {
+} else {
                 for (n5 = n2; n5 < n4; ++n5) {
                     if (byArray2[n3 + n5] == 0) continue;
                     return false;
-                }
-            }
+}
             return true;
         }
         return false;
@@ -49,6 +47,5 @@ public class LiteBansModule_76 {
             return false;
         }
         return true;
-    }
 }
 

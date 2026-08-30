@@ -20,6 +20,5 @@ public final class LiteBansModule_4 {
         LiteBansModule_31 = 6869910769927265980L;
         BaseCoreGenericHandler = new LiteBansModule_374(null);
         c = new LiteBansModule_102(LiteBansModule_4::BaseCoreGenericHandler);
-    }
 }
 

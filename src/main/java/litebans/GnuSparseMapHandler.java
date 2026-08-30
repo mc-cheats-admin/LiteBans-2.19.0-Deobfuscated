@@ -59,8 +59,7 @@ extends LiteBansModule_153 {
         if (this.PunishmentTableService != null) {
             for (InputStream inputStream : this.PunishmentTableService) {
                 inputStream.close();
-            }
-        }
+}
         this.i.close();
     }
 
@@ -170,12 +169,10 @@ extends LiteBansModule_153 {
             long l5 = l3 * (long)this.LiteBansModule_401 - this.g;
             long l7 = LiteBansModule_341.BaseCoreGenericHandler(this.i, l5);
             this.LiteBansModule_31(l7);
-        }
-    }
+}
 
     protected byte[] Utf8Handler_2() {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        int n = 0;
         while ((n = this.read(this.Utf8Handler_2)) >= 0) {
             byteArrayOutputStream.write(this.Utf8Handler_2, 0, n);
         }
@@ -289,12 +286,10 @@ extends LiteBansModule_153 {
         int n;
         HashMap<String, String> hashMap = new HashMap<String, String>(this.GnuSparseMapHandler);
         Long l3 = null;
-        block0: do {
-            int n2 = 0;
-            int n3 = 0;
+do {
             while ((n = inputStream.read()) != -1) {
                 ++n3;
-                if (n == 10) continue block0;
+                if (n == 10) continue;
                 if (n == 32) {
                     ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                     while ((n = inputStream.read()) != -1) {
@@ -304,7 +299,7 @@ extends LiteBansModule_153 {
                             int n4 = n2 - n3;
                             if (n4 == 1) {
                                 hashMap.remove(string);
-                                continue block0;
+                                continue;
                             }
                             byte[] byArray = new byte[n4];
                             int n5 = LiteBansModule_341.BaseCoreGenericHandler(inputStream, byArray);
@@ -319,22 +314,21 @@ extends LiteBansModule_153 {
                                 }
                                 l3 = Long.valueOf(string2);
                             }
-                            if (!string.equals("GNU.sparse.numbytes")) continue block0;
+                            if (!string.equals("GNU.sparse.numbytes")) continue;
                             if (l3 == null) {
                                 throw new IOException("Failed to read Paxheader.GNU.sparse.offset is expected before GNU.sparse.numbytes shows ");
                             }
                             list.add(new LiteBansModule_292(l3, Long.parseLong(string2)));
                             l3 = null;
-                            continue block0;
+                            continue;
                         }
                         byteArrayOutputStream.write((byte)n);
                     }
-                    continue block0;
+                    continue;
                 }
                 n2 *= 10;
                 n2 += n - 48;
-            }
-        } while (n != -1);
+} while (n != -1);
         if (l3 != null) {
             list.add(new LiteBansModule_292(l3, 0L));
         }
@@ -372,7 +366,6 @@ extends LiteBansModule_153 {
     }
 
     private final void BaseCoreGenericHandler() {
-        boolean flag = true;
         boolean flag2 = this.i.markSupported();
         if (flag2) {
             this.i.mark(this.LiteBansModule_401);
@@ -384,16 +377,13 @@ extends LiteBansModule_153 {
             if (flag && flag2) {
                 this.plugin((long)this.LiteBansModule_401);
                 this.i.reset();
-            }
-        }
-    }
+}
 
     @Override
     public int read(byte[] byArray, int n, int n2) {
         if (n2 == 0) {
             return 0;
         }
-        int n3 = 0;
         if (this.e() || this.GnuSparseMapHandler()) {
             return -1;
         }
@@ -457,8 +447,7 @@ extends LiteBansModule_153 {
         if (l3 > 0L) {
             long l5 = LiteBansModule_341.BaseCoreGenericHandler(this.i, (long)this.r - l3);
             this.LiteBansModule_31(l5);
-        }
-    }
+}
 
     private final void i() {
         Object object;
@@ -485,11 +474,8 @@ extends LiteBansModule_153 {
                     this.PunishmentTableService.add(new LiteBansModule_279(this.i, i72.LiteBansModule_31()));
                 }
                 l3 = i72.BaseCoreGenericHandler() + i72.LiteBansModule_31();
-            }
-        }
+}
         if (this.PunishmentTableService.size() > 0) {
             this.BroadcastService = 0;
-        }
-    }
 }
 

@@ -73,6 +73,5 @@ public class LiteBansModule_316 {
             return false;
         }
         return this.c() != null && this.c().equals(iq_02.c());
-    }
 }
 

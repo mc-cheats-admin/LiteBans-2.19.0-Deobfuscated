@@ -45,7 +45,6 @@ public final class DefaultHandler {
             return false;
         }
         DefaultHandler e12 = this;
-        boolean flag = false;
         LiteBansModule_158 ec_02 = e12.BaseCoreGenericHandler().c().i();
         ObjectUtilities.LiteBansModule_31(ec_02, "");
         BungeecordHandler_2 ao_02 = (BungeecordHandler_2)ec_02;
@@ -73,9 +72,7 @@ public final class DefaultHandler {
                         String string6 = (String)iterator.next();
                         if (!StringUtilities.BaseCoreGenericHandler(string5, string6, true)) continue;
                         return true;
-                    }
-                }
-            }
+}
             if (permission2.playerHas((String)object, (OfflinePlayer)e12, string3)) return true;
             objectArray = string2;
             if (!permission2.playerHas((String)object, (OfflinePlayer)e12, string3 + '.' + objectArray.toLowerCase(Locale.ENGLISH))) return false;
@@ -86,8 +83,7 @@ public final class DefaultHandler {
         }
         catch (NoSuchMethodError noSuchMethodError) {
             return false;
-        }
-    }
+}
 
     public final boolean BaseCoreGenericHandler(@Nullable Object object, @NotNull String string, @Nullable String string2) {
         Object object2 = this.c();
@@ -191,12 +187,10 @@ public final class DefaultHandler {
         BungeecordHandler_2 ao_02 = (BungeecordHandler_2)ec_02;
         try {
             DefaultHandler e12 = this;
-            boolean flag = false;
             RegisteredServiceProvider registeredServiceProvider = ao_02.BaseCoreGenericHandler(e12.BaseCoreGenericHandler().c()).getServer().getServicesManager().getRegistration(Class.forName(string));
             if (registeredServiceProvider != null) {
                 return registeredServiceProvider.getProvider();
-            }
-        }
+}
         catch (NoClassDefFoundError noClassDefFoundError) {
         }
         catch (ClassNotFoundException classNotFoundException) {
@@ -209,7 +203,6 @@ public final class DefaultHandler {
             }
             if (StringUtilities.BaseCoreGenericHandler((CharSequence)(string2 = string3), (CharSequence)"zip file", false, 2, null)) {
                 DefaultHandler e13 = this;
-                boolean flag = false;
                 e13.BaseCoreGenericHandler().c().getLogger().warning("Zip file was closed during access: " + string);
                 return null;
             }
@@ -228,7 +221,5 @@ public final class DefaultHandler {
 
     private static final void AsyncBackgroundTask_5() {
         AsyncBackgroundTask_5 = new String[]{"", "default", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "zip file", "Zip file was closed during access: ", "net.milkbowl.vault.permission.Permission", "net.milkbowl.vault.chat.Chat"};
-    }
-
-    }
+}
 

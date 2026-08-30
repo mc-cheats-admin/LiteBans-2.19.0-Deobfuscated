@@ -30,8 +30,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public PreparedStatement prepareStatement(String string) {
@@ -40,8 +39,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public CallableStatement prepareCall(String string) {
@@ -50,8 +48,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String nativeSQL(String string) {
@@ -60,8 +57,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setAutoCommit(boolean flag) {
@@ -70,8 +66,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean getAutoCommit() {
@@ -80,8 +75,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void commit() {
@@ -90,8 +84,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void rollback() {
@@ -100,8 +93,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean isClosed() {
@@ -110,8 +102,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public DatabaseMetaData getMetaData() {
@@ -120,8 +111,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setReadOnly(boolean flag) {
@@ -130,8 +120,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean isReadOnly() {
@@ -140,8 +129,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setCatalog(String string) {
@@ -150,8 +138,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getCatalog() {
@@ -160,8 +147,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setTransactionIsolation(int n) {
@@ -170,8 +156,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getTransactionIsolation() {
@@ -180,8 +165,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public SQLWarning getWarnings() {
@@ -190,8 +174,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void clearWarnings() {
@@ -200,8 +183,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Statement createStatement(int n, int n2) {
@@ -210,8 +192,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public PreparedStatement prepareStatement(String string, int n, int n2) {
@@ -220,8 +201,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public CallableStatement prepareCall(String string, int n, int n2) {
@@ -230,8 +210,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     public Map getTypeMap() {
         try {
@@ -239,8 +218,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     public void setTypeMap(Map map) {
         try {
@@ -248,8 +226,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setHoldability(int n) {
@@ -258,8 +235,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getHoldability() {
@@ -268,8 +244,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Savepoint setSavepoint() {
@@ -278,8 +253,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Savepoint setSavepoint(String string) {
@@ -288,8 +262,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void rollback(Savepoint savepoint) {
@@ -298,8 +271,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void releaseSavepoint(Savepoint savepoint) {
@@ -308,8 +280,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Statement createStatement(int n, int n2, int n3) {
@@ -318,8 +289,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public PreparedStatement prepareStatement(String string, int n, int n2, int n3) {
@@ -328,8 +298,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public CallableStatement prepareCall(String string, int n, int n2, int n3) {
@@ -338,8 +307,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public PreparedStatement prepareStatement(String string, int n) {
@@ -348,8 +316,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public PreparedStatement prepareStatement(String string, int[] nArray) {
@@ -358,8 +325,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public PreparedStatement prepareStatement(String string, String[] args) {
@@ -368,8 +334,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Clob createClob() {
@@ -378,8 +343,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Blob createBlob() {
@@ -388,8 +352,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public NClob createNClob() {
@@ -398,8 +361,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public SQLXML createSQLXML() {
@@ -408,8 +370,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean isValid(int n) {
@@ -418,8 +379,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setClientInfo(String string, String string2) {
@@ -438,8 +398,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Properties getClientInfo() {
@@ -448,8 +407,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Array createArrayOf(String string, Object[] objectArray) {
@@ -458,8 +416,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Struct createStruct(String string, Object[] objectArray) {
@@ -468,8 +425,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setSchema(String string) {
@@ -478,8 +434,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getSchema() {
@@ -488,8 +443,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void abort(Executor executor) {
@@ -498,8 +452,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setNetworkTimeout(Executor executor, int n) {
@@ -508,8 +461,7 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getNetworkTimeout() {
@@ -518,11 +470,9 @@ Connection {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     protected LiteBansModule_67(InUseHandler kJ2, Connection connection, LiteBansModule_226 gk2, AsyncBackgroundTask_15 ja2, long l3, boolean flag, boolean flag2) {
         super(kJ2, connection, gk2, ja2, l3, flag, flag2);
-    }
 }
 

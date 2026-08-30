@@ -32,12 +32,10 @@ extends BansHandler {
     private final void BaseCoreGenericHandler(Connection connection, boolean flag, LiteBansModule_82 ch2, BanHandler a_2, String string) {
         String string2 = "SELECT * FROM " + this.i() + "applicable_" + string;
         Object object = this;
-        boolean flag2 = false;
         object = (ConfigService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
         flag2 = false;
         if (((ConfigService)object).g()) {
             Object object2 = object;
-            boolean flag3 = false;
             ((ConfigService)object2).BaseCoreGenericHandler((Object)string2);
         }
         object = connection.prepareStatement(string2);
@@ -45,14 +43,12 @@ extends BansHandler {
         Throwable throwable = null;
         try {
             Object object3 = (PreparedStatement)autoCloseable;
-            boolean flag4 = false;
             if (object.execute()) {
                 ResultSet resultSet = object.getResultSet();
                 AutoCloseable autoCloseable2 = resultSet;
                 Throwable throwable2 = null;
                 try {
                     Object object4 = (ResultSet)autoCloseable2;
-                    boolean flag5 = false;
                     while (resultSet.next()) {
                         Object object5;
                         String string3;
@@ -64,18 +60,16 @@ extends BansHandler {
                         Object object8;
                         Object object9;
                         Object object10;
-                        block29: {
+{
                             boolean flag6;
                             boolean flag7;
                             int n = resultSet.getInt("victim_type");
                             object10 = this;
                             ObjectUtilities.BaseCoreGenericHandler(resultSet);
                             object9 = resultSet;
-                            boolean flag8 = false;
                             byte[] byArray = object9.getBytes("victim_uuid");
                             Object object11 = null;
                             Object object12 = byArray;
-                            boolean bl9 = false;
                             if (object12 != null && ((byte[])object12).length == 16) {
                                 object12 = byArray;
                                 ObjectUtilities.BaseCoreGenericHandler(object12);
@@ -89,8 +83,7 @@ extends BansHandler {
                                     object12 = byArray;
                                     ObjectUtilities.BaseCoreGenericHandler(object12);
                                     object11 = LiteBansModule_286.BaseCoreGenericHandler((byte[])object12);
-                                }
-                            }
+}
                             object12 = (MessageHandler)object10;
                             bl9 = false;
                             object12 = (ConfigService)((MessageHandler)object12).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
@@ -103,7 +96,6 @@ extends BansHandler {
                             uUID = object11;
                             object9 = this;
                             object7 = resultSet;
-                            boolean bl10 = false;
                             object12 = object11 = (Object)object7.getBytes("operator");
                             bl9 = false;
                             object8 = object12;
@@ -119,7 +111,6 @@ extends BansHandler {
                                 byte[] byArray2;
                                 object7 = this;
                                 ResultSet resultSet2 = resultSet;
-                                boolean bl11 = false;
                                 object12 = null;
                                 if (n != 0 && (byArray2 = resultSet2.getBytes("address")).length >= 4) {
                                     object8 = (BansHandler)object7;
@@ -143,14 +134,13 @@ extends BansHandler {
                                 Throwable throwable3 = null;
                                 try {
                                     Object object13 = (PreparedStatement)autoCloseable3;
-                                    boolean bl12 = false;
                                     object5.setBytes(1, LiteBansModule_286.BaseCoreGenericHandler(uUID));
                                     object5.execute();
                                     ResultSet resultSet3 = object5.getResultSet();
                                     if (resultSet3 != null && resultSet3.next()) {
                                         String string4 = resultSet3.getString(1);
                                         string3 = string4;
-                                        break block29;
+                                        break;
                                     }
                                     object13 = KotlinUnitHandler.BaseCoreGenericHandler;
                                 }
@@ -162,8 +152,7 @@ extends BansHandler {
                                     CloseactionHandler.BaseCoreGenericHandler(autoCloseable3, throwable3);
                                 }
                                 string3 = null;
-                            }
-                        }
+}
                         object8 = string3;
                         ObjectUtilities.BaseCoreGenericHandler(object7);
                         object6 = object7;
@@ -179,8 +168,7 @@ extends BansHandler {
                 }
                 finally {
                     CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
-                }
-            }
+}
             object3 = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable6) {
@@ -189,8 +177,7 @@ extends BansHandler {
         }
         finally {
             CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
-        }
-    }
+}
 
     static /* synthetic */ void BaseCoreGenericHandler(LibertybansHandler fm2, Connection connection, boolean flag, LiteBansModule_82 ch2, BanHandler a_2, String string, int n, Object object) {
         if ((n & 0x10) != 0) {
@@ -202,7 +189,5 @@ extends BansHandler {
 
     private static final void c() {
         n = new String[]{"LibertyBans", "libertybans_", "warns", "SELECT * FROM ", "applicable_", "victim_type", "victim_uuid", "uuid", "victim: ", "operator", "address", "reason", "start", "end", "SELECT name FROM ", "latest_names WHERE uuid=?", "address", "victim_uuid", "uuid", "victim: ", "operator", "SELECT name FROM ", "latest_names WHERE uuid=?"};
-    }
-
-    }
+}
 

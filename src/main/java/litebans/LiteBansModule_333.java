@@ -17,22 +17,18 @@ LiteBansModule_122 {
     }
 
     private final void c() {
-        block5: {
-            block6: {
-                block4: {
-                    if (this.c >= 0) break block4;
+{
+                    if (this.c >= 0) break;
                     this.LiteBansModule_194 = 0;
                     this.g = null;
-                    break block5;
+                    break;
                 }
-                if (InputHandler_2.AsyncBackgroundTask_5(this.LiteBansModule_31) <= 0) break block6;
+                if (InputHandler_2.AsyncBackgroundTask_5(this.LiteBansModule_31) <= 0) break;
                 ++this.plugin;
                 if (this.plugin >= InputHandler_2.AsyncBackgroundTask_5(this.LiteBansModule_31)) ** GOTO lbl-1000
             }
             if (this.c > InputHandler_2.c(this.LiteBansModule_31).length()) lbl-1000:
-            // 2 sources
-
-            {
+                        {
                 this.g = new LiteBansModule_166(this.AsyncBackgroundTask_5, StringUtilities.BaseCoreGenericHandler(InputHandler_2.c(this.LiteBansModule_31)));
                 this.c = -1;
             } else {
@@ -46,11 +42,9 @@ LiteBansModule_122 {
                     this.g = LiteBansModule_20.LiteBansModule_31(this.AsyncBackgroundTask_5, v2);
                     this.AsyncBackgroundTask_5 = v2 + v3;
                     this.c = this.AsyncBackgroundTask_5 + (v3 == 0 ? 1 : 0);
-                }
-            }
+}
             this.LiteBansModule_194 = 1;
-        }
-    }
+}
 
     public LiteBansModule_166 BaseCoreGenericHandler() {
         if (this.LiteBansModule_194 == -1) {
@@ -86,7 +80,5 @@ LiteBansModule_122 {
 
     private static final void LiteBansModule_31() {
         e = new String[]{"", "Operation is not supported for read-only collection"};
-    }
-
-    }
+}
 

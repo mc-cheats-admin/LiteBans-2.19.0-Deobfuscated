@@ -52,20 +52,17 @@ implements LiteBansModule_111 {
         if (!this.J) {
             this.PlayerQuitListener.close();
             this.J = true;
-        }
-    }
+}
 
     private final void BaseCoreGenericHandler() {
         if (this.J) {
             throw new IOException("Stream closed");
-        }
-    }
+}
 
     private final void LiteBansModule_31(int n) {
         if (n > 0) {
             this.plugin(this.L, 0, n);
-        }
-    }
+}
 
     @Override
     public int read(byte[] byArray, int n, int n2) {
@@ -96,8 +93,7 @@ implements LiteBansModule_111 {
             for (int i = 0; i < n4; ++i) {
                 this.LiteBansModule_430 += (long)(byArray[i] & 0xFF);
                 this.LiteBansModule_430 &= 0xFFFFFFFFL;
-            }
-        }
+}
         if (n4 > 0) {
             this.K += (long)n4;
         }
@@ -132,6 +128,5 @@ implements LiteBansModule_111 {
             break;
         }
         return n;
-    }
 }
 

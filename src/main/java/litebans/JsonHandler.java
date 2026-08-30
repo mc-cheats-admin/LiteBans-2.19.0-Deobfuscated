@@ -18,8 +18,7 @@ extends LiteBansModule_47 {
     public void BaseCoreGenericHandler(NullHandler_4 ie_02, Writer writer) {
         if (StringUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5.getName(), ".json", false, 2, null)) {
             LiteBansModule_47.BaseCoreGenericHandler(LiteBansModule_54.class).BaseCoreGenericHandler(ie_02, writer);
-        }
-    }
+}
 
     @Override
     public NullHandler_4 BaseCoreGenericHandler(Reader reader) {
@@ -29,7 +28,5 @@ extends LiteBansModule_47 {
         Supplier supplier = (Supplier)obj;
         Map map = (Map)supplier.get();
         return new NullHandler_4(map, null);
-    }
-
-    }
+}
 

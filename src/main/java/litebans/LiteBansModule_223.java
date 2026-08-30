@@ -54,6 +54,5 @@ implements ResultSet {
             return this.LiteBansModule_31.unwrap(clazz);
         }
         throw new SQLException("Wrapped ResultSet is not HikariDataSource instance of " + clazz);
-    }
 }
 

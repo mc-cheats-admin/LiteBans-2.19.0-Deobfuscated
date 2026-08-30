@@ -24,10 +24,10 @@ extends Enum {
      * WARNING - void declaration
      */
     private TapeHandler() {
-        void var3_1;
+        void arg1;
         void var2_-1;
         void var1_-1;
-        this.g = var3_1;
+        this.g = arg1;
     }
 
     public static final TapeHandler BaseCoreGenericHandler(int n) {
@@ -40,6 +40,5 @@ extends Enum {
 
     static {
         e = new TapeHandler[]{c, LiteBansModule_194, LiteBansModule_240, LiteBansModule_31, BaseCoreGenericHandler, AsyncBackgroundTask_5};
-    }
 }
 

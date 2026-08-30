@@ -53,10 +53,10 @@ extends Enum {
      * WARNING - void declaration
      */
     private StoredHandler() {
-        void var3_1;
+        void arg1;
         void var2_-1;
         void var1_-1;
-        this.plugin = var3_1;
+        this.plugin = arg1;
     }
 
     public int BaseCoreGenericHandler() {
@@ -94,6 +94,5 @@ extends Enum {
             hashMap.put(dq_02.BaseCoreGenericHandler(), dq_02);
         }
         LiteBansModule_240 = Collections.unmodifiableMap(hashMap);
-    }
 }
 

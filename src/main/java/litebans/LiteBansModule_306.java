@@ -137,12 +137,10 @@ Cloneable {
         }
         catch (CloneNotSupportedException cloneNotSupportedException) {
             throw new RuntimeException(cloneNotSupportedException);
-        }
-    }
+}
 
     static {
         PunishmentTableService = 4;
         n = new LiteBansModule_288(30062);
-    }
 }
 

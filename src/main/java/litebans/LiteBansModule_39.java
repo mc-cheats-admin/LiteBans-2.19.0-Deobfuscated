@@ -12,9 +12,7 @@ public class LiteBansModule_39 {
             this.plugin.shutdown();
             if (!this.plugin.awaitTermination(2L, TimeUnit.SECONDS)) {
                 this.plugin.shutdownNow();
-            }
-        }
-    }
+}
 
     public ScheduledExecutorService BaseCoreGenericHandler(LiteBansCore core) {
         ScheduledExecutorService scheduledExecutorService = this.plugin;
@@ -25,6 +23,5 @@ public class LiteBansModule_39 {
             return scheduledExecutorService2;
         }
         return this.plugin;
-    }
 }
 

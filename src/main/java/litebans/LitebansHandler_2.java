@@ -13,14 +13,11 @@ extends BansHandler {
     public void BaseCoreGenericHandler(@NotNull String string, @NotNull Connection connection, @NotNull LiteBansModule_82 ch2, boolean flag) {
         long l3 = ch2.c();
         BansHandler_2[] kLArray = BansHandler_2.values();
-        boolean flag2 = false;
         int n = kLArray.length;
         for (int i = 0; i < n; ++i) {
             BansHandler_2 kL2;
             BansHandler_2 kL3 = kL2 = kLArray[i];
-            boolean flag3 = false;
             MessageHandler messageHandler = this;
-            boolean flag4 = false;
             ch2.BaseCoreGenericHandler(connection, kL3, ((ConfigService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().ai());
         }
         long l5 = ch2.c();
@@ -34,7 +31,5 @@ extends BansHandler {
 
     private static final void BaseCoreGenericHandler() {
         m = new String[]{"LiteBans", "amount"};
-    }
-
-    }
+}
 

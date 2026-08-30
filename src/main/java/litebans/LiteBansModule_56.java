@@ -18,6 +18,5 @@ public final class LiteBansModule_56 {
 
     public final Map BaseCoreGenericHandler() {
         return this.LiteBansModule_31;
-    }
 }
 

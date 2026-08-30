@@ -86,6 +86,5 @@ public final class LiteBansModule_342 {
         BaseCoreGenericHandler = 10;
         c = new LiteBansModule_101(null);
         LiteBansModule_240 = LiteBansModule_371.BaseCoreGenericHandler(LiteBansModule_193.AsyncBackgroundTask_5((short)0), LiteBansModule_389.BaseCoreGenericHandler());
-    }
 }
 

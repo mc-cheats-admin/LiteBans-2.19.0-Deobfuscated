@@ -299,9 +299,9 @@ implements CharSequence {
      * WARNING - void declaration
      */
     private MessageKey() {
-        this((String)var1_-1, (int)var2_-1, (MessageKey)var3_1, (String)var4_2, null);
-        void var4_2;
-        void var3_1;
+        this((String)var1_-1, (int)var2_-1, (MessageKey)arg1, (String)arg2, null);
+        void arg2;
+        void arg1;
         void var2_-1;
         void var1_-1;
     }
@@ -311,9 +311,9 @@ implements CharSequence {
      * WARNING - void declaration
      */
     private MessageKey(@Nullable CharSequence charSequence) {
-        this((String)var1_-1, (int)var2_-1, ((MessageKey)charSequence).BaseCoreGenericHandler() + '.' + (String)var4_2, (CharSequence)var5_3);
-        void var5_3;
-        void var4_2;
+        this((String)var1_-1, (int)var2_-1, ((MessageKey)charSequence).BaseCoreGenericHandler() + '.' + (String)arg2, (CharSequence)arg3);
+        void arg3;
+        void arg2;
         void var2_-1;
         void var1_-1;
     }
@@ -323,22 +323,22 @@ implements CharSequence {
      * WARNING - void declaration
      */
     private MessageKey() {
-        void var3_1;
+        void arg1;
         void var2_-1;
         void var1_-1;
-        this.PluginHookService = var3_1;
+        this.PluginHookService = arg1;
     }
 
     /*
      * WARNING - void declaration
      */
     private MessageKey() {
-        this((String)var1_-1, (int)var2_-1, (String)var3_1);
-        void var4_2;
-        void var3_1;
+        this((String)var1_-1, (int)var2_-1, (String)arg1);
+        void arg2;
+        void arg1;
         void var2_-1;
         void var1_-1;
-        this.plugin((CharSequence)var4_2);
+        this.plugin((CharSequence)arg2);
     }
 
     public static String BaseCoreGenericHandler(Object object, boolean flag, boolean flag2) {
@@ -386,8 +386,7 @@ implements CharSequence {
             }
             case g: {
                 return cx;
-            }
-        }
+}
         throw new AssertionError();
     }
 
@@ -480,6 +479,5 @@ implements CharSequence {
 
     static {
         AsyncBackgroundTask_22 = litebans.MessageKey.LiteBansModule_31();
-    }
 }
 

@@ -18,6 +18,5 @@ implements Serializable {
 
     public String toString() {
         return this.LiteBansModule_194;
-    }
 }
 

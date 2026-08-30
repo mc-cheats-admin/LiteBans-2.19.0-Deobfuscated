@@ -29,8 +29,7 @@ public final class NullHandler_4 {
                 continue;
             }
             this.AsyncBackgroundTask_5.put(string, entry.getValue());
-        }
-    }
+}
 
     private final NullHandler_4 c(String string) {
         int n = string.indexOf(46);
@@ -78,11 +77,9 @@ public final class NullHandler_4 {
                 this.AsyncBackgroundTask_5.remove(string);
             } else {
                 this.AsyncBackgroundTask_5.put(string, object);
-            }
-        } else {
+} else {
             ie_02.BaseCoreGenericHandler(this.LiteBansModule_240(string), object);
-        }
-    }
+}
 
     public NullHandler_4 LiteBansModule_31(String string) {
         Object object = this.g(string);
@@ -155,7 +152,5 @@ public final class NullHandler_4 {
 
     private static final void BaseCoreGenericHandler() {
         c = new String[]{"null", ""};
-    }
-
-    }
+}
 

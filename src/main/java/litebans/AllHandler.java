@@ -14,7 +14,6 @@ implements CharSequence {
         this.AsyncBackgroundTask_5 = string;
         this.AsyncBackgroundTask_5 = LiteBansModule_181.LiteBansModule_194.c(this.AsyncBackgroundTask_5);
         AllHandler jJ2 = this;
-        boolean flag = false;
         if (ObjectUtilities.BaseCoreGenericHandler((Object)jJ2.AsyncBackgroundTask_5, (Object)"__ALL__")) {
             by2 = 0;
         } else {
@@ -45,8 +44,7 @@ implements CharSequence {
         }
         if (this.c >= 3) {
             bT2.BaseCoreGenericHandler(this.AsyncBackgroundTask_5().ServerSyncService());
-        }
-    }
+}
 
     public int BaseCoreGenericHandler() {
         return this.toString().length();
@@ -83,8 +81,7 @@ implements CharSequence {
             }
             default: {
                 throw new LiteBansModule_132();
-            }
-        }
+}
         return string;
     }
 
@@ -100,7 +97,5 @@ implements CharSequence {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"__ALL__", "__ALL__", "", " AND(server_scope='*')", " AND(server_scope='*' OR server_scope=?)", " AND(server_scope='*' OR server_scope=? OR server_scope=?)"};
-    }
-
-    }
+}
 

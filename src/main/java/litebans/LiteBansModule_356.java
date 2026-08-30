@@ -53,7 +53,6 @@ Serializable {
         if (byArray2 != null) {
             LiteBansModule_188.BaseCoreGenericHandler(byArray2);
         }
-        int n3 = 0;
         byArray3[n3++] = LiteBansModule_188.BaseCoreGenericHandler(this.LiteBansModule_194);
         byArray3[n3++] = LiteBansModule_188.BaseCoreGenericHandler(n);
         if (byArray != null) {
@@ -129,12 +128,10 @@ Serializable {
         if (byArray == null) {
             return byArray;
         }
-        int n = 0;
         for (byte by2 : byArray) {
             if (by2 != 0) break;
             ++n;
         }
-        boolean flag = true;
         byte[] byArray2 = new byte[Math.max(1, byArray.length - n)];
         int n2 = byArray2.length - (byArray.length - n);
         System.arraycopy(byArray, n, byArray2, n2, byArray2.length - n2);
@@ -146,6 +143,5 @@ Serializable {
         LiteBansModule_240 = new LiteBansModule_288(30837);
         AsyncBackgroundTask_5 = new LiteBansModule_288(0);
         LiteBansModule_31 = BigInteger.valueOf(1000L);
-    }
 }
 

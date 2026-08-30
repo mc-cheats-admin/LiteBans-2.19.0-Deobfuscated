@@ -17,6 +17,5 @@ implements ThreadFactory {
         Thread thread = new Thread(runnable, this.plugin);
         thread.setDaemon(this.LiteBansModule_31);
         return thread;
-    }
 }
 

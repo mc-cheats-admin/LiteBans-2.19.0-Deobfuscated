@@ -58,8 +58,7 @@ implements PlatformPlugin {
         synchronized (list) {
             this.g.forEach(ScheduledTask::cancel);
             this.g.clear();
-        }
-    }
+}
 
     @Override
     public DatabaseService LiteBansModule_240() {
@@ -85,8 +84,7 @@ implements PlatformPlugin {
             }
             if (module instanceof LiteBansModule_249) {
                 this.plugin((CommandManager)module);
-            }
-        }
+}
         return flag;
     }
 
@@ -247,8 +245,7 @@ implements PlatformPlugin {
     public void LiteBansModule_31(LiteBansModule_175[] em_0Array) {
         for (LiteBansModule_175 em_02 : em_0Array) {
             this.c.getEventManager().register((Object)this, (Object)em_02);
-        }
-    }
+}
 
     @Override
     public boolean BaseCoreGenericHandler(String string, Supplier supplier) {
@@ -302,8 +299,7 @@ implements PlatformPlugin {
         List list = this.g;
         synchronized (list) {
             this.g.removeIf(scheduledTask -> scheduledTask.status() != TaskStatus.SCHEDULED);
-        }
-    }
+}
 
     @Override
     public void BaseCoreGenericHandler(String string) {
@@ -329,8 +325,7 @@ implements PlatformPlugin {
     public void BaseCoreGenericHandler(LiteBansModule_175[] em_0Array) {
         for (LiteBansModule_175 em_02 : em_0Array) {
             this.c.getEventManager().unregisterListener((Object)this, (Object)em_02);
-        }
-    }
+}
 
     @Override
     public CommandSenderWrapper LiteBansModule_31(Object object) {
@@ -372,7 +367,5 @@ implements PlatformPlugin {
 
     public LiteBansCore LiteBansModule_31() {
         return this.LiteBansModule_194;
-    }
-
-    }
+}
 

@@ -9,6 +9,5 @@ extends Utf8Handler_2 {
 
     public LiteBansModule_401(InputStream inputStream, String string) {
         super(inputStream, string);
-    }
 }
 

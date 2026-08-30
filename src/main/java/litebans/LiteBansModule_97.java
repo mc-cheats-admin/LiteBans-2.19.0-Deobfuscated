@@ -39,7 +39,6 @@ Serializable {
     @Override
     public byte[] e() {
         byte[] byArray = new byte[this.LiteBansModule_31().BaseCoreGenericHandler()];
-        int n = 0;
         byArray[n++] = 0;
         if (this.LiteBansModule_401) {
             byArray[0] = (byte)(byArray[0] | 1);
@@ -83,8 +82,7 @@ Serializable {
         if (this.m && n + 4 <= n3) {
             this.e = new LiteBansModule_84(byArray, n);
             n += 4;
-        }
-    }
+}
 
     @Override
     public void LiteBansModule_31(byte[] byArray, int n, int n2) {
@@ -174,6 +172,5 @@ Serializable {
         LiteBansModule_194 = 1;
         AsyncBackgroundTask_5 = 1L;
         c = new LiteBansModule_288(21589);
-    }
 }
 

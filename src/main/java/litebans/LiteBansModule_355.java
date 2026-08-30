@@ -94,12 +94,9 @@ public class LiteBansModule_355 {
             }
             catch (IOException iOException2) {
                 throw new RuntimeException(iOException2);
-            }
-        }
-    }
+}
 
     public static final String BaseCoreGenericHandler(byte[] byArray, int n, int n2, LiteBansModule_119 dd_02) {
-        int n3 = 0;
         int n4 = n;
         while (n3 < n2 && byArray[n4] != 0) {
             ++n3;
@@ -132,6 +129,5 @@ public class LiteBansModule_355 {
             l7 += (long)n;
         }
         return l3 == l5 || l3 == l7;
-    }
 }
 

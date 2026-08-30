@@ -16,6 +16,5 @@ extends IOException {
     public LiteBansModule_300(String string, Throwable throwable) {
         super(string);
         this.initCause(throwable);
-    }
 }
 

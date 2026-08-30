@@ -67,6 +67,5 @@ implements DataSource {
     @Override
     public void setLogWriter(PrintWriter printWriter) {
         this.plugin(printWriter);
-    }
 }
 

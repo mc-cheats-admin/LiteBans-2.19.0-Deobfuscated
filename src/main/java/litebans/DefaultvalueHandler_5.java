@@ -41,7 +41,6 @@ extends KlassHandler_2 {
             return eo_02.BaseCoreGenericHandler(n);
         }
         Iterator iterator = iterable.iterator();
-        int n2 = 0;
         while (iterator.hasNext()) {
             Object t2 = iterator.next();
             if (n != n2++) continue;
@@ -85,7 +84,6 @@ extends KlassHandler_2 {
         if (iterable instanceof List) {
             return ((List)iterable).indexOf(object);
         }
-        int n = 0;
         for (Object t2 : iterable) {
             if (n < 0) {
                 CollectionUtilities.LiteBansModule_31();
@@ -133,15 +131,13 @@ extends KlassHandler_2 {
             }
             default: {
                 throw new IllegalArgumentException("List has more than one ");
-            }
-        }
+}
         return list.get(0);
     }
 
     public static final List BaseCoreGenericHandler(@NotNull Iterable iterable, int n) {
         ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
         if (!(n >= 0)) {
-            boolean flag = false;
             String string = "Requested element count " + n + " is less than ";
             throw new IllegalArgumentException(string.toString());
         }
@@ -154,9 +150,7 @@ extends KlassHandler_2 {
             }
             if (n == 1) {
                 return CollectionUtilities.BaseCoreGenericHandler(CollectionUtilities.LiteBansModule_240(iterable));
-            }
-        }
-        int n2 = 0;
+}
         ArrayList arrayList = new ArrayList(n);
         for (Object t2 : iterable) {
             arrayList.add(t2);
@@ -184,15 +178,12 @@ extends KlassHandler_2 {
                 return CollectionUtilities.LiteBansModule_194(iterable);
             }
             Object[] objectArray = (Object[])iterable;
-            boolean flag = false;
             Object[] objectArray2 = objectArray;
             Object[] objectArray3 = objectArray = objectArray2.toArray(new Comparable[0]);
-            boolean flag2 = false;
             ArrayUtilities.LiteBansModule_31(objectArray3);
             return ArrayUtilities.BaseCoreGenericHandler(objectArray);
         }
         List list2 = list = CollectionUtilities.AsyncBackgroundTask_5(iterable);
-        boolean flag = false;
         CollectionUtilities.BaseCoreGenericHandler(list2);
         return list;
     }
@@ -206,15 +197,12 @@ extends KlassHandler_2 {
                 return CollectionUtilities.LiteBansModule_194(iterable);
             }
             Object[] objectArray = (Object[])iterable;
-            boolean flag = false;
             Object[] objectArray2 = objectArray;
             Object[] objectArray3 = objectArray = objectArray2.toArray(new Object[0]);
-            boolean flag2 = false;
             ArrayUtilities.BaseCoreGenericHandler(objectArray3, comparator);
             return ArrayUtilities.BaseCoreGenericHandler(objectArray);
         }
         List list2 = list = CollectionUtilities.AsyncBackgroundTask_5(iterable);
-        boolean flag = false;
         CollectionUtilities.BaseCoreGenericHandler(list2, comparator);
         return list;
     }
@@ -248,8 +236,7 @@ extends KlassHandler_2 {
                 }
                 default: {
                     list = CollectionUtilities.BaseCoreGenericHandler((Collection)iterable);
-                }
-            }
+}
             return list;
         }
         return CollectionUtilities.BaseCoreGenericHandler(CollectionUtilities.AsyncBackgroundTask_5(iterable));
@@ -283,8 +270,7 @@ extends KlassHandler_2 {
                 }
                 default: {
                     set = (Set)CollectionUtilities.BaseCoreGenericHandler(iterable, new LinkedHashSet(LiteBansModule_348.BaseCoreGenericHandler(((Collection)iterable).size())));
-                }
-            }
+}
             return set;
         }
         return LiteBansModule_5.BaseCoreGenericHandler((Set)CollectionUtilities.BaseCoreGenericHandler(iterable, new LinkedHashSet()));
@@ -320,7 +306,6 @@ extends KlassHandler_2 {
         ObjectUtilities.BaseCoreGenericHandler((Object)charSequence3, "postfix");
         ObjectUtilities.BaseCoreGenericHandler((Object)charSequence4, "truncated");
         appendable.append(charSequence2);
-        int n2 = 0;
         for (Object t2 : iterable) {
             if (++n2 > 1) {
                 appendable.append(charSequence);
@@ -372,7 +357,5 @@ extends KlassHandler_2 {
 
     private static final void LiteBansModule_401() {
         GnuSparseMapHandler = new String[]{"<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "defaultValue", "<this>", "defaultValue", "<this>", "<this>", "<this>", "predicate", "<this>", "predicate", "<this>", "predicate", "<this>", "Collection is ", "<this>", "List is ", "<this>", "predicate", "Collection contains no element matching the ", "<this>", "transform", "No element of the collection was transformed to BaseCoreGenericHandler non-null ", "<this>", "transform", "<this>", "<this>", "<this>", "predicate", "<this>", "defaultValue", "<this>", "<this>", "<this>", "<this>", "predicate", "<this>", "predicate", "<this>", "predicate", "<this>", "predicate", "<this>", "Collection is ", "<this>", "List is ", "<this>", "predicate", "Collection contains no element matching the ", "<this>", "predicate", "List contains no element matching the ", "<this>", "<this>", "<this>", "<this>", "<this>", "predicate", "<this>", "predicate", "<this>", "<this>", "random", "Collection is ", "<this>", "<this>", "random", "<this>", "Collection is ", "Collection has more than one ", "<this>", "List is ", "List has more than one ", "<this>", "predicate", "Collection contains more than one matching ", "Collection contains no element matching the ", "<this>", "<this>", "<this>", "predicate", "<this>", "Requested element count ", " is less than ", "<this>", "Requested element count ", " is less than ", "<this>", "predicate", "<this>", "predicate", "<this>", "predicate", "<this>", "predicate", "<this>", "destination", "predicate", "<this>", "LockdownService", "<this>", "destination", "LockdownService", "<this>", "predicate", "<this>", "<this>", "destination", "<this>", "destination", "predicate", "<this>", "destination", "predicate", "<this>", "indices", "<this>", "indices", "<this>", "Requested element count ", " is less than ", "<this>", "Requested element count ", " is less than ", "<this>", "predicate", "<this>", "predicate", "<this>", "<this>", "random", "<this>", "selector", "<this>", "selector", "<this>", "<this>", "<this>", "selector", "<this>", "selector", "<this>", "<this>", "comparator", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "transform", "<this>", "keySelector", "<this>", "keySelector", "valueTransform", "<this>", "destination", "keySelector", "<this>", "destination", "keySelector", "valueTransform", "<this>", "destination", "transform", "<this>", "valueSelector", "<this>", "destination", "valueSelector", "<this>", "destination", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "transform", "<this>", "transform", "<this>", "transform", "<this>", "transform", "<this>", "destination", "transform", "<this>", "destination", "transform", "<this>", "destination", "transform", "<this>", "destination", "transform", "<this>", "keySelector", "<this>", "keySelector", "valueTransform", "<this>", "destination", "keySelector", "<this>", "destination", "keySelector", "valueTransform", "<this>", "keySelector", "<this>", "transform", "<this>", "transform", "<this>", "transform", "<this>", "destination", "transform", "<this>", "destination", "transform", "<this>", "transform", "<this>", "destination", "transform", "<this>", "destination", "transform", "<this>", "<this>", "<this>", "selector", "<this>", "other", "<this>", "other", "<this>", "<this>", "other", "<this>", "predicate", "<this>", "<this>", "predicate", "<this>", "<this>", "<this>", "predicate", "<this>", "operation", "<this>", "operation", "<this>", "operation", "<this>", "operation", "<this>", "action", "<this>", "action", "<this>", "<this>", "<this>", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "comparator", "selector", "<this>", "comparator", "selector", "<this>", "<this>", "<this>", "<this>", "comparator", "<this>", "comparator", "<this>", "<this>", "<this>", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "comparator", "selector", "<this>", "comparator", "selector", "<this>", "<this>", "<this>", "<this>", "comparator", "<this>", "comparator", "<this>", "<this>", "predicate", "<this>", "action", "<this>", "action", "<this>", "operation", "Empty collection can'AsyncBackgroundTask_22 be ", "<this>", "operation", "Empty collection can'AsyncBackgroundTask_22 be ", "<this>", "operation", "<this>", "operation", "<this>", "operation", "Empty list can'AsyncBackgroundTask_22 be ", "<this>", "operation", "Empty list can'AsyncBackgroundTask_22 be ", "<this>", "operation", "<this>", "operation", "<this>", "operation", "<this>", "operation", "<this>", "operation", "<this>", "operation", "<this>", "operation", "<this>", "operation", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "null element found InitializerHandler_3 ", "<this>", "null element found InitializerHandler_3 ", "<this>", "<this>", "transform", "<this>", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "<this>", "predicate", "<this>", "<this>", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "<this>", "<this>", "<this>", "transform", "<this>", "other", "<this>", "other", "transform", "<this>", "other", "<this>", "other", "transform", "<this>", "<this>", "transform", "<this>", "buffer", "separator", "prefix", "postfix", "truncated", ", ", "", "", ".. + ", "<this>", "separator", "prefix", "postfix", "truncated", ", ", "", "", ".. + ", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "Collection doesn'AsyncBackgroundTask_22 contain element LiteBansModule_21 index "};
-    }
-
-    }
+}
 

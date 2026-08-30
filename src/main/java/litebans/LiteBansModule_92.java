@@ -40,7 +40,5 @@ LiteBansModule_122 {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"Operation is not supported for read-only collection"};
-    }
-
-    }
+}
 

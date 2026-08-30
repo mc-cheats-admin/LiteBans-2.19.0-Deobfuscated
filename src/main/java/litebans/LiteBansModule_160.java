@@ -21,13 +21,10 @@ public abstract class LiteBansModule_160 {
     }
 
     public int hashCode() {
-        boolean flag = true;
         return 1;
     }
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"Content()"};
-    }
-
-    }
+}
 

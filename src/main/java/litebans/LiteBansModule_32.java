@@ -25,7 +25,5 @@ extends LiteBansModule_53 {
         CommandManager commandManager = this.e.z();
         ObjectUtilities.LiteBansModule_31(commandManager, "");
         return ((BanHandler_5)commandManager).BaseCoreGenericHandler(this, this.getName(), sender, args);
-    }
-
-    }
+}
 

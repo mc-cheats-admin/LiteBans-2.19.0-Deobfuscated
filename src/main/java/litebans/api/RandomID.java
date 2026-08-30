@@ -21,6 +21,5 @@ public abstract class RandomID {
     @Generated
     public static void setInstance(RandomID randomID) {
         instance = randomID;
-    }
 }
 

@@ -72,7 +72,5 @@ Serializable {
             return -1;
         }
         return this.plugin((Enum)object);
-    }
-
-    }
+}
 

@@ -16,18 +16,14 @@ public final class ActionHandler_2 {
         ObjectUtilities.BaseCoreGenericHandler((Object)reader, "<this>");
         ObjectUtilities.BaseCoreGenericHandler((Object)eo_02, "action");
         Reader reader2 = reader;
-        boolean flag = false;
         Closeable closeable = reader2;
         int n = 8192;
         closeable = closeable instanceof BufferedReader ? (BufferedReader)closeable : new BufferedReader((Reader)closeable, n);
         Throwable throwable = null;
         try {
             Object object = (BufferedReader)closeable;
-            boolean flag2 = false;
             LiteBansModule_295 i_2 = ActionHandler_2.BaseCoreGenericHandler((BufferedReader)object);
-            boolean flag3 = false;
             LiteBansModule_295 i_3 = i_2;
-            boolean flag4 = false;
             Iterator iterator = i_3.BaseCoreGenericHandler();
             while (iterator.hasNext()) {
                 Object e = iterator.next();
@@ -41,8 +37,7 @@ public final class ActionHandler_2 {
         }
         finally {
             BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-        }
-    }
+}
 
     public static final List BaseCoreGenericHandler(@NotNull Reader reader) {
         ObjectUtilities.BaseCoreGenericHandler((Object)reader, "<this>");
@@ -64,7 +59,5 @@ public final class ActionHandler_2 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"<this>", "<this>", "<this>", "<this>", "<this>", "action", "<this>", "<this>", "block", "<this>", "<this>", "<this>", "<this>", "out", "<this>", "charset", "<this>", "charset", "<this>", "UpdateCheckTask"};
-    }
-
-    }
+}
 

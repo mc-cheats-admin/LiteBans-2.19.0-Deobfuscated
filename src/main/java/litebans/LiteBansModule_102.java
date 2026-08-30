@@ -29,7 +29,6 @@ Serializable {
         LiteBansModule_102 cU2 = this;
         synchronized (cU2) {
             Object object;
-            boolean flag = false;
             Object t4 = this.LiteBansModule_31.get();
             if (t4 != null) {
                 object = t4;
@@ -54,6 +53,5 @@ Serializable {
 
     private final Object LiteBansModule_31() {
         return ProxyConnection.BaseCoreGenericHandler(this.plugin());
-    }
 }
 

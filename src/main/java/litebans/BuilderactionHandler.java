@@ -9,7 +9,5 @@ static class BuilderactionHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"builderAction", "builderAction", "builder", "elements", "comparator", "elements"};
-    }
-
-    }
+}
 

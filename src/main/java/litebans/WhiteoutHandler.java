@@ -27,10 +27,10 @@ extends Enum {
      * WARNING - void declaration
      */
     private WhiteoutHandler() {
-        void var3_1;
+        void arg1;
         void var2_-1;
         void var1_-1;
-        this.LiteBansModule_240 = var3_1;
+        this.LiteBansModule_240 = arg1;
     }
 
     public static final WhiteoutHandler BaseCoreGenericHandler(int n) {
@@ -44,6 +44,5 @@ extends Enum {
 
     static {
         i = new WhiteoutHandler[]{g, GnuSparseMapHandler, BaseCoreGenericHandler, AsyncBackgroundTask_5, LiteBansModule_194, LiteBansModule_31, Utf8Handler_2, c, e};
-    }
 }
 

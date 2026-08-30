@@ -32,7 +32,5 @@ extends ThatHandler {
             return n3;
         }
         return n;
-    }
-
-    }
+}
 

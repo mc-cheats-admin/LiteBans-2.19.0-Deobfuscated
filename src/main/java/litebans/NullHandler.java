@@ -23,18 +23,14 @@ implements LiteBansModule_158 {
 
     public ModContainer BaseCoreGenericHandler(@NotNull String string) {
         Object v0;
-        block1: {
+{
             Iterable iterable = FabricLoader.getInstance().getAllMods();
-            boolean flag = false;
             for (Object t2 : iterable) {
                 ModContainer modContainer = (ModContainer)t2;
-                boolean flag2 = false;
                 if (!ObjectUtilities.BaseCoreGenericHandler((Object)modContainer.getMetadata().getName(), (Object)string)) continue;
                 v0 = t2;
-                break block1;
-            }
-            v0 = null;
-        }
+                break;
+}
         return v0;
     }
 
@@ -44,10 +40,8 @@ implements LiteBansModule_158 {
         Collection collection;
         ModContainer modContainer;
         Iterable iterable = FabricLoader.getInstance().getAllMods();
-        boolean flag2 = false;
         Iterable iterable2 = iterable;
         Collection collection2 = new ArrayList(CollectionUtilities.BaseCoreGenericHandler(iterable, 10));
-        boolean flag3 = false;
         for (Object t2 : iterable2) {
             modContainer = (ModContainer)t2;
             collection = collection2;
@@ -61,24 +55,21 @@ implements LiteBansModule_158 {
         flag3 = false;
         for (Object t2 : iterable2) {
             boolean flag4;
-            block6: {
+{
                 modContainer = (ModMetadata)t2;
                 flag = false;
                 Iterable iterable3 = modContainer.getDependencies();
-                boolean flag5 = false;
                 if (iterable3 instanceof Collection && ((Collection)iterable3).isEmpty()) {
                     flag4 = false;
                 } else {
                     for (Object t3 : iterable3) {
                         ModDependency modDependency = (ModDependency)t3;
-                        boolean flag6 = false;
                         if (!ObjectUtilities.BaseCoreGenericHandler((Object)modDependency.getModId(), (Object)string)) continue;
                         flag4 = true;
-                        break block6;
+                        break;
                     }
                     flag4 = false;
-                }
-            }
+}
             if (!flag4) continue;
             collection2.add(t2);
         }
@@ -113,8 +104,7 @@ implements LiteBansModule_158 {
             ((LiteBansModule_422)object).BaseCoreGenericHandler(((Object)charSequence).toString());
         } else if (object2 instanceof LiteBansModule_70) {
             ((LiteBansModule_70)object).BaseCoreGenericHandler(true);
-        }
-    }
+}
 
     @Override
     public LiteBansModule_95 BaseCoreGenericHandler(@NotNull Object object, boolean flag) {
@@ -158,7 +148,5 @@ implements LiteBansModule_158 {
     @Override
     public void BaseCoreGenericHandler(Object object, CharSequence charSequence) {
         this.plugin(object, charSequence);
-    }
-
-    }
+}
 

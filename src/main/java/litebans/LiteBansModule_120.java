@@ -30,6 +30,5 @@ public final class LiteBansModule_120 {
             return "" + '#' + this.AsyncBackgroundTask_5;
         }
         return "" + this.AsyncBackgroundTask_5 + '.' + this.LiteBansModule_31 + '.' + this.plugin;
-    }
 }
 

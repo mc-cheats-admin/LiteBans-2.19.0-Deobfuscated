@@ -9,6 +9,5 @@ implements HostnameVerifier {
     @Override
     public boolean verify(@Nullable String string, @Nullable SSLSession sSLSession) {
         return true;
-    }
 }
 

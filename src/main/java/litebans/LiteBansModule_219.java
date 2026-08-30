@@ -13,6 +13,5 @@ public interface LiteBansModule_219 {
         BaseCoreGenericHandler = 8L;
         e = 4L;
         LiteBansModule_31 = 2L;
-    }
 }
 

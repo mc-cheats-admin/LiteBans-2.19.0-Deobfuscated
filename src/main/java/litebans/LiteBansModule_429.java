@@ -6,6 +6,5 @@ public final class LiteBansModule_429 {
 
     public static final /* synthetic */ ThreadLocal BaseCoreGenericHandler() {
         return BaseCoreGenericHandler;
-    }
 }
 

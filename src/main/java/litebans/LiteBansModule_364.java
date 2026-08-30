@@ -24,7 +24,6 @@ implements LiteBansModule_51 {
     public LiteBansModule_364 LiteBansModule_31() {
         LiteBansModule_364 k52;
         LiteBansModule_364 k53 = k52 = this;
-        boolean flag = false;
         ServerMessageEvents.ALLOW_CHAT_MESSAGE.register(k53::BaseCoreGenericHandler);
         ServerMessageEvents.ALLOW_COMMAND_MESSAGE.register(k53::BaseCoreGenericHandler);
         return k52;
@@ -53,6 +52,5 @@ implements LiteBansModule_51 {
     @Override
     public LiteBansModule_175 BaseCoreGenericHandler() {
         return this.LiteBansModule_31();
-    }
 }
 

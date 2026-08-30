@@ -94,8 +94,7 @@ LiteBansModule_309 {
                     continue;
                 }
                 arrayList.add(en_02);
-            }
-        }
+}
         this.PunishmentTableService = arrayList.toArray(q);
         this.GnuSparseMapHandler();
     }
@@ -162,8 +161,7 @@ LiteBansModule_309 {
             for (LiteBansModule_177 en_02 : this.PunishmentTableService) {
                 if (!i22.equals(en_02.c())) continue;
                 return en_02;
-            }
-        }
+}
         return null;
     }
 
@@ -175,8 +173,7 @@ LiteBansModule_309 {
         }
         catch (ZipException zipException) {
             throw new RuntimeException("Error parsing extra fields for entry: " + this.getName() + " - " + zipException.getMessage(), zipException);
-        }
-    }
+}
 
     protected void GnuSparseMapHandler() {
         super.setExtra(LiteBansModule_8.LiteBansModule_31(this.i()));
@@ -262,11 +259,9 @@ LiteBansModule_309 {
                     }
                     this.LiteBansModule_31(en_03.c());
                     this.plugin(y_02);
-                }
-            }
+}
             this.GnuSparseMapHandler();
-        }
-    }
+}
 
     public boolean equals(Object object) {
         if (this == object) {
@@ -306,6 +301,5 @@ LiteBansModule_309 {
         CommandThrottleService = 3;
         Utf8Handler_2 = new byte[0];
         q = new LiteBansModule_177[0];
-    }
 }
 

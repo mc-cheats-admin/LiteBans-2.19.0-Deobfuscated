@@ -39,8 +39,7 @@ implements Cloneable {
         }
         catch (CloneNotSupportedException cloneNotSupportedException) {
             throw new RuntimeException("GeneralPurposeBit is not Cloneable?", cloneNotSupportedException);
-        }
-    }
+}
 
     static {
         LiteBansModule_31 = 2048;
@@ -49,6 +48,5 @@ implements Cloneable {
         g = 4;
         AsyncBackgroundTask_5 = 2;
         c = 1;
-    }
 }
 

@@ -30,16 +30,13 @@ public final class GeoIPLookupService_2 {
             ObjectUtilities.BaseCoreGenericHandler(fileArray);
             File[] fileArray2 = fileArray;
             Object object = fileArray2;
-            boolean flag = false;
             Object object2 = object;
             Collection collection = new ArrayList(((File[])object).length);
-            boolean flag2 = false;
             int n = ((File[])object2).length;
             for (int i = 0; i < n; ++i) {
                 File file3;
                 File file4 = file3 = object2[i];
                 Collection collection2 = collection;
-                boolean flag3 = false;
                 collection2.add(file4.toURI().toURL());
             }
             object = (List)collection;
@@ -68,12 +65,10 @@ public final class GeoIPLookupService_2 {
             object2 = this.LiteBansModule_31("8.8.8.8");
             if (!ObjectUtilities.BaseCoreGenericHandler(object2, (Object)"United States")) {
                 this.e.getLogger().warning("GeoIP database test failed. (" + (String)object2 + ')');
-            }
-        }
+}
         catch (Throwable throwable) {
             throwable.printStackTrace();
-        }
-    }
+}
 
     public final String LiteBansModule_31(@Nullable String string) {
         if (string == null) {
@@ -115,8 +110,7 @@ public final class GeoIPLookupService_2 {
             ConfigService configService = (ConfigService)this.e.BaseCoreGenericHandler(ConfigService.class);
             ConfigService.BaseCoreGenericHandler(configService, exception, 0, 2, null);
             return "geoip.error";
-        }
-    }
+}
 
     public final String BaseCoreGenericHandler(@Nullable String string) {
         if (string == null) {
@@ -124,7 +118,6 @@ public final class GeoIPLookupService_2 {
         }
         ConfigService configService = (ConfigService)this.e.BaseCoreGenericHandler(ConfigService.class);
         DiscordWebhookClient eG2 = configService.LiteBansModule_194();
-        boolean flag = false;
         if (eG2.W()) {
             boolean flag2;
             String string2;
@@ -136,7 +129,7 @@ public final class GeoIPLookupService_2 {
             LiteBansModule_161 eE2 = LiteBansModule_420.BaseCoreGenericHandler(() -> GeoIPLookupService_2.BaseCoreGenericHandler(this, string));
             if (!(eG2.LiteBansModule_21().length == 0)) {
                 boolean flag4;
-                block8: {
+{
                     args = eG2.LiteBansModule_21();
                     flag3 = false;
                     n2 = args.length;
@@ -145,17 +138,16 @@ public final class GeoIPLookupService_2 {
                         flag2 = false;
                         if (!StringUtilities.BaseCoreGenericHandler(string2, GeoIPLookupService_2.BaseCoreGenericHandler(eE2), true)) continue;
                         flag4 = true;
-                        break block8;
+                        break;
                     }
                     flag4 = false;
                 }
                 if (flag4) {
                     return GeoIPLookupService_2.BaseCoreGenericHandler(eE2);
-                }
-            }
+}
             if (!(eG2.S().length == 0)) {
                 boolean flag5;
-                block9: {
+{
                     args = eG2.S();
                     flag3 = false;
                     n2 = args.length;
@@ -164,15 +156,13 @@ public final class GeoIPLookupService_2 {
                         flag2 = false;
                         if (!StringUtilities.BaseCoreGenericHandler(string2, GeoIPLookupService_2.BaseCoreGenericHandler(eE2), true)) continue;
                         flag5 = false;
-                        break block9;
+                        break;
                     }
                     flag5 = true;
                 }
                 if (flag5) {
                     return GeoIPLookupService_2.BaseCoreGenericHandler(eE2);
-                }
-            }
-        }
+}
         return null;
     }
 
@@ -199,6 +189,5 @@ public final class GeoIPLookupService_2 {
 
     private static final void BaseCoreGenericHandler() {
         c = new String[]{"com.maxmind.geoip2.DatabaseReader$Builder", "build", "country", "", "getCountry", "", "getName", "GeoIP support ", "8.8.8.8", "United States", "GeoIP database test failed. (", "geoip.unavailable", "geoip.unavailable", "", "", "", "geoip.error", "geoip.error", ".jar"};
-    }
 }
 

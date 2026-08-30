@@ -13,6 +13,5 @@ implements Represent {
 
     public Node representData(Object object) {
         return this.plugin.represent(((NullHandler_4)object).AsyncBackgroundTask_5);
-    }
 }
 

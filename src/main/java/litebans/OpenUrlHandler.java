@@ -39,7 +39,5 @@ extends Enum {
         AsyncBackgroundTask_5 = new OpenUrlHandler("CHANGE_PAGE", 4);
         c = new OpenUrlHandler("COPY_TO_CLIPBOARD", 5);
         LiteBansModule_240 = OpenUrlHandler.BaseCoreGenericHandler();
-    }
-
-    }
+}
 

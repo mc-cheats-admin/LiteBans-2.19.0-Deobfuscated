@@ -13,6 +13,5 @@ extends RuntimeException {
 
     public final Object BaseCoreGenericHandler() {
         return this.plugin;
-    }
 }
 

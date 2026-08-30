@@ -1143,6 +1143,5 @@ implements ResultSet {
     @Override
     public int getFetchDirection() {
         return 1000;
-    }
 }
 

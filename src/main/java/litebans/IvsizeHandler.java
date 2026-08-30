@@ -35,10 +35,7 @@ extends LiteBansModule_24 {
             this.PunishmentTableService = LiteBansModule_288.BaseCoreGenericHandler(byArray, n + 14);
             for (long i = 0L; i < this.LiteBansModule_194; ++i) {
                 for (int i10 = 0; i10 < this.PunishmentTableService; ++i10) {
-                }
-            }
-        }
-    }
+}
 
     public void AsyncBackgroundTask_5(byte[] byArray, int n, int n2) {
         this.plugin(4, n2);
@@ -87,8 +84,7 @@ extends LiteBansModule_24 {
             this.e = new byte[4];
             System.arraycopy(byArray, n + n3 + 22 + n4 + n6, this.n, 0, n7 - 4);
             System.arraycopy(byArray, n + n3 + 22 + n4 + n6 + n7 - 4, this.e, 0, 4);
-        }
-    }
+}
 
     @Override
     public void BaseCoreGenericHandler(byte[] byArray, int n, int n2) {
@@ -105,7 +101,5 @@ extends LiteBansModule_24 {
     private final void BaseCoreGenericHandler(String string, int n, int n2, int n3) {
         if (n2 + n > n3) {
             throw new ZipException("Invalid X0017_StrongEncryptionHeader: " + string + " " + n + " doesn'AsyncBackgroundTask_22 fit into " + n3 + " bytes of data LiteBansModule_21 position " + n2);
-        }
-    }
 }
 

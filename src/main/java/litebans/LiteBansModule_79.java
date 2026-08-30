@@ -28,6 +28,5 @@ implements LiteBansModule_252 {
     @Override
     public Object BaseCoreGenericHandler(CharSequence charSequence) {
         return this.LiteBansModule_31(charSequence);
-    }
 }
 

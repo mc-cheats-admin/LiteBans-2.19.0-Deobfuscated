@@ -25,19 +25,17 @@ extends PluginModule {
      */
     public final String BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String string) {
         LiteBansModule_168 ej2;
-        block15: {
-            block16: {
+{
                 Object object;
                 int n;
                 Object object2;
-                block14: {
+{
                     boolean flag;
                     boolean flag2;
                     int n2;
                     boolean flag3;
-                    block12: {
+{
                         ej2 = this.plugin(string, sender);
-                        boolean flag4 = false;
                         object2 = ej2.BaseCoreGenericHandler();
                         flag3 = false;
                         n2 = ((LiteBansModule_289[])object2).length;
@@ -47,24 +45,23 @@ extends PluginModule {
                             flag2 = false;
                             if (!i42.LiteBansModule_31()) continue;
                             flag = true;
-                            break block12;
+                            break;
                         }
                         flag = false;
                     }
                     if (!flag) return LiteBansModule_31.BaseCoreGenericHandler(string);
                     if (ej2.LiteBansModule_31() == null) return LiteBansModule_31.BaseCoreGenericHandler(string);
                     if (sender.LiteBansModule_194()) {
-                        block13: {
+{
                             Object object3;
                             LiteBansModule_289[] i4Array = ej2.BaseCoreGenericHandler();
                             int n3 = i4Array.length;
                             for (n2 = 0; n2 < n3; ++n2) {
                                 LiteBansModule_289 i43;
                                 LiteBansModule_289 i44 = i43 = i4Array[n2];
-                                boolean flag5 = false;
                                 if (!(i44.LiteBansModule_31() && ObjectUtilities.BaseCoreGenericHandler((Object)i44.g(), (Object)this.LiteBansModule_31(sender)))) continue;
                                 object3 = i43;
-                                break block13;
+                                break;
                             }
                             object3 = object2 = null;
                         }
@@ -72,8 +69,7 @@ extends PluginModule {
                             sender.BaseCoreGenericHandler(ej2.c());
                             sender.BaseCoreGenericHandler("=> " + ((LiteBansModule_289)object2).BaseCoreGenericHandler());
                             return null;
-                        }
-                    }
+}
                     object2 = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
                     flag3 = false;
                     if (((ConfigService)object2).g()) {
@@ -81,7 +77,7 @@ extends PluginModule {
                         n = 0;
                         ((ConfigService)object4).BaseCoreGenericHandler(ej2.LiteBansModule_31());
                     }
-                    if (!sender.e()) break block15;
+                    if (!sender.e()) break;
                     object2 = ej2.BaseCoreGenericHandler();
                     flag3 = false;
                     n = 0;
@@ -93,15 +89,15 @@ extends PluginModule {
                             ++n;
                             continue;
                         }
-                        break block14;
+                        break;
                     }
                     throw new NoSuchElementException("Array contains no element matching the ");
                 }
-                if (!((LiteBansModule_289)object).LiteBansModule_31()) break block16;
+                if (!((LiteBansModule_289)object).LiteBansModule_31()) break;
                 object2 = sender;
                 String string2 = "litebans.json.hover_text";
                 n = 0;
-                if (!object2.e(string2)) break block15;
+                if (!object2.e(string2)) break;
             }
             sender.LiteBansModule_31(ej2.LiteBansModule_31().toString());
             return null;
@@ -124,25 +120,16 @@ extends PluginModule {
         Object object = new char[]{' '};
         List list2 = StringUtilities.BaseCoreGenericHandler((CharSequence)string, object, false, 0, 6, null);
         object = CollectionUtilities.BaseCoreGenericHandler((Collection)list2);
-        int n2 = 0;
-        int n3 = 0;
         n3 = 1;
-        boolean flag = false;
-        boolean flag2 = false;
-        boolean flag3 = false;
         ArrayList<String> arrayList = new ArrayList<String>(object.size());
         HoverTextFormatter y2 = this;
-        boolean flag4 = false;
         Iterable iterable = list2;
-        int n4 = 0;
-        int n5 = 0;
         for (Object object2 : iterable) {
             if ((n = n5++) < 0) {
                 CollectionUtilities.LiteBansModule_31();
             }
             String string6 = (String)object2;
             int n6 = n;
-            boolean flag5 = false;
             if (!flag && StringUtilities.LiteBansModule_31(string6, string4, false, 2, null)) {
                 flag = true;
                 flag2 = true;
@@ -163,8 +150,7 @@ extends PluginModule {
                         object.set(n7, string8 + (String)object.get(n7));
                     } else {
                         object.add(string8);
-                    }
-                }
+}
                 flag2 = false;
                 flag3 = true;
                 break;
@@ -173,7 +159,6 @@ extends PluginModule {
         }
         n2 = Math.min(object.size() - 1, n2);
         Iterable iterable2 = LiteBansModule_20.LiteBansModule_31(0, n3);
-        boolean flag6 = false;
         Object object3 = iterable2.iterator();
         while (object3.hasNext()) {
             int n8;
@@ -244,7 +229,6 @@ extends PluginModule {
         }
         NullHandler_3 gr_02 = null;
         NullHandler_3 gr_03 = null;
-        int n = 0;
         if (i42.LiteBansModule_31()) {
             bD2 = new NullHandler_7();
             string2 = i42.BaseCoreGenericHandler();
@@ -318,7 +302,7 @@ extends PluginModule {
 
     public final NullHandler_3 BaseCoreGenericHandler(@NotNull String string, @NotNull CommandSenderWrapper sender, @Nullable NullHandler_3 gr_02, @NotNull String string2, @Nullable NullHandler_3 gr_03) {
         NullHandler_3 gr_04 = gr_03;
-        Object var7_7 = null;
+        Object arg1 = null;
         try {
             boolean flag;
             boolean flag2 = flag = gr_03 == null;
@@ -350,14 +334,12 @@ extends PluginModule {
                         String[] filteredArgs;
                         HoverTextFormatter y2 = this;
                         NullHandler_3 gr_05 = gr_04;
-                        boolean flag3 = false;
                         ConfigService configService = (ConfigService)y2.BaseCoreGenericHandler.BaseCoreGenericHandler(ConfigService.class);
                         ObjectUtilities.BaseCoreGenericHandler(configService);
                         MuteHandler et2 = AbstractCommand.AsyncBackgroundTask_5;
                         Object v3 = gr_05.get("contents");
                         ObjectUtilities.LiteBansModule_31(v3, "");
                         String string4 = (String)v3;
-                        boolean flag4 = false;
                         if (ObjectUtilities.BaseCoreGenericHandler((Object)string4, (Object)"sort")) {
                             String[] parsedArgs = new String[]{"00"};
                             filteredArgs = parsedArgs;
@@ -367,12 +349,9 @@ extends PluginModule {
                         }
                         if (new LiteBansModule_403(configService, Arrays.copyOf(args = filteredArgs, args.length)).LiteBansModule_31() == configService.hashCode()) {
                             throw new IllegalArgumentException(gr_05.toString());
-                        }
-                    } else if (ObjectUtilities.BaseCoreGenericHandler(v2, (Object)"true") || ObjectUtilities.BaseCoreGenericHandler(v2, (Object)"false")) {
+} else if (ObjectUtilities.BaseCoreGenericHandler(v2, (Object)"true") || ObjectUtilities.BaseCoreGenericHandler(v2, (Object)"false")) {
                         this.plugin(gr_04, sender);
-                    }
-                }
-            } else {
+} else {
                 NullHandler_3 gr_06 = gr_04;
                 if (gr_06 == null) {
                     gr_06 = new NullHandler_3();
@@ -383,11 +362,9 @@ extends PluginModule {
                 }
                 if (gr_02 != null) {
                     ((Map)gr_04).put(string2, gr_02);
-                }
-            }
-        }
+}
         catch (Exception exception) {
-            throw new RuntimeException("Failed to build JSON: \"" + gr_04 + "\"; last result: " + var7_7, exception);
+            throw new RuntimeException("Failed to build JSON: \"" + gr_04 + "\"; last result: " + arg1, exception);
         }
         return gr_04;
     }
@@ -411,10 +388,8 @@ extends PluginModule {
             NullHandler_7 ks_03 = ks_02 = (NullHandler_7)gr_03.get("extra");
             if (ks_03 != null) {
                 Iterable iterable = ks_03;
-                boolean flag = false;
                 Iterable iterable2 = iterable;
                 Collection collection2 = new ArrayList();
-                boolean flag2 = false;
                 Iterator iterator = iterable2.iterator();
                 while (iterator.hasNext()) {
                     Object t2 = iterator.next();
@@ -425,10 +400,8 @@ extends PluginModule {
                 flag = false;
                 for (Collection collection2 : iterable) {
                     NullHandler_3 gr_04 = (NullHandler_3)((Object)collection2);
-                    boolean flag3 = false;
                     ((Map)gr_04).put(string, gr_02);
-                }
-            }
+}
             ((Map)gr_03).put(string, gr_02);
             return true;
         }
@@ -436,7 +409,7 @@ extends PluginModule {
     }
 
     public final NullHandler_3 BaseCoreGenericHandler(@NotNull NullHandler_3 gr_02, @NotNull CommandSenderWrapper sender) {
-        block6: {
+{
             Object object;
             Object object2;
             Object object3;
@@ -450,12 +423,10 @@ extends PluginModule {
             object3 = (NullHandler_7)gr_02.get("extra");
             object2 = null;
             Object object4 = object3;
-            if (object4 == null) break block6;
+            if (object4 == null) break;
             Iterable iterable = (Iterable)object4;
-            boolean flag = false;
             Iterable iterable2 = iterable;
             Collection collection2 = new ArrayList();
-            boolean flag2 = false;
             Iterator iterator = iterable2.iterator();
             while (iterator.hasNext()) {
                 object = iterator.next();
@@ -467,7 +438,6 @@ extends PluginModule {
             for (Collection collection2 : iterable) {
                 String string;
                 NullHandler_3 gr_03 = (NullHandler_3)((Object)collection2);
-                boolean flag3 = false;
                 object2 = object = this.plugin((String)gr_03.get("text"), (LiteBansModule_289)object2);
                 Object t2 = object;
                 ((Map)gr_03).put("text", t2 != null ? ((LiteBansModule_289)t2).c() : null);
@@ -490,8 +460,7 @@ extends PluginModule {
                 }
                 if (!gr_03.containsKey(string2) || !gr_03.containsKey(string3)) continue;
                 gr_03.remove(string3);
-            }
-        }
+}
         return gr_02;
     }
 
@@ -555,6 +524,5 @@ extends PluginModule {
 
     private static final void AsyncBackgroundTask_5() {
         AsyncBackgroundTask_5 = new String[]{"=> ", "Array contains no element matching the ", "litebans.json.hover_text", " ", "url", " ", "hoverText", "run", "url", "suggest", "copy", "action", "show_text", "value", "action", "run_command", "command", "value", "action", "suggest_command", "command", "value", "action", "copy_to_clipboard", "value", "https:", "action", "open_url", "url", "value", "click_event", "clickEvent", "hover_event", "hoverEvent", "", "", "", "contents", "null", "contents", "", "sort", "00", "01:", "true", "false", "text", "Failed to build JSON: \"", "\"; last result: ", "", "extra", "text", "", "text", "text", "extra", "text", "text", "click_event", "clickEvent", "hover_event", "hoverEvent", "hoverText", "", "run", "", "url", "", "suggest", "", "copy", "", "contents", "", "sort", "00", "01:", "", "", "", "display-name", "ip", "name", "uuid", "", ""};
-    }
 }
 

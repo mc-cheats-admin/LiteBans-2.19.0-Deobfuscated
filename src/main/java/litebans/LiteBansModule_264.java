@@ -42,7 +42,5 @@ implements LiteBansModule_177 {
         this.c = Arrays.copyOfRange(byArray, n, n + n2);
         if (this.AsyncBackgroundTask_5 == null) {
             this.plugin(byArray, n, n2);
-        }
-    }
 }
 

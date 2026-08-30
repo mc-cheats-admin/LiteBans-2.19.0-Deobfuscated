@@ -16,12 +16,10 @@ extends MessageHandler {
         CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, (String[])object);
         if (ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5[1], (Object)"seed") && this.AsyncBackgroundTask_5().LiteBansModule_194()) {
             object = this;
-            boolean flag = false;
             MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(BlackHandler.c(String.valueOf(((ConfigService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().ContinueEvictHandler())));
             throw new CommandExitException();
         }
         Object object2 = this;
-        int n = 0;
         object = ((ConfigService)((MessageHandler)object2).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).Utf8Handler_2();
         if (ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5[1], (Object)"web") && this.AsyncBackgroundTask_5().LiteBansModule_194()) {
             object2 = new StringBuilder();
@@ -41,7 +39,5 @@ extends MessageHandler {
 
     private static final void BaseCoreGenericHandler() {
         e = new String[]{"litebans.admin", "litebans.reveal", "seed", "web", "Invalid ID."};
-    }
-
-    }
+}
 

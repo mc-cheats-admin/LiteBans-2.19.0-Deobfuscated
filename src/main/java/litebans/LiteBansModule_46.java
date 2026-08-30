@@ -97,6 +97,5 @@ implements CommandSenderWrapper {
     @Override
     public Object c() {
         return this.plugin();
-    }
 }
 

@@ -64,8 +64,7 @@ extends Enum {
             }
             default: {
                 throw new UnsupportedOperationException(this.toString());
-            }
-        }
+}
         return string;
     }
 
@@ -115,6 +114,5 @@ extends Enum {
 
     private static final void c() {
         HoverTextFormatter = new String[]{"broadcast", "silent", "console", "dupeip_join", "mute", "PING", "PONG", "BROADCAST", "BROADCAST_SILENT", "BROADCAST_EXTRA_SILENT", "NOTIFY_BANNED_JOIN", "NOTIFY_DUPEIP_JOIN", "NOTIFY_MUTE", "BAN", "MUTE", "WARN", "KICK_REQUEST", "KICK_SUCCESS", "UNBAN", "UNMUTE", "UNWARN", "EXPIRED_NOTIFY", "BROADCAST_CUSTOM", "SERVERS_RELOAD", "CONFIG_RELOAD"};
-    }
 }
 

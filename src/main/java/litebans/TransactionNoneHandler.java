@@ -24,10 +24,10 @@ extends Enum {
      * WARNING - void declaration
      */
     private TransactionNoneHandler() {
-        void var3_1;
+        void arg1;
         void var2_-1;
         void var1_-1;
-        this.LiteBansModule_31 = var3_1;
+        this.LiteBansModule_31 = arg1;
     }
 
     public int BaseCoreGenericHandler() {
@@ -36,6 +36,5 @@ extends Enum {
 
     static {
         c = new TransactionNoneHandler[]{BaseCoreGenericHandler, LiteBansModule_194, AsyncBackgroundTask_5, g, LiteBansModule_240, e};
-    }
 }
 

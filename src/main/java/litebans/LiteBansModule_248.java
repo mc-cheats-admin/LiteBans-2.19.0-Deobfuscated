@@ -50,6 +50,5 @@ static final class LiteBansModule_248 {
 
     static final /* synthetic */ boolean LiteBansModule_194(LiteBansModule_248 h92) {
         return h92.AsyncBackgroundTask_5;
-    }
 }
 

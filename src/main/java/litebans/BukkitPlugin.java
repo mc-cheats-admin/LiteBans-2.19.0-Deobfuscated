@@ -70,8 +70,7 @@ implements PlatformPlugin {
             }
             if (module instanceof LiteBansModule_367) {
                 this.plugin((LiteBansModule_367)module);
-            }
-        }
+}
         return flag;
     }
 
@@ -247,8 +246,7 @@ implements PlatformPlugin {
             this.LiteBansModule_31(de2);
         } else {
             de2.run();
-        }
-    }
+}
 
     public boolean AsyncBackgroundTask_5() {
         return !StackTraceAnalyzer.BaseCoreGenericHandler("org.bukkit.entity.Llama");
@@ -262,8 +260,7 @@ implements PlatformPlugin {
         for (LiteBansModule_175 em_02 : em_0Array) {
             if (!(em_02 instanceof LiteBansModule_88)) continue;
             this.getServer().getPluginManager().registerEvents((Listener)((LiteBansModule_88)em_02), (Plugin)this);
-        }
-    }
+}
 
     @Override
     public boolean BaseCoreGenericHandler(String string, Supplier supplier) {
@@ -360,8 +357,7 @@ implements PlatformPlugin {
         for (LiteBansModule_175 em_02 : em_0Array) {
             if (!(em_02 instanceof LiteBansModule_88)) continue;
             HandlerList.unregisterAll((Listener)((LiteBansModule_88)em_02));
-        }
-    }
+}
 
     @Override
     public CommandSenderWrapper LiteBansModule_31(Object object) {
@@ -407,11 +403,8 @@ implements PlatformPlugin {
             String response = new BufferedReader(new InputStreamReader(con.getInputStream())).readLine();
             if ("false".equals(response)) {
                 throw new RuntimeException("Access to this plugin has been disabled! Please contact the author!");
-            }
-        }
+}
         catch (IOException iOException) {
             // empty catch block
-        }
-    }
 }
 

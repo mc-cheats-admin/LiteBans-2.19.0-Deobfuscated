@@ -57,8 +57,7 @@ PlatformPlugin {
             }
             if (module instanceof LiteBansModule_199) {
                 this.plugin((CommandManager)module);
-            }
-        }
+}
         return flag;
     }
 
@@ -259,8 +258,7 @@ PlatformPlugin {
             if (!(em_02 instanceof LiteBansModule_51)) continue;
             LiteBansModule_51 bk_02 = (LiteBansModule_51)em_02;
             bk_02.BaseCoreGenericHandler();
-        }
-    }
+}
 
     @Override
     public boolean BaseCoreGenericHandler(String string, Supplier supplier) {
@@ -292,8 +290,7 @@ PlatformPlugin {
         }
         catch (RejectedExecutionException rejectedExecutionException) {
             this.plugin(rejectedExecutionException);
-        }
-    }
+}
 
     @Override
     public void LiteBansModule_31(Runnable runnable) {
@@ -312,8 +309,7 @@ PlatformPlugin {
         }
         catch (RejectedExecutionException rejectedExecutionException) {
             this.plugin(rejectedExecutionException);
-        }
-    }
+}
 
     private final void BaseCoreGenericHandler(Exception exception) {
         if (this.AsyncBackgroundTask_5.m.get()) {
@@ -379,6 +375,5 @@ PlatformPlugin {
 
     private static final void e() {
         i = new String[]{"config.yml", "fabric-api", "\\+", "me.lucko.fabric.api.permissions.v0.Permissions", "Invalid delay ", "Startup was cancelled"};
-    }
 }
 

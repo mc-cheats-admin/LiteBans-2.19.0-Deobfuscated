@@ -11,7 +11,6 @@ implements LiteBansModule_178 {
 
     public final void BaseCoreGenericHandler(AtomicLong atomicLong) {
         AtomicLong atomicLong2 = atomicLong;
-        boolean flag = false;
         atomicLong2.set(0L);
     }
 
@@ -28,6 +27,5 @@ implements LiteBansModule_178 {
 
     private static final void LiteBansModule_31() {
         Utf8Handler_2 = new String[]{"reset", "reset(Ljava/util/concurrent/atomic/AtomicLong;)V"};
-    }
 }
 

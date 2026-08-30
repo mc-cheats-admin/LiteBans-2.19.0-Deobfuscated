@@ -50,8 +50,7 @@ extends BuilderactionHandler_3 {
             }
             default: {
                 list2 = list;
-            }
-        }
+}
         return list2;
     }
 
@@ -61,7 +60,5 @@ extends BuilderactionHandler_3 {
 
     public static final void c() {
         throw new ArithmeticException("Count overflow has ");
-    }
-
-    }
+}
 

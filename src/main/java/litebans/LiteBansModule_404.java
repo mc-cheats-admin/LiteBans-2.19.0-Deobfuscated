@@ -28,11 +28,9 @@ extends ConfigurationManager {
             return CommandSenderWrapper.BaseCoreGenericHandler;
         }
         CommandSenderWrapper[] jv_0Array = new CommandSenderWrapper[collection.size()];
-        int n = 0;
         for (ProxiedPlayer proxiedPlayer : collection) {
             jv_0Array[n++] = plugin.BaseCoreGenericHandler(proxiedPlayer);
         }
         return jv_0Array;
-    }
 }
 

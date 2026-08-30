@@ -44,12 +44,12 @@ implements DataSource {
                 break;
             }
             if (this.LiteBansModule_31 == null) {
-                void var7_14;
+                void arg1;
                 e.c("Registered driver with driverClassName={} was not found, trying direct ", new Object[]{string2});
                 Object v7 = null;
                 ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
                 try {
-                    void var7_12;
+                    void arg2;
                     if (classLoader != null) {
                         try {
                             Class<?> clazz = classLoader.loadClass(string2);
@@ -57,26 +57,21 @@ implements DataSource {
                         }
                         catch (ClassNotFoundException classNotFoundException) {
                             e.LiteBansModule_31("Driver class {} not found InitializerHandler_3 Thread context class loader {}, trying classloader {}", new Object[]{string2, classLoader, this.getClass().getClassLoader()});
-                        }
-                    }
-                    if (var7_12 == null) {
+}
+                    if (arg2 == null) {
                         Class<?> clazz = this.getClass().getClassLoader().loadClass(string2);
                         e.LiteBansModule_31("Driver class {} found InitializerHandler_3 the HikariConfig class classloader {}", new Object[]{string2, this.getClass().getClassLoader()});
-                    }
-                }
+}
                 catch (ClassNotFoundException classNotFoundException) {
                     e.LiteBansModule_31("Failed to load driver class {} from HikariConfig class classloader {}", new Object[]{string2, this.getClass().getClassLoader()});
                 }
-                if (var7_14 != null) {
+                if (arg1 != null) {
                     try {
-                        this.LiteBansModule_31 = (Driver)var7_14.getDeclaredConstructor(new Class[0]).newInstance(new Object[0]);
+                        this.LiteBansModule_31 = (Driver)arg1.getDeclaredConstructor(new Class[0]).newInstance(new Object[0]);
                     }
                     catch (Exception exception) {
                         e.c("Failed to create instance of driver class {}, trying jdbcUrl resolution", new Object[]{string2, exception});
-                    }
-                }
-            }
-        }
+}
         object = string.replaceAll("([?&;]password=)[^&#;]*(.*)", "$1<masked>$2");
         try {
             if (this.LiteBansModule_31 == null) {
@@ -84,12 +79,10 @@ implements DataSource {
                 e.LiteBansModule_31("Loaded driver with class name {} for jdbcUrl={}", new Object[]{this.LiteBansModule_31.getClass().getName(), object});
             } else if (!this.LiteBansModule_31.acceptsURL(string)) {
                 throw new RuntimeException("Driver " + string2 + " claims to not accept jdbcUrl, " + (String)object);
-            }
-        }
+}
         catch (SQLException sQLException) {
             throw new RuntimeException("Failed to get driver instance for jdbcUrl=" + (String)object, sQLException);
-        }
-    }
+}
 
     @Override
     public Connection getConnection() {
@@ -103,8 +96,7 @@ implements DataSource {
             properties.put("user", string);
             if (properties.containsKey("username")) {
                 properties.put("username", string);
-            }
-        }
+}
         if (string2 != null) {
             properties.put("password", string2);
         }
@@ -148,6 +140,5 @@ implements DataSource {
         c = "user";
         BaseCoreGenericHandler = "password";
         e = HikariLogger.BaseCoreGenericHandler(UserHandler.class);
-    }
 }
 

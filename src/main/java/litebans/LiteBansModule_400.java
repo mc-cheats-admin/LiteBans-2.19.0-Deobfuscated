@@ -32,8 +32,7 @@ implements LiteBansModule_351 {
             }
             case 1: {
                 return null;
-            }
-        }
+}
         throw new ZipException("Unknown UnparseableExtraField key: " + this.AsyncBackgroundTask_5);
     }
 
@@ -44,6 +43,5 @@ implements LiteBansModule_351 {
         LiteBansModule_194 = new LiteBansModule_400(0);
         LiteBansModule_31 = new LiteBansModule_400(1);
         c = new LiteBansModule_400(2);
-    }
 }
 

@@ -8,6 +8,5 @@ extends StrictForKnowHandler {
     @Override
     public LiteBansModule_177 BaseCoreGenericHandler(LiteBansModule_177 en_02, byte[] byArray, int n, int n2, boolean flag) {
         return StrictForKnowHandler.LiteBansModule_31(en_02, byArray, n, n2, flag);
-    }
 }
 

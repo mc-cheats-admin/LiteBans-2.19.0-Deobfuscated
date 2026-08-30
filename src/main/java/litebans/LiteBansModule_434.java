@@ -61,7 +61,5 @@ implements LiteBansModule_177 {
         this.plugin(byArray2);
         if (this.c == null) {
             this.LiteBansModule_31(byArray2);
-        }
-    }
 }
 

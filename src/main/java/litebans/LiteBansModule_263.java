@@ -31,6 +31,5 @@ implements LiteBansModule_149 {
     @Override
     public long AsyncBackgroundTask_5(long l3, long l5) {
         return l3 + l5;
-    }
 }
 

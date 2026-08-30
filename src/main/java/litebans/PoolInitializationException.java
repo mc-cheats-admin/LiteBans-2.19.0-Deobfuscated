@@ -44,6 +44,5 @@ public class PoolInitializationException {
     static {
         c = 10000;
         LiteBansModule_31 = new LiteBansModule_100(false);
-    }
 }
 

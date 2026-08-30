@@ -49,20 +49,16 @@ extends DefaultvalueHandler_4 {
         ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
         if (objectArray.length > 1) {
             Arrays.sort(objectArray);
-        }
-    }
+}
 
     public static final void BaseCoreGenericHandler(@NotNull Object[] objectArray, @NotNull Comparator comparator) {
         ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
         ObjectUtilities.BaseCoreGenericHandler((Object)comparator, "comparator");
         if (objectArray.length > 1) {
             Arrays.sort(objectArray, comparator);
-        }
-    }
+}
 
     private static final void c() {
         c = new String[]{"<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "klass", "<this>", "destination", "klass", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "comparator", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "other", "<this>", "<this>", "<this>", "destination", "<this>", "destination", "<this>", "destination", "<this>", "destination", "<this>", "destination", "<this>", "destination", "<this>", "destination", "<this>", "destination", "<this>", "destination", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "comparator", "<this>", "comparator", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "hVthis>", "<this>", "<this>", "comparator", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "comparator", "<this>", "comparator", "<this>", "comparator", "<this>", "comparator", "<this>", "comparator", "<this>", "comparator", "<this>", "comparator", "<this>", "comparator", "<this>", "comparator", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "comparator", "<this>", "comparator", "<this>", "comparator", "<this>", "comparator", "<this>", "comparator", "<this>", "comparator", "<this>", "comparator", "<this>", "comparator", "<this>", "comparator", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector", "<this>", "selector"};
-    }
-
-    }
+}
 

@@ -3,7 +3,6 @@ package litebans;
 import java.util.Arrays;
 static class LiteBansModule_108 {
     public static final int LiteBansModule_31(byte[] byArray) {
-        int n = 0;
         for (int i = 0; i < 256; ++i) {
             n += LiteBansModule_108.LiteBansModule_31(byArray, 4 * i);
         }
@@ -33,6 +32,5 @@ static class LiteBansModule_108 {
 
     static final String BaseCoreGenericHandler(LiteBansModule_119 dd_02, byte[] byArray, int n, int n2) {
         return dd_02.BaseCoreGenericHandler(Arrays.copyOfRange(byArray, n, n + n2));
-    }
 }
 

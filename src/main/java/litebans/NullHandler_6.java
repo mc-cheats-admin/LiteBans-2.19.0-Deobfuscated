@@ -33,8 +33,7 @@ public class NullHandler_6 {
         }
         catch (ClassCastException classCastException) {
             throw NullHandler_6.BaseCoreGenericHandler(classCastException);
-        }
-    }
+}
 
     public static Collection LiteBansModule_31(Object object) {
         if (object instanceof LiteBansModule_122 && !(object instanceof LiteBansModule_269)) {
@@ -49,8 +48,7 @@ public class NullHandler_6 {
         }
         catch (ClassCastException classCastException) {
             throw NullHandler_6.BaseCoreGenericHandler(classCastException);
-        }
-    }
+}
 
     public static List c(Object object) {
         if (object instanceof LiteBansModule_122 && !(object instanceof LiteBansModule_399)) {
@@ -65,12 +63,9 @@ public class NullHandler_6 {
         }
         catch (ClassCastException classCastException) {
             throw NullHandler_6.BaseCoreGenericHandler(classCastException);
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"null", " cannot be cast to ", "kotlin.collections.MutableIterator", "kotlin.collections.MutableListIterator", "kotlin.collections.MutableIterable", "kotlin.collections.MutableCollection", "kotlin.collections.MutableList", "kotlin.collections.MutableSet", "kotlin.collections.MutableMap", "kotlin.collections.MutableMap.MutableEntry", "kotlin.jvm.functions.Function"};
-    }
-
-    }
+}
 

@@ -11,7 +11,5 @@ public final class ArrayHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"array"};
-    }
-
-    }
+}
 

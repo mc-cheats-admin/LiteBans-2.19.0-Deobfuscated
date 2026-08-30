@@ -13,6 +13,5 @@ extends LiteBansModule_324 {
 
     private final int BaseCoreGenericHandler() {
         return 4;
-    }
 }
 

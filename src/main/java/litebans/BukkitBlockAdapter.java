@@ -28,11 +28,9 @@ public class BukkitBlockAdapter {
                 spigot.sendMessage(LiteBansModule_280.BaseCoreGenericHandler(string, ChatVersion.V1_21_5));
             } else {
                 spigot.sendMessage(LiteBansModule_280.BaseCoreGenericHandler(string, ChatVersion.V1_16));
-            }
-        } else {
+} else {
             spigot.sendMessage(LiteBansModule_57.LiteBansModule_31(string));
-        }
-    }
+}
 
     static {
         BukkitBlockAdapter.AsyncBackgroundTask_5();
@@ -50,15 +48,12 @@ public class BukkitBlockAdapter {
             for (Thread thread : threadArray) {
                 if (thread == null || !thread.getName().startsWith("Folia Watchdog")) continue;
                 e = true;
-            }
-        }
+}
         catch (LinkageError | ReflectiveOperationException throwable) {
             // empty catch block
-        }
-    }
+}
 
     private static final void AsyncBackgroundTask_5() {
         BaseCoreGenericHandler = new String[]{"org.bukkit.block.TestBlock", "net.md_5.bungee.api.chat.BaseComponent", "kickMessage", "io.papermc.paper.threadedregions.scheduler.RegionScheduler", "Folia Watchdog"};
-    }
 }
 

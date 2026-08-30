@@ -30,97 +30,75 @@ public final class LimitHandler {
         return jW2.BaseCoreGenericHandler(plugin, args, collection, n);
     }
 
-    public static void BaseCoreGenericHandler(@NotNull LiteBansModule_359 var0, @NotNull LiteBansModule_82 v1, @NotNull Collection v2, @Nullable LiteBansModule_297 v3, @Nullable String[] var4_4, @NotNull AbstractCommand var5_5, int var6_6) {
-        var7_7 = var5_5;
-        var8_8 = false;
-        var9_9 = var7_7;
-        var10_10 = false;
-        var11_12 = DatabaseMonitorService.BaseCoreGenericHandler((DatabaseMonitorService)var9_9.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class), false, 1, null);
-        var9_9 = new HashMap<K, V>();
+    public static void BaseCoreGenericHandler(@NotNull LiteBansModule_359 var0, @NotNull LiteBansModule_82 v1, @NotNull Collection v2, @Nullable LiteBansModule_297 v3, @Nullable String[] arg1, @NotNull AbstractCommand arg2, int arg3) {
+        arg4 = arg2;
+        arg5 = arg4;
+        arg6 = DatabaseMonitorService.BaseCoreGenericHandler((DatabaseMonitorService)arg5.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class), false, 1, null);
+        arg5 = new HashMap<K, V>();
         if (StringUtilities.LiteBansModule_31(var0.BaseCoreGenericHandler()) == false && v3 != null) {
-            CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)var7_7, (CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler(v1, var0.BaseCoreGenericHandler(), v3, false, 2, null), (CharSequence)"limit", var6_6), (CharSequence)"total", v2.size()));
+            CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)arg4, (CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler(v1, var0.BaseCoreGenericHandler(), v3, false, 2, null), (CharSequence)"limit", arg3), (CharSequence)"total", v2.size()));
         }
-        for (SilentHandler var13_13 : CollectionUtilities.BaseCoreGenericHandler((Iterable)v2, var6_6)) {
-            block19: {
-                var14_14 = var13_13.DatabaseMonitorService();
+        for (SilentHandler arg7 : CollectionUtilities.BaseCoreGenericHandler((Iterable)v2, arg3)) {
+{
+                arg8 = arg7.DatabaseMonitorService();
                 v0 = v3;
                 if (v0 == null) {
-                    v0 = var0.BaseCoreGenericHandler(v1, (HashMap)var9_9, var14_14);
+                    v0 = var0.BaseCoreGenericHandler(v1, (HashMap)arg5, arg8);
                 }
-                if ((var15_15 = v0) == null) break block19;
-                var16_17 = false;
-                var17_19 = var13_13;
-                var18_20 = false;
-                if (!var17_19.LiteBansModule_240()) ** GOTO lbl-1000
-                v1 = var17_19.PunishmentTableService();
+                if ((arg9 = v0) == null) break;
+                arg10 = arg7;
+                if (!arg10.LiteBansModule_240()) ** GOTO lbl-1000
+                v1 = arg10.PunishmentTableService();
                 v2 = v1 != null ? StringUtilities.BaseCoreGenericHandler((CharSequence)v1, '#', false, 2, null) : false;
-                if (v2 && !ObjectUtilities.BaseCoreGenericHandler((Object)var17_19.DatabaseMonitorService(), (Object)var15_15.LiteBansModule_31())) {
-                    v3 = true;
+                if (v2 && !ObjectUtilities.BaseCoreGenericHandler((Object)arg10.DatabaseMonitorService(), (Object)arg9.LiteBansModule_31())) {
                 } else lbl-1000:
-                // 2 sources
-
-                {
-                    v3 = false;
+                                {
                 }
                 if (v3) {
-                    var16_16 = var7_7;
-                    var17_18 = 0;
-                    var16_16 = (ConfigService)var16_16.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
-                    var17_18 = 100;
-                    var18_20 = false;
-                    if (!var16_16.BaseCoreGenericHandler(var17_18)) continue;
-                    var19_22 = var16_16;
-                    var20_23 = false;
-                    var19_22.BaseCoreGenericHandler((Object)("r0 " + var13_13));
+                    arg11 = arg4;
+                    arg11 = (ConfigService)arg11.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
+                    arg12 = 100;
+                    if (!arg11.BaseCoreGenericHandler(arg12)) continue;
+                    arg13 = arg11;
+                    arg13.BaseCoreGenericHandler((Object)("r0 " + arg7));
                     continue;
-                }
-            }
-            var16_16 = null;
-            var17_18 = var14_14 == null || StringUtilities.BaseCoreGenericHandler((CharSequence)var14_14, '#', false, 2, null) != false ? 1 : 0;
-            var18_21 = var13_13.PunishmentTableService();
-            if (var17_18 != 0 && !var7_7.AsyncBackgroundTask_5().LiteBansModule_194()) {
-                var20_24 = var7_7;
-                var21_26 = false;
-                if (((ConfigService)var20_24.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().aa()) {
-                    var18_21 = MessageKey.SecHandler.toString();
-                }
-            }
-            var20_25 = MessageKey.BaseCoreGenericHandler(var13_13.ServerSyncService());
-            v4 = var16_16 = var17_18 == 0 ? var0.BaseCoreGenericHandler(v1, (HashMap)var9_9, var14_14) : new LiteBansModule_297(var18_21, null, var18_21, new Date(var13_13.BroadcastService()));
-            if (var16_16 == null) {
-                var21_27 = var7_7;
-                var22_28 = 0;
-                var21_27 = (ConfigService)var21_27.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
-                var22_28 = 100;
-                var23_31 = false;
-                if (!var21_27.BaseCoreGenericHandler(var22_28)) continue;
-                var19_22 = var21_27;
-                var24_35 = false;
-                var19_22.BaseCoreGenericHandler((Object)("r2 " + var13_13));
+}
+            arg12 = arg8 == null || StringUtilities.BaseCoreGenericHandler((CharSequence)arg8, '#', false, 2, null) != false ? 1 : 0;
+            arg14 = arg7.PunishmentTableService();
+            if (arg12 != 0 && !arg4.AsyncBackgroundTask_5().LiteBansModule_194()) {
+                arg15 = arg4;
+                if (((ConfigService)arg15.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().aa()) {
+                    arg14 = MessageKey.SecHandler.toString();
+}
+            arg16 = MessageKey.BaseCoreGenericHandler(arg7.ServerSyncService());
+            v4 = arg11 = arg12 == 0 ? var0.BaseCoreGenericHandler(v1, (HashMap)arg5, arg8) : new LiteBansModule_297(arg14, null, arg14, new Date(arg7.BroadcastService()));
+            if (arg11 == null) {
+                arg17 = arg4;
+                arg17 = (ConfigService)arg17.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
+                arg18 = 100;
+                if (!arg17.BaseCoreGenericHandler(arg18)) continue;
+                arg13 = arg17;
+                arg13.BaseCoreGenericHandler((Object)("r2 " + arg7));
                 continue;
             }
-            var21_26 = v1.BaseCoreGenericHandler(var13_13);
-            if (var21_26 && var13_13.ServerSyncService() != BanHandler.g) {
-                var22_29 = var20_25;
-                var23_32 = var13_13.HoverTextFormatter() != false ? MessageKey.LiteBansModule_89 : MessageKey.MessageKey;
-                var24_35 = false;
-                var20_25 = "" + var22_29 + var23_32;
+            arg19 = v1.BaseCoreGenericHandler(arg7);
+            if (arg19 && arg7.ServerSyncService() != BanHandler.g) {
+                arg20 = arg16;
+                arg21 = arg7.HoverTextFormatter() != false ? MessageKey.LiteBansModule_89 : MessageKey.MessageKey;
+                arg16 = "" + arg20 + arg21;
             }
-            if (ObjectUtilities.BaseCoreGenericHandler((Object)"#expired", (Object)(var22_30 = var13_13.q())) || !var21_26 && var13_13.LiteBansModule_31(var11_12)) {
-                var23_33 = var20_25;
-                var24_36 = MessageKey.dm;
-                var25_38 = false;
-                var20_25 = "" + var23_33 + var24_36;
+            if (ObjectUtilities.BaseCoreGenericHandler((Object)"#expired", (Object)(arg22 = arg7.q())) || !arg19 && arg7.LiteBansModule_31(arg6)) {
+                arg23 = arg16;
+                arg24 = MessageKey.dm;
+                arg16 = "" + arg23 + arg24;
             }
-            var20_25 = AllHandler_3.BaseCoreGenericHandler(v1, var20_25, var13_13, (LiteBansModule_297)var16_16, false, 4, null);
-            var23_34 = null;
-            var24_37 = var22_30;
-            if (!(var24_37 == null || StringUtilities.LiteBansModule_31((CharSequence)var24_37) != false) && !StringUtilities.BaseCoreGenericHandler((CharSequence)var22_30, '#', false, 2, null)) {
-                var24_37 = var7_7;
-                var25_38 = false;
-                var22_30 = ((BroadcastService)var24_37.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class)).BaseCoreGenericHandler(v1, var13_13);
-                if (var22_30 != null) {
-                    switch (LiteBansModule_282.BaseCoreGenericHandler[var13_13.ServerSyncService().ordinal()]) {
+            arg16 = AllHandler_3.BaseCoreGenericHandler(v1, arg16, arg7, (LiteBansModule_297)arg11, false, 4, null);
+            arg25 = arg22;
+            if (!(arg25 == null || StringUtilities.LiteBansModule_31((CharSequence)arg25) != false) && !StringUtilities.BaseCoreGenericHandler((CharSequence)arg22, '#', false, 2, null)) {
+                arg25 = arg4;
+                arg22 = ((BroadcastService)arg25.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class)).BaseCoreGenericHandler(v1, arg7);
+                if (arg22 != null) {
+                    switch (LiteBansModule_282.BaseCoreGenericHandler[arg7.ServerSyncService().ordinal()]) {
                         case 1: {
                             v5 = MessageKey.LiteBansModule_93;
                             break;
@@ -134,25 +112,18 @@ public final class LimitHandler {
                             break;
                         }
                         default: {
-                            v5 = null;
-                        }
-                    }
-                    var23_34 = v5;
-                    if (var23_34 != null) {
-                        var26_39 = var7_7;
-                        var27_40 = false;
-                        var30_42 = var28_41 = ((DatabaseMonitorService)var26_39.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).LiteBansModule_31(true) - var13_13.LiteBansModule_194();
-                        var32_43 = false;
-                        var23_34 = ((MessageKey)var23_34).BaseCoreGenericHandler("timeSince", (Object)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, var30_42, false, 2, null));
-                        var23_34 = AllHandler_3.BaseCoreGenericHandler(v1, (CharSequence)GeoIPLookupService.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler(v1, var23_34, var22_30, var13_13.AsyncBackgroundTask_21(), false, 4, null), (CharSequence)"displayName", (Object)var22_30), var13_13, (LiteBansModule_297)var16_16, false, 4, null);
-                    }
-                }
-            }
-            CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)var7_7, var20_25);
-            if (var23_34 == null) continue;
-            CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)var7_7, var23_34);
-        }
-    }
+}
+                    arg26 = v5;
+                    if (arg26 != null) {
+                        arg27 = arg4;
+                        arg28 = arg29 = ((DatabaseMonitorService)arg27.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).LiteBansModule_31(true) - arg7.LiteBansModule_194();
+                        arg26 = ((MessageKey)arg26).BaseCoreGenericHandler("timeSince", (Object)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, arg28, false, 2, null));
+                        arg26 = AllHandler_3.BaseCoreGenericHandler(v1, (CharSequence)GeoIPLookupService.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler(v1, arg26, arg22, arg7.AsyncBackgroundTask_21(), false, 4, null), (CharSequence)"displayName", (Object)arg22), arg7, (LiteBansModule_297)arg11, false, 4, null);
+}
+            CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)arg4, arg16);
+            if (arg26 == null) continue;
+            CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)arg4, arg26);
+}
 
     public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_359 jW2, LiteBansModule_82 ch2, Collection collection, LiteBansModule_297 iA2, String[] args, AbstractCommand abstractCommand, int n, int n2, Object object) {
         if (object != null) {
@@ -180,10 +151,8 @@ public final class LimitHandler {
         String string2 = string;
         ObjectUtilities.BaseCoreGenericHandler((Object)string2);
         String string3 = string2;
-        boolean flag = false;
         Object v2 = map.get(string3);
         if (v2 == null) {
-            boolean flag2 = false;
             LiteBansModule_297 iA2 = ch2.c(string);
             map.put(string3, iA2);
             object = iA2;
@@ -195,7 +164,5 @@ public final class LimitHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"", "limit", "total", "r0 ", "r2 ", "#expired", "timeSince", "displayName", "", ""};
-    }
-
-    }
+}
 

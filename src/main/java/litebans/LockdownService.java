@@ -26,8 +26,7 @@ extends AbstractModule {
         new MetricsService(this.plugin).BaseCoreGenericHandler();
         if (configService.LiteBansModule_194().PunishmentTableService()) {
             new UpdateChecker(this.plugin).LiteBansModule_31();
-        }
-    }
+}
 
     @Override
     public LiteBansModule_426 BaseCoreGenericHandler(@NotNull LiteBansModule_360 commandContext) {
@@ -40,7 +39,5 @@ extends AbstractModule {
     @Override
     public LiteBansModule_175 BaseCoreGenericHandler(LiteBansModule_360 commandContext) {
         return this.plugin(commandContext);
-    }
-
-    }
+}
 

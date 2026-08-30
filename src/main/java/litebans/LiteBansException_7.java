@@ -21,7 +21,5 @@ extends RuntimeException {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{""};
-    }
-
-    }
+}
 

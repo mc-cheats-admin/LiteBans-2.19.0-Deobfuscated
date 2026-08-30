@@ -25,6 +25,5 @@ extends Enum {
 
     static {
         LiteBansModule_31 = new CommentHandler[]{c, BaseCoreGenericHandler};
-    }
 }
 

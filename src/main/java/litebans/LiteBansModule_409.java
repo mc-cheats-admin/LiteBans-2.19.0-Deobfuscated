@@ -34,7 +34,6 @@ public final class LiteBansModule_409 {
             string = this.plugin(string);
             StringBuilder stringBuilder = new StringBuilder();
             StringBuilder stringBuilder2 = new StringBuilder();
-            boolean flag = true;
             String string2 = string;
             int n = string2.length();
             for (int i = 0; i < n; ++i) {
@@ -48,8 +47,7 @@ public final class LiteBansModule_409 {
                         stringBuilder.append("CommandThrottleService");
                     } else if (StringUtilities.c((CharSequence)stringBuilder2, "0", false, 2, null)) {
                         stringBuilder.append("z");
-                    }
-                }
+}
                 stringBuilder.append(this.plugin(stringBuilder2));
                 stringBuilder2.setLength(0);
                 flag = false;
@@ -61,8 +59,7 @@ public final class LiteBansModule_409 {
         }
         catch (LiteBansException_7 fz_02) {
             return "error";
-        }
-    }
+}
 
     private final String BaseCoreGenericHandler(String string) {
         String string2;
@@ -77,8 +74,7 @@ public final class LiteBansModule_409 {
             }
             default: {
                 string2 = string;
-            }
-        }
+}
         return string2;
     }
 
@@ -103,8 +99,7 @@ public final class LiteBansModule_409 {
             }
             default: {
                 throw new LiteBansException_7(null, 1, null);
-            }
-        }
+}
         return string;
     }
 
@@ -113,7 +108,6 @@ public final class LiteBansModule_409 {
             String string2 = string.toLowerCase(Locale.ROOT);
             StringBuilder stringBuilder = new StringBuilder();
             StringBuilder stringBuilder2 = new StringBuilder();
-            int n = 0;
             int n2 = string2.length();
             for (int i = 0; i < n2; ++i) {
                 char c = string2.charAt(i);
@@ -132,8 +126,7 @@ public final class LiteBansModule_409 {
                     }
                     default: {
                         stringBuilder2.append(c);
-                    }
-                }
+}
                 if (stringBuilder2.length() < 3) continue;
                 stringBuilder.append(this.plugin(stringBuilder2, n));
                 stringBuilder2.setLength(0);
@@ -146,8 +139,7 @@ public final class LiteBansModule_409 {
         }
         catch (LiteBansException_7 fz_02) {
             return -1L;
-        }
-    }
+}
 
     private final void BaseCoreGenericHandler(LiteBansModule_324 iX2) {
         for (int i = 0; i < 1000; ++i) {
@@ -159,8 +151,7 @@ public final class LiteBansModule_409 {
             ((Map)this.c).put(n, string);
             n = i;
             ((Map)this.e).put(string, n);
-        }
-    }
+}
 
     private final String LiteBansModule_31(LiteBansModule_324 iX2) {
         return Long.toString(iX2.LiteBansModule_31() & 0xFFFL, LiteBansModule_338.BaseCoreGenericHandler(16));
@@ -193,6 +184,5 @@ public final class LiteBansModule_409 {
 
     private static final void c() {
         BaseCoreGenericHandler = new String[]{"000", "m", "00", "CommandThrottleService", "0", "z", "error", "00", "00", "000", "No shuffle input for ", "No shuffle output for "};
-    }
 }
 

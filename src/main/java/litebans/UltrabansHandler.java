@@ -38,7 +38,6 @@ extends BansHandler {
                 Throwable throwable2 = null;
                 try {
                     object3 = (ResultSet)autoCloseable;
-                    boolean flag5 = false;
                     while (object4.next()) {
                         object2 = object4;
                         flag2 = false;
@@ -59,8 +58,7 @@ extends BansHandler {
                 }
                 finally {
                     CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable2);
-                }
-            }
+}
             object5 = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable4) {
@@ -81,7 +79,6 @@ extends BansHandler {
                 flag3 = false;
                 if (object4.execute()) {
                     autoCloseable = object4.getResultSet();
-                    boolean flag6 = false;
                     object3 = autoCloseable;
                     Throwable throwable6 = null;
                     try {
@@ -89,7 +86,6 @@ extends BansHandler {
                         flag2 = false;
                         while (autoCloseable.next()) {
                             object = autoCloseable;
-                            boolean flag7 = false;
                             string2 = object.getString("name");
                             String string4 = object.getString("lastip");
                             long l8 = -1L;
@@ -110,8 +106,7 @@ extends BansHandler {
                     }
                     finally {
                         CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)object3, throwable6);
-                    }
-                }
+}
                 object4 = KotlinUnitHandler.BaseCoreGenericHandler;
             }
             catch (Throwable throwable8) {
@@ -120,13 +115,9 @@ extends BansHandler {
             }
             finally {
                 CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)object5, throwable5);
-            }
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         m = new String[]{"Ultrabans", "SELECT * FROM banlist WHERE type=0", "name", "reason", "admin", "time", "temptime", "SELECT * FROM banlistip", "name", "lastip", "#imported#", "#", "#"};
-    }
-
-    }
+}
 

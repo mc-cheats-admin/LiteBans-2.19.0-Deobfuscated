@@ -20,6 +20,5 @@ extends PoolInitializationException {
 
     @Override
     public void c() {
-    }
 }
 

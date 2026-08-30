@@ -6,6 +6,5 @@ extends LiteBansModule_300 {
 
     public LiteBansModule_308() {
         super("there was HikariDataSource error decoding BaseCoreGenericHandler tape segment");
-    }
 }
 

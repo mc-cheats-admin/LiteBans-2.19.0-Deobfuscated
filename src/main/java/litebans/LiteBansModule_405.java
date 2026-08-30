@@ -40,6 +40,5 @@ extends ArgsHandler_2 {
         class_2540 class_25402 = PacketByteBufs.create();
         class_25402.writeBytes(byArray);
         ((class_3222)object).field_13987.method_14364(ServerPlayNetworking.createS2CPacket((class_2960)class_2960.method_12829((String)string), (class_2540)class_25402));
-    }
 }
 

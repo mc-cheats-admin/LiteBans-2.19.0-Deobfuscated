@@ -94,7 +94,5 @@ public final class GlobalHandler_2 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"global", "all", "local", "this", "server:", "--", "global"};
-    }
-
-    }
+}
 

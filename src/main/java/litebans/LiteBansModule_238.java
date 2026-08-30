@@ -21,17 +21,16 @@ extends MessageHandler {
         BanHandler a_22;
         int n;
         LiteBansModule_324 iX2;
-        block2: {
+{
             iX2 = new LiteBansModule_324(0L, 1, null);
             BanHandler[] a_Array = BanHandler.values();
             n = 0;
             for (BanHandler a_22 : a_Array) {
                 object = a_22;
-                boolean flag = false;
                 if (!ObjectUtilities.BaseCoreGenericHandler((Object)((Enum)object).name(), (Object)this.e[1])) {
                     continue;
                 }
-                break block2;
+                break;
             }
             throw new NoSuchElementException("Array contains no element matching the ");
         }
@@ -44,7 +43,6 @@ extends MessageHandler {
         object = new ArrayList(n2);
         List list = new ArrayList(n2);
         MessageHandler messageHandler = this;
-        boolean flag = false;
         ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> LiteBansModule_238.BaseCoreGenericHandler(this, n2, (List)object, iX2, n5, n, n3, n4, a_3, list, arg_0));
     }
 
@@ -76,8 +74,7 @@ extends MessageHandler {
                 l5 = l3 + (long)300000000 + (long)iX2.BaseCoreGenericHandler(1000000000);
                 if (flag5) {
                     l5 = l3 - (long)iX2.BaseCoreGenericHandler(10000000);
-                }
-            }
+}
             int n7 = iX2.BaseCoreGenericHandler(252) + 2;
             int n8 = iX2.BaseCoreGenericHandler(252) + 2;
             int n9 = iX2.BaseCoreGenericHandler(252) + 2;
@@ -115,7 +112,5 @@ extends MessageHandler {
 
     private static final void BaseCoreGenericHandler() {
         AsyncBackgroundTask_5 = new String[]{"Array contains no element matching the ", "Generating entries.. + ", "%", "", "", "", "*", "", "Adding entries.. + ", "Done InitializerHandler_3 ", " ms."};
-    }
-
-    }
+}
 

@@ -96,7 +96,6 @@ extends LiteBansModule_153 {
         if (n2 == 0) {
             return 0;
         }
-        int n3 = 0;
         if (this.LiteBansModule_194 || this.GnuSparseMapHandler || this.n >= this.AsyncBackgroundTask_5) {
             return -1;
         }
@@ -129,8 +128,7 @@ extends LiteBansModule_153 {
                 int n6 = this.e.read(this.PunishmentTableService, 0, this.PunishmentTableService.length);
                 if (n6 != this.PunishmentTableService.length) {
                     throw new EOFException();
-                }
-            } else {
+} else {
                 Arrays.fill(this.PunishmentTableService, (byte)0);
             }
             this.Utf8Handler_2 = 0;
@@ -144,7 +142,5 @@ extends LiteBansModule_153 {
         if (!this.GnuSparseMapHandler) {
             this.GnuSparseMapHandler = true;
             this.e.close();
-        }
-    }
 }
 

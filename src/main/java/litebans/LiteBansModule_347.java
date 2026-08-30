@@ -71,6 +71,5 @@ static class LiteBansModule_347 {
         stringBuilder.append(Arrays.toString(this.e));
         stringBuilder.append("]");
         return stringBuilder.toString();
-    }
 }
 

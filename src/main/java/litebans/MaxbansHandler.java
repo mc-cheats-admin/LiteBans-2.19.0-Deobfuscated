@@ -21,13 +21,11 @@ extends BansHandler {
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     private final void BaseCoreGenericHandler(Connection connection, LiteBansModule_82 ch2) {
-        int n = 0;
         while (true) {
             AutoCloseable autoCloseable = connection.prepareStatement("SELECT * FROM bans ORDER BY time LIMIT " + this.GnuSparseMapHandler() + " OFFSET " + n);
             Throwable throwable = null;
             try {
                 Object object = (PreparedStatement)autoCloseable;
-                boolean flag = false;
                 ObjectUtilities.BaseCoreGenericHandler(object);
                 if (this.plugin((PreparedStatement)object, ch2) == 0) {
                     return;
@@ -43,8 +41,7 @@ extends BansHandler {
             }
             n += this.GnuSparseMapHandler();
             Thread.sleep(this.AsyncBackgroundTask_5());
-        }
-    }
+}
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -55,18 +52,14 @@ extends BansHandler {
             Throwable throwable = null;
             try {
                 Object object = (PreparedStatement)autoCloseable;
-                boolean flag2 = false;
                 if (object.execute()) {
                     ResultSet resultSet = object.getResultSet();
-                    boolean flag3 = false;
                     AutoCloseable autoCloseable2 = resultSet;
                     Throwable throwable2 = null;
                     try {
                         Object object2 = (ResultSet)autoCloseable2;
-                        boolean flag4 = false;
                         while (resultSet.next()) {
                             ResultSet resultSet2 = resultSet;
-                            boolean flag5 = false;
                             BansHandler.BaseCoreGenericHandler(this, ch2, null, resultSet2.getString("reason"), resultSet2.getLong("time"), resultSet2.getLong("expires"), resultSet2.getString("banner"), null, null, resultSet2.getString("ip"), null, null, 1728, null);
                         }
                         object2 = KotlinUnitHandler.BaseCoreGenericHandler;
@@ -77,8 +70,7 @@ extends BansHandler {
                     }
                     finally {
                         CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
-                    }
-                }
+}
                 object = KotlinUnitHandler.BaseCoreGenericHandler;
             }
             catch (Throwable throwable4) {
@@ -87,26 +79,20 @@ extends BansHandler {
             }
             finally {
                 CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
-            }
-        }
-    }
+}
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     private final int BaseCoreGenericHandler(PreparedStatement preparedStatement, LiteBansModule_82 ch2) {
-        int n = 0;
         if (preparedStatement.execute()) {
             ResultSet resultSet = preparedStatement.getResultSet();
-            boolean flag = false;
             AutoCloseable autoCloseable = resultSet;
             Throwable throwable = null;
             try {
                 Object object = (ResultSet)autoCloseable;
-                boolean flag2 = false;
                 while (resultSet.next()) {
                     ResultSet resultSet2 = resultSet;
-                    boolean flag3 = false;
                     ++n;
                     try {
                         BansHandler.BaseCoreGenericHandler(this, ch2, resultSet2.getString("name"), resultSet2.getString("reason"), resultSet2.getLong("time"), resultSet2.getLong("expires"), resultSet2.getString("banner"), null, null, null, null, null, 1984, null);
@@ -114,10 +100,8 @@ extends BansHandler {
                     catch (Exception exception) {
                         this.m().warning("Import failed for ban on '" + resultSet2.getString("name") + "'; name changed, perhaps?");
                         MessageHandler messageHandler = this;
-                        boolean flag4 = false;
                         ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(exception);
-                    }
-                }
+}
                 object = KotlinUnitHandler.BaseCoreGenericHandler;
             }
             catch (Throwable throwable2) {
@@ -126,14 +110,11 @@ extends BansHandler {
             }
             finally {
                 CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
-            }
-        }
+}
         return n;
     }
 
     private static final void BaseCoreGenericHandler() {
         m = new String[]{"MaxBans", "SELECT * FROM bans ORDER BY time LIMIT ", " OFFSET ", "SELECT * FROM ipbans", "reason", "time", "expires", "banner", "ip", "name", "reason", "time", "expires", "banner", "Import failed for ban on '", "name", "'; name changed, perhaps?"};
-    }
-
-    }
+}
 

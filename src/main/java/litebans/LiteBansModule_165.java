@@ -42,7 +42,5 @@ static class LiteBansModule_165 {
         }
         catch (NoSuchFieldError noSuchFieldError) {
             // empty catch block
-        }
-    }
 }
 

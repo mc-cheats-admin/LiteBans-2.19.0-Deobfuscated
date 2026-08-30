@@ -45,7 +45,6 @@ public final class NameHandler_2 {
         if (flag) {
             CharSequence charSequence2 = gZ2.c().LiteBansModule_240();
             CharSequence charSequence3 = "?";
-            boolean flag2 = false;
             charSequence = "" + charSequence2 + charSequence3;
         } else {
             charSequence = "=?";
@@ -68,7 +67,5 @@ public final class NameHandler_2 {
 
     private static final void AsyncBackgroundTask_5() {
         BaseCoreGenericHandler = new String[]{"name", "?", "=?", " WHERE ", "WHERE", " WHERE ", "AND", " WHERE ", "WHERE", " WHERE ", "Player name \"", "\" length > ", "UUID \"", "\" length > 36"};
-    }
-
-    }
+}
 

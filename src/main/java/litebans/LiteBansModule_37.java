@@ -7,6 +7,5 @@ extends LiteBansModule_42 {
     @Override
     public LiteBansModule_288 c() {
         return e;
-    }
 }
 

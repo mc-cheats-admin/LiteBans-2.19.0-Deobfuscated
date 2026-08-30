@@ -14,9 +14,9 @@ extends NanHandler {
         int n3;
         boolean flag;
         int n4;
-        block14: {
+{
             int n5;
-            block13: {
+{
                 ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
                 LiteBansModule_338.BaseCoreGenericHandler(n);
                 n4 = string.length();
@@ -27,7 +27,7 @@ extends NanHandler {
                 flag = false;
                 n3 = 0;
                 char c = string.charAt(0);
-                if (ObjectUtilities.BaseCoreGenericHandler(c, 48) >= 0) break block13;
+                if (ObjectUtilities.BaseCoreGenericHandler(c, 48) >= 0) break;
                 if (n4 == 1) {
                     return null;
                 }
@@ -36,24 +36,21 @@ extends NanHandler {
                     case '-': {
                         flag = true;
                         n3 = Integer.MIN_VALUE;
-                        break block14;
+                        break;
                     }
                     case '+': {
                         flag = false;
                         n3 = -2147483647;
-                        break block14;
+                        break;
                     }
                     default: {
                         return null;
-                    }
-                }
-            }
+}
             n5 = 0;
             flag = false;
             n3 = -2147483647;
         }
         int n6 = n2 = -59652323;
-        int n7 = 0;
         for (int i = n5; i < n4; ++i) {
             int n8 = LiteBansModule_338.BaseCoreGenericHandler(string.charAt(i), n);
             if (n8 < 0) {
@@ -64,11 +61,9 @@ extends NanHandler {
                     n6 = n3 / n;
                     if (n7 < n6) {
                         return null;
-                    }
-                } else {
+} else {
                     return null;
-                }
-            }
+}
             if ((n7 *= n) < n3 + n8) {
                 return null;
             }
@@ -87,9 +82,9 @@ extends NanHandler {
         long l5;
         boolean flag;
         int n2;
-        block14: {
+{
             int n3;
-            block13: {
+{
                 ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
                 LiteBansModule_338.BaseCoreGenericHandler(n);
                 n2 = string.length();
@@ -100,7 +95,7 @@ extends NanHandler {
                 flag = false;
                 l5 = 0L;
                 char c = string.charAt(0);
-                if (ObjectUtilities.BaseCoreGenericHandler(c, 48) >= 0) break block13;
+                if (ObjectUtilities.BaseCoreGenericHandler(c, 48) >= 0) break;
                 if (n2 == 1) {
                     return null;
                 }
@@ -109,18 +104,16 @@ extends NanHandler {
                     case '-': {
                         flag = true;
                         l5 = Long.MIN_VALUE;
-                        break block14;
+                        break;
                     }
                     case '+': {
                         flag = false;
                         l5 = -9223372036854775807L;
-                        break block14;
+                        break;
                     }
                     default: {
                         return null;
-                    }
-                }
-            }
+}
             n3 = 0;
             flag = false;
             l5 = -9223372036854775807L;
@@ -137,18 +130,14 @@ extends NanHandler {
                     l7 = l5 / (long)n;
                     if (l8 < l7) {
                         return null;
-                    }
-                } else {
+} else {
                     return null;
-                }
-            }
+}
             if ((l8 *= (long)n) < l5 + (long)n4) {
                 return null;
             }
             l8 -= (long)n4;
         }
         return flag ? Long.valueOf(l8) : Long.valueOf(-l8);
-    }
-
-    }
+}
 

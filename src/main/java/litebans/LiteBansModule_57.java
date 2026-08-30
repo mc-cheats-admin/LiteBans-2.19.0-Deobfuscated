@@ -25,6 +25,5 @@ public class LiteBansModule_57 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"net.md_5.bungee.chat.ChatVersion"};
-    }
 }
 

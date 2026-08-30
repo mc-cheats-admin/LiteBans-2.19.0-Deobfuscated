@@ -17,6 +17,5 @@ public interface LiteBansModule_315 {
         c = -1;
         BaseCoreGenericHandler = 1;
         LiteBansModule_31 = 0;
-    }
 }
 

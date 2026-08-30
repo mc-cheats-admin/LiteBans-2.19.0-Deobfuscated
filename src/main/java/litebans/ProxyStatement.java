@@ -30,7 +30,6 @@ public final class ProxyStatement {
             ObjectUtilities.LiteBansModule_31(uRLConnection, "");
             HttpsURLConnection httpsURLConnection = (HttpsURLConnection)uRLConnection;
             int n = 10000;
-            boolean flag = false;
             httpsURLConnection.setConnectTimeout(n);
             httpsURLConnection.setReadTimeout(n);
             Closeable closeable = httpsURLConnection.getInputStream();
@@ -42,7 +41,6 @@ public final class ProxyStatement {
             try {
                 String string3;
                 Object object = (BufferedReader)closeable;
-                boolean flag2 = false;
                 Object object2 = LiteBansModule_50.BaseCoreGenericHandler().LiteBansModule_31((Reader)object);
                 ObjectUtilities.LiteBansModule_31(object2, "");
                 NullHandler_3 gr_02 = (NullHandler_3)object2;
@@ -61,8 +59,7 @@ public final class ProxyStatement {
             }
             finally {
                 BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-            }
-        }
+}
         catch (Exception exception) {
             ConfigService configService = (ConfigService)LiteBansModule_209.LiteBansModule_31.BaseCoreGenericHandler().BaseCoreGenericHandler(ConfigService.class);
             configService.BaseCoreGenericHandler(1, (Object)exception);
@@ -72,7 +69,6 @@ public final class ProxyStatement {
 
     public final LiteBansModule_89 BaseCoreGenericHandler(@NotNull String string) {
         LiteBansModule_89 cM2 = this.LiteBansModule_31(string);
-        boolean flag = false;
         return !cM2.c() ? cM2 : null;
     }
 
@@ -91,7 +87,6 @@ public final class ProxyStatement {
             ObjectUtilities.LiteBansModule_31(uRLConnection, "");
             object = (HttpsURLConnection)uRLConnection;
             int n = 10000;
-            boolean flag = false;
             ((URLConnection)object).setConnectTimeout(n);
             ((URLConnection)object).setReadTimeout(n);
             Closeable closeable = ((URLConnection)object).getInputStream();
@@ -102,7 +97,6 @@ public final class ProxyStatement {
             Throwable throwable = null;
             try {
                 Object object2 = (BufferedReader)closeable;
-                boolean flag2 = false;
                 Object object3 = LiteBansModule_50.BaseCoreGenericHandler().LiteBansModule_31((Reader)object2);
                 ObjectUtilities.LiteBansModule_31(object3, "");
                 NullHandler_3 gr_02 = (NullHandler_3)object3;
@@ -123,8 +117,7 @@ public final class ProxyStatement {
             }
             finally {
                 BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-            }
-        }
+}
         catch (Exception exception) {
             configService.BaseCoreGenericHandler(1, (Object)exception);
         }
@@ -149,9 +142,6 @@ public final class ProxyStatement {
             return string;
         }
         StringBuilder stringBuilder = new StringBuilder(36);
-        int n = 0;
-        int n2 = 0;
-        int n3 = 0;
         int n4 = 8;
         int n5 = string.length();
         for (int i = 0; i < n5; ++i) {
@@ -182,8 +172,7 @@ public final class ProxyStatement {
         boolean flag = string2 != null ? !(((CharSequence)string2).length() == 0) : false;
         if (flag) {
             throw new RuntimeException((String)object);
-        }
-    }
+}
 
     public /* synthetic */ ProxyStatement(LiteBansModule_14 aJ2) {
         this();
@@ -191,7 +180,5 @@ public final class ProxyStatement {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"https://sessionserver.mojang.com/session/minecraft/profile/", "", "", "name", "Username \"", "\" invalid", "https://api.mojang.com/users/profiles/minecraft/", "", "", "name", "SQLiteDriverHandler_4", "-", "", "cause", "errorMessage"};
-    }
-
-    }
+}
 

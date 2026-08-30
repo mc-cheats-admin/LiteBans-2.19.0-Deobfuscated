@@ -11,6 +11,5 @@ extends Representer {
         this.plugin = d10;
         super(dumperOptions);
         this.representers.put(NullHandler_4.class, new LiteBansModule_281(this));
-    }
 }
 

@@ -22,6 +22,5 @@ implements Supplier {
 
     public Object get() {
         return this.plugin();
-    }
 }
 

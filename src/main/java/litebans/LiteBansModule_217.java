@@ -26,7 +26,7 @@ extends DatabaseService {
 
     @Override
     public DatabaseService c(File file) {
-        block6: {
+{
             this.plugin((Throwable)null);
             this.LiteBansModule_31(file);
             File file2 = file.getParentFile();
@@ -40,10 +40,9 @@ extends DatabaseService {
                 this.plugin(new FileInputStream(file));
             }
             catch (Exception exception) {
-                if (exception instanceof FileNotFoundException) break block6;
+                if (exception instanceof FileNotFoundException) break;
                 this.plugin(exception);
-            }
-        }
+}
         return this;
     }
 
@@ -116,8 +115,7 @@ extends DatabaseService {
             while ((string = bufferedReader.readLine()) != null) {
                 stringBuilder.append(string);
                 stringBuilder.append('\n');
-            }
-        }
+}
         this.LiteBansModule_194.loadFromString(stringBuilder.toString());
     }
 
@@ -178,7 +176,5 @@ extends DatabaseService {
 
     private static final void BaseCoreGenericHandler() {
         g = new String[]{"Could not create folder: ", "Could not create file: ", ""};
-    }
-
-    }
+}
 

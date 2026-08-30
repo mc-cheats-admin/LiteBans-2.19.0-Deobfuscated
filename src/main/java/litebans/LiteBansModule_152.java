@@ -19,6 +19,5 @@ implements PrivilegedAction {
 
     public Object run() {
         return this.plugin();
-    }
 }
 

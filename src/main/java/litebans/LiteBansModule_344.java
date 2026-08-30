@@ -25,6 +25,5 @@ public final class LiteBansModule_344 {
 
     private static final void BaseCoreGenericHandler() {
         g = new String[]{"UTF-32", "UTF-32LE", "UTF-32BE", "UTF-8", "UTF-16", "UTF-16BE", "UTF-16LE", "US-ASCII", "ISO-8859-1"};
-    }
 }
 

@@ -73,7 +73,5 @@ public final class MySqlCharsetHelper {
         LiteBansModule_240 = "utf8mb4_unicode_ci";
         MySqlCharsetHelper.LiteBansModule_31();
         g = new LiteBansModule_343(null);
-    }
-
-    }
+}
 

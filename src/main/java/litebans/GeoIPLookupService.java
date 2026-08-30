@@ -13,7 +13,6 @@ import org.jetbrains.annotations.Nullable;
 public final class GeoIPLookupService {
     public static final String BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, @Nullable Object object) {
         CharSequence charSequence3 = charSequence2;
-        boolean flag = false;
         return LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler((Object)charSequence, (Object)("" + '$' + charSequence3), object);
     }
 
@@ -24,7 +23,6 @@ public final class GeoIPLookupService {
     public static final CharSequence BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull SilentHandler dZ2, int n, int n2) {
         ConfigService configService = (ConfigService)ch2.e().BaseCoreGenericHandler(ConfigService.class);
         Object object = dZ2;
-        boolean flag = false;
         if (object != null && ((SilentHandler)object).r() != -1 && (object = configService.AsyncBackgroundTask_21().BaseCoreGenericHandler(dZ2)) != null) {
             Object object2;
             LiteBansModule_174 eM2 = configService.AsyncBackgroundTask_21().BaseCoreGenericHandler(dZ2.ServerSyncService(), (LiteBansModule_65)object);
@@ -72,7 +70,6 @@ public final class GeoIPLookupService {
 
     public static final String BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull CharSequence charSequence, @NotNull LiteBansModule_65 c12, int n) {
         LiteBansModule_65 c13 = c12;
-        boolean flag = false;
         CharSequence charSequence2 = ObjectUtilities.BaseCoreGenericHandler(c13.LiteBansModule_194() & 0xFF, 0xFFFFFFFF & 0xFF) < 0 ? c12.g() : MessageKey.ay;
         int n2 = n + 1;
         CharSequence[] charSequenceArray = new CharSequence[]{"templateName", charSequence2};
@@ -182,7 +179,6 @@ public final class GeoIPLookupService {
         charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, (CharSequence[])object);
         charSequence2 = ch2.BaseCoreGenericHandler(charSequence2, o2.BaseCoreGenericHandler(dZ2.LiteBansModule_433(), string), string, flag);
         object = configService;
-        boolean flag3 = false;
         CharSequence[] charSequenceArray = new CharSequence[]{"removalReason", charSequence4};
         charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, charSequenceArray);
         charSequenceArray = new CharSequence[]{"serverScope", ((ConfigService)object).LiteBansModule_31((Object)string2)};
@@ -249,8 +245,7 @@ public final class GeoIPLookupService {
             } else {
                 LiteBansModule_354 jT2 = GeoIPLookupService.BaseCoreGenericHandler(ch2, sender.BaseCoreGenericHandler());
                 string = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string, (CharSequence)"playerPrefix", () -> GeoIPLookupService.BaseCoreGenericHandler(jT2)), (CharSequence)"playerSuffix", () -> GeoIPLookupService.LiteBansModule_31(jT2));
-            }
-        }
+}
         return GeoIPLookupService.BaseCoreGenericHandler(ch2, sender.i(), sender.g(), sender.BaseCoreGenericHandler(), sender.LiteBansModule_31(), sender.LiteBansModule_240(), new java.util.Date(), string, flag);
     }
 
@@ -277,7 +272,6 @@ public final class GeoIPLookupService {
         if (GeoIPLookupService.LiteBansModule_31(string6 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string6, (CharSequence)"uuid", (Object)string3), "player")) {
             CharSequence[] charSequenceArray;
             Object object2 = configService;
-            boolean flag2 = false;
             String string7 = ((ConfigService)object2).LiteBansModule_194().SetHandler() ? string2 : string;
             object2 = new LiteBansModule_144();
             ((LiteBansModule_144)object2).BaseCoreGenericHandler = "";
@@ -296,13 +290,11 @@ public final class GeoIPLookupService {
                     }
                     catch (IllegalArgumentException illegalArgumentException) {
                         ConfigService.BaseCoreGenericHandler(configService, illegalArgumentException, 0, 2, null);
-                    }
-                } else {
+} else {
                     charSequenceArray = GeoIPLookupService.BaseCoreGenericHandler(ch2, string3);
                     ((LiteBansModule_144)object2).BaseCoreGenericHandler = charSequenceArray.LiteBansModule_31();
                     dy_03.BaseCoreGenericHandler = charSequenceArray.e();
-                }
-            }
+}
             string6 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string6, (CharSequence)"playerPrefix", () -> GeoIPLookupService.BaseCoreGenericHandler((LiteBansModule_144)object2));
             string6 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string6, (CharSequence)"playerSuffix", () -> GeoIPLookupService.LiteBansModule_31(dy_03));
             charSequenceArray = new CharSequence[]{"playerServer", dy_02.BaseCoreGenericHandler};
@@ -340,7 +332,6 @@ public final class GeoIPLookupService {
         CharSequence charSequence2;
         Object object;
         CharSequence charSequence3 = "executor";
-        boolean flag2 = false;
         CharSequence charSequence4 = "" + '$' + charSequence3;
         charSequence3 = null;
         Object object2 = new CharSequence[]{"bannerDisplayName", charSequence4};
@@ -364,7 +355,6 @@ public final class GeoIPLookupService {
         object2 = new CharSequence[2];
         object2[0] = "bannedFrom";
         CharSequence charSequence14 = "dateStart";
-        boolean flag3 = false;
         object2[1] = "" + '$' + charSequence14;
         CharSequence charSequence15 = LiteBansModule_242.BaseCoreGenericHandler(charSequence13, (CharSequence[])object2);
         object2 = new CharSequence[2];
@@ -380,10 +370,8 @@ public final class GeoIPLookupService {
         object2[1] = "" + '$' + charSequence14;
         charSequence3 = LiteBansModule_242.BaseCoreGenericHandler(charSequence16, (CharSequence[])object2);
         object2 = BanHandler.LiteBansModule_401.BaseCoreGenericHandler();
-        boolean flag4 = false;
         Object object3 = object2;
         Collection collection = new ArrayList(CollectionUtilities.BaseCoreGenericHandler((Iterable)object2, 10));
-        boolean flag5 = false;
         Iterator iterator = object3.iterator();
         while (iterator.hasNext()) {
             String string;
@@ -392,7 +380,6 @@ public final class GeoIPLookupService {
             Collection collection2 = collection;
             flag = false;
             BanHandler a_2 = charSequence2;
-            boolean flag6 = false;
             switch (LiteBansModule_274.BaseCoreGenericHandler[a_2.c().ordinal()]) {
                 case 1: {
                     string = "banned";
@@ -413,8 +400,7 @@ public final class GeoIPLookupService {
                 default: {
                     AssertionUtilities.BaseCoreGenericHandler();
                     throw new CommandExitException();
-                }
-            }
+}
             collection2.add(string);
         }
         object2 = (List)collection;
@@ -423,7 +409,6 @@ public final class GeoIPLookupService {
         while (object3.hasNext()) {
             collection = object3.next();
             String string = (String)((Object)collection);
-            boolean flag7 = false;
             object = new CharSequence[2];
             object[0] = string + "Player";
             charSequence2 = "playerDisplayName";
@@ -448,13 +433,11 @@ public final class GeoIPLookupService {
     }
 
     public static final CharSequence c(@NotNull CharSequence charSequence) {
-        boolean flag = false;
         return "" + '$' + charSequence;
     }
 
     public static final boolean LiteBansModule_31(@NotNull CharSequence charSequence, @NotNull CharSequence charSequence2) {
         CharSequence charSequence3 = charSequence2;
-        boolean flag = false;
         return StringUtilities.BaseCoreGenericHandler(charSequence, (CharSequence)("" + '$' + charSequence3), false, 2, null);
     }
 
@@ -558,7 +541,5 @@ public final class GeoIPLookupService {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"templateStep", "templateName", "", "", "LuckPerms", "", "", "", "", "reason", "geoip", "serverOrigin", "", "", "duration", "removalReason", "serverScope", "serverOrigin", "dateStart", "dateEnd", "dateRemoved", "date", "originalDuration", "timeSince", "uuid", "permanent", "ipban", "silent", "type", "active", "geoip", "reason", "idRandom", "SQLiteDriverHandler_4", "player", "", "playerPrefix", "playerSuffix", "playerPrefix", "playerSuffix", "geoip", "name", "target", "uuid", "player", "", "", "", "playerPrefix", "playerSuffix", "playerPrefix", "playerSuffix", "playerDisplayName", "playerName", "playerUUID", "playerIP", "playerServer", "playerLoginDate", "playerBans", "playerMutes", "playerWarnings", "playerKicks", "player", "activeBans", "activeMutes", "activeWarnings", "totalBans", "totalMutes", "totalWarnings", "totalKicks", "executor", "bannerDisplayName", "banningPlayer", "bannerName", "bannedBy", "mutedBy", "warnedBy", "kickedBy", "kicker", "displayName", "bannedFrom", "dateStart", "bannedUntil", "dateEnd", "banTimeLeft", "duration", "banned", "muted", "warned", "kicked", "Player", "playerDisplayName", "IP", "playerDisplayName", "base", "appealMessage"};
-    }
-
-    }
+}
 

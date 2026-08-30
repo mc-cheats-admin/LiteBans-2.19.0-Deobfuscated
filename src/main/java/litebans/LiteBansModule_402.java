@@ -14,6 +14,5 @@ extends ArgsHandler_2 {
             return ((class_3222)object).method_5671();
         }
         return object;
-    }
 }
 

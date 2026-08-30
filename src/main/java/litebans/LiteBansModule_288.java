@@ -57,8 +57,7 @@ Serializable {
         }
         catch (CloneNotSupportedException cloneNotSupportedException) {
             throw new RuntimeException(cloneNotSupportedException);
-        }
-    }
+}
 
     public String toString() {
         return "ZipShort value: " + this.plugin;
@@ -67,6 +66,5 @@ Serializable {
     static {
         LiteBansModule_31 = 1L;
         c = new LiteBansModule_288(0);
-    }
 }
 

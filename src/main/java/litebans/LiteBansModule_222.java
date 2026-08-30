@@ -29,6 +29,5 @@ LiteBansModule_229 {
             return this.LiteBansModule_31.newDecoder().onMalformedInput(CodingErrorAction.REPORT).onUnmappableCharacter(CodingErrorAction.REPORT);
         }
         return this.LiteBansModule_31.newDecoder().onMalformedInput(CodingErrorAction.REPLACE).onUnmappableCharacter(CodingErrorAction.REPLACE).replaceWith(BaseCoreGenericHandler);
-    }
 }
 

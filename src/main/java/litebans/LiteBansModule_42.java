@@ -69,6 +69,5 @@ implements LiteBansModule_177 {
     @Override
     public void LiteBansModule_31(byte[] byArray, int n, int n2) {
         this.plugin(byArray, n, n2);
-    }
 }
 

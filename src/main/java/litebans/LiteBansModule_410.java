@@ -62,7 +62,5 @@ LiteBansModule_122 {
     static {
         LiteBansModule_410.c();
         BaseCoreGenericHandler = new LiteBansModule_410();
-    }
-
-    }
+}
 

@@ -22,7 +22,5 @@ extends Error {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"message", "An operation is not implemented."};
-    }
-
-    }
+}
 

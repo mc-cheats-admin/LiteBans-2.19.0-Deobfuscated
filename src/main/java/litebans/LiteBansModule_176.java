@@ -20,6 +20,5 @@ implements LiteBansModule_178 {
     public Object BaseCoreGenericHandler(Object object) {
         this.plugin((LiteBansModule_342)object);
         return KotlinUnitHandler.BaseCoreGenericHandler;
-    }
 }
 

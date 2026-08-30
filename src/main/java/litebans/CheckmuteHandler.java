@@ -30,7 +30,5 @@ extends CheckBanCommand {
 
     private static final void BaseCoreGenericHandler() {
         GnuSparseMapHandler = new String[]{"checkmute"};
-    }
-
-    }
+}
 

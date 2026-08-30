@@ -15,6 +15,5 @@ implements Serializable {
 
     static /* synthetic */ LiteBansModule_207 LiteBansModule_31() {
         return BaseCoreGenericHandler;
-    }
 }
 

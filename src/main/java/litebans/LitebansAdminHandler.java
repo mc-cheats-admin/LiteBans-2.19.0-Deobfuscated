@@ -24,12 +24,9 @@ extends MessageHandler {
         object = MessageHandler.BaseCoreGenericHandler;
         boolean flag = this.e.length < 2;
         CharSequence charSequence = MessageKey.flag;
-        boolean flag2 = false;
         String[] args = object;
-        boolean flag3 = false;
         if (flag) {
             String[] filteredArgs = args;
-            boolean flag4 = false;
             filteredArgs.BaseCoreGenericHandler(charSequence);
             throw new CommandExitException();
         }
@@ -45,21 +42,18 @@ extends MessageHandler {
     private static final KotlinUnitHandler BaseCoreGenericHandler(LitebansAdminHandler f72, LiteBansModule_82 ch2) {
         boolean flag;
         Object object;
-        block21: {
+{
             boolean flag2;
             Object object2;
             Object object3;
-            block22: {
+{
                 Object object4;
                 Object object5 = MessageHandler.BaseCoreGenericHandler;
                 boolean flag3 = ch2.LiteBansModule_31();
                 Object object6 = MessageKey.ServerEventListener;
-                boolean flag4 = false;
                 ChatFormatter chatFormatter = object5;
-                boolean flag5 = false;
                 if (flag3) {
                     ChatFormatter fo_03 = chatFormatter;
-                    boolean flag6 = false;
                     fo_03.BaseCoreGenericHandler(object6);
                     throw new CommandExitException();
                 }
@@ -74,12 +68,9 @@ extends MessageHandler {
                 flag4 = false;
                 byte by2 = HexEncodingHelper.BaseCoreGenericHandler.i((String)object6);
                 object = MessageKey.flag;
-                boolean flag7 = false;
                 ChatFormatter fo_04 = object7;
-                boolean flag8 = false;
                 if (by2 != 0) {
                     ChatFormatter fo_05 = fo_04;
-                    boolean bl9 = false;
                     fo_05.BaseCoreGenericHandler(object);
                     throw new CommandExitException();
                 }
@@ -92,7 +83,6 @@ extends MessageHandler {
                     object4 = new LiteBansModule_297((String)object5, (String)object5, null, null, 12, null);
                 } else {
                     Object object9 = f72;
-                    boolean bl10 = false;
                     if (((ConfigService)((MessageHandler)object9).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().af()) {
                         object9 = LiteBansModule_50.c.LiteBansModule_31((String)object5);
                         bl10 = false;
@@ -103,18 +93,15 @@ extends MessageHandler {
                     } else {
                         MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(MessageKey.aN);
                         throw new CommandExitException();
-                    }
-                }
+}
                 object = object4;
                 object3 = MessageHandler.BaseCoreGenericHandler;
                 flag = ((LiteBansModule_297)object).LiteBansModule_31() == null;
                 CharSequence charSequence = MessageKey.aN;
-                boolean bl11 = false;
                 object2 = object3;
                 flag2 = false;
                 if (flag) {
                     ChatFormatter fo_06 = object2;
-                    boolean bl12 = false;
                     fo_06.BaseCoreGenericHandler(charSequence);
                     throw new CommandExitException();
                 }
@@ -133,23 +120,20 @@ extends MessageHandler {
                         if (!((String)charSequence).equals("check")) {
                             return KotlinUnitHandler.BaseCoreGenericHandler;
                         }
-                        break block21;
+                        break;
                     }
                     case -934610812: {
                         if (!((String)charSequence).equals("remove")) {
                             return KotlinUnitHandler.BaseCoreGenericHandler;
                         }
-                        break block22;
-                    }
-                }
+                        break;
+}
                 ChatFormatter fo_07 = MessageHandler.BaseCoreGenericHandler;
                 object2 = AllHandler_3.BaseCoreGenericHandler(ch2, (CharSequence)MessageKey.LiteBansModule_75, (LiteBansModule_297)object, false, 2, null);
                 flag2 = false;
                 ChatFormatter fo_08 = fo_07;
-                boolean bl13 = false;
                 if (flag) {
                     ChatFormatter fo_09 = fo_08;
-                    boolean bl14 = false;
                     fo_09.BaseCoreGenericHandler(object2);
                     throw new CommandExitException();
                 }
@@ -162,10 +146,8 @@ extends MessageHandler {
             flag2 = false;
             ChatFormatter fo_011 = fo_010;
             boolean bl15 = !flag;
-            boolean bl16 = false;
             if (bl15) {
                 ChatFormatter fo_012 = fo_011;
-                boolean bl17 = false;
                 fo_012.BaseCoreGenericHandler(object2);
                 throw new CommandExitException();
             }
@@ -182,7 +164,5 @@ extends MessageHandler {
 
     private static final void BaseCoreGenericHandler() {
         AsyncBackgroundTask_5 = new String[]{"litebans.admin", "litebans.allow", "add", "check", "remove", "ALLOW_CHECK_"};
-    }
-
-    }
+}
 

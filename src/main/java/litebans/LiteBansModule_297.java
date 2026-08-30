@@ -88,7 +88,5 @@ public final class LiteBansModule_297 {
             return false;
         }
         return ObjectUtilities.BaseCoreGenericHandler((Object)this.plugin, iA2.BaseCoreGenericHandler);
-    }
-
-    }
+}
 

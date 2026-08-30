@@ -54,7 +54,5 @@ implements Serializable {
 
     private static final void AsyncBackgroundTask_5() {
         BaseCoreGenericHandler = new String[]{", "};
-    }
-
-    }
+}
 

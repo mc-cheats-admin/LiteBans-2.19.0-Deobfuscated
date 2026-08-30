@@ -12,7 +12,5 @@ extends LocaleHandler {
         }
         char c12 = Character.toUpperCase(c);
         return c12 == (c11 = Character.toUpperCase(c10)) || Character.toLowerCase(c12) == Character.toLowerCase(c11);
-    }
-
-    }
+}
 

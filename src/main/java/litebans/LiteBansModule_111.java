@@ -69,6 +69,5 @@ public interface LiteBansModule_111 {
         r = "070707";
         A = "070702";
         LiteBansModule_240 = "070701";
-    }
 }
 

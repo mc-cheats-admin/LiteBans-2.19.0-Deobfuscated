@@ -28,10 +28,7 @@ extends BuilderactionHandler {
             }
             default: {
                 set2 = set;
-            }
-        }
+}
         return set2;
-    }
-
-    }
+}
 

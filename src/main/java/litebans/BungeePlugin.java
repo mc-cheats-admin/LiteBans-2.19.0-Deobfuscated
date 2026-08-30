@@ -47,8 +47,7 @@ implements PlatformPlugin {
             }
             if (module instanceof CommandModule) {
                 this.plugin((CommandManager)module);
-            }
-        }
+}
         return flag;
     }
 
@@ -217,8 +216,7 @@ implements PlatformPlugin {
         for (LiteBansModule_175 em_02 : em_0Array) {
             if (!(em_02 instanceof LiteBansModule_426)) continue;
             this.getProxy().getPluginManager().registerListener((Plugin)this, (Listener)((LiteBansModule_426)em_02));
-        }
-    }
+}
 
     @Override
     public boolean BaseCoreGenericHandler(String string, Supplier supplier) {
@@ -250,8 +248,7 @@ implements PlatformPlugin {
         }
         catch (RejectedExecutionException rejectedExecutionException) {
             this.plugin(rejectedExecutionException);
-        }
-    }
+}
 
     @Override
     public void LiteBansModule_31(Runnable runnable) {
@@ -270,8 +267,7 @@ implements PlatformPlugin {
         }
         catch (RejectedExecutionException rejectedExecutionException) {
             this.plugin(rejectedExecutionException);
-        }
-    }
+}
 
     private final void BaseCoreGenericHandler(Exception exception) {
         if (this.c.m.get()) {
@@ -309,8 +305,7 @@ implements PlatformPlugin {
         for (LiteBansModule_175 em_02 : em_0Array) {
             if (!(em_02 instanceof LiteBansModule_426)) continue;
             this.getProxy().getPluginManager().unregisterListener((Listener)((LiteBansModule_426)em_02));
-        }
-    }
+}
 
     @Override
     public CommandSenderWrapper LiteBansModule_31(Object object) {
@@ -345,7 +340,5 @@ implements PlatformPlugin {
 
     public LiteBansCore LiteBansModule_31() {
         return this.c;
-    }
-
-    }
+}
 

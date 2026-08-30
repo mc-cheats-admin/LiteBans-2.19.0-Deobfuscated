@@ -34,6 +34,5 @@ public final class LiteBansModule_181 {
 
     private static final void AsyncBackgroundTask_5() {
         BaseCoreGenericHandler = new String[]{"*", ""};
-    }
 }
 

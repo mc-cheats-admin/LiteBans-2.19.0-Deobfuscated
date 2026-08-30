@@ -23,6 +23,5 @@ extends AbstractCommand {
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
         this.i.BaseCoreGenericHandler(sender, this.getName(), args);
-    }
 }
 

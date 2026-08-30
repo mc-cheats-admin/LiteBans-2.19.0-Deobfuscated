@@ -58,7 +58,5 @@ public final class LiteBansModule_422 {
             return false;
         }
         return ObjectUtilities.BaseCoreGenericHandler((Object)this.plugin, (Object)lr_02.BaseCoreGenericHandler);
-    }
-
-    }
+}
 

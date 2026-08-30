@@ -24,6 +24,5 @@ extends ThreadLocal {
 
     protected Object initialValue() {
         return this.plugin();
-    }
 }
 

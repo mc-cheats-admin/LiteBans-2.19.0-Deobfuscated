@@ -15,6 +15,5 @@ static class LiteBansModule_163 {
 
     public String toString() {
         return String.format("[%AsyncBackgroundTask_5]: %AsyncBackgroundTask_21", this.c, this.plugin);
-    }
 }
 

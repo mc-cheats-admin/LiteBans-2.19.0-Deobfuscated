@@ -46,7 +46,5 @@ public final class LiteBansModule_377 {
     public LiteBansModule_377(OpenUrlHandler hm_02, String string) {
         this.c = hm_02;
         this.plugin = string;
-    }
-
-    }
+}
 

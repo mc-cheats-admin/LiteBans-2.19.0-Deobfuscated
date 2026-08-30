@@ -14,6 +14,5 @@ extends LiteBansModule_24 {
         this.plugin(4, n2);
         this.LiteBansModule_194 = LiteBansModule_288.BaseCoreGenericHandler(byArray, n);
         this.e = NoneHandler.BaseCoreGenericHandler(LiteBansModule_288.BaseCoreGenericHandler(byArray, n + 2));
-    }
 }
 

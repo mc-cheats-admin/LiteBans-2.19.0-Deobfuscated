@@ -35,7 +35,5 @@ public final class LiteBansModule_220 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"%", ".*"};
-    }
-
-    }
+}
 

@@ -72,11 +72,9 @@ Serializable {
         }
         catch (CloneNotSupportedException cloneNotSupportedException) {
             throw new RuntimeException(cloneNotSupportedException);
-        }
-    }
+}
 
     public String toString() {
         return "ZipLong value: " + this.LiteBansModule_194;
-    }
 }
 

@@ -12,10 +12,8 @@ public final class LiteBansModule_366 {
         this.LiteBansModule_31 = byArray;
         if (this.LiteBansModule_31 == LiteBansModule_389.BaseCoreGenericHandler()) {
             LiteBansModule_366 k92 = this;
-            boolean flag = false;
             k92.LiteBansModule_31 = new byte[8192];
-        }
-    }
+}
 
     public /* synthetic */ LiteBansModule_366(LiteBansModule_324 iX2, byte[] byArray, int n, LiteBansModule_14 aJ2) {
         if ((n & 2) != 0) {
@@ -58,7 +56,5 @@ public final class LiteBansModule_366 {
 
     private static final void BaseCoreGenericHandler() {
         c = new String[]{"Bitflipper(table=", ",", "0b"};
-    }
-
-    }
+}
 

@@ -76,6 +76,5 @@ public final class LiteBansModule_15 {
 
     public /* synthetic */ LiteBansModule_15(int n, String string, String string2, LiteBansModule_14 aJ2) {
         this(n, string, string2);
-    }
 }
 

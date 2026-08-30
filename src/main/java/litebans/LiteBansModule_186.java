@@ -15,6 +15,5 @@ implements LiteBansModule_417 {
     public DatabaseService BaseCoreGenericHandler(PlatformPlugin plugin, File file) {
         JsonHandler bb_02 = new JsonHandler(file, this.plugin);
         return new YamlConfigProvider(this.LiteBansModule_31.BaseCoreGenericHandler, bb_02).c(file);
-    }
 }
 

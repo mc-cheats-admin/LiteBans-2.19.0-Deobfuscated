@@ -12,7 +12,5 @@ public final class KotlinUnitHandler {
     static {
         KotlinUnitHandler.BaseCoreGenericHandler();
         BaseCoreGenericHandler = new KotlinUnitHandler();
-    }
-
-    }
+}
 

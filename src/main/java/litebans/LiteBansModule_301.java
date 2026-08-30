@@ -64,7 +64,5 @@ implements Serializable {
             return false;
         }
         return ObjectUtilities.BaseCoreGenericHandler(this.c, id_02.c);
-    }
-
-    }
+}
 

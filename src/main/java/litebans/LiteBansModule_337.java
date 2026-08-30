@@ -12,6 +12,5 @@ public final class LiteBansModule_337 {
             // empty catch block
         }
         BaseCoreGenericHandler = nArray;
-    }
 }
 

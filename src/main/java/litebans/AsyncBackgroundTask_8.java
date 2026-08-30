@@ -14,7 +14,5 @@ implements Runnable {
     public void run() {
         if (HikariPool.BaseCoreGenericHandler(this.LiteBansModule_31, this.plugin, "(connection has passed maxLifetime)", false)) {
             this.LiteBansModule_31.BaseCoreGenericHandler(HikariPool.BaseCoreGenericHandler(this.LiteBansModule_31).c());
-        }
-    }
 }
 

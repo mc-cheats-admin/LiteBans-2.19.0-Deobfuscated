@@ -55,8 +55,7 @@ public final class ContentHandler {
                 char c = characterArray[i].charValue();
                 if (!StringUtilities.c((CharSequence)string3, c, false, 2, null)) continue;
                 string3 = StringUtilities.BaseCoreGenericHandler(string3, String.valueOf(c), "" + '\\' + c, false, 4, null);
-            }
-        }
+}
         return string3;
     }
 
@@ -66,7 +65,7 @@ public final class ContentHandler {
      */
     public final void c() {
         Object object;
-        block13: {
+{
             Object object2;
             boolean flag;
             Object object3;
@@ -77,10 +76,8 @@ public final class ContentHandler {
             Object object4 = this.c;
             Object object5 = "embeds";
             Object object6 = this.i;
-            boolean flag2 = false;
             Iterable iterable = object6;
             Object object7 = new ArrayList(CollectionUtilities.BaseCoreGenericHandler((Iterable)object6, 10));
-            boolean flag3 = false;
             for (Object t2 : iterable) {
                 object3 = (LiteBansModule_211)t2;
                 Collection collection = object7;
@@ -100,13 +97,10 @@ public final class ContentHandler {
             object4.put(object5, object6);
             object4 = this;
             object5 = this.c;
-            boolean flag4 = false;
             object = object4;
-            boolean flag5 = false;
             URLConnection uRLConnection = URI.create(((ContentHandler)object).LiteBansModule_31).toURL().openConnection();
             ObjectUtilities.LiteBansModule_31(uRLConnection, "");
             Object object8 = object7 = (HttpsURLConnection)uRLConnection;
-            boolean flag6 = false;
             ((URLConnection)object8).addRequestProperty("Content-Type", "application/json");
             ((URLConnection)object8).addRequestProperty("User-Agent", "Java (LiteBans " + LiteBansModule_336.c() + ')');
             ((URLConnection)object8).setConnectTimeout(80000);
@@ -118,18 +112,15 @@ public final class ContentHandler {
             object7 = ((URLConnection)object).getOutputStream();
             object8 = null;
             OutputStream outputStream = (OutputStream)object7;
-            boolean flag7 = false;
             ObjectUtilities.BaseCoreGenericHandler(outputStream);
             object3 = outputStream;
             flag = false;
             Object object9 = object3;
-            boolean flag8 = false;
             Object object10 = object5;
-            boolean bl9 = false;
             ((OutputStream)object9).write(((NullHandler_3)object10).toString().getBytes(LiteBansModule_344.LiteBansModule_31));
             KotlinUnitHandler iv_02 = KotlinUnitHandler.BaseCoreGenericHandler;
             object3 = iv_02;
-            break block13;
+            break;
             {
                 catch (Throwable throwable) {
                     object8 = throwable;
@@ -148,10 +139,7 @@ public final class ContentHandler {
                             throw new RuntimeException(throwable2);
                         }
                         throw throwable;
-                    }
-                }
-            }
-        }
+}
         ((URLConnection)object).getInputStream().close();
         ((HttpURLConnection)object).disconnect();
     }
@@ -161,7 +149,6 @@ public final class ContentHandler {
         Map map;
         NullHandler_3 gr_02 = new NullHandler_3();
         LiteBansModule_211 g93 = g92;
-        boolean flag = false;
         ((Map)gr_02).put("title", this.plugin(g93.LiteBansModule_194(), true));
         ((Map)gr_02).put("description", this.plugin(g93.LiteBansModule_240(), true));
         Object object2 = gr_02;
@@ -206,19 +193,15 @@ public final class ContentHandler {
         map = gr_02;
         String string3 = "fields";
         object4 = list;
-        boolean flag2 = false;
         Object object5 = object4;
         Collection collection = new ArrayList(CollectionUtilities.BaseCoreGenericHandler((Iterable)object4, 10));
-        boolean flag3 = false;
         Iterator iterator = object5.iterator();
         while (iterator.hasNext()) {
             Object t2 = iterator.next();
             LiteBansModule_21 at2 = (LiteBansModule_21)t2;
             Collection collection2 = collection;
-            boolean flag4 = false;
             NullHandler_3 gr_03 = new NullHandler_3();
             LiteBansModule_21 at3 = at2;
-            boolean flag5 = false;
             ((Map)gr_03).put("name", at3.c());
             ((Map)gr_03).put("value", at3.LiteBansModule_31());
             ((Map)gr_03).put("inline", at3.BaseCoreGenericHandler());
@@ -247,6 +230,5 @@ public final class ContentHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"content", "username", "avatar_url", "tts", "embeds", "", "Content-Type", "application/json", "User-Agent", "Java (LiteBans ", "POST", "", "Content-Type", "application/json", "User-Agent", "Java (LiteBans ", "POST", "", "Content-Type", "application/json", "User-Agent", "Java (LiteBans ", "POST", "title", "description", "url", "", "text", "icon_url", "footer", "url", "image", "name", "url", "icon_url", "author", "url", "thumbnail", "color", "fields", "name", "value", "inline"};
-    }
 }
 

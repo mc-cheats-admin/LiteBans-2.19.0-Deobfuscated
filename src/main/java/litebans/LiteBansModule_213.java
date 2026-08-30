@@ -11,6 +11,5 @@ extends ByteArrayOutputStream {
     @Override
     public byte[] toByteArray() {
         return this.buf;
-    }
 }
 

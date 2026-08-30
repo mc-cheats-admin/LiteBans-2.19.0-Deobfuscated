@@ -18,12 +18,8 @@ implements RejectedExecutionHandler {
                     this.plugin.BaseCoreGenericHandler.BaseCoreGenericHandler(runnable);
                 } else {
                     runnable.run();
-                }
-            }
+}
             catch (InterruptedException interruptedException) {
                 // empty catch block
-            }
-        }
-    }
 }
 

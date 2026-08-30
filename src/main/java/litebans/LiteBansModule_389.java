@@ -19,16 +19,13 @@ public final class LiteBansModule_389 {
             list = CollectionUtilities.e();
         } else {
             String[] filteredArgs = args;
-            boolean flag = false;
             String[] parsedArgs = filteredArgs;
             Collection collection = new ArrayList(filteredArgs.length);
-            boolean flag2 = false;
             int n = parsedArgs.length;
             for (int i = 0; i < n; ++i) {
                 String string;
                 String string2 = string = parsedArgs[i];
                 Collection collection2 = collection;
-                boolean flag3 = false;
                 String string3 = string2;
                 collection2.add(string3.toLowerCase(Locale.ENGLISH));
             }
@@ -70,7 +67,6 @@ public final class LiteBansModule_389 {
 
     public static final boolean BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull byte[] byArray2, int n, int n2) {
         int n3 = n2 - n;
-        int n4 = 0;
         int n5 = n;
         while (n4 < n3) {
             if (byArray[n4++] == byArray2[n5++]) continue;
@@ -94,6 +90,5 @@ public final class LiteBansModule_389 {
         eo_02.BaseCoreGenericHandler(id_02.BaseCoreGenericHandler());
         eo_02.BaseCoreGenericHandler(id_02.c());
         eo_02.BaseCoreGenericHandler(id_02.LiteBansModule_194());
-    }
 }
 

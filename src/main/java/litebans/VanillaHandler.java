@@ -46,7 +46,6 @@ extends BansHandler {
         object2 = null;
         try {
             Object object4 = (BufferedReader)object;
-            boolean flag2 = false;
             String string2 = CollectionUtilities.BaseCoreGenericHandler(ActionHandler_2.BaseCoreGenericHandler((Reader)bufferedReader), null, null, null, 0, null, null, 63, null);
             Object object5 = NullHandler_5.BaseCoreGenericHandler(string2);
             ObjectUtilities.LiteBansModule_31(object5, "");
@@ -60,8 +59,7 @@ extends BansHandler {
         }
         finally {
             BlockHandler.BaseCoreGenericHandler((Closeable)object, (Throwable)object2);
-        }
-    }
+}
 
     private final void BaseCoreGenericHandler(NullHandler_7 ks_02, LiteBansModule_82 ch2) {
         NullHandler_3 gr_02 = null;
@@ -97,22 +95,17 @@ extends BansHandler {
             }
             catch (Exception exception) {
                 this.plugin(this.Utf8Handler_2(), string, gr_02, exception);
-            }
-        }
-    }
+}
 
     private final void BaseCoreGenericHandler(String string, String string2, NullHandler_3 gr_02, Exception exception) {
         this.LiteBansModule_240().getLogger().warning("Failed to import ban for " + string + " (created LiteBansModule_61 " + string2 + "). JSON data:");
         NullHandler_3 gr_03 = gr_02;
         this.LiteBansModule_240().getLogger().warning(gr_03 != null ? gr_03.BaseCoreGenericHandler() : null);
         MessageHandler messageHandler = this;
-        boolean flag = false;
         ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(exception);
     }
 
     private static final void BaseCoreGenericHandler() {
         BroadcastService = new String[]{"vanilla", "banned-players.json", "yyyy-MM-LiteBansModule_118 HH:mm:ss NullHandler_8", "banned-players", "essentials", "", "", "", "name", "uuid", "created", "source", "expires", "forever", "reason", "", "*", "Ignoring duplicate ban for ", "Failed to import ban for ", " (created LiteBansModule_61 ", "). JSON data:"};
-    }
-
-    }
+}
 

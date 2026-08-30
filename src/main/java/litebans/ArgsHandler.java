@@ -108,8 +108,7 @@ implements LiteBansModule_98 {
         catch (LinkageError linkageError) {
             this.AsyncBackgroundTask_5.getLogger().warning("Unable to determine server protocol version");
             return 770;
-        }
-    }
+}
 
     @Override
     public Object AsyncBackgroundTask_5(Object object) {
@@ -125,8 +124,7 @@ implements LiteBansModule_98 {
             ((CommandSourceStack)object).sendSystemMessage((Component)this.LiteBansModule_31().LiteBansModule_31(string));
         } else {
             this.c(this.AsyncBackgroundTask_5(object), string);
-        }
-    }
+}
 
     @Override
     public void BaseCoreGenericHandler(Object object, String string, byte[] byArray) {
@@ -191,7 +189,5 @@ implements LiteBansModule_98 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"Unable to determine server protocol version", "args"};
-    }
-
-    }
+}
 

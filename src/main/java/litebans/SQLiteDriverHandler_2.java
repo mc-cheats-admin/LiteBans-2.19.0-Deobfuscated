@@ -30,61 +30,53 @@ public final class SQLiteDriverHandler_2 {
     }
 
     public final String c(@NotNull String v1) {
-        block15: {
-            block13: {
-                block12: {
-                    block14: {
-                        block11: {
-                            var3_2 = v1;
-                            var2_3 = var3_2.toLowerCase(Locale.ENGLISH);
-                            switch (var2_3.hashCode()) {
+{
+                            arg1 = v1;
+                            arg2 = arg1.toLowerCase(Locale.ENGLISH);
+                            switch (arg2.hashCode()) {
                                 case 839186932: {
-                                    if (!var2_3.equals("mariadb")) {
-                                        ** break;
+                                    if (!arg2.equals("mariadb")) {
+                                        break;
                                     }
-                                    break block11;
+                                    break;
                                 }
                                 case -894935028: {
-                                    if (!var2_3.equals("sqlite")) {
-                                        ** break;
+                                    if (!arg2.equals("sqlite")) {
+                                        break;
                                     }
-                                    break block12;
+                                    break;
                                 }
                                 case 104382626: {
-                                    if (var2_3.equals("mysql")) break;
-                                    ** break;
+                                    if (arg2.equals("mysql")) break;
+                                    break;
                                 }
                                 case 3274: {
-                                    if (!var2_3.equals("LiteBansModule_243")) {
-                                        ** break;
+                                    if (!arg2.equals("LiteBansModule_243")) {
+                                        break;
                                     }
-                                    break block13;
+                                    break;
                                 }
                                 case 106616951: {
-                                    if (!var2_3.equals("pgsql")) {
-                                        ** break;
+                                    if (!arg2.equals("pgsql")) {
+                                        break;
                                     }
-                                    break block14;
-                                }
-                            }
+                                    break;
+}
                             v0 = "MySQL";
-                            break block15;
+                            break;
                         }
                         v0 = "MariaDB";
-                        break block15;
+                        break;
                     }
                     v0 = "PostgreSQL";
-                    break block15;
+                    break;
                 }
                 v0 = "SQLite";
-                break block15;
+                break;
             }
             v0 = "H2";
-            break block15;
-lbl37:
-            // 6 sources
-
-            v0 = v1;
+            break;
+                        v0 = v1;
         }
         return v0;
     }
@@ -95,7 +87,5 @@ lbl37:
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"mysql", "mariadb", "pgsql", "postgresql", "sqlite", "LiteBansModule_243", "mariadb", "sqlite", "mysql", "LiteBansModule_243", "pgsql", "MySQL", "MariaDB", "PostgreSQL", "SQLite", "H2"};
-    }
-
-    }
+}
 

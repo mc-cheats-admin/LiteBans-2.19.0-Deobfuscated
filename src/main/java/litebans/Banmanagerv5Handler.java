@@ -51,7 +51,6 @@ extends BansHandler {
             AutoCloseable autoCloseable2;
             AutoCloseable autoCloseable3;
             Object object6 = (PreparedStatement)autoCloseable;
-            boolean flag4 = false;
             if (preparedStatement.execute()) {
                 autoCloseable3 = preparedStatement.getResultSet();
                 autoCloseable2 = autoCloseable3;
@@ -74,8 +73,7 @@ extends BansHandler {
                             ch2.c(dZ2);
                             if (a_2 == BanHandler.LiteBansModule_240) {
                                 this.g().incrementAndGet();
-                            }
-                        } else {
+} else {
                             this.m().warning("Ignoring duplicate ban for " + string2);
                         }
                         PlatformPlugin plugin = this.LiteBansModule_240();
@@ -90,8 +88,7 @@ extends BansHandler {
                 }
                 finally {
                     CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
-                }
-            }
+}
             if (flag) {
                 this.m().info("Importing IP-bans.. + ");
                 autoCloseable3 = connection.prepareStatement("SELECT * FROM " + this.i() + "ip_bans");
@@ -106,7 +103,6 @@ extends BansHandler {
                         object2 = null;
                         try {
                             object = (ResultSet)object3;
-                            boolean flag5 = false;
                             while (object4.next()) {
                                 String string4;
                                 Object object7;
@@ -114,12 +110,10 @@ extends BansHandler {
                                 if (flag2) {
                                     object8 = this;
                                     object7 = object4.getBytes("ip");
-                                    boolean flag6 = false;
                                     string4 = InetAddress.getByAddress((byte[])object7).getHostAddress().toString();
                                 } else {
                                     object8 = this;
                                     long l7 = object4.getLong("ip");
-                                    boolean flag7 = false;
                                     string4 = "" + (l7 >> 24 & 0xFFL) + '.' + (l7 >> 16 & 0xFFL) + '.' + (l7 >> 8 & 0xFFL) + '.' + (l7 & 0xFFL);
                                 }
                                 String string5 = string4;
@@ -127,11 +121,9 @@ extends BansHandler {
                                 object7 = LiteBansModule_286.BaseCoreGenericHandler(object4.getBytes("actor_id"));
                                 BansHandler fS2 = this;
                                 long l8 = object4.getLong("created");
-                                boolean flag8 = false;
                                 long l9 = l8 * 1000L;
                                 Object object9 = this;
                                 long l10 = object4.getLong("expires");
-                                boolean bl9 = false;
                                 long l11 = l10 * 1000L;
                                 object9 = this.plugin((UUID)object7);
                                 ObjectUtilities.BaseCoreGenericHandler(object8);
@@ -146,8 +138,7 @@ extends BansHandler {
                         }
                         finally {
                             CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)object3, (Throwable)object2);
-                        }
-                    }
+}
                     object5 = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable5) {
@@ -156,8 +147,7 @@ extends BansHandler {
                 }
                 finally {
                     CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
-                }
-            }
+}
             object6 = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable6) {
@@ -166,12 +156,9 @@ extends BansHandler {
         }
         finally {
             CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         m = new String[]{"BanManagerV5", "bm_", "banmanager5", "banmanager7", "banmanagerv7", "bans", "mutes", "SELECT * FROM ", "player_", " INNER JOIN ", "players ON ", "player_", ".player_id=", "players.SQLiteDriverHandler_4", "name", "player_id", "reason", "actor_id", "created", "expires", "Ignoring duplicate ban for ", "#", "Importing IP-bans.. + ", "SELECT * FROM ", "ip_bans", "ip", "ip", "reason", "actor_id", "created", "expires"};
-    }
-
-    }
+}
 

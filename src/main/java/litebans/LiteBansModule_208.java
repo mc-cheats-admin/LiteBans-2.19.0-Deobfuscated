@@ -19,6 +19,5 @@ public interface LiteBansModule_208 {
         e = 40960;
         c = 61440;
         LiteBansModule_194 = 4095;
-    }
 }
 

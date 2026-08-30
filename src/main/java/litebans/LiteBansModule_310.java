@@ -10,6 +10,5 @@ extends LiteBansModule_300 {
 
     public LiteBansModule_310(String string) {
         super("this file uses HikariDataSource unsupported compression algorithm: " + string + ".");
-    }
 }
 

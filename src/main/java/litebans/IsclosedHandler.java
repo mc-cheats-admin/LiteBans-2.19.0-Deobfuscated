@@ -32,6 +32,5 @@ static final class IsclosedHandler {
             throw new SQLException("Connection is closed");
         };
         return (Connection)Proxy.newProxyInstance(Connection.class.getClassLoader(), new Class[]{Connection.class}, invocationHandler);
-    }
 }
 

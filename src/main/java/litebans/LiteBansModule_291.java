@@ -11,6 +11,5 @@ public class LiteBansModule_291 {
         ArrayList arrayList = LiteBansModule_291.BaseCoreGenericHandler();
         LiteBansModule_28.BaseCoreGenericHandler(arrayList, iterator);
         return arrayList;
-    }
 }
 

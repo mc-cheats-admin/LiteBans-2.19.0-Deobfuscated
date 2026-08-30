@@ -11,6 +11,5 @@ public class LiteBansModule_336 {
 
     public static final String LiteBansModule_31() {
         return LiteBansModule_180.LiteBansModule_31;
-    }
 }
 

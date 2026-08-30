@@ -9,12 +9,9 @@ static class ExceptionHandler {
         ObjectUtilities.BaseCoreGenericHandler((Object)throwable2, "exception");
         if (throwable != throwable2) {
             PlatformImplementationsKt.IMPLEMENTATIONS.addSuppressed(throwable, throwable2);
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"<this>", "<this>", "writer", "<this>", "stream", "<this>", "<this>", "<this>", "exception", "<this>"};
-    }
-
-    }
+}
 

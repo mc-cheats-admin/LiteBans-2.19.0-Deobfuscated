@@ -27,14 +27,11 @@ static class InitializerHandler {
             }
             default: {
                 throw new LiteBansException_5();
-            }
-        }
+}
         return eE2;
     }
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"initializer", "mode", "initializer", "initializer"};
-    }
-
-    }
+}
 

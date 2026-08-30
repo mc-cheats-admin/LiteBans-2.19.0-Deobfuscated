@@ -92,8 +92,7 @@ extends AbstractCommand {
             }
             catch (NoSuchAlgorithmException timeZone) {
                 throw new RuntimeException(timeZone);
-            }
-        }
+}
         if (string2.equals("allow")) {
             new LitebansAdminHandler(args, plugin, true).run();
             return;
@@ -117,8 +116,7 @@ extends AbstractCommand {
         try {
             if (i == null) {
                 throw new IOException();
-            }
-        }
+}
         catch (Exception exception) {
             configService.BaseCoreGenericHandler(exception, 0);
             this.plugin(sender);
@@ -137,7 +135,6 @@ extends AbstractCommand {
                     throw throwable;
                 }
                 plugin.LiteBansModule_31(() -> {
-                    boolean flag = true;
                     try {
                         w2.c();
                         o2.LiteBansModule_31(configService.LiteBansModule_194().ElementsHandler());
@@ -158,13 +155,10 @@ extends AbstractCommand {
                             }
                             if (flag) {
                                 this.plugin(sender, MessageKey.aW);
-                            }
-                        }
-                    }
+}
                     catch (Exception exception) {
                         w2.BaseCoreGenericHandler(exception);
-                    }
-                });
+});
             }
             catch (Throwable by3) {
                 w2.BaseCoreGenericHandler(by3);
@@ -207,8 +201,7 @@ extends AbstractCommand {
                 }
                 catch (Exception exception) {
                     w2.BaseCoreGenericHandler(exception);
-                }
-            });
+});
             return;
         }
         if (string2.equals("servers")) {
@@ -248,12 +241,10 @@ extends AbstractCommand {
                                 w2.LiteBansModule_31(bT2);
                             }
                             this.plugin(sender, BlackHandler.i + GnuSparseMapHandler[140] + BlackHandler.m + w2.n() + GnuSparseMapHandler[141] + BlackHandler.i + GnuSparseMapHandler[142] + BlackHandler.m + simpleDateFormat.format(calendar.getTime()));
-                        }
-                    }
+}
                     catch (Exception exception) {
                         w2.BaseCoreGenericHandler(exception);
-                    }
-                });
+});
             }
             return;
         }
@@ -360,7 +351,6 @@ extends AbstractCommand {
                         }
                         boolean flag3 = eG2.X();
                         object = plugin.LiteBansModule_194().BaseCoreGenericHandler(BansHandler.class, new Class[]{PlatformPlugin.class}, new Object[]{plugin});
-                        boolean flag4 = false;
                         object3 = object.iterator();
                         while (object3.hasNext()) {
                             object2 = (BansHandler)object3.next();
@@ -396,10 +386,7 @@ extends AbstractCommand {
                             }
                             catch (Exception exception) {
                                 throw new RuntimeException(exception);
-                            }
-                        }
-                    }
-                });
+});
             }
             return;
         }
@@ -435,9 +422,7 @@ extends AbstractCommand {
                     }
                     default: {
                         throw new UnsupportedOperationException();
-                    }
-                }
-            }
+}
             return;
         }
         if (string2.equals("test-vault") && args.length >= 2) {
@@ -477,8 +462,7 @@ extends AbstractCommand {
                 }
                 catch (Exception exception) {
                     w2.BaseCoreGenericHandler(exception);
-                }
-            });
+});
             this.plugin(sender, BlackHandler.i + "Expiry update ");
             return;
         }
@@ -523,8 +507,7 @@ extends AbstractCommand {
             }
             catch (Exception exception) {
                 w2.BaseCoreGenericHandler(exception);
-            }
-        });
+});
     }
 
     void BaseCoreGenericHandler(DatabaseMonitorService w2, CommandSenderWrapper sender, boolean flag) {
@@ -540,7 +523,6 @@ extends AbstractCommand {
                 }
                 LiteBansModule_60 bT2 = ch2.c((CharSequence)("SELECT * FROM " + kL2));
                 ResultSet resultSet = w2.BaseCoreGenericHandler(bT2);
-                int n = 0;
                 List list = ch2.LiteBansModule_31(resultSet, kL2.c());
                 for (SilentHandler dZ2 : list) {
                     String string;
@@ -560,12 +542,10 @@ extends AbstractCommand {
                 }
                 if (l3 <= 0L || flag) continue;
                 this.plugin(sender, MessageKey.LiteBansModule_25.BaseCoreGenericHandler("amount", (Object)l3));
-            }
-        }
+}
         catch (Exception exception) {
             w2.BaseCoreGenericHandler(exception);
-        }
-    }
+}
 
     void BaseCoreGenericHandler(CommandSenderWrapper sender) {
         String string;
@@ -574,8 +554,7 @@ extends AbstractCommand {
             this.plugin(sender, BlackHandler.c + "[LiteBans] " + BlackHandler.F + "Plugin access has been disabled!");
             if (configService.GnuSparseMapHandler() != null) {
                 this.plugin(sender, configService.GnuSparseMapHandler());
-            }
-        }
+}
         switch (this.LiteBansModule_240().AsyncBackgroundTask_22()) {
             case 0: {
                 if (BukkitBlockAdapter.c()) {
@@ -608,8 +587,7 @@ extends AbstractCommand {
             }
             default: {
                 string = "Unknown";
-            }
-        }
+}
         String string2 = LiteBansModule_120.c.BaseCoreGenericHandler(this.LiteBansModule_240().i().LiteBansModule_31(), new Integer[]{0, 0, 0}).toString();
         this.plugin(sender, BlackHandler.i + "LiteBans version " + BlackHandler.m + LiteBansModule_180.AsyncBackgroundTask_5 + BlackHandler.i + " running on " + BlackHandler.g(string) + " " + BlackHandler.BaseCoreGenericHandler(string2));
         this.plugin(sender, BlackHandler.m.toString() + BlackHandler.r + GnuSparseMapHandler[87]);
@@ -623,7 +601,5 @@ extends AbstractCommand {
 
     private static final void BaseCoreGenericHandler() {
         GnuSparseMapHandler = new String[]{"litebans", "version", "broadcast", "verify", "2ccd0bb281214361803a945b8f0644ab", "litebans.admin", "litebans.verify", " ", " ", "undefined", "yyyy-MM-LiteBansModule_118", "UTC", "A#63rP", "SHA-512", "q", "Verification code: ", "allow", "unlink", "clearhistory", "cleariphistory", "reveal", "license", "litebans.admin", "reload", "info", "servers", "accept", "debug", "Debug level has been set to: ", "Debug levels: ", " (config); ", "/", " (database) + ", "timezone", "yyyy-MM-LiteBansModule_118 HH:mm:ss", "Current timezone: ", "\n", "Current time: ", "fixhistory", "fixiphistory", "clearmute", "Removed active mute for ", " ", "No mute found for ", "Active mutes have been ", "listmutes", "import", "start", "reset-database", "reset-templates", "addhistory", "addiphistory", "add-login", "json-disconnect", " ", "target:", ", reason:", "test-vault", "Command is not supported on this ", "refresh", "Refreshed player: '", "', server: ", "expiry-update", "Expiry update ", "upgrade", "benchgen", "benchjoin", "Begin import from: ", "table", "SELECT * FROM ", "#", "amount", "amount", "[LiteBans] ", "Plugin access has been disabled!", "Folia", "Paper", "Bukkit", "org.spigotmc.SpigotConfig", "Spigot", "BungeeCord", "Velocity", "Fabric", "Unknown", "LiteBans version ", " running on ", " ", "https://www.spigotmc.org/resources/litebans.3715/ {url: https://www.spigotmc.org/resources/litebans.3715/}", "Upgrade check executed ", "litebans.test", "litebans.test: ", "true", "false", " ", " ", "", "vanilla", "banned-players", "essentials", "sqlite", "litebans", "LiteBansModule_243", "litebans", "banmanager7", "banmanagerv7", "LiteBansModule_243", "plugins/BanManager", "local_bans", ".mv.LiteBansModule_116", "LiteBansModule_116", "jdbc:", "://", "mysql", "jdbc:mysql://", "LiteBansModule_116", "30000", "connectTimeout", "socketTimeout", "autoReconnect", "true", "useUnicode", "true", "connectionCollation", "utf8mb4_unicode_ci", "characterEncoding", "utf-8", "characterSetResults", "utf-8", "serverTimezone", "UTC", "timezone", "UTC", "user", "password", "LiteBansModule_116", "banned-players.json", "default", "name", "UPDATE ", " SET timezone=?", "Timezone updated: ", "\n", "Current time: ", "LiteBans is connected to BaseCoreGenericHandler ", " ", "", "", "!!!", "Server name: ", "Server UUID: ", " <", ">", "Pooled connections: ", "/", " (minimum: ", ", idle: ", ")", "Threads awaiting connection: ", "Sync events InitializerHandler_3/out/skipped: ", ", ", ", "};
-    }
-
-    }
+}
 

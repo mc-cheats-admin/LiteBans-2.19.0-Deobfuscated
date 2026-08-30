@@ -11,6 +11,5 @@ extends Exception {
     public LiteBansException_8(String string, Exception exception) {
         super(string);
         this.initCause(exception);
-    }
 }
 

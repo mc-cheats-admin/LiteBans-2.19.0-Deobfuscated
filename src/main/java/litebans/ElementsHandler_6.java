@@ -14,7 +14,6 @@ extends ComparatorHandler_2 {
         if (iterable instanceof Collection) {
             return collection.addAll((Collection)iterable);
         }
-        boolean flag = false;
         for (Object t2 : iterable) {
             if (!collection.add(t2)) continue;
             flag = true;
@@ -35,9 +34,7 @@ extends ComparatorHandler_2 {
     }
 
     private static final boolean BaseCoreGenericHandler(Iterable iterable, LiteBansModule_178 eo_02, boolean flag) {
-        boolean flag2 = false;
         Iterator iterator = iterable.iterator();
-        boolean flag3 = false;
         while (iterator.hasNext()) {
             if ((Boolean)eo_02.BaseCoreGenericHandler(iterator.next()) != flag) continue;
             iterator.remove();
@@ -57,8 +54,6 @@ extends ComparatorHandler_2 {
             ObjectUtilities.LiteBansModule_31(list, "");
             return ElementsHandler_6.BaseCoreGenericHandler(NullHandler_6.BaseCoreGenericHandler(list), eo_02, flag);
         }
-        int n = 0;
-        int n2 = 0;
         int n3 = CollectionUtilities.LiteBansModule_31(list);
         if (n2 <= n3) {
             while (true) {
@@ -71,8 +66,7 @@ extends ComparatorHandler_2 {
                 }
                 if (n2 == n3) break;
                 ++n2;
-            }
-        }
+}
         if (n < list.size()) {
             n3 = n;
             n2 = CollectionUtilities.LiteBansModule_31(list);
@@ -81,8 +75,7 @@ extends ComparatorHandler_2 {
                     list.remove(n2);
                     if (n2 == n3) break;
                     --n2;
-                }
-            }
+}
             return true;
         }
         return false;
@@ -90,7 +83,5 @@ extends ComparatorHandler_2 {
 
     private static final void i() {
         g = new String[]{"<this>", "<this>", "elements", "<this>", "elements", "<this>", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "elements", "<this>", "predicate", "<this>", "predicate", "<this>", "<this>", "List is ", "<this>", "<this>", "List is ", "<this>", "<this>", "predicate", "<this>", "predicate", ""};
-    }
-
-    }
+}
 

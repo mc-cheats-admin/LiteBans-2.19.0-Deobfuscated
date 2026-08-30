@@ -29,25 +29,18 @@ extends PacketAdapter {
         Object[] objectArray = new Object[]{LiteBansModule_370.LiteBansModule_31(LiteBansModule_31), LiteBansModule_370.BaseCoreGenericHandler(LiteBansModule_31)};
         Plugin plugin = BungeecordHandler_2.BaseCoreGenericHandler((BungeecordHandler_2)ec_02, null, 1, null);
         LiteBansModule_134 ds2 = this;
-        boolean flag = false;
         Object object = objectArray;
-        boolean flag2 = false;
         Object[] objectArray2 = object;
         Collection collection = new ArrayList();
-        boolean flag3 = false;
         Object[] objectArray3 = objectArray2;
-        boolean flag4 = false;
         int n = objectArray3.length;
         for (int i = 0; i < n; ++i) {
             PacketType packetType;
             Object object2;
             Object object3 = object2 = objectArray3[i];
-            boolean flag5 = false;
             Object object4 = object3;
-            boolean flag6 = false;
             if ((object4 instanceof PacketType ? (PacketType)object4 : null) == null) continue;
             packetType = packetType;
-            boolean flag7 = false;
             collection.add(packetType);
         }
         object = (List)collection;
@@ -115,7 +108,5 @@ extends PacketAdapter {
         LiteBansModule_31 = new LiteBansModule_370(null);
         c = ProxyConnection.BaseCoreGenericHandler(LiteBansModule_134::BaseCoreGenericHandler);
         e = ProxyConnection.BaseCoreGenericHandler(LiteBansModule_134::c);
-    }
-
-    }
+}
 

@@ -29,7 +29,5 @@ implements Runnable {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"", "/dev/null", "/dev/null"};
-    }
-
-    }
+}
 

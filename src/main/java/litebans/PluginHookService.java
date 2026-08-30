@@ -16,15 +16,12 @@ extends AbstractModule {
     public void c() {
         this.plugin.r();
         Object[] objectArray = this.c;
-        boolean flag = false;
         int n = objectArray.length;
         for (int i = 0; i < n; ++i) {
             Object object;
             Object object2 = object = objectArray[i];
-            boolean flag2 = false;
             TemporaryplayerHandler.LiteBansModule_31(this, object2);
-        }
-    }
+}
 
     @Override
     public boolean AsyncBackgroundTask_5() {
@@ -39,14 +36,11 @@ extends AbstractModule {
         new ServerEventListener(this.plugin).AsyncBackgroundTask_5();
         PlatformPlugin plugin = this.plugin;
         boolean flag = eG2.J();
-        boolean flag2 = false;
         if (flag) {
             LiteBansModule_175 em_02;
             LiteBansModule_175[] em_0Array = new LiteBansModule_175[1];
-            int n = 0;
             LiteBansModule_175[] em_0Array2 = em_0Array;
             PlatformPlugin di_03 = plugin;
-            boolean flag3 = false;
             em_0Array2[n] = em_02 = (LiteBansModule_175)new PlayerJoinListener(this.plugin);
             di_03.LiteBansModule_31(em_0Array);
         }
@@ -54,8 +48,7 @@ extends AbstractModule {
         if (configService.LiteBansModule_194().PunishmentTableService()) {
             this.plugin.c(() -> PluginHookService.BaseCoreGenericHandler(this, eG2, configService));
             new PlayerChatListener_2(this.plugin).BaseCoreGenericHandler();
-        }
-    }
+}
 
     @Override
     public LiteBansModule_88 BaseCoreGenericHandler(@NotNull LiteBansModule_360 commandContext) {
@@ -78,15 +71,12 @@ extends AbstractModule {
             catch (Exception exception) {
                 PluginModule module = q;
                 String string = "Hooking into AuthMe ";
-                boolean flag = false;
                 module.BaseCoreGenericHandler.getLogger().warning(string);
                 exception.printStackTrace();
-            }
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler(PluginHookService q, DiscordWebhookClient eG2, ConfigService configService) {
-        block6: {
+{
             try {
                 boolean flag = q.LiteBansModule_31 = eG2.BaseCoreGenericHandler() && q.BaseCoreGenericHandler.i().BaseCoreGenericHandler("ProtocolLib");
                 if (q.LiteBansModule_31 && LiteBansModule_139.LiteBansModule_31.LiteBansModule_31()) {
@@ -96,22 +86,17 @@ extends AbstractModule {
                     PluginModule module = q;
                     Object[] objectArray2 = new Object[]{new LiteBansModule_134(q.BaseCoreGenericHandler), new LiteBansModule_143(q.BaseCoreGenericHandler)};
                     PluginHookService q2 = q;
-                    boolean flag2 = false;
                     for (Object object : objectArray = objectArray2) {
-                        boolean flag3 = false;
                         TemporaryplayerHandler.BaseCoreGenericHandler(module, object);
                     }
                     Object[] objectArray3 = objectArray;
                     q2.c = Arrays.copyOf(objectArray3, objectArray3.length);
-                }
-            }
+}
             catch (Throwable throwable) {
                 q.BaseCoreGenericHandler.getLogger().warning("Failed to add ProtocolLib packet ");
-                if ((throwable instanceof LinkageError || throwable instanceof ReflectiveOperationException) && !configService.g()) break block6;
+                if ((throwable instanceof LinkageError || throwable instanceof ReflectiveOperationException) && !configService.g()) break;
                 configService.BaseCoreGenericHandler(throwable);
-            }
-        }
-    }
+}
 
     @Override
     public LiteBansModule_175 BaseCoreGenericHandler(LiteBansModule_360 commandContext) {
@@ -120,7 +105,5 @@ extends AbstractModule {
 
     private static final void AsyncBackgroundTask_5() {
         AsyncBackgroundTask_5 = new String[]{"lockdown", "fr.xephi.authme.events.LoginEvent", "Hooking into AuthMe ", "ProtocolLib", "ProtocolLib error 00 - manager is ", "Failed to add ProtocolLib packet listener."};
-    }
-
-    }
+}
 

@@ -41,18 +41,15 @@ implements Runnable {
      */
     @Override
     public void run() {
-        block7: {
+{
             DatabaseMonitorService w2 = this.plugin();
-            boolean flag = false;
             try {
                 LiteBansModule_82 ch2 = w2.LiteBansModule_194();
                 Closeable closeable = ch2;
                 Throwable throwable = null;
                 try {
                     Object object = (LiteBansModule_82)closeable;
-                    boolean flag2 = false;
                     LiteBansModule_82 ch3 = ch2;
-                    boolean flag3 = false;
                     this.plugin(ch3);
                     object = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
@@ -62,14 +59,11 @@ implements Runnable {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-                }
-            }
+}
             catch (SQLException sQLException) {
-                if (w2.LiteBansModule_31(sQLException)) break block7;
+                if (w2.LiteBansModule_31(sQLException)) break;
                 throw sQLException;
-            }
-        }
-    }
+}
 
     public final void BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2) {
         ConfigService configService = (ConfigService)ch2.e().BaseCoreGenericHandler(ConfigService.class);
@@ -83,26 +77,21 @@ implements Runnable {
             }
             if (ch2.e().AsyncBackgroundTask_22() == 1) {
                 this.LiteBansModule_31(ch2);
-            }
-        } else {
+} else {
             if (configService.LiteBansModule_194().PunishmentTableService()) {
                 p2.BaseCoreGenericHandler().LiteBansModule_31().values().removeIf(arg_0 -> AsyncBackgroundTask_20.BaseCoreGenericHandler(arg_0 -> AsyncBackgroundTask_20.BaseCoreGenericHandler(this, ch2, jv_0Array, arg_0), arg_0));
             }
             if (ch2.e().AsyncBackgroundTask_22() == 1) {
                 this.plugin(ch2, jv_0Array);
-            }
-        }
+}
         byte by2 = u2.c();
         u2.BaseCoreGenericHandler((byte)(by2 + 1));
         if (u2.GnuSparseMapHandler().size() > 8) {
             Iterable iterable = u2.GnuSparseMapHandler();
-            boolean flag = false;
             Iterable iterable2 = iterable;
             Collection collection = new ArrayList();
-            boolean flag2 = false;
             for (Object t2 : iterable2) {
                 Reference reference = (Reference)t2;
-                boolean flag3 = false;
                 if (!(reference.get() != null)) continue;
                 collection.add(t2);
             }
@@ -111,9 +100,7 @@ implements Runnable {
                 u2.GnuSparseMapHandler().clear();
             } else {
                 u2.BaseCoreGenericHandler(new CopyOnWriteArrayList(list));
-            }
-        }
-    }
+}
 
     private final void LiteBansModule_31(LiteBansModule_82 ch2) {
         BroadcastService o2 = (BroadcastService)ch2.e().BaseCoreGenericHandler(BroadcastService.class);
@@ -134,22 +121,19 @@ implements Runnable {
             gx_02.BaseCoreGenericHandler().clear();
         } else {
             ((ConcurrentHashMap.KeySetView)gx_02.BaseCoreGenericHandler().keySet()).removeIf(arg_0 -> AsyncBackgroundTask_20.LiteBansModule_31(arg_0 -> AsyncBackgroundTask_20.BaseCoreGenericHandler(gx_02, arg_0), arg_0));
-        }
-    }
+}
 
     public final boolean BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull CommandSenderWrapper[] jv_0Array, @NotNull SilentHandler dZ2) {
         boolean flag;
-        block1: {
+{
             CommandSenderWrapper[] jv_0Array2 = jv_0Array;
-            boolean flag2 = false;
             int n = jv_0Array2.length;
             for (int i = 0; i < n; ++i) {
                 CommandSenderWrapper sender;
                 CommandSenderWrapper jv_03 = sender = jv_0Array2[i];
-                boolean flag3 = false;
                 if (!ch2.BaseCoreGenericHandler(dZ2, jv_03)) continue;
                 flag = false;
-                break block1;
+                break;
             }
             flag = true;
         }
@@ -172,23 +156,20 @@ implements Runnable {
 
     private static final boolean BaseCoreGenericHandler(AsyncBackgroundTask_20 r_02, LiteBansModule_82 ch2, CommandSenderWrapper[] jv_0Array, Collection collection) {
         boolean flag;
-        block3: {
+{
             ObjectUtilities.BaseCoreGenericHandler(collection);
             Iterable iterable = collection;
-            boolean flag2 = false;
             if (((Collection)iterable).isEmpty()) {
                 flag = false;
             } else {
                 for (Object t2 : iterable) {
                     SilentHandler dZ2 = (SilentHandler)t2;
-                    boolean flag3 = false;
                     if (!(!r_02.BaseCoreGenericHandler(ch2, jv_0Array, dZ2))) continue;
                     flag = true;
-                    break block3;
+                    break;
                 }
                 flag = false;
-            }
-        }
+}
         return !flag;
     }
 
@@ -198,40 +179,34 @@ implements Runnable {
 
     private static final boolean BaseCoreGenericHandler(KickOtherHandler gx_02, SilentHandler dZ2) {
         boolean flag;
-        block7: {
+{
             Iterable iterable = gx_02.LiteBansModule_31().values();
-            boolean flag2 = false;
             if (((Collection)iterable).isEmpty()) {
                 flag = true;
             } else {
                 for (Object t2 : iterable) {
                     boolean flag3;
-                    block6: {
+{
                         Collection collection = (Collection)t2;
-                        boolean flag4 = false;
                         ObjectUtilities.BaseCoreGenericHandler(collection);
                         Iterable iterable2 = collection;
-                        boolean flag5 = false;
                         if (iterable2 instanceof Collection && ((Collection)iterable2).isEmpty()) {
                             flag3 = false;
                         } else {
                             for (Object t3 : iterable2) {
                                 SilentHandler dZ3 = (SilentHandler)t3;
-                                boolean flag6 = false;
                                 if (!(dZ3.BaseCoreGenericHandler() == dZ2.BaseCoreGenericHandler())) continue;
                                 flag3 = true;
-                                break block6;
+                                break;
                             }
                             flag3 = false;
-                        }
-                    }
+}
                     if (!flag3) continue;
                     flag = false;
-                    break block7;
+                    break;
                 }
                 flag = true;
-            }
-        }
+}
         return flag;
     }
 
@@ -243,7 +218,5 @@ implements Runnable {
         AsyncBackgroundTask_5 = 48000L;
         AsyncBackgroundTask_20.AsyncBackgroundTask_5();
         c = new LiteBansModule_117(null);
-    }
-
-    }
+}
 

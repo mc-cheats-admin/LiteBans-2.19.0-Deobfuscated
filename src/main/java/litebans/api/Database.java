@@ -66,6 +66,5 @@ public abstract class Database {
     @Generated
     public static void setInstance(Database database) {
         instance = database;
-    }
 }
 

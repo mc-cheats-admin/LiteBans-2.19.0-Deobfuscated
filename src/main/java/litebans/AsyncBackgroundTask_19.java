@@ -19,19 +19,13 @@ implements Runnable {
     public final void run() {
         Iterable iterable = this.c;
         LiteBansModule_82 ch2 = this.plugin;
-        boolean flag = false;
         for (Object t2 : iterable) {
             Events$Listener events$Listener = (Events$Listener)t2;
-            boolean flag2 = false;
             try {
                 Events$Listener events$Listener2 = events$Listener;
-                boolean flag3 = false;
                 events$Listener2.entryRemoved(this.LiteBansModule_31);
             }
             catch (Throwable throwable) {
                 LiteBansModule_268.BaseCoreGenericHandler.BaseCoreGenericHandler(ch2, throwable);
-            }
-        }
-    }
 }
 

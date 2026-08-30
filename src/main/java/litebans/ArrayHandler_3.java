@@ -30,10 +30,7 @@ extends LiteBansModule_369 {
             int n;
             long l3;
             object = (FileInputStream)closeable;
-            boolean flag = false;
-            int n2 = 0;
             long l5 = l3 = file.length();
-            int n3 = 0;
             if (l5 > Integer.MAX_VALUE) {
                 throw new OutOfMemoryError("File " + file + " is too big (" + l5 + " bytes) to fit InitializerHandler_3 ");
             }
@@ -58,8 +55,7 @@ extends LiteBansModule_369 {
                         throw new OutOfMemoryError("File " + file + " is too big to fit InitializerHandler_3 ");
                     }
                     byArray = ArrayUtilities.BaseCoreGenericHandler(aq_02.BaseCoreGenericHandler(), Arrays.copyOf(byArray2, n3), byArray2.length, 0, aq_02.size());
-                }
-            }
+}
             object = byArray;
         }
         catch (Throwable throwable2) {
@@ -82,7 +78,6 @@ extends LiteBansModule_369 {
         Throwable throwable = null;
         try {
             Object object = (FileOutputStream)closeable;
-            boolean flag = false;
             ((FileOutputStream)object).write(byArray);
             object = KotlinUnitHandler.BaseCoreGenericHandler;
         }
@@ -92,8 +87,7 @@ extends LiteBansModule_369 {
         }
         finally {
             BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-        }
-    }
+}
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -106,7 +100,6 @@ extends LiteBansModule_369 {
         Throwable throwable = null;
         try {
             Object object = (FileOutputStream)closeable;
-            boolean flag = false;
             LiteBansModule_373.BaseCoreGenericHandler((OutputStream)object, string, charset);
             object = KotlinUnitHandler.BaseCoreGenericHandler;
         }
@@ -116,8 +109,7 @@ extends LiteBansModule_369 {
         }
         finally {
             BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-        }
-    }
+}
 
     public static /* synthetic */ void BaseCoreGenericHandler(File file, String string, Charset charset, int n, Object object) {
         if ((n & 2) != 0) {
@@ -139,8 +131,6 @@ extends LiteBansModule_369 {
         CharBuffer charBuffer = CharBuffer.allocate(n);
         ObjectUtilities.BaseCoreGenericHandler(charsetEncoder);
         ByteBuffer byteBuffer = LiteBansModule_373.BaseCoreGenericHandler(n, charsetEncoder);
-        int n2 = 0;
-        int n3 = 0;
         while (n2 < string.length()) {
             int n4 = Math.min(n - n3, string.length() - n2);
             int n5 = n2 + n4;
@@ -150,7 +140,6 @@ extends LiteBansModule_369 {
             charBuffer.limit(n4 + n3);
             object = charsetEncoder.encode(charBuffer, byteBuffer, n5 == string.length());
             object2 = object;
-            boolean flag = false;
             if (!((CoderResult)object2).isUnderflow()) {
                 throw new IllegalStateException("Check ");
             }
@@ -164,8 +153,7 @@ extends LiteBansModule_369 {
             charBuffer.clear();
             byteBuffer.clear();
             n2 = n5;
-        }
-    }
+}
 
     public static final CharsetEncoder BaseCoreGenericHandler(@NotNull Charset charset) {
         ObjectUtilities.BaseCoreGenericHandler((Object)charset, "<this>");
@@ -176,7 +164,5 @@ extends LiteBansModule_369 {
         ObjectUtilities.BaseCoreGenericHandler((Object)charsetEncoder, "encoder");
         int n2 = (int)Math.ceil(charsetEncoder.maxBytesPerChar());
         return ByteBuffer.allocate(n * n2);
-    }
-
-    }
+}
 

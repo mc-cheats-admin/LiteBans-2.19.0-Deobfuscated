@@ -22,8 +22,7 @@ extends InputStream {
     protected void LiteBansModule_31(long l3) {
         if (l3 != -1L) {
             this.c += l3;
-        }
-    }
+}
 
     protected void BaseCoreGenericHandler(long l3) {
         this.c -= l3;
@@ -31,6 +30,5 @@ extends InputStream {
 
     public long LiteBansModule_31() {
         return this.c;
-    }
 }
 

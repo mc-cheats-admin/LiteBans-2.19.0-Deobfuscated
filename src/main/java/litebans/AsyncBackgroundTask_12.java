@@ -13,6 +13,5 @@ implements Runnable {
     @Override
     public final void run() {
         this.LiteBansModule_31.BaseCoreGenericHandler.getLogger().info(this.plugin);
-    }
 }
 

@@ -33,7 +33,7 @@ public final class SQLiteDriverHandler_4 {
             string = new File((File)object2, (String)object).getPath();
         }
         if ((file = new File(string)).exists()) {
-            block21: {
+{
                 object2 = w2;
                 object = "Converting SQLite database to H2 database.. + ";
                 flag = false;
@@ -53,51 +53,41 @@ public final class SQLiteDriverHandler_4 {
                     Throwable throwable = null;
                     try {
                         Object object3 = (LiteBansModule_82)closeable;
-                        boolean flag4 = false;
                         LiteBansModule_82 ch3 = ch2;
-                        boolean flag5 = false;
                         AutoCloseable autoCloseable = ((DatabaseMonitorService)object2).c();
                         Throwable throwable2 = null;
                         try {
                             Object object4 = (Connection)autoCloseable;
-                            boolean flag6 = false;
                             if (object4 == null) {
                             } else {
                                 BansHandler_2[] kLArray = BansHandler_2.values();
-                                boolean flag7 = false;
                                 int n = kLArray.length;
                                 for (int i = 0; i < n; ++i) {
                                     BansHandler_2 kL2;
                                     BansHandler_2 kL3 = kL2 = kLArray[i];
-                                    boolean flag8 = false;
                                     ch3.BaseCoreGenericHandler((Connection)object4, kL3, true);
                                 }
                                 long l3 = ch3.c();
                                 Object object5 = ch3.e().HoverTextFormatter();
                                 Object object6 = MessageKey.LiteBansModule_87.BaseCoreGenericHandler("amount", (Object)l3);
-                                boolean bl9 = false;
                                 ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)object5, (CharSequence)object6, null, 4, null);
                                 object4.close();
                                 ((DatabaseMonitorService)object2).c();
                                 if (file.exists()) {
                                     object6 = file.getParentFile();
                                     String string2 = file.getName() + ".backup";
-                                    boolean bl10 = false;
                                     object5 = new File((File)object6, string2);
                                     if (file.renameTo((File)object5)) {
                                         object6 = w2;
                                         string2 = "Renamed SQLite database: " + file.getName() + " => " + ((File)object5).getName();
                                         bl10 = false;
                                         ((PluginModule)object6).BaseCoreGenericHandler.getLogger().info(string2);
-                                    }
-                                }
+}
                                 object5 = w2;
                                 object6 = "SQLite -> H2 conversion completed ";
-                                boolean bl11 = false;
                                 ((PluginModule)object5).BaseCoreGenericHandler.getLogger().info((String)object6);
                                 object4 = KotlinUnitHandler.BaseCoreGenericHandler;
-                            }
-                        }
+}
                         catch (Throwable throwable3) {
                             throwable2 = throwable3;
                             throw throwable3;
@@ -113,13 +103,11 @@ public final class SQLiteDriverHandler_4 {
                     }
                     finally {
                         BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-                    }
-                }
+}
                 catch (SQLException sQLException) {
-                    if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break block21;
+                    if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break;
                     throw sQLException;
-                }
-            }
+}
             return true;
         }
         eG2.c("LiteBansModule_243");
@@ -133,7 +121,5 @@ public final class SQLiteDriverHandler_4 {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"localhost", "127.0.0.1", "litebans.sqlite", "Converting SQLite database to H2 database.. + ", "LiteBansModule_243", "LiteBansModule_243", "amount", ".backup", "Renamed SQLite database: ", " => ", "SQLite -> H2 conversion completed ", "LiteBansModule_243", "LiteBansModule_243"};
-    }
-
-    }
+}
 

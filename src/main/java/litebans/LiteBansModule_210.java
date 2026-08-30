@@ -33,8 +33,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void close() {
@@ -48,8 +47,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean wasNull() {
@@ -58,8 +56,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getString(int n) {
@@ -68,8 +65,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean getBoolean(int n) {
@@ -78,8 +74,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public byte getByte(int n) {
@@ -88,8 +83,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public short getShort(int n) {
@@ -98,8 +92,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getInt(int n) {
@@ -108,8 +101,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public long getLong(int n) {
@@ -118,8 +110,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public float getFloat(int n) {
@@ -128,8 +119,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public double getDouble(int n) {
@@ -138,8 +128,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public BigDecimal getBigDecimal(int n, int n2) {
@@ -148,8 +137,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public byte[] getBytes(int n) {
@@ -158,8 +146,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Date getDate(int n) {
@@ -168,8 +155,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Time getTime(int n) {
@@ -178,8 +164,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Timestamp getTimestamp(int n) {
@@ -188,8 +173,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public InputStream getAsciiStream(int n) {
@@ -198,8 +182,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public InputStream getUnicodeStream(int n) {
@@ -208,8 +191,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public InputStream getBinaryStream(int n) {
@@ -218,8 +200,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getString(String string) {
@@ -228,8 +209,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean getBoolean(String string) {
@@ -238,8 +218,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public byte getByte(String string) {
@@ -248,8 +227,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public short getShort(String string) {
@@ -258,8 +236,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getInt(String string) {
@@ -268,8 +245,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public long getLong(String string) {
@@ -278,8 +254,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public float getFloat(String string) {
@@ -288,8 +263,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public double getDouble(String string) {
@@ -298,8 +272,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public BigDecimal getBigDecimal(String string, int n) {
@@ -308,8 +281,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public byte[] getBytes(String string) {
@@ -318,8 +290,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Date getDate(String string) {
@@ -328,8 +299,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Time getTime(String string) {
@@ -338,8 +308,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Timestamp getTimestamp(String string) {
@@ -348,8 +317,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public InputStream getAsciiStream(String string) {
@@ -358,8 +326,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public InputStream getUnicodeStream(String string) {
@@ -368,8 +335,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public InputStream getBinaryStream(String string) {
@@ -378,8 +344,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public SQLWarning getWarnings() {
@@ -388,8 +353,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void clearWarnings() {
@@ -398,8 +362,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getCursorName() {
@@ -408,8 +371,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSetMetaData getMetaData() {
@@ -418,8 +380,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Object getObject(int n) {
@@ -428,8 +389,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Object getObject(String string) {
@@ -438,8 +398,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int findColumn(String string) {
@@ -448,8 +407,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Reader getCharacterStream(int n) {
@@ -458,8 +416,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Reader getCharacterStream(String string) {
@@ -468,8 +425,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public BigDecimal getBigDecimal(int n) {
@@ -478,8 +434,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public BigDecimal getBigDecimal(String string) {
@@ -488,8 +443,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean isBeforeFirst() {
@@ -498,8 +452,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean isAfterLast() {
@@ -508,8 +461,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean isFirst() {
@@ -518,8 +470,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean isLast() {
@@ -528,8 +479,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void beforeFirst() {
@@ -538,8 +488,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void afterLast() {
@@ -548,8 +497,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean first() {
@@ -558,8 +506,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean last() {
@@ -568,8 +515,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getRow() {
@@ -578,8 +524,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean absolute(int n) {
@@ -588,8 +533,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean relative(int n) {
@@ -598,8 +542,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean previous() {
@@ -608,8 +551,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setFetchDirection(int n) {
@@ -618,8 +560,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getFetchDirection() {
@@ -628,8 +569,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setFetchSize(int n) {
@@ -638,8 +578,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getFetchSize() {
@@ -648,8 +587,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getType() {
@@ -658,8 +596,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getConcurrency() {
@@ -668,8 +605,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean rowUpdated() {
@@ -678,8 +614,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean rowInserted() {
@@ -688,8 +623,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean rowDeleted() {
@@ -698,8 +632,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateNull(int n) {
@@ -708,8 +641,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBoolean(int n, boolean flag) {
@@ -718,8 +650,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateByte(int n, byte by2) {
@@ -728,8 +659,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateShort(int n, short s2) {
@@ -738,8 +668,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateInt(int n, int n2) {
@@ -748,8 +677,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateLong(int n, long l3) {
@@ -758,8 +686,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateFloat(int n, float f10) {
@@ -768,8 +695,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateDouble(int n, double d10) {
@@ -778,8 +704,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBigDecimal(int n, BigDecimal bigDecimal) {
@@ -788,8 +713,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateString(int n, String string) {
@@ -798,8 +722,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBytes(int n, byte[] byArray) {
@@ -808,8 +731,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateDate(int n, Date date) {
@@ -818,8 +740,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateTime(int n, Time time) {
@@ -828,8 +749,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateTimestamp(int n, Timestamp timestamp) {
@@ -838,8 +758,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateAsciiStream(int n, InputStream inputStream, int n2) {
@@ -848,8 +767,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBinaryStream(int n, InputStream inputStream, int n2) {
@@ -858,8 +776,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateCharacterStream(int n, Reader reader, int n2) {
@@ -868,8 +785,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateObject(int n, Object object, int n2) {
@@ -878,8 +794,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateObject(int n, Object object) {
@@ -888,8 +803,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateNull(String string) {
@@ -898,8 +812,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBoolean(String string, boolean flag) {
@@ -908,8 +821,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateByte(String string, byte by2) {
@@ -918,8 +830,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateShort(String string, short s2) {
@@ -928,8 +839,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateInt(String string, int n) {
@@ -938,8 +848,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateLong(String string, long l3) {
@@ -948,8 +857,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateFloat(String string, float f10) {
@@ -958,8 +866,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateDouble(String string, double d10) {
@@ -968,8 +875,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBigDecimal(String string, BigDecimal bigDecimal) {
@@ -978,8 +884,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateString(String string, String string2) {
@@ -988,8 +893,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBytes(String string, byte[] byArray) {
@@ -998,8 +902,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateDate(String string, Date date) {
@@ -1008,8 +911,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateTime(String string, Time time) {
@@ -1018,8 +920,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateTimestamp(String string, Timestamp timestamp) {
@@ -1028,8 +929,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateAsciiStream(String string, InputStream inputStream, int n) {
@@ -1038,8 +938,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBinaryStream(String string, InputStream inputStream, int n) {
@@ -1048,8 +947,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateCharacterStream(String string, Reader reader, int n) {
@@ -1058,8 +956,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateObject(String string, Object object, int n) {
@@ -1068,8 +965,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateObject(String string, Object object) {
@@ -1078,8 +974,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void insertRow() {
@@ -1088,8 +983,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateRow() {
@@ -1098,8 +992,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void deleteRow() {
@@ -1108,8 +1001,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void refreshRow() {
@@ -1118,8 +1010,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void cancelRowUpdates() {
@@ -1128,8 +1019,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void moveToInsertRow() {
@@ -1138,8 +1028,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void moveToCurrentRow() {
@@ -1148,8 +1037,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     public Object getObject(int n, Map map) {
         try {
@@ -1157,8 +1045,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Ref getRef(int n) {
@@ -1167,8 +1054,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Blob getBlob(int n) {
@@ -1177,8 +1063,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Clob getClob(int n) {
@@ -1187,8 +1072,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Array getArray(int n) {
@@ -1197,8 +1081,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     public Object getObject(String string, Map map) {
         try {
@@ -1206,8 +1089,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Ref getRef(String string) {
@@ -1216,8 +1098,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Blob getBlob(String string) {
@@ -1226,8 +1107,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Clob getClob(String string) {
@@ -1236,8 +1116,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Array getArray(String string) {
@@ -1246,8 +1125,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Date getDate(int n, Calendar calendar) {
@@ -1256,8 +1134,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Date getDate(String string, Calendar calendar) {
@@ -1266,8 +1143,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Time getTime(int n, Calendar calendar) {
@@ -1276,8 +1152,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Time getTime(String string, Calendar calendar) {
@@ -1286,8 +1161,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Timestamp getTimestamp(int n, Calendar calendar) {
@@ -1296,8 +1170,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Timestamp getTimestamp(String string, Calendar calendar) {
@@ -1306,8 +1179,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public URL getURL(int n) {
@@ -1316,8 +1188,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public URL getURL(String string) {
@@ -1326,8 +1197,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateRef(int n, Ref ref) {
@@ -1336,8 +1206,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateRef(String string, Ref ref) {
@@ -1346,8 +1215,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBlob(int n, Blob blob) {
@@ -1356,8 +1224,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBlob(String string, Blob blob) {
@@ -1366,8 +1233,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateClob(int n, Clob clob) {
@@ -1376,8 +1242,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateClob(String string, Clob clob) {
@@ -1386,8 +1251,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateArray(int n, Array array) {
@@ -1396,8 +1260,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateArray(String string, Array array) {
@@ -1406,8 +1269,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public RowId getRowId(int n) {
@@ -1416,8 +1278,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public RowId getRowId(String string) {
@@ -1426,8 +1287,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateRowId(int n, RowId rowId) {
@@ -1436,8 +1296,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateRowId(String string, RowId rowId) {
@@ -1446,8 +1305,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getHoldability() {
@@ -1456,8 +1314,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean isClosed() {
@@ -1466,8 +1323,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateNString(int n, String string) {
@@ -1476,8 +1332,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateNString(String string, String string2) {
@@ -1486,8 +1341,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateNClob(int n, NClob nClob) {
@@ -1496,8 +1350,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateNClob(String string, NClob nClob) {
@@ -1506,8 +1359,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public NClob getNClob(int n) {
@@ -1516,8 +1368,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public NClob getNClob(String string) {
@@ -1526,8 +1377,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public SQLXML getSQLXML(int n) {
@@ -1536,8 +1386,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public SQLXML getSQLXML(String string) {
@@ -1546,8 +1395,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateSQLXML(int n, SQLXML sQLXML) {
@@ -1556,8 +1404,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateSQLXML(String string, SQLXML sQLXML) {
@@ -1566,8 +1413,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getNString(int n) {
@@ -1576,8 +1422,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public String getNString(String string) {
@@ -1586,8 +1431,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Reader getNCharacterStream(int n) {
@@ -1596,8 +1440,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Reader getNCharacterStream(String string) {
@@ -1606,8 +1449,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateNCharacterStream(int n, Reader reader, long l3) {
@@ -1616,8 +1458,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateNCharacterStream(String string, Reader reader, long l3) {
@@ -1626,8 +1467,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateAsciiStream(int n, InputStream inputStream, long l3) {
@@ -1636,8 +1476,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBinaryStream(int n, InputStream inputStream, long l3) {
@@ -1646,8 +1485,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateCharacterStream(int n, Reader reader, long l3) {
@@ -1656,8 +1494,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateAsciiStream(String string, InputStream inputStream, long l3) {
@@ -1666,8 +1503,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBinaryStream(String string, InputStream inputStream, long l3) {
@@ -1676,8 +1512,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateCharacterStream(String string, Reader reader, long l3) {
@@ -1686,8 +1521,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBlob(int n, InputStream inputStream, long l3) {
@@ -1696,8 +1530,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBlob(String string, InputStream inputStream, long l3) {
@@ -1706,8 +1539,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateClob(int n, Reader reader, long l3) {
@@ -1716,8 +1548,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateClob(String string, Reader reader, long l3) {
@@ -1726,8 +1557,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateNClob(int n, Reader reader, long l3) {
@@ -1736,8 +1566,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateNClob(String string, Reader reader, long l3) {
@@ -1746,8 +1575,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateNCharacterStream(int n, Reader reader) {
@@ -1756,8 +1584,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateNCharacterStream(String string, Reader reader) {
@@ -1766,8 +1593,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateAsciiStream(int n, InputStream inputStream) {
@@ -1776,8 +1602,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBinaryStream(int n, InputStream inputStream) {
@@ -1786,8 +1611,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateCharacterStream(int n, Reader reader) {
@@ -1796,8 +1620,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateAsciiStream(String string, InputStream inputStream) {
@@ -1806,8 +1629,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBinaryStream(String string, InputStream inputStream) {
@@ -1816,8 +1638,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateCharacterStream(String string, Reader reader) {
@@ -1826,8 +1647,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBlob(int n, InputStream inputStream) {
@@ -1836,8 +1656,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateBlob(String string, InputStream inputStream) {
@@ -1846,8 +1665,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateClob(int n, Reader reader) {
@@ -1856,8 +1674,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateClob(String string, Reader reader) {
@@ -1866,8 +1683,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateNClob(int n, Reader reader) {
@@ -1876,8 +1692,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateNClob(String string, Reader reader) {
@@ -1886,8 +1701,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     public Object getObject(int n, Class clazz) {
         try {
@@ -1895,8 +1709,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     public Object getObject(String string, Class clazz) {
         try {
@@ -1904,8 +1717,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateObject(int n, Object object, SQLType sQLType, int n2) {
@@ -1914,8 +1726,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateObject(String string, Object object, SQLType sQLType, int n) {
@@ -1924,8 +1735,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateObject(int n, Object object, SQLType sQLType) {
@@ -1934,8 +1744,7 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void updateObject(String string, Object object, SQLType sQLType) {
@@ -1944,11 +1753,9 @@ ResultSet {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     protected LiteBansModule_210(HexEncodingHelper c22, LiteBansModule_415 lJ2, ResultSet resultSet) {
         super(c22, lJ2, resultSet);
-    }
 }
 

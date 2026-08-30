@@ -20,7 +20,5 @@ implements LiteBansModule_295 {
         }
         LiteBansModule_295 i_3 = i_2;
         return i_3.BaseCoreGenericHandler();
-    }
-
-    }
+}
 

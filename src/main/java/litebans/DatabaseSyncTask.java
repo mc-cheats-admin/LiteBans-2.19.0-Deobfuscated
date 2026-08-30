@@ -33,7 +33,6 @@ implements Runnable {
             DatabaseMonitorService w2 = (DatabaseMonitorService)this.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
             ServerSyncService u2 = (ServerSyncService)this.LiteBansModule_240().BaseCoreGenericHandler(ServerSyncService.class);
             Object object = this;
-            int n2 = 0;
             object = (ConfigService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
             n2 = 0;
             if (((ConfigService)object).g()) {
@@ -49,11 +48,9 @@ implements Runnable {
             n = 0;
             while (n < n2) {
                 int n3 = n++;
-                boolean flag = false;
                 this.plugin(this, (SortHandler)object, w2, u2);
                 Thread.sleep(70L);
-            }
-        }
+}
         catch (InterruptedException interruptedException) {
             this.AsyncBackgroundTask_5();
         }
@@ -73,11 +70,11 @@ implements Runnable {
             Object object;
             Object object2;
             int n;
-            block30: {
+{
                 boolean flag2;
                 boolean flag3;
                 Object object3;
-                block28: {
+{
                     Object object4 = br2.BaseCoreGenericHandler();
                     if (object4 == null) {
                         n = 0;
@@ -98,7 +95,7 @@ implements Runnable {
                         boolean flag4 = ((byte[])object3).length == 0;
                         if (!flag4) continue;
                         flag2 = true;
-                        break block28;
+                        break;
                     }
                     flag2 = false;
                 }
@@ -114,11 +111,9 @@ implements Runnable {
                             object3 = (LiteBansModule_82)closeable;
                             flag3 = false;
                             LiteBansModule_82 ch3 = ch2;
-                            boolean flag5 = false;
                             if (ch3.BaseCoreGenericHandler()) {
                                 try {
                                     ServerSyncService u3 = u2;
-                                    boolean flag6 = false;
                                     ResultSet resultSet = u3.BaseCoreGenericHandler(ch3);
                                     object = resultSet;
                                     flag = false;
@@ -126,10 +121,8 @@ implements Runnable {
                                     Throwable throwable = null;
                                     try {
                                         Object object6 = (ResultSet)autoCloseable;
-                                        boolean flag7 = false;
                                         while (object.next()) {
                                             Object object7 = object;
-                                            boolean flag8 = false;
                                             byArray[object7.getInt((String)"SQLiteDriverHandler_4")] = object7.getBytes("LiteBansModule_31");
                                         }
                                         object6 = KotlinUnitHandler.BaseCoreGenericHandler;
@@ -140,12 +133,10 @@ implements Runnable {
                                     }
                                     finally {
                                         CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
-                                    }
-                                }
+}
                                 catch (SQLException sQLException) {
                                     w2.BaseCoreGenericHandler(sQLException);
-                                }
-                            }
+}
                             object3 = KotlinUnitHandler.BaseCoreGenericHandler;
                         }
                         catch (Throwable throwable) {
@@ -156,30 +147,24 @@ implements Runnable {
                             catch (Throwable throwable3) {
                                 BlockHandler.BaseCoreGenericHandler(closeable, object5);
                                 throw throwable3;
-                            }
-                        }
+}
                         BlockHandler.BaseCoreGenericHandler(closeable, (Throwable)object5);
                     }
                     catch (SQLException sQLException) {
-                        if (((DatabaseMonitorService)object2).LiteBansModule_31(sQLException)) break block30;
+                        if (((DatabaseMonitorService)object2).LiteBansModule_31(sQLException)) break;
                         throw sQLException;
-                    }
-                }
-            }
+}
             try {
                 object2 = u2;
                 n = 0;
                 Iterable iterable = ge2.AsyncBackgroundTask_5;
-                boolean bl9 = false;
                 for (Object object3 : iterable) {
                     boolean bl10;
                     Byte by2;
-                    block31: {
+{
                         by2 = (Byte)object3;
-                        boolean bl11 = false;
                         if (by2 < 0) continue;
                         Iterable iterable2 = ((ServerSyncService)object2).GnuSparseMapHandler();
-                        boolean bl12 = false;
                         if (iterable2 instanceof Collection && ((Collection)iterable2).isEmpty()) {
                             bl10 = true;
                         } else {
@@ -196,11 +181,10 @@ implements Runnable {
                                 }
                                 if (!bl13) continue;
                                 bl10 = false;
-                                break block31;
+                                break;
                             }
                             bl10 = true;
-                        }
-                    }
+}
                     if (!bl10) continue;
                     ((ServerSyncService)object2).BaseCoreGenericHandler(by2.byteValue(), br2);
                 }
@@ -210,8 +194,7 @@ implements Runnable {
                 ge2.BaseCoreGenericHandler(indexOutOfBoundsException, br2, u2);
             }
             ge2.AsyncBackgroundTask_5();
-        }
-    }
+}
 
     private final void BaseCoreGenericHandler(Exception exception, SortHandler br2, ServerSyncService u2) {
         char[] cArray;
@@ -220,7 +203,6 @@ implements Runnable {
         br2.BaseCoreGenericHandler((byte[][])null);
         u2.BaseCoreGenericHandler(0);
         Object object2 = this;
-        boolean flag = false;
         object2 = (ConfigService)((MessageHandler)object2).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
         flag = false;
         if (((ConfigService)object2).g()) {
@@ -231,7 +213,5 @@ implements Runnable {
 
     private static final void BaseCoreGenericHandler() {
         e = new String[]{"SQLiteDriverHandler_4", "LiteBansModule_31", "Cache desync, reloading. (error "};
-    }
-
-    }
+}
 

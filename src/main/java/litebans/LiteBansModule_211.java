@@ -102,6 +102,5 @@ public final class LiteBansModule_211 {
 
     public LiteBansModule_211() {
         this(null, null, null, 0, null, null, null, null, null, 511, null);
-    }
 }
 

@@ -17,8 +17,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet executeQuery(String string) {
@@ -27,8 +26,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int executeUpdate(String string) {
@@ -37,8 +35,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxFieldSize() {
@@ -47,8 +44,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setMaxFieldSize(int n) {
@@ -57,8 +53,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getMaxRows() {
@@ -67,8 +62,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setMaxRows(int n) {
@@ -77,8 +71,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setEscapeProcessing(boolean flag) {
@@ -87,8 +80,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getQueryTimeout() {
@@ -97,8 +89,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setQueryTimeout(int n) {
@@ -107,8 +98,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void cancel() {
@@ -117,8 +107,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public SQLWarning getWarnings() {
@@ -127,8 +116,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void clearWarnings() {
@@ -137,8 +125,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setCursorName(String string) {
@@ -147,8 +134,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean execute(String string) {
@@ -157,8 +143,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getResultSet() {
@@ -167,8 +152,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getUpdateCount() {
@@ -177,8 +161,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean getMoreResults() {
@@ -187,8 +170,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setFetchDirection(int n) {
@@ -197,8 +179,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getFetchDirection() {
@@ -207,8 +188,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setFetchSize(int n) {
@@ -217,8 +197,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getFetchSize() {
@@ -227,8 +206,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getResultSetConcurrency() {
@@ -237,8 +215,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getResultSetType() {
@@ -247,8 +224,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void addBatch(String string) {
@@ -257,8 +233,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void clearBatch() {
@@ -267,8 +242,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int[] executeBatch() {
@@ -277,8 +251,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public Connection getConnection() {
@@ -287,8 +260,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean getMoreResults(int n) {
@@ -297,8 +269,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public ResultSet getGeneratedKeys() {
@@ -307,8 +278,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int executeUpdate(String string, int n) {
@@ -317,8 +287,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int executeUpdate(String string, int[] nArray) {
@@ -327,8 +296,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int executeUpdate(String string, String[] args) {
@@ -337,8 +305,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean execute(String string, int n) {
@@ -347,8 +314,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean execute(String string, int[] nArray) {
@@ -357,8 +323,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean execute(String string, String[] args) {
@@ -367,8 +332,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public int getResultSetHoldability() {
@@ -377,8 +341,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean isClosed() {
@@ -387,8 +350,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setPoolable(boolean flag) {
@@ -397,8 +359,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean isPoolable() {
@@ -407,8 +368,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void closeOnCompletion() {
@@ -417,8 +377,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean isCloseOnCompletion() {
@@ -427,8 +386,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public long getLargeUpdateCount() {
@@ -437,8 +395,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public void setLargeMaxRows(long l3) {
@@ -447,8 +404,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public long getLargeMaxRows() {
@@ -457,8 +413,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public long[] executeLargeBatch() {
@@ -467,8 +422,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public long executeLargeUpdate(String string) {
@@ -477,8 +431,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public long executeLargeUpdate(String string, int n) {
@@ -487,8 +440,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public long executeLargeUpdate(String string, int[] nArray) {
@@ -497,8 +449,7 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     @Override
     public long executeLargeUpdate(String string, String[] args) {
@@ -507,11 +458,9 @@ Statement {
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
-        }
-    }
+}
 
     LiteBansModule_425(HexEncodingHelper c22, Statement statement) {
         super(c22, statement);
-    }
 }
 

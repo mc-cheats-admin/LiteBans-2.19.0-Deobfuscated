@@ -18,6 +18,5 @@ extends InputStream {
 
     /* synthetic */ LiteBansModule_129(LiteBansModule_52 bl_02) {
         this();
-    }
 }
 

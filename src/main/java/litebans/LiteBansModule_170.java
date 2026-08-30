@@ -57,6 +57,5 @@ implements LiteBansModule_177 {
         e = 32768;
         g = 2;
         LiteBansModule_194 = new LiteBansModule_288(41246);
-    }
 }
 

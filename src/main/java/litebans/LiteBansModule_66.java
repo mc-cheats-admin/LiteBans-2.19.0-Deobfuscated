@@ -43,6 +43,5 @@ public class LiteBansModule_66 {
 
     public final List LiteBansModule_31() {
         return this.AsyncBackgroundTask_5;
-    }
 }
 

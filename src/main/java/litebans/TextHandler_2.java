@@ -43,7 +43,5 @@ JsonDeserializer {
 
     private static final void LiteBansModule_31() {
         c = new String[]{"text", "text"};
-    }
-
-    }
+}
 

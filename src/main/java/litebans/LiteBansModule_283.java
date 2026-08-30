@@ -65,6 +65,5 @@ implements Comparable {
         BaseCoreGenericHandler = (byte)-1;
         LiteBansModule_31 = 0;
         e = new LiteBansModule_9(null);
-    }
 }
 

@@ -76,8 +76,7 @@ implements LiteBansModule_177 {
             this.i = new LiteBansModule_84(byArray, n);
             n += 4;
             n3 -= 4;
-        }
-    }
+}
 
     @Override
     public void LiteBansModule_31(byte[] byArray, int n, int n2) {
@@ -91,11 +90,9 @@ implements LiteBansModule_177 {
             this.LiteBansModule_240 = new LiteBansModule_323(byArray, n += 8);
         } else if (n2 % 8 == 4) {
             this.i = new LiteBansModule_84(byArray, n + n2 - 4);
-        }
-    }
+}
 
     private final int BaseCoreGenericHandler(byte[] byArray) {
-        int n = 0;
         if (this.LiteBansModule_31 != null) {
             System.arraycopy(this.LiteBansModule_31.c(), 0, byArray, 0, 8);
             n += 8;
@@ -111,6 +108,5 @@ implements LiteBansModule_177 {
         c = "Zip64 extended information must contain both size values InitializerHandler_3 the local file header.";
         g = new LiteBansModule_288(1);
         e = new byte[0];
-    }
 }
 

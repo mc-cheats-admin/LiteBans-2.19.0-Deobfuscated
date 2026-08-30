@@ -46,7 +46,6 @@ implements Serializable {
             return CollectionUtilities.BaseCoreGenericHandler(((Object)charSequence).toString());
         }
         ArrayList<String> arrayList = new ArrayList<String>(n > 0 ? LiteBansModule_20.AsyncBackgroundTask_5(n, 10) : 10);
-        int n2 = 0;
         int n3 = n - 1;
         do {
             arrayList.add(((Object)charSequence.subSequence(n2, matcher.start())).toString());
@@ -75,6 +74,5 @@ implements Serializable {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"nativePattern", "pattern", "pattern", "option", "pattern", "options", "input", "input", "input", "input", "Start index out of bounds: ", ", input length: ", "input", "input", "input", "input", "replacement", "input", "transform", "input", "replacement", "input", "input"};
-    }
 }
 

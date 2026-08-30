@@ -39,6 +39,5 @@ extends Enum {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"NONE", "FORMATTING", "EVENTS", "ALL"};
-    }
 }
 

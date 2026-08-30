@@ -14,6 +14,5 @@ implements LiteBansModule_119 {
             stringBuilder.append((char)(by2 & 0xFF));
         }
         return stringBuilder.toString();
-    }
 }
 

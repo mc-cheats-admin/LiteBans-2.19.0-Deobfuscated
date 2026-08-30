@@ -57,14 +57,11 @@ implements CharSequence {
 
     public static final String LiteBansModule_31(String string, @NotNull CharSequence charSequence) {
         CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string), charSequence};
-        boolean flag = false;
         CharSequence[] charSequenceArray2 = charSequenceArray;
-        boolean flag2 = false;
         int n = charSequenceArray2.length;
         for (int i = 0; i < n; ++i) {
             CharSequence charSequence2;
             CharSequence charSequence3 = charSequence2 = charSequenceArray2[i];
-            boolean flag3 = false;
             if (charSequence3.length() > 0) continue;
             String string2 = LiteBansModule_31[20];
             throw new IllegalArgumentException(string2.toString());
@@ -74,14 +71,11 @@ implements CharSequence {
 
     public static final String AsyncBackgroundTask_5(String string, @NotNull CharSequence charSequence) {
         CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string), charSequence};
-        boolean flag = false;
         CharSequence[] charSequenceArray2 = charSequenceArray;
-        boolean flag2 = false;
         int n = charSequenceArray2.length;
         for (int i = 0; i < n; ++i) {
             CharSequence charSequence2;
             CharSequence charSequence3 = charSequence2 = charSequenceArray2[i];
-            boolean flag3 = false;
             if (charSequence3.length() > 0) continue;
             String string2 = LiteBansModule_31[22];
             throw new IllegalArgumentException(string2.toString());
@@ -91,14 +85,11 @@ implements CharSequence {
 
     public static final String e(String string, @NotNull CharSequence charSequence) {
         CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string), charSequence};
-        boolean flag = false;
         CharSequence[] charSequenceArray2 = charSequenceArray;
-        boolean flag2 = false;
         int n = charSequenceArray2.length;
         for (int i = 0; i < n; ++i) {
             CharSequence charSequence2;
             CharSequence charSequence3 = charSequence2 = charSequenceArray2[i];
-            boolean flag3 = false;
             if (charSequence3.length() > 0) continue;
             String string2 = LiteBansModule_31[24];
             throw new IllegalArgumentException(string2.toString());
@@ -109,14 +100,11 @@ implements CharSequence {
 
     public static final String c(String string, @NotNull CharSequence charSequence) {
         CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string), charSequence};
-        boolean flag = false;
         CharSequence[] charSequenceArray2 = charSequenceArray;
-        boolean flag2 = false;
         int n = charSequenceArray2.length;
         for (int i = 0; i < n; ++i) {
             CharSequence charSequence2;
             CharSequence charSequence3 = charSequence2 = charSequenceArray2[i];
-            boolean flag3 = false;
             if (charSequence3.length() > 0) continue;
             String string2 = LiteBansModule_31[30];
             throw new IllegalArgumentException(string2.toString());
@@ -127,14 +115,11 @@ implements CharSequence {
 
     public static final String g(String string, @NotNull CharSequence charSequence) {
         CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string), charSequence};
-        boolean flag = false;
         CharSequence[] charSequenceArray2 = charSequenceArray;
-        boolean flag2 = false;
         int n = charSequenceArray2.length;
         for (int i = 0; i < n; ++i) {
             CharSequence charSequence2;
             CharSequence charSequence3 = charSequence2 = charSequenceArray2[i];
-            boolean flag3 = false;
             if (charSequence3.length() > 0) continue;
             String string2 = LiteBansModule_31[32];
             throw new IllegalArgumentException(string2.toString());
@@ -144,14 +129,11 @@ implements CharSequence {
 
     public static final String LiteBansModule_194(String string, @NotNull CharSequence charSequence) {
         CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string), charSequence};
-        boolean flag = false;
         CharSequence[] charSequenceArray2 = charSequenceArray;
-        boolean flag2 = false;
         int n = charSequenceArray2.length;
         for (int i = 0; i < n; ++i) {
             CharSequence charSequence2;
             CharSequence charSequence3 = charSequence2 = charSequenceArray2[i];
-            boolean flag3 = false;
             if (charSequence3.length() > 0) continue;
             String string2 = LiteBansModule_31[34];
             throw new IllegalArgumentException(string2.toString());
@@ -162,14 +144,11 @@ implements CharSequence {
 
     public static final String LiteBansModule_240(String string, @NotNull CharSequence charSequence) {
         CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string), charSequence};
-        boolean flag = false;
         CharSequence[] charSequenceArray2 = charSequenceArray;
-        boolean flag2 = false;
         int n = charSequenceArray2.length;
         for (int i = 0; i < n; ++i) {
             CharSequence charSequence2;
             CharSequence charSequence3 = charSequence2 = charSequenceArray2[i];
-            boolean flag3 = false;
             if (charSequence3.length() > 0) continue;
             String string2 = LiteBansModule_31[36];
             throw new IllegalArgumentException(string2.toString());
@@ -180,14 +159,11 @@ implements CharSequence {
 
     public static final String BaseCoreGenericHandler(String string, @NotNull CharSequence charSequence) {
         CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string), charSequence};
-        boolean flag = false;
         CharSequence[] charSequenceArray2 = charSequenceArray;
-        boolean flag2 = false;
         int n = charSequenceArray2.length;
         for (int i = 0; i < n; ++i) {
             CharSequence charSequence2;
             CharSequence charSequence3 = charSequence2 = charSequenceArray2[i];
-            boolean flag3 = false;
             if (charSequence3.length() > 0) continue;
             String string2 = LiteBansModule_31[38];
             throw new IllegalArgumentException(string2.toString());
@@ -197,14 +173,11 @@ implements CharSequence {
 
     public static final String BaseCoreGenericHandler(String string, @NotNull Number number) {
         CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string)};
-        boolean flag = false;
         CharSequence[] charSequenceArray2 = charSequenceArray;
-        boolean flag2 = false;
         int n = charSequenceArray2.length;
         for (int i = 0; i < n; ++i) {
             CharSequence charSequence;
             CharSequence charSequence2 = charSequence = charSequenceArray2[i];
-            boolean flag3 = false;
             if (charSequence2.length() > 0) continue;
             String string2 = LiteBansModule_31[44];
             throw new IllegalArgumentException(string2.toString());
@@ -259,7 +232,5 @@ implements CharSequence {
 
     private static final void BaseCoreGenericHandler() {
         LiteBansModule_31 = new String[]{"1", "0", "pgsql", "B'1'", "B'0'", "{true}", "{false}", "{column.SQLiteDriverHandler_4}", "sqlite", "SQLiteDriverHandler_4", "rowid CommandExitException SQLiteDriverHandler_4", "{=?}", "SELECT ", "INSERT ", "DELETE ", "UPDATE ", "ALTER ", "CREATE ", "Failed ", " WHERE ", "Failed ", " AND ", "Failed ", " OR ", "Failed ", " WHERE ", " IS NULL", "Failed ", " WHERE ", " IS NOT NULL", "Failed ", " SET ", "Failed ", " CONVERT TO ", "Failed ", " ADD COLUMN ", "Failed ", " DROP COLUMN ", "Failed ", " ORDER BY ", " DESC", "Failed ", " ORDER BY ", " ASC", "Failed ", " LIMIT ", " LIMIT ?", " OFFSET ?", " LIMIT ? OFFSET ?"};
-    }
-
-    }
+}
 

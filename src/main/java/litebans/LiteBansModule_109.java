@@ -73,7 +73,5 @@ public final class LiteBansModule_109 {
 
     private static final void LiteBansModule_31() {
         AsyncBackgroundTask_5 = new String[]{"(BaseCoreGenericHandler=", ", duration=", ", cooldown=", ", other="};
-    }
-
-    }
+}
 

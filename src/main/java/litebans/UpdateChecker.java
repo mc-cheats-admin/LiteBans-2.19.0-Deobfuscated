@@ -40,7 +40,6 @@ implements LiteBansModule_426 {
     public UpdateChecker LiteBansModule_31() {
         UpdateChecker kX2;
         UpdateChecker kX3 = kX2 = this;
-        boolean flag = false;
         LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{kX3};
         kX3.BaseCoreGenericHandler.LiteBansModule_31(em_0Array);
         return kX2;
@@ -49,6 +48,5 @@ implements LiteBansModule_426 {
     @Override
     public LiteBansModule_175 BaseCoreGenericHandler() {
         return this.LiteBansModule_31();
-    }
 }
 

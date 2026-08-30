@@ -50,8 +50,7 @@ public class LiteBansModule_55 {
             }
             case -1: {
                 stringBuffer.append("END OF FILE");
-            }
-        }
+}
         return stringBuffer.toString();
     }
 
@@ -64,6 +63,5 @@ public class LiteBansModule_55 {
         g = 2;
         LiteBansModule_31 = 1;
         BaseCoreGenericHandler = 0;
-    }
 }
 

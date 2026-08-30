@@ -35,10 +35,10 @@ extends Enum {
      * WARNING - void declaration
      */
     private SetuidHandler() {
-        void var3_1;
+        void arg1;
         void var2_-1;
         void var1_-1;
-        this.LiteBansModule_31 = var3_1;
+        this.LiteBansModule_31 = arg1;
     }
 
     public static final Set BaseCoreGenericHandler(int n) {
@@ -55,6 +55,5 @@ extends Enum {
 
     static {
         n = new SetuidHandler[]{c, m, LiteBansModule_401, Utf8Handler_2, AsyncBackgroundTask_5, BaseCoreGenericHandler, LiteBansModule_194, e, g, GnuSparseMapHandler, LiteBansModule_240, i};
-    }
 }
 

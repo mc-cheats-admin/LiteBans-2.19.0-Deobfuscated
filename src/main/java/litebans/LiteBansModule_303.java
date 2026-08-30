@@ -9,7 +9,6 @@ public final class LiteBansModule_303 {
     public final String[] BaseCoreGenericHandler(@NotNull String string, int n) {
         Object object = new char[]{'\ufeff'};
         object = StringUtilities.BaseCoreGenericHandler((CharSequence)string, object, false, n, 2, null);
-        boolean flag = false;
         char[] cArray = object;
         return cArray.toArray(new String[0]);
     }
@@ -27,7 +26,5 @@ public final class LiteBansModule_303 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"\ufeff", "", "", "\ufeff", "1", "0", "1"};
-    }
-
-    }
+}
 

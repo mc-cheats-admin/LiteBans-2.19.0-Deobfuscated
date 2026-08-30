@@ -321,6 +321,5 @@ implements LiteBansModule_82 {
     @Override
     public ResultSet BaseCoreGenericHandler(UUID uUID) {
         return this.plugin(uUID);
-    }
 }
 

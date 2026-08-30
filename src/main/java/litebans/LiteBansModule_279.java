@@ -50,6 +50,5 @@ extends InputStream {
         long l7 = this.LiteBansModule_31.skip(l5);
         this.plugin -= l7;
         return l7;
-    }
 }
 

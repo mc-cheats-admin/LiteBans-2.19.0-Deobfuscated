@@ -25,6 +25,5 @@ public final class LiteBansModule_21 {
 
     public final boolean BaseCoreGenericHandler() {
         return this.plugin;
-    }
 }
 

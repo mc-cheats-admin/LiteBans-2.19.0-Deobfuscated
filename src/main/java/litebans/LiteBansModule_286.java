@@ -11,7 +11,6 @@ public final class LiteBansModule_286 {
 
     public static final UUID BaseCoreGenericHandler(@NotNull byte[] byArray) {
         if (!(byArray.length == 16)) {
-            boolean flag = false;
             Integer n = byArray.length;
             throw new IllegalArgumentException(((Object)n).toString());
         }
@@ -19,6 +18,5 @@ public final class LiteBansModule_286 {
         long l3 = byteBuffer.getLong();
         long l5 = byteBuffer.getLong();
         return new UUID(l3, l5);
-    }
 }
 

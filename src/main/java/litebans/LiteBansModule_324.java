@@ -39,7 +39,6 @@ public class LiteBansModule_324 {
 
     public int BaseCoreGenericHandler(int n) {
         if (!(n > 0)) {
-            boolean flag = false;
             String string = String.valueOf(n);
             throw new IllegalArgumentException(string.toString());
         }
@@ -56,6 +55,5 @@ public class LiteBansModule_324 {
 
     public LiteBansModule_324() {
         this(0L, 1, null);
-    }
 }
 

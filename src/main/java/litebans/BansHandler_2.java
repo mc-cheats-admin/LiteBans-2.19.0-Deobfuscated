@@ -32,17 +32,16 @@ implements CharSequence {
     public final boolean BaseCoreGenericHandler() {
         boolean flag;
         switch (LiteBansModule_365.BaseCoreGenericHandler[this.ordinal()]) {
-            case 1: 
-            case 2: 
-            case 3: 
+            case 1:
+            case 2:
+            case 3:
             case 4: {
                 flag = true;
                 break;
             }
             default: {
                 flag = false;
-            }
-        }
+}
         return flag;
     }
 
@@ -67,8 +66,7 @@ implements CharSequence {
             }
             default: {
                 throw new UnsupportedOperationException();
-            }
-        }
+}
         return a_2;
     }
 
@@ -106,8 +104,7 @@ implements CharSequence {
                     string = string.toUpperCase(locale);
                 }
                 return string;
-            }
-        }
+}
         return this.name();
     }
 
@@ -157,7 +154,5 @@ implements CharSequence {
         e = kLArray = new BansHandler_2[]{BansHandler_2.Utf8Handler_2, BansHandler_2.m, BansHandler_2.LiteBansModule_31, BansHandler_2.GnuSparseMapHandler, BansHandler_2.g, BansHandler_2.c, BansHandler_2.LiteBansModule_194, BansHandler_2.n, BansHandler_2.i, BansHandler_2.LiteBansModule_240};
         BaseCoreGenericHandler = EntriesHandler_3.BaseCoreGenericHandler(e);
         AsyncBackgroundTask_5 = new LiteBansModule_87(null);
-    }
-
-    }
+}
 

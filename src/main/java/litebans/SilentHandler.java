@@ -129,7 +129,6 @@ implements Comparable {
 
     public SilentHandler(@NotNull NoneHandler_2 cz2, @NotNull LiteBansModule_113 d92, @NotNull CharSequence charSequence) {
         LiteBansModule_65 c12 = cz2.g();
-        boolean flag = false;
         LiteBansModule_65 c13 = c12;
         this(cz2.ServerSyncService(), d92.BaseCoreGenericHandler(), d92.c(), charSequence, cz2.AsyncBackgroundTask_5(), cz2.H(), cz2.LiteBansModule_31(), cz2.CommandThrottleService(), cz2.J(), cz2.DatabaseMonitorService(), c13 != null ? c13.LiteBansModule_194() : (byte)-1, cz2.B(), cz2.HoverTextFormatter(), !cz2.PunishmentTableService(), 0L, 16384, null);
     }
@@ -192,7 +191,6 @@ implements Comparable {
 
     public final boolean LiteBansModule_31(long l3) {
         SilentHandler dZ2 = this;
-        boolean flag = false;
         return !dZ2.HoverTextFormatter() && l3 >= this.PunishmentTableService;
     }
 
@@ -203,23 +201,20 @@ implements Comparable {
     public final String BaseCoreGenericHandler(@NotNull NoneHandler_2 cz2) {
         CharSequence charSequence;
         NoneHandler_2 cz3 = cz2;
-        boolean flag = false;
         StringBuilder stringBuilder = new StringBuilder().append(cz3.B() ? "silent_" : "");
         switch (LiteBansModule_49.BaseCoreGenericHandler[cz3.ServerSyncService().ordinal()]) {
-            case 1: 
-            case 2: 
-            case 3: 
-            case 4: 
+            case 1:
+            case 2:
+            case 3:
+            case 4:
             case 5: {
                 charSequence = cz3.ServerSyncService();
                 break;
             }
             default: {
                 SilentHandler dZ2 = this;
-                boolean flag2 = false;
                 charSequence = (!dZ2.HoverTextFormatter() ? "temp_" : "") + (cz3.HoverTextFormatter() ? "ip" : "") + cz3.ServerSyncService();
-            }
-        }
+}
         return stringBuilder.append((Object)charSequence).toString();
     }
 
@@ -229,7 +224,6 @@ implements Comparable {
      */
     public final boolean BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, long l3) {
         SilentHandler dZ2 = this;
-        boolean flag = false;
         if (!AsyncBackgroundTask_21.BaseCoreGenericHandler(dZ2.DatabaseMonitorService(), string)) {
             dZ2 = this;
             flag = false;
@@ -340,6 +334,5 @@ implements Comparable {
 
     private static final void Utf8Handler_2() {
         r = new String[]{",warned", "", "silent_", "", "temp_", "", "ip", "", "Entry(type=", ", uuid=", ", ip=", ", reason=", ", executorUUID=", ", executorName=", ", serverScope=", ", serverOrigin=", ", dateStart=", ", dateEnd=", ", template=", ", silent=", ", ipban=", ", active=", ", SQLiteDriverHandler_4="};
-    }
 }
 

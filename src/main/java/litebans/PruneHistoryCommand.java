@@ -15,33 +15,26 @@ extends AbstractCommand {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
-        block15: {
+{
             boolean flag;
             Object object;
             Object object2;
             Object object3 = this;
-            boolean flag2 = false;
             Object object4 = object3;
-            boolean flag3 = false;
             if (((ConfigService)((MessageHandler)object4).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_194()) {
                 object3 = this;
                 flag2 = false;
                 object4 = MessageHandler.BaseCoreGenericHandler;
                 flag3 = ((MessageHandler)object3).AsyncBackgroundTask_5().LiteBansModule_194();
                 object2 = MessageKey.LiteBansModule_31;
-                boolean flag4 = false;
                 object = object4;
                 flag = !flag3;
-                boolean flag5 = false;
                 if (flag) {
                     Object object5 = object;
-                    boolean flag6 = false;
                     ((ChatFormatter)object5).BaseCoreGenericHandler(object2);
                     throw new CommandExitException();
-                }
-            }
+}
             Object object6 = this;
-            boolean flag7 = false;
             object3 = CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)object6, (String)ArrayUtilities.LiteBansModule_31(args));
             object6 = this;
             flag7 = false;
@@ -60,7 +53,6 @@ extends AbstractCommand {
                     object = (LiteBansModule_82)object2;
                     flag = false;
                     LiteBansModule_82 ch3 = ch2;
-                    boolean bl9 = false;
                     LiteBansModule_297 iA2 = CommandArgumentUtils.BaseCoreGenericHandler(ch3, (String)object3, false, 2, null);
                     String string3 = iA2.LiteBansModule_31();
                     if (string3 == null) {
@@ -97,12 +89,9 @@ extends AbstractCommand {
                     ChatFormatter chatFormatter = MessageHandler.BaseCoreGenericHandler;
                     flag8 = d10 == Double.MIN_VALUE && !StringUtilities.LiteBansModule_31((CharSequence)string5);
                     CharSequence charSequence = MessageKey.aL;
-                    boolean bl10 = false;
                     ChatFormatter fo_03 = chatFormatter;
-                    boolean bl11 = false;
                     if (flag8) {
                         ChatFormatter fo_04 = fo_03;
-                        boolean bl12 = false;
                         fo_04.BaseCoreGenericHandler(charSequence);
                         throw new CommandExitException();
                     }
@@ -117,18 +106,13 @@ extends AbstractCommand {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler((Closeable)object2, throwable);
-                }
-            }
+}
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object6).LiteBansModule_31(sQLException)) break block15;
+                if (((DatabaseMonitorService)object6).LiteBansModule_31(sQLException)) break;
                 throw sQLException;
-            }
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         i = new String[]{"prunehistory", "", ""};
-    }
-
-    }
+}
 

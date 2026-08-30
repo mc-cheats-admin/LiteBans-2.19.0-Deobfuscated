@@ -11,8 +11,6 @@ LiteBansModule_122 {
     }
 
     public Iterator iterator() {
-        boolean flag = false;
         return this.plugin.BaseCoreGenericHandler();
-    }
 }
 

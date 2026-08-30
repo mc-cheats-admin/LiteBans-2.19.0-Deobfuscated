@@ -32,8 +32,7 @@ implements LiteBansModule_315 {
         if (this.g != null) {
             this.e = l3;
             this.PunishmentTableService.BaseCoreGenericHandler(this);
-        }
-    }
+}
 
     void LiteBansModule_31(ScheduledFuture scheduledFuture) {
         this.GnuSparseMapHandler = scheduledFuture;
@@ -120,9 +119,7 @@ implements LiteBansModule_315 {
             }
             case -2: {
                 return "RESERVED";
-            }
-        }
+}
         return "Invalid";
-    }
 }
 

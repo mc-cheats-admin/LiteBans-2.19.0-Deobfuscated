@@ -37,7 +37,6 @@ extends PacketAdapter {
             PacketContainer packetContainer = packetEvent.getPacket();
             WrappedChatComponent wrappedChatComponent = (WrappedChatComponent)packetContainer.getChatComponents().read(0);
             Object object2 = this.LiteBansModule_31;
-            boolean flag3 = false;
             if (((ConfigService)object2).g()) {
                 object = object2;
                 flag2 = false;
@@ -61,17 +60,14 @@ extends PacketAdapter {
                 flag = false;
                 if (((ConfigService)object4).g()) {
                     object = object4;
-                    boolean flag4 = false;
                     ((ConfigService)object).BaseCoreGenericHandler((Object)("3 " + object3.getJson()));
                 }
                 packetContainer.getChatComponents().write(0, object3);
-            }
-        }
+}
         catch (Throwable throwable) {
             ConfigService.BaseCoreGenericHandler(this.LiteBansModule_31, throwable, 0, 2, null);
             TemporaryplayerHandler.LiteBansModule_31(this.LiteBansModule_31, (Object)this);
-        }
-    }
+}
 
     private static final PacketType BaseCoreGenericHandler() {
         PacketType packetType;
@@ -96,6 +92,5 @@ extends PacketAdapter {
 
     private static final void c() {
         AsyncBackgroundTask_5 = new String[]{"", "", "1 ", "2 ", "3 "};
-    }
 }
 

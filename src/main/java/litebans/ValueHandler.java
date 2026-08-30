@@ -13,12 +13,9 @@ static class ValueHandler {
         } else {
             Object object2 = object;
             appendable2 = (object2 == null ? true : object2 instanceof CharSequence) ? appendable.append((CharSequence)object) : (object instanceof Character ? appendable.append(((Character)object).charValue()) : appendable.append(object.toString()));
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"<this>", "value", "", "<this>", "value", "<this>", "<this>", "<this>", "<this>"};
-    }
-
-    }
+}
 

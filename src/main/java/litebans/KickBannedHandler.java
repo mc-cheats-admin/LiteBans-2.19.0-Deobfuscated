@@ -28,7 +28,5 @@ public final class KickBannedHandler {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"", "", "[event cancelled]", "KICK_BANNED"};
-    }
-
-    }
+}
 

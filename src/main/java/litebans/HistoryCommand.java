@@ -26,9 +26,8 @@ implements LiteBansModule_359 {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
-        block9: {
+{
             Object object = this;
-            boolean flag = false;
             object = (DatabaseMonitorService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
             flag = false;
             try {
@@ -37,11 +36,8 @@ implements LiteBansModule_359 {
                 Throwable throwable = null;
                 try {
                     Object object2 = (LiteBansModule_82)closeable;
-                    boolean flag2 = false;
                     LiteBansModule_82 ch3 = ch2;
-                    boolean flag3 = false;
                     Object object3 = this;
-                    boolean flag4 = false;
                     String string = CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)object3, (String)ArrayUtilities.LiteBansModule_31(args));
                     object3 = CommandArgumentUtils.BaseCoreGenericHandler(ch3, string, false);
                     String string2 = (String)ArrayUtilities.BaseCoreGenericHandler((Object[])args, 1);
@@ -55,13 +51,10 @@ implements LiteBansModule_359 {
                     BanHandler a_3 = a_2;
                     List list = a_3 != null ? CollectionUtilities.BaseCoreGenericHandler(a_3) : BanHandler.LiteBansModule_401.BaseCoreGenericHandler();
                     Iterable iterable = list;
-                    boolean flag5 = false;
                     Iterable iterable2 = iterable;
                     Collection collection = new ArrayList();
-                    boolean flag6 = false;
                     for (Object t2 : iterable2) {
                         BanHandler a_4 = (BanHandler)t2;
-                        boolean flag7 = false;
                         Iterable iterable3 = ch3.BaseCoreGenericHandler((LiteBansModule_297)object3, a_4, string3, false, n);
                         CollectionUtilities.BaseCoreGenericHandler(collection, iterable3);
                     }
@@ -75,14 +68,11 @@ implements LiteBansModule_359 {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-                }
-            }
+}
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break block9;
+                if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break;
                 throw sQLException;
-            }
-        }
-    }
+}
 
     @Override
     public int BaseCoreGenericHandler(@NotNull PlatformPlugin plugin, @Nullable String[] args, @NotNull Collection collection, int n) {
@@ -101,7 +91,5 @@ implements LiteBansModule_359 {
 
     private static final void BaseCoreGenericHandler() {
         i = new String[]{"history", "'AsyncBackgroundTask_21 uuid is null"};
-    }
-
-    }
+}
 

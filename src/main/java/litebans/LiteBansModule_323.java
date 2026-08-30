@@ -134,6 +134,5 @@ implements Serializable {
         i = 1;
         Utf8Handler_2 = 1L;
         BaseCoreGenericHandler = new LiteBansModule_323(0L);
-    }
 }
 

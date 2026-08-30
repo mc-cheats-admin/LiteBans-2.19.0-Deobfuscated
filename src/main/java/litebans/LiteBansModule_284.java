@@ -62,6 +62,5 @@ static class LiteBansModule_284 {
 
     static final /* synthetic */ byte[] c(LiteBansModule_284 hz2) {
         return hz2.LiteBansModule_194;
-    }
 }
 

@@ -12,8 +12,7 @@ public class NullHandler_5 {
         }
         catch (Exception exception) {
             return null;
-        }
-    }
+}
 
     public static final Object BaseCoreGenericHandler(String string) {
         StringReader stringReader = new StringReader(string);
@@ -67,40 +66,40 @@ public class NullHandler_5 {
     }
 
     static final void BaseCoreGenericHandler(String string, StringBuffer stringBuffer) {
-        block10: for (int i = 0; i < string.length(); ++i) {
+for (int i = 0; i < string.length(); ++i) {
             char c = string.charAt(i);
             switch (c) {
                 case '\"': {
                     stringBuffer.append("\\\"");
-                    continue block10;
+                    continue;
                 }
                 case '\\': {
                     stringBuffer.append("\\\\");
-                    continue block10;
+                    continue;
                 }
                 case '\LiteBansModule_31': {
                     stringBuffer.append("\\LiteBansModule_31");
-                    continue block10;
+                    continue;
                 }
                 case '\LiteBansModule_194': {
                     stringBuffer.append("\\LiteBansModule_194");
-                    continue block10;
+                    continue;
                 }
                 case '\n': {
                     stringBuffer.append("\\n");
-                    continue block10;
+                    continue;
                 }
                 case '\r': {
                     stringBuffer.append("\\r");
-                    continue block10;
+                    continue;
                 }
                 case '\AsyncBackgroundTask_22': {
                     stringBuffer.append("\\AsyncBackgroundTask_22");
-                    continue block10;
+                    continue;
                 }
                 case '/': {
                     stringBuffer.append("\\/");
-                    continue block10;
+                    continue;
                 }
                 default: {
                     if (c >= '\u0000' && c <= '\u001f' || c >= '\u007f' && c <= '\u009f' || c >= '\u2000' && c <= '\u20ff') {
@@ -110,12 +109,8 @@ public class NullHandler_5 {
                             stringBuffer.append('0');
                         }
                         stringBuffer.append(string2.toUpperCase());
-                        continue block10;
+                        continue;
                     }
                     stringBuffer.append(c);
-                }
-            }
-        }
-    }
 }
 

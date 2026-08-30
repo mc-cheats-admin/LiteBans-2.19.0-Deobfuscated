@@ -29,24 +29,17 @@ implements LiteBansModule_88 {
     public final void LiteBansModule_31(@NotNull AsyncPlayerPreLoginEvent asyncPlayerPreLoginEvent) {
         if (this.AsyncBackgroundTask_5.BaseCoreGenericHandler(1)) {
             ServerEventListener aX2 = this;
-            boolean flag = false;
-            boolean flag2 = false;
             long l3 = System.nanoTime();
-            boolean flag3 = false;
             aX2.BaseCoreGenericHandler(asyncPlayerPreLoginEvent);
             long l5 = System.nanoTime() - l3;
             double d10 = (double)l5 / 1000.0 / 1000.0;
             aX2.AsyncBackgroundTask_5.BaseCoreGenericHandler((Object)("Handled login event: " + LiteBansModule_287.LiteBansModule_31(d10) + " "));
         } else {
             this.plugin(asyncPlayerPreLoginEvent);
-        }
-    }
+}
 
     private final void c(AsyncPlayerPreLoginEvent asyncPlayerPreLoginEvent) {
-        boolean flag = false;
-        boolean flag2 = false;
         long l3 = System.nanoTime();
-        boolean flag3 = false;
         this.plugin(asyncPlayerPreLoginEvent);
         long l5 = System.nanoTime() - l3;
         double d10 = (double)l5 / 1000.0 / 1000.0;
@@ -79,19 +72,15 @@ implements LiteBansModule_88 {
             Object object = this.AsyncBackgroundTask_5.B();
             ObjectUtilities.LiteBansModule_31(object, "");
             AtomicBoolean atomicBoolean = ((NullHandler_8)object).c();
-            boolean flag = false;
             if (atomicBoolean.compareAndSet(false, true)) {
                 Object object2 = this.AsyncBackgroundTask_5.B();
                 ObjectUtilities.LiteBansModule_31(object2, "");
                 ((NullHandler_8)object2).BaseCoreGenericHandler(this.AsyncBackgroundTask_5.AsyncBackgroundTask_22());
-            }
-        }
-    }
+}
 
     public ServerEventListener AsyncBackgroundTask_5() {
         ServerEventListener aX2;
         ServerEventListener aX3 = aX2 = this;
-        boolean flag = false;
         LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{aX3};
         aX3.LiteBansModule_31.LiteBansModule_31(em_0Array);
         return aX2;
@@ -104,7 +93,5 @@ implements LiteBansModule_88 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"Handled login event: ", " ", "Handled login event: ", " ", "Ignored ", "; plugin is not enabled yet!", "Enable late-bind InitializerHandler_3 spigot.yml to fix this problem, otherwise banned players can join before LiteBans has been ", "", ""};
-    }
-
-    }
+}
 

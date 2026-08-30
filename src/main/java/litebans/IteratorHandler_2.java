@@ -12,7 +12,5 @@ extends ElementsHandler_5 {
 
     private static final void e() {
         c = new String[]{"iterator", "<this>", "<this>", "<this>", "<this>"};
-    }
-
-    }
+}
 

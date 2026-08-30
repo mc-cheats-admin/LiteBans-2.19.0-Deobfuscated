@@ -55,6 +55,5 @@ Serializable {
 
     private static final void c() {
         BaseCoreGenericHandler = new String[]{"initializer", "Lazy value not initialized ", "_value"};
-    }
 }
 

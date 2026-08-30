@@ -21,13 +21,10 @@ extends InputHandler {
         }
         int n = string.length();
         StringBuilder stringBuilder2 = stringBuilder = new StringBuilder(n);
-        boolean flag2 = false;
         CharSequence charSequence = string;
-        boolean flag3 = false;
         for (int i = 0; i < charSequence.length(); ++i) {
             char c11;
             char c12 = c11 = charSequence.charAt(i);
-            boolean flag4 = false;
             stringBuilder2.append(LiteBansModule_338.BaseCoreGenericHandler(c12, c, flag) ? c10 : c12);
         }
         return stringBuilder.toString();
@@ -45,7 +42,6 @@ extends InputHandler {
         ObjectUtilities.BaseCoreGenericHandler((Object)string2, "oldValue");
         ObjectUtilities.BaseCoreGenericHandler((Object)string3, "newValue");
         String string4 = string;
-        boolean flag2 = false;
         int n = StringUtilities.LiteBansModule_31((CharSequence)string4, string2, 0, flag);
         if (n < 0) {
             return string4;
@@ -57,7 +53,6 @@ extends InputHandler {
             throw new OutOfMemoryError();
         }
         StringBuilder stringBuilder = new StringBuilder(n4);
-        int n5 = 0;
         do {
             stringBuilder.append(string4, n5, n).append(string3);
             n5 = n + n2;
@@ -120,7 +115,6 @@ extends InputHandler {
             StringBuilder stringBuilder;
             StringBuilder stringBuilder2;
             StringBuilder stringBuilder3 = stringBuilder2 = new StringBuilder();
-            boolean flag = false;
             char c10 = Character.toTitleCase(c);
             if (c10 != Character.toUpperCase(c)) {
                 stringBuilder = stringBuilder3.append(c10);
@@ -142,7 +136,5 @@ extends InputHandler {
 
     private static final void i() {
         i = new String[]{"<this>", "<this>", "str", "<this>", "<this>", "str", "<this>", "<this>", "oldValue", "newValue", "<this>", "<this>", "oldValue", "newValue", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "<this>", "", "<this>", "<this>", "destination", "<this>", "destination", "<this>", "args", "<this>", "format", "args", "<this>", "args", "<this>", "format", "args", "<this>", "regex", "<this>", "<this>", "<this>", "prefix", "<this>", "prefix", "<this>", "suffix", "bytes", "charset", "bytes", "charset", "bytes", "bytes", "chars", "chars", "codePoints", "stringBuffer", "stringBuilder", "<this>", "<this>", "<this>", "<this>", "other", "<this>", "charSequence", "<this>", "stringBuilder", "<this>", "<this>", "<this>", "other", "<this>", "other", "<this>", "locale", "<this>", "locale", "<this>", "locale", "<this>", "locale", "<this>", "charset", "<this>", "charset", "<this>", "<this>", "<this>", "<this>", "locale", "", "<this>", "", "<this>", "locale", "", "<this>", "Count 'n' must be non-negative, but was ", "", "", "<this>"};
-    }
-
-    }
+}
 

@@ -27,13 +27,11 @@ extends AbstractCommand {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
-        block11: {
+{
             Object object = this;
-            boolean flag = false;
             String string = CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)object, (String)ArrayUtilities.LiteBansModule_31(args));
             object = CommandArgumentUtils.BaseCoreGenericHandler(this, sender, args, null, 4, null);
             Object object2 = this;
-            boolean flag2 = false;
             object2 = (DatabaseMonitorService)((MessageHandler)object2).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
             flag2 = false;
             try {
@@ -43,9 +41,7 @@ extends AbstractCommand {
                 try {
                     Object object3;
                     Object object4 = (LiteBansModule_82)closeable;
-                    boolean flag3 = false;
                     LiteBansModule_82 ch3 = ch2;
-                    boolean flag4 = false;
                     if (HexEncodingHelper.BaseCoreGenericHandler.LiteBansModule_31(string) && (object3 = AllHandler_3.BaseCoreGenericHandler(ch3, CommandArgumentUtils.AsyncBackgroundTask_5(this, string), this.LiteBansModule_31(), null, false, 12, null)) != null) {
                         String string2 = ((SilentHandler)object3).DatabaseMonitorService();
                         if (string2 == null && (string2 = ((SilentHandler)object3).PunishmentTableService()) == null) {
@@ -75,14 +71,11 @@ extends AbstractCommand {
                 }
                 finally {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
-                }
-            }
+}
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object2).LiteBansModule_31(sQLException)) break block11;
+                if (((DatabaseMonitorService)object2).LiteBansModule_31(sQLException)) break;
                 throw sQLException;
-            }
-        }
-    }
+}
 
     private final void BaseCoreGenericHandler(LiteBansModule_82 ch2, SilentHandler dZ2, LiteBansModule_297 iA2) {
         if (this.LiteBansModule_31() == BanHandler.LiteBansModule_240 && !ObjectUtilities.BaseCoreGenericHandler((Object)dZ2.DatabaseMonitorService(), (Object)iA2.LiteBansModule_31())) {
@@ -94,12 +87,9 @@ extends AbstractCommand {
             }
             args[1] = string;
             LitebansAdminHandler f72 = new LitebansAdminHandler(args, ch2.e(), false);
-        }
-    }
+}
 
     private static final void AsyncBackgroundTask_5() {
         i = new String[]{"checkban", "check"};
-    }
-
-    }
+}
 

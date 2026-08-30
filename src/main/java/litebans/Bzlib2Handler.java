@@ -55,7 +55,6 @@ extends FilterInputStream {
         if (n2 % 1024 != 0) {
             throw new IllegalArgumentException("All reads must be multiple of record size (1024 ");
         }
-        int n3 = 0;
         while (n3 < n2) {
             if (this.c == this.LiteBansModule_194) {
                 try {
@@ -63,9 +62,7 @@ extends FilterInputStream {
                 }
                 catch (LiteBansModule_320 it_02) {
                     return -1;
-                }
-            }
-            int n4 = 0;
+}
             n4 = this.c + (n2 - n3) <= this.LiteBansModule_194 ? n2 - n3 : this.LiteBansModule_194 - this.c;
             System.arraycopy(this.plugin, this.c, byArray, n, n4);
             this.c += n4;
@@ -89,8 +86,7 @@ extends FilterInputStream {
                 }
                 catch (LiteBansModule_320 it_02) {
                     return -1L;
-                }
-            }
+}
             l7 = 0L;
             l7 = (long)this.c + (l3 - l5) <= (long)this.LiteBansModule_194 ? l3 - l5 : (long)this.LiteBansModule_194 - (long)this.c;
             this.c = (int)((long)this.c + l7);
@@ -102,8 +98,7 @@ extends FilterInputStream {
     public void close() {
         if (this.InitializerHandler_3 != null && this.InitializerHandler_3 != System.InitializerHandler_3) {
             this.InitializerHandler_3.close();
-        }
-    }
+}
 
     public byte[] LiteBansModule_31() {
         byte[] byArray = new byte[1024];
@@ -154,8 +149,7 @@ extends FilterInputStream {
                             }
                             finally {
                                 inflater.end();
-                            }
-                        }
+}
                         case LiteBansModule_31: {
                             throw new LiteBansModule_310("BZLIB2");
                         }
@@ -164,11 +158,7 @@ extends FilterInputStream {
                         }
                         default: {
                             throw new LiteBansModule_310();
-                        }
-                    }
-                }
-            }
-        }
+}
         ++this.LiteBansModule_31;
         this.c = 0;
     }
@@ -177,11 +167,9 @@ extends FilterInputStream {
         int n3 = LiteBansModule_341.BaseCoreGenericHandler(this.InitializerHandler_3, byArray, n, n2);
         if (n3 < n2) {
             throw new LiteBansModule_320();
-        }
-    }
+}
 
     public long BaseCoreGenericHandler() {
         return this.e;
-    }
 }
 

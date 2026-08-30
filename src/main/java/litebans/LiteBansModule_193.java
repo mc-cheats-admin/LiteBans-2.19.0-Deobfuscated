@@ -65,6 +65,5 @@ implements Comparable {
         AsyncBackgroundTask_5 = (short)-1;
         e = 0;
         LiteBansModule_31 = new ProxyResultSet(null);
-    }
 }
 

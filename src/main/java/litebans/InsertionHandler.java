@@ -37,7 +37,7 @@ public class InsertionHandler {
                         v_02.BaseCoreGenericHandler(new LiteBansModule_377((OpenUrlHandler)((Object)object2), jsonObject2.get("url").getAsString()));
                         break;
                     }
-                    case 2: 
+                    case 2:
                     case 3: {
                         v_02.BaseCoreGenericHandler(new LiteBansModule_377((OpenUrlHandler)((Object)object2), jsonObject2.get("command").getAsString()));
                         break;
@@ -51,12 +51,9 @@ public class InsertionHandler {
                     default: {
                         v_02.BaseCoreGenericHandler(new LiteBansModule_377((OpenUrlHandler)((Object)object2), jsonObject2.has("value") ? jsonObject2.get("value").getAsString() : ""));
                         break;
-                    }
-                }
-            } else {
+} else {
                 v_02.BaseCoreGenericHandler(new LiteBansModule_377((OpenUrlHandler)((Object)object2), jsonObject2.has("value") ? jsonObject2.get("value").getAsString() : ""));
-            }
-        }
+}
         int n2 = n = (object2 = jsonObject.getAsJsonObject("hover_event")) != null ? 1 : 0;
         if (n == 0) {
             object2 = jsonObject.getAsJsonObject("hoverEvent");
@@ -69,28 +66,23 @@ public class InsertionHandler {
                 if (jsonElement2 != null) {
                     LiteBansModule_160[] ed_0Array = jsonElement2.isJsonArray() ? (LiteBansModule_160[])jsonDeserializationContext.deserialize(jsonElement2, (Type)ActionHandler.BaseCoreGenericHandler(eA2, true)) : new LiteBansModule_160[]{(LiteBansModule_160)jsonDeserializationContext.deserialize(jsonElement2, (Type)ActionHandler.BaseCoreGenericHandler(eA2, false))};
                     object = new ActionHandler(eA2, new ArrayList<LiteBansModule_160>(Arrays.asList(ed_0Array)));
-                }
-            } else {
+} else {
                 JsonElement jsonElement3 = object2.get("value");
                 if (jsonElement3 != null) {
                     LiteBansModule_432[] v_0Array = jsonElement3.isJsonArray() ? (LiteBansModule_432[])jsonDeserializationContext.deserialize(jsonElement3, LiteBansModule_432[].class) : new LiteBansModule_432[]{(LiteBansModule_432)jsonDeserializationContext.deserialize(jsonElement3, LiteBansModule_432.class)};
                     object = new ActionHandler(eA2, v_0Array);
-                }
-            }
+}
             if (object != null) {
                 v_02.BaseCoreGenericHandler((ActionHandler)object);
-            }
-        }
+}
         if ((object = jsonObject.get("extra")) != null) {
             v_02.BaseCoreGenericHandler(Arrays.asList((LiteBansModule_432[])jsonDeserializationContext.deserialize(object, LiteBansModule_432[].class)));
-        }
-    }
+}
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     protected void BaseCoreGenericHandler(JsonObject jsonObject, LiteBansModule_432 v_02, JsonSerializationContext jsonSerializationContext) {
-        boolean flag = false;
         if (LiteBansModule_147.BaseCoreGenericHandler.get() == null) {
             flag = true;
             LiteBansModule_147.BaseCoreGenericHandler.set(Collections.newSetFromMap(new IdentityHashMap()));
@@ -115,7 +107,7 @@ public class InsertionHandler {
                                 jsonObject2.addProperty("url", v_02.LiteBansModule_194().c());
                                 break;
                             }
-                            case g: 
+                            case g:
                             case BaseCoreGenericHandler: {
                                 jsonObject2.addProperty("command", v_02.LiteBansModule_194().c());
                                 break;
@@ -126,8 +118,7 @@ public class InsertionHandler {
                             }
                             default: {
                                 jsonObject2.addProperty("value", v_02.LiteBansModule_194().c());
-                            }
-                        }
+}
                         jsonObject.add("click_event", (JsonElement)jsonObject2);
                         break;
                     }
@@ -138,9 +129,7 @@ public class InsertionHandler {
                     }
                     default: {
                         throw new IllegalArgumentException("Unknown version " + (Object)((Object)this.plugin.LiteBansModule_31()));
-                    }
-                }
-            }
+}
             if (v_02.LiteBansModule_240() != null) {
                 jsonObject2 = new JsonObject();
                 jsonObject2.addProperty("action", v_02.LiteBansModule_240().AsyncBackgroundTask_5().toString().toLowerCase(Locale.ROOT));
@@ -158,9 +147,7 @@ public class InsertionHandler {
                         }
                         default: {
                             throw new IllegalArgumentException("Unknown version " + (Object)((Object)this.plugin.LiteBansModule_31()));
-                        }
-                    }
-                }
+}
                 switch (this.plugin.LiteBansModule_31()) {
                     case BaseCoreGenericHandler: {
                         jsonObject.add("hover_event", (JsonElement)jsonObject2);
@@ -172,24 +159,17 @@ public class InsertionHandler {
                     }
                     default: {
                         throw new IllegalArgumentException("Unknown version " + (Object)((Object)this.plugin.LiteBansModule_31()));
-                    }
-                }
-            }
+}
             if (v_02.CommandThrottleService() != null) {
                 jsonObject.add("extra", jsonSerializationContext.serialize((Object)v_02.CommandThrottleService()));
-            }
-        }
+}
         finally {
             ((Set)LiteBansModule_147.BaseCoreGenericHandler.get()).remove(v_02);
             if (flag) {
                 LiteBansModule_147.BaseCoreGenericHandler.set(null);
-            }
-        }
-    }
+}
 
     public InsertionHandler(LiteBansModule_147 e22) {
         this.plugin = e22;
-    }
-
-    }
+}
 

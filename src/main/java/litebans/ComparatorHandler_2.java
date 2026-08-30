@@ -11,16 +11,12 @@ extends OperationHandler {
         ObjectUtilities.BaseCoreGenericHandler((Object)list, "<this>");
         if (list.size() > 1) {
             Collections.sort(list);
-        }
-    }
+}
 
     public static final void BaseCoreGenericHandler(@NotNull List list, @NotNull Comparator comparator) {
         ObjectUtilities.BaseCoreGenericHandler((Object)list, "<this>");
         ObjectUtilities.BaseCoreGenericHandler((Object)comparator, "comparator");
         if (list.size() > 1) {
             Collections.sort(list, comparator);
-        }
-    }
-
-    }
+}
 

@@ -220,7 +220,6 @@ public final class AllHandler_3 {
             return CollectionUtilities.e();
         }
         ArrayList arrayList2 = arrayList = new ArrayList();
-        boolean flag = false;
         do {
             ((Collection)arrayList2).add(ch2.BaseCoreGenericHandler(resultSet, a_2));
         } while (resultSet.next());
@@ -233,13 +232,11 @@ public final class AllHandler_3 {
 
     public static List BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull SilentHandler dZ2, int n) {
         SilentHandler dZ3 = dZ2;
-        boolean flag = false;
         return ch2.BaseCoreGenericHandler(dZ3.DatabaseMonitorService(), dZ3.PunishmentTableService(), dZ3.ServerSyncService(), dZ3.m(), dZ3.AsyncBackgroundTask_22(), n);
     }
 
     public static List BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull CommandSenderWrapper sender, @NotNull BanHandler a_2, boolean flag, int n) {
         CommandSenderWrapper jv_03 = sender;
-        boolean flag2 = false;
         String string = jv_03.BaseCoreGenericHandler();
         String string2 = jv_03.LiteBansModule_31();
         String string3 = jv_03.LiteBansModule_240();
@@ -286,14 +283,11 @@ public final class AllHandler_3 {
                     }
                     catch (IllegalArgumentException illegalArgumentException) {
                         configService.BaseCoreGenericHandler(illegalArgumentException, 0);
-                    }
-                }
-            } else {
+} else {
                 LiteBansModule_354 jT2 = GeoIPLookupService.BaseCoreGenericHandler(ch2, string2);
                 string4 = (String)jT2.LiteBansModule_31();
                 string5 = (String)jT2.e();
-            }
-        }
+}
         if (ObjectUtilities.BaseCoreGenericHandler((Object)string4, (Object)"null")) {
             string4 = "";
         }
@@ -411,7 +405,5 @@ public final class AllHandler_3 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"", "", "", "", "", "", "", "", "", "", "__ALL__", "", "", "__ALL__", "", "", "", "", "", "", "", "", "executorPrefix", "executorSuffix", "", "null", "", "null", "", "executorUUID", "executorPrefix", "executorSuffix", "executor", "", "", "", ""};
-    }
-
-    }
+}
 

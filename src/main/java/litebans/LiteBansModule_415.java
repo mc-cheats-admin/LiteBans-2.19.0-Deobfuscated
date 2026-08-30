@@ -43,8 +43,7 @@ implements Statement {
         }
         catch (SQLException sQLException) {
             throw this.LiteBansModule_31.BaseCoreGenericHandler(sQLException);
-        }
-    }
+}
 
     @Override
     public boolean isClosed() {
@@ -153,8 +152,7 @@ implements Statement {
         if (resultSet != null) {
             if (this.AsyncBackgroundTask_5 == null || ((LiteBansModule_223)this.AsyncBackgroundTask_5).LiteBansModule_31 != resultSet) {
                 this.AsyncBackgroundTask_5 = LiteBansModule_64.BaseCoreGenericHandler(this.LiteBansModule_31, this, resultSet);
-            }
-        } else {
+} else {
             this.AsyncBackgroundTask_5 = null;
         }
         return this.AsyncBackgroundTask_5;
@@ -177,6 +175,5 @@ implements Statement {
             return this.plugin.unwrap(clazz);
         }
         throw new SQLException("Wrapped statement is not HikariDataSource instance of " + clazz);
-    }
 }
 

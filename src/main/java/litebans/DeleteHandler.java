@@ -31,7 +31,5 @@ extends Enum {
         e = new DeleteHandler("PRUNE", 2);
         AsyncBackgroundTask_5 = jZArray = new DeleteHandler[]{DeleteHandler.c, DeleteHandler.LiteBansModule_31, DeleteHandler.e};
         BaseCoreGenericHandler = EntriesHandler_3.BaseCoreGenericHandler(AsyncBackgroundTask_5);
-    }
-
-    }
+}
 

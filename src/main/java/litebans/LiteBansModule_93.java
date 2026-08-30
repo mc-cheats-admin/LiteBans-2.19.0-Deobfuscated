@@ -23,17 +23,14 @@ extends ProxyPreparedStatement {
         ResultSet resultSet;
         if (bT2.c().LiteBansModule_31()) {
             ProxyPreparedStatement bU2 = this;
-            Object var3_4 = null;
-            boolean flag = false;
+            Object arg1 = null;
             return LiteBansModule_397.BaseCoreGenericHandler();
         }
         Lock lock = this.e.writeLock();
         lock.lock();
         try {
             ResultSet resultSet2;
-            boolean flag = false;
             LiteBansModule_60 bT3 = bT2;
-            boolean flag2 = false;
             if (bT3.LiteBansModule_31().execute()) {
                 bT3 = bT2;
                 flag2 = false;
@@ -58,7 +55,6 @@ extends ProxyPreparedStatement {
         Lock lock = this.e.writeLock();
         lock.lock();
         try {
-            boolean flag = false;
             nArray = statement.executeBatch();
         }
         finally {
@@ -75,16 +71,13 @@ extends ProxyPreparedStatement {
         ResultSet resultSet;
         if (bT2.c().LiteBansModule_31()) {
             ProxyPreparedStatement bU2 = this;
-            Object var3_4 = null;
-            boolean flag = false;
+            Object arg1 = null;
             return LiteBansModule_397.BaseCoreGenericHandler();
         }
         Lock lock = this.e.readLock();
         lock.lock();
         try {
-            boolean flag = false;
             LiteBansModule_60 bT3 = bT2;
-            boolean flag2 = false;
             resultSet = bT3.LiteBansModule_31().executeQuery();
         }
         finally {
@@ -107,7 +100,6 @@ extends ProxyPreparedStatement {
         try {
             n = 0;
             LiteBansModule_60 bT3 = bT2;
-            boolean flag = false;
             n = bT3.LiteBansModule_31().executeUpdate();
         }
         finally {
@@ -119,6 +111,5 @@ extends ProxyPreparedStatement {
     @Override
     public String BaseCoreGenericHandler(@NotNull String string) {
         return LiteBansModule_112.BaseCoreGenericHandler(new File(string)).getAbsolutePath();
-    }
 }
 

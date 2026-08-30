@@ -11,7 +11,5 @@ extends RuntimeException {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"A downloaded dependency did not match the expected SHA-256 checksum!", "Local checksum    : ", "Expected checksum : ", "File              : "};
-    }
-
-    }
+}
 

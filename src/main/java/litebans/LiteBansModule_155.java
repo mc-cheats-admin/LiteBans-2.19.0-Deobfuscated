@@ -6,6 +6,5 @@ static final class LiteBansModule_155 {
 
     public /* synthetic */ LiteBansModule_155(LiteBansModule_14 aJ2) {
         this();
-    }
 }
 

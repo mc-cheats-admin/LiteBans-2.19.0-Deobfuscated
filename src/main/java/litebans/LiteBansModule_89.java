@@ -49,7 +49,5 @@ public final class LiteBansModule_89 {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"Profile(name=", ", uuid="};
-    }
-
-    }
+}
 

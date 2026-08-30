@@ -35,6 +35,5 @@ extends Enum {
 
     private static final void LiteBansModule_31() {
         AsyncBackgroundTask_5 = new String[]{"V1_16", "V1_21_5"};
-    }
 }
 

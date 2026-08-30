@@ -29,7 +29,6 @@ public final class LiteBansModule_341 {
         if (n2 < 0 || n < 0 || n2 + n > byArray.length) {
             throw new IndexOutOfBoundsException();
         }
-        int n4 = 0;
         for (n3 = 0; n3 != n2 && (n4 = inputStream.read(byArray, n + n3, n2 - n3)) != -1; n3 += n4) {
         }
         return n3;
@@ -39,6 +38,5 @@ public final class LiteBansModule_341 {
         BaseCoreGenericHandler = 4096;
         LiteBansModule_31 = 8024;
         c = new byte[4096];
-    }
 }
 

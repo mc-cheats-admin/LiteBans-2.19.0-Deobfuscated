@@ -15,7 +15,6 @@ extends Events {
     @Override
     public void register(@NotNull Events$Listener events$Listener) {
         if (!(!this.plugin.contains(events$Listener))) {
-            boolean flag = false;
             String string = "Listener is already registered: " + events$Listener;
             throw new IllegalArgumentException(string.toString());
         }
@@ -29,7 +28,5 @@ extends Events {
 
     public String toString() {
         return "Events";
-    }
-
-    }
+}
 

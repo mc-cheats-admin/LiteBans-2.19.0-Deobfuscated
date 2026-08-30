@@ -53,6 +53,5 @@ public final class LiteBansModule_10 {
 
     public LiteBansModule_368 BaseCoreGenericHandler() {
         return new LiteBansModule_368(this.e, this.c, this.LiteBansModule_194, this.plugin, this.LiteBansModule_31, this.LiteBansModule_240, this.g, this.AsyncBackgroundTask_5);
-    }
 }
 

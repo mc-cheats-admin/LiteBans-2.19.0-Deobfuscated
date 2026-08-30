@@ -6,6 +6,5 @@ extends Exception {
 
     LiteBansException_6(Throwable throwable) {
         super(throwable);
-    }
 }
 

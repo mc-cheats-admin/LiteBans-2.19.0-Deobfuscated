@@ -37,6 +37,5 @@ implements LiteBansModule_235 {
         AsyncBackgroundTask_5 = 33188;
         LiteBansModule_194 = "`\n";
         c = "!<arch>\n";
-    }
 }
 

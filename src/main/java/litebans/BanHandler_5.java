@@ -29,9 +29,8 @@ extends LiteBansModule_249 {
         boolean flag2;
         Object object;
         Object object2;
-        block8: {
+{
             object2 = AbstractCommand.AsyncBackgroundTask_5;
-            boolean flag3 = false;
             object = args;
             flag2 = false;
             n3 = ((String[])object).length;
@@ -41,7 +40,7 @@ extends LiteBansModule_249 {
                 n = 0;
                 if (!StringUtilities.LiteBansModule_31((CharSequence)string3)) continue;
                 flag = false;
-                break block8;
+                break;
             }
             flag = true;
         }
@@ -52,12 +51,10 @@ extends LiteBansModule_249 {
             flag2 = false;
             String[] parsedArgs = object;
             Collection collection = new ArrayList();
-            boolean flag4 = false;
             n = parsedArgs.length;
             for (int i = 0; i < n; ++i) {
                 String string4;
                 String string5 = string4 = parsedArgs[i];
-                boolean flag5 = false;
                 boolean flag6 = !StringUtilities.LiteBansModule_31((CharSequence)string5);
                 if (!flag6) continue;
                 collection.add(string4);
@@ -77,15 +74,12 @@ extends LiteBansModule_249 {
                 CommandSenderWrapper jv_03 = sender;
                 n2 = 0;
                 CommandSenderWrapper jv_04 = jv_03;
-                boolean flag7 = false;
                 if (!jv_04.e((String)object)) {
                     jv_03 = sender;
                     CharSequence charSequence = MessageKey.cZ;
-                    boolean flag8 = false;
                     ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, jv_03, charSequence, null, 4, null);
                     return;
-                }
-            }
+}
             BanHandler_5 i = this;
             n2 = 0;
             i.BaseCoreGenericHandler.LiteBansModule_31(new CommandExecutionTask(sender, cmdArgs, abstractCommand, (String)object2));
@@ -112,232 +106,195 @@ extends LiteBansModule_249 {
         super.BaseCoreGenericHandler();
         this.plugin.BaseCoreGenericHandler(this);
         v2 = this.e();
-        v3 = false;
         v4 = v2;
         v5 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)v2, 10));
-        v6 = false;
         v7 = v4.iterator();
         while (v7.hasNext()) {
-            block40: {
-                block38: {
-                    block39: {
-                        var8_13 = v7.next();
-                        var9_15 = (LiteCommand)var8_13;
-                        var24_33 = v5;
-                        var10_16 = false;
-                        var11_18 = this;
-                        var12_20 = false;
-                        v0 = var11_18.BaseCoreGenericHandler;
-                        var13_22 = AbstractCommand.AsyncBackgroundTask_5;
-                        var14_24 = var9_15.getName();
-                        var15_25 = false;
-                        var16_28 = var14_24;
-                        switch (var16_28.hashCode()) {
+{
+                        arg1 = v7.next();
+                        arg2 = (LiteCommand)arg1;
+                        arg3 = v5;
+                        arg4 = this;
+                        v0 = arg4.BaseCoreGenericHandler;
+                        arg5 = AbstractCommand.AsyncBackgroundTask_5;
+                        arg6 = arg2.getName();
+                        arg7 = arg6;
+                        switch (arg7.hashCode()) {
                             case -1320563219: {
-                                if (var16_28.equals("dupeip")) break;
-                                ** break;
+                                if (arg7.equals("dupeip")) break;
+                                break;
                             }
                             case 712910260: {
-                                if (!var16_28.equals("staffhistory")) {
-                                    ** break;
+                                if (!arg7.equals("staffhistory")) {
+                                    break;
                                 }
-                                break block38;
+                                break;
                             }
                             case 926934164: {
-                                if (!var16_28.equals("\u777d\u777c\u7766\u7761\u777a\u7767\u776c")) {
-                                    ** break;
+                                if (!arg7.equals("\u777d\u777c\u7766\u7761\u777a\u7767\u776c")) {
+                                    break;
                                 }
-                                break block39;
-                            }
-                        }
-                        var17_31 /* !! */  = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
-                        v1 = var17_31 /* !! */ ;
-                        break block40;
+                                break;
+}
+                        arg8   = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
+                        v1 = arg8  ;
+                        break;
                     }
-                    var17_31 /* !! */  = new String[]{"hist", "litebans:history"};
-                    v1 = var17_31 /* !! */ ;
-                    break block40;
+                    arg8   = new String[]{"hist", "litebans:history"};
+                    v1 = arg8  ;
+                    break;
                 }
-                var17_31 /* !! */  = new String[]{"staffhist", "litebans:staffhistory"};
-                v1 = var17_31 /* !! */ ;
-                break block40;
-lbl46:
-                // 4 sources
-
-                var17_31 /* !! */  = new String[]{"litebans:" + (String)var14_24};
-                v1 = var17_31 /* !! */ ;
+                arg8   = new String[]{"staffhist", "litebans:staffhistory"};
+                v1 = arg8  ;
+                break;
+                                arg8   = new String[]{"litebans:" + (String)arg6};
+                v1 = arg8  ;
             }
-            var18_32 /* !! */  = v1;
-            var24_33.add(new LiteBansModule_32((LiteCommand)var9_15, v0, null, Arrays.copyOf(var18_32 /* !! */ , var18_32 /* !! */ .length), 4, null));
+            arg9   = v1;
+            arg3.add(new LiteBansModule_32((LiteCommand)arg2, v0, null, Arrays.copyOf(arg9  , arg9  .length), 4, null));
         }
         v2 = (List)v5;
-        v3 = false;
         v4 = v2.iterator();
         while (v4.hasNext()) {
             v5 = v4.next();
-            var6_9 = (LiteCommand)v5;
-            var7_11 = false;
-            this.LiteBansModule_31(var6_9);
+            arg10 = (LiteCommand)v5;
+            this.LiteBansModule_31(arg10);
         }
         v2 = this;
         ObjectUtilities.BaseCoreGenericHandler(v1);
-        var3_4 = v1;
-        var4_6 = false;
-        v5 = AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(var3_4);
-        v6 = false;
-        var8_14 = v5.length;
-        for (var7_12 = 0; var7_12 < var8_14; ++var7_12) {
-            block48: {
-                block46: {
-                    block47: {
-                        block45: {
-                            block41: {
-                                block43: {
-                                    block42: {
-                                        block44: {
-                                            var10_17 = var9_15 = v5[var7_12];
-                                            var11_19 = false;
-                                            var12_21 = v2;
-                                            var13_23 = false;
+        arg11 = v1;
+        v5 = AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg11);
+        arg12 = v5.length;
+        for (arg13 = 0; arg13 < arg12; ++arg13) {
+{
+                                            arg14 = arg2 = v5[arg13];
+                                            arg15 = v2;
                                             v2 = new StringBuilder().append("litebans + ");
-                                            var14_24 = AbstractCommand.AsyncBackgroundTask_5;
-                                            var15_26 = false;
-                                            var16_29 = var10_17;
-                                            switch (var16_29.hashCode()) {
+                                            arg6 = AbstractCommand.AsyncBackgroundTask_5;
+                                            arg16 = arg14;
+                                            switch (arg16.hashCode()) {
                                                 case -1396405339: {
-                                                    if (!var16_29.equals("ban-ip")) {
-                                                        ** break;
+                                                    if (!arg16.equals("ban-ip")) {
+                                                        break;
                                                     }
-                                                    break block41;
+                                                    break;
                                                 }
                                                 case 111426262: {
-                                                    if (var16_29.equals("unban")) break;
-                                                    ** break;
+                                                    if (arg16.equals("unban")) break;
+                                                    break;
                                                 }
                                                 case -840127329: {
-                                                    if (!var16_29.equals("unwarn")) {
-                                                        ** break;
+                                                    if (!arg16.equals("unwarn")) {
+                                                        break;
                                                     }
-                                                    break block42;
+                                                    break;
                                                 }
                                                 case 1972486690: {
-                                                    if (!var16_29.equals("tempbanip")) {
-                                                        ** break;
+                                                    if (!arg16.equals("tempbanip")) {
+                                                        break;
                                                     }
-                                                    break block41;
+                                                    break;
                                                 }
                                                 case 93503862: {
-                                                    if (!var16_29.equals("banip")) {
-                                                        ** break;
+                                                    if (!arg16.equals("banip")) {
+                                                        break;
                                                     }
-                                                    break block41;
+                                                    break;
                                                 }
                                                 case -1062781696: {
-                                                    if (!var16_29.equals("muteip")) {
-                                                        ** break;
+                                                    if (!arg16.equals("muteip")) {
+                                                        break;
                                                     }
-                                                    break block43;
+                                                    break;
                                                 }
                                                 case -840405966: {
-                                                    if (!var16_29.equals("unmute")) {
-                                                        ** break;
+                                                    if (!arg16.equals("unmute")) {
+                                                        break;
                                                     }
-                                                    break block44;
+                                                    break;
                                                 }
                                                 case 1351111124: {
-                                                    if (!var16_29.equals("tempmuteip")) {
-                                                        ** break;
+                                                    if (!arg16.equals("tempmuteip")) {
+                                                        break;
                                                     }
-                                                    break block43;
+                                                    break;
                                                 }
                                                 case 1231784084: {
-                                                    if (!var16_29.equals("tempipmute")) {
-                                                        ** break;
+                                                    if (!arg16.equals("tempipmute")) {
+                                                        break;
                                                     }
-                                                    break block43;
+                                                    break;
                                                 }
                                                 case 1979386420: {
-                                                    if (!var16_29.equals("tempipban")) {
-                                                        ** break;
+                                                    if (!arg16.equals("tempipban")) {
+                                                        break;
                                                     }
-                                                    break block41;
-                                                }
-                                            }
+                                                    break;
+}
                                             v3 = "unban.own";
-                                            break block45;
+                                            break;
                                         }
                                         v3 = "unmute.own";
-                                        break block45;
+                                        break;
                                     }
                                     v3 = "unwarn.own";
-                                    break block45;
+                                    break;
                                 }
                                 v3 = "ipmute";
-                                break block45;
+                                break;
                             }
                             v3 = "ipban";
-                            break block45;
-lbl136:
-                            // 11 sources
-
-                            v3 = var10_17;
+                            break;
+                                                        v3 = arg14;
                         }
-                        var17_31 /* !! */  = v2.append((String)v3).toString();
-                        var14_24 = var12_21;
-                        var15_27 = new MuteChatCommand((String)var10_17, (String)var17_31 /* !! */ , (CommandManager)var12_21);
-                        var16_30 = false;
-                        v4 = var14_24.BaseCoreGenericHandler;
-                        var18_32 /* !! */  = AbstractCommand.AsyncBackgroundTask_5;
-                        var19_34 = var15_27.getName();
-                        var20_35 = false;
-                        var21_36 = var19_34;
-                        switch (var21_36.hashCode()) {
+                        arg8   = v2.append((String)v3).toString();
+                        arg6 = arg15;
+                        arg17 = new MuteChatCommand((String)arg14, (String)arg8  , (CommandManager)arg15);
+                        v4 = arg6.BaseCoreGenericHandler;
+                        arg9   = AbstractCommand.AsyncBackgroundTask_5;
+                        arg18 = arg17.getName();
+                        arg19 = arg18;
+                        switch (arg19.hashCode()) {
                             case -1320563219: {
-                                if (var21_36.equals("dupeip")) break;
-                                ** break;
+                                if (arg19.equals("dupeip")) break;
+                                break;
                             }
                             case 712910260: {
-                                if (!var21_36.equals("staffhistory")) {
-                                    ** break;
+                                if (!arg19.equals("staffhistory")) {
+                                    break;
                                 }
-                                break block46;
+                                break;
                             }
                             case 926934164: {
-                                if (!var21_36.equals("history")) {
-                                    ** break;
+                                if (!arg19.equals("history")) {
+                                    break;
                                 }
-                                break block47;
-                            }
-                        }
-                        var22_37 = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
-                        v5 = var22_37;
-                        break block48;
+                                break;
+}
+                        arg20 = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
+                        v5 = arg20;
+                        break;
                     }
-                    var22_37 = new String[]{"hist", "litebans:history"};
-                    v5 = var22_37;
-                    break block48;
+                    arg20 = new String[]{"hist", "litebans:history"};
+                    v5 = arg20;
+                    break;
                 }
-                var22_37 = new String[]{"staffhist", "litebans:staffhistory"};
-                v5 = var22_37;
-                break block48;
-lbl171:
-                // 4 sources
-
-                var22_37 = new String[]{"litebans:" + var19_34};
-                v5 = var22_37;
+                arg20 = new String[]{"staffhist", "litebans:staffhistory"};
+                v5 = arg20;
+                break;
+                                arg20 = new String[]{"litebans:" + arg18};
+                v5 = arg20;
             }
-            var23_38 = v5;
-            var12_21.LiteBansModule_31(new LiteBansModule_32(var15_27, v4, null, Arrays.copyOf(var23_38, var23_38.length), 4, null));
-        }
-    }
+            arg21 = v5;
+            arg15.LiteBansModule_31(new LiteBansModule_32(arg17, v4, null, Arrays.copyOf(arg21, arg21.length), 4, null));
+}
 
     @Override
     public void LiteBansModule_31(@Nullable LiteCommand command) {
         ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
         if (command instanceof LiteBansModule_32 && configService.e(((LiteBansModule_32)command).getName())) {
             super.LiteBansModule_31(command);
-        }
-    }
+}
 
     /*
      * Enabled aggressive block sorting
@@ -348,21 +305,16 @@ lbl171:
         if (!(args.length == 0)) {
             CommandSenderWrapper jv_03 = sender;
             String string2 = "litebans.tabcomplete";
-            boolean flag = false;
             CommandSenderWrapper jv_04 = jv_03;
-            boolean flag2 = false;
             if (!(!jv_04.e(string2))) {
                 list = AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(command, string, sender, this.plugin, args);
                 return list;
-            }
-        }
+}
         list = CollectionUtilities.e();
         return list;
     }
 
     private static final void g() {
         e = new String[]{"ban", "litebans:", "ban", "dupeip", "staffhistory", StringDecryptor.BaseCoreGenericHandler("\u777d\u777c\u7766\u7761\u777a\u7767\u776c", 0x51757715), "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", "", "ban-ip", "unban", "unwarn", "tempbanip", "banip", "muteip", "unmute", "tempmuteip", "tempipmute", "tempipban", "unban.own", "unmute.own", "unwarn.own", "ipmute", "ipban", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", "", "ban-ip", "unban", "unwarn", "tempbanip", "banip", "muteip", "unmute", "tempmuteip", "tempipmute", "tempipban", "unban.own", "unmute.own", "unwarn.own", "ipmute", "ipban", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", "", "ban-ip", "unban", "unwarn", "tempbanip", "banip", "muteip", "unmute", "tempmuteip", "tempipmute", "tempipban", "unban.own", "unmute.own", "unwarn.own", "ipmute", "ipban", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", "litebans.tabcomplete"};
-    }
-
-    }
+}
 

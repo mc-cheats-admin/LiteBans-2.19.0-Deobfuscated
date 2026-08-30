@@ -39,6 +39,5 @@ implements Callable {
 
     public Object call() {
         return this.plugin();
-    }
 }
 

@@ -7,6 +7,5 @@ public final class LiteBansModule_378 {
 
     public static final String BaseCoreGenericHandler(@NotNull Object[] objectArray, @NotNull String string) {
         return BaseCoreGenericHandler.BaseCoreGenericHandler(objectArray, string);
-    }
 }
 

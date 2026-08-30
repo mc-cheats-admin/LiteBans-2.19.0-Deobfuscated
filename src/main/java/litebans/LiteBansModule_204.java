@@ -17,12 +17,9 @@ extends MessageHandler {
         Object object = MessageHandler.BaseCoreGenericHandler;
         boolean flag = this.AsyncBackgroundTask_5.length < 2;
         CharSequence charSequence = BlackHandler.LiteBansModule_194("$command add-login <name> <UUID> <IP>");
-        boolean flag2 = false;
         ChatFormatter chatFormatter = object;
-        boolean flag3 = false;
         if (flag) {
             ChatFormatter fo_03 = chatFormatter;
-            boolean flag4 = false;
             fo_03.BaseCoreGenericHandler(charSequence);
             throw new CommandExitException();
         }
@@ -39,12 +36,9 @@ extends MessageHandler {
         Iterator iterator = MessageHandler.BaseCoreGenericHandler;
         boolean flag = ch2.LiteBansModule_31();
         Object object = MessageKey.ServerEventListener;
-        boolean flag2 = false;
         ChatFormatter chatFormatter = iterator;
-        boolean flag3 = false;
         if (flag) {
             ChatFormatter fo_03 = chatFormatter;
-            boolean flag4 = false;
             fo_03.BaseCoreGenericHandler(object);
             throw new CommandExitException();
         }
@@ -72,7 +66,5 @@ extends MessageHandler {
 
     private static final void BaseCoreGenericHandler() {
         e = new String[]{"$command add-login <name> <UUID> <IP>", "Login record(AsyncBackgroundTask_21) added."};
-    }
-
-    }
+}
 

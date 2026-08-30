@@ -79,8 +79,7 @@ implements LiteBansModule_417 {
         }
         finally {
             this.m.set(false);
-        }
-    }
+}
 
     public @NotNull ThreadFactoryBuilder AsyncBackgroundTask_5() {
         ThreadFactoryBuilder threadFactoryBuilder = new ThreadFactoryBuilder().setNameFormat(this.plugin.getName() + "-%1$AsyncBackgroundTask_5").setDaemon(true);
@@ -94,13 +93,10 @@ implements LiteBansModule_417 {
         if (flag) {
             for (PluginModule module : this.plugin.PunishmentTableService()) {
                 module.e();
-            }
-        } else {
+} else {
             for (PluginModule n_03 : this.plugin.PunishmentTableService()) {
                 n_03.BaseCoreGenericHandler();
-            }
-        }
-    }
+}
 
     public void i() {
         if (this.m.get()) {
@@ -123,12 +119,10 @@ implements LiteBansModule_417 {
                 threadPoolExecutor.shutdown();
                 if (!threadPoolExecutor.awaitTermination(2L, TimeUnit.SECONDS)) {
                     threadPoolExecutor.shutdownNow();
-                }
-            }
+}
             catch (InterruptedException interruptedException) {
                 interruptedException.printStackTrace();
-            }
-        }
+}
         this.plugin.getLogger().info(this.e());
         this.g = null;
         this.LiteBansModule_240 = null;
@@ -184,8 +178,5 @@ implements LiteBansModule_417 {
         int n = this.LiteBansModule_31.size();
         if (n > 4 && n % 32 == 0 && n > this.LiteBansModule_401() + 4) {
             this.LiteBansModule_31.clear();
-        }
-    }
-
-    }
+}
 

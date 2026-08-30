@@ -8,6 +8,5 @@ extends LiteBansException_8 {
     public LiteBansModule_257(String string) {
         super("The " + string + " doesn'AsyncBackgroundTask_22 support streaming.");
         this.LiteBansModule_31 = string;
-    }
 }
 

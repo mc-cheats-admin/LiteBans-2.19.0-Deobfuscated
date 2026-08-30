@@ -15,7 +15,5 @@ extends DescHandler {
 
     private static final void BaseCoreGenericHandler() {
         m = new String[]{"time"};
-    }
-
-    }
+}
 

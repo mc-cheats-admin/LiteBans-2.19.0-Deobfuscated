@@ -40,7 +40,6 @@ public final class LiteBansModule_245 {
     public static final byte[] BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull LiteBansModule_324 iX2) {
         byte[] byArray2;
         byte[] byArray3 = byArray2 = byArray;
-        boolean flag = false;
         for (int i = ArrayUtilities.LiteBansModule_31(byArray3); 0 < i; --i) {
             int n = iX2.LiteBansModule_31(i + 1);
             byte by2 = byArray3[i];
@@ -53,12 +52,9 @@ public final class LiteBansModule_245 {
     public static final byte[] BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull LiteBansModule_324 iX2, int n) {
         byte[] byArray2;
         byte[] byArray3 = byArray2 = byArray;
-        boolean flag = false;
-        int n2 = 0;
         while (n2 < n) {
             byte by2;
             int n3 = n2++;
-            boolean flag2 = false;
             int n4 = iX2.LiteBansModule_31(byArray3.length);
             int n5 = iX2.LiteBansModule_31(byArray3.length - 1);
             byArray3[n4] = by2 = byArray3[n5];
@@ -70,7 +66,6 @@ public final class LiteBansModule_245 {
     public static final List LiteBansModule_31(@NotNull List list, @NotNull LiteBansModule_324 iX2) {
         List list2;
         List list3 = list2 = list;
-        boolean flag = false;
         for (int i = CollectionUtilities.LiteBansModule_31(list3); 0 < i; --i) {
             int n = iX2.LiteBansModule_31(i + 1);
             list3.set(n, list3.set(i, list3.get(n)));
@@ -100,16 +95,13 @@ public final class LiteBansModule_245 {
     }
 
     public static final void BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull LiteBansModule_324 iX2, @NotNull Number number) {
-        boolean flag = false;
         byArray[iX2.LiteBansModule_31((int)byArray.length)] = number.byteValue();
     }
 
     public static final List BaseCoreGenericHandler(@NotNull List list, @NotNull LiteBansModule_324 iX2) {
         List list2;
         List list3 = list2 = list;
-        boolean flag = false;
         list3.remove(iX2.LiteBansModule_31(list3.size()));
         return list2;
-    }
 }
 

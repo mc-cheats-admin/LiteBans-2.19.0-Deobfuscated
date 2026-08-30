@@ -60,7 +60,5 @@ public final class LitebansHandler {
         e = "redacted";
         g = "&pluginVersion=";
         BaseCoreGenericHandler = "&CommandThrottleService=";
-    }
-
-    }
+}
 

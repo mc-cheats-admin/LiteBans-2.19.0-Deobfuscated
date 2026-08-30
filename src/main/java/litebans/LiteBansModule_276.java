@@ -252,6 +252,5 @@ implements ProxiedPlayer {
 
     public void transfer(String string, int n) {
         this.plugin(string, n);
-    }
 }
 

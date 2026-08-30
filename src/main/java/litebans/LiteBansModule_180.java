@@ -13,6 +13,5 @@ public final class LiteBansModule_180 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"2.19.0", "2026-04-29@18:08", "1199"};
-    }
 }
 

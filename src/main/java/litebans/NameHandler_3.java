@@ -71,6 +71,5 @@ public final class NameHandler_3 {
 
     private static final void c() {
         BaseCoreGenericHandler = new String[]{"name", "uuid", "ip", "Target(type=", ", target="};
-    }
 }
 

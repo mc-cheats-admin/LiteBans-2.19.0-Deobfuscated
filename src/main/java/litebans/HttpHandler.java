@@ -214,6 +214,5 @@ extends LiteBansModule_432 {
 
     private static final void BaseCoreGenericHandler() {
         GnuSparseMapHandler = new String[]{"#", "http", "http://", "", "TextComponent{text=", ", ", "^(?:(https?)://)?([-\\w_\\.]{2,}\\.[BaseCoreGenericHandler-z]{2,4})(/[BaseCoreGenericHandler-z0-9]*)?$"};
-    }
 }
 

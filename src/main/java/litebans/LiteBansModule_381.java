@@ -15,6 +15,5 @@ public class LiteBansModule_381 {
             return ((CommandSourceStack)object).permissions().hasPermission((Permission)Permission.Atom.create((String)string));
         }
         return false;
-    }
 }
 

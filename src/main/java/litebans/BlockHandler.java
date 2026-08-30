@@ -14,14 +14,9 @@ public final class BlockHandler {
                 }
                 catch (Throwable throwable2) {
                     LiteBansModule_36.BaseCoreGenericHandler(throwable, throwable2);
-                }
-            }
-        }
-    }
+}
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"block"};
-    }
-
-    }
+}
 

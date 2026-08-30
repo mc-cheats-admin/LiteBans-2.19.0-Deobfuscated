@@ -17,6 +17,5 @@ implements LiteBansModule_200 {
             this.e.add(aK2);
         }
         return true;
-    }
 }
 

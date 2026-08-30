@@ -9,6 +9,5 @@ extends RuntimeException {
 
     public LiteBansException_4(@Nullable String string) {
         super(string);
-    }
 }
 

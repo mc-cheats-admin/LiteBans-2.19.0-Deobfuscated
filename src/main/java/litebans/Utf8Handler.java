@@ -15,8 +15,7 @@ public abstract class Utf8Handler {
             }
             catch (UnsupportedCharsetException unsupportedCharsetException) {
                 // empty catch block
-            }
-        }
+}
         boolean flag = Utf8Handler.BaseCoreGenericHandler(charset.name());
         return new LiteBansModule_222(charset, flag);
     }
@@ -33,6 +32,5 @@ public abstract class Utf8Handler {
             return true;
         }
         return false;
-    }
 }
 

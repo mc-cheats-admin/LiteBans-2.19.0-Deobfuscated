@@ -150,6 +150,5 @@ public final class LiteBansType {
 
     private static final void LiteBansModule_31() {
         BroadcastService = new String[]{"", "0123456789AaBbCcDdEeFfKkLlMmNnOoRrXx", "#", "%08x", "string cannot be null", "Illegal hex string ", "\u00a7x", "Could not parse ChatColor ", "Name is null", "No enum constant ", " + ", "Cannot get ordinal of hex color", "(?i)", "[0-9A-FK-ORX]", "black", "dark_blue", "dark_green", "dark_aqua", "dark_red", "dark_purple", "gold", "gray", "dark_gray", "blue", "green", "aqua", "red", "light_purple", "yellow", "white", "obfuscated", "bold", "strikethrough", "underline", "italic", StringDecryptor.BaseCoreGenericHandler("\u71b5\u71a2\u71b4\u71a2\u71b3", 0x111C71C7)};
-    }
 }
 

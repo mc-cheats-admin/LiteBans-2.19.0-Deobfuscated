@@ -68,8 +68,7 @@ implements LiteBansModule_350 {
         String string = System.getProperty("hikaricp.configurationFile");
         if (string != null) {
             this.e(string);
-        }
-    }
+}
 
     @Override
     public String AsyncBackgroundTask_5() {
@@ -95,8 +94,7 @@ implements LiteBansModule_350 {
                 throw new IllegalArgumentException("connectionTimeout cannot be less than " + c + "ms");
             }
             this.i = l3;
-        }
-    }
+}
 
     @Override
     public long BaseCoreGenericHandler() {
@@ -330,8 +328,7 @@ implements LiteBansModule_350 {
             }
             catch (Exception exception) {
                 throw new RuntimeException("Failed to copy HikariConfig state: " + exception.getMessage(), exception);
-            }
-        }
+}
         aB2.PunishmentTableService = false;
     }
 
@@ -352,16 +349,14 @@ implements LiteBansModule_350 {
         if (this.O != null) {
             if (this.z != null) {
                 LiteBansModule_401.c("%AsyncBackgroundTask_21 - using dataSource and ignoring ", new Object[]{this.LiteBansModule_31});
-            }
-        } else if (this.z != null) {
+} else if (this.z != null) {
             if (this.LiteBansModule_240 != null) {
                 LiteBansModule_401.BaseCoreGenericHandler("%AsyncBackgroundTask_21 - cannot use driverClassName and dataSourceClassName ", new Object[]{this.LiteBansModule_31});
                 throw new IllegalStateException("cannot use driverClassName and dataSourceClassName ");
             }
             if (this.AsyncBackgroundTask_21 != null) {
                 LiteBansModule_401.c("{} - using dataSourceClassName and ignoring ", new Object[]{this.LiteBansModule_31});
-            }
-        } else if (this.AsyncBackgroundTask_21 == null && this.LiteBansModule_433 == null) {
+} else if (this.AsyncBackgroundTask_21 == null && this.LiteBansModule_433 == null) {
             if (this.LiteBansModule_240 != null) {
                 LiteBansModule_401.BaseCoreGenericHandler("{} - jdbcUrl is required with ", new Object[]{this.LiteBansModule_31});
                 throw new IllegalArgumentException("jdbcUrl is required with ");
@@ -372,8 +367,7 @@ implements LiteBansModule_350 {
         this.n();
         if (LiteBansModule_401.BaseCoreGenericHandler() || ServerSyncService) {
             this.g();
-        }
-    }
+}
 
     private final void n() {
         if (this.K != 0L && this.K < TimeUnit.SECONDS.toMillis(30L)) {
@@ -414,14 +408,12 @@ implements LiteBansModule_350 {
             this.H = LiteBansModule_430;
         } else if (this.H != LiteBansModule_430 && this.H != 0L && this.DatabaseMonitorService == this.r) {
             LiteBansModule_401.c("%AsyncBackgroundTask_21 - idleTimeout has been set but has no effect because the pool is operating CommandExitException BaseCoreGenericHandler fixed size ", new Object[]{this.LiteBansModule_31});
-        }
-    }
+}
 
     private final void HoverTextFormatter() {
         if (this.PunishmentTableService) {
             throw new IllegalStateException("The configuration of the pool is sealed once started. Use HikariConfigMXBean for runtime ");
-        }
-    }
+}
 
     private final void g() {
         LiteBansModule_401.LiteBansModule_31("%AsyncBackgroundTask_21 - configuration:", new Object[]{this.LiteBansModule_31});
@@ -452,26 +444,23 @@ implements LiteBansModule_350 {
                 LiteBansModule_401.LiteBansModule_31("{}{}", new Object[]{string + "............................................... + ".substring(0, 32), object});
             }
             catch (Exception exception) {}
-        }
-    }
+}
 
     private final void e(String string) {
-        block15: {
+{
             File file = new File(string);
             try (InputStream inputStream = file.isFile() ? new FileInputStream(file) : this.getClass().getResourceAsStream(string);){
                 if (inputStream != null) {
                     Properties properties = new Properties();
                     properties.load(inputStream);
                     SetHandler.BaseCoreGenericHandler(this, properties);
-                    break block15;
+                    break;
                 }
                 throw new IllegalArgumentException("Cannot find property file: " + string);
             }
             catch (IOException iOException) {
                 throw new RuntimeException("Failed to read property file", iOException);
-            }
-        }
-    }
+}
 
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
@@ -484,8 +473,7 @@ implements LiteBansModule_350 {
                 String string2 = String.valueOf(Integer.getInteger("com.zaxxer.hikari.pool_number", 0) + 1);
                 System.setProperty("com.zaxxer.hikari.pool_number", string2);
                 return "HikariPool-" + string2;
-            }
-        }
+}
         catch (AccessControlException accessControlException) {
             ThreadLocalRandom threadLocalRandom = ThreadLocalRandom.current();
             StringBuilder stringBuilder = new StringBuilder("HikariPool-");
@@ -494,8 +482,7 @@ implements LiteBansModule_350 {
             }
             LiteBansModule_401.AsyncBackgroundTask_5("assigned random pool name '{}' (security manager prevented access to system properties)", new Object[]{stringBuilder});
             return stringBuilder.toString();
-        }
-    }
+}
 
     static {
         B = 10;
@@ -508,6 +495,5 @@ implements LiteBansModule_350 {
         LiteBansModule_430 = TimeUnit.MINUTES.toMillis(10L);
         n = TimeUnit.MINUTES.toMillis(30L);
         ServerSyncService = false;
-    }
 }
 

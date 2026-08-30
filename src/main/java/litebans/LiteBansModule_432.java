@@ -20,9 +20,7 @@ public abstract class LiteBansModule_432 {
         if (v_02.CommandThrottleService() != null) {
             for (LiteBansModule_432 v_03 : v_02.CommandThrottleService()) {
                 this.plugin(v_03.PunishmentTableService());
-            }
-        }
-    }
+}
 
     public void BaseCoreGenericHandler(LiteBansModule_432 v_02, NoneHandler_4 io_02, boolean flag) {
         if (io_02 == NoneHandler_4.AsyncBackgroundTask_5 || io_02 == NoneHandler_4.LiteBansModule_194) {
@@ -31,8 +29,7 @@ public abstract class LiteBansModule_432 {
             }
             if (flag || this.c == null) {
                 this.plugin(v_02.LiteBansModule_240());
-            }
-        }
+}
         if (io_02 == NoneHandler_4.e || io_02 == NoneHandler_4.LiteBansModule_194) {
             if (flag || !this.g.LiteBansModule_240()) {
                 this.plugin(v_02.Utf8Handler_2());
@@ -60,9 +57,7 @@ public abstract class LiteBansModule_432 {
             }
             if (flag || this.LiteBansModule_240 == null) {
                 this.LiteBansModule_31(v_02.AsyncBackgroundTask_21());
-            }
-        }
-    }
+}
 
     public abstract LiteBansModule_432 PunishmentTableService();
 
@@ -207,8 +202,7 @@ public abstract class LiteBansModule_432 {
         }
         if (ka_02.n() != null) {
             this.plugin(ka_02.n());
-        }
-    }
+}
 
     public void BaseCoreGenericHandler(List list) {
         for (LiteBansModule_432 v_02 : list) {
@@ -235,9 +229,7 @@ public abstract class LiteBansModule_432 {
         if (this.LiteBansModule_194 != null) {
             for (LiteBansModule_432 v_02 : this.LiteBansModule_194) {
                 v_02.BaseCoreGenericHandler(stringBuilder);
-            }
-        }
-    }
+}
 
     void LiteBansModule_31(StringBuilder stringBuilder) {
         stringBuilder.append(this.ServerSyncService());
@@ -255,8 +247,7 @@ public abstract class LiteBansModule_432 {
         }
         if (this.n()) {
             stringBuilder.append(LiteBansType.LiteBansModule_31);
-        }
-    }
+}
 
     public void LiteBansModule_31(String string) {
         this.LiteBansModule_240 = string;
@@ -360,7 +351,5 @@ public abstract class LiteBansModule_432 {
 
     private static final void c() {
         e = new String[]{"BaseComponent(style=", ", insertion=", ", extra=", ", clickEvent=", ", hoverEvent=", ", reset=", ")"};
-    }
-
-    }
+}
 

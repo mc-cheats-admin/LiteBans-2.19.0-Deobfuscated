@@ -9,7 +9,6 @@ public final class LiteBansModule_121 {
 
     public final DescHandler BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @Nullable String string, @NotNull String string2, @NotNull UuidHandler jR2, boolean flag, @Nullable String string3, boolean flag2, @NotNull Number number, @NotNull Number number2) {
         LiteBansModule_82 ch3 = ch2;
-        boolean flag3 = false;
         return new DescHandler(ch2, string, jR2, flag, new AllHandler(ch3.e(), string2), string3, flag2, number, number2);
     }
 
@@ -37,6 +36,5 @@ public final class LiteBansModule_121 {
 
     public /* synthetic */ LiteBansModule_121(LiteBansModule_14 aJ2) {
         this();
-    }
 }
 

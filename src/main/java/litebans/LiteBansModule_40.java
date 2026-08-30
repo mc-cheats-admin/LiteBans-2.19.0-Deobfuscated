@@ -11,10 +11,8 @@ extends LiteBansModule_60 {
     public LiteBansModule_40 BaseCoreGenericHandler(boolean flag) {
         LiteBansModule_40 b92;
         LiteBansModule_40 b93 = b92 = this;
-        boolean flag2 = false;
         LiteBansModule_60 bT2 = this;
         char c = flag ? (char)'1' : '0';
-        boolean flag3 = false;
         bT2.BaseCoreGenericHandler(String.valueOf(c));
         return b92;
     }
@@ -26,6 +24,5 @@ extends LiteBansModule_60 {
 
     public /* synthetic */ LiteBansModule_40(LiteBansModule_82 ch2, PreparedStatement preparedStatement, String string, LiteBansModule_14 aJ2) {
         this(ch2, preparedStatement, string);
-    }
 }
 

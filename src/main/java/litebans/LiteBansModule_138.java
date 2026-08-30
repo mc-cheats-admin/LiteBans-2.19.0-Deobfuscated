@@ -33,6 +33,5 @@ public final class LiteBansModule_138 {
 
     public LiteBansModule_138() {
         this(false, false, 3, null);
-    }
 }
 

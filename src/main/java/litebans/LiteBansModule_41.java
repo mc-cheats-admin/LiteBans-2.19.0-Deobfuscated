@@ -16,6 +16,5 @@ implements CommandExecutor {
         CommandSenderWrapper sender = this.plugin.BaseCoreGenericHandler(commandSender);
         this.plugin(sender, command.getName(), args);
         return true;
-    }
 }
 

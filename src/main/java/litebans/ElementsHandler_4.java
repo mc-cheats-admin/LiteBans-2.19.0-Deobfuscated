@@ -18,9 +18,8 @@ LiteBansModule_122 {
     @Override
     public boolean contains(Object object) {
         boolean flag;
-        block3: {
+{
             Iterable iterable = this;
-            boolean flag2 = false;
             if (iterable instanceof Collection && ((Collection)iterable).isEmpty()) {
                 flag = false;
             } else {
@@ -28,23 +27,20 @@ LiteBansModule_122 {
                 while (iterator.hasNext()) {
                     Object t2;
                     Object t3 = t2 = iterator.next();
-                    boolean flag3 = false;
                     if (!ObjectUtilities.BaseCoreGenericHandler(t3, object)) continue;
                     flag = true;
-                    break block3;
+                    break;
                 }
                 flag = false;
-            }
-        }
+}
         return flag;
     }
 
     public boolean containsAll(@NotNull Collection collection) {
         boolean flag;
-        block3: {
+{
             ObjectUtilities.BaseCoreGenericHandler((Object)collection, "elements");
             Iterable iterable = collection;
-            boolean flag2 = false;
             if (((Collection)iterable).isEmpty()) {
                 flag = true;
             } else {
@@ -52,14 +48,12 @@ LiteBansModule_122 {
                 while (iterator.hasNext()) {
                     Object t2;
                     Object t3 = t2 = iterator.next();
-                    boolean flag3 = false;
                     if (this.contains(t3)) continue;
                     flag = false;
-                    break block3;
+                    break;
                 }
                 flag = true;
-            }
-        }
+}
         return flag;
     }
 
@@ -119,7 +113,5 @@ LiteBansModule_122 {
 
     private static final void LiteBansModule_31() {
         BaseCoreGenericHandler = new String[]{"elements", ", ", "[", "]", "array", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "Operation is not supported for read-only collection", "(this Collection)"};
-    }
-
-    }
+}
 

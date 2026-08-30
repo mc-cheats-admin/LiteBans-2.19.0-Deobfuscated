@@ -6,6 +6,5 @@ public final class ProxyResultSet {
 
     public /* synthetic */ ProxyResultSet(LiteBansModule_14 aJ2) {
         this();
-    }
 }
 

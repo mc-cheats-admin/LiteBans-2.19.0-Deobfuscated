@@ -14,8 +14,7 @@ implements LiteBansModule_252 {
     public NmsClassReflector() {
         if (LiteBansModule_31) {
             this.c = new LiteBansModule_319();
-        }
-    }
+}
 
     @Override
     public Object BaseCoreGenericHandler(CharSequence charSequence) {
@@ -36,7 +35,6 @@ implements LiteBansModule_252 {
 
     static {
         NmsClassReflector.BaseCoreGenericHandler();
-        boolean flag = false;
         try {
             Class<?> clazz = Class.forName("net.minecraft.class_11341");
             clazz.getMethod("method_71360", String.class);
@@ -49,6 +47,5 @@ implements LiteBansModule_252 {
 
     private static final void BaseCoreGenericHandler() {
         BaseCoreGenericHandler = new String[]{"net.minecraft.class_11341", "method_71360"};
-    }
 }
 

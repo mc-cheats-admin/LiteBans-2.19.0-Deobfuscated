@@ -30,7 +30,6 @@ implements LiteBansModule_51 {
     public LiteBansModule_302 c() {
         LiteBansModule_302 ie2;
         LiteBansModule_302 ie3 = ie2 = this;
-        boolean flag = false;
         ServerLoginConnectionEvents.QUERY_START.register(ie3::BaseCoreGenericHandler);
         return ie2;
     }
@@ -51,7 +50,5 @@ implements LiteBansModule_51 {
     @Override
     public LiteBansModule_175 BaseCoreGenericHandler() {
         return this.c();
-    }
-
-    }
+}
 

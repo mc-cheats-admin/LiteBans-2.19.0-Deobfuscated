@@ -18,6 +18,5 @@ implements LiteBansModule_178 {
     @Override
     public Object BaseCoreGenericHandler(Object object) {
         return this.plugin((Map.Entry)object);
-    }
 }
 

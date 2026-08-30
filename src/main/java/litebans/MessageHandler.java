@@ -17,22 +17,18 @@ implements Runnable {
     }
 
     public final ConfigService LiteBansModule_31() {
-        boolean flag = false;
         return (ConfigService)this.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
     }
 
     public final PunishmentTableService e() {
-        boolean flag = false;
         return (PunishmentTableService)this.LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class);
     }
 
     public final BroadcastService BaseCoreGenericHandler() {
-        boolean flag = false;
         return (BroadcastService)this.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
     }
 
     public final DatabaseMonitorService g() {
-        boolean flag = false;
         return (DatabaseMonitorService)this.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
     }
 
@@ -60,6 +56,5 @@ implements Runnable {
 
     public static final /* synthetic */ ThreadLocal c() {
         return LiteBansModule_31;
-    }
 }
 

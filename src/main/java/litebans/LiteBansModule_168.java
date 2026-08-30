@@ -24,6 +24,5 @@ public final class LiteBansModule_168 {
 
     public final LiteBansModule_289[] BaseCoreGenericHandler() {
         return this.plugin;
-    }
 }
 

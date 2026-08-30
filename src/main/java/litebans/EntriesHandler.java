@@ -27,6 +27,5 @@ implements Serializable {
 
     private static final void LiteBansModule_31() {
         e = new String[]{"entries"};
-    }
 }
 
