@@ -1,0 +1,59 @@
+package litebans;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+public abstract class LiteBansModule_223
+implements ResultSet {
+    protected final 0a000Handler c;
+    protected final LiteBansModule_415 BaseCoreGenericHandler;
+    final ResultSet LiteBansModule_31;
+
+    protected LiteBansModule_223(0a000Handler c22, LiteBansModule_415 lJ2, ResultSet resultSet) {
+        this.c = c22;
+        this.plugin = lJ2;
+        this.LiteBansModule_31 = resultSet;
+    }
+
+    final SQLException BaseCoreGenericHandler(SQLException sQLException) {
+        return this.c.BaseCoreGenericHandler(sQLException);
+    }
+
+    public String toString() {
+        return this.getClass().getSimpleName() + '@' + System.identityHashCode(this) + " wrapping " + this.LiteBansModule_31;
+    }
+
+    @Override
+    public final Statement getStatement() {
+        return this.plugin;
+    }
+
+    @Override
+    public void updateRow() {
+        this.c.LiteBansModule_31();
+        this.LiteBansModule_31.updateRow();
+    }
+
+    @Override
+    public void insertRow() {
+        this.c.LiteBansModule_31();
+        this.LiteBansModule_31.insertRow();
+    }
+
+    @Override
+    public void deleteRow() {
+        this.c.LiteBansModule_31();
+        this.LiteBansModule_31.deleteRow();
+    }
+
+    public final Object unwrap(Class clazz) {
+        if (clazz.isInstance(this.LiteBansModule_31)) {
+            return this.LiteBansModule_31;
+        }
+        if (this.LiteBansModule_31 != null) {
+            return this.LiteBansModule_31.unwrap(clazz);
+        }
+        throw new SQLException("Wrapped ResultSet is not HikariDataSource instance of " + clazz);
+    }
+}
+

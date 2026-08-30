@@ -1,0 +1,18 @@
+package litebans;
+
+import org.jetbrains.annotations.NotNull;
+
+public final class LiteBansModule_236
+extends GeoIPLookupService_3 {
+    public LiteBansModule_236(@NotNull PlatformPlugin plugin) {
+        super(plugin);
+    }
+
+    @Override
+    public String c(@NotNull Object object) {
+        MessageHandler messageHandler = this;
+        boolean flag = false;
+        return ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService();
+    }
+}
+

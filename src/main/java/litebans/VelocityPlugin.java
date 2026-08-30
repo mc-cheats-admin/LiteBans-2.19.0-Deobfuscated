@@ -21,50 +21,31 @@ import java.util.Map;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
-import litebans.a_0;
-import litebans.bd_0;
-import litebans.cm_0;
-import litebans.cv_0;
-import litebans.di_0;
-import litebans.ec_0;
-import litebans.em_0;
-import litebans.gn_0;
-import litebans.h_0;
-import litebans.hb_0;
-import litebans.hl;
-import litebans.hz_0;
-import litebans.j_0;
-import litebans.jv_0;
-import litebans.ln;
-import litebans.n_0;
-import litebans.o_0;
 import org.slf4j.Logger;
 
-@Plugin(id="litebans", name="LiteBans", version="2.19.0", url="https://www.spigotmc.org/resources/litebans.3715/", description="Lightweight banning plugin with full UUID ", authors={"Ruan"})
+@Plugin(SQLiteDriverHandler_4="litebans", name="LiteBans", version="2.19.0", url="https://www.spigotmc.org/resources/litebans.3715/", description="Lightweight banning plugin with full UUID ", authors={"Ruan"})
 public class VelocityPlugin
-implements di_0 {
-    private final bd_0 f = new bd_0(this);
+implements PlatformPlugin {
+    private final LiteBansCore LiteBansModule_194 = new LiteBansCore(this);
     public final ProxyServer c;
-    private final cv_0 e;
-    private final Path d;
+    private final WarningHandler e;
+    private final Path AsyncBackgroundTask_5;
     private final List g = Collections.synchronizedList(new ArrayList());
-    private static /* synthetic */ String[] b;
-
     @Inject
     public VelocityPlugin(ProxyServer proxyServer, Logger logger, @DataDirectory Path path) {
         this.c = proxyServer;
-        this.e = new cv_0(logger, this.getName());
-        this.d = path;
+        this.e = new WarningHandler(logger, this.getName());
+        this.AsyncBackgroundTask_5 = path;
     }
 
     @Subscribe
-    public void a(ProxyInitializeEvent proxyInitializeEvent) {
-        this.j();
+    public void BaseCoreGenericHandler(ProxyInitializeEvent proxyInitializeEvent) {
+        this.GnuSparseMapHandler();
     }
 
     @Subscribe
-    public void a(ProxyShutdownEvent proxyShutdownEvent) {
-        this.d();
+    public void BaseCoreGenericHandler(ProxyShutdownEvent proxyShutdownEvent) {
+        this.AsyncBackgroundTask_5();
     }
 
     /*
@@ -81,74 +62,74 @@ implements di_0 {
     }
 
     @Override
-    public gn_0 h() {
-        return this.f.o;
+    public DatabaseService LiteBansModule_240() {
+        return this.LiteBansModule_194.BroadcastService;
     }
 
     @Override
-    public n_0[] k() {
-        return this.f.j();
+    public PluginModule[] Utf8Handler_2() {
+        return this.LiteBansModule_194.GnuSparseMapHandler();
     }
 
     @Override
-    public void d() {
-        this.f.i();
+    public void AsyncBackgroundTask_5() {
+        this.LiteBansModule_194.i();
     }
 
     @Override
-    public boolean a(n_0 n_02) {
-        boolean bl = n_02.d();
-        if (bl) {
-            if (n_02 instanceof o_0) {
-                this.a((j_0)n_02);
+    public boolean BaseCoreGenericHandler(PluginModule module) {
+        boolean flag = module.AsyncBackgroundTask_5();
+        if (flag) {
+            if (module instanceof LiteBansModule_431) {
+                this.plugin((ConfigurationManager)module);
             }
-            if (n_02 instanceof h_0) {
-                this.a((a_0)n_02);
+            if (module instanceof LiteBansModule_249) {
+                this.plugin((CommandManager)module);
             }
         }
-        return bl;
+        return flag;
     }
 
     @Override
-    public hb_0 f() {
-        return this.f.k;
+    public StackTraceAnalyzer LiteBansModule_194() {
+        return this.LiteBansModule_194.Utf8Handler_2;
     }
 
     @Override
-    public a_0 z() {
-        return this.f.e;
+    public CommandManager z() {
+        return this.LiteBansModule_194.e;
     }
 
     @Override
-    public j_0 b() {
-        return this.f.f;
+    public ConfigurationManager LiteBansModule_31() {
+        return this.LiteBansModule_194.LiteBansModule_194;
     }
 
     @Override
-    public void a(a_0 a_02) {
-        this.f.e = a_02;
+    public void BaseCoreGenericHandler(CommandManager commandManager) {
+        this.LiteBansModule_194.e = commandManager;
     }
 
     @Override
-    public jv_0 y() {
-        return this.f.g;
+    public CommandSenderWrapper HoverTextFormatter() {
+        return this.LiteBansModule_194.g;
     }
 
     @Override
-    public jv_0 v() {
-        return this.a(this.c.getConsoleCommandSource());
+    public CommandSenderWrapper CommandThrottleService() {
+        return this.plugin(this.c.getConsoleCommandSource());
     }
 
     @Override
-    public gn_0 o() {
-        gn_0 gn_02;
-        this.f.o = gn_02 = this.a(new File(this.getDataFolder(), "config.yml"));
+    public DatabaseService BroadcastService() {
+        DatabaseService gn_02;
+        this.LiteBansModule_194.BroadcastService = gn_02 = this.plugin(new File(this.getDataFolder(), "config.yml"));
         return gn_02;
     }
 
     @Override
     public File getDataFolder() {
-        return this.d.toFile();
+        return this.AsyncBackgroundTask_5.toFile();
     }
 
     @Override
@@ -157,18 +138,18 @@ implements di_0 {
     }
 
     @Override
-    public n_0 a(Class clazz) {
-        return this.f.b(clazz);
+    public PluginModule BaseCoreGenericHandler(Class clazz) {
+        return this.LiteBansModule_194.LiteBansModule_31(clazz);
     }
 
     @Override
-    public n_0 b(Class clazz) {
-        return this.f.a(clazz);
+    public PluginModule LiteBansModule_31(Class clazz) {
+        return this.LiteBansModule_194.BaseCoreGenericHandler(clazz);
     }
 
     @Override
-    public n_0[] p() {
-        return this.f.d;
+    public PluginModule[] PunishmentTableService() {
+        return this.LiteBansModule_194.AsyncBackgroundTask_5;
     }
 
     @Override
@@ -177,43 +158,43 @@ implements di_0 {
     }
 
     @Override
-    public int a() {
-        return this.f.l();
+    public int BaseCoreGenericHandler() {
+        return this.LiteBansModule_194.LiteBansModule_401();
     }
 
     @Override
-    public jv_0[] q() {
-        return this.f.b();
+    public CommandSenderWrapper[] q() {
+        return this.LiteBansModule_194.LiteBansModule_31();
     }
 
     @Override
-    public Map w() {
-        return this.f.b;
+    public Map DatabaseMonitorService() {
+        return this.LiteBansModule_194.LiteBansModule_31;
     }
 
     @Override
-    public ThreadPoolExecutor x() {
-        ThreadPoolExecutor threadPoolExecutor = this.f.h;
-        if ((threadPoolExecutor == null || threadPoolExecutor.isShutdown()) && (this.f.j.get() || this.f.m.get())) {
-            ThreadFactoryBuilder threadFactoryBuilder = this.f.d();
-            return this.f.a(threadFactoryBuilder);
+    public ThreadPoolExecutor LiteBansModule_433() {
+        ThreadPoolExecutor threadPoolExecutor = this.LiteBansModule_194.LiteBansModule_240;
+        if ((threadPoolExecutor == null || threadPoolExecutor.isShutdown()) && (this.LiteBansModule_194.GnuSparseMapHandler.get() || this.LiteBansModule_194.m.get())) {
+            ThreadFactoryBuilder threadFactoryBuilder = this.LiteBansModule_194.AsyncBackgroundTask_5();
+            return this.LiteBansModule_194.BaseCoreGenericHandler(threadFactoryBuilder);
         }
         return threadPoolExecutor;
     }
 
     @Override
     public long g() {
-        return this.f.h();
+        return this.LiteBansModule_194.LiteBansModule_240();
     }
 
     @Override
-    public byte t() {
+    public byte AsyncBackgroundTask_22() {
         return 2;
     }
 
     @Override
-    public ec_0 i() {
-        return new cm_0(this);
+    public LiteBansModule_158 i() {
+        return new LiteBansModule_90(this);
     }
 
     @Override
@@ -222,24 +203,24 @@ implements di_0 {
     }
 
     @Override
-    public void j() {
-        this.f.c();
-        this.f.k();
+    public void GnuSparseMapHandler() {
+        this.LiteBansModule_194.c();
+        this.LiteBansModule_194.Utf8Handler_2();
     }
 
     @Override
     public boolean isEnabled() {
-        return this.f.p;
+        return this.LiteBansModule_194.PunishmentTableService;
     }
 
     @Override
     public boolean n() {
-        return this.f.p;
+        return this.LiteBansModule_194.PunishmentTableService;
     }
 
     @Override
-    public boolean s() {
-        return this.f.n.get();
+    public boolean AsyncBackgroundTask_21() {
+        return this.LiteBansModule_194.n.get();
     }
 
     @Override
@@ -248,49 +229,49 @@ implements di_0 {
     }
 
     @Override
-    public boolean u() {
+    public boolean ServerSyncService() {
         return false;
     }
 
     @Override
-    public boolean l() {
+    public boolean LiteBansModule_401() {
         return true;
     }
 
     @Override
-    public gn_0 a(File file) {
-        return this.f.i.a(this, file);
+    public DatabaseService BaseCoreGenericHandler(File file) {
+        return this.LiteBansModule_194.i.BaseCoreGenericHandler(this, file);
     }
 
     @Override
-    public void b(em_0[] em_0Array) {
-        for (em_0 em_02 : em_0Array) {
+    public void LiteBansModule_31(LiteBansModule_175[] em_0Array) {
+        for (LiteBansModule_175 em_02 : em_0Array) {
             this.c.getEventManager().register((Object)this, (Object)em_02);
         }
     }
 
     @Override
-    public boolean a(String string, Supplier supplier) {
-        return this.f.a(string, supplier);
+    public boolean BaseCoreGenericHandler(String string, Supplier supplier) {
+        return this.LiteBansModule_194.BaseCoreGenericHandler(string, supplier);
     }
 
     @Override
     public void c(Runnable runnable) {
-        this.a(runnable);
+        this.plugin(runnable);
     }
 
     @Override
-    public void b(Runnable runnable, long l3) {
-        this.a(runnable, l3);
+    public void LiteBansModule_31(Runnable runnable, long l3) {
+        this.plugin(runnable, l3);
     }
 
     @Override
-    public void a(Runnable runnable) {
-        this.x().execute(runnable);
+    public void BaseCoreGenericHandler(Runnable runnable) {
+        this.LiteBansModule_433().execute(runnable);
     }
 
     @Override
-    public void a(Runnable runnable, long l3) {
+    public void BaseCoreGenericHandler(Runnable runnable, long l3) {
         if (l3 < 0L) {
             throw new IllegalArgumentException("Invalid delay: " + l3);
         }
@@ -299,17 +280,17 @@ implements di_0 {
     }
 
     @Override
-    public void b(Runnable runnable) {
-        this.a(runnable);
+    public void LiteBansModule_31(Runnable runnable) {
+        this.plugin(runnable);
     }
 
     @Override
-    public void a(Runnable runnable, long l3, long l5) {
-        this.b(runnable, l3, l5);
+    public void BaseCoreGenericHandler(Runnable runnable, long l3, long l5) {
+        this.LiteBansModule_31(runnable, l3, l5);
     }
 
     @Override
-    public void b(Runnable runnable, long l3, long l5) {
+    public void LiteBansModule_31(Runnable runnable, long l3, long l5) {
         this.c();
         this.g.add(this.c.getScheduler().buildTask((Object)this, runnable).delay(l3 * 50L, TimeUnit.MILLISECONDS).repeat(l5 * 50L, TimeUnit.MILLISECONDS).schedule());
     }
@@ -325,18 +306,18 @@ implements di_0 {
     }
 
     @Override
-    public void a(String string) {
-        gn_0.a(this.getDataFolder(), string, null, false);
+    public void BaseCoreGenericHandler(String string) {
+        DatabaseService.BaseCoreGenericHandler(this.getDataFolder(), string, null, false);
     }
 
     @Override
-    public void a(ln ln2) {
-        this.f.i = ln2;
+    public void BaseCoreGenericHandler(LiteBansModule_417 ln2) {
+        this.LiteBansModule_194.i = ln2;
     }
 
     @Override
-    public void a(j_0 j_02) {
-        this.f.f = j_02;
+    public void BaseCoreGenericHandler(ConfigurationManager j_02) {
+        this.LiteBansModule_194.LiteBansModule_194 = j_02;
     }
 
     @Override
@@ -345,17 +326,17 @@ implements di_0 {
     }
 
     @Override
-    public void a(em_0[] em_0Array) {
-        for (em_0 em_02 : em_0Array) {
+    public void BaseCoreGenericHandler(LiteBansModule_175[] em_0Array) {
+        for (LiteBansModule_175 em_02 : em_0Array) {
             this.c.getEventManager().unregisterListener((Object)this, (Object)em_02);
         }
     }
 
     @Override
-    public jv_0 b(Object object) {
+    public CommandSenderWrapper LiteBansModule_31(Object object) {
         if (!(object instanceof CommandSource)) {
-            if (object instanceof jv_0) {
-                return (jv_0)this.f.b.remove(((jv_0)object).i());
+            if (object instanceof CommandSenderWrapper) {
+                return (CommandSenderWrapper)this.LiteBansModule_194.LiteBansModule_31.remove(((CommandSenderWrapper)object).i());
             }
             throw new IllegalArgumentException();
         }
@@ -363,42 +344,35 @@ implements di_0 {
         if (object instanceof Player) {
             string = ((Player)object).getUsername();
         }
-        return (jv_0)this.f.b.remove(string);
+        return (CommandSenderWrapper)this.LiteBansModule_194.LiteBansModule_31.remove(string);
     }
 
     @Override
-    public jv_0 a(Object object) {
-        jv_0 jv_02;
+    public CommandSenderWrapper BaseCoreGenericHandler(Object object) {
+        CommandSenderWrapper sender;
         if (!(object instanceof CommandSource)) {
-            if (object instanceof jv_0) {
-                return (jv_0)object;
+            if (object instanceof CommandSenderWrapper) {
+                return (CommandSenderWrapper)object;
             }
             throw new IllegalArgumentException();
         }
         CommandSource commandSource = (CommandSource)object;
-        Map map = this.f.b;
+        Map map = this.LiteBansModule_194.LiteBansModule_31;
         String string = "[Console]";
         if (commandSource instanceof Player) {
             string = ((Player)commandSource).getUsername();
         }
-        if ((jv_02 = (jv_0)map.get(string)) == null || jv_02.c() != commandSource) {
-            jv_02 = new hz_0(this, commandSource);
-            this.f.f();
-            map.put(string, jv_02);
+        if ((sender = (CommandSenderWrapper)map.get(string)) == null || sender.c() != commandSource) {
+            sender = new LiteBansModule_285(this, commandSource);
+            this.LiteBansModule_194.LiteBansModule_194();
+            map.put(string, sender);
         }
-        return jv_02;
+        return sender;
     }
 
-    public bd_0 b() {
-        return this.f;
+    public LiteBansCore LiteBansModule_31() {
+        return this.LiteBansModule_194;
     }
 
-    private static final void a() {
-        b = new String[]{"config.yml", "LiteBans", "2.19.0", "Invalid delay: ", "[Console]", "[Console]"};
     }
-
-    static {
-        VelocityPlugin.a();
-    }
-}
 

@@ -18,7 +18,7 @@ public class Events$Listener {
     }
 
     private static /* synthetic */ void $$$reportNull$$$0(int n) {
-        throw new IllegalArgumentException(String.format("Argument for @NotNull parameter '%s' of %s.%s must not be null", "message", "litebans/api/Events$Listener", "broadcastSent"));
+        throw new IllegalArgumentException(String.format("Argument for @NotNull parameter '%AsyncBackgroundTask_21' of %AsyncBackgroundTask_21.%AsyncBackgroundTask_21 must not be null", "message", "litebans/api/Events$Listener", "broadcastSent"));
     }
 }
 

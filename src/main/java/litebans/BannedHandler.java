@@ -1,0 +1,162 @@
+package litebans;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+public final class BannedHandler
+extends MessageHandler {
+    private final NoneHandler_2 LiteBansModule_194;
+    private final CommandSenderWrapper LiteBansModule_240;
+    private final LiteBansModule_297 AsyncBackgroundTask_5;
+    private final CharSequence GnuSparseMapHandler;
+    private final CommandSenderWrapper g;
+    private final boolean Utf8Handler_2;
+    private final boolean i;
+    public BannedHandler(@NotNull NoneHandler_2 cz2, @Nullable CommandSenderWrapper sender, @Nullable LiteBansModule_297 iA2, @NotNull CharSequence charSequence, @NotNull PlatformPlugin plugin, @Nullable CommandSenderWrapper jv_03, boolean flag, boolean flag2) {
+        super(plugin);
+        this.LiteBansModule_194 = cz2;
+        this.LiteBansModule_240 = sender;
+        this.AsyncBackgroundTask_5 = iA2;
+        this.GnuSparseMapHandler = charSequence;
+        this.g = jv_03;
+        this.Utf8Handler_2 = flag;
+        this.i = flag2;
+    }
+
+    public /* synthetic */ BannedHandler(NoneHandler_2 cz2, CommandSenderWrapper sender, LiteBansModule_297 iA2, CharSequence charSequence, PlatformPlugin plugin, CommandSenderWrapper jv_03, boolean flag, boolean flag2, int n, LiteBansModule_14 aJ2) {
+        if ((n & 0x20) != 0) {
+            jv_03 = (CommandSenderWrapper)MessageHandler.BaseCoreGenericHandler.LiteBansModule_31().get();
+        }
+        if ((n & 0x40) != 0) {
+            flag = true;
+        }
+        if ((n & 0x80) != 0) {
+            SilentHandler dZ2 = cz2.q();
+            ObjectUtilities.BaseCoreGenericHandler(dZ2);
+            flag2 = dZ2.AsyncBackgroundTask_5();
+        }
+        this(cz2, sender, iA2, charSequence, plugin, jv_03, flag, flag2);
+    }
+
+    public final NoneHandler_2 LiteBansModule_194() {
+        return this.LiteBansModule_194;
+    }
+
+    public final CommandSenderWrapper LiteBansModule_31() {
+        return this.LiteBansModule_240;
+    }
+
+    public final LiteBansModule_297 BaseCoreGenericHandler() {
+        return this.AsyncBackgroundTask_5;
+    }
+
+    public final CommandSenderWrapper e() {
+        return this.g;
+    }
+
+    public final boolean LiteBansModule_240() {
+        return this.Utf8Handler_2;
+    }
+
+    public final boolean g() {
+        return this.i;
+    }
+
+    @Override
+    public void run() {
+        MessageHandler messageHandler = this;
+        boolean flag = false;
+        ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> BannedHandler.BaseCoreGenericHandler(this, arg_0));
+    }
+
+    private static final KotlinUnitHandler BaseCoreGenericHandler(BannedHandler g12, LiteBansModule_82 ch2) {
+        Object object;
+        BannedHandler g13 = g12;
+        LiteBansModule_82 ch3 = ch2;
+        Object object2 = g12;
+        LiteBansModule_82 ch4 = ch2;
+        Object object3 = g12.GnuSparseMapHandler;
+        boolean flag = false;
+        Object object4 = object3;
+        if (((BannedHandler)object2).g()) {
+            object = MessageKey.LiteBansModule_83;
+            boolean flag2 = false;
+            object4 = "" + object + object4;
+        }
+        if (((BannedHandler)object2).BaseCoreGenericHandler() != null) {
+            object4 = AllHandler_3.BaseCoreGenericHandler(ch4, (CharSequence)object4, ((BannedHandler)object2).BaseCoreGenericHandler(), false, 2, null);
+        }
+        object4 = GeoIPLookupService.BaseCoreGenericHandler(ch4, (CharSequence)object4, ((BannedHandler)object2).LiteBansModule_194());
+        object2 = AllHandler_3.BaseCoreGenericHandler(ch4, ch4.BaseCoreGenericHandler((CharSequence)object4, ((BannedHandler)object2).LiteBansModule_31()), ((BannedHandler)object2).LiteBansModule_194().q(), false, 2, null);
+        boolean flag3 = false;
+        object3 = g13.LiteBansModule_194();
+        flag = false;
+        SilentHandler dZ2 = ((NoneHandler_2)object3).q();
+        ObjectUtilities.BaseCoreGenericHandler(dZ2);
+        object4 = dZ2;
+        object = g13;
+        LiteBansModule_82 ch5 = ch3;
+        boolean flag4 = false;
+        BroadcastHandler ij2 = ((BannedHandler)object).LiteBansModule_194().c() ? BroadcastHandler.Utf8Handler_2 : (((BannedHandler)object).g() ? BroadcastHandler.BroadcastService : BroadcastHandler.AsyncBackgroundTask_22);
+        object = g13;
+        boolean flag5 = false;
+        Object object5 = (BroadcastService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
+        flag4 = false;
+        BroadcastService.BaseCoreGenericHandler((BroadcastService)object5, ch3, (CharSequence)object2, ij2.LiteBansModule_194(), ((SilentHandler)object4).ServerSyncService(), ((SilentHandler)object4).GnuSparseMapHandler(), false, false, g13.e(), 48, null);
+        CommandArgumentUtils.BaseCoreGenericHandler(ch3, ij2, (CharSequence)object2, ((SilentHandler)object4).ServerSyncService(), null, 8, null);
+        object = g13;
+        object5 = ch3;
+        flag4 = false;
+        NoneHandler_2 cz2 = ((BannedHandler)object).LiteBansModule_194();
+        boolean flag6 = false;
+        SilentHandler dZ3 = cz2.q();
+        ObjectUtilities.BaseCoreGenericHandler(dZ3);
+        SilentHandler dZ4 = dZ3;
+        CharSequence charSequence = dZ4.ServerSyncService();
+        boolean flag7 = false;
+        if ((charSequence.c() == BanHandler.GnuSparseMapHandler || charSequence.c() == BanHandler.c) && ((BannedHandler)object).LiteBansModule_240() && ((BannedHandler)object).LiteBansModule_31() != null) {
+            String string;
+            switch (LiteBansModule_58.BaseCoreGenericHandler[dZ4.ServerSyncService().c().ordinal()]) {
+                case 1: {
+                    string = "banned";
+                    break;
+                }
+                case 2: {
+                    string = "muted";
+                    break;
+                }
+                case 3: {
+                    string = "warned";
+                    break;
+                }
+                case 4: {
+                    string = "kicked";
+                    break;
+                }
+                default: {
+                    AssertionUtilities.BaseCoreGenericHandler();
+                    throw new CommandExitException();
+                }
+            }
+            charSequence = string;
+            MessageHandler messageHandler = (MessageHandler)object;
+            boolean flag8 = false;
+            BroadcastService o2 = (BroadcastService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
+            boolean bl9 = false;
+            o2.BaseCoreGenericHandler((LiteBansModule_82)object5, ((BannedHandler)object).LiteBansModule_31(), dZ4, cz2.D(), (String)charSequence);
+        }
+        object5 = g13;
+        flag4 = false;
+        object = ((ConfigService)((MessageHandler)object5).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_31().BaseCoreGenericHandler(((SilentHandler)object4).BaseCoreGenericHandler(g13.LiteBansModule_194()));
+        if (((CharSequence)object).length() > 0 && (ij2 == BroadcastHandler.AsyncBackgroundTask_22 || ij2 == BroadcastHandler.BroadcastService)) {
+            ContentHandler.GnuSparseMapHandler.BaseCoreGenericHandler(ch3, g13.LiteBansModule_194(), (String)object);
+        }
+        return KotlinUnitHandler.BaseCoreGenericHandler;
+    }
+
+    private static final void c() {
+        e = new String[]{"banned", "muted", "warned", "kicked", "banned", "muted", "warned", "kicked", "banned", "muted", "warned", "kicked"};
+    }
+
+    }
+

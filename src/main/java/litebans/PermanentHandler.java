@@ -1,0 +1,227 @@
+package litebans;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
+import org.jetbrains.annotations.NotNull;
+
+public final class PermanentHandler {
+    private PermanentHandler() {
+    }
+
+    public final NativepatternHandler LiteBansModule_31() {
+        return SecHandler.AsyncBackgroundTask_5();
+    }
+
+    public final NativepatternHandler BaseCoreGenericHandler() {
+        return SecHandler.BaseCoreGenericHandler();
+    }
+
+    public final SecHandler BaseCoreGenericHandler(@NotNull String v1) {
+        block5: {
+            v2 = SecHandler.values();
+            var4_4 = v2.length;
+            for (v3 = 0; v3 < var4_4; ++v3) {
+                block4: {
+                    var6_6 = var5_5 = v2[v3];
+                    var7_7 = false;
+                    var8_8 = var6_6;
+                    var9_9 = false;
+                    if (var8_8.LiteBansModule_31(v1)) ** GOTO lbl-1000
+                    var10_10 = var8_8;
+                    var11_11 = false;
+                    var12_12 = SecHandler.BaseCoreGenericHandler(var10_10);
+                    var13_13 = false;
+                    var15_15 = var12_12.length;
+                    for (var14_14 = 0; var14_14 < var15_15; ++var14_14) {
+                        var17_17 = var16_16 = var12_12[var14_14];
+                        var18_18 = false;
+                        if (!StringUtilities.BaseCoreGenericHandler(var17_17, v1, true)) continue;
+                        v0 = true;
+                        break block4;
+                    }
+                    v0 = false;
+                }
+                if (v0) lbl-1000:
+                // 2 sources
+
+                {
+                    v1 = true;
+                } else {
+                    v1 = false;
+                }
+                if (!v1) continue;
+                v2 = var5_5;
+                break block5;
+            }
+            v2 = null;
+        }
+        return v2;
+    }
+
+    public final double BaseCoreGenericHandler(@NotNull String string, double d10) {
+        Double d11;
+        List list;
+        Object object;
+        block13: {
+            Object object2;
+            block12: {
+                List list2;
+                if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"permanent") || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"none") || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"unlimited") || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"never") || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)MessageKey.LiteBansModule_60.toString())) {
+                    return 0.0;
+                }
+                object2 = new char[]{' '};
+                object2 = StringUtilities.BaseCoreGenericHandler((CharSequence)string, object2, false, 0, 6, null);
+                boolean flag = false;
+                if (!object2.isEmpty()) {
+                    object = object2.listIterator(object2.size());
+                    while (object.hasPrevious()) {
+                        String string2 = (String)object.previous();
+                        boolean flag2 = false;
+                        if (((CharSequence)string2).length() == 0) continue;
+                        list2 = CollectionUtilities.BaseCoreGenericHandler((Iterable)object2, object.nextIndex() + 1);
+                        break;
+                    }
+                } else {
+                    list2 = list = CollectionUtilities.e();
+                }
+                if (list.isEmpty()) {
+                    return d10;
+                }
+                object2 = StringUtilities.BaseCoreGenericHandler((String)list.get(0), ',', '.', false, 4, null);
+                d11 = StringUtilities.LiteBansModule_31((String)object2);
+                if (d11 == null) break block12;
+                String string3 = String.valueOf(StringUtilities.LiteBansModule_31((CharSequence)object2));
+                ObjectUtilities.LiteBansModule_31(string3, "");
+                if (!ObjectUtilities.BaseCoreGenericHandler((Object)string3.toLowerCase(Locale.ROOT), (Object)"AsyncBackgroundTask_5")) break block13;
+            }
+            Double d12 = StringUtilities.LiteBansModule_31(LiteBansModule_81.BaseCoreGenericHandler(this.plugin(), (CharSequence)object2, ""));
+            if (d12 == null) {
+                return d10;
+            }
+            double d13 = d12;
+            String string4 = LiteBansModule_81.BaseCoreGenericHandler(this.LiteBansModule_31(), (CharSequence)object2, "");
+            SecHandler dk2 = this.plugin(string4);
+            if (dk2 == null) {
+                return d10;
+            }
+            SecHandler dk3 = dk2;
+            return dk3.LiteBansModule_31(d13);
+        }
+        if (list.size() == 1) {
+            return d11;
+        }
+        SecHandler dk4 = this.plugin((String)list.get(1));
+        if (dk4 == null) {
+            return d10;
+        }
+        object = dk4;
+        return ((SecHandler)((Object)object)).LiteBansModule_31(d11);
+    }
+
+    public static /* synthetic */ double BaseCoreGenericHandler(PermanentHandler db_02, String string, double d10, int n, Object object) {
+        if ((n & 2) != 0) {
+            d10 = 0.0;
+        }
+        return db_02.BaseCoreGenericHandler(string, d10);
+    }
+
+    public final String BaseCoreGenericHandler(long l3, boolean flag) {
+        String string;
+        if (l3 <= 0L) {
+            return MessageKey.LiteBansModule_60.toString();
+        }
+        long l5 = TimeUnit.MILLISECONDS.toDays(l3);
+        long l7 = TimeUnit.MILLISECONDS.toHours(l3);
+        long l8 = l7 - TimeUnit.DAYS.toHours(l5);
+        long l9 = TimeUnit.MILLISECONDS.toMinutes(l3) - TimeUnit.HOURS.toMinutes(l7);
+        long l10 = TimeUnit.MILLISECONDS.toSeconds(l3) - TimeUnit.MINUTES.toSeconds(l9);
+        CharSequence charSequence = null;
+        CharSequence charSequence2 = null;
+        CharSequence charSequence3 = null;
+        CharSequence charSequence4 = null;
+        if (flag) {
+            charSequence = this.plugin(l5, (Object)MessageKey.LiteBansModule_125, (Object)MessageKey.aq);
+            charSequence2 = this.plugin(l8, (Object)MessageKey.cH, (Object)MessageKey.SetHandler);
+            charSequence3 = this.plugin(l9, (Object)MessageKey.r, (Object)MessageKey.cB);
+            charSequence4 = this.plugin(l10, (Object)MessageKey.dC, (Object)MessageKey.bu);
+        } else {
+            charSequence = this.plugin(l5, (Object)"day", (Object)"days");
+            charSequence2 = this.plugin(l8, (Object)"hour", (Object)"hours");
+            charSequence3 = this.plugin(l9, (Object)"minute", (Object)"minutes");
+            charSequence4 = this.plugin(l10, (Object)"second", (Object)"seconds");
+        }
+        String string2 = MessageKey.InputHandler.toString();
+        String string3 = MessageKey.S.toString();
+        if (l5 <= 0L) {
+            if (l8 <= 0L) {
+                if (l9 <= 0L) {
+                    Object[] objectArray = new Object[]{l10, charSequence4};
+                    string = String.format(string2, Arrays.copyOf(objectArray, objectArray.length));
+                } else {
+                    Object[] objectArray = new Object[]{l9, charSequence3};
+                    string = String.format(string2, Arrays.copyOf(objectArray, objectArray.length));
+                }
+            } else if (l9 == 0L) {
+                Object[] objectArray = new Object[]{l8, charSequence2};
+                string = String.format(string2, Arrays.copyOf(objectArray, objectArray.length));
+            } else {
+                String string4 = string2 + string3 + string2;
+                Object[] objectArray = new Object[]{l8, charSequence2, l9, charSequence3};
+                string = String.format(string4, Arrays.copyOf(objectArray, objectArray.length));
+            }
+        } else if (l9 == 0L) {
+            if (l8 == 0L) {
+                Object[] objectArray = new Object[]{l5, charSequence};
+                string = String.format(string2, Arrays.copyOf(objectArray, objectArray.length));
+            } else {
+                String string5 = string2 + string3 + string2;
+                Object[] objectArray = new Object[]{l5, charSequence, l8, charSequence2};
+                string = String.format(string5, Arrays.copyOf(objectArray, objectArray.length));
+            }
+        } else if (l8 == 0L) {
+            String string6 = string2 + string3 + string2;
+            Object[] objectArray = new Object[]{l5, charSequence, l9, charSequence3};
+            string = String.format(string6, Arrays.copyOf(objectArray, objectArray.length));
+        } else {
+            String string7 = string2 + string3 + string2 + string3 + string2;
+            Object[] objectArray = new Object[]{l5, charSequence, l8, charSequence2, l9, charSequence3};
+            string = String.format(string7, Arrays.copyOf(objectArray, objectArray.length));
+        }
+        return string;
+    }
+
+    public static /* synthetic */ String BaseCoreGenericHandler(PermanentHandler db_02, long l3, boolean flag, int n, Object object) {
+        if ((n & 2) != 0) {
+            flag = true;
+        }
+        return db_02.BaseCoreGenericHandler(l3, flag);
+    }
+
+    private final boolean BaseCoreGenericHandler(String string, Object object) {
+        return StringUtilities.BaseCoreGenericHandler(string, object.toString(), true);
+    }
+
+    private final boolean BaseCoreGenericHandler(String string, Object object, Object object2) {
+        return this.plugin(string, object) || this.plugin(string, object2);
+    }
+
+    public final CharSequence BaseCoreGenericHandler(@NotNull Number number, @NotNull Object object, @NotNull Object object2) {
+        return (number.doubleValue() == 1.0 ? object : object2).toString();
+    }
+
+    public static final /* synthetic */ boolean BaseCoreGenericHandler(PermanentHandler db_02, String string, Object object, Object object2) {
+        return db_02.BaseCoreGenericHandler(string, object, object2);
+    }
+
+    public /* synthetic */ PermanentHandler(LiteBansModule_14 aJ2) {
+        this();
+    }
+
+    private static final void c() {
+        BaseCoreGenericHandler = new String[]{"permanent", "none", "unlimited", "never", "", "AsyncBackgroundTask_5", "", "", "day", "days", "hour", "hours", "minute", "minutes", "second", "seconds"};
+    }
+
+    }
+

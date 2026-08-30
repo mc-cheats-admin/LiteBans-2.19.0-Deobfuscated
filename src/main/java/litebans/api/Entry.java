@@ -5,7 +5,7 @@ import lombok.NonNull;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class Entry {
-    private final long id;
+    private final long SQLiteDriverHandler_4;
     private final String type;
     @Nullable
     private final String uuid;
@@ -53,8 +53,8 @@ public abstract class Entry {
     public abstract boolean hasTemplate();
 
     @Generated
-    public Entry(long l3, String string, @Nullable String string2, @Nullable String string3, String string4, @Nullable String string5, @Nullable String string6, @Nullable String string7, @Nullable String string8, @Nullable String string9, long l5, long l7, String string10, String string11, byte by2, boolean bl, boolean bl2, boolean bl3) {
-        this.id = l3;
+    public Entry(long l3, String string, @Nullable String string2, @Nullable String string3, String string4, @Nullable String string5, @Nullable String string6, @Nullable String string7, @Nullable String string8, @Nullable String string9, long l5, long l7, String string10, String string11, byte by2, boolean flag, boolean flag2, boolean flag3) {
+        this.SQLiteDriverHandler_4 = l3;
         this.type = string;
         this.uuid = string2;
         this.ip = string3;
@@ -69,14 +69,14 @@ public abstract class Entry {
         this.serverScope = string10;
         this.serverOrigin = string11;
         this.template = by2;
-        this.silent = bl;
-        this.ipban = bl2;
-        this.active = bl3;
+        this.silent = flag;
+        this.ipban = flag2;
+        this.active = flag3;
     }
 
     @Generated
     public long getId() {
-        return this.id;
+        return this.SQLiteDriverHandler_4;
     }
 
     @Generated
@@ -168,7 +168,7 @@ public abstract class Entry {
 
     @Generated
     public String toString() {
-        return "Entry(id=" + this.getId() + ", type=" + this.getType() + ", uuid=" + this.getUuid() + ", ip=" + this.getIp() + ", reason=" + this.getReason() + ", executorUUID=" + this.getExecutorUUID() + ", executorName=" + this.getExecutorName() + ", removedByUUID=" + this.getRemovedByUUID() + ", removedByName=" + this.getRemovedByName() + ", removalReason=" + this.getRemovalReason() + ", dateStart=" + this.getDateStart() + ", dateEnd=" + this.getDateEnd() + ", serverScope=" + this.getServerScope() + ", serverOrigin=" + this.getServerOrigin() + ", template=" + this.getTemplate() + ", silent=" + this.isSilent() + ", ipban=" + this.isIpban() + ", active=" + this.isActive() + ")";
+        return "Entry(SQLiteDriverHandler_4=" + this.getId() + ", type=" + this.getType() + ", uuid=" + this.getUuid() + ", ip=" + this.getIp() + ", reason=" + this.getReason() + ", executorUUID=" + this.getExecutorUUID() + ", executorName=" + this.getExecutorName() + ", removedByUUID=" + this.getRemovedByUUID() + ", removedByName=" + this.getRemovedByName() + ", removalReason=" + this.getRemovalReason() + ", dateStart=" + this.getDateStart() + ", dateEnd=" + this.getDateEnd() + ", serverScope=" + this.getServerScope() + ", serverOrigin=" + this.getServerOrigin() + ", template=" + this.getTemplate() + ", silent=" + this.isSilent() + ", ipban=" + this.isIpban() + ", active=" + this.isActive() + ")";
     }
 
     @Generated
