@@ -1,0 +1,1 @@
+{"client":[],"compatibilityLevel":"JAVA_8","injectors":{"defaultRequire":1},"mixins":["AccessLoginData_26_","AccessLoginData_1_21","AccessLoginData_1_20"],"package":"litebans.mixin","plugin":"litebans.FabricMixinCheckIn","required":true}

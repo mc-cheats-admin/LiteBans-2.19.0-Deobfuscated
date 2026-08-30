@@ -1,0 +1,316 @@
+# Download it here: https://black-minecraft.com/resources/1162/
+name: LiteBans
+version: 2.19.0
+author: Ruan
+description: Lightweight banning plugin with full UUID support.
+main: litebans.BukkitPlugin
+website: https://www.spigotmc.org/resources/litebans.3715/
+api-version: "1.13"
+loadbefore: [Essentials]
+folia-supported: true
+# https://gitlab.com/ruany/LiteBans/-/wikis/Permissions
+permissions:
+  litebans.ban:
+    description: Allows a player to ban others.
+    default: op
+  litebans.mute:
+    description: Allows a player to mute others.
+    default: op
+  litebans.warn:
+    description: Allows a player to use /warn.
+    default: op
+  litebans.kick:
+    description: Allows a player to use /kick.
+    default: op
+  litebans.tempban:
+    description: Allows a player to temporarily ban others.
+    default: op
+  litebans.tempmute:
+    description: Allows a player to temporarily mute others.
+    default: op
+  litebans.unban:
+    description: Allows a player to unban others.
+    default: op
+  litebans.unban.own:
+    description: Allows a player to unban others that they have banned.
+    default: op
+  litebans.unmute:
+    description: Allows a player to unmute others.
+    default: op
+  litebans.unmute.own:
+    description: Allows a player to unmute others that they have muted.
+    default: op
+  litebans.unwarn:
+    description: Allows a player to use /unwarn.
+    default: op
+  litebans.unwarn.own:
+    description: Allows a player to remove warnings that they have created.
+    default: op
+  litebans.ipban:
+    description: Allows a player to IP ban others.
+    default: op
+  litebans.ipmute:
+    description: Allows a player to IP mute others.
+    default: op
+  litebans.checkban:
+    description: Allows a player to use /checkban.
+    default: op
+  litebans.checkmute:
+    description: Allows a player to use /checkmute.
+    default: op
+  litebans.history:
+    description: Allows a player to use /history.
+    default: op
+  litebans.staffhistory:
+    description: Allows a player to use /staffhistory.
+    default: op
+  litebans.staffrollback:
+    description: Allows a player to use /staffrollback.
+    default: op
+  litebans.prunehistory:
+    description: Allows a player to use /prunehistory.
+    default: op
+  litebans.iphistory:
+    description: Allows a player to use /iphistory. By default, only the console can use this command.
+    default: op
+  litebans.namehistory:
+    description: Allows a player to use /namehistory.
+    default: op
+  litebans.banlist:
+    description: Allows a player to use /banlist.
+    default: op
+  litebans.mutelist:
+    description: Allows a player to use /mutelist.
+    default: op
+  litebans.lastuuid:
+    description: Allows a player to use /lastuuid.
+    default: op
+  litebans.geoip:
+    description: Allows a player to use /geoip.
+    default: op
+  litebans.dupeip:
+    description: Allows a player to use /dupeip.
+    default: op
+  litebans.ipreport:
+    description: Allows a player to use /ipreport.
+    default: op
+  litebans.lockdown:
+    description: Allows a player to use /lockdown.
+    default: op
+  litebans.warnings:
+    description: Allows a player to use /warnings.
+    default: op
+  litebans.warnings.self:
+    description: Allows a player to use /warnings to see their own warnings (with no arguments).
+    default: true
+  litebans.admin:
+    description: Allows a player to use /litebans (reload/import/...)
+    default: op
+  litebans.tabcomplete:
+    description: Allows a player to tab complete.
+    default: op
+  litebans.notify:
+    description: Allows a player to view all notifications, including staff notifications.
+    default: op
+  litebans.notify.silent:
+    description: Allows a player to view silent bans.
+    default: op
+  litebans.notify.dupeip_join:
+    description: Allows a player to view dupeip on join notifications.
+    default: op
+  litebans.notify.broadcast:
+    description: Allows a player to view ban/mute/warning/kick broadcasts.
+    default: true
+  litebans.notify.warned:
+    description: Allows a player to see their own warning notifications.
+    default: true
+  litebans.notify.warned.offline:
+    description: Allows a player to see their own warning notifications.
+    default: true
+  litebans.notify.muted:
+    description: Allows a player to see their own mute notifications.
+    default: true
+  litebans.exempt:
+    description: Prevents a player from being punished.
+    default: false
+  litebans.exempt.ban:
+    description: Prevents a player from being punished.
+    default: false
+  litebans.exempt.mute:
+    description: Prevents a player from being punished.
+    default: false
+  litebans.exempt.warn:
+    description: Prevents a player from being punished.
+    default: false
+  litebans.exempt.kick:
+    description: Prevents a player from being punished.
+    default: false
+  litebans.exempt.dupeip_join:
+    description: Prevents a player from being scanned on join.
+    default: false
+  litebans.exempt.bypass:
+    description: Allows a player to bypass exempt permissions.
+    default: false
+  litebans.exempt.bypass.ban:
+    description: Allows a player to bypass exempt permissions.
+    default: false
+  litebans.exempt.bypass.mute:
+    description: Allows a player to bypass exempt permissions.
+    default: false
+  litebans.exempt.bypass.warn:
+    description: Allows a player to bypass exempt permissions.
+    default: false
+  litebans.exempt.bypass.kick:
+    description: Allows a player to bypass exempt permissions.
+    default: false
+# https://gitlab.com/ruany/LiteBans/-/wikis/Commands
+commands:
+  ban:
+    description: Bans a player or IP
+    usage: /ban <player> [-s] [duration] [reason]
+    aliases: [lban]
+    permission: litebans.ban
+  mute:
+    description: Mutes a player
+    usage: /mute <player> [-s] [duration] [reason]
+    aliases: [lmute]
+    permission: litebans.mute
+  warn:
+    description: Warns a player
+    usage: /warn <player>
+    aliases: [lwarn]
+    permission: litebans.warn
+  kick:
+    description: Kicks a player.
+    usage: /kick [-s] <player> [reason]
+    aliases: [lkick]
+    permission: litebans.kick
+  ipban:
+    description: Bans an IP address.
+    usage: /ipban <player> [-s] [duration] [reason]
+    aliases: [lipban, banip, ban-ip, tempipban, tempbanip, iptempban]
+    permission: litebans.ipban
+  ipmute:
+    description: Mutes an IP address.
+    usage: /ipban <player> [-s] [duration] [reason]
+    aliases: [lipmute, muteip, tempipmute, tempmuteip, iptempmute]
+    permission: litebans.ipmute
+  unban:
+    description: Unbans a player or IP
+    usage: /unban <player>
+    aliases: [lunban, unbanip, ipunban, tempunban, pardon, pardonip, pardon-ip]
+    permission: litebans.unban.own
+  unmute:
+    description: Unmutes a player
+    usage: /unmute <player>
+    aliases: [lunmute, tempunmute, unmuteip, ipunmute]
+    permission: litebans.unmute.own
+  unwarn:
+    description: Removes the last active warning for a player
+    usage: /unwarn <player>
+    aliases: [lunwarn, removewarnings, rmwarnings, rmwarn]
+    permission: litebans.unwarn.own
+  tempban:
+    description: Bans a player or IP temporarily
+    usage: /tempban <player> [-s] <duration> [reason]
+    aliases: [ltempban, tban, tmpban]
+    permission: litebans.tempban
+  tempmute:
+    description: Mutes a player or IP temporarily
+    usage: /tempmute <player> [-s] <duration> [reason]
+    aliases: [ltempmute]
+    permission: litebans.tempmute
+  checkban:
+    description: Checks if the target is banned.
+    usage: /checkban <player>
+    aliases: [lcheckban, chkban]
+    permission: litebans.checkban
+  checkmute:
+    description: Checks if the target is muted.
+    usage: /checkmute <player>
+    aliases: [lcheckmute, chkmute]
+    permission: litebans.checkmute
+  checkwarn:
+    description: Checks if the target is warned.
+    usage: /checkwarn <player>
+    aliases: [lcheckwarn, chkwarn]
+    permission: litebans.checkwarn
+  banlist:
+    description: Shows a list of active bans.
+    usage: /banlist [page]
+    aliases: [lbanlist, listbans]
+    permission: litebans.banlist
+  mutelist:
+    description: Shows a list of active mutes.
+    usage: /mutelist [page]
+    aliases: [lmutelist, listmutes]
+    permission: litebans.mutelist
+  warnlist:
+    description: Shows a list of active warnings.
+    usage: /warnlist [page]
+    aliases: [lwarnlist, listwarns]
+    permission: litebans.warnlist
+  history:
+    description: Displays the ban/mute/warning history of a player
+    usage: /history <player>
+    aliases: [lhistory, hist]
+    permission: litebans.history
+  warnings:
+    description: Displays active warnings for self or a specific player
+    usage: /warnings [player]
+    aliases: [lwarnings, checkwarn, warnlist, listwarn, warninglist, listwarnings]
+    permission: litebans.warnings.self
+  prunehistory:
+    description: Removes inactive punishment history for a player
+    usage: /prunehistory <player> [duration]
+    aliases: [lprunehistory]
+    permission: litebans.prunehistory
+  staffhistory:
+    description: Displays punishments created by a player
+    usage: /staffhistory <player>
+    aliases: [lstaffhistory, lshistory, staffhist, shist, shistory]
+    permission: litebans.staffhistory
+  staffrollback:
+    description: Rollbacks bans/mutes/warnings placed by a player, with an optional duration.
+    usage: /staffrollback <player> [duration]
+    aliases: [lstaffrollback]
+    permission: litebans.staffrollback
+  iphistory:
+    description: Displays the login history of a player
+    usage: /iphistory <player>
+    aliases: [liphistory, iphist]
+    permission: litebans.iphistory
+  namehistory:
+    description: Displays the username history of a player
+    usage: /namehistory <player>
+    aliases: [lnamehistory, namehist]
+    permission: litebans.namehistory
+  lastuuid:
+    description: Displays the last UUID of a player
+    usage: /lastuuid <player>
+    aliases: [luuid]
+    permission: litebans.lastuuid
+  geoip:
+    description: Shows which country a player or IP originates from. Can be used on offline players.
+    usage: /geoip <player|IP>
+    aliases: [lgeoip, geo]
+    permission: litebans.geoip
+  dupeip:
+    description: Displays all players sharing an IP address.
+    usage: /dupeip <player>
+    aliases: [ldupeip, alts, checkalts, listalts]
+    permission: litebans.dupeip
+  ipreport:
+    description: Checks all online players for duplicate accounts.
+    usage: /ipreport
+    aliases: [lipreport]
+    permission: litebans.ipreport
+  lockdown:
+    description: Server lockdown management command.
+    usage: /lockdown <reason> | /lockdown end
+    aliases: [llockdown]
+    permission: litebans.lockdown
+  litebans:
+    description: Provides the version of LiteBans and some useful functions.
+    usage: /litebans <reload|allow|add-login|import|broadcast|unlink|info|license>
+    aliases: [lbans]

@@ -1,0 +1,18 @@
+{
+    "authors": [
+        "Ruan"
+    ],
+    "dependencies": [
+        {
+            "id": "serverlistplus",
+            "optional": true
+        }
+    ],
+    "description": "Lightweight banning plugin with full UUID support.",
+    "id": "litebans",
+    "main": "litebans.VelocityPlugin",
+    "name": "LiteBans",
+    "url": "https://www.spigotmc.org/resources/litebans.3715/",
+    "version": "2.19.0",
+    "downloadBM": "https://black-minecraft.com/resources/1162/"
+}
