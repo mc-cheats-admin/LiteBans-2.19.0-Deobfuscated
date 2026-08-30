@@ -11,10 +11,7 @@ import litebans.e_0;
 import litebans.hc_0;
 import litebans.jl_0;
 
-/*
- * Renamed from litebans.g
- */
-public static class g_0
+public class g_0
 extends e_0 {
     private static final int h;
     private static final int f;

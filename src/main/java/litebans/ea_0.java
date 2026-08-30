@@ -18,12 +18,8 @@ import net.md_5.bungee.api.connection.Server;
 import net.md_5.bungee.chat.ChatVersion;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.ea
- */
 @ai_0(a=1)
-public static class ea_0
+public class ea_0
 implements jv_0 {
     private final BungeePlugin i;
     private final WeakReference e;
@@ -111,7 +107,7 @@ implements jv_0 {
     @Override
     public String a() {
         String string = this.g;
-        return string == null || string.equals(h[0]) ? (this.g = this.d().toString()) : string;
+        return string == null || string.equals("00000000-0000-0000-0000-000000000000") ? (this.g = this.d().toString()) : string;
     }
 
     public int b() {
@@ -158,7 +154,7 @@ implements jv_0 {
     @Override
     public void d(@NonNull String string) {
         if (string == null) {
-            throw new NullPointerException(h[1]);
+            throw new NullPointerException("reason is marked non-null but is null");
         }
         CommandSender commandSender = (CommandSender)this.e.get();
         if (commandSender == null) {
@@ -217,7 +213,7 @@ implements jv_0 {
     }
 
     private static final void a() {
-        h = new String[]{hl.a("\uc0c3\uc0c3\uc0c3\uc0c3\uc0c3\uc0c3\uc0c3\uc0c3\uc0de\uc0c3\uc0c3\uc0c3\uc0c3\uc0de\uc0c3\uc0c3\uc0c3\uc0c3\uc0de\uc0c3\uc0c3\uc0c3\uc0c3\uc0de\uc0c3\uc0c3\uc0c3\uc0c3\uc0c3\uc0c3\uc0c3\uc0c3\uc0c3\uc0c3\uc0c3\uc0c3", -474758925), hl.a("\u4b7a\u4b6d\u4b69\u4b7b\u4b67\u4b66\u4b28\u4b61\u4b7b\u4b28\u4b65\u4b69\u4b7a\u4b63\u4b6d\u4b6c\u4b28\u4b66\u4b67\u4b66\u4b25\u4b66\u4b7d\u4b64\u4b64\u4b28\u4b6a\u4b7d\u4b7c\u4b28\u4b61\u4b7b\u4b28\u4b66\u4b7d\u4b64\u4b64", 1829587720)};
+        h = new String[]{"00000000-0000-0000-0000-000000000000", "reason is marked non-null but is null"};
     }
 
     static {

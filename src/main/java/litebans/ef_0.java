@@ -1,8 +1,5 @@
 package litebans;
 
-/*
- * Renamed from litebans.eF
- */
 static class ef_0 {
     private final int c;
     private final int d;

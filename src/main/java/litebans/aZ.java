@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import litebans.aH;
 import org.jetbrains.annotations.NotNull;
 
-public static final class aZ
+public final class aZ
 extends aH {
     private final Closeable b;
 

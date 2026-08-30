@@ -4,10 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-/*
- * Renamed from litebans.dq
- */
-public static final class dq_0
+public final class dq_0
 extends Enum {
     public static final dq_0 j;
     public static final dq_0 v;

@@ -15,7 +15,7 @@ implements RandomAccess {
     private static /* synthetic */ String[] g;
 
     public gY(@NotNull gn gn2, int n, int n2) {
-        ew.a((Object)gn2, g[0]);
+        ew.a((Object)gn2, "list");
         this.h = gn2;
         this.e = n;
         gn.b.a(this.e, n2, this.h.size());
@@ -34,7 +34,7 @@ implements RandomAccess {
     }
 
     private static final void c() {
-        g = new String[]{hl.a("\udb16\udb13\udb09\udb0e", -1275339910)};
+        g = new String[]{"list"};
     }
 
     static {

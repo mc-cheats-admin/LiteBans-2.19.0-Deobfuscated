@@ -5,7 +5,7 @@ import litebans.jT;
 import litebans.kc_0;
 import litebans.q_0;
 
-public static final class j5
+public final class j5
 extends ThreadLocal {
     final /* synthetic */ q_0 a;
 

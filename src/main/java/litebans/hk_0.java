@@ -11,12 +11,9 @@ import net.md_5.bungee.api.plugin.Command;
 import net.md_5.bungee.api.plugin.TabExecutor;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.hK
- */
 @hh_0
 @ai_0(a=1)
-public static class hk_0
+public class hk_0
 extends Command
 implements d8,
 TabExecutor {

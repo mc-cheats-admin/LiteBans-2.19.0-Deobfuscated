@@ -1,9 +1,6 @@
 package litebans;
 
-/*
- * Renamed from litebans.gE
- */
-public static interface ge_0 {
+public interface ge_0 {
     public static final long b;
     public static final long e;
     public static final long a;

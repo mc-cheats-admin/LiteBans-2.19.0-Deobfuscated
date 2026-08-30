@@ -1,9 +1,6 @@
 package litebans;
 
-/*
- * Renamed from litebans.aE
- */
-public static class ae_0
+public class ae_0
 extends Exception {
     private static final long e;
     public static final int f;
@@ -23,11 +20,11 @@ extends Exception {
         StringBuffer stringBuffer = new StringBuffer();
         switch (this.b) {
             case 0: {
-                stringBuffer.append("Unexpected character (").append(this.g).append(") at position ").append(this.c).append(".");
+                stringBuffer.append("Unexpected character (").append(this.g).append(") at position ").append(this.c).append(" + ");
                 break;
             }
             case 1: {
-                stringBuffer.append("Unexpected token ").append(this.g).append(" at position ").append(this.c).append(".");
+                stringBuffer.append("Unexpected token ").append(this.g).append(" at position ").append(this.c).append(" + ");
                 break;
             }
             case 2: {

@@ -30,10 +30,7 @@ import litebans.u;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.r
- */
-public static final class r_0
+public final class r_0
 extends n_0
 implements Runnable {
     public static final dc c;
@@ -143,7 +140,7 @@ implements Runnable {
     private final void b(ch ch2) {
         o o2 = (o)ch2.e().a(o.class);
         gu gu2 = o2.c();
-        ew.b(gu2, b[0]);
+        ew.b(gu2, "");
         gx_0 gx_02 = (gx_0)gu2;
         gx_02.b().clear();
         gx_02.a().clear();
@@ -152,7 +149,7 @@ implements Runnable {
     private final void a(ch ch2, jv_0[] jv_0Array) {
         o o2 = (o)ch2.e().a(o.class);
         gu gu2 = o2.c();
-        ew.b(gu2, b[1]);
+        ew.b(gu2, "");
         gx_0 gx_02 = (gx_0)gu2;
         gx_02.b().values().removeIf(arg_0 -> r_0.c(arg_0 -> r_0.a(this, ch2, jv_0Array, arg_0), arg_0));
         if (gx_02.b().isEmpty()) {
@@ -271,7 +268,7 @@ implements Runnable {
     }
 
     private static final void d() {
-        b = new String[]{hl.a("", -90557751), hl.a("", 1541666098)};
+        b = new String[]{"", ""};
     }
 }
 

@@ -1,6 +1,6 @@
 package litebans;
 
-public static final class dp
+public final class dp
 extends AssertionError {
 }
 

@@ -5,7 +5,7 @@ import litebans.bz;
 import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 
-public static final class iF {
+public final class iF {
     private static /* synthetic */ String[] a;
 
     private iF() {
@@ -31,7 +31,7 @@ public static final class iF {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u9eb9", -343777210), hl.a("", 979039585), hl.a("", 750987505), hl.a("\ubbb2", -1270069939), hl.a("\u6d6d", -460886692), hl.a("\u9861", -809592751), hl.a("\ufaf9", 2127690440)};
+        a = new String[]{"\ufeff", "", "", "\ufeff", "1", "0", "1"};
     }
 
     static {

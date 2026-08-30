@@ -14,7 +14,7 @@ import litebans.kd;
 import litebans.q_0;
 import org.jetbrains.annotations.NotNull;
 
-public static final class kL
+public final class kL
 extends Enum
 implements CharSequence {
     public static final cL d;
@@ -114,7 +114,7 @@ implements CharSequence {
             if (q_02 != null) {
                 eG eG2 = q_02.f();
                 string = eG2.d() + string;
-                if (ew.a((Object)q_02.f().aF(), (Object)l[0]) && bl) {
+                if (ew.a((Object)q_02.f().aF(), (Object)"h2") && bl) {
                     string = string.toUpperCase(locale);
                 }
                 return string;
@@ -125,7 +125,7 @@ implements CharSequence {
 
     public static /* synthetic */ String a(kL kL2, Locale locale, boolean bl, int n, Object object) {
         if (object != null) {
-            throw new UnsupportedOperationException(l[1]);
+            throw new UnsupportedOperationException("");
         }
         if ((n & 1) != 0) {
             locale = Locale.ENGLISH;
@@ -156,23 +156,23 @@ implements CharSequence {
 
     static {
         kL.d();
-        k = new kL(l[2], 0);
-        m = new kL(l[3], 1);
-        b = new kL(l[4], 2);
-        j = new kL(l[5], 3);
-        g = new kL(l[6], 4);
-        c = new kL(l[7], 5);
-        f = new kL(l[8], 6);
-        n = new kL(l[9], 7);
-        i = new kL(l[10], 8);
-        h = new kL(l[11], 9);
+        k = new kL("BANS", 0);
+        m = new kL("MUTES", 1);
+        b = new kL("WARNINGS", 2);
+        j = new kL("KICKS", 3);
+        g = new kL("HISTORY", 4);
+        c = new kL("SYNC", 5);
+        f = new kL("SERVERS", 6);
+        n = new kL("CACHE8K", 7);
+        i = new kL("CONFIG", 8);
+        h = new kL("ALLOW", 9);
         e = kLArray = new kL[]{kL.k, kL.m, kL.b, kL.j, kL.g, kL.c, kL.f, kL.n, kL.i, kL.h};
         a = iC.a(e);
         d = new cL(null);
     }
 
     private static final void d() {
-        l = new String[]{hl.a("\u8db3\u8de9", 2108591579), hl.a("", 1908361597), hl.a("\u7d8b\u7d88\u7d87\u7d9a", 1753906633), hl.a("\uda90\uda88\uda89\uda98\uda8e", 1018288861), hl.a("\uef95\uef83\uef90\uef8c\uef8b\uef8c\uef85\uef91", 1899556802), hl.a("\uf20a\uf208\uf202\uf20a\uf212", 492302913), hl.a("\ua9ce\ua9cf\ua9d5\ua9d2\ua9c9\ua9d4\ua9df", 1093183878), hl.a("\u8412\u8418\u840f\u8402", 1685423169), hl.a("\u7e96\u7e80\u7e97\u7e93\u7e80\u7e97\u7e96", -1802731835), hl.a("\u5600\u5602\u5600\u560b\u5606\u567b\u5608", 1462916675), hl.a("\ud7ed\ud7e1\ud7e0\ud7e8\ud7e7\ud7e9", 110090158), hl.a("\u1ff2\u1fff\u1fff\u1ffc\u1fe4", 1256005555)};
+        l = new String[]{"h2", "", "BANS", "MUTES", "WARNINGS", "KICKS", "HISTORY", "SYNC", "SERVERS", "CACHE8K", "CONFIG", "ALLOW"};
     }
 }
 

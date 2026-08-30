@@ -5,10 +5,7 @@ import litebans.en_0;
 import litebans.hn_0;
 import litebans.jo_0;
 
-/*
- * Renamed from litebans.kZ
- */
-public static final class kz_0
+public final class kz_0
 implements jo_0 {
     public static final int e;
     public static final int g;
@@ -26,7 +23,7 @@ implements jo_0 {
     public en_0 a(byte[] byArray, int n, int n2, boolean bl, int n3) {
         switch (this.d) {
             case 0: {
-                throw new ZipException("Bad extra field starting at " + n + ".  Block length of " + n3 + " bytes exceeds remaining data of " + (n2 - 4) + " bytes.");
+                throw new ZipException("Bad extra field starting at " + n + ".  Block length of " + n3 + " bytes exceeds remaining data of " + (n2 - 4) + " ");
             }
             case 2: {
                 hn_0 hn_02 = new hn_0();

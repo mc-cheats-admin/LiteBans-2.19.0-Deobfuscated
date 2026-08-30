@@ -16,11 +16,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.ad
- */
-public static final class ad_0
+public final class ad_0
 implements cl_0 {
     private final di_0 a;
     private final o c;
@@ -50,7 +46,7 @@ implements cl_0 {
         jv_0 jv_02 = gG3.h().a(playerLoginEvent.getPlayer());
         ew.a(jv_02);
         Object object = jv_02;
-        Object object2 = b[0];
+        Object object2 = "litebans.lockdown.bypass";
         boolean bl2 = false;
         jv_0 jv_03 = object;
         boolean bl3 = false;
@@ -58,7 +54,7 @@ implements cl_0 {
             object2 = gG3;
             bl2 = false;
             object = gG2.a(((w)((fg_0)object2).h().a(w.class)).u(), false);
-            il_0.a(gG3.h().i(), playerLoginEvent, (CharSequence)object, null, false, b[1], 12, null);
+            il_0.a(gG3.h().i(), playerLoginEvent, (CharSequence)object, null, false, "KICK_OTHER", 12, null);
         }
     }
 
@@ -77,7 +73,7 @@ implements cl_0 {
     }
 
     private static final void b() {
-        b = new String[]{hl.a("\u75e3\u75e6\u75fb\u75ea\u75ed\u75ee\u75e1\u75fc\u75a1\u75e3\u75e0\u75ec\u75e4\u75eb\u75e0\u75f8\u75e1\u75a1\u75ed\u75f6\u75ff\u75ee\u75fc\u75fc", -460098161), hl.a("\uc637\uc635\uc63f\uc637\uc623\uc633\uc628\uc634\uc639\uc62e", -458176900)};
+        b = new String[]{"litebans.lockdown.bypass", "KICK_OTHER"};
     }
 
     static {

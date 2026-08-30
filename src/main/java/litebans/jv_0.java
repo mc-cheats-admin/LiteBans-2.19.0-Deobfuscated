@@ -4,10 +4,7 @@ import java.util.UUID;
 import lombok.NonNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.jV
- */
-public static interface jv_0 {
+public interface jv_0 {
     public static final jv_0[] a = new jv_0[0];
     public static final UUID b = new UUID(0L, 0L);
 

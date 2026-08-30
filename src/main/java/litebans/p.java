@@ -35,7 +35,7 @@ import litebans.x_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class p
+public final class p
 extends n_0 {
     public f8 b;
     private static /* synthetic */ String[] c;
@@ -49,7 +49,7 @@ extends n_0 {
         if (f82 != null) {
             return f82;
         }
-        ew.e(c[0]);
+        ew.e("");
         return null;
     }
 
@@ -100,34 +100,34 @@ extends n_0 {
                 boolean bl3;
                 Object object10 = object7;
                 boolean bl4 = false;
-                StringBuilder stringBuilder = new StringBuilder(c[1] + object8 + c[2] + (c[3] + ((gZ)object10).c().b() + c[4]) + c[5]);
+                StringBuilder stringBuilder = new StringBuilder("SELECT * FROM " + object8 + " WHERE(" + ("active=" + ((gZ)object10).c().b() + " AND(until<1 OR until>?)") + ")AND(");
                 int n3 = jv_0Array2.length;
                 while (n2 < n3) {
                     jv_0 jv_02 = jv_0Array2[n2];
                     object4 = jv_02.b();
-                    stringBuilder.append(c[6]);
+                    stringBuilder.append("uuid=?");
                     ((ArrayList)object5).add(jv_02.a());
                     if (object4 != null && !((HashSet)object6).contains(object4)) {
-                        stringBuilder.append(c[7]).append(((gZ)object7).c().b()).append(c[8]).append(c[9]);
+                        stringBuilder.append(" OR(ipban=").append(((gZ)object7).c().b()).append(" AND ").append("ip=?)");
                         ((ArrayList)object5).add(object4);
                         ((HashSet)object6).add(object4);
                     }
                     if (n > gZ.l.b()) break;
                     if (n2 != n3 - 1) {
-                        stringBuilder.append(c[10]);
+                        stringBuilder.append(" OR ");
                     }
                     ++n2;
                     ++n;
                 }
                 n = 0;
-                stringBuilder.append(c[11]);
+                stringBuilder.append(")AND(server_scope='*' OR server_scope=? OR server_scope=?)");
                 object3 = stringBuilder.toString();
                 object4 = ((gZ)object7).g();
                 boolean bl5 = false;
                 if (((q_0)object4).g()) {
                     Object object11 = object4;
                     bl3 = false;
-                    ((q_0)object11).a((Object)(n2 + c[12] + (String)object3));
+                    ((q_0)object11).a((Object)(n2 + ": " + (String)object3));
                 }
                 object4 = ((gZ)object7).c((CharSequence)object3);
                 eS.a((bT)object4);
@@ -252,7 +252,7 @@ extends n_0 {
             if (q_03.g()) {
                 q_0 q_04 = q_03;
                 boolean bl3 = false;
-                q_04.a((Object)(c[13] + uUID));
+                q_04.a((Object)("M! " + uUID));
             }
         }
         return null;
@@ -305,7 +305,7 @@ extends n_0 {
     }
 
     private static final void d() {
-        c = new String[]{hl.a("", -729701337), hl.a("\ua536\ua520\ua529\ua520\ua526\ua531\ua545\ua54f\ua545\ua523\ua537\ua52a\ua528\ua545", -1253530267), hl.a("\uee6d\uee1a\uee05\uee08\uee1f\uee08\uee65", 257158733), hl.a("\u9b25\u9b27\u9b30\u9b2d\u9b32\u9b21\u9b79", 1543019332), hl.a("\u9ee8\u9e89\u9e86\u9e8c\u9ee0\u9ebd\u9ea6\u9ebc\u9ea1\u9ea4\u9ef4\u9ef9\u9ee8\u9e87\u9e9a\u9ee8\u9ebd\u9ea6\u9ebc\u9ea1\u9ea4\u9ef6\u9ef7\u9ee1", -1361207608), hl.a("\u44cd\u44a5\u44aa\u44a0\u44cc", 1822573796), hl.a("\u024d\u024d\u0251\u025c\u0205\u0207", -290913736), hl.a("\u644b\u6424\u6439\u6443\u6402\u641b\u6409\u640a\u6405\u6456", 670852203), hl.a("\u3e4b\u3e2a\u3e25\u3e2f\u3e4b", -292602261), hl.a("\u0c01\u0c18\u0c55\u0c57\u0c41", 602279016), hl.a("\u0e47\u0e28\u0e35\u0e47", -584577433), hl.a("\u6d5e\u6d36\u6d39\u6d33\u6d5f\u6d04\u6d12\u6d05\u6d01\u6d12\u6d05\u6d28\u6d04\u6d14\u6d18\u6d07\u6d12\u6d4a\u6d50\u6d5d\u6d50\u6d57\u6d38\u6d25\u6d57\u6d04\u6d12\u6d05\u6d01\u6d12\u6d05\u6d28\u6d04\u6d14\u6d18\u6d07\u6d12\u6d4a\u6d48\u6d57\u6d38\u6d25\u6d57\u6d04\u6d12\u6d05\u6d01\u6d12\u6d05\u6d28\u6d04\u6d14\u6d18\u6d07\u6d12\u6d4a\u6d48\u6d5e", -1524863625), hl.a("\u6064\u607e", -1101176738), hl.a("\u11c6\u11aa\u11ab", 76419467)};
+        c = new String[]{"", "SELECT * FROM ", " WHERE(", "active=", " AND(until<1 OR until>?)", ")AND(", "uuid=?", " OR(ipban=", " AND ", "ip=?)", " OR ", ")AND(server_scope='*' OR server_scope=? OR server_scope=?)", ": ", "M! "};
     }
 
     static {

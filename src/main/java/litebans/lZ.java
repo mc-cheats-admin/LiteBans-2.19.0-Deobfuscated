@@ -4,7 +4,7 @@ import litebans.aJ;
 import litebans.c1;
 import litebans.c5;
 
-public static final class lZ {
+public final class lZ {
     private lZ() {
     }
 

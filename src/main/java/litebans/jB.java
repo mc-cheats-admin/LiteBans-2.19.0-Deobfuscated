@@ -16,7 +16,7 @@ implements eo_0 {
     public final String a(kL kL2) {
         kL kL3 = kL2;
         boolean bl = false;
-        return aR.f(aR.e(a[0] + kL3), a[1]);
+        return aR.f(aR.e("ALTER TABLE " + kL3), "removed_by_name VARCHAR(128)");
     }
 
     @Override
@@ -30,7 +30,7 @@ implements eo_0 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\ua3bc\ua3b1\ua3a9\ua3b8\ua3af\ua3dd\ua3a9\ua3bc\ua3bf\ua3b1\ua3b8\ua3dd", 1462215677), hl.a("\uafe0\uaff7\uafff\uaffd\uafe4\uaff7\uaff6\uafcd\uaff0\uafeb\uafcd\uaffc\uaff3\uafff\uaff7\uafb2\uafc4\uafd3\uafc0\uafd1\uafda\uafd3\uafc0\uafba\uafa3\uafa0\uafaa\uafbb", 1063956370)};
+        a = new String[]{"ALTER TABLE ", "removed_by_name VARCHAR(128)"};
     }
 }
 

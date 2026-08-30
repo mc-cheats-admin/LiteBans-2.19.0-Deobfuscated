@@ -11,11 +11,8 @@ import litebans.jv_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.fr
- */
 @hh_0
-public static final class fr_0
+public final class fr_0
 extends fB {
     private final String j;
     private final jq_0 l;
@@ -47,11 +44,11 @@ extends fB {
     }
 
     private static final CharSequence a(fr_0 fr_02) {
-        return am.c(fr_02.j + i[0]);
+        return am.c(fr_02.j + "_USAGE");
     }
 
     private static final void a() {
-        i = new String[]{hl.a("\u9dca\u9dc0\u9dc6\u9dd4\u9dd2\u9dd0", -1788699243)};
+        i = new String[]{"_USAGE"};
     }
 
     static {

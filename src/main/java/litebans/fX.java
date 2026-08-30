@@ -26,12 +26,12 @@ import litebans.q_0;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class fX
+public final class fX
 extends fB {
     private static /* synthetic */ String[] i;
 
     public fX(@NotNull di_0 di_02) {
-        super(i[0], di_02);
+        super("iphistory", di_02);
     }
 
     /*
@@ -77,7 +77,7 @@ extends fB {
                     List list = object5.a((String)object);
                     fo_0 fo_03 = fg_0.a;
                     int n2 = list.isEmpty();
-                    Object object6 = am.M.a(i[1], object);
+                    Object object6 = am.M.a("target", object);
                     boolean bl10 = false;
                     fo_0 fo_04 = fo_03;
                     boolean bl11 = false;
@@ -87,7 +87,7 @@ extends fB {
                         fo_05.a(object6);
                         throw new as();
                     }
-                    aa_0.a((fg_0)this, object5.a((CharSequence)bF.a((CharSequence)am.bX.a(i[2], object), (CharSequence)i[3], n)));
+                    aa_0.a((fg_0)this, object5.a((CharSequence)bF.a((CharSequence)am.bX.a("target", object), (CharSequence)"limit", n)));
                     n = Math.min(n, list.size());
                     n2 = n;
                     for (int i = 0; i < n2; ++i) {
@@ -99,7 +99,7 @@ extends fB {
                             ++n;
                             continue;
                         }
-                        aa_0.a((fg_0)this, (CharSequence)bF.a(kR.a((ch)object5, (CharSequence)am.ac.a(fX.i[4], (Object)string), (iA)object6, false, 2, null), (CharSequence)fX.i[5], () -> fX.a(this, (iA)object6)));
+                        aa_0.a((fg_0)this, (CharSequence)bF.a(kR.a((ch)object5, (CharSequence)am.ac.a("ip", (Object)string), (iA)object6, false, 2, null), (CharSequence)"date", () -> fX.a(this, (iA)object6)));
                     }
                     object4 = iv_0.a;
                 }
@@ -125,7 +125,7 @@ extends fB {
     }
 
     private static final void a() {
-        i = new String[]{hl.a("\u333d\u3324\u333c\u333d\u3327\u3320\u333b\u3326\u332d", 184234836), hl.a("\u8f8d\u8f98\u8f8b\u8f9e\u8f9c\u8f8d", -1466855431), hl.a("\u9db1\u9da4\u9db7\u9da2\u9da0\u9db1", -1438802491), hl.a("\u27a2\u27a7\u27a3\u27a7\u27ba", 1207510990), hl.a("\uea32\uea2b", 1988880987), hl.a("\u9102\u9107\u9112\u9103", -1553362586)};
+        i = new String[]{"iphistory", "target", "target", "limit", "ip", "date"};
     }
 
     static {

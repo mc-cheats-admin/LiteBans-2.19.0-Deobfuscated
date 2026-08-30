@@ -38,7 +38,7 @@ import litebans.w;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class fW
+public final class fW
 extends fg_0 {
     private final String j;
     private final ch l;
@@ -65,7 +65,7 @@ extends fg_0 {
         this.o = bl;
         this.d = n;
         this.r = new ArrayList();
-        this.m = h[0];
+        this.m = "";
     }
 
     public /* synthetic */ fW(String string, ch ch2, jv_0 jv_02, boolean bl, int n, int n2, aJ aJ2) {
@@ -121,9 +121,6 @@ extends fg_0 {
         return this.m;
     }
 
-    /*
-     * Unable to fully structure code
-     */
     public final fW i() {
         try {
             try {
@@ -409,7 +406,7 @@ extends fg_0 {
     }
 
     private static final void g() {
-        h = new String[]{hl.a("", -363383359)};
+        h = new String[]{""};
     }
 
     static {

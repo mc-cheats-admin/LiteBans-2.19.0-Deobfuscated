@@ -6,7 +6,7 @@ import litebans.b3;
 import litebans.cy;
 import litebans.hj_0;
 
-public static final class jx
+public final class jx
 implements Comparator {
     final /* synthetic */ a_ a;
 

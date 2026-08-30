@@ -16,7 +16,7 @@ import litebans.iv_0;
 import litebans.jv_0;
 import litebans.q_0;
 
-public static final class iS
+public final class iS
 implements eo_0 {
     final /* synthetic */ gG a;
     final /* synthetic */ jv_0 c;
@@ -32,7 +32,7 @@ implements eo_0 {
         Object object;
         CharSequence charSequence2 = null;
         if (this.a.c() != null) {
-            object = new CharSequence[]{b[0], this.a.a(), b[1], this.a.c()};
+            object = new CharSequence[]{"serverScope", this.a.a(), "reason", this.a.c()};
             charSequence = h1.a((CharSequence)am.bV, (CharSequence[])object);
         } else {
             charSequence = am.X;
@@ -97,7 +97,7 @@ implements eo_0 {
     }
 
     private static final void a() {
-        b = new String[]{hl.a("\ufdd8\ufdce\ufdd9\ufddd\ufdce\ufdd9\ufdf8\ufdc8\ufdc4\ufddb\ufdce", -756548181), hl.a("\u599e\u5989\u598d\u599f\u5983\u5982", -727557652)};
+        b = new String[]{"serverScope", "reason"};
     }
 
     static {

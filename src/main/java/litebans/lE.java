@@ -11,7 +11,7 @@ import litebans.iX;
 import litebans.jc_0;
 import org.jetbrains.annotations.NotNull;
 
-public static final class lE {
+public final class lE {
     public static final d_ f;
     private final int b;
     private final HashMap c = new HashMap();
@@ -50,12 +50,12 @@ public static final class lE {
                 stringBuilder2.append(c);
                 if (stringBuilder2.length() < 3) continue;
                 if (!bl) {
-                    if (bz.c((CharSequence)stringBuilder2, a[0], false, 2, null)) {
-                        stringBuilder.append(a[1]);
-                    } else if (bz.c((CharSequence)stringBuilder2, a[2], false, 2, null)) {
-                        stringBuilder.append(a[3]);
-                    } else if (bz.c((CharSequence)stringBuilder2, a[4], false, 2, null)) {
-                        stringBuilder.append(a[5]);
+                    if (bz.c((CharSequence)stringBuilder2, "000", false, 2, null)) {
+                        stringBuilder.append("m");
+                    } else if (bz.c((CharSequence)stringBuilder2, "00", false, 2, null)) {
+                        stringBuilder.append("v");
+                    } else if (bz.c((CharSequence)stringBuilder2, "0", false, 2, null)) {
+                        stringBuilder.append("z");
                     }
                 }
                 stringBuilder.append(this.a(stringBuilder2));
@@ -68,7 +68,7 @@ public static final class lE {
             return stringBuilder.toString().toUpperCase(Locale.ROOT);
         }
         catch (fz_0 fz_02) {
-            return a[6];
+            return "error";
         }
     }
 
@@ -76,7 +76,7 @@ public static final class lE {
         String string2;
         switch (string.length() % 3) {
             case 1: {
-                string2 = a[7] + string;
+                string2 = "00" + string;
                 break;
             }
             case 2: {
@@ -102,11 +102,11 @@ public static final class lE {
                 break;
             }
             case 2: {
-                string = a[8] + n2;
+                string = "00" + n2;
                 break;
             }
             case 3: {
-                string = a[9];
+                string = "000";
                 break;
             }
             default: {
@@ -177,7 +177,7 @@ public static final class lE {
     private final String a(StringBuilder stringBuilder) {
         String string = (String)this.c.get(Integer.parseInt(stringBuilder.toString()));
         if (string == null) {
-            throw new fz_0(a[10] + stringBuilder);
+            throw new fz_0("No shuffle input for " + stringBuilder);
         }
         return string;
     }
@@ -185,7 +185,7 @@ public static final class lE {
     private final String a(StringBuilder stringBuilder, int n) {
         Integer n2 = (Integer)this.e.get(stringBuilder.toString());
         if (n2 == null) {
-            throw new fz_0(a[11] + stringBuilder);
+            throw new fz_0("No shuffle output for " + stringBuilder);
         }
         int n3 = n2;
         return this.a(n, n3);
@@ -200,7 +200,7 @@ public static final class lE {
     }
 
     private static final void c() {
-        a = new String[]{hl.a("\u3c88\u3c88\u3c88", -678347592), hl.a("\u9b4d", 718904096), hl.a("\u7c23\u7c23", 1788050451), hl.a("\u62cb", 571761341), hl.a("\u9425", 592876565), hl.a("\uccfb", -523711359), hl.a("\ub7bd\ub7aa\ub7aa\ub7b7\ub7aa", 1944565720), hl.a("\ue6d7\ue6d7", -1054087449), hl.a("\u2d8f\u2d8f", -128176705), hl.a("\u7546\u7546\u7546", -142183050), hl.a("\uc2dc\uc2fd\uc2b2\uc2e1\uc2fa\uc2e7\uc2f4\uc2f4\uc2fe\uc2f7\uc2b2\uc2fb\uc2fc\uc2e2\uc2e7\uc2e6\uc2b2\uc2f4\uc2fd\uc2e0\uc2b2", 820757138), hl.a("\u945c\u947d\u9432\u9461\u947a\u9467\u9474\u9474\u947e\u9477\u9432\u947d\u9467\u9466\u9462\u9467\u9466\u9432\u9474\u947d\u9460\u9432", -1146907630)};
+        a = new String[]{"000", "m", "00", "v", "0", "z", "error", "00", "00", "000", "No shuffle input for ", "No shuffle output for "};
     }
 }
 

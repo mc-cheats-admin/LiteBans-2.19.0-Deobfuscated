@@ -13,10 +13,7 @@ import litebans.iu_0;
 import litebans.v_0;
 import litebans.w_0;
 
-/*
- * Renamed from litebans.ix
- */
-public static class ix_0
+public class ix_0
 extends iu_0
 implements JsonSerializer,
 JsonDeserializer {
@@ -29,7 +26,7 @@ JsonDeserializer {
     public w_0 a(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) {
         w_0 w_02 = new w_0();
         JsonObject jsonObject = jsonElement.getAsJsonObject();
-        JsonElement jsonElement2 = jsonObject.get(c[0]);
+        JsonElement jsonElement2 = jsonObject.get("text");
         if (jsonElement2 != null) {
             w_02.c(jsonElement2.getAsString());
         }
@@ -40,7 +37,7 @@ JsonDeserializer {
     public JsonElement a(w_0 w_02, Type type, JsonSerializationContext jsonSerializationContext) {
         JsonObject jsonObject = new JsonObject();
         this.a(jsonObject, (v_0)w_02, jsonSerializationContext);
-        jsonObject.addProperty(c[1], w_02.b());
+        jsonObject.addProperty("text", w_02.b());
         return jsonObject;
     }
 
@@ -53,7 +50,7 @@ JsonDeserializer {
     }
 
     private static final void b() {
-        c = new String[]{hl.a("\u9f57\u9f46\u9f5b\u9f57", -1914200285), hl.a("\ua37d\ua36c\ua371\ua37d", 1177527049)};
+        c = new String[]{"text", "text"};
     }
 
     static {

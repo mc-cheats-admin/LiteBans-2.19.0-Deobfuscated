@@ -1,9 +1,6 @@
 package litebans;
 
-/*
- * Renamed from litebans.fx
- */
-public static final class fx_0
+public final class fx_0
 extends Enum {
     public static final fx_0 c = new fx_0("ZLIB", 0, 0);
     public static final fx_0 b = new fx_0("BZLIB", 1, 1);

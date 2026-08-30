@@ -6,9 +6,6 @@ import litebans.ie_0;
 import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.representer.Representer;
 
-/*
- * Renamed from litebans.dW
- */
 static class dw_0
 extends Representer {
     final /* synthetic */ d a;

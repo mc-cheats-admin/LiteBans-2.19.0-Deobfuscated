@@ -5,10 +5,7 @@ import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.cp
- */
-public static final class cp_0 {
+public final class cp_0 {
     private final String c;
     private final String d;
     private final String a;
@@ -45,7 +42,7 @@ public static final class cp_0 {
     }
 
     public String toString() {
-        return b[0] + this.c + b[1] + this.d + b[2] + this.a + ')';
+        return "(a=" + this.c + ", uuid=" + this.d + ", ip=" + this.a + ')';
     }
 
     public int hashCode() {
@@ -73,7 +70,7 @@ public static final class cp_0 {
     }
 
     private static final void a() {
-        b = new String[]{hl.a("\u5089\u50c0\u509c", -315404127), hl.a("\u8d2f\u8d23\u8d76\u8d76\u8d6a\u8d67\u8d3e", 1495108867), hl.a("\uc3af\uc3a3\uc3ea\uc3f3\uc3be", -1731279997)};
+        b = new String[]{"(a=", ", uuid=", ", ip="};
     }
 
     static {

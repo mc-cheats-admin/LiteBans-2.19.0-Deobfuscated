@@ -1,6 +1,6 @@
 package litebans;
 
-public static class e3
+public class e3
 extends RuntimeException {
 }
 

@@ -1,9 +1,6 @@
 package litebans;
 
-/*
- * Renamed from litebans.aV
- */
-public static final class av_0
+public final class av_0
 extends Enum {
     public static final av_0 a = new av_0("NAME", 0);
     public static final av_0 d = new av_0("NAME_WITH_EFS_FLAG", 1);

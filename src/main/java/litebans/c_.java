@@ -4,7 +4,7 @@ import java.util.Comparator;
 import litebans.br;
 import litebans.hj_0;
 
-public static final class c_
+public final class c_
 implements Comparator {
     final /* synthetic */ br a;
 

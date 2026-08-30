@@ -5,7 +5,7 @@ import litebans.ew;
 import litebans.hl;
 import org.jetbrains.annotations.Nullable;
 
-public static final class jT
+public final class jT
 implements Serializable {
     private final Object b;
     private final Object c;
@@ -25,7 +25,7 @@ implements Serializable {
     }
 
     public String toString() {
-        return "" + '(' + this.b + a[0] + this.c + ')';
+        return "" + '(' + this.b + ", " + this.c + ')';
     }
 
     public final Object a() {
@@ -57,7 +57,7 @@ implements Serializable {
     }
 
     private static final void d() {
-        a = new String[]{hl.a("\u9ad6\u9ada", 1033214714)};
+        a = new String[]{", "};
     }
 
     static {

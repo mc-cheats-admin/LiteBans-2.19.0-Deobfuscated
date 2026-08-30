@@ -5,7 +5,7 @@ import litebans.i4;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class ej {
+public final class ej {
     private final String b;
     private final gr_0 c;
     private final i4[] a;

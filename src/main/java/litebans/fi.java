@@ -21,12 +21,12 @@ import litebans.q_0;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class fi
+public final class fi
 extends fB {
     private static /* synthetic */ String[] i;
 
     public fi(@NotNull di_0 di_02) {
-        super(i[0], di_02);
+        super("lockdown", di_02);
     }
 
     @Override
@@ -36,7 +36,7 @@ extends fB {
         Object object2 = this;
         boolean bl = false;
         object2 = jG.a(eq_0.f, jv_02, arrayList, ((w)((fg_0)object2).h().a(w.class)).u(), false, 8, null);
-        Object object3 = i[1];
+        Object object3 = "local";
         Object object4 = this;
         boolean bl2 = false;
         object4 = ((w)((fg_0)object4).h().a(w.class)).u();
@@ -49,7 +49,7 @@ extends fB {
             throw new as();
         }
         object2 = string2;
-        if (arrayList.size() == 1 && a8.a(object3 = new String[]{i[2], i[3], i[4], i[5], i[6]}).contains(object2)) {
+        if (arrayList.size() == 1 && a8.a(object3 = new String[]{"stop", "end", "finish", "off", "disable"}).contains(object2)) {
             object = this;
             boolean bl3 = false;
             Object object5 = ((o)((fg_0)object).h().a(o.class)).e();
@@ -70,14 +70,14 @@ extends fB {
             ((o)((fg_0)object4).h().a(o.class)).a(string, null, true);
             return;
         }
-        object3 = am.a(ll.a(arrayList, i[7], null, null, 0, null, null, 62, null), true);
+        object3 = am.a(ll.a(arrayList, " ", null, null, 0, null, null, 62, null), true);
         object4 = this;
         boolean bl5 = false;
         ((o)((fg_0)object4).h().a(o.class)).a(string, (CharSequence)object3, true);
     }
 
     private static final void a() {
-        i = new String[]{hl.a("\uddf9\uddfa\uddf6\uddfe\uddf1\uddfa\udde2\uddfb", 1606278549), hl.a("\u56a4\u56a7\u56ab\u56a9\u56a4", 1543722696), hl.a("\ue5a5\ue5a2\ue5b9\ue5a6", 453699030), hl.a("\uba7e\uba75\uba7f", -2076263909), hl.a("\ua0a4\ua0ab\ua0ac\ua0ab\ua0b1\ua0aa", 1695785154), hl.a("\ud968\ud961\ud961", -998778617), hl.a("\ub937\ub93a\ub920\ub932\ub931\ub93f\ub936", 1705294163), hl.a("\uce01", 434884129)};
+        i = new String[]{"lockdown", "local", "stop", "end", "finish", "off", "disable", " "};
     }
 
     static {

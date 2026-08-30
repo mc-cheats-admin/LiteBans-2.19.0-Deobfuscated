@@ -6,7 +6,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import litebans.bd_0;
 
-public static class b8 {
+public class b8 {
     private ScheduledExecutorService a = null;
 
     public void a() {

@@ -6,7 +6,7 @@ import litebans.iC;
 import litebans.kd;
 import litebans.ko;
 
-public static final class ij
+public final class ij
 extends Enum {
     public static final fj_0 l;
     private static final ij[] m;
@@ -51,23 +51,23 @@ extends Enum {
         String string;
         switch (ko.a[this.ordinal()]) {
             case 1: {
-                string = y[0];
+                string = "broadcast";
                 break;
             }
             case 2: {
-                string = y[1];
+                string = "silent";
                 break;
             }
             case 3: {
-                string = y[2];
+                string = "console";
                 break;
             }
             case 4: {
-                string = y[3];
+                string = "dupeip_join";
                 break;
             }
             case 5: {
-                string = y[4];
+                string = "mute";
                 break;
             }
             default: {
@@ -95,26 +95,26 @@ extends Enum {
 
     static {
         ij.c();
-        e = new ij(y[5], 0);
-        v = new ij(y[6], 1);
-        t = new ij(y[7], 2);
-        o = new ij(y[8], 3);
-        k = new ij(y[9], 4);
-        i = new ij(y[10], 5);
-        b = new ij(y[11], 6);
-        q = new ij(y[12], 7);
-        w = new ij(y[13], 8);
-        u = new ij(y[14], 9);
-        x = new ij(y[15], 10);
-        r = new ij(y[16], 11);
-        g = new ij(y[17], 12);
-        j = new ij(y[18], 13);
-        s = new ij(y[19], 14);
-        f = new ij(y[20], 15);
-        p = new ij(y[21], 16);
-        c = new ij(y[22], 17);
-        h = new ij(y[23], 18);
-        a = new ij(y[24], 19);
+        e = new ij("PING", 0);
+        v = new ij("PONG", 1);
+        t = new ij("BROADCAST", 2);
+        o = new ij("BROADCAST_SILENT", 3);
+        k = new ij("BROADCAST_EXTRA_SILENT", 4);
+        i = new ij("NOTIFY_BANNED_JOIN", 5);
+        b = new ij("NOTIFY_DUPEIP_JOIN", 6);
+        q = new ij("NOTIFY_MUTE", 7);
+        w = new ij("BAN", 8);
+        u = new ij("MUTE", 9);
+        x = new ij("WARN", 10);
+        r = new ij("KICK_REQUEST", 11);
+        g = new ij("KICK_SUCCESS", 12);
+        j = new ij("UNBAN", 13);
+        s = new ij("UNMUTE", 14);
+        f = new ij("UNWARN", 15);
+        p = new ij("EXPIRED_NOTIFY", 16);
+        c = new ij("BROADCAST_CUSTOM", 17);
+        h = new ij("SERVERS_RELOAD", 18);
+        a = new ij("CONFIG_RELOAD", 19);
         d = ijArray = new ij[]{ij.e, ij.v, ij.t, ij.o, ij.k, ij.i, ij.b, ij.q, ij.w, ij.u, ij.x, ij.r, ij.g, ij.j, ij.s, ij.f, ij.p, ij.c, ij.h, ij.a};
         n = iC.a(d);
         l = new fj_0(null);
@@ -122,7 +122,7 @@ extends Enum {
     }
 
     private static final void c() {
-        y = new String[]{hl.a("\u5249\u5259\u5244\u524a\u524f\u5248\u524a\u5258\u525f", 986534443), hl.a("\u66bd\u66a7\u66a2\u66ab\u66a0\u66ba", -912955698), hl.a("\u9a7e\u9a72\u9a73\u9a6e\u9a72\u9a71\u9a78", -752379363), hl.a("\u00f7\u00e6\u00e3\u00f6\u00fa\u00e3\u00cc\u00f9\u00fc\u00fa\u00fd", 1513291923), hl.a("\ua3a7\ua3bf\ua3be\ua3af", -1145134134), hl.a("\ued5f\ued46\ued41\ued48", 1839852815), hl.a("\ufc84\ufc9b\ufc9a\ufc93", 651295956), hl.a("\u422e\u423e\u4223\u422d\u4228\u422f\u422d\u423f\u4238", 1254244972), hl.a("\uc62b\uc63b\uc626\uc628\uc62d\uc62a\uc628\uc63a\uc63d\uc636\uc63a\uc620\uc625\uc62c\uc627\uc63d", 1214170729), hl.a("\u185b\u184b\u1856\u1858\u185d\u185a\u1858\u184a\u184d\u1846\u185c\u1841\u184d\u184b\u1858\u1846\u184a\u1850\u1855\u185c\u1857\u184d", -220325863), hl.a("\u6f2f\u6f2e\u6f35\u6f28\u6f27\u6f38\u6f3e\u6f23\u6f20\u6f2f\u6f2f\u6f24\u6f25\u6f3e\u6f2b\u6f2e\u6f28\u6f2f", 9989985), hl.a("\u6aa6\u6aa7\u6abc\u6aa1\u6aae\u6ab1\u6ab7\u6aac\u6abd\u6ab8\u6aad\u6aa1\u6ab8\u6ab7\u6aa2\u6aa7\u6aa1\u6aa6", -2007274776), hl.a("\uf1cb\uf1ca\uf1d1\uf1cc\uf1c3\uf1dc\uf1da\uf1c8\uf1d0\uf1d1\uf1c0", 691335557), hl.a("\ud9b8\ud9bb\ud9b4", 1948310010), hl.a("\u9404\u941c\u941d\u940c", 1681626185), hl.a("\uec3b\uec2d\uec3e\uec22", -1237717908), hl.a("\ub738\ub73a\ub730\ub738\ub72c\ub721\ub736\ub722\ub726\ub736\ub720\ub727", -2066106509), hl.a("\udb5f\udb5d\udb57\udb5f\udb4b\udb47\udb41\udb57\udb57\udb51\udb47\udb47", -362292460), hl.a("\u1e0b\u1e10\u1e1c\u1e1f\u1e10", 456400478), hl.a("\u7717\u770c\u770f\u7717\u7716\u7707", -595822782), hl.a("\u1f39\u1f22\u1f3b\u1f2d\u1f3e\u1f22", -1013375124), hl.a("\u7980\u799d\u7995\u798c\u7997\u7980\u7981\u799a\u798b\u798a\u7991\u798c\u7983\u799c", -527599163), hl.a("\ufbab\ufbbb\ufba6\ufba8\ufbad\ufbaa\ufba8\ufbba\ufbbd\ufbb6\ufbaa\ufbbc\ufbba\ufbbd\ufba6\ufba4", -1162544151), hl.a("\ubd75\ubd63\ubd74\ubd70\ubd63\ubd74\ubd75\ubd79\ubd74\ubd63\ubd6a\ubd69\ubd67\ubd62", 2097659174), hl.a("\ubd83\ubd8f\ubd8e\ubd86\ubd89\ubd87\ubd9f\ubd92\ubd85\ubd8c\ubd8f\ubd81\ubd84", 1682488768)};
+        y = new String[]{"broadcast", "silent", "console", "dupeip_join", "mute", "PING", "PONG", "BROADCAST", "BROADCAST_SILENT", "BROADCAST_EXTRA_SILENT", "NOTIFY_BANNED_JOIN", "NOTIFY_DUPEIP_JOIN", "NOTIFY_MUTE", "BAN", "MUTE", "WARN", "KICK_REQUEST", "KICK_SUCCESS", "UNBAN", "UNMUTE", "UNWARN", "EXPIRED_NOTIFY", "BROADCAST_CUSTOM", "SERVERS_RELOAD", "CONFIG_RELOAD"};
     }
 }
 

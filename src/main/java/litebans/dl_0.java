@@ -2,10 +2,7 @@ package litebans;
 
 import java.util.WeakHashMap;
 
-/*
- * Renamed from litebans.dL
- */
-public static final class dl_0
+public final class dl_0
 extends ThreadLocal {
     dl_0() {
     }

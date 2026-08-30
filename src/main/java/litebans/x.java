@@ -7,7 +7,7 @@ import litebans.h6;
 import litebans.n_0;
 import org.jetbrains.annotations.Nullable;
 
-public static final class x
+public final class x
 extends n_0 {
     public static final h6 b;
     public static final boolean d;

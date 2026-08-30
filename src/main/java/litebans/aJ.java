@@ -1,6 +1,6 @@
 package litebans;
 
-public static final class aJ {
+public final class aJ {
     private aJ() {
     }
 }

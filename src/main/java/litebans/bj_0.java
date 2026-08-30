@@ -4,10 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-/*
- * Renamed from litebans.bJ
- */
-public static final class bj_0
+public final class bj_0
 extends Enum {
     public static final bj_0 g = new bj_0("NONE", 0, 0);
     public static final bj_0 b = new bj_0("CRC32", 1, 1);

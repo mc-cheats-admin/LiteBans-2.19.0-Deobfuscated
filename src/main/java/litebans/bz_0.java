@@ -2,9 +2,6 @@ package litebans;
 
 import litebans.g8;
 
-/*
- * Renamed from litebans.bZ
- */
 static class bz_0 {
     static final /* synthetic */ int[] a;
 

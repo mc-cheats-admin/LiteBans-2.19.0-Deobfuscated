@@ -1,5 +1,5 @@
 package litebans;
 
-public static interface dG {
+public interface dG {
 }
 

@@ -2,10 +2,7 @@ package litebans;
 
 import litebans.er_0;
 
-/*
- * Renamed from litebans.dE
- */
-public static final class de_0 {
+public final class de_0 {
     public static final er_0 c = new er_0(null);
     private final int d;
     private final int b;

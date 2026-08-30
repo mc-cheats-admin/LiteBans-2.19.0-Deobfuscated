@@ -3,10 +3,7 @@ package litebans;
 import litebans.e8;
 import litebans.lI;
 
-/*
- * Renamed from litebans.c
- */
-public static final class c_0
+public final class c_0
 implements Comparable {
     public static final lI e;
     private final int b;

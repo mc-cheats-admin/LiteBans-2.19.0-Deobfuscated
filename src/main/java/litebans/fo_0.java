@@ -12,10 +12,7 @@ import litebans.y;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.fo
- */
-public static final class fo_0 {
+public final class fo_0 {
     private static /* synthetic */ String[] a;
 
     private fo_0() {
@@ -79,7 +76,7 @@ public static final class fo_0 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("", -6590749)};
+        a = new String[]{""};
     }
 
     static {

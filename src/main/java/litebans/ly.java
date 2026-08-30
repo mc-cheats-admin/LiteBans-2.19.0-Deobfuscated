@@ -9,7 +9,7 @@ import java.sql.Wrapper;
 import litebans.c2;
 import litebans.lJ;
 
-public static final class ly
+public final class ly
 extends lJ
 implements Wrapper,
 AutoCloseable,

@@ -24,10 +24,7 @@ import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.event.EventHandler;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class gX
+public final class gX
 implements ly_0 {
     private final di_0 c;
     private final t e;
@@ -65,7 +62,7 @@ implements ly_0 {
             return;
         }
         di_0 di_02 = this.c;
-        ew.b(di_02, a[0]);
+        ew.b(di_02, "");
         loginEvent.registerIntent((Plugin)((BungeePlugin)di_02));
         ((BungeePlugin)this.c).a(() -> gX.a(this, loginEvent));
     }
@@ -92,7 +89,7 @@ implements ly_0 {
         new gf_0(this.c, object.i(), object.a(), object.b()).run();
         ew.a(jv_02);
         Object object2 = jv_02;
-        Object object3 = a[1];
+        Object object3 = "litebans.exempt.dupeip_join";
         boolean bl2 = false;
         jv_0 jv_03 = object2;
         boolean bl3 = false;
@@ -122,7 +119,7 @@ implements ly_0 {
         try {
             long l3 = System.nanoTime();
             gu gu2 = gX2.b.c();
-            ew.b(gu2, a[2]);
+            ew.b(gu2, "");
             gx_0 gx_02 = (gx_0)gu2;
             gx_02.a(loginEvent);
             q_0 q_02 = gX2.d;
@@ -131,7 +128,7 @@ implements ly_0 {
             if (q_02.a(n)) {
                 q_0 q_03 = q_02;
                 boolean bl2 = false;
-                q_03.a((Object)(a[3] + i1.b((double)(System.nanoTime() - l3) / 1000.0 / 1000.0) + a[4]));
+                q_03.a((Object)("Handled login event: " + i1.b((double)(System.nanoTime() - l3) / 1000.0 / 1000.0) + " "));
             }
         }
         finally {
@@ -145,7 +142,7 @@ implements ly_0 {
     }
 
     private static final void b() {
-        a = new String[]{hl.a("", 1158329201), hl.a("\u6f5f\u6f5a\u6f47\u6f56\u6f51\u6f52\u6f5d\u6f40\u6f1d\u6f56\u6f4b\u6f56\u6f5e\u6f43\u6f47\u6f1d\u6f57\u6f46\u6f43\u6f56\u6f5a\u6f43\u6f6c\u6f59\u6f5c\u6f5a\u6f5d", -113938637), hl.a("", -1291935057), hl.a("\u4d08\u4d21\u4d2e\u4d24\u4d2c\u4d25\u4d24\u4d60\u4d2c\u4d2f\u4d27\u4d29\u4d2e\u4d60\u4d25\u4d36\u4d25\u4d2e\u4d34\u4d7a\u4d60", -978891456), hl.a("\u5184\u51c9\u51d7\u518a", -1118744156)};
+        a = new String[]{"", "litebans.exempt.dupeip_join", "", "Handled login event: ", " ms."};
     }
 
     static {

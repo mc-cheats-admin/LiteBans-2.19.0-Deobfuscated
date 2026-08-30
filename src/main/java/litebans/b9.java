@@ -5,10 +5,7 @@ import litebans.aJ;
 import litebans.bT;
 import litebans.ch;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class b9
+public final class b9
 extends bT {
     private b9(ch ch2, PreparedStatement preparedStatement, String string) {
         super(ch2, preparedStatement, string, null);

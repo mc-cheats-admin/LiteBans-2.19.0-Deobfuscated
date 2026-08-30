@@ -4,7 +4,7 @@ import litebans.aJ;
 import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 
-public static final class i4 {
+public final class i4 {
     private final String b;
     private final String e;
     private final String d;
@@ -24,7 +24,7 @@ public static final class i4 {
 
     public /* synthetic */ i4(String string, String string2, String string3, String string4, boolean bl, boolean bl2, int n, aJ aJ2) {
         if ((n & 8) != 0) {
-            string4 = g[0];
+            string4 = "";
         }
         if ((n & 0x10) != 0) {
             bl = false;
@@ -60,7 +60,7 @@ public static final class i4 {
     }
 
     private static final void f() {
-        g = new String[]{hl.a("", 143655317)};
+        g = new String[]{""};
     }
 
     static {

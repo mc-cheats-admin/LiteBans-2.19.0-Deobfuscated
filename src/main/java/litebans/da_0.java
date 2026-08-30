@@ -3,10 +3,7 @@ package litebans;
 import litebans.d4;
 import litebans.gu_0;
 
-/*
- * Renamed from litebans.dA
- */
-public static class da_0
+public class da_0
 implements d4,
 gu_0 {
     private final short K;

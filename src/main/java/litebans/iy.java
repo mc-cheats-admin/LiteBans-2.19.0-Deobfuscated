@@ -41,10 +41,7 @@ import net.minecraft.world.entity.player.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static class iy
+public class iy
 implements cr_0 {
     protected final di_0 d;
     protected MinecraftServer c;
@@ -125,7 +122,7 @@ implements cr_0 {
             return SharedConstants.getProtocolVersion();
         }
         catch (LinkageError linkageError) {
-            this.d.getLogger().warning(a[0]);
+            this.d.getLogger().warning("Unable to determine server protocol version");
             return 770;
         }
     }
@@ -184,7 +181,7 @@ implements cr_0 {
 
     @Override
     public void a(jq_0 jq_02, CommandDispatcher commandDispatcher) {
-        ArgumentBuilder argumentBuilder = ((LiteralArgumentBuilder)((LiteralArgumentBuilder)Commands.literal((String)jq_02.getName()).requires(commandSourceStack -> this.d.a(commandSourceStack).e(jq_02.getPermission()))).executes((Command)jq_02)).then(Commands.argument((String)a[1], (ArgumentType)StringArgumentType.greedyString()).suggests((SuggestionProvider)jq_02).executes((Command)jq_02));
+        ArgumentBuilder argumentBuilder = ((LiteralArgumentBuilder)((LiteralArgumentBuilder)Commands.literal((String)jq_02.getName()).requires(commandSourceStack -> this.d.a(commandSourceStack).e(jq_02.getPermission()))).executes((Command)jq_02)).then(Commands.argument((String)"args", (ArgumentType)StringArgumentType.greedyString()).suggests((SuggestionProvider)jq_02).executes((Command)jq_02));
         commandDispatcher.getRoot().getChildren().removeIf(commandNode -> commandNode.getName().equals(jq_02.getName()));
         commandDispatcher.register((LiteralArgumentBuilder)argumentBuilder);
     }
@@ -209,7 +206,7 @@ implements cr_0 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u2436\u240d\u2402\u2401\u240f\u2406\u2443\u2417\u240c\u2443\u2407\u2406\u2417\u2406\u2411\u240e\u240a\u240d\u2406\u2443\u2410\u2406\u2411\u2415\u2406\u2411\u2443\u2413\u2411\u240c\u2417\u240c\u2400\u240c\u240f\u2443\u2415\u2406\u2411\u2410\u240a\u240c\u240d", -2050415517), hl.a("\u812f\u813c\u8129\u813d", 893944142)};
+        a = new String[]{"Unable to determine server protocol version", "args"};
     }
 
     static {

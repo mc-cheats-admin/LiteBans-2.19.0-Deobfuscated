@@ -32,7 +32,7 @@ import litebans.x_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static class gu
+public class gu
 extends fg_0 {
     private static /* synthetic */ String[] d;
 
@@ -77,7 +77,7 @@ extends fg_0 {
                                 var21_37 = false;
                                 if (ew.a(var20_35, var7_19 & 255) <= 0) break block20;
                                 this.a(var18_33, var4_7, var7_19);
-                                if (!this.a(var18_33, var1_1, var5_15, var4_7, h1.a(hd_0.c, gu.d[0] + hd_0.i + hy_0.b(var7_19) + ' ' + hd_0.f(gu.d[1]) + gu.d[2] + hd_0.d(hd_0.e(String.valueOf(var4_7.length())))), null, gu.d[3], false)) break block20;
+                                if (!this.a(var18_33, var1_1, var5_15, var4_7, h1.a(hd_0.c, "Invalid username.\nMaximum " + hd_0.i + hy_0.b(var7_19) + ' ' + hd_0.f("characters") + ", found " + hd_0.d(hd_0.e(String.valueOf(var4_7.length())))), null, "KICK_OTHER", false)) break block20;
                                 var10_22 = true;
                                 break block21;
                             }
@@ -89,7 +89,7 @@ extends fg_0 {
                             if (var21_38.a(var22_39)) {
                                 var24_44 = var21_38;
                                 var25_45 = false;
-                                var24_44.a((Object)(gu.d[4] + var4_7 + gu.d[5] + var5_15 + gu.d[6] + var8_20 + gu.d[7] + var20_36));
+                                var24_44.a((Object)("Ban for " + var4_7 + " (uuid: '" + var5_15 + "') on " + var8_20 + ": " + var20_36));
                             }
                             var21_38 = this.a(var6_17);
                             if (var21_38 != null) {
@@ -155,7 +155,7 @@ extends fg_0 {
     }
 
     public final void a(@NotNull ch ch2, @NotNull String string, byte by2) {
-        ch2.e().getLogger().warning(d[8] + string + d[9] + hy_0.b(by2) + d[10]);
+        ch2.e().getLogger().warning("User \"" + string + "\" length > " + hy_0.b(by2) + " (invalid username); blocking ");
     }
 
     public final String a(@Nullable String string) {
@@ -182,7 +182,7 @@ extends fg_0 {
     public final boolean a(@NotNull ch ch2, @NotNull Object object, @NotNull String string, @NotNull String string2, @NotNull CharSequence charSequence, @Nullable dZ dZ2, @NotNull String string3, boolean bl) {
         UUID uUID = jj_0.a.j(string);
         if ((dZ2 == null || !ew.a((Object)dZ2.w(), (Object)string)) && uUID != null && ch2.a(uUID, a_.h) && bl) {
-            ch2.e().getLogger().info(string2 + d[11]);
+            ch2.e().getLogger().info(string2 + " was permitted to join the ");
             return false;
         }
         this.a(object, charSequence, string3);
@@ -191,10 +191,10 @@ extends fg_0 {
 
     public static /* synthetic */ boolean a(gu gu2, ch ch2, Object object, String string, String string2, CharSequence charSequence, dZ dZ2, String string3, boolean bl, int n, Object object2) {
         if (object2 != null) {
-            throw new UnsupportedOperationException(d[12]);
+            throw new UnsupportedOperationException("");
         }
         if ((n & 0x20) != 0) {
-            string3 = d[13];
+            string3 = "KICK_BANNED";
         }
         if ((n & 0x40) != 0) {
             bl = true;
@@ -232,7 +232,7 @@ extends fg_0 {
                 charSequenceArray = this;
                 bl = false;
                 o o2 = (o)charSequenceArray.h().a(o.class);
-                charSequenceArray = new CharSequence[]{d[14], string, d[15], string4};
+                charSequenceArray = new CharSequence[]{"geoip", string, "player", string4};
                 o2.b(string3, h1.a((CharSequence)am.dy, charSequenceArray), true);
                 return true;
             }
@@ -294,7 +294,7 @@ extends fg_0 {
     }
 
     private static final void a() {
-        d = new String[]{hl.a("\u17ad\u178a\u1792\u1785\u1788\u178d\u1780\u17c4\u1791\u1797\u1781\u1796\u178a\u1785\u1789\u1781\u17ca\u17ee\u17a9\u1785\u179c\u178d\u1789\u1791\u1789\u17c4", -158394396), hl.a("\u06fc\u06f7\u06fe\u06ed\u06fe\u06fc\u06eb\u06fa\u06ed\u06ec", -1860893025), hl.a("\u817c\u8170\u8136\u813f\u8125\u813e\u8134\u8170", -1823375024), hl.a("\u2b71\u2b73\u2b79\u2b71\u2b65\u2b75\u2b6e\u2b72\u2b7f\u2b68", -820368582), hl.a("\u2c07\u2c24\u2c2b\u2c65\u2c23\u2c2a\u2c37\u2c65", 449260613), hl.a("\ufaf7\ufaff\ufaa2\ufaa2\ufabe\ufab3\ufaed\ufaf7\ufaf0", -516621609), hl.a("\uf0fd\uf0f3\uf0fa\uf0b5\uf0b4\uf0fa", 1061089498), hl.a("\uf5d6\uf5cc", -193661460), hl.a("\u0365\u0343\u0355\u0342\u0310\u0312", 1952842544), hl.a("\u2702\u2700\u274c\u2745\u274e\u2747\u2754\u2748\u2700\u271e\u2700", 1848846112), hl.a("\u6f2f\u6f27\u6f66\u6f61\u6f79\u6f6e\u6f63\u6f66\u6f6b\u6f2f\u6f7a\u6f7c\u6f6a\u6f7d\u6f61\u6f6e\u6f62\u6f6a\u6f26\u6f34\u6f2f\u6f6d\u6f63\u6f60\u6f6c\u6f64\u6f66\u6f61\u6f68\u6f2f\u6f63\u6f60\u6f68\u6f66\u6f61\u6f21", 1824485135), hl.a("\u3e4d\u3e1a\u3e0c\u3e1e\u3e4d\u3e1d\u3e08\u3e1f\u3e00\u3e04\u3e19\u3e19\u3e08\u3e09\u3e4d\u3e19\u3e02\u3e4d\u3e07\u3e02\u3e04\u3e03\u3e4d\u3e19\u3e05\u3e08\u3e4d\u3e1e\u3e08\u3e1f\u3e1b\u3e08\u3e1f\u3e43", -1201783187), hl.a("", 1832510860), hl.a("\uee72\uee70\uee7a\uee72\uee66\uee7b\uee78\uee77\uee77\uee7c\uee7d", -704582087), hl.a("\u6379\u637b\u6371\u6377\u636e", 1079927582), hl.a("\ud64f\ud653\ud65e\ud646\ud65a\ud64d", 1183176255)};
+        d = new String[]{"Invalid username.\nMaximum ", "characters", ", found ", "KICK_OTHER", "Ban for ", " (uuid: '", "') on ", ": ", "User \"", "\" length > ", " (invalid username); blocking ", " was permitted to join the ", "", "KICK_BANNED", "geoip", "player"};
     }
 
     static {

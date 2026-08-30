@@ -2,10 +2,7 @@ package litebans;
 
 import litebans.gu_0;
 
-/*
- * Renamed from litebans.jA
- */
-public static class ja_0
+public class ja_0
 implements gu_0 {
     public static final String c;
     public static final String f;

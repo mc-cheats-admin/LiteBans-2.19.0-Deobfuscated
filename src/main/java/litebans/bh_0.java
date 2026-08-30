@@ -15,10 +15,7 @@ import net.luckperms.api.model.user.User;
 import net.luckperms.api.model.user.UserManager;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.bH
- */
-public static final class bh_0 {
+public final class bh_0 {
     public static final bh_0 b;
     private static /* synthetic */ String[] a;
 
@@ -30,12 +27,12 @@ public static final class bh_0 {
     }
 
     public final LuckPerms c(@NotNull Object object) {
-        ew.b(object, a[0]);
+        ew.b(object, "");
         return (LuckPerms)object;
     }
 
     public final User e(@NotNull Object object) {
-        ew.b(object, a[1]);
+        ew.b(object, "");
         return (User)object;
     }
 
@@ -94,7 +91,7 @@ public static final class bh_0 {
     }
 
     private static final void b() {
-        a = new String[]{hl.a("", -954855201), hl.a("", -218297747)};
+        a = new String[]{"", ""};
     }
 }
 

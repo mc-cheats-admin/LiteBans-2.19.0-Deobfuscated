@@ -1,5 +1,5 @@
 package litebans;
 
-public static interface cA {
+public interface cA {
 }
 

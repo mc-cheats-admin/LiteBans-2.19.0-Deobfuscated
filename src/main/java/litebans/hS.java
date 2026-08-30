@@ -2,7 +2,7 @@ package litebans;
 
 import litebans.q_0;
 
-public static final class hS
+public final class hS
 implements Runnable {
     final /* synthetic */ q_0 b;
     final /* synthetic */ String a;

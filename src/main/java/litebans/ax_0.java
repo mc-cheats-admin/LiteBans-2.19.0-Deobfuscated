@@ -6,10 +6,7 @@ import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.plugin.Plugin;
 
-/*
- * Renamed from litebans.ax
- */
-public static class ax_0 {
+public class ax_0 {
     private static final Runnable a = () -> {};
 
     public static void a(BukkitPlugin bukkitPlugin, Runnable runnable) {

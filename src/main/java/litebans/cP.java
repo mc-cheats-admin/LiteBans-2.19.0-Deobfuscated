@@ -1,6 +1,6 @@
 package litebans;
 
-public static final class cP
+public final class cP
 extends RuntimeException {
 }
 

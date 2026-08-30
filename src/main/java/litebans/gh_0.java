@@ -7,9 +7,6 @@ import java.nio.charset.CodingErrorAction;
 import litebans.dd_0;
 import litebans.gm_0;
 
-/*
- * Renamed from litebans.gH
- */
 static class gh_0
 implements dd_0,
 gm_0 {

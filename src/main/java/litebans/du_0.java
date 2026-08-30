@@ -12,11 +12,8 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.du
- */
 @ai_0(a=0)
-public static final class du_0 {
+public final class du_0 {
     public static final du_0 b;
     private static /* synthetic */ String[] a;
 
@@ -27,7 +24,7 @@ public static final class du_0 {
         PacketContainer packetContainer = new PacketContainer(PacketType.Play.Server.KICK_DISCONNECT);
         packetContainer.getChatComponents().write(0, (Object)WrappedChatComponent.fromJson((String)string));
         ProtocolManager protocolManager = ProtocolLibrary.getProtocolManager();
-        ew.b(object, a[0]);
+        ew.b(object, "");
         protocolManager.sendServerPacket((Player)object, packetContainer);
     }
 
@@ -41,7 +38,7 @@ public static final class du_0 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("", -638032155)};
+        a = new String[]{""};
     }
 }
 

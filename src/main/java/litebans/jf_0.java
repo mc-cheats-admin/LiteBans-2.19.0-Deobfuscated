@@ -12,10 +12,7 @@ import litebans.jv_0;
 import litebans.kR;
 import litebans.q_0;
 
-/*
- * Renamed from litebans.jF
- */
-public static final class jf_0
+public final class jf_0
 implements eo_0 {
     final /* synthetic */ boolean e;
     final /* synthetic */ String b;
@@ -47,15 +44,15 @@ implements eo_0 {
             byte by3 = ((q_0)fg_03.h().a(q_0.class)).f().be();
             bl = false;
             kR.a(ch2, h1.a(((Object)charSequence).toString(), by3 & 0xFF), this.a.a(), this.a.b(), false, false, 16, null);
-        } else if (this.a.f() && !bz.a(this.b, f[0], true) || !this.a.f()) {
+        } else if (this.a.f() && !bz.a(this.b, "CONSOLE", true) || !this.a.f()) {
             CharSequence charSequence = this.b;
             fg_0 fg_04 = this.c;
             boolean bl = false;
             byte by4 = ((q_0)fg_04.h().a(q_0.class)).f().be();
             bl = false;
-            kR.a(ch2, h1.a(((Object)charSequence).toString(), by4 & 0xFF), this.d, f[1], false, false, 16, null);
+            kR.a(ch2, h1.a(((Object)charSequence).toString(), by4 & 0xFF), this.d, "#", false, false, 16, null);
         } else if (this.a.f()) {
-            kR.a(ch2, f[2], f[3], f[4], false, false, 16, null);
+            kR.a(ch2, "CONSOLE", "CONSOLE", "#", false, false, 16, null);
         }
     }
 
@@ -66,7 +63,7 @@ implements eo_0 {
     }
 
     private static final void a() {
-        f = new String[]{hl.a("\u711d\u7111\u7110\u710d\u7111\u7112\u711b", -132550306), hl.a("\u060f", -1363671508), hl.a("\u5c40\u5c4c\u5c4d\u5c50\u5c4c\u5c4f\u5c46", -1423352829), hl.a("\u297f\u2973\u2972\u296f\u2973\u2970\u2979", 1061628220), hl.a("\ub2d4", 893498103)};
+        f = new String[]{"CONSOLE", "#", "CONSOLE", "CONSOLE", "#"};
     }
 
     static {

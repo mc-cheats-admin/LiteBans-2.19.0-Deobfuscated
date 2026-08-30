@@ -6,10 +6,7 @@ import litebans.en_0;
 import litebans.i2;
 import litebans.iw_0;
 
-/*
- * Renamed from litebans.bS
- */
-public static class bs_0
+public class bs_0
 implements en_0 {
     static final i2 g;
     private static final String c;
@@ -39,7 +36,7 @@ implements en_0 {
     public byte[] e() {
         if (this.b != null || this.d != null) {
             if (this.b == null || this.d == null) {
-                throw new IllegalArgumentException("Zip64 extended information must contain both size values in the local file header.");
+                throw new IllegalArgumentException("Zip64 extended information must contain both size values in the local file ");
             }
             byte[] byArray = new byte[16];
             this.a(byArray);
@@ -69,7 +66,7 @@ implements en_0 {
             return;
         }
         if (n2 < 16) {
-            throw new ZipException("Zip64 extended information must contain both size values in the local file header.");
+            throw new ZipException("Zip64 extended information must contain both size values in the local file ");
         }
         this.b = new iw_0(byArray, n);
         this.d = new iw_0(byArray, n += 8);

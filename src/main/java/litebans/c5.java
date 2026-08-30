@@ -4,7 +4,7 @@ import java.util.List;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static class c5 {
+public class c5 {
     private final String c;
     private final String a;
     private final String f;

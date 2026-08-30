@@ -8,10 +8,7 @@ import litebans.kc_0;
 import litebans.kq_0;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.jg
- */
-public static final class jg_0 {
+public final class jg_0 {
     public static final ct_0 c;
     private final byte[] l;
     private byte k;

@@ -1,9 +1,6 @@
 package litebans;
 
-/*
- * Renamed from litebans.hC
- */
-public static class hc_0
+public class hc_0
 extends Exception {
     private static final long a = 2772690708123267100L;
 

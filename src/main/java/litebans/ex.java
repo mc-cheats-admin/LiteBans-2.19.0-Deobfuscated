@@ -3,7 +3,7 @@ package litebans;
 import litebans.aJ;
 import litebans.ed;
 
-public static final class ex {
+public final class ex {
     private ex() {
     }
 

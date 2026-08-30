@@ -24,12 +24,12 @@ import litebans.lo_0;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static class fE
+public class fE
 extends fB {
     private static /* synthetic */ String[] i;
 
     public fE(@NotNull di_0 di_02) {
-        super(i[0], di_02);
+        super("checkban", di_02);
     }
 
     public a_ b() {
@@ -109,7 +109,7 @@ extends fB {
     private final void a(ch ch2, dZ dZ2, iA iA2) {
         if (this.b() == a_.h && !ew.a((Object)dZ2.w(), (Object)iA2.b())) {
             String[] stringArray = new String[2];
-            stringArray[0] = i[1];
+            stringArray[0] = "check";
             String string = iA2.b();
             if (string == null && (string = iA2.a()) == null) {
                 return;
@@ -120,7 +120,7 @@ extends fB {
     }
 
     private static final void d() {
-        i = new String[]{hl.a("\u6423\u6428\u6425\u6423\u642b\u6422\u6421\u642e", 1164207168), hl.a("\u4e10\u4e1b\u4e16\u4e10\u4e18", -1884008845)};
+        i = new String[]{"checkban", "check"};
     }
 
     static {

@@ -8,16 +8,13 @@ import litebans.hl;
 import litebans.i_;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
 static final class b1
 implements i_ {
     private final BufferedReader a;
     private static /* synthetic */ String[] b;
 
     public b1(@NotNull BufferedReader bufferedReader) {
-        ew.a((Object)bufferedReader, b[0]);
+        ew.a((Object)bufferedReader, "reader");
         this.a = bufferedReader;
     }
 
@@ -31,7 +28,7 @@ implements i_ {
     }
 
     private static final void a() {
-        b = new String[]{hl.a("\u03a7\u03b0\u03b4\u03b1\u03b0\u03a7", 2019230677)};
+        b = new String[]{"reader"};
     }
 
     static {

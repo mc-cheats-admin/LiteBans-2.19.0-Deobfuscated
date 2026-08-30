@@ -6,7 +6,7 @@ import litebans.ew;
 import litebans.fa_0;
 import litebans.ij;
 
-public static final class jn
+public final class jn
 implements fa_0 {
     final /* synthetic */ String d;
     final /* synthetic */ CopyOnWriteArrayList e;

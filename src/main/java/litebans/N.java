@@ -6,10 +6,7 @@ import litebans.di_0;
 import litebans.j_0;
 import litebans.jv_0;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static class N
+public class N
 extends j_0 {
     public N(di_0 di_02) {
         super(di_02);

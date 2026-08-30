@@ -11,10 +11,7 @@ import net.minecraft.server.MinecraftServer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.cR
- */
-public static interface cr_0 {
+public interface cr_0 {
     public void a(Object var1, String var2);
 
     public Object f();

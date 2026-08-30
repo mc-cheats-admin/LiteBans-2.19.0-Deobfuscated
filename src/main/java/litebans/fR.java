@@ -7,10 +7,7 @@ import litebans.fE;
 import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class fR
+public final class fR
 extends fE {
     private static /* synthetic */ String[] j;
 
@@ -35,11 +32,11 @@ extends fE {
 
     @Override
     public String getName() {
-        return j[0];
+        return "checkmute";
     }
 
     private static final void a() {
-        j = new String[]{hl.a("\uaa8f\uaa84\uaa89\uaa8f\uaa87\uaa81\uaa99\uaa98\uaa89", 338668268)};
+        j = new String[]{"checkmute"};
     }
 
     static {

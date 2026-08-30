@@ -2,7 +2,7 @@ package litebans;
 
 import litebans.a_;
 
-public static final class bb {
+public final class bb {
     public static final /* synthetic */ int[] a;
 
     static {

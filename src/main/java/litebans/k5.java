@@ -15,10 +15,7 @@ import net.minecraft.network.chat.PlayerChatMessage;
 import net.minecraft.server.level.ServerPlayer;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class k5
+public final class k5
 implements bk_0 {
     private final di_0 b;
     private final p a;

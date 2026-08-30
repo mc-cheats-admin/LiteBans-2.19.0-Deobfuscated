@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 @hh_0
-public static final class fn
+public final class fn
 extends fB {
     private final String i;
     private final E j;

@@ -31,11 +31,8 @@ import net.md_5.bungee.api.score.Scoreboard;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.fe
- */
 @ai_0(a=1)
-public static final class fe_0
+public final class fe_0
 implements ProxiedPlayer {
     private final di_0 c;
     private final PendingConnection b;
@@ -171,7 +168,7 @@ implements ProxiedPlayer {
     public String getName() {
         Object object = this.b;
         if (object == null || (object = object.getName()) == null) {
-            object = a[0];
+            object = "null";
         }
         return object;
     }
@@ -193,7 +190,7 @@ implements ProxiedPlayer {
 
     public ServerInfo getReconnectServer() {
         ec_0 ec_02 = this.c.i();
-        ew.b(ec_02, a[1]);
+        ew.b(ec_02, "");
         k1 k12 = (k1)ec_02;
         PendingConnection pendingConnection = this.b;
         ew.a(pendingConnection);
@@ -338,7 +335,7 @@ implements ProxiedPlayer {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u1292\u1289\u1290\u1290", -1610804484), hl.a("", -1065704736)};
+        a = new String[]{"null", ""};
     }
 
     static {

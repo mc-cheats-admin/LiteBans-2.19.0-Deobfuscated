@@ -1,6 +1,6 @@
 package litebans;
 
-public static interface il {
+public interface il {
     public static final long a = -1L;
 }
 

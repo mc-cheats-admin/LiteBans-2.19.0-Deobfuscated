@@ -6,10 +6,6 @@ import litebans.hd;
 import litebans.la_0;
 import net.minecraft.class_2561;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.cF
- */
 static class cf_0
 implements hd {
     final /* synthetic */ la_0 a;

@@ -1,9 +1,6 @@
 package litebans;
 
-/*
- * Renamed from litebans.bO
- */
-public static class bo_0 {
+public class bo_0 {
     public static final int a;
     public static final int b;
     public static final int g;

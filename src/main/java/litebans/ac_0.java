@@ -10,11 +10,7 @@ import net.minecraft.class_2561;
 import net.minecraft.class_5455;
 import net.minecraft.class_8824;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.ac
- */
-public static class ac_0
+public class ac_0
 implements hd {
     private static final boolean b;
     private is_0 c;
@@ -47,8 +43,8 @@ implements hd {
         ac_0.a();
         boolean bl = false;
         try {
-            Class<?> clazz = Class.forName(a[0]);
-            clazz.getMethod(a[1], String.class);
+            Class<?> clazz = Class.forName("net.minecraft.class_11341");
+            clazz.getMethod("method_71360", String.class);
         }
         catch (ReflectiveOperationException reflectiveOperationException) {
             bl = true;
@@ -57,7 +53,7 @@ implements hd {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u9e85\u9e8e\u9e9f\u9ec5\u9e86\u9e82\u9e85\u9e8e\u9e88\u9e99\u9e8a\u9e8d\u9e9f\u9ec5\u9e88\u9e87\u9e8a\u9e98\u9e98\u9eb4\u9eda\u9eda\u9ed8\u9edf\u9eda", -713777429), hl.a("\u08d5\u08dd\u08cc\u08d0\u08d7\u08dc\u08e7\u088f\u0889\u088b\u088e\u0888", 68487352)};
+        a = new String[]{"net.minecraft.class_11341", "method_71360"};
     }
 }
 

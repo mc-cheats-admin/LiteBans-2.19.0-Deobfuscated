@@ -22,7 +22,7 @@ import litebans.kx_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static class hc
+public class hc
 implements CharSequence {
     public static final df_0 j;
     private final ch g;
@@ -101,12 +101,12 @@ implements CharSequence {
     public String toString() {
         Object object;
         this.e();
-        CharSequence charSequence = i[0];
+        CharSequence charSequence = "";
         charSequence = this.b(this.c(this.a(charSequence)));
         if (this.b != null) {
-            object = this.e ? i[1] : i[2];
+            object = this.e ? "DESC" : "ASC";
             CharSequence charSequence2 = charSequence;
-            CharSequence charSequence3 = i[3] + this.b + ' ' + (String)object;
+            CharSequence charSequence3 = " ORDER BY " + this.b + ' ' + (String)object;
             boolean bl = false;
             charSequence = "" + charSequence2 + charSequence3;
         }
@@ -115,7 +115,7 @@ implements CharSequence {
         boolean bl = false;
         if (ew.a(((Number)object).intValue(), n) > 0) {
             object = charSequence;
-            CharSequence charSequence4 = i[4];
+            CharSequence charSequence4 = " LIMIT ? OFFSET ?";
             bl = false;
             charSequence = "" + object + charSequence4;
             this.d = gZ.l.a(this.d, arg_0 -> hc.b(this, arg_0));
@@ -263,7 +263,7 @@ implements CharSequence {
     }
 
     private static final void d() {
-        i = new String[]{hl.a("", 1067050914), hl.a("\ua017\ua016\ua000\ua010", 1221107795), hl.a("\ufded\ufdff\ufdef", 1270021548), hl.a("\u92f6\u9299\u9284\u9292\u9293\u9284\u92f6\u9294\u928f\u92f6", -972385578), hl.a("\u7219\u7275\u7270\u7274\u7270\u726d\u7219\u7206\u7219\u7276\u727f\u727f\u726a\u727c\u726d\u7219\u7206", -3444167), hl.a("\u9ca8\u9ce1\u9ce3\u9cf4\u9ce9\u9cf6\u9ce5\u9cbd\u9cfb\u9cf4\u9cf2\u9cf5\u9ce5\u9cfd\u9ca0\u9cc1\u9cce\u9cc4\u9ca8\u9cf5\u9cee\u9cf4\u9ce9\u9cec\u9cbc\u9cb1\u9ca0\u9ccf\u9cd2\u9ca0\u9cf5\u9cee\u9cf4\u9ce9\u9cec\u9cbe\u9cbf\u9ca9\u9ca9", 1150983296), hl.a("\ube07\ube07\ube1b\ube16", -352141710), hl.a("\u780c\u780f\u7800\u7800\u780b\u780a\u7831\u780c\u7817\u7831\u781b\u781b\u7807\u780a", 1958770798), hl.a("\uf381\uf38c", 282653672), hl.a("\u743f\u743d", -1578535934), hl.a("\u358d\u358f", 2130982320), hl.a("\ud495\ud4f4\ud4fb\ud4f1\ud495", 314365109), hl.a("", 1032713039), hl.a("\u1d1a", -1424417488), hl.a("", 531118931), hl.a("\uaced\uacfb\uacf2\uacfb\uacfd\uacea\uac9e", 502639806), hl.a("\ucf27\ucf41\ucf55\ucf48\ucf4a\ucf27", -1046229241), hl.a("\ud2db\ud2ac\ud2b3\ud2be\ud2a9\ud2be\ud2db", 1036309243), hl.a("", 1629186489), hl.a("\ufefd", 1354759895)};
+        i = new String[]{"", "DESC", "ASC", " ORDER BY ", " LIMIT ? OFFSET ?", "(active={true} AND(until<1 OR until>?))", "uuid", "banned_by_uuid", "id", "=?", "=?", " AND ", "", "*", "", "SELECT ", " FROM ", " WHERE ", "", "*"};
     }
 }
 

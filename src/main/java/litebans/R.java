@@ -14,11 +14,8 @@ import litebans.p_0;
 import litebans.q_0;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
 @ai_0(a=1)
-public static final class R
+public final class R
 extends p_0 {
     private static /* synthetic */ String[] b;
 
@@ -48,7 +45,7 @@ extends p_0 {
 
     @Override
     public ly_0 a(@NotNull jw_0 jw_02) {
-        if (ew.a((Object)jw_02.getName(), (Object)b[0])) {
+        if (ew.a((Object)jw_02.getName(), (Object)"lockdown")) {
             return new aP(this.a);
         }
         return (ly_0)super.a(jw_02);
@@ -60,7 +57,7 @@ extends p_0 {
     }
 
     private static final void d() {
-        b = new String[]{hl.a("\ue45c\ue45f\ue453\ue45b\ue454\ue45f\ue447\ue45e", -397548496)};
+        b = new String[]{"lockdown"};
     }
 
     static {

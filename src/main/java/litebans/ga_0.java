@@ -25,10 +25,7 @@ import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.event.ServerConnectEvent;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.gA
- */
-public static final class ga_0
+public final class ga_0
 extends fg_0 {
     private final String[] d;
     private static /* synthetic */ String[] e;
@@ -97,11 +94,11 @@ extends fg_0 {
             gu2.b(new ServerConnectEvent((ProxiedPlayer)new hu_0(jv_03, serverInfo), serverInfo, ServerConnectEvent.Reason.PLUGIN, null));
         }
         long l5 = System.nanoTime() - l3;
-        jv_02.a(hd_0.i + e[0] + hd_0.m + i1.a((double)l5 / 1000.0 / 1000.0) + ' ' + hd_0.i + e[1] + n + e[2]);
+        jv_02.a(hd_0.i + " -> " + hd_0.m + i1.a((double)l5 / 1000.0 / 1000.0) + ' ' + hd_0.i + "ms to process " + n + " ");
     }
 
     private static final void a() {
-        e = new String[]{hl.a("\uf197\uf19a\uf189\uf197", 1425994167), hl.a("\u2906\u2918\u294b\u291f\u2904\u294b\u291b\u2919\u2904\u2908\u290e\u2918\u2918\u294b", -1765267093), hl.a("\ua225\ua260\ua273\ua260\ua26b\ua271\ua276\ua22b", -384982523)};
+        e = new String[]{" -> ", "ms to process ", " events."};
     }
 
     static {

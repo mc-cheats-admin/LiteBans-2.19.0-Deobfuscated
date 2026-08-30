@@ -13,10 +13,7 @@ import net.minecraft.class_2561;
 import net.minecraft.class_2960;
 import net.minecraft.class_3222;
 
-/*
- * Renamed from litebans.la
- */
-public static class la_0
+public class la_0
 extends lb_0 {
     protected final hd e = new cf_0(this);
 

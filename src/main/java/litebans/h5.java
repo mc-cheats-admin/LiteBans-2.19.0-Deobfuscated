@@ -9,7 +9,7 @@ import litebans.ll;
 import litebans.lo_0;
 import org.jetbrains.annotations.NotNull;
 
-public static final class h5 {
+public final class h5 {
     public static final int a(@NotNull int[] nArray, @NotNull iX iX2) {
         if (nArray.length <= 1) {
             return lo_0.b(nArray);

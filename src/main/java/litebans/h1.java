@@ -15,7 +15,7 @@ import litebans.ll;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class h1 {
+public final class h1 {
     private static /* synthetic */ String[] a;
 
     public static final String a(@NotNull CharSequence charSequence, @NotNull CharSequence[] charSequenceArray) {
@@ -23,7 +23,7 @@ public static final class h1 {
         int n = 0;
         int n2 = charSequenceArray.length;
         if (n2 % 2 == 1) {
-            throw new ArrayIndexOutOfBoundsException(a[0] + n2);
+            throw new ArrayIndexOutOfBoundsException("Odd arg length " + n2);
         }
         while (n < n2) {
             CharSequence charSequence2 = charSequenceArray[n++];
@@ -38,7 +38,7 @@ public static final class h1 {
         boolean bl2 = false;
         if (charSequence2 != null && charSequence2.length() > 0 && bl) {
             CharSequence charSequence4 = charSequence;
-            CharSequence charSequence5 = a[2];
+            CharSequence charSequence5 = "\n";
             boolean bl3 = false;
             charSequence4 = "" + charSequence4 + charSequence5;
             boolean bl4 = false;
@@ -54,7 +54,7 @@ public static final class h1 {
         boolean bl = false;
         if (charSequence2 != null && charSequence2.length() > 0) {
             CharSequence charSequence4 = charSequence;
-            CharSequence charSequence5 = a[3];
+            CharSequence charSequence5 = "\n";
             boolean bl2 = false;
             charSequence4 = "" + charSequence4 + charSequence5;
             boolean bl3 = false;
@@ -78,18 +78,18 @@ public static final class h1 {
     }
 
     public static final boolean a(@NotNull CharSequence charSequence) {
-        return bz.a(charSequence, (CharSequence)a[4], false, 2, null);
+        return bz.a(charSequence, (CharSequence)"  ", false, 2, null);
     }
 
     public static final String b(@NotNull CharSequence charSequence) {
         CharSequence charSequence2 = charSequence;
-        hN hN2 = new hN(a[5]);
-        String string = a[6];
+        hN hN2 = new hN("\\s+");
+        String string = " ";
         return hN2.b(charSequence2, string);
     }
 
     public static final String a(@NotNull String string) {
-        String string2 = a[7] + string;
+        String string2 = "OfflinePlayer:" + string;
         return UUID.nameUUIDFromBytes(string2.getBytes(ji_0.b)).toString();
     }
 
@@ -98,7 +98,7 @@ public static final class h1 {
     }
 
     public static final List a(@NotNull List list) {
-        String string = ll.a(list, a[8], null, null, 0, null, null, 62, null);
+        String string = ll.a(list, " ", null, null, 0, null, null, 62, null);
         if (!bz.c((CharSequence)string, '\"', false, 2, null) && !bz.c((CharSequence)string, '\'', false, 2, null)) {
             return list;
         }
@@ -124,7 +124,7 @@ public static final class h1 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u0c18\u0c33\u0c33\u0c77\u0c36\u0c25\u0c30\u0c77\u0c3b\u0c32\u0c39\u0c30\u0c23\u0c3f\u0c77", -1416819625), hl.a("\ubc45", 269794383), hl.a("\ufa6d", 217184871), hl.a("\ub0c1", -679890741), hl.a("\u423c\u423c", -1252834788), hl.a("\ue423\ue40c\ue454", -1067719553), hl.a("\u2aab", 1208167051), hl.a("\uc214\uc23d\uc23d\uc237\uc232\uc235\uc23e\uc20b\uc237\uc23a\uc222\uc23e\uc229\uc261", -230047141), hl.a("\u8f54", -494104716), hl.a("", -1972468011)};
+        a = new String[]{"Odd arg length ", "\n", "\n", "\n", "  ", "\\s+", " ", "OfflinePlayer:", " ", ""};
     }
 
     static {

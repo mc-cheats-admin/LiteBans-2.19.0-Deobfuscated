@@ -1,6 +1,6 @@
 package litebans;
 
-public static class hh {
+public class hh {
     public static void a(int n) {
     }
 

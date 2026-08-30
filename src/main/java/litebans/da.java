@@ -4,7 +4,7 @@ import litebans.fB;
 import litebans.jv_0;
 import org.jetbrains.annotations.NotNull;
 
-public static class da
+public class da
 implements Runnable {
     private final jv_0 c;
     private final String[] b;

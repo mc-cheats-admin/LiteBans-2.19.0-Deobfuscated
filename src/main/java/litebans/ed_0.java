@@ -2,14 +2,11 @@ package litebans;
 
 import litebans.hl;
 
-/*
- * Renamed from litebans.eD
- */
-public static abstract class ed_0 {
+public abstract class ed_0 {
     private static /* synthetic */ String[] a;
 
     public String toString() {
-        return a[0];
+        return "Content()";
     }
 
     public boolean equals(Object object) {
@@ -33,7 +30,7 @@ public static abstract class ed_0 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u7706\u772a\u772b\u7731\u7720\u772b\u7731\u776d\u776c", 646739781)};
+        a = new String[]{"Content()"};
     }
 
     static {

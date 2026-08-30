@@ -38,7 +38,7 @@ import litebans.q_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class br {
+public final class br {
     public static final hV P;
     private final long I;
     private final iX B;
@@ -292,7 +292,7 @@ public static final class br {
 
     public final void b(@NotNull jg_0 jg_02) {
         List list = this.m;
-        ew.b(list, f[0]);
+        ew.b(list, "");
         ((Collection)kb_0.c(list)).add(jg_02);
     }
 
@@ -689,11 +689,11 @@ public static final class br {
                 object3 = fB.d;
                 object2 = ((Object)string).toString();
                 boolean bl4 = false;
-                if (ew.a(object2, (Object)f[2])) {
-                    stringArray3 = new String[]{f[3]};
+                if (ew.a(object2, (Object)"sort")) {
+                    stringArray3 = new String[]{"00"};
                     stringArray2 = stringArray3;
                 } else {
-                    stringArray3 = new String[]{f[4] + (String)object2};
+                    stringArray3 = new String[]{"01:" + (String)object2};
                     stringArray2 = stringArray3;
                 }
                 if (new l6((q_0)object5, Arrays.copyOf(stringArray = stringArray2, stringArray.length)).b() == object5.hashCode()) {
@@ -812,7 +812,7 @@ public static final class br {
         if (!((Collection)this.m).isEmpty()) {
             List list;
             List list2 = this.m;
-            ew.b(list2, f[8]);
+            ew.b(list2, "");
             List list3 = list = kb_0.c(list2);
             boolean bl = false;
             if (list3.size() > 1) {
@@ -867,7 +867,7 @@ public static final class br {
     }
 
     private static final void g() {
-        f = new String[]{hl.a("", 774598232), hl.a("", -1611575063), hl.a("\u8d1e\u8d02\u8d1f\u8d19", 2075561325), hl.a("\u1ac8\u1ac8", -424207624), hl.a("\ub585\ub584\ub58f", 1288943029), hl.a("\u6218\u6204\u6219\u621f", -983604629), hl.a("\u2be2\u2be2", 173157330), hl.a("\ua4bb\ua4ba\ua4b1", 647865483), hl.a("", -467232192)};
+        f = new String[]{"", "", "sort", "00", "01:", "sort", "00", "01:", ""};
     }
 }
 

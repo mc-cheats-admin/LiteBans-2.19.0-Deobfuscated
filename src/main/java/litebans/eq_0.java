@@ -4,10 +4,7 @@ import litebans.hl;
 import litebans.jG;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.eQ
- */
-public static final class eq_0 {
+public final class eq_0 {
     public static final jG f;
     private final String c;
     private static final String d;
@@ -35,12 +32,12 @@ public static final class eq_0 {
         b = 7;
         eq_0.d();
         f = new jG(null);
-        d = a[0];
-        e = new eq_0(a[1]);
+        d = "*";
+        e = new eq_0("");
     }
 
     private static final void d() {
-        a = new String[]{hl.a("\u9420", -870870006), hl.a("", 1648187920)};
+        a = new String[]{"*", ""};
     }
 }
 

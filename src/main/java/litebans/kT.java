@@ -1,5 +1,5 @@
 package litebans;
 
-public static interface kT {
+public interface kT {
 }
 

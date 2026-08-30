@@ -27,16 +27,13 @@ import litebans.w;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class f6
+public final class f6
 extends fB
 implements jW {
     private static /* synthetic */ String[] i;
 
     public f6(@NotNull di_0 di_02) {
-        super(i[0], di_02);
+        super("staffhistory", di_02);
     }
 
     @Override
@@ -125,7 +122,7 @@ implements jW {
     }
 
     private static final void a() {
-        i = new String[]{hl.a("\ue292\ue295\ue280\ue287\ue287\ue289\ue288\ue292\ue295\ue28e\ue293\ue298", 878699233)};
+        i = new String[]{"staffhistory"};
     }
 
     static {

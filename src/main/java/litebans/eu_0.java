@@ -9,10 +9,7 @@ import litebans.ei_0;
 import litebans.hl;
 import litebans.v_0;
 
-/*
- * Renamed from litebans.eU
- */
-public static final class eu_0 {
+public final class eu_0 {
     private final eA b;
     private final List c;
     private boolean d = false;
@@ -26,13 +23,13 @@ public static final class eu_0 {
     }
 
     public static Class a(eA eA2, boolean bl) {
-        Preconditions.checkArgument((eA2 != null ? 1 : 0) != 0, (Object)a[0]);
+        Preconditions.checkArgument((eA2 != null ? 1 : 0) != 0, (Object)"action");
         switch (eA2.ordinal()) {
             case 0: {
                 return bl ? ei_0[].class : ei_0.class;
             }
         }
-        throw new UnsupportedOperationException(a[1] + eA2.name() + a[2]);
+        throw new UnsupportedOperationException("Action '" + eA2.name() + " not supported");
     }
 
     public eA d() {
@@ -48,7 +45,7 @@ public static final class eu_0 {
     }
 
     public String toString() {
-        return a[3] + (Object)((Object)this.d()) + a[4] + this.c() + a[5] + this.b() + a[6];
+        return "HoverEvent(action=" + (Object)((Object)this.d()) + ", contents=" + this.c() + ", legacy=" + this.b() + ")";
     }
 
     public boolean equals(Object object) {
@@ -89,7 +86,7 @@ public static final class eu_0 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\ube60\ube62\ube75\ube68\ube6e\ube6f", -381370879), hl.a("\u71b7\u7195\u7182\u719f\u7199\u7198\u71d6\u71d1", 71856630), hl.a("\u3e11\u3e5f\u3e5e\u3e45\u3e11\u3e42\u3e44\u3e41\u3e41\u3e5e\u3e43\u3e45\u3e54\u3e55", 889273905), hl.a("\u3793\u37b4\u37ad\u37be\u37a9\u379e\u37ad\u37be\u37b5\u37af\u37f3\u37ba\u37b8\u37af\u37b2\u37b4\u37b5\u37e6", 69416923), hl.a("\u0b92\u0b9e\u0bdd\u0bd1\u0bd0\u0bca\u0bdb\u0bd0\u0bca\u0bcd\u0b83", -1466364994), hl.a("\u1252\u125e\u1212\u121b\u1219\u121f\u121d\u1207\u1243", -1640689026), hl.a("\u0ed5", 237768444)};
+        a = new String[]{"action", "Action '", " not supported", "HoverEvent(action=", ", contents=", ", legacy=", ")"};
     }
 
     static {

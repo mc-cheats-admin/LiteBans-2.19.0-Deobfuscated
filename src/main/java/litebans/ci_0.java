@@ -3,10 +3,7 @@ package litebans;
 import java.io.Serializable;
 import litebans.hp_0;
 
-/*
- * Renamed from litebans.ci
- */
-public static final class ci_0
+public final class ci_0
 implements Cloneable,
 Serializable {
     private static final long d = 1L;

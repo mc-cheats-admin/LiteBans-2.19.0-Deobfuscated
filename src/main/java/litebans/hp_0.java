@@ -1,9 +1,6 @@
 package litebans;
 
-/*
- * Renamed from litebans.hp
- */
-public static final class hp_0 {
+public final class hp_0 {
     public static final long a(byte[] byArray, int n, int n2) {
         hp_0.a(n2);
         long l3 = 0L;

@@ -97,10 +97,7 @@ import litebans.r_0;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class u
+public final class u
 extends n_0
 implements Runnable {
     public static final iF j;
@@ -294,14 +291,14 @@ implements Runnable {
     }
 
     private final void b(ch ch2) {
-        this.a().a((Object)f[6]);
+        this.a().a((Object)"[Sync] Detected duplicate server. This will be resolved ");
         kq_0.a(this.l, kG.l);
         Serializable serializable = ch2.e().getDataFolder();
-        String string = f[7];
+        String string = "server.yml";
         boolean bl = false;
         d6.b(new File((File)serializable, string));
         serializable = ch2.e().getDataFolder();
-        string = f[8];
+        string = "server.json";
         bl = false;
         d6.b(new File((File)serializable, string));
         serializable = this.a().f().a(true);
@@ -328,7 +325,7 @@ implements Runnable {
             if (q_02.g()) {
                 q_0 q_03 = q_02;
                 boolean bl3 = false;
-                q_03.a((Object)(f[9] + c + f[10] + object));
+                q_03.a((Object)("0x11 <" + c + "> " + object));
             }
             return;
         }
@@ -345,7 +342,7 @@ implements Runnable {
             }
             c = (ij2.d() << 16 | n2) + 42;
             Object object3 = kL.c;
-            CharSequence charSequence2 = f[11];
+            CharSequence charSequence2 = "info,msg";
             ch ch3 = ch2;
             boolean bl4 = false;
             Object object4 = charSequence2;
@@ -361,7 +358,7 @@ implements Runnable {
                 ++n4;
             }
             int n5 = n4;
-            object4 = f[12];
+            object4 = "?";
             if (n5 > 0) {
                 StringBuilder stringBuilder = new StringBuilder(n5 * 2);
                 Iterable iterable = new eI(0, n5);
@@ -370,13 +367,13 @@ implements Runnable {
                 while (iterator.hasNext()) {
                     n3 = n4 = ((i5)iterator).b();
                     c10 = '\u0000';
-                    stringBuilder.append(f[13]);
+                    stringBuilder.append("?,");
                 }
                 object4 = bz.b(stringBuilder.toString(), 1);
             }
             kL kL2 = object3;
             bl5 = false;
-            object3 = ch3.c(aR.d(aR.e(f[14] + kL2 + '(' + charSequence2 + f[15] + object4 + ')'))).a(c);
+            object3 = ch3.c(aR.d(aR.e("INSERT INTO " + kL2 + '(' + charSequence2 + ")VALUES(" + object4 + ')'))).a(c);
             boolean bl8 = false;
             object4 = object2 = object3;
             boolean bl9 = false;
@@ -389,14 +386,14 @@ implements Runnable {
             long l3 = System.currentTimeMillis();
             if (l3 - ch4.d().i() > 28800000L) {
                 ch4.d().b(l3);
-                charSequence3 = f[16];
-                if (ew.a((Object)((u)object3).a().f().aF(), (Object)f[17])) {
+                charSequence3 = "1 minute";
+                if (ew.a((Object)((u)object3).a().f().aF(), (Object)"pgsql")) {
                     charSequence3 = '\'' + (String)charSequence3 + '\'';
                 }
                 Object object5 = kL.c;
                 n4 = 0;
-                object5 = aR.e(f[18] + object5);
-                CharSequence charSequence4 = f[19] + (String)charSequence3 + ')';
+                object5 = aR.e("DELETE FROM " + object5);
+                CharSequence charSequence4 = "time < (NOW() - INTERVAL " + (String)charSequence3 + ')';
                 ch ch5 = ch4;
                 c10 = '\u0000';
                 CharSequence[] charSequenceArray = new CharSequence[]{aR.d((String)object5), charSequence4};
@@ -409,10 +406,10 @@ implements Runnable {
                     CharSequence charSequence6 = charSequence5 = charSequenceArray2[i];
                     boolean bl12 = false;
                     if (charSequence6.length() > 0) continue;
-                    String string2 = f[20];
+                    String string2 = "Failed ";
                     throw new IllegalArgumentException(string2.toString());
                 }
-                eS.d(ch5.c(aR.d(aR.e(aR.b((String)object5) + f[21] + charSequence4))));
+                eS.d(ch5.c(aR.d(aR.e(aR.b((String)object5) + " WHERE " + charSequence4))));
                 object5 = object4;
                 boolean bl13 = false;
                 ((r_0)object5).a(ch4);
@@ -425,7 +422,7 @@ implements Runnable {
 
     public static /* synthetic */ void a(u u2, ij ij2, ch ch2, CharSequence charSequence, int n, int n2, Object object) {
         if ((n2 & 4) != 0) {
-            charSequence = f[22];
+            charSequence = "";
         }
         if ((n2 & 8) != 0) {
             n = -1;
@@ -433,9 +430,6 @@ implements Runnable {
         u2.a(ij2, ch2, charSequence, n);
     }
 
-    /*
-     * Unable to fully structure code
-     */
     public void a(@NotNull ch var1_1, @NotNull String var2_2, @NotNull String var3_3, @NotNull ij var4_4, @NotNull Set var5_5) {
         block38: {
             block37: {
@@ -482,7 +476,7 @@ implements Runnable {
                         if (var7_6.g()) {
                             var23_10 = var7_6;
                             var9_11 = false;
-                            var23_10.a((Object)(u.f[29] + (Object)var4_4));
+                            var23_10.a((Object)("[!!!] NF " + (Object)var4_4));
                         }
                         return;
                     }
@@ -596,7 +590,7 @@ implements Runnable {
                     var16_29 = this.b();
                     var17_31 = false;
                     ew.a(var14_24);
-                    var16_29.a(var1_1, var14_24, (dZ)var7_6, -1, u.f[30]);
+                    var16_29.a(var1_1, var14_24, (dZ)var7_6, -1, "muted");
                     break;
                 }
                 case 3: {
@@ -605,7 +599,7 @@ implements Runnable {
                     var16_30 = this.b();
                     var17_31 = false;
                     ew.a(var14_24);
-                    var16_30.a(var1_1, var14_24, (dZ)var7_6, -1, u.f[31]);
+                    var16_30.a(var1_1, var14_24, (dZ)var7_6, -1, "warned");
                     break;
                 }
                 case 4: {
@@ -637,7 +631,7 @@ implements Runnable {
                     if (var9_14.g()) {
                         var11_18 = var9_14;
                         var12_22 = false;
-                        var11_18.a((Object)(u.f[32] + var7_9 + u.f[33] + var5_5));
+                        var11_18.a((Object)("0x11 <" + var7_9 + "> " + var5_5));
                     }
                     return var72_4;
                 }
@@ -667,26 +661,26 @@ implements Runnable {
                 var8_13 = w.a(var1_1.d(), false, 1, null);
                 if (var72_4 == 0L) {
                     var11_19 = kL.c;
-                    var12_24 = u.f[34];
+                    var12_24 = "id";
                     var13_28 = 0;
-                    var10_17 = eS.d(var1_1.c(aR.d(aR.a(aR.a(aR.e(u.f[35] + var12_24 + u.f[36] + var11_19), u.f[37]), (Number)1))));
+                    var10_17 = eS.d(var1_1.c(aR.d(aR.a(aR.a(aR.e("SELECT " + var12_24 + " FROM " + var11_19), "id"), (Number)1))));
                     if (var10_17.next()) {
-                        var72_4 = var10_17.getLong(u.f[38]);
+                        var72_4 = var10_17.getLong("id");
                         var11_19 = this.a();
                         var12_25 = false;
                         if (var11_19.g()) {
                             var69_33 = var11_19;
                             var13_28 = 0;
-                            var70_36 = u.f[39] + var72_4;
+                            var70_36 = "L+ " + var72_4;
                             var69_33.a((Object)var70_36);
                         }
                     }
                 }
-                var10_17 = eS.d(var1_1.c((CharSequence)(u.f[40] + kL.c + u.f[41])).a(var72_4));
+                var10_17 = eS.d(var1_1.c((CharSequence)("SELECT * FROM " + kL.c + " WHERE id>?")).a(var72_4));
                 while (var10_17.next()) {
                     block105: {
-                        var11_20 = var10_17.getLong(u.f[42]);
-                        var13_29 = var10_17.getLong(u.f[43]) - (long)42;
+                        var11_20 = var10_17.getLong("id");
+                        var13_29 = var10_17.getLong("info") - (long)42;
                         var15_41 = c_0.b((int)(var13_29 & 65535L));
                         var16_43 = var13_29 >> 16;
                         var18_48 = var1_1.d().a(var1_1, var15_41, true);
@@ -700,7 +694,7 @@ implements Runnable {
                             if (!var22_60.g()) continue;
                             var24_72 = var22_60;
                             var25_80 = false;
-                            var24_72.a((Object)(u.f[44] + (char)var20_53 + u.f[45] + var18_48));
+                            var24_72.a((Object)("0x11 <" + (char)var20_53 + "> " + var18_48));
                             continue;
                         }
                         if (var15_41 == var5_5.c()) {
@@ -708,7 +702,7 @@ implements Runnable {
                             continue;
                         }
                         var19_50 = null;
-                        var19_50 = var10_17.getString(u.f[46]);
+                        var19_50 = var10_17.getString("msg");
                         var20_54 = ij.l.a((int)var16_43);
                         if (var20_54 == null) {
                             var21_56 = this;
@@ -720,7 +714,7 @@ implements Runnable {
                             if (!var25_81.g()) continue;
                             var27_102 = var25_81;
                             var28_112 = false;
-                            var27_102.a((Object)(u.f[47] + var22_61 + u.f[48] + var23_67));
+                            var27_102.a((Object)("0x11 <" + var22_61 + "> " + var23_67));
                             continue;
                         }
                         ((AtomicLong)this.l.a()).incrementAndGet();
@@ -729,15 +723,15 @@ implements Runnable {
                         if (var21_57.g()) {
                             var69_33 = var21_57;
                             var23_66 = false;
-                            var70_36 = u.f[49] + var11_20 + u.f[50] + var16_43 + u.f[51] + c_0.c(var15_41) + u.f[52] + (String)var19_50 + '\"';
+                            var70_36 = "id: " + var11_20 + ", type: " + var16_43 + ", server: " + c_0.c(var15_41) + ", message: \"" + (String)var19_50 + '\"';
                             var69_33.a((Object)var70_36);
                         }
                         var21_57 = var19_50;
-                        if (bz.a((CharSequence)var21_57, (CharSequence)u.f[53], false, 2, null) || bz.a((CharSequence)(var21_57 = var19_50), (CharSequence)u.f[54], false, 2, null)) {
+                        if (bz.a((CharSequence)var21_57, (CharSequence)"server", false, 2, null) || bz.a((CharSequence)(var21_57 = var19_50), (CharSequence)"Server", false, 2, null)) {
                             var22_63 = am.a(var18_48.e(), false);
                             var21_57 = var22_63;
                             var22_63 = var19_50;
-                            var19_50 = bF.a((CharSequence)bF.a((CharSequence)var22_63, (CharSequence)u.f[55], var21_57), (CharSequence)u.f[56], var21_57);
+                            var19_50 = bF.a((CharSequence)bF.a((CharSequence)var22_63, (CharSequence)"server", var21_57), (CharSequence)"playerServer", var21_57);
                         }
                         var21_57 = var2_2;
                         var22_64 = false;
@@ -759,13 +753,13 @@ implements Runnable {
                         var22_64 = false;
                         v1 = var21_57.a();
                         var23_69 = fB.d;
-                        var24_75 = u.f[57] + var16_43;
+                        var24_75 = "0x11 <Q> " + var16_43;
                         var25_83 = false;
-                        if (ew.a((Object)var24_75, (Object)u.f[58])) {
-                            var26_94 = new String[]{u.f[59]};
+                        if (ew.a((Object)var24_75, (Object)"sort")) {
+                            var26_94 = new String[]{"00"};
                             v2 = var26_94;
                         } else {
-                            var26_94 = new String[]{u.f[60] + var24_75};
+                            var26_94 = new String[]{"01:" + var24_75};
                             v2 = var26_94;
                         }
                         var27_103 = v2;
@@ -782,7 +776,7 @@ implements Runnable {
                         case 4: 
                         case 5: {
                             v3 = var19_50;
-                            ew.c(v3, u.f[61]);
+                            ew.c(v3, "element");
                             var21_57 = iF.a(u.j, (String)v3, 0, 2, null);
                             this.a(var1_1, jj_0.f(var21_57[0]), var21_57[1], var20_54, var7_10);
                             v4 = iv_0.a;
@@ -792,11 +786,11 @@ implements Runnable {
                         case 7: {
                             if (!var23_70.s()) ** GOTO lbl186
                             v5 = var19_50;
-                            ew.c(v5, u.f[62]);
+                            ew.c(v5, "element");
                             var21_57 = u.j.a((String)v5, 3);
                             v6 = (String)lo_0.a((Object[])var21_57, 1);
                             if (v6 == null) {
-                                v6 = u.f[63];
+                                v6 = "BAN";
                             }
                             var25_84 = v6;
                             var26_95 = var25_84.toUpperCase(Locale.ROOT);
@@ -811,7 +805,7 @@ implements Runnable {
                                 }
                                 ** GOTO lbl177
                             }
-                            throw new NoSuchElementException(u.f[64]);
+                            throw new NoSuchElementException("Array contains no element matching the predicate + ");
 lbl177:
                             // 1 sources
 
@@ -834,14 +828,14 @@ lbl186:
                             var25_85 = this.b();
                             var27_105 = false;
                             v8 = var19_50;
-                            ew.c(v8, u.f[65]);
-                            litebans.o.a(var25_85, var1_1, (CharSequence)v8, u.f[66], null, null, var23_70.s() != false && var23_70.aJ() != false && var23_70.B() != false, false, null, 108, null);
+                            ew.c(v8, "element");
+                            litebans.o.a(var25_85, var1_1, (CharSequence)v8, "console", null, null, var23_70.s() != false && var23_70.aJ() != false && var23_70.B() != false, false, null, 108, null);
                             v4 = iv_0.a;
                             break;
                         }
                         case 9: {
                             v9 = var19_50;
-                            ew.c(v9, u.f[67]);
+                            ew.c(v9, "element");
                             var21_57 = iF.a(u.j, (String)v9, 0, 2, null);
                             var26_96 = var21_57[0];
                             var25_86 = var21_57[1];
@@ -854,7 +848,7 @@ lbl186:
                         case 10: {
                             if (var23_70.aU()) {
                                 v10 = var19_50;
-                                ew.c(v10, u.f[68]);
+                                ew.c(v10, "element");
                                 var21_57 = iF.a(u.j, (String)v10, 0, 2, null);
                                 this.b().b(var21_57[0], var21_57[1], false);
                             }
@@ -865,7 +859,7 @@ lbl186:
                             var25_87 = this.b();
                             var27_106 = false;
                             v11 = var19_50;
-                            ew.c(v11, u.f[69]);
+                            ew.c(v11, "element");
                             litebans.o.a(var25_87, var1_1, (CharSequence)v11, var20_54, null, null, var23_70.bg() != false && var23_70.aP() != false && var23_70.aU() != false, false, null, 108, null);
                             v4 = iv_0.a;
                             break;
@@ -874,7 +868,7 @@ lbl186:
                             var25_88 = this.b();
                             var27_107 = false;
                             v12 = var19_50;
-                            ew.c(v12, u.f[70]);
+                            ew.c(v12, "element");
                             litebans.o.a(var25_88, var1_1, (CharSequence)v12, var20_54, a_.j, null, var23_70.aU(), false, null, 104, null);
                             v4 = iv_0.a;
                             break;
@@ -884,7 +878,7 @@ lbl186:
                             ew.a(var26_97);
                             if (!(var26_97.length == 0 == false)) ** GOTO lbl299
                             v13 = var19_50;
-                            ew.c(v13, u.f[71]);
+                            ew.c(v13, "element");
                             var21_57 = u.j.a((String)v13, 8);
                             var25_89 = jj_0.f(var21_57[0]);
                             var27_108 = var21_57[1];
@@ -893,11 +887,11 @@ lbl186:
                             var31_134 = u.j;
                             var32_140 = (String)lo_0.a((Object[])var21_57, 4);
                             var33_142 = 0;
-                            var30_127 = (int)ew.a(var32_140, (Object)u.f[72]);
+                            var30_127 = (int)ew.a(var32_140, (Object)"1");
                             var32_140 = u.j;
                             var33_143 = (String)lo_0.a((Object[])var21_57, 5);
                             var34_151 = false;
-                            var31_135 = ew.a((Object)var33_143, (Object)u.f[73]);
+                            var31_135 = ew.a((Object)var33_143, (Object)"1");
                             v14 = (String)lo_0.a((Object[])var21_57, 6);
                             var32_141 = v14 != null && (v14 = gs_0.a((String)v14)) != null ? (byte)v14.a() : -1;
                             v15 = (String)lo_0.a((Object[])var21_57, 7);
@@ -922,8 +916,8 @@ lbl267:
                                 }
                                 var41_174 = v17;
                                 var35_153 = new dZ(a_.g, var34_150.a(), var34_150.b(), var29_122, var25_89, var27_108, eq_0.f.b(), (String)var41_174, var8_13, -1L, var32_141, (boolean)var30_127, false, false, 0L, 16384, null);
-                                v18 = var23_70.a7().z().a(u.f[74]);
-                                ew.b(v18, u.f[75]);
+                                v18 = var23_70.a7().z().a("kick");
+                                ew.b(v18, "");
                                 var36_155 = (fO)v18;
                                 v19 = this.a().s().a(a_.g, var32_141);
                                 if (v19 == null) {
@@ -935,7 +929,7 @@ lbl267:
                                 var40_173 = new iA(var34_150.i(), var34_150.a(), var34_150.b(), new Date());
                                 v20 = var27_108;
                                 if (v20 == null) {
-                                    v20 = u.f[76];
+                                    v20 = "";
                                 }
                                 var42_175 = v20;
                                 var43_177 = var35_153.j();
@@ -1010,14 +1004,14 @@ lbl299:
                     while (var24_77.next()) {
                         var30_129 = var24_77;
                         var31_136 = false;
-                        var32_140 = var30_129.getString(u.f[77]);
+                        var32_140 = var30_129.getString("name");
                         var33_145 = var32_140.toLowerCase(Locale.ENGLISH);
                         if (var33_145.length() < 2) continue;
                         if (var33_145.charAt(0) == '.' || var33_145.charAt(0) == '*') {
                             var33_145 = var33_145.substring(1);
                         }
                         if (!var22_60.add(var33_145)) continue;
-                        v22 = var30_129.getTimestamp(u.f[78]);
+                        v22 = var30_129.getTimestamp("date");
                         var34_152 = v22 != null ? v22.getTime() : System.currentTimeMillis();
                         ((Collection)var12_27).add(kc_0.a(var34_152, var33_145));
                     }
@@ -1091,7 +1085,7 @@ lbl299:
                         while (var28_117.next()) {
                             var37_165 = var28_117;
                             var38_169 = false;
-                            var32_140[var37_165.getInt((String)u.f[79])] = var37_165.getBytes(u.f[80]);
+                            var32_140[var37_165.getInt((String)"id")] = var37_165.getBytes("b");
                         }
                         var33_147 = iv_0.a;
                     }
@@ -1219,7 +1213,7 @@ lbl299:
                         var48_193 = (List)var51_203;
                         var49_197 = false;
                         var67_233 = ll.a((Iterable)var48_193, (Comparator)new c_((br)var24_77));
-                        var48_193 = ll.a(var67_233, u.f[81], null, null, 0, null, null, 62, null);
+                        var48_193 = ll.a(var67_233, ",", null, null, 0, null, null, 62, null);
                         var50_200 = var46_187;
                         var51_203 = var48_193.getBytes(ji_0.d);
                         var52_205 = 0;
@@ -1277,16 +1271,16 @@ lbl299:
                         if (var54_209.g()) {
                             var66_232 = var54_209;
                             var56_213 = 0;
-                            v35 = new StringBuilder().append(u.f[82]).append(((Number)var43_177.getKey()).intValue()).append(u.f[83]).append(((Object)var51_203).length).append(u.f[84]).append(((Object)var53_206).length).append(u.f[85]).append(lo_0.a((byte[])var50_200, (CharSequence)u.f[86], null, null, 0, null, null, 62, null)).append('\n').append((String)var48_193).append('\n');
+                            v35 = new StringBuilder().append("Bucket ").append(((Number)var43_177.getKey()).intValue()).append(" filled with (").append(((Object)var51_203).length).append(" => ").append(((Object)var53_206).length).append(") bytes\n").append(lo_0.a((byte[])var50_200, (CharSequence)",", null, null, 0, null, null, 62, null)).append('\n').append((String)var48_193).append('\n');
                             v36 = var42_175.a();
                             var57_217 = fB.d;
                             var58_220 = lo_0.a((byte[])var53_206, null, null, null, 0, null, null, 63, null);
                             var59_221 /* !! */  = false;
-                            if (ew.a((Object)var58_220, (Object)u.f[87])) {
-                                var60_223 = new String[]{u.f[88]};
+                            if (ew.a((Object)var58_220, (Object)"sort")) {
+                                var60_223 = new String[]{"00"};
                                 v37 = var60_223;
                             } else {
-                                var60_223 = new String[]{u.f[89] + var58_220};
+                                var60_223 = new String[]{"01:" + var58_220};
                                 v37 = var60_223;
                             }
                             var61_225 = v37;
@@ -1299,7 +1293,7 @@ lbl299:
                         if (!var28_118) continue;
                         try {
                             var43_177 = kL.n;
-                            var44_182 = u.f[90];
+                            var44_182 = "id,b";
                             var68_234 = var1_1;
                             var45_186 = false;
                             var46_187 = var44_182;
@@ -1315,7 +1309,7 @@ lbl299:
                                 ++var51_204;
                             }
                             var56_213 = var51_204;
-                            var46_187 = u.f[91];
+                            var46_187 = "?";
                             if (var56_213 > 0) {
                                 var47_190 = new StringBuilder(var56_213 * 2);
                                 var48_195 = new eI(0, var56_213);
@@ -1324,21 +1318,21 @@ lbl299:
                                 while (var50_202.hasNext()) {
                                     var52_205 = var51_204 = ((i5)var50_202).b();
                                     var53_208 = false;
-                                    var47_190.append(u.f[92]);
+                                    var47_190.append("?,");
                                 }
                                 var46_187 = bz.b(var47_190.toString(), 1);
                             }
                             var47_191 = var43_177;
                             var48_196 = false;
-                            var42_175 = var68_234.c(aR.d(aR.e(u.f[93] + var47_191 + '(' + var44_182 + u.f[94] + (CharSequence)var46_187 + ')')));
+                            var42_175 = var68_234.c(aR.d(aR.e("INSERT INTO " + var47_191 + '(' + var44_182 + ")VALUES(" + (CharSequence)var46_187 + ')')));
                             eS.d(var42_175.a(((Number)var38_170.getKey()).intValue()).a((byte[])var41_174));
                         }
                         catch (SQLException var43_179) {
                             v38 = var43_179.getMessage();
                             if (v38 == null) {
-                                v38 = u.f[95];
+                                v38 = "";
                             }
-                            if (bz.a((CharSequence)(var44_183 = v38), (CharSequence)u.f[96], false, 2, null) || bz.a((CharSequence)var44_183, (CharSequence)u.f[97], false, 2, null)) continue;
+                            if (bz.a((CharSequence)(var44_183 = v38), (CharSequence)"Duplicate entry", false, 2, null) || bz.a((CharSequence)var44_183, (CharSequence)"duplicate key", false, 2, null)) continue;
                             var1_1.d().a(var43_179);
                         }
                     }
@@ -1372,11 +1366,11 @@ lbl299:
                 var70_39 = var19_51;
                 var17_47 = var69_35 + var70_39;
                 var18_49 = Math.abs(100 - (int)((double)var17_47 / (double)var16_44 * 100.0));
-                var19_52 = u.f[98] + var18_49 + u.f[99] + var16_44 + u.f[100];
+                var19_52 = " (reduced " + var18_49 + "% from " + var16_44 + " bytes)";
                 if (var17_47 >= var16_44) {
-                    var19_52 = u.f[101];
+                    var19_52 = "";
                 }
-                this.a().a((Object)(u.f[102] + this.r + u.f[103] + var14_32 + u.f[104] + var17_47 + u.f[105] + var19_52));
+                this.a().a((Object)("[Sync] Cached " + this.r + " offline users for tab completion in " + var14_32 + " ms. Memory used: " + var17_47 + " bytes" + var19_52));
             }
             catch (Throwable var5_6) {
                 var1_1.d().a(var5_6);
@@ -1387,22 +1381,22 @@ lbl299:
 
     private final ResultSet a(ch ch2, int n) {
         kL kL2 = kL.g;
-        CharSequence charSequence = f[106];
+        CharSequence charSequence = "name,date";
         boolean bl = false;
-        return eS.d(ch2.c(aR.d(aR.a(aR.a(aR.e(f[107] + charSequence + f[108] + kL2), f[109]), (Number)n))));
+        return eS.d(ch2.c(aR.d(aR.a(aR.a(aR.e("SELECT " + charSequence + " FROM " + kL2), "id"), (Number)n))));
     }
 
     public final ResultSet a(@NotNull ch ch2) {
         kL kL2 = kL.n;
-        CharSequence charSequence = f[110];
+        CharSequence charSequence = "*";
         boolean bl = false;
-        return eS.d(ch2.c(aR.d(aR.e(f[111] + charSequence + f[112] + kL2))));
+        return eS.d(ch2.c(aR.d(aR.e("SELECT " + charSequence + " FROM " + kL2))));
     }
 
     public final ResultSet c(@NotNull ch ch2) {
         kL kL2 = kL.n;
         boolean bl = false;
-        return eS.d(ch2.c(aR.d(aR.e(f[113] + kL2))));
+        return eS.d(ch2.c(aR.d(aR.e("DELETE FROM " + kL2))));
     }
 
     public final boolean a(@NotNull br br2) {
@@ -1448,7 +1442,7 @@ lbl299:
             q_0 q_02 = object3;
             boolean bl2 = false;
             objectArray = (Object[])this.p;
-            StringBuilder stringBuilder = new StringBuilder().append(f[123]).append(n).append(f[124]).append(br2.l().size()).append(f[125]).append(((Object[])this.p).length).append(f[126]).append(ll.a(br2.l(), f[127], null, null, 0, null, u::a, 30, null)).append('\n');
+            StringBuilder stringBuilder = new StringBuilder().append("Read bucket ").append(n).append(" + ").append(br2.l().size()).append(" loaded, ").append(((Object[])this.p).length).append(" stored\n").append(ll.a(br2.l(), "|", null, null, 0, null, u::a, 30, null)).append('\n');
             boolean bl3 = false;
             Object[] objectArray2 = objectArray;
             object2 = new ArrayList(objectArray.length);
@@ -1472,7 +1466,7 @@ lbl299:
                     bl = false;
                     this.a(br2);
                     if (!br2.l().isEmpty() && !(((Object[])this.p).length == 0)) break block18;
-                    this.a().a(10, (Object)f[128]);
+                    this.a().a(10, (Object)"No cache");
                     bP bP2 = new bP((byte)n, jm_0.a());
                     return bP2;
                 }
@@ -1486,7 +1480,7 @@ lbl299:
                 }
                 objectArray = (Object[])br2.a();
                 if (byArray != kq_0.a() && objectArray != null && !(((Object)objectArray[n]).length == 0)) break block19;
-                this.a().a(10, (Object)f[129]);
+                this.a().a(10, (Object)"No cache");
                 bP bP3 = new bP((byte)n, jm_0.a());
                 return bP3;
             }
@@ -1556,11 +1550,11 @@ lbl299:
                 object4 = fB.d;
                 String string = ((Object)((CharSequence)object7)).toString();
                 n2 = 0;
-                if (ew.a((Object)string, (Object)f[130])) {
-                    String[] stringArray4 = new String[]{f[131]};
+                if (ew.a((Object)string, (Object)"sort")) {
+                    String[] stringArray4 = new String[]{"00"};
                     stringArray3 = stringArray4;
                 } else {
-                    String[] stringArray5 = new String[]{f[132] + string};
+                    String[] stringArray5 = new String[]{"01:" + string};
                     stringArray3 = stringArray5;
                 }
                 if (new l6((q_0)object11, Arrays.copyOf(stringArray2 = stringArray3, stringArray2.length)).b() == object11.hashCode()) {
@@ -1630,7 +1624,7 @@ lbl299:
     }
 
     private static final void f() {
-        f = new String[]{hl.a("\u052c\u0564\u052d\u052d\u053c\u0520\u054d\u0522\u053c", -1641609956), hl.a("\ubf98\ubf84\ubf99\ubf9f", 629784555), hl.a("\uf74b\uf74b", -607914117), hl.a("\ub4e7\ub4e6\ub4ed", -1999063849), hl.a("\ub8dd\ub895\ub8dc\ub8dc\ub8cd\ub8d1", 1771616493), hl.a("\u5dcc\u5dd2", -1679532558), hl.a("\u5ff8\u5ff0\u5fda\u5fcd\u5fc0\u5ffe\u5f83\u5fe7\u5fc6\u5fd7\u5fc6\u5fc0\u5fd7\u5fc6\u5fc7\u5f83\u5fc7\u5fd6\u5fd3\u5fcf\u5fca\u5fc0\u5fc2\u5fd7\u5fc6\u5f83\u5fd0\u5fc6\u5fd1\u5fd5\u5fc6\u5fd1\u5f8d\u5f83\u5ff7\u5fcb\u5fca\u5fd0\u5f83\u5fd4\u5fca\u5fcf\u5fcf\u5f83\u5fc1\u5fc6\u5f83\u5fd1\u5fc6\u5fd0\u5fcc\u5fcf\u5fd5\u5fc6\u5fc7\u5f83\u5fc2\u5fd6\u5fd7\u5fcc\u5fce\u5fc2\u5fd7\u5fca\u5fc0\u5fc2\u5fcf\u5fcf\u5fda\u5f8d", -1464967261), hl.a("\uca5c\uca4a\uca5d\uca59\uca4a\uca5d\uca01\uca56\uca42\uca43", 1171114543), hl.a("\uafaf\uafb9\uafae\uafaa\uafb9\uafae\uaff2\uafb6\uafaf\uafb3\uafb2", 1777184732), hl.a("\uda47\uda0f\uda46\uda46\uda57\uda4b", 355523191), hl.a("\u4493\u448d", -1616690003), hl.a("\ude9d\ude9a\ude92\ude9b\uded8\ude99\ude87\ude93", -222109964), hl.a("\u736e", -136481967), hl.a("\u2120\u2133", -1632689889), hl.a("\u59c1\u59c6\u59db\u59cd\u59da\u59dc\u59a8\u59c1\u59c6\u59dc\u59c7\u59a8", 1365596552), hl.a("\u37da\u37a5\u37b2\u37bf\u37a6\u37b6\u37a0\u37db", 651638771), hl.a("\ud251\ud240\ud20d\ud209\ud20e\ud215\ud214\ud205", 799003232), hl.a("\u3414\u3403\u3417\u3415\u3408", -80333724), hl.a("\u1564\u1565\u156c\u1565\u1574\u1565\u1500\u1566\u1572\u156f\u156d\u1500", -760212192), hl.a("\ue6a3\ue6be\ue6ba\ue6b2\ue6f7\ue6eb\ue6f7\ue6ff\ue699\ue698\ue680\ue6ff\ue6fe\ue6f7\ue6fa\ue6f7\ue69e\ue699\ue683\ue692\ue685\ue681\ue696\ue69b\ue6f7", -2124028201), hl.a("\u3c82\u3ca5\u3cad\u3ca8\u3ca1\u3ca0\u3ce4\u3cb6\u3ca1\u3cb5\u3cb1\u3cad\u3cb6\u3ca1\u3ca9\u3ca1\u3caa\u3cb0\u3cea", 2103065796), hl.a("\u8090\u80e7\u80f8\u80f5\u80e2\u80f5\u8090", 496533680), hl.a("", -82631126), hl.a("\u7976\u7967\u792a\u792e\u7929\u7932\u7933\u7922", 1889499463), hl.a("\u7f56\u7f41\u7f55\u7f57\u7f4a", -430670042), hl.a("\ubdc1\ubdc0\ubdc9\ubdc0\ubdd1\ubdc0\ubda5\ubdc3\ubdd7\ubdca\ubdc8\ubda5", -2140422779), hl.a("\uae2c\uae31\uae35\uae3d\uae78\uae64\uae78\uae70\uae16\uae17\uae0f\uae70\uae71\uae78\uae75\uae78\uae11\uae16\uae0c\uae1d\uae0a\uae0e\uae19\uae14\uae78", -641618344), hl.a("\u5929\u590e\u5906\u5903\u590a\u590b\u594f\u591d\u590a\u591e\u591a\u5906\u591d\u590a\u5902\u590a\u5901\u591b\u5941", 1323915631), hl.a("\u3683\u36f4\u36eb\u36e6\u36f1\u36e6\u3683", -1297008989), hl.a("\u2a1f\u2a65\u2a65\u2a65\u2a19\u2a64\u2a0a\u2a02\u2a64", 1216096836), hl.a("\ud6cf\ud6d7\ud6d6\ud6c7\ud6c6", -1799170398), hl.a("\u6fa4\u6fb2\u6fa1\u6fbd\u6fb6\u6fb7", 517304275), hl.a("\u387c\u3834\u387d\u387d\u386c\u3870", -1606862772), hl.a("\u7704\u771a", 2019915578), hl.a("\u1849\u1844", 1154881568), hl.a("\ufc0d\ufc1b\ufc12\ufc1b\ufc1d\ufc0a\ufc7e", -55444386), hl.a("\u6472\u6414\u6400\u641d\u641f\u6472", -1030265774), hl.a("\ud2f4\ud2f9", 262328989), hl.a("\u12f4\u12f9", -1565125987), hl.a("\u1d57\u1d30\u1d3b", -540140261), hl.a("\u951b\u950d\u9504\u950d\u950b\u951c\u9568\u9562\u9568\u950e\u951a\u9507\u9505\u9568", 93820232), hl.a("\u3f3b\u3f4c\u3f53\u3f5e\u3f49\u3f5e\u3f3b\u3f72\u3f7f\u3f25\u3f24", 785989403), hl.a("\u3629\u3624", 923285056), hl.a("\u76b6\u76b1\u76b9\u76b0", 2019325663), hl.a("\u7867\u782f\u7866\u7866\u7877\u786b", 2003925079), hl.a("\u40a8\u40b6", 212287638), hl.a("\u0e7c\u0e62\u0e76", 973147665), hl.a("\ua829\ua861\ua828\ua828\ua839\ua825", -815814631), hl.a("\ufe69\ufe77", -207684009), hl.a("\u6beb\u6be6\u6bb8\u6ba2", 1999793026), hl.a("\uef0a\uef06\uef52\uef5f\uef56\uef43\uef1c\uef06", -233574618), hl.a("\ue0f5\ue0f9\ue0aa\ue0bc\ue0ab\ue0af\ue0bc\ue0ab\ue0e3\ue0f9", 619110617), hl.a("\uf7f3\uf7ff\uf7b2\uf7ba\uf7ac\uf7ac\uf7be\uf7b8\uf7ba\uf7e5\uf7ff\uf7fd", 821295071), hl.a("\ud958\ud94e\ud959\ud95d\ud94e\ud959", 1099290923), hl.a("\ua477\ua441\ua456\ua452\ua441\ua456", 1816634404), hl.a("\u7dce\u7dd8\u7dcf\u7dcb\u7dd8\u7dcf", -226329155), hl.a("\u78d1\u78cd\u78c0\u78d8\u78c4\u78d3\u78f2\u78c4\u78d3\u78d7\u78c4\u78d3", -1722451807), hl.a("\u82a3\u82eb\u82a2\u82a2\u82b3\u82af\u82c2\u82ad\u82b3", 257852051), hl.a("\uc773\uc76f\uc772\uc774", 32163584), hl.a("\u87e9\u87e9", -561805351), hl.a("\u594e\u594f\u5944", 939678078), hl.a("\uc2e7\uc2ee\uc2e7\uc2ef\uc2e7\uc2ec\uc2f6", -849886590), hl.a("\u253f\u2536\u253f\u2537\u253f\u2534\u252e", 1350968666), hl.a("\u488d\u488e\u4881", -1911732017), hl.a("\u0582\u05b1\u05b1\u05a2\u05ba\u05e3\u05a0\u05ac\u05ad\u05b7\u05a2\u05aa\u05ad\u05b0\u05e3\u05ad\u05ac\u05e3\u05a6\u05af\u05a6\u05ae\u05a6\u05ad\u05b7\u05e3\u05ae\u05a2\u05b7\u05a0\u05ab\u05aa\u05ad\u05a4\u05e3\u05b7\u05ab\u05a6\u05e3\u05b3\u05b1\u05a6\u05a7\u05aa\u05a0\u05a2\u05b7\u05a6\u05ed", -980482621), hl.a("\ud9d0\ud9d9\ud9d0\ud9d8\ud9d0\ud9db\ud9c1", 961141173), hl.a("\u56a1\u56ad\u56ac\u56b1\u56ad\u56ae\u56a7", -1781311806), hl.a("\ucbba\ucbb3\ucbba\ucbb2\ucbba\ucbb1\ucbab", 2039991263), hl.a("\u6b2c\u6b25\u6b2c\u6b24\u6b2c\u6b27\u6b3d", 2047634249), hl.a("\uee74\uee7d\uee74\uee7c\uee74\uee7f\uee65", 710602257), hl.a("\ua614\ua61d\ua614\ua61c\ua614\ua61f\ua605", -817977743), hl.a("\u457b\u4572\u457b\u4573\u457b\u4570\u456a", 858015006), hl.a("\u01d6", 2113995239), hl.a("\u476c", -640465059), hl.a("\uea10\uea12\uea18\uea10", -312874373), hl.a("", -168890994), hl.a("", -5087000), hl.a("\ud27d\ud272\ud27e\ud276", -1476406765), hl.a("\uaf09\uaf0c\uaf19\uaf08", 1484566381), hl.a("\u3791\u379c", 1934112760), hl.a("\u6114", 232153462), hl.a("\u813e", 1010270482), hl.a("\u370e\u3739\u372f\u3727\u3729\u3738\u376c", 1590966092), hl.a("\u12b2\u12f4\u12fb\u12fe\u12fe\u12f7\u12f6\u12b2\u12e5\u12fb\u12e6\u12fa\u12b2\u12ba", 1455690386), hl.a("\u29a7\u29ba\u29b9\u29a7", -192992889), hl.a("\u5edf\u5ed6\u5e94\u5e8f\u5e82\u5e93\u5e85\u5efc", -796827914), hl.a("\u246b", 410920007), hl.a("\u2aaf\u2ab3\u2aae\u2aa8", 1864510172), hl.a("\u48cb\u48cb", 978471163), hl.a("\u93e2\u93e3\u93e8", -1768778798), hl.a("\udfc6\udfcb\udf83\udfcd", 369745839), hl.a("\u0528", 114885911), hl.a("\ue6bc\ue6af", -942938493), hl.a("\u6499\u649e\u6483\u6495\u6482\u6484\u64f0\u6499\u649e\u6484\u649f\u64f0", 683828432), hl.a("\u6b29\u6b56\u6b41\u6b4c\u6b55\u6b45\u6b53\u6b28", -781817088), hl.a("", 919236738), hl.a("\u23c7\u23f6\u23f3\u23ef\u23ea\u23e0\u23e2\u23f7\u23e6\u23a3\u23e6\u23ed\u23f7\u23f1\u23fa", 84550531), hl.a("\u895a\u894b\u894e\u8952\u8957\u895d\u895f\u894a\u895b\u891e\u8955\u895b\u8947", 1905690942), hl.a("\uc60c\uc604\uc65e\uc649\uc648\uc659\uc64f\uc649\uc648\uc60c", 563988012), hl.a("\uec3f\uec3a\uec7c\uec68\uec75\uec77\uec3a", -1681789926), hl.a("\uf90e\uf94c\uf957\uf95a\uf94b\uf95d\uf907", 169277742), hl.a("", 965491546), hl.a("\u2ef6\u2efe\u2ed4\u2ec3\u2ece\u2ef0\u2e8d\u2eee\u2ecc\u2ece\u2ec5\u2ec8\u2ec9\u2e8d", 1779576493), hl.a("\u2cc4\u2c8b\u2c82\u2c82\u2c88\u2c8d\u2c8a\u2c81\u2cc4\u2c91\u2c97\u2c81\u2c96\u2c97\u2cc4\u2c82\u2c8b\u2c96\u2cc4\u2c90\u2c85\u2c86\u2cc4\u2c87\u2c8b\u2c89\u2c94\u2c88\u2c81\u2c90\u2c8d\u2c8b\u2c8a\u2cc4\u2c8d\u2c8a\u2cc4", -1108333340), hl.a("\ubeaf\ubee2\ubefc\ubea1\ubeaf\ubec2\ubeea\ubee2\ubee0\ubefd\ubef6\ubeaf\ubefa\ubefc\ubeea\ubeeb\ubeb5\ubeaf", 264683151), hl.a("\u4003\u4041\u405a\u4057\u4046\u4050", 118112291), hl.a("\ue8a6\ue8a9\ue8a5\ue8ad\ue8e4\ue8ac\ue8a9\ue8bc\ue8ad", -1370167096), hl.a("\ua0c8\ua0de\ua0d7\ua0de\ua0d8\ua0cf\ua0bb", 439722139), hl.a("\ue783\ue7e5\ue7f1\ue7ec\ue7ee\ue783", -1980504157), hl.a("\uf164\uf169", 457437453), hl.a("\u1f8f", 964370341), hl.a("\ub007\ub011\ub018\ub011\ub017\ub000\ub074", -1191858092), hl.a("\ud014\ud072\ud066\ud07b\ud079\ud014", 237293620), hl.a("\ue5c4\ue5c5\ue5cc\ue5c5\ue5d4\ue5c5\ue5a0\ue5c6\ue5d2\ue5cf\ue5cd\ue5a0", -1314724480), hl.a("\u320c", -1178979808), hl.a("\u6e40\u6e77\u6e61\u6e69\u6e67\u6e76\u6e22", 1291218434), hl.a("\u11e3\u11a5\u11aa\u11af\u11af\u11a6\u11a7\u11e3\u11b4\u11aa\u11b7\u11ab\u11e3\u11eb", -817557053), hl.a("\uc024\uc039\uc03a\uc024", 1120649220), hl.a("\u252c\u2525\u2567\u257c\u2571\u2560\u2576\u250f", 429073669), hl.a("\uc972", -1729705634), hl.a("\u9470\u946c\u9471\u9477", -1300392957), hl.a("\u6cea\u6cea", -1985254182), hl.a("\u9cb6\u9cb7\u9cbc", -1875403642), hl.a("\u0219\u022e\u022a\u022f\u026b\u0229\u023e\u0228\u0220\u022e\u023f\u026b", -1078853045), hl.a("\u7b56\u7b58", 940014456), hl.a("\ua54f\ua503\ua500\ua50e\ua50b\ua50a\ua50b\ua543\ua54f", 382182767), hl.a("\u0a2c\u0a7f\u0a78\u0a63\u0a7e\u0a69\u0a68\u0a06", 1146620428), hl.a("\uc8f4", -1495152504), hl.a("\u7675\u7654\u761b\u7658\u765a\u7658\u7653\u765e", -216697285), hl.a("\ua70e\ua72f\ua760\ua723\ua721\ua723\ua728\ua725", 1708042048), hl.a("\ufc6d\ufc71\ufc6c\ufc6a", -893780962), hl.a("\u945d\u945d", 661099629), hl.a("\u513d\u513c\u5137", 1721979149), hl.a("\u8fe1\u8ff2", 888776)};
+        f = new String[]{"0x11 <Q> ", "sort", "00", "01:", "0x11 <", "> ", "[Sync] Detected duplicate server. This will be resolved ", "server.yml", "server.json", "0x11 <", "> ", "info,msg", "?", "?,", "INSERT INTO ", ")VALUES(", "1 minute", "pgsql", "DELETE FROM ", "time < (NOW() - INTERVAL ", "Failed ", " WHERE ", "", "1 minute", "pgsql", "DELETE FROM ", "time < (NOW() - INTERVAL ", "Failed ", " WHERE ", "[!!!] NF ", "muted", "warned", "0x11 <", "> ", "id", "SELECT ", " FROM ", "id", "id", "L+ ", "SELECT * FROM ", " WHERE id>?", "id", "info", "0x11 <", "> ", "msg", "0x11 <", "> ", "id: ", ", type: ", ", server: ", ", message: \"", "server", "Server", "server", "playerServer", "0x11 <Q> ", "sort", "00", "01:", "element", "element", "BAN", "Array contains no element matching the ", "element", "console", "element", "element", "element", "element", "element", "1", "1", "kick", "", "", "name", "date", "id", "b", ",", "Bucket ", " filled with (", " => ", ") bytes\n", ",", "sort", "00", "01:", "id,b", "?", "?,", "INSERT INTO ", ")VALUES(", "", "Duplicate entry", "duplicate key", " (reduced ", "% from ", " bytes)", "", "[Sync] Cached ", " offline users for tab completion in ", " ms. Memory used: ", " bytes", "name,date", "SELECT ", " FROM ", "id", "*", "SELECT ", " FROM ", "DELETE FROM ", ",", "Bucket ", " filled with (", " => ", ") bytes\n", ",", "sort", "00", "01:", "Read bucket ", " + ", " loaded, ", " stored\n", "|", "No cache", "No cache", "sort", "00", "01:", "):"};
     }
 }
 

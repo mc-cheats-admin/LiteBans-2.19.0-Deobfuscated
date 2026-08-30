@@ -8,10 +8,7 @@ import litebans.gn_0;
 import litebans.ie_0;
 import litebans.kr_0;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static class c7
+public class c7
 implements kr_0 {
     private final gg_0 a;
     private final ie_0 b;

@@ -4,7 +4,7 @@ import java.util.Comparator;
 import litebans.hj_0;
 import litebans.jT;
 
-public static final class ir
+public final class ir
 implements Comparator {
     public final int compare(Object object, Object object2) {
         jT jT2 = (jT)object2;

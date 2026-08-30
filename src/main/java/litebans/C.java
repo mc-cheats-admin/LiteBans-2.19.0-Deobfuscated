@@ -33,7 +33,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 @ai_0(a=0)
-public static final class C
+public final class C
 extends b_0 {
     private static /* synthetic */ String[] e;
 
@@ -63,7 +63,7 @@ extends b_0 {
     private final void g() {
         q_0 q_02 = (q_0)this.a.a(q_0.class);
         ec_0 ec_02 = this.a.i();
-        ew.b(ec_02, e[0]);
+        ew.b(ec_02, "");
         Plugin plugin = ao_0.a((ao_0)ec_02, null, 1, null);
         Map map = plugin.getDescription().getCommands();
         boolean bl = false;
@@ -76,17 +76,17 @@ extends b_0 {
             PluginCommand pluginCommand = plugin.getServer().getPluginCommand(string);
             if (pluginCommand == null) continue;
             if (pluginCommand.getTabCompleter() != null && !ew.a((Object)pluginCommand.getPlugin(), this.a)) {
-                q_02.a(1, (Object)(e[1] + string + e[2] + pluginCommand.getTabCompleter() + '!'));
+                q_02.a(1, (Object)("Command /" + string + " is tab-completed by " + pluginCommand.getTabCompleter() + '!'));
             }
             pluginCommand.setTabCompleter((TabCompleter)plugin);
             if (ew.a((Object)pluginCommand.getPlugin(), this.a)) continue;
-            q_02.a(1, (Object)(e[3] + string + e[4] + pluginCommand.getPlugin().getDescription().getName() + '!'));
+            q_02.a(1, (Object)("Command /" + string + " is owned by " + pluginCommand.getPlugin().getDescription().getName() + '!'));
         }
     }
 
     private final void i() {
         ec_0 ec_02 = this.a.i();
-        ew.b(ec_02, e[5]);
+        ew.b(ec_02, "");
         Plugin plugin = ao_0.a((ao_0)ec_02, null, 1, null);
         Map map = plugin.getDescription().getCommands();
         boolean bl = false;
@@ -162,7 +162,7 @@ extends b_0 {
         }
         Object object8 = object7;
         object4 = object8;
-        if (bz.b((String)object8, e[6], false, 2, null)) {
+        if (bz.b((String)object8, "litebans:", false, 2, null)) {
             object4 = object4.substring(9);
         }
         if ((fB2 = (fB)this.a((String)object8)) != null) {
@@ -186,7 +186,7 @@ extends b_0 {
             return true;
         }
         String[] stringArray3 = aa_0.a(fB.d, (String)object8, stringArray2);
-        fB fB3 = (fB)this.a(e[7]);
+        fB fB3 = (fB)this.a("ban");
         if (fB3 == null) {
             ew.a(object5);
             object3 = object5;
@@ -208,7 +208,7 @@ extends b_0 {
         List list;
         if (!(stringArray.length == 0)) {
             jv_0 jv_03 = jv_02;
-            String string2 = e[8];
+            String string2 = "litebans.tabcomplete";
             boolean bl = false;
             if (jv_03.e(string2)) {
                 list = fB.d.a(d82, string, jv_02, this.a, stringArray);
@@ -228,7 +228,7 @@ extends b_0 {
     }
 
     private static final void h() {
-        e = new String[]{hl.a("", -1406825839), hl.a("\uca37\uca1b\uca19\uca19\uca15\uca1a\uca10\uca54\uca5b", 136956532), hl.a("\ua24d\ua204\ua21e\ua24d\ua219\ua20c\ua20f\ua240\ua20e\ua202\ua200\ua21d\ua201\ua208\ua219\ua208\ua209\ua24d\ua20f\ua214\ua24d", 664773229), hl.a("\u251f\u2533\u2531\u2531\u253d\u2532\u2538\u257c\u2573", 1607411036), hl.a("\u606e\u6027\u603d\u606e\u6021\u6039\u6020\u602b\u602a\u606e\u602c\u6037\u606e", -300785586), hl.a("", -928121878), hl.a("\u4e9b\u4e9e\u4e83\u4e92\u4e95\u4e96\u4e99\u4e84\u4ecd", 1326665463), hl.a("\u39f1\u39f2\u39fd", -1219937901), hl.a("\u75a4\u75a1\u75bc\u75ad\u75aa\u75a9\u75a6\u75bb\u75e6\u75bc\u75a9\u75aa\u75ab\u75a7\u75a5\u75b8\u75a4\u75ad\u75bc\u75ad", 1503229384)};
+        e = new String[]{"", "Command /", " is tab-completed by ", "Command /", " is owned by ", "", "litebans:", "ban", "litebans.tabcomplete"};
     }
 
     static {

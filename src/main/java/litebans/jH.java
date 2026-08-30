@@ -9,7 +9,7 @@ import litebans.gr_0;
 import litebans.ip_0;
 import litebans.ks_0;
 
-public static class jH {
+public class jH {
     public static final Object a(Reader reader) {
         try {
             ip_0 ip_02 = new ip_0();

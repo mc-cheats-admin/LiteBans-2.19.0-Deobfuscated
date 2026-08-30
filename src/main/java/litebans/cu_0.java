@@ -3,10 +3,7 @@ package litebans;
 import java.io.Serializable;
 import litebans.eE;
 
-/*
- * Renamed from litebans.cu
- */
-public static final class cu_0
+public final class cu_0
 implements eE,
 Serializable {
     private final Object a;

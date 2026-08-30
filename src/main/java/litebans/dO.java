@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 import litebans.gc;
 import litebans.k6;
 
-public static final class dO {
+public final class dO {
     private dO() {
     }
 

@@ -3,7 +3,7 @@ package litebans;
 import java.util.NoSuchElementException;
 import litebans.i5;
 
-public static final class iW
+public final class iW
 extends i5 {
     private final int c;
     private final int e;

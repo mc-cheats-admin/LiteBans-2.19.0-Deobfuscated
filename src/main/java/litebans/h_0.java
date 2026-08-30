@@ -9,11 +9,8 @@ import litebans.bm_0;
 import litebans.d8;
 import litebans.di_0;
 
-/*
- * Renamed from litebans.H
- */
 @ai_0(a=2)
-public static class h_0
+public class h_0
 extends a_0 {
     public h_0(di_0 di_02) {
         super(di_02);

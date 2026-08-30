@@ -9,7 +9,7 @@ import net.md_5.bungee.api.config.ServerInfo;
 import net.md_5.bungee.api.connection.Connection;
 import net.md_5.bungee.api.connection.Server;
 
-public static final class c8
+public final class c8
 implements Server {
     final /* synthetic */ ServerInfo a;
 

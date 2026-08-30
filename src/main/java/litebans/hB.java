@@ -19,13 +19,13 @@ implements eo_0 {
     public final String a(kL kL2) {
         Object object = kL2;
         boolean bl = false;
-        String string = aR.e(b[0] + object);
+        String string = aR.e("ALTER TABLE " + object);
         object = this.a;
-        String string2 = b[1];
-        String string3 = b[2];
+        String string2 = "template";
+        String string3 = " DEFAULT 255";
         boolean bl2 = false;
         String string4 = ((jr_0)object).b().a();
-        return aR.f(string, ew.a((Object)string4, (Object)b[3]) || ew.a((Object)string4, (Object)b[4]) ? string2 + b[5] + string3 : string2 + b[6] + ((jr_0)object).b().e() + b[7] + string3);
+        return aR.f(string, ew.a((Object)string4, (Object)"pgsql") || ew.a((Object)string4, (Object)"h2") ? string2 + " SMALLINT NOT NULL" + string3 : string2 + " TINYINT" + ((jr_0)object).b().e() + " NOT NULL" + string3);
     }
 
     @Override
@@ -34,7 +34,7 @@ implements eo_0 {
     }
 
     private static final void a() {
-        b = new String[]{hl.a("\u0139\u0134\u012c\u013d\u012a\u0158\u012c\u0139\u013a\u0134\u013d\u0158", -988806792), hl.a("\u3a08\u3a19\u3a11\u3a0c\u3a10\u3a1d\u3a08\u3a19", 961100412), hl.a("\ub0cf\ub0ab\ub0aa\ub0a9\ub0ae\ub0ba\ub0a3\ub0bb\ub0cf\ub0dd\ub0da\ub0da", -1620135697), hl.a("\ua2fd\ua2ea\ua2fe\ua2fc\ua2e1", -1097817459), hl.a("\ubdb5\ubdef", 1229176285), hl.a("\u12f2\u1281\u129f\u1293\u129e\u129e\u129b\u129c\u1286\u12f2\u129c\u129d\u1286\u12f2\u129c\u1287\u129e\u129e", -1969089838), hl.a("\u5f71\u5f05\u5f18\u5f1f\u5f08\u5f18\u5f1f\u5f05", -755015855), hl.a("\u65f1\u659f\u659e\u6585\u65f1\u659f\u6584\u659d\u659d", 34498001)};
+        b = new String[]{"ALTER TABLE ", "template", " DEFAULT 255", "pgsql", "h2", " SMALLINT NOT NULL", " TINYINT", " NOT NULL"};
     }
 
     static {

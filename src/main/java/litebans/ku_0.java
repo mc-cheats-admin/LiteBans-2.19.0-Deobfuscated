@@ -8,11 +8,7 @@ import litebans.gn_0;
 import litebans.kr_0;
 import org.bukkit.configuration.ConfigurationSection;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.ku
- */
-public static class ku_0
+public class ku_0
 implements kr_0 {
     private final gc_0 a;
     private final ConfigurationSection b;

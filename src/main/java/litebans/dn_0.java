@@ -4,10 +4,7 @@ import litebans.aJ;
 import net.md_5.bungee.api.event.LoginEvent;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.dn
- */
-public static final class dn_0 {
+public final class dn_0 {
     private dn_0() {
     }
 

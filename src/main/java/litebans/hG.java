@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import litebans.hj_0;
 
-public static final class hG
+public final class hG
 implements Comparator {
     public final int compare(Object object, Object object2) {
         Map.Entry entry = (Map.Entry)object2;

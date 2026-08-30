@@ -6,7 +6,7 @@ import litebans.ew;
 import litebans.hl;
 import org.jetbrains.annotations.Nullable;
 
-public static final class cM {
+public final class cM {
     private final String b;
     private final UUID c;
     private static /* synthetic */ String[] a;
@@ -29,7 +29,7 @@ public static final class cM {
     }
 
     public String toString() {
-        return a[0] + this.b + a[1] + this.c + ')';
+        return "Profile(name=" + this.b + ", uuid=" + this.c + ')';
     }
 
     public int hashCode() {
@@ -53,7 +53,7 @@ public static final class cM {
     }
 
     private static final void b() {
-        a = new String[]{hl.a("\u88d3\u88f1\u88ec\u88e5\u88ea\u88ef\u88e6\u88ab\u88ed\u88e2\u88ee\u88e6\u88be", 1502578819), hl.a("\uceec\ucee0\uceb5\uceb5\ucea9\ucea4\ucefd", -670314816)};
+        a = new String[]{"Profile(name=", ", uuid="};
     }
 
     static {

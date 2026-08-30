@@ -23,15 +23,12 @@ import litebans.q_0;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.fd
- */
-public static final class fd_0
+public final class fd_0
 extends fB {
     private static /* synthetic */ String[] i;
 
     public fd_0(@NotNull di_0 di_02) {
-        super(i[0], di_02);
+        super("staffrollback", di_02);
     }
 
     /*
@@ -96,7 +93,7 @@ extends fB {
                         n = n2;
                         stringBuilder = stringBuilder2;
                         bl8 = false;
-                        string2 = i[1];
+                        string2 = "";
                         stringBuilder2 = stringBuilder;
                     }
                     StringBuilder stringBuilder3 = stringBuilder2.append(string2);
@@ -108,7 +105,7 @@ extends fB {
                         n = n2;
                         stringBuilder = stringBuilder3;
                         bl8 = false;
-                        string = i[2];
+                        string = "";
                         stringBuilder3 = stringBuilder;
                     }
                     String string3 = stringBuilder3.append(string).toString();
@@ -133,7 +130,7 @@ extends fB {
                     object10 = string4;
                     long l3 = d10 == Double.MIN_VALUE ? 0L : (long)((double)w.a(object9.d(), false, 1, null) - d10);
                     long l5 = object9.a((String)object10, l3, (String)object6);
-                    aa_0.a((fg_0)this, kR.a((ch)object9, (CharSequence)am.c0.a(i[3], (Object)l5), iA2, false, 2, null));
+                    aa_0.a((fg_0)this, kR.a((ch)object9, (CharSequence)am.c0.a("\uaa80\uaa8c\uaa8e\uaa94\uaa8f\uaa95", (Object)l5), iA2, false, 2, null));
                     object8 = iv_0.a;
                 }
                 catch (Throwable throwable) {
@@ -152,7 +149,7 @@ extends fB {
     }
 
     private static final void a() {
-        i = new String[]{hl.a("\uf1ea\uf1ed\uf1f8\uf1ff\uf1ff\uf1eb\uf1f6\uf1f5\uf1f5\uf1fb\uf1f8\uf1fa\uf1f2", 1436938649), hl.a("", -1101165737), hl.a("", 940300029), hl.a("\uaa80\uaa8c\uaa8e\uaa94\uaa8f\uaa95", 0xE1EAAE1)};
+        i = new String[]{"staffrollback", "", "", hl.a("\uaa80\uaa8c\uaa8e\uaa94\uaa8f\uaa95", 0xE1EAAE1)};
     }
 
     static {

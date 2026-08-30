@@ -8,10 +8,6 @@ import litebans.i_;
 import litebans.j_;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.ee
- */
 static final class ee_0
 implements i_ {
     private final CharSequence e;
@@ -21,8 +17,8 @@ implements i_ {
     private static /* synthetic */ String[] c;
 
     public ee_0(@NotNull CharSequence charSequence, int n, int n2, @NotNull cQ cQ2) {
-        ew.a((Object)charSequence, c[0]);
-        ew.a((Object)cQ2, c[1]);
+        ew.a((Object)charSequence, "input");
+        ew.a((Object)cQ2, "getNextMatch");
         this.e = charSequence;
         this.d = n;
         this.a = n2;
@@ -51,7 +47,7 @@ implements i_ {
     }
 
     private static final void a() {
-        c = new String[]{hl.a("\u14cd\u14ca\u14d4\u14d1\u14d0", -105835356), hl.a("\ueb7b\ueb79\ueb68\ueb52\ueb79\ueb64\ueb68\ueb51\ueb7d\ueb68\ueb7f\ueb74", 566225692)};
+        c = new String[]{"input", "getNextMatch"};
     }
 
     static {

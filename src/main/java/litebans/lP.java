@@ -6,7 +6,7 @@ import litebans.q_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class lP
+public final class lP
 extends RandomID {
     private final di_0 a;
 

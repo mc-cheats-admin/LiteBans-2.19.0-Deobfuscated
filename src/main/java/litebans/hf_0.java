@@ -8,11 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.ComponentSerialization;
 import net.minecraft.util.StrictJsonParser;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.hF
- */
-public static class hf_0
+public class hf_0
 implements hd {
     @Override
     public Object a(CharSequence charSequence) {

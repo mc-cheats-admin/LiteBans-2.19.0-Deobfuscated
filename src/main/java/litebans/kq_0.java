@@ -11,10 +11,7 @@ import litebans.ll;
 import litebans.lo_0;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.kq
- */
-public static final class kq_0 {
+public final class kq_0 {
     private static final byte[] a = new byte[0];
 
     public static final byte[] a() {

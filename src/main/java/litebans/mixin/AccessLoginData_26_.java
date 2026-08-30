@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
 @Mixin(value={ServerLoginPacketListenerImpl.class})
-public static interface AccessLoginData_26_ {
+public interface AccessLoginData_26_ {
     @Accessor(value="authenticatedProfile")
     public GameProfile getProfile();
 

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public static class hl {
+public class hl {
     private static final Map b = new HashMap();
     private static final long[] a = new long[13];
 

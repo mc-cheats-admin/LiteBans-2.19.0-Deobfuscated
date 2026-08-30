@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import litebans.ay_0;
 
-public static class i6 {
+public class i6 {
     public static final ArrayList a() {
         return new ArrayList();
     }

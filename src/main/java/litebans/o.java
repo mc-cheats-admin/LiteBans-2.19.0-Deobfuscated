@@ -72,10 +72,7 @@ import litebans.x_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class o
+public final class o
 extends n_0 {
     public static final aA n;
     private final eE m = bN.a(() -> o.b(this));
@@ -115,7 +112,7 @@ extends n_0 {
         if (charSequence != null) {
             return charSequence;
         }
-        ew.e(h[1]);
+        ew.e("");
         return null;
     }
 
@@ -128,7 +125,7 @@ extends n_0 {
         if (charSequence != null) {
             return charSequence;
         }
-        ew.e(h[2]);
+        ew.e("");
         return null;
     }
 
@@ -141,7 +138,7 @@ extends n_0 {
         if (charSequence != null) {
             return charSequence;
         }
-        ew.e(h[3]);
+        ew.e("");
         return null;
     }
 
@@ -154,7 +151,7 @@ extends n_0 {
         if (charSequence != null) {
             return charSequence;
         }
-        ew.e(h[4]);
+        ew.e("");
         return null;
     }
 
@@ -231,7 +228,7 @@ extends n_0 {
             if (q_02.a(n)) {
                 q_0 q_03 = q_02;
                 boolean bl4 = false;
-                q_03.a((Object)(h[5] + charSequence + '\"'));
+                q_03.a((Object)("Local messages are disabled, discarding message: \"" + charSequence + '\"'));
             }
             return;
         }
@@ -249,7 +246,7 @@ extends n_0 {
             fo_0.a(fg_0.a, jv_02, charSequence, null, 4, null);
         }
         hq.a.a(ch2, ch2.e(), charSequence, string);
-        if (ew.a((Object)h[6], (Object)string)) {
+        if (ew.a((Object)"console", (Object)string)) {
             return;
         }
         Object[] objectArray = ch2.e().q();
@@ -299,7 +296,7 @@ extends n_0 {
     public final boolean a(@NotNull jv_0 jv_02, @NotNull String string, @Nullable a_ a_2, @Nullable String string2) {
         void var6_10;
         Object object = jv_02;
-        String[] stringArray2 = new String[]{h[7], h[8] + string};
+        String[] stringArray2 = new String[]{"litebans.notify", "litebans + " + string};
         stringArray2 = stringArray2;
         boolean bl = false;
         String[] stringArray3 = stringArray2;
@@ -324,12 +321,12 @@ extends n_0 {
             Object object2 = object;
         }
         jv_0 jv_03 = jv_02;
-        String string6 = h[9] + string + '.' + string2 + '.' + a_2;
+        String string6 = "litebans + " + string + '.' + string2 + '.' + a_2;
         bl2 = false;
         if (jv_03.e(string6)) return true;
         if (!ew.a((Object)var6_10, (Object)string2)) return false;
         jv_03 = jv_02;
-        String string7 = h[10] + string + h[11] + a_2;
+        String string7 = "litebans + " + string + " + " + a_2;
         bl2 = false;
         if (!jv_03.e(string7)) return false;
         return true;
@@ -340,7 +337,7 @@ extends n_0 {
         if (!((Collection)this.f).isEmpty() && this.f.remove(((String)(object = string)).toLowerCase(Locale.ROOT))) {
             object = this.a.y();
             this.i().a(arg_0 -> o.a(dZ2, (jv_0)object, this, arg_0));
-            this.a.getLogger().info(h[12] + string + '.');
+            this.a.getLogger().info("Unbanned player: " + string + '.');
             return true;
         }
         return false;
@@ -349,24 +346,24 @@ extends n_0 {
     public final void b(@NotNull String string) {
         cJ cJ2 = w.v;
         boolean bl = false;
-        if (ew.a((Object)string, (Object)h[13]) || ew.a((Object)string, (Object)h[14])) {
-            this.d(h[15]);
-            this.b((CharSequence)h[16]);
-            this.e(h[17]);
+        if (ew.a((Object)string, (Object)"pgsql") || ew.a((Object)string, (Object)"postgresql")) {
+            this.d("B'0'");
+            this.b((CharSequence)"B'1'");
+            this.e(" ILIKE ");
         } else {
-            this.d(h[18]);
-            this.b((CharSequence)h[19]);
-            this.e(h[20]);
+            this.d("0");
+            this.b((CharSequence)"1");
+            this.e("=");
         }
-        if (ew.a((Object)string, (Object)h[21])) {
-            this.a((CharSequence)h[22]);
-            this.c(h[23]);
+        if (ew.a((Object)string, (Object)"sqlite")) {
+            this.a((CharSequence)"name,uuid,ip,datetime(date) as date");
+            this.c(" COLLATE NOCASE ");
         } else if (w.v.b(string)) {
-            this.a((CharSequence)h[24]);
-            this.c(h[25]);
+            this.a((CharSequence)"name,uuid,ip,UNIX_TIMESTAMP(date) as date");
+            this.c(" ");
         } else {
-            this.a((CharSequence)h[26]);
-            this.c(h[27]);
+            this.a((CharSequence)"*");
+            this.c(" ");
         }
     }
 
@@ -438,7 +435,7 @@ extends n_0 {
                 return new Date(resultSet.getLong(string) * 1000L);
             }
             Calendar calendar = Calendar.getInstance();
-            calendar.setTimeZone(TimeZone.getTimeZone(h[28]));
+            calendar.setTimeZone(TimeZone.getTimeZone("UTC"));
             Timestamp timestamp = resultSet.getTimestamp(string);
             if (timestamp == null) {
                 return new java.util.Date();
@@ -457,7 +454,7 @@ extends n_0 {
             return null;
         }
         String string2 = string;
-        if (ew.a((Object)string2, (Object)h[29]) || ew.a((Object)string2, (Object)h[30])) {
+        if (ew.a((Object)string2, (Object)"[Console]") || ew.a((Object)string2, (Object)"CONSOLE")) {
             return this.m().f().aR();
         }
         String string3 = dZ2.q();
@@ -516,12 +513,12 @@ extends n_0 {
     public void e() {
         this.m().e();
         if (this.d == null) {
-            this.a(h[31], null, false);
+            this.a("", null, false);
         }
     }
 
     public final Object d() {
-        if (this.a.i().a(h[32])) {
+        if (this.a.i().a("\u11cb\u11f2\u11e4\u11ec\u11d7\u11e2\u11f5\u11ea\u11f4")) {
             return bh_0.b.a();
         }
         return null;
@@ -529,9 +526,9 @@ extends n_0 {
 
     public final boolean a(@Nullable Object object) {
         if (object instanceof gi) {
-            return bz.a((CharSequence)((gi)object).toString(), (CharSequence)h[33], false, 2, null);
+            return bz.a((CharSequence)((gi)object).toString(), (CharSequence)"org.sqlite", false, 2, null);
         }
-        return object != null && bz.b(object.getClass().getName(), h[34], false, 2, null);
+        return object != null && bz.b(object.getClass().getName(), "org.sqlite", false, 2, null);
     }
 
     public final void a(@NotNull ch ch2, @NotNull cz cz2) {
@@ -547,7 +544,7 @@ extends n_0 {
             boolean bl = false;
             if (jj_0.a((String)object)) {
                 gu gu2 = this.c();
-                ew.b(gu2, h[35]);
+                ew.b(gu2, "");
                 Object object2 = object = (gx_0)gu2;
                 boolean bl2 = false;
                 String string2 = string;
@@ -555,7 +552,7 @@ extends n_0 {
                     iA iA2 = ch2.c(dZ2.w());
                     string2 = iA2 != null ? iA2.a() : null;
                     if (string2 == null) {
-                        string2 = h[36];
+                        string2 = "";
                     }
                 }
                 UUID uUID = UUID.fromString(dZ2.w());
@@ -578,9 +575,9 @@ extends n_0 {
 
     public final void a(@NotNull ch ch2, @NotNull jv_0 jv_02) {
         gx_0 gx_02;
-        List list = ch2.a(jv_02.a(), jv_02.b(), a_.h, h[37], true, 0);
+        List list = ch2.a(jv_02.a(), jv_02.b(), a_.h, "__ALL__", true, 0);
         gu gu2 = this.c();
-        ew.b(gu2, h[38]);
+        ew.b(gu2, "");
         gx_0 gx_03 = gx_02 = (gx_0)gu2;
         Comparable<UUID> comparable = jv_02.d();
         boolean bl = false;
@@ -596,7 +593,7 @@ extends n_0 {
             int n = 0;
             if (jj_0.a((String)object) && this.a.t() == 1) {
                 gu gu2 = this.c();
-                ew.b(gu2, h[39]);
+                ew.b(gu2, "");
                 object = (gx_0)gu2;
                 String string = dZ2.w();
                 ew.a((Object)string);
@@ -665,7 +662,7 @@ extends n_0 {
             return;
         }
         Object object = jv_02;
-        CharSequence charSequence = h[40] + string;
+        CharSequence charSequence = "litebans + " + string;
         boolean bl = false;
         if (object.e((String)charSequence)) {
             CharSequence charSequence2;
@@ -691,7 +688,7 @@ extends n_0 {
                 charSequence2 = charSequence = (CharSequence)object;
             }
             if (dZ2.u() == a_.c) {
-                charSequence = bF.a(charSequence, (CharSequence)h[41], (Object)this.m().f().ar());
+                charSequence = bF.a(charSequence, (CharSequence)"duration", (Object)this.m().f().ar());
             }
             fo_0.a(fg_0.a, jv_02, bF.a(ch2, dZ2, jv_02, charSequence, 0L, 8, null), null, 4, null);
         }
@@ -743,7 +740,7 @@ extends n_0 {
                 }
                 if (!o2.a.l()) {
                     object = jv_02;
-                    string3 = h[42];
+                    string3 = "litebans.exempt.dupeip_join";
                     bl = false;
                     object2 = object;
                     boolean bl2 = false;
@@ -756,7 +753,7 @@ extends n_0 {
                     }
                 }
                 object = jv_02;
-                string3 = h[43];
+                string3 = "litebans.notify.warned.offline";
                 bl = false;
                 if (object.e(string3)) {
                     object = o2.i();
@@ -796,8 +793,8 @@ extends n_0 {
                                     fo_0.a(fg_0.a, jv_02, bF.a(ch3, (dZ)object42, jv_02, charSequence, 0L, 8, null), null, 4, null);
                                 }
                                 int n2 = list.size();
-                                String string4 = h[44];
-                                objectArray = new Object[]{jv_02.i(), n2, n2 == 1 ? h[45] : h[46]};
+                                String string4 = "Notified %s of %d %";
+                                objectArray = new Object[]{jv_02.i(), n2, n2 == 1 ? "warning" : "warnings"};
                                 ch3.e().getLogger().info(String.format(string4, Arrays.copyOf(objectArray, objectArray.length)));
                             }
                             object3 = iv_0.a;
@@ -817,7 +814,7 @@ extends n_0 {
                 }
             }
             object = jv_02;
-            string3 = h[47];
+            string3 = "litebans.admin";
             boolean bl = false;
             if (object.e(string3)) {
                 object = o2.a.h();
@@ -849,7 +846,7 @@ extends n_0 {
     }
 
     private static final void g() {
-        h = new String[]{hl.a("", 1500085323), hl.a("", 1573719957), hl.a("", -1942621069), hl.a("", 935401922), hl.a("", 1362824518), hl.a("\uf096\uf0b5\uf0b9\uf0bb\uf0b6\uf0fa\uf0b7\uf0bf\uf0a9\uf0a9\uf0bb\uf0bd\uf0bf\uf0a9\uf0fa\uf0bb\uf0a8\uf0bf\uf0fa\uf0be\uf0b3\uf0a9\uf0bb\uf0b8\uf0b6\uf0bf\uf0be\uf0f6\uf0fa\uf0be\uf0b3\uf0a9\uf0b9\uf0bb\uf0a8\uf0be\uf0b3\uf0b4\uf0bd\uf0fa\uf0b7\uf0bf\uf0a9\uf0a9\uf0bb\uf0bd\uf0bf\uf0e0\uf0fa\uf0f8", -1283919654), hl.a("\uf657\uf65b\uf65a\uf647\uf65b\uf658\uf651", 1340012084), hl.a("\u7c9c\u7c99\u7c84\u7c95\u7c92\u7c91\u7c9e\u7c83\u7cde\u7c9e\u7c9f\u7c84\u7c99\u7c96\u7c89", 1764130032), hl.a("\u36ca\u36cf\u36d2\u36c3\u36c4\u36c7\u36c8\u36d5\u3688\u36c8\u36c9\u36d2\u36cf\u36c0\u36df\u3688", 735786662), hl.a("\u2e8f\u2e8a\u2e97\u2e86\u2e81\u2e82\u2e8d\u2e90\u2ecd\u2e8d\u2e8c\u2e97\u2e8a\u2e85\u2e9a\u2ecd", 2039230179), hl.a("\uff7e\uff7b\uff66\uff77\uff70\uff73\uff7c\uff61\uff3c\uff7c\uff7d\uff66\uff7b\uff74\uff6b\uff3c", -1388904686), hl.a("\u3414\u3456\u3455\u3459\u345b\u3456\u3414", -906087366), hl.a("\u5e28\u5e13\u5e1f\u5e1c\u5e13\u5e13\u5e18\u5e19\u5e5d\u5e0d\u5e11\u5e1c\u5e04\u5e18\u5e0f\u5e47\u5e5d", 518086269), hl.a("\u3ba8\u3bbf\u3bab\u3ba9\u3bb4", 1942174680), hl.a("\u3f92\u3f8d\u3f91\u3f96\u3f85\u3f90\u3f87\u3f91\u3f93\u3f8e", 1217085410), hl.a("\ud9fb\ud99e\ud989\ud99e", 762960313), hl.a("\u4ae2\u4a87\u4a91\u4a87", -1619965280), hl.a("\u40b5\u40dc\u40d9\u40dc\u40de\u40d0\u40b5", 184565909), hl.a("\ud3e4", 1408029652), hl.a("\u8963", 691898706), hl.a("\uce6d", -116535728), hl.a("\ueb3a\ueb38\ueb25\ueb20\ueb3d\ueb2c", 1496509257), hl.a("\u4aad\u4aa2\u4aae\u4aa6\u4aef\u4ab6\u4ab6\u4aaa\u4aa7\u4aef\u4aaa\u4ab3\u4aef\u4aa7\u4aa2\u4ab7\u4aa6\u4ab7\u4aaa\u4aae\u4aa6\u4aeb\u4aa7\u4aa2\u4ab7\u4aa6\u4aea\u4ae3\u4aa2\u4ab0\u4ae3\u4aa7\u4aa2\u4ab7\u4aa6", -328316221), hl.a("\u83a7\u83c4\u83c8\u83cb\u83cb\u83c6\u83d3\u83c2\u83a7\u83c9\u83c8\u83c4\u83c6\u83d4\u83c2\u83a7", -350583929), hl.a("\u987c\u9873\u987f\u9877\u983e\u9867\u9867\u987b\u9876\u983e\u987b\u9862\u983e\u9847\u985c\u985b\u984a\u984d\u9846\u985b\u985f\u9857\u9841\u9846\u9853\u985f\u9842\u983a\u9876\u9873\u9866\u9877\u983b\u9832\u9873\u9861\u9832\u9876\u9873\u9866\u9877", 1491638290), hl.a("\udf5c", -1396711556), hl.a("\ucdf3", 111922649), hl.a("\ud299", -1867459911), hl.a("\ubd2b\ubd2a\ubd3d", 459980158), hl.a("\u1f8e\u1f96\u1fba\u1fbb\u1fa6\u1fba\u1fb9\u1fb0\u1f88", -815063083), hl.a("\u7cba\u7cb6\u7cb7\u7caa\u7cb6\u7cb5\u7cbc", -1083147015), hl.a("", -2042800419), hl.a("\u11cb\u11f2\u11e4\u11ec\u11d7\u11e2\u11f5\u11ea\u11f4", 0x78781187), hl.a("\u99d0\u99cd\u99d8\u9991\u99cc\u99ce\u99d3\u99d6\u99cb\u99da", -1442604609), hl.a("\ub893\ub88e\ub89b\ub8d2\ub88f\ub88d\ub890\ub895\ub888\ub899", -959989508), hl.a("", 1001248048), hl.a("", 441608672), hl.a("\u25b1\u25b1\u25af\u25a2\u25a2\u25b1\u25b1", 904734190), hl.a("", -643754910), hl.a("", 765037248), hl.a("\u66e6\u66e3\u66fe\u66ef\u66e8\u66eb\u66e4\u66f9\u66a4\u66e4\u66e5\u66fe\u66e3\u66ec\u66f3\u66a4", 486499978), hl.a("\u1641\u1650\u1657\u1644\u1651\u164c\u164a\u164b", 2075792933), hl.a("\u5142\u5147\u515a\u514b\u514c\u514f\u5140\u515d\u5100\u514b\u5156\u514b\u5143\u515e\u515a\u5100\u514a\u515b\u515e\u514b\u5147\u515e\u5171\u5144\u5141\u5147\u5140", 1554796846), hl.a("\uf29a\uf29f\uf282\uf293\uf294\uf297\uf298\uf285\uf2d8\uf298\uf299\uf282\uf29f\uf290\uf28f\uf2d8\uf281\uf297\uf284\uf298\uf293\uf292\uf2d8\uf299\uf290\uf290\uf29a\uf29f\uf298\uf293", 1406792438), hl.a("\u2be6\u2bc7\u2bdc\u2bc1\u2bce\u2bc1\u2bcd\u2bcc\u2b88\u2b8d\u2bdb\u2b88\u2bc7\u2bce\u2b88\u2b8d\u2bcc\u2b88\u2b8d\u2bdb\u2b86", 180300712), hl.a("\u2241\u2257\u2244\u2258\u225f\u2258\u2251", 1204036150), hl.a("\u8af8\u8aee\u8afd\u8ae1\u8ae6\u8ae1\u8ae8\u8afc", -1548449137), hl.a("\udeae\udeab\udeb6\udea7\udea0\udea3\udeac\udeb1\udeec\udea3\udea6\udeaf\udeab\udeac", 1042013890)};
+        h = new String[]{"", "", "", "", "", "Local messages are disabled, discarding message: \"", "console", "litebans.notify", "litebans + ", "litebans + ", "litebans + ", " + ", "Unbanned player: ", "pgsql", "postgresql", "B'0'", "B'1'", " ILIKE ", "0", "1", "=", "sqlite", "name,uuid,ip,datetime(date) as date", " COLLATE NOCASE ", "name,uuid,ip,UNIX_TIMESTAMP(date) as date", " ", "*", " ", "UTC", "[Console]", "CONSOLE", "", hl.a("\u11cb\u11f2\u11e4\u11ec\u11d7\u11e2\u11f5\u11ea\u11f4", 0x78781187), "org.sqlite", "org.sqlite", "", "", "__ALL__", "", "", "litebans + ", "duration", "litebans.exempt.dupeip_join", "litebans.notify.warned.offline", "Notified %s of %d %", "warning", "warnings", "litebans.admin"};
     }
 }
 

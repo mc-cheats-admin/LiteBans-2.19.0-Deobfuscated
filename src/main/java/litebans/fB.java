@@ -20,7 +20,7 @@ import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
 @gy_0
-public static abstract class fB
+public abstract class fB
 extends fg_0
 implements d8 {
     public static final et d;
@@ -51,12 +51,12 @@ implements d8 {
 
     @Override
     public String[] getAliases() {
-        return new String[0];
+        return new Strin"";
     }
 
     @Override
     public String getPermission() {
-        return g[0] + this.getName();
+        return "" + this.getName();
     }
 
     /*
@@ -77,7 +77,7 @@ implements d8 {
                 }
                 if (jv_02.e() && v2.a((byte)3, jv_02.a())) {
                     jv_0 jv_04 = jv_02;
-                    String string2 = g[1];
+                    String string2 = "litebans.cooldown.bypass";
                     boolean bl4 = false;
                     jv_0 jv_05 = jv_04;
                     boolean bl5 = false;
@@ -90,7 +90,7 @@ implements d8 {
                 }
             }
             catch (bi bi2) {
-                String string3 = bF.a((CharSequence)bF.a((CharSequence)String.valueOf(bi2.a()), (CharSequence)g[2], () -> fB.a(stringArray)), (CharSequence)g[3], () -> fB.a(string));
+                String string3 = bF.a((CharSequence)bF.a((CharSequence)String.valueOf(bi2.a()), (CharSequence)"commandArgs", () -> fB.a(stringArray)), (CharSequence)"command", () -> fB.a(string));
                 aa_0.a((fg_0)this, (CharSequence)string3);
             }
             catch (Exception exception) {
@@ -122,7 +122,7 @@ implements d8 {
 
     public static /* synthetic */ void a(fB fB2, String[] stringArray, e0 e02, int n, Object object) {
         if (object != null) {
-            throw new UnsupportedOperationException(g[4]);
+            throw new UnsupportedOperationException("");
         }
         if ((n & 2) != 0) {
             e02 = () -> fB.a(fB2);
@@ -131,7 +131,7 @@ implements d8 {
     }
 
     private static final Object a(String[] stringArray) {
-        return lo_0.a(stringArray, (CharSequence)g[5], null, null, 0, null, null, 62, null);
+        return lo_0.a(stringArray, (CharSequence)" ", null, null, 0, null, null, 62, null);
     }
 
     private static final Object a(String string) {
@@ -139,7 +139,7 @@ implements d8 {
     }
 
     private static final am a(fB fB2) {
-        return am.c(fB2.h + g[6]);
+        return am.c(fB2.h + "_USAGE");
     }
 
     static {
@@ -148,7 +148,7 @@ implements d8 {
     }
 
     private static final void c() {
-        g = new String[]{hl.a("\ubcf1\ubcf4\ubce9\ubcf8\ubcff\ubcfc\ubcf3\ubcee\ubcb3", 1641069725), hl.a("\u6b8d\u6b88\u6b95\u6b84\u6b83\u6b80\u6b8f\u6b92\u6bcf\u6b82\u6b8e\u6b8e\u6b8d\u6b85\u6b8e\u6b96\u6b8f\u6bcf\u6b83\u6b98\u6b91\u6b80\u6b92\u6b92", -578262047), hl.a("\u42fd\u42f1\u42f3\u42f3\u42ff\u42f0\u42fa\u42df\u42ec\u42f9\u42ed", 1317094046), hl.a("\u9a4a\u9a46\u9a44\u9a44\u9a48\u9a47\u9a4d", 697735721), hl.a("", -2089153791), hl.a("\u0fab", -2047930485), hl.a("\u1863\u1869\u186f\u187d\u187b\u1879", 1739331644)};
+        g = new String[]{"", "litebans.cooldown.bypass", "commandArgs", "command", "", " ", "_USAGE"};
     }
 }
 

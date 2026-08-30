@@ -3,7 +3,7 @@ package litebans;
 import java.util.concurrent.TimeUnit;
 import litebans.e6;
 
-public static final class hM
+public final class hM
 implements e6 {
     @Override
     public long a() {

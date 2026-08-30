@@ -17,7 +17,7 @@ import litebans.iv_0;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class fL
+public final class fL
 extends fg_0 {
     private final String[] d;
     private static /* synthetic */ String[] e;
@@ -31,7 +31,7 @@ extends fg_0 {
     public void run() {
         Object object = fg_0.a;
         boolean bl = this.d.length < 2;
-        CharSequence charSequence = hd_0.f(e[0]);
+        CharSequence charSequence = hd_0.f("$command add-login <name> <UUID> <IP>");
         boolean bl2 = false;
         fo_0 fo_02 = object;
         boolean bl3 = false;
@@ -47,7 +47,7 @@ extends fg_0 {
     }
 
     private final void b() {
-        fo_0.a(fg_0.a, this.d(), hd_0.c(e[1]), null, 4, null);
+        fo_0.a(fg_0.a, this.d(), hd_0.c("Login record(s) "), null, 4, null);
     }
 
     private static final iv_0 a(fL fL2, ch ch2) {
@@ -86,7 +86,7 @@ extends fg_0 {
     }
 
     private static final void a() {
-        e = new String[]{hl.a("\u0d20\u0d67\u0d6b\u0d69\u0d69\u0d65\u0d6a\u0d60\u0d24\u0d65\u0d60\u0d60\u0d29\u0d68\u0d6b\u0d63\u0d6d\u0d6a\u0d24\u0d38\u0d6a\u0d65\u0d69\u0d61\u0d3a\u0d24\u0d38\u0d51\u0d51\u0d4d\u0d40\u0d3a\u0d24\u0d38\u0d4d\u0d54\u0d3a", -1833366268), hl.a("\uc2e5\uc2c6\uc2ce\uc2c0\uc2c7\uc289\uc2db\uc2cc\uc2ca\uc2c6\uc2db\uc2cd\uc281\uc2da\uc280\uc289\uc2c8\uc2cd\uc2cd\uc2cc\uc2cd\uc287", -1483291991)};
+        e = new String[]{"$command add-login <name> <UUID> <IP>", "Login record(s) added."};
     }
 
     static {

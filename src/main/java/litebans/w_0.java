@@ -12,10 +12,7 @@ import litebans.hm_0;
 import litebans.kf_0;
 import litebans.v_0;
 
-/*
- * Renamed from litebans.W
- */
-public static final class w_0
+public final class w_0
 extends v_0 {
     private static final Pattern i;
     private String k;
@@ -48,7 +45,7 @@ extends v_0 {
                     c = (char)(c + 32);
                 }
                 if (c == 'x' && i + 12 < string.length()) {
-                    object2 = new StringBuilder(j[0]);
+                    object2 = new StringBuilder("#");
                     for (int i10 = 0; i10 < 6; ++i10) {
                         ((StringBuilder)object2).append(string.charAt(i + 2 + i10 * 2));
                     }
@@ -114,7 +111,7 @@ extends v_0 {
                 object = new w_0((w_0)object2);
                 String string2 = hd_0.a((CharSequence)string.substring(i, n));
                 ((w_0)object).c(string2);
-                ((v_0)object).a(new kf_0(hm_0.e, string2.startsWith(j[1]) ? string2 : j[2] + string2));
+                ((v_0)object).a(new kf_0(hm_0.e, string2.startsWith("http") ? string2 : "http://" + string2));
                 consumer.accept(object);
                 i += n - i - 1;
                 object = object2;
@@ -136,7 +133,7 @@ extends v_0 {
     }
 
     public w_0() {
-        this.k = j[3];
+        this.k = "";
     }
 
     public w_0(w_0 w_02) {
@@ -165,7 +162,7 @@ extends v_0 {
 
     @Override
     public String toString() {
-        return j[4] + this.k + j[5] + super.toString() + '}';
+        return "TextComponent{text=" + this.k + ", " + super.toString() + '}';
     }
 
     public String b() {
@@ -225,7 +222,7 @@ extends v_0 {
     }
 
     private static final void a() {
-        j = new String[]{hl.a("\u1bd0", 23272435), hl.a("\u2e8d\u2e91\u2e91\u2e95", 1688481509), hl.a("\uce02\uce1e\uce1e\uce1a\uce50\uce45\uce45", -351482262), hl.a("", -989259645), hl.a("\ub9ee\ub9df\ub9c2\ub9ce\ub9f9\ub9d5\ub9d7\ub9ca\ub9d5\ub9d4\ub9df\ub9d4\ub9ce\ub9c1\ub9ce\ub9df\ub9c2\ub9ce\ub987", -73025094), hl.a("\u1a35\u1a39", -1756947943), hl.a("\ub300\ub376\ub361\ub364\ub376\ub336\ub32a\ub32a\ub32e\ub32d\ub361\ub377\ub364\ub371\ub371\ub377\ub361\ub376\ub305\ub373\ub302\ub329\ub301\ub302\ub370\ub303\ub325\ub36c\ub372\ub323\ub302\ub370\ub305\ub33f\ub373\ub324\ub303\ub325\ub36c\ub372\ub36a\ub323\ub377\ub376\ub371\ub305\ub33f\ub373\ub324\ub36e\ub373\ub367\ub303\ub374\ub377\ub361\ub37a", -2049723554)};
+        j = new String[]{"#", "http", "http://", "", "TextComponent{text=", ", ", "^(?:(https?)://)?([-\\w_\\.]{2,}\\.[a-z]{2,4})(/[a-z0-9]*)?$"};
     }
 }
 

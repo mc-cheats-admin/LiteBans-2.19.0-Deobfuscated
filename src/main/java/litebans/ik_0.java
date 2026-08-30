@@ -3,9 +3,6 @@ package litebans;
 import litebans.hl_0;
 import org.bukkit.entity.Player;
 
-/*
- * Renamed from litebans.iK
- */
 static class ik_0
 implements Runnable {
     final /* synthetic */ Player b;

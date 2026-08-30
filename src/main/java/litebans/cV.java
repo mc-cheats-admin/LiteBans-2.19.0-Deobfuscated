@@ -4,7 +4,7 @@ import com.google.gson.JsonDeserializer;
 import litebans.e2;
 import litebans.v_0;
 
-public static class cV
+public class cV
 implements JsonDeserializer {
     public static v_0[] a(String string) {
         return e2.a().a(string);

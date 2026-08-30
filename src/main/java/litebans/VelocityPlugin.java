@@ -40,11 +40,8 @@ import litebans.n_0;
 import litebans.o_0;
 import org.slf4j.Logger;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-@Plugin(id="litebans", name="LiteBans", version="2.19.0", url="https://www.spigotmc.org/resources/litebans.3715/", description="Lightweight banning plugin with full UUID support.", authors={"Ruan"})
-public static class VelocityPlugin
+@Plugin(id="litebans", name="LiteBans", version="2.19.0", url="https://www.spigotmc.org/resources/litebans.3715/", description="Lightweight banning plugin with full UUID ", authors={"Ruan"})
+public class VelocityPlugin
 implements di_0 {
     private final bd_0 f = new bd_0(this);
     public final ProxyServer c;
@@ -145,7 +142,7 @@ implements di_0 {
     @Override
     public gn_0 o() {
         gn_0 gn_02;
-        this.f.o = gn_02 = this.a(new File(this.getDataFolder(), b[0]));
+        this.f.o = gn_02 = this.a(new File(this.getDataFolder(), "config.yml"));
         return gn_02;
     }
 
@@ -176,7 +173,7 @@ implements di_0 {
 
     @Override
     public String getName() {
-        return b[1];
+        return "LiteBans";
     }
 
     @Override
@@ -221,7 +218,7 @@ implements di_0 {
 
     @Override
     public String e() {
-        return b[2];
+        return "2.19.0";
     }
 
     @Override
@@ -295,7 +292,7 @@ implements di_0 {
     @Override
     public void a(Runnable runnable, long l3) {
         if (l3 < 0L) {
-            throw new IllegalArgumentException(b[3] + l3);
+            throw new IllegalArgumentException("Invalid delay: " + l3);
         }
         this.c();
         this.g.add(this.c.getScheduler().buildTask((Object)this, runnable).delay(l3 * 50L, TimeUnit.MILLISECONDS).schedule());
@@ -362,7 +359,7 @@ implements di_0 {
             }
             throw new IllegalArgumentException();
         }
-        String string = b[4];
+        String string = "[Console]";
         if (object instanceof Player) {
             string = ((Player)object).getUsername();
         }
@@ -380,7 +377,7 @@ implements di_0 {
         }
         CommandSource commandSource = (CommandSource)object;
         Map map = this.f.b;
-        String string = b[5];
+        String string = "[Console]";
         if (commandSource instanceof Player) {
             string = ((Player)commandSource).getUsername();
         }
@@ -397,7 +394,7 @@ implements di_0 {
     }
 
     private static final void a() {
-        b = new String[]{hl.a("\u9fa8\u9fa4\u9fa5\u9fad\u9fa2\u9fac\u9fe5\u9fb2\u9fa6\u9fa7", 17932235), hl.a("\u3c18\u3c3d\u3c20\u3c31\u3c16\u3c35\u3c3a\u3c27", -140231596), hl.a("\u6224\u6238\u6227\u622f\u6238\u6226", 75784726), hl.a("\u80ae\u8089\u8091\u8086\u808b\u808e\u8083\u80c7\u8083\u8082\u808b\u8086\u809e\u80dd\u80c7", -1426947865), hl.a("\u9a26\u9a3e\u9a12\u9a13\u9a0e\u9a12\u9a11\u9a18\u9a20", 1332320893), hl.a("\u9d70\u9d68\u9d44\u9d45\u9d58\u9d44\u9d47\u9d4e\u9d76", 1578081579)};
+        b = new String[]{"config.yml", "LiteBans", "2.19.0", "Invalid delay: ", "[Console]", "[Console]"};
     }
 
     static {

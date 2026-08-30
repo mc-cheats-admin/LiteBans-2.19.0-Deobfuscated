@@ -11,12 +11,9 @@ import litebans.jv_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.bM
- */
 @hh_0
 @ai_0(a=2)
-public static class bm_0
+public class bm_0
 implements d8,
 SimpleCommand {
     private final d8 d;

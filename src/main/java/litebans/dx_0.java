@@ -1,9 +1,6 @@
 package litebans;
 
-/*
- * Renamed from litebans.dx
- */
-public static final class dx_0
+public final class dx_0
 extends Enum {
     public static final dx_0 c = new dx_0("COMMENT", 0);
     public static final dx_0 a = new dx_0("UNICODE_EXTRA_FIELD", 1);

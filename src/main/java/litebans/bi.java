@@ -2,7 +2,7 @@ package litebans;
 
 import org.jetbrains.annotations.Nullable;
 
-public static class bi
+public class bi
 extends RuntimeException {
     private final Object a;
 

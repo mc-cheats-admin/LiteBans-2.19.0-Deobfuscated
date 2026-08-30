@@ -23,11 +23,8 @@ import litebans.p_0;
 import litebans.q_0;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
 @ai_0(a=0)
-public static final class Q
+public final class Q
 extends p_0 {
     private boolean b;
     private Object[] c = new Object[0];
@@ -84,7 +81,7 @@ extends p_0 {
 
     @Override
     public cl_0 a(@NotNull jw_0 jw_02) {
-        if (ew.a((Object)jw_02.getName(), (Object)d[0])) {
+        if (ew.a((Object)jw_02.getName(), (Object)"lockdown")) {
             return new ad_0(this.a);
         }
         return (cl_0)super.a(jw_02);
@@ -98,11 +95,11 @@ extends p_0 {
     private static final void a(q_0 q_02, Q q) {
         if (q_02.p()) {
             try {
-                q.a.a(d[1], () -> Q.a(q));
+                q.a.a("fr.xephi.authme.events.LoginEvent", () -> Q.a(q));
             }
             catch (Exception exception) {
                 n_0 n_02 = q;
-                String string = d[2];
+                String string = "Hooking into AuthMe ";
                 boolean bl = false;
                 n_02.a.getLogger().warning(string);
                 exception.printStackTrace();
@@ -113,9 +110,9 @@ extends p_0 {
     private static final void a(Q q, eG eG2, q_0 q_02) {
         block6: {
             try {
-                boolean bl = q.b = eG2.a() && q.a.i().a(d[3]);
+                boolean bl = q.b = eG2.a() && q.a.i().a("ProtocolLib");
                 if (q.b && du_0.b.b()) {
-                    q.a.getLogger().warning(d[4]);
+                    q.a.getLogger().warning("ProtocolLib error 00 - manager is ");
                 } else if (q.b) {
                     Object[] objectArray;
                     n_0 n_02 = q;
@@ -131,7 +128,7 @@ extends p_0 {
                 }
             }
             catch (Throwable throwable) {
-                q.a.getLogger().warning(d[5]);
+                q.a.getLogger().warning("Failed to add ProtocolLib packet ");
                 if ((throwable instanceof LinkageError || throwable instanceof ReflectiveOperationException) && !q_02.g()) break block6;
                 q_02.a(throwable);
             }
@@ -144,7 +141,7 @@ extends p_0 {
     }
 
     private static final void d() {
-        d = new String[]{hl.a("\u1b34\u1b37\u1b3b\u1b33\u1b3c\u1b37\u1b2f\u1b36", -901899432), hl.a("\u11c9\u11dd\u1181\u11d7\u11ca\u11df\u11c7\u11c6\u1181\u11ce\u11da\u11db\u11c7\u11c2\u11ca\u1181\u11ca\u11d9\u11ca\u11c1\u11db\u11dc\u1181\u11e3\u11c0\u11c8\u11c6\u11c1\u11ea\u11d9\u11ca\u11c1\u11db", 1674056111), hl.a("\ud165\ud142\ud142\ud146\ud144\ud143\ud14a\ud10d\ud144\ud143\ud159\ud142\ud10d\ud16c\ud158\ud159\ud145\ud160\ud148\ud10d\ud14b\ud14c\ud144\ud141\ud148\ud149\ud103", 181719341), hl.a("\u9c8b\u9ca9\u9cb4\u9caf\u9cb4\u9cb8\u9cb4\u9cb7\u9c97\u9cb2\u9cb9", -1033331493), hl.a("\u9edb\u9ef9\u9ee4\u9eff\u9ee4\u9ee8\u9ee4\u9ee7\u9ec7\u9ee2\u9ee9\u9eab\u9eee\u9ef9\u9ef9\u9ee4\u9ef9\u9eab\u9ebb\u9ebb\u9eab\u9ea6\u9eab\u9ee6\u9eea\u9ee5\u9eea\u9eec\u9eee\u9ef9\u9eab\u9ee2\u9ef8\u9eab\u9ee6\u9ee2\u9ef8\u9ef8\u9ee2\u9ee5\u9eec\u9ea5", 393977483), hl.a("\u6ecd\u6eea\u6ee2\u6ee7\u6eee\u6eef\u6eab\u6eff\u6ee4\u6eab\u6eea\u6eef\u6eef\u6eab\u6edb\u6ef9\u6ee4\u6eff\u6ee4\u6ee8\u6ee4\u6ee7\u6ec7\u6ee2\u6ee9\u6eab\u6efb\u6eea\u6ee8\u6ee0\u6eee\u6eff\u6eab\u6ee7\u6ee2\u6ef8\u6eff\u6eee\u6ee5\u6eee\u6ef9\u6ea5", 131231371)};
+        d = new String[]{"lockdown", "fr.xephi.authme.events.LoginEvent", "Hooking into AuthMe ", "ProtocolLib", "ProtocolLib error 00 - manager is ", "Failed to add ProtocolLib packet listener."};
     }
 
     static {

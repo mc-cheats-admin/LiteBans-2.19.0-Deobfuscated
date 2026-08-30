@@ -1,6 +1,6 @@
 package litebans;
 
-public static final class ao
+public final class ao
 extends Enum {
     public static final ao c = new ao("TAPE", 0, 1);
     public static final ao f = new ao("INODE", 1, 2);

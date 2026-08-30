@@ -22,7 +22,7 @@ import litebans.x_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class t
+public final class t
 extends n_0
 implements Runnable {
     public static final ht b;
@@ -190,7 +190,7 @@ implements Runnable {
             if (q_03.g()) {
                 q_0 q_04 = q_03;
                 boolean bl2 = false;
-                q_04.a((Object)(i[0] + string));
+                q_04.a((Object)("Offer " + string));
             }
         }
     }
@@ -208,7 +208,7 @@ implements Runnable {
     }
 
     private static final void d() {
-        i = new String[]{hl.a("\u0a1b\u0a32\u0a32\u0a31\u0a26\u0a74", -1582822828)};
+        i = new String[]{"Offer "};
     }
 }
 

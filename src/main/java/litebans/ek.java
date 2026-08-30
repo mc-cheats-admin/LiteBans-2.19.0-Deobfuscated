@@ -4,7 +4,7 @@ import java.util.zip.ZipException;
 import litebans.en_0;
 import litebans.i2;
 
-public static class ek
+public class ek
 implements en_0 {
     public static final i2 f;
     public static final int g;

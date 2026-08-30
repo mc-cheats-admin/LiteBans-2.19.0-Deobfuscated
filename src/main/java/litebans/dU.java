@@ -2,7 +2,7 @@ package litebans;
 
 import litebans.aJ;
 
-public static final class dU {
+public final class dU {
     private boolean a;
     private boolean b;
 

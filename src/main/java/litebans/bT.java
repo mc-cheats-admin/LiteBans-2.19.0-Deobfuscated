@@ -11,7 +11,7 @@ import litebans.i0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static class bT
+public class bT
 implements Closeable {
     private final ch a;
     private final PreparedStatement b;

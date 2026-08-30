@@ -7,10 +7,7 @@ import litebans.el_0;
 import litebans.fl_0;
 import litebans.kw_0;
 
-/*
- * Renamed from litebans.eW
- */
-public static abstract class ew_0 {
+public abstract class ew_0 {
     private static final byte[] a = ci_0.a(8448L);
 
     public static final byte[] a(byte[] byArray) {

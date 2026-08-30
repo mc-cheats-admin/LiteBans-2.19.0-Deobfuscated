@@ -5,10 +5,7 @@ import litebans.dq_0;
 import litebans.fl_0;
 import litebans.kw_0;
 
-/*
- * Renamed from litebans.eL
- */
-public static class el_0
+public class el_0
 extends ZipException {
     private final fl_0 a;
     private final transient kw_0 c;

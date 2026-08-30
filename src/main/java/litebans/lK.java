@@ -28,7 +28,7 @@ import java.util.Calendar;
 import litebans.c2;
 import litebans.lV;
 
-public static final class lK
+public final class lK
 extends lV
 implements Wrapper,
 AutoCloseable,

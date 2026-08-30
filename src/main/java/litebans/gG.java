@@ -21,7 +21,7 @@ import litebans.w;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class gG
+public final class gG
 extends fg_0
 implements jw_0 {
     private final CharSequence h;
@@ -45,9 +45,6 @@ implements jw_0 {
         return this.f;
     }
 
-    /*
-     * Unable to fully structure code
-     */
     @Override
     public void run() {
         block10: {
@@ -94,7 +91,7 @@ implements jw_0 {
                     if (!eq_0.f.a(((q_0)var17_26.h().a(q_0.class)).f().aw(), var14_21.f)) ** GOTO lbl-1000
                 }
                 var20_30 = var12_19;
-                var16_23 = gG.g[0];
+                var16_23 = "litebans.lockdown.bypass";
                 var17_25 = false;
                 var18_27 = var20_30;
                 var19_29 = false;
@@ -158,12 +155,12 @@ implements jw_0 {
     }
 
     public final void a(@NotNull Object object, @NotNull String string, boolean bl) {
-        il_0.a(this.h().i(), object, string, null, bl, g[1], 4, null);
+        il_0.a(this.h().i(), object, string, null, bl, "KICK_OTHER", 4, null);
     }
 
     public static /* synthetic */ void a(gG gG2, Object object, String string, boolean bl, int n, Object object2) {
         if ((n & 2) != 0) {
-            string = g[2];
+            string = "";
         }
         if ((n & 4) != 0) {
             bl = true;
@@ -174,24 +171,24 @@ implements jw_0 {
     public final String a(@NotNull String string, boolean bl) {
         CharSequence charSequence = bl ? am.dw : am.av;
         CharSequence[] charSequenceArray = new CharSequence[4];
-        charSequenceArray[0] = g[3];
+        charSequenceArray[0] = "reason";
         CharSequence charSequence2 = this.h;
         if (charSequence2 == null) {
-            charSequence2 = g[4];
+            charSequence2 = "";
         }
         charSequenceArray[1] = charSequence2;
-        charSequenceArray[2] = g[5];
+        charSequenceArray[2] = "server";
         charSequenceArray[3] = string;
         return am.a(h1.a(charSequence, charSequenceArray), true);
     }
 
     @Override
     public String getName() {
-        return g[8];
+        return "lockdown";
     }
 
     private static final void b() {
-        g = new String[]{hl.a("\ue4ae\ue4ab\ue4b6\ue4a7\ue4a0\ue4a3\ue4ac\ue4b1\ue4ec\ue4ae\ue4ad\ue4a1\ue4a9\ue4a6\ue4ad\ue4b5\ue4ac\ue4ec\ue4a0\ue4bb\ue4b2\ue4a3\ue4b1\ue4b1", -1852775230), hl.a("\u7ae2\u7ae0\u7aea\u7ae2\u7af6\u7ae6\u7afd\u7ae1\u7aec\u7afb", -1624474967), hl.a("", -846361673), hl.a("\u68e2\u68f5\u68f1\u68e3\u68ff\u68fe", -1490327408), hl.a("", -2118083180), hl.a("\u08fd\u08eb\u08fc\u08f8\u08eb\u08fc", 707070094), hl.a("\u7941\u7944\u7959\u7948\u794f\u794c\u7943\u795e\u7903\u7941\u7942\u794e\u7946\u7949\u7942\u795a\u7943\u7903\u794f\u7954\u795d\u794c\u795e\u795e", -1393460947), hl.a("\u7f94\u7f91\u7f8c\u7f9d\u7f9a\u7f99\u7f96\u7f8b\u7fd6\u7f94\u7f97\u7f9b\u7f93\u7f9c\u7f97\u7f8f\u7f96\u7fd6\u7f9a\u7f81\u7f88\u7f99\u7f8b\u7f8b", 2032893944), hl.a("\uf34d\uf34e\uf342\uf34a\uf345\uf34e\uf356\uf34f", 10089249)};
+        g = new String[]{"litebans.lockdown.bypass", "KICK_OTHER", "", "reason", "", "server", "litebans.lockdown.bypass", "litebans.lockdown.bypass", "lockdown"};
     }
 
     static {

@@ -19,10 +19,7 @@ import litebans.dO;
 import litebans.jo;
 import litebans.kI;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static class aB
+public class aB
 implements jo {
     private static final kI l;
     private static final char[] a;
@@ -359,23 +356,23 @@ implements jo {
         this.s = dO.b(this.s);
         if (this.O != null) {
             if (this.z != null) {
-                l.c("%s - using dataSource and ignoring dataSourceClassName.", new Object[]{this.b});
+                l.c("%s - using dataSource and ignoring ", new Object[]{this.b});
             }
         } else if (this.z != null) {
             if (this.h != null) {
-                l.a("%s - cannot use driverClassName and dataSourceClassName together.", new Object[]{this.b});
-                throw new IllegalStateException("cannot use driverClassName and dataSourceClassName together.");
+                l.a("%s - cannot use driverClassName and dataSourceClassName ", new Object[]{this.b});
+                throw new IllegalStateException("cannot use driverClassName and dataSourceClassName ");
             }
             if (this.s != null) {
-                l.c("{} - using dataSourceClassName and ignoring jdbcUrl.", new Object[]{this.b});
+                l.c("{} - using dataSourceClassName and ignoring ", new Object[]{this.b});
             }
         } else if (this.s == null && this.x == null) {
             if (this.h != null) {
-                l.a("{} - jdbcUrl is required with driverClassName.", new Object[]{this.b});
-                throw new IllegalArgumentException("jdbcUrl is required with driverClassName.");
+                l.a("{} - jdbcUrl is required with ", new Object[]{this.b});
+                throw new IllegalArgumentException("jdbcUrl is required with ");
             }
-            l.a("{} - dataSource or dataSourceClassName or jdbcUrl is required.", new Object[]{this.b});
-            throw new IllegalArgumentException("dataSource or dataSourceClassName or jdbcUrl is required.");
+            l.a("{} - dataSource or dataSourceClassName or jdbcUrl is ", new Object[]{this.b});
+            throw new IllegalArgumentException("dataSource or dataSourceClassName or jdbcUrl is ");
         }
         this.n();
         if (l.a() || u) {
@@ -385,27 +382,27 @@ implements jo {
 
     private final void n() {
         if (this.K != 0L && this.K < TimeUnit.SECONDS.toMillis(30L)) {
-            l.c("%s - maxLifetime is less than 30000ms, setting to default %dms.", new Object[]{this.b, n});
+            l.c("%s - maxLifetime is less than 30000ms, setting to default %", new Object[]{this.b, n});
             this.K = n;
         }
         if (this.j != 0L && this.j < TimeUnit.SECONDS.toMillis(30L)) {
-            l.c("%s - keepaliveTime is less than 30000ms, disabling it.", new Object[]{this.b});
+            l.c("%s - keepaliveTime is less than 30000ms, disabling ", new Object[]{this.b});
             this.j = 0L;
         }
         if (this.j != 0L && this.K != 0L && this.j >= this.K) {
-            l.c("%s - keepaliveTime is greater than or equal to maxLifetime, disabling it.", new Object[]{this.b});
+            l.c("%s - keepaliveTime is greater than or equal to maxLifetime, disabling ", new Object[]{this.b});
             this.j = 0L;
         }
         if (this.D > 0L && !u && (this.D < TimeUnit.SECONDS.toMillis(2L) || this.D > this.K && this.K > 0L)) {
-            l.c("%s - leakDetectionThreshold is less than 2000ms or more than maxLifetime, disabling it.", new Object[]{this.b});
+            l.c("%s - leakDetectionThreshold is less than 2000ms or more than maxLifetime, disabling ", new Object[]{this.b});
             this.D = 0L;
         }
         if (this.i < c) {
-            l.c("%s - connectionTimeout is less than %dms, setting to %dms.", new Object[]{this.b, c, v});
+            l.c("%s - connectionTimeout is less than %dms, setting to %", new Object[]{this.b, c, v});
             this.i = v;
         }
         if (this.L < c) {
-            l.c("%s - validationTimeout is less than %dms, setting to %dms.", new Object[]{this.b, c, A});
+            l.c("%s - validationTimeout is less than %dms, setting to %", new Object[]{this.b, c, A});
             this.L = A;
         }
         if (this.r < 1) {
@@ -415,19 +412,19 @@ implements jo {
             this.w = this.r;
         }
         if (this.H + TimeUnit.SECONDS.toMillis(1L) > this.K && this.K > 0L && this.w < this.r) {
-            l.c("%s - idleTimeout is close to or more than maxLifetime, disabling it.", new Object[]{this.b});
+            l.c("%s - idleTimeout is close to or more than maxLifetime, disabling ", new Object[]{this.b});
             this.H = 0L;
         } else if (this.H != 0L && this.H < TimeUnit.SECONDS.toMillis(10L) && this.w < this.r) {
-            l.c("%s - idleTimeout is less than 10000ms, setting to default {}ms.", new Object[]{this.b, N});
+            l.c("%s - idleTimeout is less than 10000ms, setting to default {}", new Object[]{this.b, N});
             this.H = N;
         } else if (this.H != N && this.H != 0L && this.w == this.r) {
-            l.c("%s - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.", new Object[]{this.b});
+            l.c("%s - idleTimeout has been set but has no effect because the pool is operating as a fixed size ", new Object[]{this.b});
         }
     }
 
     private final void y() {
         if (this.p) {
-            throw new IllegalStateException("The configuration of the pool is sealed once started. Use HikariConfigMXBean for runtime changes.");
+            throw new IllegalStateException("The configuration of the pool is sealed once started. Use HikariConfigMXBean for runtime ");
         }
     }
 
@@ -457,7 +454,7 @@ implements jo {
                 } else if (object == null) {
                     object = "none";
                 }
-                l.b("{}{}", new Object[]{string + "................................................".substring(0, 32), object});
+                l.b("{}{}", new Object[]{string + "............................................... + ".substring(0, 32), object});
             }
             catch (Exception exception) {}
         }

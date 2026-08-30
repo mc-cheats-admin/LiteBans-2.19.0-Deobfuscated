@@ -6,7 +6,7 @@ import litebans.api.Events$Listener;
 import litebans.ch;
 import litebans.hq;
 
-public static final class eu
+public final class eu
 implements Runnable {
     final /* synthetic */ Collection b;
     final /* synthetic */ ch c;

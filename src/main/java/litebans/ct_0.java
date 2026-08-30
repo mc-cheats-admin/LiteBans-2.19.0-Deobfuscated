@@ -10,10 +10,7 @@ import litebans.kc_0;
 import litebans.kq_0;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.cT
- */
-public static final class ct_0 {
+public final class ct_0 {
     private ct_0() {
     }
 

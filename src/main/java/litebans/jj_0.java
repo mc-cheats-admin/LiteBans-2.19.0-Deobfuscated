@@ -11,10 +11,7 @@ import litebans.lo_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.jj
- */
-public static final class jj_0 {
+public final class jj_0 {
     public static final jj_0 a;
     private static final HashSet d;
     private static final HashSet c;
@@ -208,13 +205,13 @@ public static final class jj_0 {
     static {
         jj_0.a();
         a = new jj_0();
-        d = lo_0.b(b[0].toCharArray());
-        c = lo_0.b(b[1].toCharArray());
-        e = lo_0.b(b[2].toCharArray());
+        d = lo_0.b("0123456789.*%_".toCharArray());
+        c = lo_0.b("0123456789ABCDEFMVZabcdefmvz".toCharArray());
+        e = lo_0.b("MVZmvz".toCharArray());
     }
 
     private static final void a() {
-        b = new String[]{hl.a("\u9bdb\u9bda\u9bd9\u9bd8\u9bdf\u9bde\u9bdd\u9bdc\u9bd3\u9bd2\u9bc5\u9bc1\u9bce\u9bb4", 286563307), hl.a("\ue881\ue880\ue883\ue882\ue885\ue884\ue887\ue886\ue889\ue888\ue8f0\ue8f3\ue8f2\ue8f5\ue8f4\ue8f7\ue8fc\ue8e7\ue8eb\ue8d0\ue8d3\ue8d2\ue8d5\ue8d4\ue8d7\ue8dc\ue8c7\ue8cb", 62974129), hl.a("\u6bc4\u6bdf\u6bd3\u6be4\u6bff\u6bf3", 1651207049)};
+        b = new String[]{"0123456789.*%_", "0123456789ABCDEFMVZabcdefmvz", "MVZmvz"};
     }
 }
 

@@ -6,7 +6,7 @@ import litebans.ji;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class lq {
+public final class lq {
     public static final ji g;
     private final String d;
     private final String a;
@@ -41,7 +41,7 @@ public static final class lq {
     }
 
     public String toString() {
-        return f[0] + this.d + f[1] + this.a + f[2] + this.c + f[3] + this.e + ')';
+        return "(a=" + this.d + ", engine=" + this.a + ", charset=" + this.c + ", unsigned=" + this.e + ')';
     }
 
     public int hashCode() {
@@ -81,7 +81,7 @@ public static final class lq {
     }
 
     private static final void b() {
-        f = new String[]{hl.a("\u5c45\u5c0c\u5c50", -1713349523), hl.a("\ua849\ua845\ua800\ua80b\ua802\ua80c\ua80b\ua800\ua858", -1241733019), hl.a("\uc944\uc948\uc90b\uc900\uc909\uc91a\uc91b\uc90d\uc91c\uc955", 814795112), hl.a("\u4eca\u4ec6\u4e93\u4e88\u4e95\u4e8f\u4e81\u4e88\u4e83\u4e82\u4edb", -230142234)};
+        f = new String[]{"(a=", ", engine=", ", charset=", ", unsigned="};
     }
 }
 

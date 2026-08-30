@@ -7,7 +7,7 @@ import litebans.iv_0;
 import litebans.jg_0;
 import litebans.u;
 
-public static final class eN
+public final class eN
 implements eo_0 {
     final /* synthetic */ ArrayList b;
     final /* synthetic */ u a;

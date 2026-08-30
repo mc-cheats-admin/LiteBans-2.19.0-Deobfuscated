@@ -6,7 +6,7 @@ import litebans.i7;
 import litebans.jt_0;
 import litebans.lG;
 
-public static class dT
+public class dT
 implements lG {
     private final boolean ap;
     private List ao;

@@ -1,6 +1,6 @@
 package litebans;
 
-public static interface iq {
+public interface iq {
     public static final int b;
     public static final int a;
     public static final int c;

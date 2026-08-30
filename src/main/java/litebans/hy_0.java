@@ -3,10 +3,7 @@ package litebans;
 import litebans.aC;
 import litebans.ew;
 
-/*
- * Renamed from litebans.hy
- */
-public static final class hy_0
+public final class hy_0
 implements Comparable {
     public static final aC e;
     private final byte c;

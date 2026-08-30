@@ -1,8 +1,5 @@
 package litebans;
 
-/*
- * Renamed from litebans.hr
- */
-public static interface hr_0 {
+public interface hr_0 {
 }
 

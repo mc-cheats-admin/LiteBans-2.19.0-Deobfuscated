@@ -12,7 +12,7 @@ import litebans.di_0;
 import litebans.kx_0;
 import org.jetbrains.annotations.NotNull;
 
-public static final class co
+public final class co
 extends bU {
     private final ReentrantReadWriteLock e = new ReentrantReadWriteLock();
 

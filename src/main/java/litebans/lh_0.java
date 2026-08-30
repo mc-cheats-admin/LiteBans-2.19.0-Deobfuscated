@@ -1,9 +1,6 @@
 package litebans;
 
-/*
- * Renamed from litebans.lh
- */
-public static final class lh_0
+public final class lh_0
 extends Enum {
     public static final lh_0 g = new lh_0("WHITEOUT", 0, 14);
     public static final lh_0 j = new lh_0("SOCKET", 1, 12);

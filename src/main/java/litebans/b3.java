@@ -8,7 +8,7 @@ import litebans.x_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class b3 {
+public final class b3 {
     private final long c;
     private final long b;
     private static /* synthetic */ String[] a;
@@ -38,7 +38,7 @@ public static final class b3 {
     }
 
     public String toString() {
-        return a[0] + this.c + a[1] + this.b + ')';
+        return "(a=" + this.c + ", mute=" + this.b + ')';
     }
 
     public int hashCode() {
@@ -62,7 +62,7 @@ public static final class b3 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u93c2\u938b\u93d7", -213871638), hl.a("\ud310\ud31c\ud351\ud349\ud348\ud359\ud301", 1337316156)};
+        a = new String[]{"(a=", ", mute="};
     }
 
     static {

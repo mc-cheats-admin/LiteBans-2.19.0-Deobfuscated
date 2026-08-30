@@ -18,7 +18,7 @@ import litebans.lJ;
 import litebans.lK;
 import litebans.ly;
 
-public static final class c0 {
+public final class c0 {
     static c2 a(kJ kJ2, Connection connection, gk gk2, ja ja2, long l3, boolean bl, boolean bl2) {
         return new c6(kJ2, connection, gk2, ja2, l3, bl, bl2);
     }

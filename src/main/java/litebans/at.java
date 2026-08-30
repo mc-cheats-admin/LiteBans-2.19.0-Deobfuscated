@@ -3,7 +3,7 @@ package litebans;
 import litebans.g9;
 import org.jetbrains.annotations.Nullable;
 
-public static final class at {
+public final class at {
     private final String c;
     private final String b;
     private final boolean a;

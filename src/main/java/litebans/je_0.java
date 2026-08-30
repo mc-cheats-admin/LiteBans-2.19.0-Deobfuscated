@@ -2,10 +2,7 @@ package litebans;
 
 import java.io.InputStream;
 
-/*
- * Renamed from litebans.je
- */
-public static final class je_0 {
+public final class je_0 {
     private static final int b;
     private static final int a;
     private static final byte[] c;

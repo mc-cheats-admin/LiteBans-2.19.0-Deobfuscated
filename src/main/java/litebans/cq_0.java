@@ -9,11 +9,7 @@ import litebans.en_0;
 import litebans.ew_0;
 import litebans.i2;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.cq
- */
-public static class cq_0
+public class cq_0
 implements en_0,
 Cloneable,
 Serializable {

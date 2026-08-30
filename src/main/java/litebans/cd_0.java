@@ -2,10 +2,7 @@ package litebans;
 
 import java.io.UnsupportedEncodingException;
 
-/*
- * Renamed from litebans.cd
- */
-public static class cd_0 {
+public class cd_0 {
     private static final int a = 255;
 
     public static final boolean a(String string, byte[] byArray, int n, int n2) {

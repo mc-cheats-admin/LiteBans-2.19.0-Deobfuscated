@@ -7,10 +7,7 @@ import litebans.de_0;
 import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.eR
- */
-public static final class er_0 {
+public final class er_0 {
     private static /* synthetic */ String[] a;
 
     private er_0() {
@@ -19,7 +16,7 @@ public static final class er_0 {
     public final de_0 a(@NotNull String string, @NotNull Integer[] integerArray) {
         char[] cArray;
         String string2 = string;
-        if (bz.b(string2, a[0], false, 2, null)) {
+        if (bz.b(string2, "git:", false, 2, null)) {
             string2 = bz.d(string2, ':', null, 2, null);
         }
         if (bz.c((CharSequence)string2, '+', false, 2, null)) {
@@ -64,7 +61,7 @@ public static final class er_0 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u9bc8\u9bc6\u9bdb\u9b95", -638674001)};
+        a = new String[]{"git:"};
     }
 
     static {

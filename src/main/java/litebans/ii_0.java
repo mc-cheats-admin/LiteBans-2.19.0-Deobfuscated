@@ -7,11 +7,7 @@ import litebans.en_0;
 import litebans.g0;
 import litebans.i2;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.ii
- */
-public static class ii_0
+public class ii_0
 implements en_0,
 g0,
 Cloneable {

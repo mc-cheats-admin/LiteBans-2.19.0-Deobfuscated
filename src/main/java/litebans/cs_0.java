@@ -4,10 +4,7 @@ import java.sql.SQLTransientException;
 import java.util.concurrent.Semaphore;
 import litebans.ct;
 
-/*
- * Renamed from litebans.cS
- */
-public static class cs_0 {
+public class cs_0 {
     public static final cs_0 b;
     private static final int c;
     private final Semaphore a;

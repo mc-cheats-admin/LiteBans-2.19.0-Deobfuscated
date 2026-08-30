@@ -5,11 +5,7 @@ import litebans.ci_0;
 import litebans.en_0;
 import litebans.i2;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.ba
- */
-public static abstract class ba_0
+public abstract class ba_0
 implements en_0 {
     private long b;
     private byte[] c;
@@ -62,7 +58,7 @@ implements en_0 {
     @Override
     public void a(byte[] byArray, int n, int n2) {
         if (n2 < 5) {
-            throw new ZipException("UniCode path extra data must have at least 5 bytes.");
+            throw new ZipException("UniCode path extra data must have at least 5 ");
         }
         byte by2 = byArray[n];
         if (by2 != 1) {

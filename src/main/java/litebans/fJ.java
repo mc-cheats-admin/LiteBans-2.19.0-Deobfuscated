@@ -21,15 +21,12 @@ import litebans.q_0;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class fJ
+public final class fJ
 extends fB {
     private static /* synthetic */ String[] i;
 
     public fJ(@NotNull di_0 di_02) {
-        super(i[0], di_02);
+        super("ipreport", di_02);
     }
 
     @Override
@@ -69,7 +66,7 @@ extends fB {
                     int n = 0;
                     object4 = object2;
                     boolean bl4 = false;
-                    CharSequence charSequence = object4.a((CharSequence)am.b0.a(i[1], (Object)list.size()));
+                    CharSequence charSequence = object4.a((CharSequence)am.b0.a("num", (Object)list.size()));
                     aa_0.a((fg_0)this, charSequence);
                     Iterable iterable = list;
                     boolean bl5 = false;
@@ -85,7 +82,7 @@ extends fB {
                         fg_0 fg_03 = fg_02;
                         boolean bl8 = false;
                         if (fW2.m() < ((q_0)fg_03.h().a(q_0.class)).f().b()) continue;
-                        fg_02 = new CharSequence[]{i[2], fW2.c()};
+                        fg_02 = new CharSequence[]{"result", fW2.c()};
                         aa_0.a((fg_0)this, (CharSequence)h1.a(object4.a((CharSequence)am.a4, jv_04), (CharSequence[])fg_02));
                     }
                     object5 = iv_0.a;
@@ -106,7 +103,7 @@ extends fB {
     }
 
     private static final void a() {
-        i = new String[]{hl.a("\u6634\u662d\u662f\u6638\u662d\u6632\u662f\u6629", -1866111395), hl.a("\u737a\u7361\u7379", -358321388), hl.a("\uf0cd\uf0da\uf0cc\uf0ca\uf0d3\uf0cb", 1259139263)};
+        i = new String[]{"ipreport", "num", "result"};
     }
 
     static {

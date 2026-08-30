@@ -31,10 +31,7 @@ import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.api.scheduler.GroupedThreadFactory;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static class BungeePlugin
+public class BungeePlugin
 extends Plugin
 implements di_0 {
     private final bd_0 c = new bd_0(this);
@@ -178,7 +175,7 @@ implements di_0 {
     @Override
     public gn_0 o() {
         gn_0 gn_02;
-        this.c.o = gn_02 = this.a(new File(this.getDataFolder(), b[0]));
+        this.c.o = gn_02 = this.a(new File(this.getDataFolder(), "config.yml"));
         return gn_02;
     }
 
@@ -265,7 +262,7 @@ implements di_0 {
     @Override
     public void a(Runnable runnable, long l3) {
         if (l3 < 0L) {
-            throw new IllegalArgumentException(b[1] + l3);
+            throw new IllegalArgumentException("Invalid delay: " + l3);
         }
         try {
             this.getProxy().getScheduler().schedule((Plugin)this, runnable, l3 * 50L, TimeUnit.MILLISECONDS);
@@ -297,7 +294,7 @@ implements di_0 {
 
     private final void a(Exception exception) {
         if (this.c.m.get()) {
-            this.getLogger().warning(b[2]);
+            this.getLogger().warning("Startup was cancelled!!");
             return;
         }
         throw exception;
@@ -370,7 +367,7 @@ implements di_0 {
     }
 
     private static final void a() {
-        b = new String[]{hl.a("\u751e\u7512\u7513\u751b\u7514\u751a\u7553\u7504\u7510\u7511", 1041659261), hl.a("\u4305\u4322\u433a\u432d\u4320\u4325\u4328\u436c\u4328\u4329\u4320\u432d\u4335\u4376\u436c", -926268596), hl.a("\u1ea1\u1e86\u1e93\u1e80\u1e86\u1e87\u1e82\u1ed2\u1e85\u1e93\u1e81\u1ed2\u1e91\u1e93\u1e9c\u1e91\u1e97\u1e9e\u1e9e\u1e97\u1e96\u1ed3\u1ed3", -830923022)};
+        b = new String[]{"config.yml", "Invalid delay: ", "Startup was cancelled!!"};
     }
 
     static {

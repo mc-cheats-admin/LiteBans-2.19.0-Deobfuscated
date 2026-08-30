@@ -26,11 +26,7 @@ import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.cm
- */
-public static final class cm_0
+public final class cm_0
 implements ec_0 {
     private final di_0 a;
     private static /* synthetic */ String[] b;
@@ -45,7 +41,7 @@ implements ec_0 {
     }
 
     public final VelocityPlugin a(@NotNull di_0 di_02) {
-        ew.b(di_02, b[0]);
+        ew.b(di_02, "");
         return (VelocityPlugin)di_02;
     }
 
@@ -217,7 +213,7 @@ implements ec_0 {
     }
 
     private static final void a() {
-        b = new String[]{hl.a("", 208475039)};
+        b = new String[]{""};
     }
 
     static {

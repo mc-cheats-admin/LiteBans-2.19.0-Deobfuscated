@@ -10,10 +10,7 @@ import litebans.io_0;
 import litebans.ka_0;
 import litebans.kf_0;
 
-/*
- * Renamed from litebans.V
- */
-public static abstract class v_0 {
+public abstract class v_0 {
     v_0 a;
     private ka_0 g = new ka_0();
     private String h;
@@ -287,7 +284,7 @@ public static abstract class v_0 {
     }
 
     public String toString() {
-        return e[0] + this.b() + e[1] + this.s() + e[2] + this.v() + e[3] + this.f() + e[4] + this.h() + e[5] + this.w() + e[6];
+        return "BaseComponent(style=" + this.b() + ", insertion=" + this.s() + ", extra=" + this.v() + ", clickEvent=" + this.f() + ", hoverEvent=" + this.h() + ", reset=" + this.w() + ")";
     }
 
     public boolean equals(Object object) {
@@ -371,7 +368,7 @@ public static abstract class v_0 {
     }
 
     private static final void c() {
-        e = new String[]{hl.a("\ude0d\ude2e\ude3c\ude2a\ude0c\ude20\ude22\ude3f\ude20\ude21\ude2a\ude21\ude3b\ude67\ude3c\ude3b\ude36\ude23\ude2a\ude72", 1266212431), hl.a("\u870f\u8703\u874a\u874d\u8750\u8746\u8751\u8757\u874a\u874c\u874d\u871e", 884246307), hl.a("\u8c33\u8c3f\u8c7a\u8c67\u8c6b\u8c6d\u8c7e\u8c22", -1515025377), hl.a("\ufc9d\ufc91\ufcd2\ufcdd\ufcd8\ufcd2\ufcda\ufcf4\ufcc7\ufcd4\ufcdf\ufcc5\ufc8c", -1692009295), hl.a("\u5b4b\u5b47\u5b0f\u5b08\u5b11\u5b02\u5b15\u5b22\u5b11\u5b02\u5b09\u5b13\u5b5a", 256138087), hl.a("\u0672\u067e\u062c\u063b\u062d\u063b\u062a\u0663", -593099170), hl.a("\ub9c6", -1018643985)};
+        e = new String[]{"BaseComponent(style=", ", insertion=", ", extra=", ", clickEvent=", ", hoverEvent=", ", reset=", ")"};
     }
 
     static {

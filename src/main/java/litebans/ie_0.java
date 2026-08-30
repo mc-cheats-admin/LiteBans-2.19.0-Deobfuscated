@@ -9,10 +9,7 @@ import java.util.List;
 import java.util.Map;
 import litebans.hl;
 
-/*
- * Renamed from litebans.iE
- */
-public static final class ie_0 {
+public final class ie_0 {
     private static final char a = (char)46;
     final Map d = new LinkedHashMap();
     private final ie_0 b;
@@ -30,7 +27,7 @@ public static final class ie_0 {
         this.b = ie_02;
         for (Map.Entry entry : map.entrySet()) {
             String string;
-            String string2 = string = entry.getKey() == null ? c[0] : entry.getKey().toString();
+            String string2 = string = entry.getKey() == null ? "null" : entry.getKey().toString();
             if (entry.getValue() instanceof Map) {
                 this.d.put(string, new ie_0((Map)entry.getValue(), ie_02 == null ? null : ie_02.b(string)));
                 continue;
@@ -132,7 +129,7 @@ public static final class ie_0 {
 
     public String i(String string) {
         Object object = this.g(string);
-        return this.a(string, object instanceof String ? (String)object : c[1]);
+        return this.a(string, object instanceof String ? (String)object : "");
     }
 
     public String a(String string, String string2) {
@@ -161,7 +158,7 @@ public static final class ie_0 {
     }
 
     private static final void a() {
-        c = new String[]{hl.a("\u45c3\u45d8\u45c1\u45c1", 1269712301), hl.a("", 1669303078)};
+        c = new String[]{"null", ""};
     }
 
     static {

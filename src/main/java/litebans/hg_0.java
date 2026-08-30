@@ -2,10 +2,7 @@ package litebans;
 
 import litebans.hc_0;
 
-/*
- * Renamed from litebans.hg
- */
-public static class hg_0
+public class hg_0
 extends hc_0 {
     private static final long c = 1L;
     private final String b;

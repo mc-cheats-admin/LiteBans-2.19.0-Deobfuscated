@@ -10,7 +10,7 @@ import litebans.x;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class h6 {
+public final class h6 {
     private h6() {
     }
 

@@ -8,14 +8,14 @@ import litebans.hl;
 import litebans.jJ;
 import litebans.jR;
 
-public static final class hk
+public final class hk
 extends hc {
     final /* synthetic */ dy_0 n;
     private static /* synthetic */ String[] m;
 
     hk(gZ gZ2, boolean bl, int n, dy_0 dy_02, String string, jR jR2, jJ jJ2) {
         this.n = dy_02;
-        super(gZ2, string, jR2, bl, jJ2, m[0], false, n, null, 320, null);
+        super(gZ2, string, jR2, bl, jJ2, "time", false, n, null, 320, null);
     }
 
     @Override
@@ -24,7 +24,7 @@ extends hc {
     }
 
     private static final void a() {
-        m = new String[]{hl.a("\u807c\u8061\u8065\u806d", 540442632)};
+        m = new String[]{"time"};
     }
 
     static {

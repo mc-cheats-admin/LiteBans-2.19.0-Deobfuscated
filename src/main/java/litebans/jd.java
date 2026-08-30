@@ -8,7 +8,7 @@ import java.sql.Wrapper;
 import litebans.c2;
 import litebans.j6;
 
-public static final class jd
+public final class jd
 extends j6
 implements Wrapper,
 DatabaseMetaData {

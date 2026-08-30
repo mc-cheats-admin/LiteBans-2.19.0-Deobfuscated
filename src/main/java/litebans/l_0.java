@@ -8,12 +8,8 @@ import litebans.j_0;
 import litebans.jv_0;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.L
- */
 @ai_0(a=1)
-public static class l_0
+public class l_0
 extends j_0 {
     public l_0(di_0 di_02) {
         super(di_02);

@@ -15,11 +15,7 @@ import net.minecraft.class_3222;
 import net.minecraft.class_7471;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.cY
- */
-public static final class cy_0
+public final class cy_0
 implements bk_0 {
     private final di_0 a;
     private final p b;

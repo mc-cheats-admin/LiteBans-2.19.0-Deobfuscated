@@ -23,7 +23,7 @@ import litebans.gk;
 import litebans.ja;
 import litebans.kJ;
 
-public static final class c6
+public final class c6
 extends c2
 implements Wrapper,
 AutoCloseable,

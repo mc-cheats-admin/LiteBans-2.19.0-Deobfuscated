@@ -8,11 +8,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-/*
- * Renamed from litebans.B
- */
 @ai_0(a=0)
-public static abstract class b_0
+public abstract class b_0
 extends a_0
 implements CommandExecutor {
     public b_0(di_0 di_02) {

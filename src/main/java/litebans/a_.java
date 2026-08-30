@@ -13,7 +13,7 @@ import litebans.kL;
 import litebans.kd;
 import litebans.x_0;
 
-public static final class a_
+public final class a_
 extends Enum
 implements CharSequence {
     public static final dh l;
@@ -137,13 +137,13 @@ implements CharSequence {
 
     static {
         a_.b();
-        h = new a_(i[11], 0, null, kL.k, 1, null);
-        j = new a_(i[12], 1, null, kL.m, 1, null);
-        c = new a_(i[13], 2, null, kL.b, 1, null);
-        g = new a_(i[14], 3, null, kL.j, 1, null);
-        d = new a_(i[15], 4, h, null, 2, null);
-        n = new a_(i[16], 5, j, null, 2, null);
-        e = new a_(i[17], 6, c, null, 2, null);
+        h = new a_("BAN", 0, null, kL.k, 1, null);
+        j = new a_("MUTE", 1, null, kL.m, 1, null);
+        c = new a_("WARN", 2, null, kL.b, 1, null);
+        g = new a_("KICK", 3, null, kL.j, 1, null);
+        d = new a_("UNBAN", 4, h, null, 2, null);
+        n = new a_("UNMUTE", 5, j, null, 2, null);
+        e = new a_("UNWARN", 6, c, null, 2, null);
         k = a_Array = new a_[]{a_.h, a_.j, a_.c, a_.g, a_.d, a_.n, a_.e};
         a = iC.a(k);
         l = new dh(null);
@@ -164,7 +164,7 @@ implements CharSequence {
     }
 
     private static final void b() {
-        i = new String[]{hl.a("\u276d\u2776", 1978738456), hl.a("\u3c10\u3c01\u3c09\u3c14\u3c3b", 1667972196), hl.a("\ud59a\ud58b\ud583\ud59e\ud5b1\ud587\ud59e", -576530962), hl.a("\u4882\u489b", -1766635285), hl.a("\u57d4\u57cf", 2010404769), hl.a("\uebc2\uebd9", -1979061321), hl.a("\u0e76\u0e67\u0e6f\u0e72\u0e5d", 254807554), hl.a("\u9b8b\u9b9a\u9b92\u9b8f\u9ba0\u9b96\u9b8f", -1345938433), hl.a("\u4c7b\u4c62", 1356221458), hl.a("\u00d7\u00cc", 1969356962), hl.a("\u6ad6\u6acc\u6ac9\u6ac0\u6acb\u6ad1\u6afa", -1430558043), hl.a("\u5516\u5515\u551a", -983280300), hl.a("\u2021\u2039\u2038\u2029", 2028085356), hl.a("\u54a9\u54bf\u54ac\u54b0", -1950919426), hl.a("\u1304\u1306\u130c\u1304", -755625137), hl.a("\u0deb\u0df0\u0dfc\u0dff\u0df0", 366742974), hl.a("\u4267\u427c\u427f\u4267\u4266\u4277", -521584078), hl.a("\ub042\ub059\ub040\ub056\ub045\ub059", -172576745)};
+        i = new String[]{"un", "temp_", "temp_ip", "ip", "un", "un", "temp_", "temp_ip", "ip", "un", "silent_", "BAN", "MUTE", "WARN", "KICK", "UNBAN", "UNMUTE", "UNWARN"};
     }
 }
 

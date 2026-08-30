@@ -1,8 +1,5 @@
 package litebans;
 
-/*
- * Renamed from litebans.ck
- */
-public static interface ck_0 {
+public interface ck_0 {
 }
 

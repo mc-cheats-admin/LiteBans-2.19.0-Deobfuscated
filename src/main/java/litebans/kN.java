@@ -16,7 +16,7 @@ import litebans.hR;
 import litebans.iq;
 import litebans.kI;
 
-public static class kN
+public class kN
 implements AutoCloseable {
     private static final kI b = kI.a(kN.class);
     private final CopyOnWriteArrayList g;

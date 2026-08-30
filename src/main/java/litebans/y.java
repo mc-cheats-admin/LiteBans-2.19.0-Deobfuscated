@@ -40,7 +40,7 @@ import litebans.v_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class y
+public final class y
 extends n_0 {
     public static final ir_0 b;
     private static boolean c;
@@ -102,7 +102,7 @@ extends n_0 {
                         }
                         if (object2 != null) {
                             jv_02.a(ej2.c());
-                            jv_02.a(d[0] + ((i4)object2).a());
+                            jv_02.a("=> " + ((i4)object2).a());
                             return null;
                         }
                     }
@@ -127,11 +127,11 @@ extends n_0 {
                         }
                         break block14;
                     }
-                    throw new NoSuchElementException(d[1]);
+                    throw new NoSuchElementException("Array contains no element matching the ");
                 }
                 if (!((i4)object).b()) break block16;
                 object2 = jv_02;
-                String string2 = d[2];
+                String string2 = "litebans.json.hover_text";
                 n = 0;
                 if (!object2.e(string2)) break block15;
             }
@@ -215,8 +215,8 @@ extends n_0 {
         }
         String string9 = string2;
         String string10 = string3;
-        String string11 = ll.a((Iterable)object, d[3], null, null, 0, null, null, 62, null);
-        if (ew.a((Object)string2, (Object)d[4])) {
+        String string11 = ll.a((Iterable)object, " ", null, null, 0, null, null, 62, null);
+        if (ew.a((Object)string2, (Object)"url")) {
             Iterable<String> iterable3;
             iterable2 = arrayList;
             String string12 = string11;
@@ -245,7 +245,7 @@ extends n_0 {
         }
         boolean bl7 = bl2;
         boolean bl8 = bl3;
-        String string15 = ll.a(list, d[5], null, null, 0, null, null, 62, null);
+        String string15 = ll.a(list, " ", null, null, 0, null, null, 62, null);
         String string16 = string11;
         String string17 = string10;
         String string18 = string9;
@@ -266,11 +266,11 @@ extends n_0 {
         String string3 = b.a(string);
         String string4 = this.a(jv_02);
         String string5 = this.b(jv_02);
-        i4 i42 = y.a(this, string3, d[6], string4, null, 8, null);
-        i4 i43 = y.a(this, i42.c(), d[7], string5, null, 8, null);
-        i4 i44 = y.a(this, i43.c(), d[8], string5, null, 8, null);
-        i4 i45 = y.a(this, i44.c(), d[9], string5, null, 8, null);
-        i4 i46 = y.a(this, i45.c(), d[10], string5, null, 8, null);
+        i4 i42 = y.a(this, string3, "hoverText", string4, null, 8, null);
+        i4 i43 = y.a(this, i42.c(), "run", string5, null, 8, null);
+        i4 i44 = y.a(this, i43.c(), "url", string5, null, 8, null);
+        i4 i45 = y.a(this, i44.c(), "suggest", string5, null, 8, null);
+        i4 i46 = y.a(this, i45.c(), "copy", string5, null, 8, null);
         if (!(i42.b() || i43.b() || i44.b() || i45.b() || i46.b())) {
             return new ej(string3, null, new i4[0]);
         }
@@ -283,43 +283,43 @@ extends n_0 {
             objectArray = y.a(this, string2, jv_02, null, null, null, 28, null);
             bD2.add(objectArray);
             gr_03 = new gr_0();
-            ((Map)gr_03).put(d[11], d[12]);
-            ((Map)gr_03).put(d[13], bD2);
+            ((Map)gr_03).put("action", "show_text");
+            ((Map)gr_03).put("value", bD2);
             ++n;
         }
         if (i43.b()) {
             gr_02 = new gr_0();
-            ((Map)gr_02).put(d[14], d[15]);
+            ((Map)gr_02).put("action", "run_command");
             if (this.c(jv_02)) {
-                ((Map)gr_02).put(d[16], i43.a());
+                ((Map)gr_02).put("command", i43.a());
             } else {
-                ((Map)gr_02).put(d[17], i43.a());
+                ((Map)gr_02).put("value", i43.a());
             }
             ++n;
         }
         if (i45.b()) {
             gr_02 = new gr_0();
-            ((Map)gr_02).put(d[18], d[19]);
+            ((Map)gr_02).put("action", "suggest_command");
             if (this.c(jv_02)) {
-                ((Map)gr_02).put(d[20], i45.a());
+                ((Map)gr_02).put("command", i45.a());
             } else {
-                ((Map)gr_02).put(d[21], i45.a());
+                ((Map)gr_02).put("value", i45.a());
             }
             ++n;
         }
         if (i46.b()) {
             gr_02 = new gr_0();
-            ((Map)gr_02).put(d[22], d[23]);
-            ((Map)gr_02).put(d[24], i45.a());
+            ((Map)gr_02).put("action", "copy_to_clipboard");
+            ((Map)gr_02).put("value", i45.a());
             ++n;
         }
-        if (i44.b() && bz.b(i44.a(), d[25], false, 2, null)) {
+        if (i44.b() && bz.b(i44.a(), "https:", false, 2, null)) {
             gr_02 = new gr_0();
-            ((Map)gr_02).put(d[26], d[27]);
+            ((Map)gr_02).put("action", "open_url");
             if (this.c(jv_02)) {
-                ((Map)gr_02).put(d[28], i44.a());
+                ((Map)gr_02).put("url", i44.a());
             } else {
-                ((Map)gr_02).put(d[29], i44.a());
+                ((Map)gr_02).put("value", i44.a());
             }
             ++n;
         }
@@ -341,11 +341,11 @@ extends n_0 {
     }
 
     public final String b(@NotNull jv_0 jv_02) {
-        return this.c(jv_02) ? d[30] : d[31];
+        return this.c(jv_02) ? "click_event" : "clickEvent";
     }
 
     public final String a(@NotNull jv_0 jv_02) {
-        return this.c(jv_02) ? d[32] : d[33];
+        return this.c(jv_02) ? "hover_event" : "hoverEvent";
     }
 
     public final gr_0 a(@NotNull String string, @NotNull jv_0 jv_02, @Nullable gr_0 gr_02, @NotNull String string2, @Nullable gr_0 gr_03) {
@@ -359,10 +359,10 @@ extends n_0 {
                 int n2;
                 g8 g82 = g8.a;
                 if (this.a.t() == 1) {
-                    ew.b(jv_02, d[34]);
+                    ew.b(jv_02, "");
                     n2 = ((ea_0)jv_02).b();
                 } else if (this.a.t() == 2) {
-                    ew.b(jv_02, d[35]);
+                    ew.b(jv_02, "");
                     n2 = ((hz_0)jv_02).a();
                 } else {
                     n2 = n = !this.c(jv_02) ? 0 : 770;
@@ -373,11 +373,11 @@ extends n_0 {
                 Object object = er.a(string);
                 String string3 = e2.a(g82).a(Arrays.copyOf(object, ((v_0[])object).length));
                 object = new ip_0().a(string3);
-                ew.b(object, d[36]);
+                ew.b(object, "");
                 gr_04 = (gr_0)object;
                 if (!this.a(gr_02, gr_04, string2)) {
-                    Object v2 = gr_04.get(d[37]);
-                    if (ew.a(v2, (Object)d[38])) {
+                    Object v2 = gr_04.get("contents");
+                    if (ew.a(v2, (Object)"null")) {
                         String[] stringArray;
                         String[] stringArray2;
                         y y2 = this;
@@ -386,21 +386,21 @@ extends n_0 {
                         q_0 q_02 = (q_0)y2.a.a(q_0.class);
                         ew.a(q_02);
                         et et2 = fB.d;
-                        Object v3 = gr_05.get(d[39]);
-                        ew.b(v3, d[40]);
+                        Object v3 = gr_05.get("contents");
+                        ew.b(v3, "");
                         String string4 = (String)v3;
                         boolean bl4 = false;
-                        if (ew.a((Object)string4, (Object)d[41])) {
-                            String[] stringArray3 = new String[]{d[42]};
+                        if (ew.a((Object)string4, (Object)"sort")) {
+                            String[] stringArray3 = new String[]{"00"};
                             stringArray2 = stringArray3;
                         } else {
-                            String[] stringArray4 = new String[]{d[43] + string4};
+                            String[] stringArray4 = new String[]{"01:" + string4};
                             stringArray2 = stringArray4;
                         }
                         if (new l6(q_02, Arrays.copyOf(stringArray = stringArray2, stringArray.length)).b() == q_02.hashCode()) {
                             throw new IllegalArgumentException(gr_05.toString());
                         }
-                    } else if (ew.a(v2, (Object)d[44]) || ew.a(v2, (Object)d[45])) {
+                    } else if (ew.a(v2, (Object)"true") || ew.a(v2, (Object)"false")) {
                         this.a(gr_04, jv_02);
                     }
                 }
@@ -411,7 +411,7 @@ extends n_0 {
                 }
                 gr_04 = gr_06;
                 if (bl) {
-                    ((Map)gr_04).put(d[46], string);
+                    ((Map)gr_04).put("text", string);
                 }
                 if (gr_02 != null) {
                     ((Map)gr_04).put(string2, gr_02);
@@ -419,7 +419,7 @@ extends n_0 {
             }
         }
         catch (Exception exception) {
-            throw new RuntimeException(d[47] + gr_04 + d[48] + var7_7, exception);
+            throw new RuntimeException("Failed to build JSON: \"" + gr_04 + "\"; last result: " + var7_7, exception);
         }
         return gr_04;
     }
@@ -429,7 +429,7 @@ extends n_0 {
             gr_02 = null;
         }
         if ((n & 8) != 0) {
-            string2 = d[49];
+            string2 = "";
         }
         if ((n & 0x10) != 0) {
             gr_03 = null;
@@ -440,7 +440,7 @@ extends n_0 {
     private final boolean a(gr_0 gr_02, gr_0 gr_03, String string) {
         if (gr_02 != null) {
             ks_0 ks_02;
-            ks_0 ks_03 = ks_02 = (ks_0)gr_03.get(d[50]);
+            ks_0 ks_03 = ks_02 = (ks_0)gr_03.get("extra");
             if (ks_03 != null) {
                 Iterable iterable = ks_03;
                 boolean bl = false;
@@ -472,14 +472,14 @@ extends n_0 {
             Object object;
             Object object2;
             Object object3;
-            if (!ew.a(gr_02.get(d[51]), (Object)d[52])) {
+            if (!ew.a(gr_02.get("text"), (Object)"")) {
                 object3 = gr_02;
-                object2 = d[53];
-                i4 i42 = y.a(this, (String)gr_02.get(d[54]), null, 2, null);
+                object2 = "text";
+                i4 i42 = y.a(this, (String)gr_02.get("text"), null, 2, null);
                 String string = i42 != null ? i42.c() : null;
                 object3.put(object2, string);
             }
-            object3 = (ks_0)gr_02.get(d[55]);
+            object3 = (ks_0)gr_02.get("extra");
             object2 = null;
             Object object4 = object3;
             if (object4 == null) break block6;
@@ -500,11 +500,11 @@ extends n_0 {
                 String string;
                 gr_0 gr_03 = (gr_0)((Object)collection2);
                 boolean bl3 = false;
-                object2 = object = this.a((String)gr_03.get(d[56]), (i4)object2);
+                object2 = object = this.a((String)gr_03.get("text"), (i4)object2);
                 Object t2 = object;
-                ((Map)gr_03).put(d[57], t2 != null ? ((i4)t2).c() : null);
-                String string2 = d[58];
-                String string3 = d[59];
+                ((Map)gr_03).put("text", t2 != null ? ((i4)t2).c() : null);
+                String string2 = "click_event";
+                String string3 = "clickEvent";
                 if (!this.c(jv_02)) {
                     string = string2;
                     string2 = string3;
@@ -513,8 +513,8 @@ extends n_0 {
                 if (gr_03.containsKey(string2) && gr_03.containsKey(string3)) {
                     gr_03.remove(string3);
                 }
-                string2 = d[60];
-                string3 = d[61];
+                string2 = "hover_event";
+                string3 = "hoverEvent";
                 if (!this.c(jv_02)) {
                     string = string2;
                     string2 = string3;
@@ -531,11 +531,11 @@ extends n_0 {
         if (string == null) {
             return null;
         }
-        i4 i43 = this.a(string, d[62], d[63], i42);
-        i4 i44 = this.a(i43.c(), d[64], d[65], i42);
-        i4 i45 = this.a(i44.c(), d[66], d[67], i42);
-        i4 i46 = this.a(i45.c(), d[68], d[69], i42);
-        i4 i47 = this.a(i46.c(), d[70], d[71], i42);
+        i4 i43 = this.a(string, "hoverText", "", i42);
+        i4 i44 = this.a(i43.c(), "run", "", i42);
+        i4 i45 = this.a(i44.c(), "url", "", i42);
+        i4 i46 = this.a(i45.c(), "suggest", "", i42);
+        i4 i47 = this.a(i46.c(), "copy", "", i42);
         if (i47.b() || i47.d()) {
             return i47;
         }
@@ -568,11 +568,11 @@ extends n_0 {
         }
         de_0 de_02 = er_0.a(de_0.c, this.a.i().b(), null, 2, null);
         if (this.a.t() == 1) {
-            ew.b(jv_02, d[84]);
+            ew.b(jv_02, "");
             return ((ea_0)jv_02).b() >= 770;
         }
         if (this.a.t() == 2) {
-            ew.b(jv_02, d[85]);
+            ew.b(jv_02, "");
             return ((hz_0)jv_02).a() >= 770;
         }
         return de_02.a(1, 21, 5);
@@ -586,7 +586,7 @@ extends n_0 {
     }
 
     private static final void d() {
-        d = new String[]{hl.a("\uee92\uee91\uee8f", 1008463535), hl.a("\u5b1f\u5b2c\u5b2c\u5b3f\u5b27\u5b7e\u5b3d\u5b31\u5b30\u5b2a\u5b3f\u5b37\u5b30\u5b2d\u5b7e\u5b30\u5b31\u5b7e\u5b3b\u5b32\u5b3b\u5b33\u5b3b\u5b30\u5b2a\u5b7e\u5b33\u5b3f\u5b2a\u5b3d\u5b36\u5b37\u5b30\u5b39\u5b7e\u5b2a\u5b36\u5b3b\u5b7e\u5b2e\u5b2c\u5b3b\u5b3a\u5b37\u5b3d\u5b3f\u5b2a\u5b3b\u5b70", -880977058), hl.a("\u34dc\u34d9\u34c4\u34d5\u34d2\u34d1\u34de\u34c3\u349e\u34da\u34c3\u34df\u34de\u349e\u34d8\u34df\u34c6\u34d5\u34c2\u34ef\u34c4\u34d5\u34c8\u34c4", -197774160), hl.a("\ua49b", 1363518651), hl.a("\ua80a\ua80d\ua813", 541304959), hl.a("\ud7ae", -898902130), hl.a("\u2691\u2696\u268f\u269c\u268b\u26ad\u269c\u2681\u268d", -877517063), hl.a("\u322e\u3229\u3232", -1551551908), hl.a("\udc6d\udc6a\udc74", 2144001048), hl.a("\uae9d\uae9b\uae89\uae89\uae8b\uae9d\uae9a", -1977045266), hl.a("\u5c0c\u5c00\u5c1f\u5c16", -763863953), hl.a("\u0dca\u0dc8\u0ddf\u0dc2\u0dc4\u0dc5", -1045492309), hl.a("\u4e62\u4e79\u4e7e\u4e66\u4e4e\u4e65\u4e74\u4e69\u4e65", -1820176879), hl.a("\u285c\u284b\u2846\u285f\u284f", -1907546070), hl.a("\u621b\u6219\u620e\u6213\u6215\u6214", 929784442), hl.a("\ua1ab\ua1ac\ua1b7\ua186\ua1ba\ua1b6\ua1b4\ua1b4\ua1b8\ua1b7\ua1bd", -1619942951), hl.a("\u10a3\u10af\u10ad\u10ad\u10a1\u10ae\u10a4", -1855582016), hl.a("\u59f3\u59e4\u59e9\u59f0\u59e0", -1521526395), hl.a("\ud89a\ud898\ud88f\ud892\ud894\ud895", 911988987), hl.a("\u40f2\u40f4\u40e6\u40e6\u40e4\u40f2\u40f5\u40de\u40e2\u40ee\u40ec\u40ec\u40e0\u40ef\u40e5", -671334271), hl.a("\u13bd\u13b1\u13b3\u13b3\u13bf\u13b0\u13ba", 954405854), hl.a("\uabb8\uabaf\uaba2\uabbb\uabab", 1775152078), hl.a("\u2c32\u2c30\u2c27\u2c3a\u2c3c\u2c3d", -1460261805), hl.a("\u09e9\u09e5\u09fa\u09f3\u09d5\u09fe\u09e5\u09d5\u09e9\u09e6\u09e3\u09fa\u09e8\u09e5\u09eb\u09f8\u09ee", 1852443018), hl.a("\u9894\u9883\u988e\u9897\u9887", -1278699294), hl.a("\ub73c\ub720\ub720\ub724\ub727\ub76e", -347359404), hl.a("\u1763\u1761\u1776\u176b\u176d\u176c", 422713090), hl.a("\u08c9\u08d6\u08c3\u08c8\u08f9\u08d3\u08d4\u08ca", -1818294106), hl.a("\uba2b\uba2c\uba32", -137053602), hl.a("\ue46d\ue47a\ue477\ue46e\ue47e", -1010768869), hl.a("\u11af\u11a0\u11a5\u11af\u11a7\u1193\u11a9\u11ba\u11a9\u11a2\u11b8", -1048243764), hl.a("\u764f\u7640\u7645\u764f\u7647\u7669\u765a\u7649\u7642\u7658", 1174500908), hl.a("\u8b73\u8b74\u8b6d\u8b7e\u8b69\u8b44\u8b7e\u8b6d\u8b7e\u8b75\u8b6f", -1675064549), hl.a("\u2aac\u2aab\u2ab2\u2aa1\u2ab6\u2a81\u2ab2\u2aa1\u2aaa\u2ab0", 1342712516), hl.a("", -2035709694), hl.a("", 303475153), hl.a("", 808402595), hl.a("\u9a92\u9a9e\u9a9f\u9a85\u9a94\u9a9f\u9a85\u9a82", -708928783), hl.a("\uba2e\uba35\uba2c\uba2c", -1589396928), hl.a("\u381f\u3813\u3812\u3808\u3819\u3812\u3808\u380f", 967522428), hl.a("", -1753751477), hl.a("\ua8da\ua8c6\ua8db\ua8dd", -992499543), hl.a("\ud2ad\ud2ad", 1112593053), hl.a("\ua031\ua030\ua03b", -579166207), hl.a("\u2672\u2674\u2673\u2663", -345496058), hl.a("\u3995\u3992\u399f\u3980\u3996", -1297008141), hl.a("\u6e96\u6e87\u6e9a\u6e96", -2122420510), hl.a("\u1cff\u1cd8\u1cd0\u1cd5\u1cdc\u1cdd\u1c99\u1ccd\u1cd6\u1c99\u1cdb\u1ccc\u1cd0\u1cd5\u1cdd\u1c99\u1cf3\u1cea\u1cf6\u1cf7\u1c83\u1c99\u1c9b", -122348359), hl.a("\ua31b\ua302\ua319\ua355\ua358\ua34a\ua34d\ua319\ua34b\ua35c\ua34a\ua34c\ua355\ua34d\ua303\ua319", -667835591), hl.a("", 641681933), hl.a("\uc5cb\uc5d6\uc5da\uc5dc\uc5cf", 858310062), hl.a("\u8079\u8068\u8075\u8079", 705396749), hl.a("", -2141841711), hl.a("\u3c4f\u3c5e\u3c43\u3c4f", -761512901), hl.a("\u0355\u0344\u0359\u0355", 1615135521), hl.a("\u648d\u6490\u649c\u649a\u6489", -2114624280), hl.a("\u5d46\u5d57\u5d4a\u5d46", 1262640434), hl.a("\u9ede\u9ecf\u9ed2\u9ede", 1348771498), hl.a("\uc990\uc99f\uc99a\uc990\uc998\uc9ac\uc996\uc985\uc996\uc99d\uc987", 1623706099), hl.a("\u3019\u3016\u3013\u3019\u3011\u303f\u300c\u301f\u3014\u300e", 449392762), hl.a("\ue103\ue104\ue11d\ue10e\ue119\ue134\ue10e\ue11d\ue10e\ue105\ue11f", -516497045), hl.a("\u19a9\u19ae\u19b7\u19a4\u19b3\u1984\u19b7\u19a4\u19af\u19b5", 1348278721), hl.a("\u167a\u167d\u1664\u1677\u1660\u1646\u1677\u166a\u1666", -1230891502), hl.a("", -1720551667), hl.a("\u4695\u4692\u4689", -1763555609), hl.a("", -1055036596), hl.a("\uf3b5\uf3b2\uf3ac", -1503071296), hl.a("", 957282484), hl.a("\ud54f\ud549\ud55b\ud55b\ud559\ud54f\ud548", -1245588164), hl.a("", 1378193787), hl.a("\u15cb\u15c7\u15d8\u15d1", 1794184616), hl.a("", -1057512241), hl.a("\u30e2\u30ee\u30ef\u30f5\u30e4\u30ef\u30f5\u30f2", 603271297), hl.a("", 733171834), hl.a("\u1dd7\u1dcb\u1dd6\u1dd0", -764863068), hl.a("\u10c4\u10c4", 1521422580), hl.a("\uca68\uca69\uca62", -1617442216), hl.a("\u8853\u8846\u8855\u8840\u8842\u8853\u8809", 1350010919), hl.a("\u8cb5\u8ca8\u8cb5\u8cb3\u8ca5\u8ca4\u8cbf\u8ca2\u8cfe", 860654800), hl.a("\uc031\uc027\uc02c\uc026\uc027\uc030\uc06c", 532660290), hl.a("\u73b1\u73bc\u73a6\u73a5\u73b9\u73b4\u73ac\u73f8\u73bb\u73b4\u73b8\u73b0", -853576747), hl.a("\ud30d\ud314", -1030565020), hl.a("\uf173\uf17c\uf170\uf178", -1841630947), hl.a("\u6d74\u6d74\u6d68\u6d65", 1612934401), hl.a("", -2053995597), hl.a("", -665702872)};
+        d = new String[]{"=> ", "Array contains no element matching the ", "litebans.json.hover_text", " ", "url", " ", "hoverText", "run", "url", "suggest", "copy", "action", "show_text", "value", "action", "run_command", "command", "value", "action", "suggest_command", "command", "value", "action", "copy_to_clipboard", "value", "https:", "action", "open_url", "url", "value", "click_event", "clickEvent", "hover_event", "hoverEvent", "", "", "", "contents", "null", "contents", "", "sort", "00", "01:", "true", "false", "text", "Failed to build JSON: \"", "\"; last result: ", "", "extra", "text", "", "text", "text", "extra", "text", "text", "click_event", "clickEvent", "hover_event", "hoverEvent", "hoverText", "", "run", "", "url", "", "suggest", "", "copy", "", "contents", "", "sort", "00", "01:", "", "", "", "display-name", "ip", "name", "uuid", "", ""};
     }
 }
 

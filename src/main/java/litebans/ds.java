@@ -24,7 +24,7 @@ import litebans.w;
 import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 
-public static final class ds
+public final class ds
 extends PacketAdapter {
     public static final kc b;
     private final di_0 i;
@@ -39,7 +39,7 @@ extends PacketAdapter {
     public ds(@NotNull di_0 di_02) {
         PacketType[] packetTypeArray;
         ec_0 ec_02 = di_02.i();
-        ew.b(ec_02, h[0]);
+        ew.b(ec_02, "");
         kc kc2 = b;
         Object[] objectArray = new Object[]{kc.b(b), kc.a(b)};
         Plugin plugin = ao_0.a((ao_0)ec_02, null, 1, null);
@@ -82,7 +82,7 @@ extends PacketAdapter {
         if (packetEvent.isCancelled() || al_0.a(packetEvent.getPlayer()) || al_0.c(packetEvent.getPlayer()) >= 759 && !ew.a((Object)packetType, kc.a(b))) {
             return;
         }
-        String string = (ew.a((Object)packetType, kc.a(b)) ? h[1] : h[2]) + this.a(packetEvent);
+        String string = (ew.a((Object)packetType, kc.a(b)) ? "/" : "") + this.a(packetEvent);
         boolean bl = kc.a(b) != null && !ew.a((Object)packetType, kc.a(b));
         this.f.a().a((Object)packetEvent, string, this.i.a(packetEvent.getPlayer()), bl);
     }
@@ -90,7 +90,7 @@ extends PacketAdapter {
     public final String a(@NotNull PacketEvent packetEvent) {
         String string = (String)packetEvent.getPacket().getStrings().readSafely(0);
         if (string == null) {
-            string = h[3];
+            string = "";
         }
         return string;
     }
@@ -133,7 +133,7 @@ extends PacketAdapter {
     }
 
     private static final void d() {
-        h = new String[]{hl.a("", -1757714363), hl.a("\u520b", 1105941028), hl.a("", -1166116274), hl.a("", 929721943)};
+        h = new String[]{"", "/", "", ""};
     }
 }
 

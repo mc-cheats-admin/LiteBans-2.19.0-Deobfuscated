@@ -21,18 +21,12 @@ import litebans.y;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.bc
- */
-public static final class bc_0 {
+public final class bc_0 {
     private static /* synthetic */ String[] a;
 
     private bc_0() {
     }
 
-    /*
-     * Unable to fully structure code
-     */
     public final void a(@NotNull ch var1_1, @NotNull cz var2_2, @NotNull String var3_3) {
         if (((CharSequence)var3_3).length() == 0) {
             return;
@@ -43,17 +37,17 @@ public static final class bc_0 {
         v0 = var4_4.q();
         ew.a(v0);
         var7_7 = v0;
-        v1 = am.b(bc_0.a[0] + var4_4.u() + bc_0.a[1]);
+        v1 = am.b("WEB_" + var4_4.u() + "_TITLE");
         if (v1 == null) {
-            v1 = bc_0.a[2];
+            v1 = "";
         }
         var8_8 = v1;
-        var9_9 = am.b(bc_0.a[3] + var4_4.u() + bc_0.a[4]);
-        var10_10 = i3.j.a(var1_1, am.b(bc_0.a[5] + var4_4.u() + bc_0.a[6]));
-        v2 = var11_11 = am.b(bc_0.a[7] + var4_4.u() + bc_0.a[8]);
+        var9_9 = am.b("WEB_" + var4_4.u() + "_CONTENT");
+        var10_10 = i3.j.a(var1_1, am.b("WEB_" + var4_4.u() + "_COLOR"));
+        v2 = var11_11 = am.b("WEB_" + var4_4.u() + "_THUMB");
         if (v2 != null ? bz.b((CharSequence)v2) : false) ** GOTO lbl-1000
         v3 = var11_11;
-        v4 = v3 != null ? !bz.b(v3, bc_0.a[9], false, 2, null) : false;
+        v4 = v3 != null ? !bz.b(v3, "https://", false, 2, null) : false;
         if (v4) lbl-1000:
         // 2 sources
 
@@ -63,8 +57,8 @@ public static final class bc_0 {
             v5 = var11_11;
             v6 = var11_11 = v5 != null && (v5 = var1_1.a(v5, var4_4.H(), var4_4.d(), false)) != null && (v5 = var1_1.a(v5, var7_7, var4_4.t(), false)) != null ? v5.toString() : null;
         }
-        if ((v7 = am.b(bc_0.a[10] + var4_4.u() + bc_0.a[11])) == null) {
-            v7 = bc_0.a[12];
+        if ((v7 = am.b("WEB_" + var4_4.u() + "_FIELDS")) == null) {
+            v7 = "";
         }
         var12_12 = v7;
         var13_13 = i3.j.a(var1_1, var12_12, var4_4);
@@ -72,7 +66,7 @@ public static final class bc_0 {
         var14_14 = var9_9;
         ew.a((Object)var14_14);
         var9_9 = var1_1.a(var1_1.a((CharSequence)var14_14, var4_4.H(), var4_4.d(), false), var7_7, var4_4.t(), false).toString();
-        i3.j.a(var1_1, var6_6, var8_8, var9_9, var10_10, var11_11, var13_13, bz.a((CharSequence)var12_12, (CharSequence)bc_0.a[13], false, 2, null) == false);
+        i3.j.a(var1_1, var6_6, var8_8, var9_9, var10_10, var11_11, var13_13, bz.a((CharSequence)var12_12, (CharSequence)"\n\n", false, 2, null) == false);
     }
 
     private final jT[] a(ch ch2, String string, cz cz2) {
@@ -90,8 +84,8 @@ public static final class bc_0 {
         String string2 = bc_02.a(charSequence);
         List list = null;
         ew.a((Object)string2);
-        if (bz.a((CharSequence)string2, (CharSequence)a[14], false, 2, null)) {
-            object = new String[]{a[15]};
+        if (bz.a((CharSequence)string2, (CharSequence)"\n\n", false, 2, null)) {
+            object = new String[]{"\n\n"};
             list = bz.a((CharSequence)string2, (String[])object, false, 0, 6, null);
         } else {
             object = new char[1];
@@ -136,7 +130,7 @@ public static final class bc_0 {
             n = ((Number)Integer.valueOf(bz.b(((Object)charSequence).toString(), '#', null, 2, null), 16)).intValue();
         }
         catch (NumberFormatException numberFormatException) {
-            ch2.e().getLogger().warning(a[18]);
+            ch2.e().getLogger().warning("Invalid color format in embed configuration, ");
         }
         return n;
     }
@@ -171,9 +165,9 @@ public static final class bc_0 {
         }
         catch (Exception exception) {
             if (exception instanceof IllegalArgumentException || exception instanceof MalformedURLException) {
-                ch2.e().getLogger().warning(a[19] + i32.d() + a[20] + exception.getLocalizedMessage());
+                ch2.e().getLogger().warning("Unable to post Discord message to invalid URL: '" + i32.d() + "': " + exception.getLocalizedMessage());
             }
-            ch2.e().getLogger().warning(a[21] + i32.b());
+            ch2.e().getLogger().warning("Attempted to post Discord message but encountered an exception!\nJSON data:" + i32.b());
             ch2.d().a(exception);
         }
     }
@@ -183,7 +177,7 @@ public static final class bc_0 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\uaa44\uaa56\uaa51\uaa4c", 1542892051), hl.a("\u173a\u1731\u172c\u1731\u1729\u1720", 1919948645), hl.a("", -870311946), hl.a("\ua8f2\ua8e0\ua8e7\ua8fa", -299194203), hl.a("\u9c70\u9c6c\u9c60\u9c61\u9c7b\u9c6a\u9c61\u9c7b", -307389393), hl.a("\ub99d\ub98f\ub988\ub995", -1396917814), hl.a("\uea49\uea55\uea59\uea5a\uea59\uea44", -1141970410), hl.a("\u0885\u0897\u0890\u088d", 1429801170), hl.a("\u5f6c\u5f67\u5f7b\u5f66\u5f7e\u5f71", 374759219), hl.a("\u9a89\u9a95\u9a95\u9a91\u9a92\u9adb\u9ace\u9ace", -481256735), hl.a("\u18f6\u18e4\u18e3\u18fe", 2106136737), hl.a("\ufa63\ufa7a\ufa75\ufa79\ufa70\ufa78\ufa6f", 1080097340), hl.a("", 13023714), hl.a("\ucfc0\ucfc0", -1156460598), hl.a("\ud780\ud780", -553068662), hl.a("\u116e\u116e", -1938026140), hl.a("\u601a\u601a", -1347985392), hl.a("\u95b5\u95b5", -983525953), hl.a("\ue91d\ue93a\ue922\ue935\ue938\ue93d\ue930\ue974\ue937\ue93b\ue938\ue93b\ue926\ue974\ue932\ue93b\ue926\ue939\ue935\ue920\ue974\ue93d\ue93a\ue974\ue931\ue939\ue936\ue931\ue930\ue974\ue937\ue93b\ue93a\ue932\ue93d\ue933\ue921\ue926\ue935\ue920\ue93d\ue93b\ue93a\ue978\ue974\ue93d\ue933\ue93a\ue93b\ue926\ue93d\ue93a\ue933\ue97a", 1101850964), hl.a("\uf129\uf112\uf11d\uf11e\uf110\uf119\uf15c\uf108\uf113\uf15c\uf10c\uf113\uf10f\uf108\uf15c\uf138\uf115\uf10f\uf11f\uf113\uf10e\uf118\uf15c\uf111\uf119\uf10f\uf10f\uf11d\uf11b\uf119\uf15c\uf108\uf113\uf15c\uf115\uf112\uf10a\uf11d\uf110\uf115\uf118\uf15c\uf129\uf12e\uf130\uf146\uf15c\uf15b", -2047938180), hl.a("\u5b19\u5b04\u5b1e", 561470270), hl.a("\uf3e2\uf3d7\uf3d7\uf3c6\uf3ce\uf3d3\uf3d7\uf3c6\uf3c7\uf383\uf3d7\uf3cc\uf383\uf3d3\uf3cc\uf3d0\uf3d7\uf383\uf3e7\uf3ca\uf3d0\uf3c0\uf3cc\uf3d1\uf3c7\uf383\uf3ce\uf3c6\uf3d0\uf3d0\uf3c2\uf3c4\uf3c6\uf383\uf3c1\uf3d6\uf3d7\uf383\uf3c6\uf3cd\uf3c0\uf3cc\uf3d6\uf3cd\uf3d7\uf3c6\uf3d1\uf3c6\uf3c7\uf383\uf3c2\uf3cd\uf383\uf3c6\uf3db\uf3c0\uf3c6\uf3d3\uf3d7\uf3ca\uf3cc\uf3cd\uf382\uf3a9\uf3e9\uf3f0\uf3ec\uf3ed\uf383\uf3c7\uf3c2\uf3d7\uf3c2\uf399", 551416739)};
+        a = new String[]{"WEB_", "_TITLE", "", "WEB_", "_CONTENT", "WEB_", "_COLOR", "WEB_", "_THUMB", "https://", "WEB_", "_FIELDS", "", "\n\n", "\n\n", "\n\n", "\n\n", "\n\n", "Invalid color format in embed configuration, ", "Unable to post Discord message to invalid URL: '", "': ", "Attempted to post Discord message but encountered an exception!\nJSON data:"};
     }
 
     static {

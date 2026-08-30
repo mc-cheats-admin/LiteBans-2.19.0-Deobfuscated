@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
 @Mixin(value={class_3248.class})
-public static interface AccessLoginData_1_20 {
+public interface AccessLoginData_1_20 {
     @Accessor(value="field_14160")
     public GameProfile getProfile();
 

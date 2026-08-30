@@ -1,8 +1,5 @@
 package litebans;
 
-/*
- * Renamed from litebans.gM
- */
-public static interface gm_0 {
+public interface gm_0 {
 }
 

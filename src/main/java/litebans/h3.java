@@ -28,10 +28,7 @@ import litebans.w;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class h3
+public final class h3
 implements ch {
     private final di_0 a;
 

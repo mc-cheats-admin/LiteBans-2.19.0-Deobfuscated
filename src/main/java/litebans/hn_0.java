@@ -5,10 +5,7 @@ import litebans.en_0;
 import litebans.ew_0;
 import litebans.i2;
 
-/*
- * Renamed from litebans.hn
- */
-public static final class hn_0
+public final class hn_0
 implements en_0 {
     private static final i2 b = new i2(44225);
     private byte[] d;

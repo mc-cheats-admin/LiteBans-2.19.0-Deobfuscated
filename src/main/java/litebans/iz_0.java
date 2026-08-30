@@ -14,10 +14,7 @@ import litebans.hh;
 import litebans.iv_0;
 import litebans.z_0;
 
-/*
- * Renamed from litebans.iZ
- */
-public static final class iz_0 {
+public final class iz_0 {
     public static final iz_0 a = new iz_0();
 
     private iz_0() {

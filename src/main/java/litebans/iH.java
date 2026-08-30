@@ -9,10 +9,7 @@ import litebans.hl;
 import litebans.kv_0;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class iH
+public final class iH
 implements eE,
 Serializable {
     private e0 a;
@@ -20,7 +17,7 @@ Serializable {
     private static /* synthetic */ String[] c;
 
     public iH(@NotNull e0 e02) {
-        ew.a((Object)e02, c[0]);
+        ew.a((Object)e02, "initializer");
         this.a = e02;
         this.b = kv_0.a;
     }
@@ -42,7 +39,7 @@ Serializable {
     }
 
     public String toString() {
-        return this.b() ? String.valueOf(this.a()) : c[1];
+        return this.b() ? String.valueOf(this.a()) : "Lazy value not initialized ";
     }
 
     private final Object b() {
@@ -50,7 +47,7 @@ Serializable {
     }
 
     private static final void c() {
-        c = new String[]{hl.a("\uad2a\uad2d\uad2a\uad37\uad2a\uad22\uad2f\uad2a\uad39\uad26\uad31", 636988739), hl.a("\u7bf6\u7bdb\u7bc0\u7bc3\u7b9a\u7bcc\u7bdb\u7bd6\u7bcf\u7bdf\u7b9a\u7bd4\u7bd5\u7bce\u7b9a\u7bd3\u7bd4\u7bd3\u7bce\u7bd3\u7bdb\u7bd6\u7bd3\u7bc0\u7bdf\u7bde\u7b9a\u7bc3\u7bdf\u7bce\u7b94", 747731898)};
+        c = new String[]{"initializer", "Lazy value not initialized yet."};
     }
 
     static {

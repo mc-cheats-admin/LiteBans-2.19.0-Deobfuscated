@@ -2,10 +2,7 @@ package litebans;
 
 import litebans.a_;
 
-/*
- * Renamed from litebans.bI
- */
-public static final class bi_0 {
+public final class bi_0 {
     public static final /* synthetic */ int[] a;
 
     static {

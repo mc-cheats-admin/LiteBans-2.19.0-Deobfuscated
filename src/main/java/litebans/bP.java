@@ -3,7 +3,7 @@ package litebans;
 import java.util.Map;
 import org.jetbrains.annotations.NotNull;
 
-public static final class bP {
+public final class bP {
     private final byte a;
     private final Map b;
 

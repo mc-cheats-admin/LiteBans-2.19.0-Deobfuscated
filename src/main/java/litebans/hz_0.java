@@ -19,12 +19,8 @@ import lombok.NonNull;
 import net.kyori.adventure.text.Component;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.hZ
- */
 @ai_0(a=2)
-public static class hz_0
+public class hz_0
 implements jv_0 {
     private final VelocityPlugin f;
     private final WeakReference e;
@@ -39,7 +35,7 @@ implements jv_0 {
         this.f = velocityPlugin;
         this.e = new WeakReference<CommandSource>(commandSource);
         this.d = commandSource instanceof Player;
-        this.c = this.d ? ((Player)commandSource).getUsername() : h[0];
+        this.c = this.d ? ((Player)commandSource).getUsername() : "[Console]";
     }
 
     public boolean equals(Object object) {
@@ -112,7 +108,7 @@ implements jv_0 {
     @Override
     public String a() {
         String string = this.i;
-        return string == null || string.equals(h[1]) ? (this.i = this.d().toString()) : string;
+        return string == null || string.equals("00000000-0000-0000-0000-000000000000") ? (this.i = this.d().toString()) : string;
     }
 
     public int a() {
@@ -155,7 +151,7 @@ implements jv_0 {
     @Override
     public void d(@NonNull String string) {
         if (string == null) {
-            throw new NullPointerException(h[2]);
+            throw new NullPointerException("reason is marked non-null but is null");
         }
         CommandSource commandSource = (CommandSource)this.e.get();
         if (commandSource == null) {
@@ -205,7 +201,7 @@ implements jv_0 {
     }
 
     private static final void b() {
-        h = new String[]{hl.a("\ua689\ua691\ua6bd\ua6bc\ua6a1\ua6bd\ua6be\ua6b7\ua68f", -529291566), hl.a("\u47d1\u47d1\u47d1\u47d1\u47d1\u47d1\u47d1\u47d1\u47cc\u47d1\u47d1\u47d1\u47d1\u47cc\u47d1\u47d1\u47d1\u47d1\u47cc\u47d1\u47d1\u47d1\u47d1\u47cc\u47d1\u47d1\u47d1\u47d1\u47d1\u47d1\u47d1\u47d1\u47d1\u47d1\u47d1\u47d1", 1445152737), hl.a("\ufff7\uffe0\uffe4\ufff6\uffea\uffeb\uffa5\uffec\ufff6\uffa5\uffe8\uffe4\ufff7\uffee\uffe0\uffe1\uffa5\uffeb\uffea\uffeb\uffa8\uffeb\ufff0\uffe9\uffe9\uffa5\uffe7\ufff0\ufff1\uffa5\uffec\ufff6\uffa5\uffeb\ufff0\uffe9\uffe9", -182583419)};
+        h = new String[]{"[Console]", "00000000-0000-0000-0000-000000000000", "reason is marked non-null but is null"};
     }
 
     static {

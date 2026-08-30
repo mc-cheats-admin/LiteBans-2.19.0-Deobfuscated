@@ -15,7 +15,7 @@ import litebans.kL;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class f0
+public final class f0
 extends fg_0 {
     private static /* synthetic */ String[] d;
 
@@ -67,12 +67,12 @@ extends fg_0 {
             bl3 = false;
             ch2.a((kL)object3);
         }
-        aa_0.a((fg_0)f02, (CharSequence)h1.a(hd_0.u, d[0]));
+        aa_0.a((fg_0)f02, (CharSequence)h1.a(hd_0.u, "All templates have been reset "));
         return iv_0.a;
     }
 
     private static final void a() {
-        d = new String[]{hl.a("\ub226\ub20b\ub20b\ub247\ub213\ub202\ub20a\ub217\ub20b\ub206\ub213\ub202\ub214\ub247\ub20f\ub206\ub211\ub202\ub247\ub205\ub202\ub202\ub209\ub247\ub215\ub202\ub214\ub202\ub213\ub247\ub214\ub212\ub204\ub204\ub202\ub214\ub214\ub201\ub212\ub20b\ub20b\ub21e\ub249", 85832295)};
+        d = new String[]{"All templates have been reset successfully."};
     }
 
     static {

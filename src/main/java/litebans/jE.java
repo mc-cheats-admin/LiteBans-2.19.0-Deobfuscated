@@ -1,5 +1,5 @@
 package litebans;
 
-public static final class jE {
+public final class jE {
 }
 

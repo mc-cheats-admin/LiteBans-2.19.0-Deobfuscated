@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 @gy_0
-public static interface d8 {
+public interface d8 {
     public void a(@NotNull jv_0 var1, @NotNull String[] var2);
 
     public String getName();

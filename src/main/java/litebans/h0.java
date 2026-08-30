@@ -181,7 +181,7 @@ static class h0 {
             string = p[n];
         }
         catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
-            string = p[0];
+            string = "Unkown internal scanner error";
         }
         throw new Error(string);
     }

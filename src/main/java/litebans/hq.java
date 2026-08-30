@@ -16,7 +16,7 @@ import litebans.kV;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class hq {
+public final class hq {
     public static final hq a;
     private static /* synthetic */ String[] b;
 
@@ -65,16 +65,16 @@ public static final class hq {
     }
 
     public final void a(@NotNull ch ch2, @NotNull Throwable throwable) {
-        ch2.e().getLogger().severe(b[0]);
+        ch2.e().getLogger().severe("An uncaught exception was thrown by a LiteBans API event ");
         if (throwable instanceof Exception) {
-            ch2.e().getLogger().severe(b[1]);
+            ch2.e().getLogger().severe("This is likely a bug in a plugin which is using the LiteBans ");
         }
         throwable.printStackTrace();
     }
 
     public final Collection b() {
         Events events = Events.get();
-        ew.b(events, b[2]);
+        ew.b(events, "");
         return ((cb)events).b();
     }
 
@@ -84,7 +84,7 @@ public static final class hq {
     }
 
     private static final void a() {
-        b = new String[]{hl.a("\ud299\ud2b6\ud2f8\ud2ad\ud2b6\ud2bb\ud2b9\ud2ad\ud2bf\ud2b0\ud2ac\ud2f8\ud2bd\ud2a0\ud2bb\ud2bd\ud2a8\ud2ac\ud2b1\ud2b7\ud2b6\ud2f8\ud2af\ud2b9\ud2ab\ud2f8\ud2ac\ud2b0\ud2aa\ud2b7\ud2af\ud2b6\ud2f8\ud2ba\ud2a1\ud2f8\ud2b9\ud2f8\ud294\ud2b1\ud2ac\ud2bd\ud29a\ud2b9\ud2b6\ud2ab\ud2f8\ud299\ud288\ud291\ud2f8\ud2bd\ud2ae\ud2bd\ud2b6\ud2ac\ud2f8\ud2b4\ud2b1\ud2ab\ud2ac\ud2bd\ud2b6\ud2bd\ud2aa\ud2f6", -1747070248), hl.a("\u7fe5\u7fd9\u7fd8\u7fc2\u7f91\u7fd8\u7fc2\u7f91\u7fdd\u7fd8\u7fda\u7fd4\u7fdd\u7fc8\u7f91\u7fd0\u7f91\u7fd3\u7fc4\u7fd6\u7f91\u7fd8\u7fdf\u7f91\u7fd0\u7f91\u7fc1\u7fdd\u7fc4\u7fd6\u7fd8\u7fdf\u7f91\u7fc6\u7fd9\u7fd8\u7fd2\u7fd9\u7f91\u7fd8\u7fc2\u7f91\u7fc4\u7fc2\u7fd8\u7fdf\u7fd6\u7f91\u7fc5\u7fd9\u7fd4\u7f91\u7ffd\u7fd8\u7fc5\u7fd4\u7ff3\u7fd0\u7fdf\u7fc2\u7f91\u7ff0\u7fe1\u7ff8\u7f9f", -370507855), hl.a("", -1294729630)};
+        b = new String[]{"An uncaught exception was thrown by a LiteBans API event ", "This is likely a bug in a plugin which is using the LiteBans ", ""};
     }
 }
 

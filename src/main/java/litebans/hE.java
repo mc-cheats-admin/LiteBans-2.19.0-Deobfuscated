@@ -24,10 +24,7 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class hE
+public final class hE
 implements cl_0 {
     private final di_0 d;
     private final q_0 e;
@@ -105,8 +102,8 @@ implements cl_0 {
                 }
                 if (bz.c((CharSequence)string3, ':', false, 2, null) && object.aI()) {
                     object3 = string2;
-                    object2 = new hN(a[0]);
-                    String string4 = a[1];
+                    object2 = new hN("^/[^ ]+:");
+                    String string4 = "/";
                     string2 = ((hN)object2).a((CharSequence)object3, string4);
                 }
                 object3 = object.ae();
@@ -137,7 +134,7 @@ implements cl_0 {
     private final void a(Object object, jv_0 jv_02, dZ dZ2) {
         f8 f82 = this.c.a();
         ec_0 ec_02 = this.d.i();
-        ew.b(ec_02, a[2]);
+        ew.b(ec_02, "");
         f82.a(object, jv_02, ((ao_0)ec_02).c(object), dZ2);
     }
 
@@ -164,7 +161,7 @@ implements cl_0 {
     }
 
     private static final void d() {
-        a = new String[]{hl.a("\ud0fb\ud08a\ud0fe\ud0fb\ud085\ud0f8\ud08e\ud09f", -193343323), hl.a("\u6a2b", -1967232508), hl.a("", -1427657590)};
+        a = new String[]{"^/[^ ]+:", "/", ""};
     }
 
     static {

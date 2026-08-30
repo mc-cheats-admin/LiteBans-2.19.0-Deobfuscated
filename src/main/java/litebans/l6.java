@@ -4,7 +4,7 @@ import java.util.Arrays;
 import litebans.q_0;
 import org.jetbrains.annotations.NotNull;
 
-public static final class l6 {
+public final class l6 {
     private final q_0 b;
     private final CharSequence[] a;
 

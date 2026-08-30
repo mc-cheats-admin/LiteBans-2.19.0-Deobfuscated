@@ -4,7 +4,7 @@ import java.util.Comparator;
 import litebans.cy;
 import litebans.hj_0;
 
-public static final class by
+public final class by
 implements Comparator {
     public final int compare(Object object, Object object2) {
         cy cy2 = (cy)object;

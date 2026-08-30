@@ -11,10 +11,6 @@ import litebans.kv_0;
 import litebans.lR;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.jX
- */
 static final class jx_0
 implements eE,
 Serializable {
@@ -26,7 +22,7 @@ Serializable {
     private static /* synthetic */ String[] a;
 
     public jx_0(@NotNull e0 e02) {
-        ew.a((Object)e02, a[0]);
+        ew.a((Object)e02, "initializer");
         this.d = e02;
         this._value = kv_0.a;
         this.e = kv_0.a;
@@ -53,7 +49,7 @@ Serializable {
     }
 
     public String toString() {
-        return this.b() ? String.valueOf(this.a()) : a[1];
+        return this.b() ? String.valueOf(this.a()) : "Lazy value not initialized ";
     }
 
     private final Object b() {
@@ -63,11 +59,11 @@ Serializable {
     static {
         jx_0.c();
         b = new lR(null);
-        c = AtomicReferenceFieldUpdater.newUpdater(jx_0.class, Object.class, a[2]);
+        c = AtomicReferenceFieldUpdater.newUpdater(jx_0.class, Object.class, "_value");
     }
 
     private static final void c() {
-        a = new String[]{hl.a("\ufe2c\ufe2b\ufe2c\ufe31\ufe2c\ufe24\ufe29\ufe2c\ufe3f\ufe20\ufe37", -111870395), hl.a("\ue196\ue1bb\ue1a0\ue1a3\ue1fa\ue1ac\ue1bb\ue1b6\ue1af\ue1bf\ue1fa\ue1b4\ue1b5\ue1ae\ue1fa\ue1b3\ue1b4\ue1b3\ue1ae\ue1b3\ue1bb\ue1b6\ue1b3\ue1a0\ue1bf\ue1be\ue1fa\ue1a3\ue1bf\ue1ae\ue1f4", 1863639514), hl.a("\uf0d5\uf0fc\uf0eb\uf0e6\uf0ff\uf0ef", 1124266122)};
+        a = new String[]{"initializer", "Lazy value not initialized ", "_value"};
     }
 }
 

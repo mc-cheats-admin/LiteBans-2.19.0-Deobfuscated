@@ -4,7 +4,7 @@ import java.util.concurrent.RejectedExecutionHandler;
 import java.util.concurrent.ThreadPoolExecutor;
 import litebans.w;
 
-public static final class dv
+public final class dv
 implements RejectedExecutionHandler {
     final /* synthetic */ w a;
 

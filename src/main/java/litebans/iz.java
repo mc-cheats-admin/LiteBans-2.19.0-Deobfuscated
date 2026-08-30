@@ -1,6 +1,6 @@
 package litebans;
 
-public static final class iz {
+public final class iz {
     static final /* synthetic */ iz c;
     public static final boolean a;
     public static final boolean b;

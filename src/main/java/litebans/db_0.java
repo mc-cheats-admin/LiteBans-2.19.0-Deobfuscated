@@ -15,10 +15,7 @@ import litebans.hl;
 import litebans.ll;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.dB
- */
-public static final class db_0 {
+public final class db_0 {
     private static /* synthetic */ String[] a;
 
     private db_0() {
@@ -32,9 +29,6 @@ public static final class db_0 {
         return dk.a();
     }
 
-    /*
-     * Unable to fully structure code
-     */
     public final dk a(@NotNull String var1_1) {
         block5: {
             var2_2 = dk.values();
@@ -85,7 +79,7 @@ public static final class db_0 {
             Object object2;
             block12: {
                 List list2;
-                if (ew.a((Object)string, (Object)a[0]) || ew.a((Object)string, (Object)a[1]) || ew.a((Object)string, (Object)a[2]) || ew.a((Object)string, (Object)a[3]) || ew.a((Object)string, (Object)am.bT.toString())) {
+                if (ew.a((Object)string, (Object)"permanent") || ew.a((Object)string, (Object)"none") || ew.a((Object)string, (Object)"unlimited") || ew.a((Object)string, (Object)"never") || ew.a((Object)string, (Object)am.bT.toString())) {
                     return 0.0;
                 }
                 object2 = new char[]{' '};
@@ -110,15 +104,15 @@ public static final class db_0 {
                 d11 = bz.b((String)object2);
                 if (d11 == null) break block12;
                 String string3 = String.valueOf(bz.b((CharSequence)object2));
-                ew.b(string3, a[4]);
-                if (!ew.a((Object)string3.toLowerCase(Locale.ROOT), (Object)a[5])) break block13;
+                ew.b(string3, "");
+                if (!ew.a((Object)string3.toLowerCase(Locale.ROOT), (Object)"d")) break block13;
             }
-            Double d12 = bz.b(cg_0.a(this.a(), (CharSequence)object2, a[6]));
+            Double d12 = bz.b(cg_0.a(this.a(), (CharSequence)object2, ""));
             if (d12 == null) {
                 return d10;
             }
             double d13 = d12;
-            String string4 = cg_0.a(this.b(), (CharSequence)object2, a[7]);
+            String string4 = cg_0.a(this.b(), (CharSequence)object2, "");
             dk dk2 = this.a(string4);
             if (dk2 == null) {
                 return d10;
@@ -164,10 +158,10 @@ public static final class db_0 {
             charSequence3 = this.a(l9, (Object)am.r, (Object)am.cB);
             charSequence4 = this.a(l10, (Object)am.dC, (Object)am.bu);
         } else {
-            charSequence = this.a(l5, (Object)a[8], (Object)a[9]);
-            charSequence2 = this.a(l8, (Object)a[10], (Object)a[11]);
-            charSequence3 = this.a(l9, (Object)a[12], (Object)a[13]);
-            charSequence4 = this.a(l10, (Object)a[14], (Object)a[15]);
+            charSequence = this.a(l5, (Object)"day", (Object)"days");
+            charSequence2 = this.a(l8, (Object)"hour", (Object)"hours");
+            charSequence3 = this.a(l9, (Object)"minute", (Object)"minutes");
+            charSequence4 = this.a(l10, (Object)"second", (Object)"seconds");
         }
         String string2 = am.b_.toString();
         String string3 = am.S.toString();
@@ -237,7 +231,7 @@ public static final class db_0 {
     }
 
     private static final void c() {
-        a = new String[]{hl.a("\u24d3\u24c6\u24d1\u24ce\u24c2\u24cd\u24c6\u24cd\u24d7", 91628707), hl.a("\u76fb\u76fa\u76fb\u76f0", -805210475), hl.a("\u5694\u568f\u568d\u5688\u568c\u5688\u5695\u5684\u5685", 1274304225), hl.a("\u135d\u1356\u1345\u1356\u1341", 989991731), hl.a("", -21391574), hl.a("\ud45a", -489368514), hl.a("", -2043464426), hl.a("", -913983937), hl.a("\u5170\u5175\u516d", 19353876), hl.a("\u8708\u870d\u8715\u871f", 428574572), hl.a("\ua406\ua401\ua41b\ua41c", -2019842962), hl.a("\ub642\ub645\ub65f\ub658\ub659", -2081638870), hl.a("\u5382\u5386\u5381\u539a\u539b\u538a", 214782959), hl.a("\u7ca0\u7ca4\u7ca3\u7cb8\u7cb9\u7ca8\u7cbe", 65109197), hl.a("\uca52\uca44\uca42\uca4e\uca4f\uca45", 1724697121), hl.a("\u4595\u4583\u4585\u4589\u4588\u4582\u4595", 2083997158)};
+        a = new String[]{"permanent", "none", "unlimited", "never", "", "d", "", "", "day", "days", "hour", "hours", "minute", "minutes", "second", "seconds"};
     }
 
     static {

@@ -2,10 +2,7 @@ package litebans;
 
 import java.io.Serializable;
 
-/*
- * Renamed from litebans.dY
- */
-public static final class dy_0
+public final class dy_0
 implements Serializable {
     public Object a;
 

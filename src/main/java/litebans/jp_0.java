@@ -6,10 +6,7 @@ import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.jp
- */
-public static final class jp_0 {
+public final class jp_0 {
     public static final gb c;
     private final byte b;
     private final String e;
@@ -34,19 +31,19 @@ public static final class jp_0 {
     public final String b() {
         byte by2 = this.b;
         if (by2 == 0) {
-            return a[0];
+            return "name";
         }
         if (by2 == 1) {
-            return a[1];
+            return "uuid";
         }
         if (by2 == 2) {
-            return a[2];
+            return "ip";
         }
         throw new AssertionError();
     }
 
     public String toString() {
-        return a[3] + this.b + a[4] + this.e + ')';
+        return "Target(type=" + this.b + ", target=" + this.e + ')';
     }
 
     public int hashCode() {
@@ -78,7 +75,7 @@ public static final class jp_0 {
     }
 
     private static final void c() {
-        a = new String[]{hl.a("\u439f\u4390\u439c\u4394", -1374272527), hl.a("\u5b18\u5b18\u5b04\u5b09", -982688915), hl.a("\u0f3a\u0f23", 750325587), hl.a("\u5b3d\u5b08\u5b1b\u5b0e\u5b0c\u5b1d\u5b41\u5b1d\u5b10\u5b19\u5b0c\u5b54", 1532124009), hl.a("\u2908\u2904\u2950\u2945\u2956\u2943\u2941\u2950\u2919", -2018367196)};
+        a = new String[]{"name", "uuid", "ip", "Target(type=", ", target="};
     }
 }
 

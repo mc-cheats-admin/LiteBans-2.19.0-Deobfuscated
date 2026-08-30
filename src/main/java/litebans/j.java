@@ -22,10 +22,7 @@ import litebans.hw;
 import litebans.i7;
 import litebans.je_0;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static class j
+public class j
 extends e_0 {
     private static final int q = 256;
     private final byte[] k = new byte[256];
@@ -337,7 +334,7 @@ extends e_0 {
                             }
                             if (!string.equals("GNU.sparse.numbytes")) continue block0;
                             if (l3 == null) {
-                                throw new IOException("Failed to read Paxheader.GNU.sparse.offset is expected before GNU.sparse.numbytes shows up.");
+                                throw new IOException("Failed to read Paxheader.GNU.sparse.offset is expected before GNU.sparse.numbytes shows ");
                             }
                             list.add(new i7(l3, Long.parseLong(string2)));
                             l3 = null;

@@ -1,6 +1,6 @@
 package litebans;
 
-public static interface eE {
+public interface eE {
     public Object a();
 
     public boolean b();

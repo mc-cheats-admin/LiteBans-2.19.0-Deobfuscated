@@ -7,10 +7,7 @@ import litebans.bD;
 import litebans.ck_0;
 import litebans.jH;
 
-/*
- * Renamed from litebans.gR
- */
-public static class gr_0
+public class gr_0
 extends HashMap
 implements Map,
 bD,

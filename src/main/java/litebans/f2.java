@@ -23,12 +23,12 @@ import litebans.q_0;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class f2
+public final class f2
 extends fB {
     private static /* synthetic */ String[] i;
 
     public f2(@NotNull di_0 di_02) {
-        super(i[0], di_02);
+        super("prunehistory", di_02);
     }
 
     /*
@@ -98,7 +98,7 @@ extends fB {
                         n = n2;
                         stringBuilder = stringBuilder2;
                         bl8 = false;
-                        string2 = i[1];
+                        string2 = "";
                         stringBuilder2 = stringBuilder;
                     }
                     StringBuilder stringBuilder3 = stringBuilder2.append(string2);
@@ -110,7 +110,7 @@ extends fB {
                         n = n2;
                         stringBuilder = stringBuilder3;
                         bl8 = false;
-                        string = i[2];
+                        string = "";
                         stringBuilder3 = stringBuilder;
                     }
                     String string5 = stringBuilder3.append(string).toString();
@@ -148,7 +148,7 @@ extends fB {
     }
 
     private static final void a() {
-        i = new String[]{hl.a("\ud5d4\ud5d6\ud5d1\ud5ca\ud5c1\ud5cc\ud5cd\ud5d7\ud5d0\ud5cb\ud5d6\ud5dd", -1451043420), hl.a("", -1881705421), hl.a("", 1364833292)};
+        i = new String[]{"prunehistory", "", ""};
     }
 
     static {

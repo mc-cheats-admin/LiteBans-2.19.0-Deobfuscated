@@ -9,7 +9,7 @@ import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class d7 {
+public final class d7 {
     private static final Object[] b;
     private static final int a;
     private static /* synthetic */ String[] c;
@@ -17,7 +17,7 @@ public static final class d7 {
     public static final Object[] a(@NotNull Collection collection) {
         Object[] objectArray;
         block9: {
-            ew.a((Object)collection, c[0]);
+            ew.a((Object)collection, "collection");
             boolean bl = false;
             int n = collection.size();
             if (n == 0) {
@@ -65,7 +65,7 @@ public static final class d7 {
     public static final Object[] a(@NotNull Collection collection, @Nullable Object[] objectArray) {
         Object[] objectArray2;
         block16: {
-            ew.a((Object)collection, c[1]);
+            ew.a((Object)collection, "collection");
             if (objectArray == null) {
                 throw new NullPointerException();
             }
@@ -93,7 +93,7 @@ public static final class d7 {
                         objectArray3 = objectArray;
                     } else {
                         Object object = Array.newInstance(objectArray.getClass().getComponentType(), n2);
-                        ew.b(object, c[2]);
+                        ew.b(object, "");
                         objectArray3 = (Object[])object;
                     }
                     Object[] objectArray4 = objectArray3;
@@ -139,7 +139,7 @@ public static final class d7 {
     }
 
     private static final void a() {
-        c = new String[]{hl.a("\uac15\uac19\uac1a\uac1a\uac13\uac15\uac02\uac1f\uac19\uac18", 984722550), hl.a("\u5197\u519b\u5198\u5198\u5191\u5197\u5180\u519d\u519b\u519a", -1323937292), hl.a("", -1828362635)};
+        c = new String[]{"collection", "collection", ""};
     }
 }
 

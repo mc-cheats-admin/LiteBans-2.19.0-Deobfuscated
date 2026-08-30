@@ -6,7 +6,7 @@ import java.nio.charset.UnsupportedCharsetException;
 import litebans.dd_0;
 import litebans.gh_0;
 
-public static abstract class c4 {
+public abstract class c4 {
     static final String a = "UTF8";
     static final dd_0 b = c4.b("UTF8");
 

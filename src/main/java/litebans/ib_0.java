@@ -3,10 +3,7 @@ package litebans;
 import litebans.aJ;
 import litebans.eI;
 
-/*
- * Renamed from litebans.ib
- */
-public static final class ib_0 {
+public final class ib_0 {
     private ib_0() {
     }
 

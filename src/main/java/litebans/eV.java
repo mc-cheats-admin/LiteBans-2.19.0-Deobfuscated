@@ -8,7 +8,7 @@ import litebans.gn_0;
 import litebans.ln;
 import litebans.q_0;
 
-public static final class eV
+public final class eV
 implements ln {
     final /* synthetic */ q_0 b;
     final /* synthetic */ Class a;

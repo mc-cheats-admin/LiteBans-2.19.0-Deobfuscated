@@ -17,7 +17,7 @@ import litebans.ka_0;
 import litebans.v_0;
 import litebans.w_0;
 
-public static class e2
+public class e2
 implements JsonDeserializer {
     private final Gson e;
     private final g8 f;
@@ -40,7 +40,7 @@ implements JsonDeserializer {
                 return c;
             }
         }
-        throw new IllegalArgumentException(b[0] + (Object)((Object)g82));
+        throw new IllegalArgumentException("Unknown version " + (Object)((Object)g82));
     }
 
     @Deprecated
@@ -86,7 +86,7 @@ implements JsonDeserializer {
     }
 
     private static final void c() {
-        b = new String[]{hl.a("\udc03\udc38\udc3d\udc38\udc39\udc21\udc38\udc76\udc20\udc33\udc24\udc25\udc3f\udc39\udc38\udc76", -20194218)};
+        b = new String[]{"Unknown version "};
     }
 }
 

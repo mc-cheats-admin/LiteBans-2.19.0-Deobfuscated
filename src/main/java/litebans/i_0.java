@@ -22,11 +22,7 @@ import litebans.iq_0;
 import litebans.kt_0;
 import litebans.ky_0;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.i
- */
-public static class i_0
+public class i_0
 extends e_0 {
     private iq_0 g;
     private ky_0 l;
@@ -69,7 +65,7 @@ extends e_0 {
         catch (IOException iOException) {
             throw new hc_0(iOException.getMessage(), iOException);
         }
-        object = new ef_0(2, 2, 4, ".");
+        object = new ef_0(2, 2, 4, " + ");
         this.i.put(2, object);
         this.s = new PriorityQueue(10, new kt_0(this));
     }

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import litebans.hl;
 import org.jetbrains.annotations.Nullable;
 
-public static class gm {
+public class gm {
     private static final char[] d;
     private static final int[] c;
     private static final byte[] a;
@@ -96,7 +96,7 @@ public static class gm {
 
     static {
         gm.a();
-        d = b[0].toCharArray();
+        d = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".toCharArray();
         c = new int[256];
         a = new byte[0];
         e = new char[0];
@@ -109,7 +109,7 @@ public static class gm {
     }
 
     private static final void a() {
-        b = new String[]{hl.a("\ucd77\ucd74\ucd75\ucd72\ucd73\ucd70\ucd71\ucd7e\ucd7f\ucd7c\ucd7d\ucd7a\ucd7b\ucd78\ucd79\ucd66\ucd67\ucd64\ucd65\ucd62\ucd63\ucd60\ucd61\ucd6e\ucd6f\ucd6c\ucd57\ucd54\ucd55\ucd52\ucd53\ucd50\ucd51\ucd5e\ucd5f\ucd5c\ucd5d\ucd5a\ucd5b\ucd58\ucd59\ucd46\ucd47\ucd44\ucd45\ucd42\ucd43\ucd40\ucd41\ucd4e\ucd4f\ucd4c\ucd06\ucd07\ucd04\ucd05\ucd02\ucd03\ucd00\ucd01\ucd0e\ucd0f\ucd1d\ucd19", 800050486)};
+        b = new String[]{"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"};
     }
 }
 

@@ -14,10 +14,7 @@ import litebans.f8;
 import litebans.p;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class e7
+public final class e7
 implements ek_0 {
     private final di_0 b;
     private final p a;

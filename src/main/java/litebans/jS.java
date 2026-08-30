@@ -22,10 +22,7 @@ import net.minecraft.class_3248;
 import net.minecraft.server.MinecraftServer;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class jS
+public final class jS
 implements bk_0 {
     private final di_0 a;
     private final cr_0 c;
@@ -54,7 +51,7 @@ implements bk_0 {
 
     public final void a(@NotNull class_3248 class_32482, @NotNull MinecraftServer minecraftServer, @NotNull LoginPacketSender loginPacketSender, @NotNull ServerLoginNetworking.LoginSynchronizer loginSynchronizer) {
         n_0 n_02 = this.a.b(p_0.class);
-        ew.b(n_02, b[0]);
+        ew.b(n_02, "");
         h8 h82 = (h8)((Object)n_02);
         if (!(class_32482 instanceof AccessLoginData_1_21)) {
             x_0.a();
@@ -71,7 +68,7 @@ implements bk_0 {
     }
 
     private static final void d() {
-        b = new String[]{hl.a("", -540148591)};
+        b = new String[]{""};
     }
 
     static {

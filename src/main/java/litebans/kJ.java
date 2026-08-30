@@ -14,9 +14,6 @@ import litebans.iq;
 import litebans.ja;
 import litebans.kI;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
 static final class kJ
 implements iq {
     private static final kI l = kI.a(kJ.class);

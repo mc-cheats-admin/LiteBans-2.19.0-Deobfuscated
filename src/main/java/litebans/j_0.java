@@ -4,10 +4,7 @@ import litebans.di_0;
 import litebans.jv_0;
 import litebans.n_0;
 
-/*
- * Renamed from litebans.J
- */
-public static abstract class j_0
+public abstract class j_0
 extends n_0 {
     public j_0(di_0 di_02) {
         super(di_02);

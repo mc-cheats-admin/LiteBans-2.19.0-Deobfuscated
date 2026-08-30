@@ -13,10 +13,7 @@ import org.yaml.snakeyaml.constructor.BaseConstructor;
 import org.yaml.snakeyaml.constructor.Constructor;
 import org.yaml.snakeyaml.representer.Representer;
 
-/*
- * Renamed from litebans.dg
- */
-public static final class dg_0
+public final class dg_0
 implements Supplier {
     private final Reader a;
     private final Map b;

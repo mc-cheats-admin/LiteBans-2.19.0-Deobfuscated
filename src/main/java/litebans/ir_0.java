@@ -13,10 +13,7 @@ import litebans.kc_0;
 import litebans.y;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.iR
- */
-public static final class ir_0 {
+public final class ir_0 {
     private static /* synthetic */ String[] a;
 
     private ir_0() {
@@ -45,7 +42,7 @@ public static final class ir_0 {
                     Object t2 = object4.next();
                     String string2 = (String)t2;
                     boolean bl4 = false;
-                    if (!bz.a((CharSequence)string2, (CharSequence)a[0], false, 2, null)) continue;
+                    if (!bz.a((CharSequence)string2, (CharSequence)"%s", false, 2, null)) continue;
                     object3.add(t2);
                 }
                 list = (List)object3;
@@ -60,7 +57,7 @@ public static final class ir_0 {
                         object4 = (String)e;
                         boolean bl6 = false;
                         char c = bz.a((CharSequence)object4);
-                        String string3 = a[1];
+                        String string3 = "#";
                         if (!bz.a((CharSequence)string, (CharSequence)(c + string3), false, 2, null)) continue;
                         bl2 = true;
                         break block14;
@@ -150,7 +147,7 @@ public static final class ir_0 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u37ae\u37f8", -740608117), hl.a("\uee68", 1516301899)};
+        a = new String[]{"%s", "#"};
     }
 
     static {

@@ -6,7 +6,7 @@ import litebans.gu;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class gv
+public final class gv
 extends gu {
     public gv(@NotNull di_0 di_02) {
         super(di_02);

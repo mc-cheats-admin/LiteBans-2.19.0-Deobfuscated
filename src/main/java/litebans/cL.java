@@ -6,7 +6,7 @@ import java.util.List;
 import litebans.aJ;
 import litebans.kL;
 
-public static final class cL {
+public final class cL {
     private cL() {
     }
 

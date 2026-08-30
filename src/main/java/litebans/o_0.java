@@ -8,12 +8,8 @@ import litebans.di_0;
 import litebans.j_0;
 import litebans.jv_0;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.O
- */
 @ai_0(a=2)
-public static class o_0
+public class o_0
 extends j_0 {
     public o_0(di_0 di_02) {
         super(di_02);

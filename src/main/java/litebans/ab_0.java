@@ -25,10 +25,7 @@ import litebans.jz_0;
 import litebans.km_0;
 import litebans.y_0;
 
-/*
- * Renamed from litebans.ab
- */
-public static class ab_0 {
+public class ab_0 {
     private static final int a = 4;
     private static final Map b = new ConcurrentHashMap();
 

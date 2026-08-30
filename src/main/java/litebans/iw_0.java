@@ -3,10 +3,7 @@ package litebans;
 import java.io.Serializable;
 import java.math.BigInteger;
 
-/*
- * Renamed from litebans.iw
- */
-public static final class iw_0
+public final class iw_0
 implements Serializable {
     private static final long k;
     private static final int i;

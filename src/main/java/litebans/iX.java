@@ -2,7 +2,7 @@ package litebans;
 
 import litebans.aJ;
 
-public static class iX {
+public class iX {
     private final long[] a;
 
     public iX(long l3) {

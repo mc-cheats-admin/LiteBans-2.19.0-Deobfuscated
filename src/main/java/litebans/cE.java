@@ -5,7 +5,7 @@ import litebans.dZ;
 import litebans.eo_0;
 import litebans.ew;
 
-public static final class cE
+public final class cE
 implements eo_0 {
     final /* synthetic */ String a;
     final /* synthetic */ String b;

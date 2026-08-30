@@ -8,7 +8,7 @@ import litebans.ew;
 import litebans.jS;
 import litebans.t_0;
 
-public static final class hu
+public final class hu
 implements Supplier {
     final /* synthetic */ t_0 a;
     final /* synthetic */ cr_0 b;

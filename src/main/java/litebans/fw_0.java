@@ -2,9 +2,6 @@ package litebans;
 
 import java.io.Serializable;
 
-/*
- * Renamed from litebans.fw
- */
 static class fw_0
 implements Serializable {
     private static final fw_0 a = new fw_0();

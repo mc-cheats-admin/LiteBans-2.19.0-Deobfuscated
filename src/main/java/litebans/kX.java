@@ -12,10 +12,7 @@ import net.md_5.bungee.api.event.ChatEvent;
 import net.md_5.bungee.event.EventHandler;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class kX
+public final class kX
 implements ly_0 {
     private final di_0 a;
     private final p b;

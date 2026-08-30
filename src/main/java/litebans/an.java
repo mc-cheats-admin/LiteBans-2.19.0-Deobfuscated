@@ -14,7 +14,7 @@ import litebans.dr;
 import litebans.iI;
 import litebans.kI;
 
-public static class an
+public class an
 extends aB
 implements DataSource,
 Closeable {
@@ -40,7 +40,7 @@ Closeable {
     @Override
     public Connection getConnection() {
         if (this.b()) {
-            throw new SQLException("HikariDataSource " + this + " has been closed.");
+            throw new SQLException("HikariDataSource " + this + " has been ");
         }
         if (this.R != null) {
             return this.R.b();

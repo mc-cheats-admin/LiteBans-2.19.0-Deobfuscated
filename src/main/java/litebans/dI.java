@@ -139,7 +139,7 @@ static abstract class dI {
         }
         catch (Exception exception) {
             this.w.set(exception);
-            this.q.c("%s - Failed to validate connection %s (%s). Possibly consider using a shorter maxLifetime value.", new Object[]{this.e, connection.toString(), exception.getMessage()});
+            this.q.c("%s - Failed to validate connection %s (%s). Possibly consider using a shorter maxLifetime ", new Object[]{this.e, connection.toString(), exception.getMessage()});
             return false;
         }
     }
@@ -222,7 +222,7 @@ static abstract class dI {
                     mBeanServer.registerMBean(this.t, objectName2);
                     mBeanServer.registerMBean(dr2, objectName);
                 } else {
-                    this.q.a("{} - JMX name ({}) is already registered.", new Object[]{this.e, this.e});
+                    this.q.a("{} - JMX name ({}) is already ", new Object[]{this.e, this.e});
                 }
             } else if (mBeanServer.isRegistered(objectName2)) {
                 mBeanServer.unregisterMBean(objectName2);
@@ -230,7 +230,7 @@ static abstract class dI {
             }
         }
         catch (Exception exception) {
-            this.q.c("{} - Failed to {} management beans.", new Object[]{this.e, bl ? "register" : "unregister", exception});
+            this.q.c("{} - Failed to {} management ", new Object[]{this.e, bl ? "register" : "unregister", exception});
         }
     }
 
@@ -337,7 +337,7 @@ static abstract class dI {
             }
         }
         catch (AbstractMethodError | Exception throwable) {
-            this.q.a("%s - Failed to execute%s connection test query (%s).", new Object[]{this.e, this.x ? " isValid() for connection, configure" : "", throwable.getMessage()});
+            this.q.a("%s - Failed to execute%s connection test query (%s) + ", new Object[]{this.e, this.x ? " isValid() for connection, configure" : "", throwable.getMessage()});
             throw throwable;
         }
     }
@@ -351,7 +351,7 @@ static abstract class dI {
                 }
             }
             catch (SQLException sQLException) {
-                this.q.c("%s - Default transaction isolation level detection failed (%s).", new Object[]{this.e, sQLException.getMessage()});
+                this.q.c("%s - Default transaction isolation level detection failed (%s) + ", new Object[]{this.e, sQLException.getMessage()});
                 if (sQLException.getSQLState() == null || sQLException.getSQLState().startsWith("08")) break block3;
                 throw sQLException;
             }
@@ -388,10 +388,10 @@ static abstract class dI {
                     this.g = 0;
                     this.q.d("%s - Driver does not support get/set network timeout for connections. (%s)", new Object[]{this.e, throwable.getMessage()});
                     if (this.f < TimeUnit.SECONDS.toMillis(1L)) {
-                        this.q.c("%s - A validationTimeout of less than 1 second cannot be honored on drivers without setNetworkTimeout() support.", new Object[]{this.e});
+                        this.q.c("%s - A validationTimeout of less than 1 second cannot be honored on drivers without setNetworkTimeout() ", new Object[]{this.e});
                     }
                     if (this.f % TimeUnit.SECONDS.toMillis(1L) == 0L) break block4;
-                    this.q.c("%s - A validationTimeout with fractional second granularity cannot be honored on drivers without setNetworkTimeout() support.", new Object[]{this.e});
+                    this.q.c("%s - A validationTimeout with fractional second granularity cannot be honored on drivers without setNetworkTimeout() ", new Object[]{this.e});
                 }
             }
         }

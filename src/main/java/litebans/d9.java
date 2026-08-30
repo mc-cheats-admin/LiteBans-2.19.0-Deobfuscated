@@ -6,7 +6,7 @@ import litebans.jj_0;
 import litebans.jv_0;
 import org.jetbrains.annotations.Nullable;
 
-public static final class d9 {
+public final class d9 {
     private String d;
     private String e;
     private String g;

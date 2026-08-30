@@ -8,10 +8,7 @@ import litebans.en_0;
 import litebans.ew_0;
 import litebans.i2;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static class ju
+public class ju
 implements en_0,
 Cloneable,
 Serializable {

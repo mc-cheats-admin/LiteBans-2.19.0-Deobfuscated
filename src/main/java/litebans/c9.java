@@ -3,7 +3,7 @@ package litebans;
 import litebans.aJ;
 import org.jetbrains.annotations.NotNull;
 
-public static final class c9 {
+public final class c9 {
     private final Object a;
     private boolean b;
 

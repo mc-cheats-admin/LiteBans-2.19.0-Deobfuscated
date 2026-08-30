@@ -6,10 +6,7 @@ import net.kyori.adventure.text.serializer.gson.GsonComponentSerializer;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.ih
- */
-public static class ih_0 {
+public class ih_0 {
     public static @NotNull TextComponent a(CharSequence charSequence) {
         return ih_0.a().deserialize(charSequence.toString());
     }

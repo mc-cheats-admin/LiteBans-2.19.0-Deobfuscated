@@ -5,7 +5,7 @@ import litebans.hN;
 import litebans.hl;
 import litebans.ip_0;
 
-public static final class bK {
+public final class bK {
     public static final bQ c;
     private static final hN a;
     private static final ip_0 b;
@@ -27,7 +27,7 @@ public static final class bK {
     }
 
     private static final void b() {
-        d = new String[]{hl.a("\ue9cb\ue9c9\ue9e2\ue9ee\ue9a7\ue9b9\ue9a4\ue9a3\ue9e8\ue9b1", -617617003)};
+        d = new String[]{"^\\w{2,16}$"};
     }
 }
 

@@ -15,7 +15,7 @@ import litebans.v;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class gl
+public final class gl
 extends fg_0 {
     private final String e;
     private final CharSequence g;
@@ -44,18 +44,18 @@ extends fg_0 {
         boolean bl = false;
         Object[] objectArray = (Object[])((fg_0)object).h().a(o.class);
         boolean bl2 = false;
-        o.a((o)objectArray, ch2, gl2.g, f[0], null, null, false, false, null, 124, null);
+        o.a((o)objectArray, ch2, gl2.g, "banned_join", null, null, false, false, null, 124, null);
         if (gl2.d && ch2.d().s()) {
             object = u.j;
             objectArray = new CharSequence[]{gl2.e, gl2.g};
             bl2 = false;
-            aa_0.a(ch2, ij.i, lo_0.a(objectArray, (CharSequence)f[1], null, null, 0, null, null, 62, null), null, null, 12, null);
+            aa_0.a(ch2, ij.i, lo_0.a(objectArray, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null), null, null, 12, null);
         }
         return iv_0.a;
     }
 
     private static final void a() {
-        f = new String[]{hl.a("\u775d\u775e\u7751\u7751\u775a\u775b\u7760\u7755\u7750\u7756\u7751", -1906149569), hl.a("\u5925", 2074716122)};
+        f = new String[]{"banned_join", "\ufeff"};
     }
 
     static {

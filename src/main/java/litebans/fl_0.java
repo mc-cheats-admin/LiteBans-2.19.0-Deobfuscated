@@ -2,10 +2,7 @@ package litebans;
 
 import java.io.Serializable;
 
-/*
- * Renamed from litebans.fl
- */
-public static class fl_0
+public class fl_0
 implements Serializable {
     private static final long e = 4112582948775420359L;
     public static final fl_0 b = new fl_0("encryption");

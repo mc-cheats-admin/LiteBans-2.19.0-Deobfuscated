@@ -3,7 +3,7 @@ package litebans;
 import litebans.a_;
 import litebans.ij;
 
-public static final class kQ {
+public final class kQ {
     public static final /* synthetic */ int[] a;
     public static final /* synthetic */ int[] b;
 

@@ -13,7 +13,7 @@ import litebans.hy_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class dZ
+public final class dZ
 implements Comparable {
     public static final gF s;
     private final a_ d;
@@ -191,7 +191,7 @@ implements Comparable {
     }
 
     public final String g() {
-        return this.d == a_.c ? r[0] : r[1];
+        return this.d == a_.c ? ",warned" : "";
     }
 
     public final long n() {
@@ -216,7 +216,7 @@ implements Comparable {
         CharSequence charSequence;
         cz cz3 = cz2;
         boolean bl = false;
-        StringBuilder stringBuilder = new StringBuilder().append(cz3.B() ? r[2] : r[3]);
+        StringBuilder stringBuilder = new StringBuilder().append(cz3.B() ? "silent_" : "");
         switch (bi_0.a[cz3.u().ordinal()]) {
             case 1: 
             case 2: 
@@ -229,7 +229,7 @@ implements Comparable {
             default: {
                 dZ dZ2 = this;
                 boolean bl2 = false;
-                charSequence = (!dZ2.y() ? r[4] : r[5]) + (cz3.y() ? r[6] : r[7]) + cz3.u();
+                charSequence = (!dZ2.y() ? "temp_" : "") + (cz3.y() ? "ip" : "") + cz3.u();
             }
         }
         return stringBuilder.append((Object)charSequence).toString();
@@ -260,8 +260,8 @@ implements Comparable {
 
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(r[8]).append((Object)this.d).append(r[9]).append(this.l).append(r[10]).append(this.e).append(r[11]).append((Object)this.b).append(r[12]).append(this.t).append(r[13]).append(this.h).append(r[14]).append(this.f).append(r[15]).append(this.g).append(r[16]).append(this.o).append(r[17]).append(this.p).append(r[18]).append((Object)hy_0.b(this.i)).append(r[19]);
-        stringBuilder.append(this.u).append(r[20]).append(this.v).append(r[21]).append(this.n).append(r[22]).append(this.c).append(')');
+        stringBuilder.append("Entry(type=").append((Object)this.d).append(", uuid=").append(this.l).append(", ip=").append(this.e).append(", reason=").append((Object)this.b).append(", executorUUID=").append(this.t).append(", executorName=").append(this.h).append(", serverScope=").append(this.f).append(", serverOrigin=").append(this.g).append(", dateStart=").append(this.o).append(", dateEnd=").append(this.p).append(", template=").append((Object)hy_0.b(this.i)).append(", silent=");
+        stringBuilder.append(this.u).append(", ipban=").append(this.v).append(", active=").append(this.n).append(", id=").append(this.c).append(')');
         return stringBuilder.toString();
     }
 
@@ -351,7 +351,7 @@ implements Comparable {
     }
 
     private static final void k() {
-        r = new String[]{hl.a("\u7d02\u7d59\u7d4f\u7d5c\u7d40\u7d4b\u7d4a", 55213358), hl.a("", -1067444894), hl.a("\u0ee2\u0ef8\u0efd\u0ef4\u0eff\u0ee5\u0ece", -1844834671), hl.a("", -429004378), hl.a("\u4dac\u4dbd\u4db5\u4da8\u4d87", -1552790056), hl.a("", 1748538853), hl.a("\ue9f5\ue9ec", 1327622556), hl.a("", -680269340), hl.a("\u4ad9\u4af2\u4ae8\u4aee\u4ae5\u4ab4\u4ae8\u4ae5\u4aec\u4af9\u4aa1", -1399240036), hl.a("\ue923\ue92f\ue97a\ue97a\ue966\ue96b\ue932", -1615730417), hl.a("\u4666\u466a\u4623\u463a\u4677", -2064038326), hl.a("\u3f8f\u3f83\u3fd1\u3fc6\u3fc2\u3fd0\u3fcc\u3fcd\u3f9e", 326975395), hl.a("\uc4e6\uc4ea\uc4af\uc4b2\uc4af\uc4a9\uc4bf\uc4be\uc4a5\uc4b8\uc49f\uc49f\uc483\uc48e\uc4f7", -219364150), hl.a("\ue1d4\ue1d8\ue19d\ue180\ue19d\ue19b\ue18d\ue18c\ue197\ue18a\ue1b6\ue199\ue195\ue19d\ue1c5", 721936888), hl.a("\u0c7e\u0c72\u0c21\u0c37\u0c20\u0c24\u0c37\u0c20\u0c01\u0c31\u0c3d\u0c22\u0c37\u0c6f", 1909722194), hl.a("\u0d64\u0d68\u0d3b\u0d2d\u0d3a\u0d3e\u0d2d\u0d3a\u0d07\u0d3a\u0d21\u0d2f\u0d21\u0d26\u0d75", -166720184), hl.a("\u4cc5\u4cc9\u4c8d\u4c88\u4c9d\u4c8c\u4cba\u4c9d\u4c88\u4c9b\u4c9d\u4cd4", -230011671), hl.a("\u8ad3\u8adf\u8a9b\u8a9e\u8a8b\u8a9a\u8aba\u8a91\u8a9b\u8ac2", -734557441), hl.a("\u952f\u9523\u9577\u9566\u956e\u9573\u956f\u9562\u9577\u9566\u953e", 838571267), hl.a("\u2f72\u2f7e\u2f2d\u2f37\u2f32\u2f3b\u2f30\u2f2a\u2f63", 127938398), hl.a("\u39e1\u39ed\u39a4\u39bd\u39af\u39ac\u39a3\u39f0", -179947059), hl.a("\u3fd2\u3fde\u3f9f\u3f9d\u3f8a\u3f97\u3f88\u3f9b\u3fc3", 328417278), hl.a("\ue7ed\ue7e1\ue7a8\ue7a5\ue7fc", -598612031)};
+        r = new String[]{",warned", "", "silent_", "", "temp_", "", "ip", "", "Entry(type=", ", uuid=", ", ip=", ", reason=", ", executorUUID=", ", executorName=", ", serverScope=", ", serverOrigin=", ", dateStart=", ", dateEnd=", ", template=", ", silent=", ", ipban=", ", active=", ", id="};
     }
 }
 

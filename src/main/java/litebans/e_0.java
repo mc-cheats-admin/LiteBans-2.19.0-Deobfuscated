@@ -3,10 +3,7 @@ package litebans;
 import java.io.InputStream;
 import litebans.gu_0;
 
-/*
- * Renamed from litebans.e
- */
-public static abstract class e_0
+public abstract class e_0
 extends InputStream {
     private final byte[] a = new byte[1];
     private static final int b = 255;

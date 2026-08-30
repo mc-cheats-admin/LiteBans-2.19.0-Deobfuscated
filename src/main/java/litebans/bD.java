@@ -1,6 +1,6 @@
 package litebans;
 
-public static interface bD {
+public interface bD {
     public String a();
 }
 

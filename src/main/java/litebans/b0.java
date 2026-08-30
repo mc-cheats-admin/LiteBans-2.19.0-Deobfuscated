@@ -14,7 +14,7 @@ import litebans.jv_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class b0
+public final class b0
 extends bm_0 {
     private final di_0 e;
     private static /* synthetic */ String[] f;
@@ -34,12 +34,12 @@ extends bm_0 {
     @Override
     public List suggest(@NotNull jv_0 jv_02, @NotNull String[] stringArray) {
         a_0 a_02 = this.e.z();
-        ew.b(a_02, f[0]);
+        ew.b(a_02, "");
         return ((I)a_02).a(this, this.getName(), jv_02, stringArray);
     }
 
     private static final void a() {
-        f = new String[]{hl.a("", -1809200358)};
+        f = new String[]{""};
     }
 
     static {

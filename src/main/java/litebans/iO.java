@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 import javax.sql.DataSource;
 import litebans.kI;
 
-public static final class iO
+public final class iO
 implements DataSource {
     private static final kI e;
     private static final String a;
@@ -47,7 +47,7 @@ implements DataSource {
             }
             if (this.b == null) {
                 void var7_14;
-                e.c("Registered driver with driverClassName={} was not found, trying direct instantiation.", new Object[]{string2});
+                e.c("Registered driver with driverClassName={} was not found, trying direct ", new Object[]{string2});
                 Object var7_10 = null;
                 ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
                 try {

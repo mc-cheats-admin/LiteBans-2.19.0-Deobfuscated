@@ -12,10 +12,7 @@ import litebans.w;
 import litebans.x_0;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.fG
- */
-public static abstract class fg_0
+public abstract class fg_0
 implements Runnable {
     public static final fo_0 a = new fo_0(null);
     private final di_0 c;

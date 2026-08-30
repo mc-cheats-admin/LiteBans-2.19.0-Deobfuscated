@@ -17,7 +17,7 @@ Serializable {
     private static /* synthetic */ String[] f;
 
     public gh(@NotNull Enum[] enumArray) {
-        ew.a((Object)enumArray, f[0]);
+        ew.a((Object)enumArray, "entries");
         this.e = enumArray;
     }
 
@@ -32,20 +32,20 @@ Serializable {
     }
 
     public boolean c(@NotNull Enum enum_) {
-        ew.a((Object)enum_, f[1]);
+        ew.a((Object)enum_, "element");
         Enum enum_2 = (Enum)lo_0.a((Object[])this.e, enum_.ordinal());
         return enum_2 == enum_;
     }
 
     public int b(@NotNull Enum enum_) {
-        ew.a((Object)enum_, f[2]);
+        ew.a((Object)enum_, "element");
         int n = enum_.ordinal();
         Enum enum_2 = (Enum)lo_0.a((Object[])this.e, n);
         return enum_2 == enum_ ? n : -1;
     }
 
     public int a(@NotNull Enum enum_) {
-        ew.a((Object)enum_, f[3]);
+        ew.a((Object)enum_, "element");
         return this.indexOf(enum_);
     }
 
@@ -83,7 +83,7 @@ Serializable {
     }
 
     private static final void c() {
-        f = new String[]{hl.a("\u98b4\u98bf\u98a5\u98a3\u98b8\u98b4\u98a2", 296982737), hl.a("\uae81\uae88\uae81\uae89\uae81\uae8a\uae90", 1629597412), hl.a("\u75bf\u75b6\u75bf\u75b7\u75bf\u75b4\u75ae", -88246822), hl.a("\ued9c\ued95\ued9c\ued94\ued9c\ued97\ued8d", -945492487)};
+        f = new String[]{"entries", "element", "element", "element"};
     }
 
     static {

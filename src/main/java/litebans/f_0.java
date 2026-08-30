@@ -8,11 +8,8 @@ import litebans.d8;
 import litebans.di_0;
 import litebans.jq_0;
 
-/*
- * Renamed from litebans.F
- */
 @ai_0(a=3)
-public static class f_0
+public class f_0
 extends a_0 {
     public f_0(di_0 di_02) {
         super(di_02);

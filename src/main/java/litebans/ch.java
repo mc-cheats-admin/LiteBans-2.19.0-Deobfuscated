@@ -22,7 +22,7 @@ import litebans.w;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static interface ch
+public interface ch
 extends Closeable {
     public boolean b();
 

@@ -9,7 +9,7 @@ import litebans.iA;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static interface jW {
+public interface jW {
     public CharSequence a();
 
     public int a(@NotNull di_0 var1, @Nullable String[] var2, @NotNull Collection var3, int var4);

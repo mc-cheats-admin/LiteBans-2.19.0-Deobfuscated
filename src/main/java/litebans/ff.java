@@ -7,7 +7,7 @@ import litebans.hl;
 import litebans.jv_0;
 import org.jetbrains.annotations.NotNull;
 
-public static final class ff {
+public final class ff {
     private static /* synthetic */ String[] a;
 
     /*
@@ -29,7 +29,7 @@ public static final class ff {
                     t2 = iterator.next();
                     cy cy2 = (cy)t2;
                     boolean bl2 = false;
-                    if (ew.a((Object)cy2.a(), (Object)a[0])) break block5;
+                    if (ew.a((Object)cy2.a(), (Object)"none")) break block5;
                     jv_0 jv_03 = jv_02;
                     String string = cy2.a();
                     boolean bl3 = false;
@@ -45,7 +45,7 @@ public static final class ff {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\ue126\ue127\ue126\ue12d", -1399332536)};
+        a = new String[]{"none"};
     }
 
     static {

@@ -2,7 +2,7 @@ package litebans;
 
 import java.util.Objects;
 
-public static final class i7 {
+public final class i7 {
     private final long b;
     private final long a;
 

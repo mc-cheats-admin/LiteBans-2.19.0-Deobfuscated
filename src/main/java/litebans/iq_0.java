@@ -3,10 +3,7 @@ package litebans;
 import litebans.cx_0;
 import litebans.dd_0;
 
-/*
- * Renamed from litebans.iQ
- */
-public static class iq_0 {
+public class iq_0 {
     private long k;
     private long f;
     private int d;

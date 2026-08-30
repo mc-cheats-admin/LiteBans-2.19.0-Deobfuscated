@@ -51,7 +51,7 @@ extends FilterInputStream {
 
     @Override
     public int read() {
-        throw new IllegalArgumentException("All reads must be multiple of record size (1024 bytes.");
+        throw new IllegalArgumentException("All reads must be multiple of record size (1024 ");
     }
 
     @Override
@@ -60,7 +60,7 @@ extends FilterInputStream {
             return 0;
         }
         if (n2 % 1024 != 0) {
-            throw new IllegalArgumentException("All reads must be multiple of record size (1024 bytes.");
+            throw new IllegalArgumentException("All reads must be multiple of record size (1024 ");
         }
         int n3 = 0;
         while (n3 < n2) {
@@ -87,7 +87,7 @@ extends FilterInputStream {
         long l5;
         long l7;
         if (l3 % 1024L != 0L) {
-            throw new IllegalArgumentException("All reads must be multiple of record size (1024 bytes.");
+            throw new IllegalArgumentException("All reads must be multiple of record size (1024 ");
         }
         for (l5 = 0L; l5 < l3; l5 += l7) {
             if (this.c == this.f) {

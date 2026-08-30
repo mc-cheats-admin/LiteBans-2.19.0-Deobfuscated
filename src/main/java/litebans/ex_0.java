@@ -12,10 +12,7 @@ import litebans.i2;
 import litebans.kz_0;
 import litebans.y_0;
 
-/*
- * Renamed from litebans.eX
- */
-public static class ex_0
+public class ex_0
 extends Enum
 implements dt_0 {
     public static final ex_0 f = new ej_0(kz_0.c);

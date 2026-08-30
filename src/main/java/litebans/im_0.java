@@ -4,10 +4,7 @@ import java.util.Collection;
 import java.util.List;
 import litebans.gn_0;
 
-/*
- * Renamed from litebans.iM
- */
-public static interface im_0 {
+public interface im_0 {
     public boolean c(String var1);
 
     public Object b(String var1);

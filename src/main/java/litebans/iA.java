@@ -7,7 +7,7 @@ import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class iA {
+public final class iA {
     private final String c;
     private final String e;
     private final String d;
@@ -23,7 +23,7 @@ public static final class iA {
 
     public /* synthetic */ iA(String string, String string2, String string3, Date date, int n, aJ aJ2) {
         if ((n & 4) != 0) {
-            string3 = b[0];
+            string3 = "#";
         }
         if ((n & 8) != 0) {
             date = new Date();
@@ -64,7 +64,7 @@ public static final class iA {
     }
 
     public String toString() {
-        return b[1] + this.c + b[2] + this.e + b[3] + this.d + b[4] + this.a + ')';
+        return "(a=" + this.c + ", uuid=" + this.e + ", ip=" + this.d + ", date=" + this.a + ')';
     }
 
     public int hashCode() {
@@ -96,7 +96,7 @@ public static final class iA {
     }
 
     private static final void g() {
-        b = new String[]{hl.a("\u4def", -22917684), hl.a("\ud0ef\ud0a6\ud0fa", 970951), hl.a("\u6e0a\u6e06\u6e53\u6e53\u6e4f\u6e42\u6e1b", -968528346), hl.a("\u7c63\u7c6f\u7c26\u7c3f\u7c72", -516064177), hl.a("\u73f1\u73fd\u73b9\u73bc\u73a9\u73b8\u73e0", -552045603)};
+        b = new String[]{"#", "(a=", ", uuid=", ", ip=", ", date="};
     }
 
     static {

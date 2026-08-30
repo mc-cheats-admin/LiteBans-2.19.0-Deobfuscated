@@ -6,10 +6,7 @@ import net.minecraft.class_2540;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.Identifier;
 
-/*
- * Renamed from litebans.li
- */
-public static class li_0
+public class li_0
 extends ld_0
 implements CustomPacketPayload {
     private static /* synthetic */ String[] d;
@@ -19,7 +16,7 @@ implements CustomPacketPayload {
     }
 
     private li_0(class_2540 class_25402) {
-        super(d[0], new byte[class_25402.readableBytes()]);
+        super("", new byte[class_25402.readableBytes()]);
         class_25402.readBytes(this.a);
     }
 
@@ -32,7 +29,7 @@ implements CustomPacketPayload {
     }
 
     private static final void a() {
-        d = new String[]{hl.a("", -1238747738)};
+        d = new String[]{""};
     }
 
     static {

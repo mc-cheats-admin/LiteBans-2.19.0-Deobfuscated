@@ -8,7 +8,7 @@ import litebans.c0;
 import litebans.c2;
 import litebans.gi;
 
-public static abstract class lJ
+public abstract class lJ
 implements Statement {
     protected final c2 b;
     final Statement a;

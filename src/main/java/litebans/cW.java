@@ -5,7 +5,7 @@ import litebans.c5;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class cW
+public final class cW
 extends c5 {
     private final Long g;
 

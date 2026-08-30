@@ -12,7 +12,7 @@ import litebans.kx_0;
 import litebans.q_0;
 import org.jetbrains.annotations.NotNull;
 
-public static class bU {
+public class bU {
     public static final dM c;
     private final di_0 d;
     public static final int b;
@@ -22,10 +22,6 @@ public static class bU {
         this.d = di_02;
     }
 
-    /*
-     * Unable to fully structure code
-     * Could not resolve type clashes
-     */
     public ResultSet c(@NotNull bT var1_1) {
         if (var1_1.c().b()) {
             var2_2 = this;
@@ -143,11 +139,11 @@ public static class bU {
         q_0 q_02 = (q_0)this.d.a(q_0.class);
         String string = throwable.getMessage();
         if (string == null) {
-            string = a[0];
+            string = "";
         }
-        if (bz.a((CharSequence)string, (CharSequence)a[1], false, 2, null)) {
+        if (bz.a((CharSequence)string, (CharSequence)"Deadlock found when trying to get lock; try restarting transaction", false, 2, null)) {
             int n2 = n * n * 101;
-            q_02.a((Object)(a[2] + n2 + a[3] + n + a[4]));
+            q_02.a((Object)("executeUpdate() failed due to deadlock. Wait " + n2 + " ms before retrying... (" + n + "/5)"));
             Thread.sleep(n2);
             bl = true;
         } else {
@@ -163,7 +159,7 @@ public static class bU {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("", -1325114741), hl.a("\ud16c\ud14d\ud149\ud14c\ud144\ud147\ud14b\ud143\ud108\ud14e\ud147\ud15d\ud146\ud14c\ud108\ud15f\ud140\ud14d\ud146\ud108\ud15c\ud15a\ud151\ud141\ud146\ud14f\ud108\ud15c\ud147\ud108\ud14f\ud14d\ud15c\ud108\ud144\ud147\ud14b\ud143\ud113\ud108\ud15c\ud15a\ud151\ud108\ud15a\ud14d\ud15b\ud15c\ud149\ud15a\ud15c\ud141\ud146\ud14f\ud108\ud15c\ud15a\ud149\ud146\ud15b\ud149\ud14b\ud15c\ud141\ud147\ud146", 465293608), hl.a("\ube1a\ube07\ube1a\ube1c\ube0a\ube0b\ube1a\ube2a\ube0f\ube1b\ube1e\ube0b\ube1a\ube57\ube56\ube5f\ube19\ube1e\ube16\ube13\ube1a\ube1b\ube5f\ube1b\ube0a\ube1a\ube5f\ube0b\ube10\ube5f\ube1b\ube1a\ube1e\ube1b\ube13\ube10\ube1c\ube14\ube51\ube5f\ube28\ube1e\ube16\ube0b\ube5f", 958250623), hl.a("\u0436\u047b\u0465\u0436\u0474\u0473\u0470\u0479\u0464\u0473\u0436\u0464\u0473\u0462\u0464\u046f\u047f\u0478\u0471\u0438\u0438\u0438\u0436\u043e", -1884683242), hl.a("\uc7d4\uc7ce\uc7d2", -1388853253)};
+        a = new String[]{"", "Deadlock found when trying to get lock; try restarting transaction", "executeUpdate() failed due to deadlock. Wait ", " ms before retrying... (", "/5)"};
     }
 }
 

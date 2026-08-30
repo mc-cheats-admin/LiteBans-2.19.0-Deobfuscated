@@ -11,7 +11,7 @@ import litebans.ew;
 import litebans.hl;
 import litebans.jT;
 
-public static final class j_
+public final class j_
 implements Iterator,
 dG {
     private int f = -1;
@@ -27,9 +27,6 @@ dG {
         this.c = this.d = as_0.a(ee_0.a(ee_02), 0, ee_0.c(ee_02).length());
     }
 
-    /*
-     * Unable to fully structure code
-     */
     private final void c() {
         block5: {
             block6: {
@@ -74,7 +71,7 @@ dG {
             throw new NoSuchElementException();
         }
         eI eI2 = this.g;
-        ew.b(eI2, e[0]);
+        ew.b(eI2, "");
         eI eI3 = eI2;
         this.g = null;
         this.f = -1;
@@ -91,7 +88,7 @@ dG {
 
     @Override
     public void remove() {
-        throw new UnsupportedOperationException(e[1]);
+        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
     public Object next() {
@@ -99,7 +96,7 @@ dG {
     }
 
     private static final void b() {
-        e = new String[]{hl.a("", -1491610173), hl.a("\u34ef\u34d0\u34c5\u34d2\u34c1\u34d4\u34c9\u34cf\u34ce\u3480\u34c9\u34d3\u3480\u34ce\u34cf\u34d4\u3480\u34d3\u34d5\u34d0\u34d0\u34cf\u34d2\u34d4\u34c5\u34c4\u3480\u34c6\u34cf\u34d2\u3480\u34d2\u34c5\u34c1\u34c4\u348d\u34cf\u34ce\u34cc\u34d9\u3480\u34c3\u34cf\u34cc\u34cc\u34c5\u34c3\u34d4\u34c9\u34cf\u34ce", -241421152)};
+        e = new String[]{"", "Operation is not supported for read-only collection"};
     }
 
     static {

@@ -1,6 +1,6 @@
 package litebans;
 
-public static final class k6
+public final class k6
 extends Enum {
     public static final k6 a = new k6("TRANSACTION_NONE", 0, 0);
     public static final k6 f = new k6("TRANSACTION_READ_UNCOMMITTED", 1, 1);

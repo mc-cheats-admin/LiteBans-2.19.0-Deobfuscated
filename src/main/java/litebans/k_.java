@@ -11,12 +11,12 @@ import net.md_5.bungee.api.Callback;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.config.ServerInfo;
 
-public static final class k_
+public final class k_
 implements ServerInfo {
     private static /* synthetic */ String[] a;
 
     public String getName() {
-        return a[0];
+        return "lobby";
     }
 
     public InetSocketAddress getAddress() {
@@ -43,7 +43,7 @@ implements ServerInfo {
     }
 
     public String getPermission() {
-        return a[1];
+        return "";
     }
 
     public boolean canAccess(CommandSender commandSender) {
@@ -62,7 +62,7 @@ implements ServerInfo {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u4a2f\u4a2c\u4a21\u4a21\u4a3a", -1712436669), hl.a("", 1905430262)};
+        a = new String[]{"lobby", ""};
     }
 
     static {

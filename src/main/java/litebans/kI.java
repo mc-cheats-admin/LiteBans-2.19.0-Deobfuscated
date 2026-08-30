@@ -8,7 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
-public static class kI
+public class kI
 extends Logger {
     public static boolean b = false;
     private static Logger a = Logger.getLogger("HikariLogger");

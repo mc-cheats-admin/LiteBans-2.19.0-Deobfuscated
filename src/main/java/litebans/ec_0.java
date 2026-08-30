@@ -6,10 +6,7 @@ import litebans.cp_0;
 import litebans.di_0;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.eC
- */
-public static interface ec_0 {
+public interface ec_0 {
     public di_0 c();
 
     public Object c(@NotNull String var1);

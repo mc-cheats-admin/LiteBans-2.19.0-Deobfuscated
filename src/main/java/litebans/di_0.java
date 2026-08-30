@@ -16,10 +16,7 @@ import litebans.jw_0;
 import litebans.ln;
 import litebans.n_0;
 
-/*
- * Renamed from litebans.di
- */
-public static interface di_0
+public interface di_0
 extends jw_0 {
     public static final n_0[] a = new n_0[0];
 

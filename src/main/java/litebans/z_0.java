@@ -20,10 +20,7 @@ import litebans.n_0;
 import litebans.q_0;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.z
- */
-public static final class z_0
+public final class z_0
 extends n_0 {
     public static final kH b;
     private ScheduledExecutorService c;
@@ -59,7 +56,7 @@ extends n_0 {
             return;
         }
         ThreadPoolExecutor threadPoolExecutor = di_02.x();
-        ew.b(threadPoolExecutor, e[0]);
+        ew.b(threadPoolExecutor, "");
         ThreadFactory threadFactory = threadPoolExecutor.getThreadFactory();
         this.c = Executors.newScheduledThreadPool(1, threadFactory);
         Object[] objectArray = new Object[]{string, di_02};
@@ -67,20 +64,20 @@ extends n_0 {
         ScheduledExecutorService scheduledExecutorService = this.c;
         ew.a(scheduledExecutorService);
         scheduledExecutorService.scheduleAtFixedRate(new ce_0(Arrays.copyOf(objectArray2, objectArray2.length)), 0L, 2L, TimeUnit.DAYS);
-        d = e[1];
+        d = "";
     }
 
     static {
         z_0.d();
         b = new kH(null);
         try {
-            d = e[2];
+            d = "https://litebans.d-n-s.name/update.php";
             d = d + ah_0.b.c();
             d = d + ep.a;
             d = d + ah_0.b.a();
             d = d + dz_0.a;
             d = d + ah_0.b.f();
-            d = d + bz.a(eq.d, e[3], e[4], false, 4, null);
+            d = d + bz.a(eq.d, " + ", "", false, 4, null);
         }
         catch (Throwable throwable) {
             throwable.printStackTrace();
@@ -88,7 +85,7 @@ extends n_0 {
     }
 
     private static final void d() {
-        e = new String[]{hl.a("", -1617062975), hl.a("", -1489641192), hl.a("\udba4\udbb8\udbb8\udbbc\udbbf\udbf6\udbe3\udbe3\udba0\udba5\udbb8\udba9\udbae\udbad\udba2\udbbf\udbe2\udba8\udbe1\udba2\udbe1\udbbf\udbe2\udba2\udbad\udba1\udba9\udbe3\udbb9\udbbc\udba8\udbad\udbb8\udba9\udbe2\udbbc\udba4\udbbc", -1557406772), hl.a("\u44de", 1628914928), hl.a("", -764571793)};
+        e = new String[]{"", "", "https://litebans.d-n-s.name/update.php", " + ", ""};
     }
 }
 

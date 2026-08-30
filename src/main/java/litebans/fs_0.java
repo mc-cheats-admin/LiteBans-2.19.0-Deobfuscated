@@ -13,15 +13,12 @@ import litebans.kL;
 import litebans.q_0;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.fs
- */
-public static final class fs_0
+public final class fs_0
 extends fS {
     private static /* synthetic */ String[] m;
 
     public fs_0(@NotNull di_0 di_02) {
-        super(di_02, m[0], null, 0, 0L, 28, null);
+        super(di_02, "LiteBans", null, 0, 0L, 28, null);
     }
 
     @Override
@@ -44,11 +41,11 @@ extends fS {
 
     @Override
     public void a(@NotNull jv_0 jv_02) {
-        fo_0.a(fg_0.a, jv_02, am.cL.a(m[1], (Object)this.g().get()), null, 4, null);
+        fo_0.a(fg_0.a, jv_02, am.cL.a("amount", (Object)this.g().get()), null, 4, null);
     }
 
     private static final void a() {
-        m = new String[]{hl.a("\udfc8\udfed\udff0\udfe1\udfc6\udfe5\udfea\udff7", 1526128516), hl.a("\u5943\u594f\u594d\u5957\u594c\u5956", -344565470)};
+        m = new String[]{"LiteBans", "amount"};
     }
 
     static {

@@ -21,11 +21,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.hL
- */
-public static class hl_0
+public class hl_0
 implements jv_0 {
     private final BukkitPlugin j;
     private final WeakReference k;
@@ -118,7 +114,7 @@ implements jv_0 {
     @Override
     public String a() {
         String string = this.h;
-        return string == null || string.equals(f[0]) ? (this.h = this.d().toString()) : string;
+        return string == null || string.equals("00000000-0000-0000-0000-000000000000") ? (this.h = this.d().toString()) : string;
     }
 
     @Override
@@ -206,7 +202,7 @@ implements jv_0 {
 
     private final String a(String string) {
         gr_0 gr_02 = (gr_0)new ip_0().a(string);
-        return (String)gr_02.get(f[1]);
+        return (String)gr_02.get("text");
     }
 
     private final String a(CommandSender commandSender) {
@@ -219,7 +215,7 @@ implements jv_0 {
     }
 
     private static final void a() {
-        f = new String[]{hl.a("\uebe4\uebe4\uebe4\uebe4\uebe4\uebe4\uebe4\uebe4\uebf9\uebe4\uebe4\uebe4\uebe4\uebf9\uebe4\uebe4\uebe4\uebe4\uebf9\uebe4\uebe4\uebe4\uebe4\uebf9\uebe4\uebe4\uebe4\uebe4\uebe4\uebe4\uebe4\uebe4\uebe4\uebe4\uebe4\uebe4", -397481004), hl.a("\ude8e\ude9f\ude82\ude8e", 1854791418)};
+        f = new String[]{"00000000-0000-0000-0000-000000000000", "text"};
     }
 
     static {

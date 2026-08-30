@@ -9,10 +9,7 @@ import litebans.s;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.gf
- */
-public static final class gf_0
+public final class gf_0
 extends fg_0 {
     private final String e;
     private final String d;

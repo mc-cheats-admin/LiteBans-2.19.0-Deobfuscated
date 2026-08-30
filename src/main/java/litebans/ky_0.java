@@ -11,10 +11,7 @@ import litebans.iq_0;
 import litebans.ki_0;
 import litebans.lh_0;
 
-/*
- * Renamed from litebans.ky
- */
-public static class ky_0
+public class ky_0
 implements gu_0 {
     private String b;
     private lh_0 p = lh_0.e;

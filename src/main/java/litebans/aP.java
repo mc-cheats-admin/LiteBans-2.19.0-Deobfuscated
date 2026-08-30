@@ -18,10 +18,7 @@ import net.md_5.bungee.api.event.ServerConnectEvent;
 import net.md_5.bungee.event.EventHandler;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class aP
+public final class aP
 implements ly_0 {
     private final di_0 c;
     private final o b;
@@ -32,9 +29,6 @@ implements ly_0 {
         this.b = (o)this.c.a(o.class);
     }
 
-    /*
-     * Unable to fully structure code
-     */
     @EventHandler(priority=-64)
     public final void a(@NotNull ServerConnectEvent var1_1) {
         block12: {
@@ -48,13 +42,13 @@ implements ly_0 {
             }
             var3_3 = v0;
             v1 = this.c.i();
-            ew.b(v1, aP.a[0]);
+            ew.b(v1, "");
             var4_4 = ((k1)v1).b(this.c).getProxy();
             var5_5 = var3_3;
             var6_6 = false;
             ew.a(var2_2);
             var7_7 = var2_2;
-            var8_8 = aP.a[1];
+            var8_8 = "litebans.lockdown.bypass";
             var9_9 = false;
             var10_11 = var7_7;
             var11_14 = false;
@@ -137,7 +131,7 @@ implements ly_0 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("", 1540887676), hl.a("\udb17\udb12\udb0f\udb1e\udb19\udb1a\udb15\udb08\udb55\udb17\udb14\udb18\udb10\udb1f\udb14\udb0c\udb15\udb55\udb19\udb02\udb0b\udb1a\udb08\udb08", -253633669)};
+        a = new String[]{"", "litebans.lockdown.bypass"};
     }
 
     static {

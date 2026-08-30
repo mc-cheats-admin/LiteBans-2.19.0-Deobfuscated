@@ -5,11 +5,7 @@ import litebans.as;
 import litebans.jv_0;
 import litebans.x_0;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.be
- */
-public static final class be_0
+public final class be_0
 implements jv_0 {
     final /* synthetic */ String e;
     final /* synthetic */ String d;

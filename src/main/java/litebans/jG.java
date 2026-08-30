@@ -13,7 +13,7 @@ import litebans.jv_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class jG {
+public final class jG {
     private static /* synthetic */ String[] a;
 
     private jG() {
@@ -28,11 +28,11 @@ public static final class jG {
     }
 
     public final boolean b(@Nullable String string) {
-        return ew.a((Object)string, (Object)this.b()) || bz.a(string, a[0], true) || bz.a(string, a[1], true);
+        return ew.a((Object)string, (Object)this.b()) || bz.a(string, "global", true) || bz.a(string, "all", true);
     }
 
     public final boolean a(@Nullable String string) {
-        return bz.a(string, a[2], true) || bz.a(string, a[3], true);
+        return bz.a(string, "local", true) || bz.a(string, "this", true);
     }
 
     public final eq_0 a(@NotNull jv_0 jv_02, @NotNull List list, @NotNull String string, boolean bl) {
@@ -40,7 +40,7 @@ public static final class jG {
         while (iterator.hasNext()) {
             String string2;
             String string3 = (String)iterator.next();
-            if (string3.length() >= 7 && bz.b((string2 = string3).toLowerCase(Locale.ENGLISH), a[4], false, 2, null)) {
+            if (string3.length() >= 7 && bz.b((string2 = string3).toLowerCase(Locale.ENGLISH), "server:", false, 2, null)) {
                 string2 = string3.substring(7);
                 string2 = this.a(string2, string, jv_02);
                 if (bl) {
@@ -48,7 +48,7 @@ public static final class jG {
                 }
                 return new eq_0(string2);
             }
-            if (ew.a((Object)string3, (Object)a[5])) {
+            if (ew.a((Object)string3, (Object)"--")) {
                 return this.c();
             }
             if (!bz.a((CharSequence)string3, '-', false, 2, null) || !bz.c((CharSequence)string3, 'g', false, 2, null)) continue;
@@ -80,7 +80,7 @@ public static final class jG {
 
     public final String a(@NotNull String string, @NotNull String string2, @NotNull jv_0 jv_02) {
         if (this.b(string)) {
-            return a[6];
+            return "global";
         }
         if (this.a(string)) {
             String string3 = jv_02.h();
@@ -102,7 +102,7 @@ public static final class jG {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u5797\u579c\u579f\u5792\u5791\u579c", 1455052784), hl.a("\ua8cd\ua8c0\ua8c0", -1148802900), hl.a("\ub3ae\ub3ad\ub3a1\ub3a3\ub3ae", 1726002114), hl.a("\udf31\udf2d\udf2c\udf36", 1910169413), hl.a("\u7caa\u7cbc\u7cab\u7caf\u7cbc\u7cab\u7ce3", 831618265), hl.a("\u972d\u972d", 1077516032), hl.a("\u1649\u1642\u1641\u164c\u164f\u1642", -911731154)};
+        a = new String[]{"global", "all", "local", "this", "server:", "--", "global"};
     }
 
     static {

@@ -10,7 +10,7 @@ import litebans.dw;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class g9 {
+public final class g9 {
     private String e;
     private String b;
     private String d;

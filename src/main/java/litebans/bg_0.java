@@ -8,10 +8,7 @@ import litebans.bn_0;
 import litebans.by_0;
 import litebans.ie_0;
 
-/*
- * Renamed from litebans.bG
- */
-public static abstract class bg_0 {
+public abstract class bg_0 {
     public static final Map a = new HashMap();
 
     public static bg_0 a(Class clazz) {

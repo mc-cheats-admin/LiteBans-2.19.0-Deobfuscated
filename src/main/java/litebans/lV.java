@@ -6,7 +6,7 @@ import litebans.c0;
 import litebans.c2;
 import litebans.lJ;
 
-public static abstract class lV
+public abstract class lV
 extends lJ
 implements PreparedStatement {
     lV(c2 c22, PreparedStatement preparedStatement) {

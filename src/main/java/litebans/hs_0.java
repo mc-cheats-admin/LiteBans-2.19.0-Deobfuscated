@@ -2,10 +2,7 @@ package litebans;
 
 import litebans.aJ;
 
-/*
- * Renamed from litebans.hs
- */
-public static final class hs_0 {
+public final class hs_0 {
     private hs_0() {
     }
 

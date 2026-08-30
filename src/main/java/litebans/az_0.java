@@ -4,10 +4,7 @@ import litebans.av;
 import litebans.bj_0;
 import litebans.i2;
 
-/*
- * Renamed from litebans.az
- */
-public static class az_0
+public class az_0
 extends av {
     private int f;
     private bj_0 e;

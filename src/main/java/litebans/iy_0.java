@@ -10,10 +10,7 @@ import litebans.gr_0;
 import litebans.hl;
 import litebans.ip_0;
 
-/*
- * Renamed from litebans.iY
- */
-public static class iy_0 {
+public class iy_0 {
     private String d;
     private String b;
     private String a;
@@ -21,14 +18,14 @@ public static class iy_0 {
 
     public iy_0(String string) {
         JarEntry jarEntry;
-        String string2 = c[0];
+        String string2 = "fabric.mod.json";
         JarInputStream jarInputStream = new JarInputStream(Files.newInputStream(new File(string).toPath(), new OpenOption[0]));
         while ((jarEntry = jarInputStream.getNextJarEntry()) != null) {
             if (!jarEntry.getName().endsWith(string2)) continue;
             gr_0 gr_02 = (gr_0)new ip_0().b(new InputStreamReader(jarInputStream));
-            this.d = (String)gr_02.get(c[1]);
-            this.b = (String)gr_02.get(c[2]);
-            this.a = (String)gr_02.get(c[3]);
+            this.d = (String)gr_02.get("id");
+            this.b = (String)gr_02.get("name");
+            this.a = (String)gr_02.get("version");
             break;
         }
         if (this.d == null) {
@@ -53,7 +50,7 @@ public static class iy_0 {
     }
 
     private static final void a() {
-        c = new String[]{hl.a("\u9d58\u9d5f\u9d5c\u9d4c\u9d57\u9d5d\u9d10\u9d53\u9d51\u9d5a\u9d10\u9d54\u9d4d\u9d51\u9d50", -1975345858), hl.a("\u062b\u0626", -1005124030), hl.a("\u5eea\u5ee5\u5ee9\u5ee1", 2057002628), hl.a("\u066a\u0679\u066e\u066f\u0675\u0673\u0672", -248642020)};
+        c = new String[]{"fabric.mod.json", "id", "name", "version"};
     }
 
     static {

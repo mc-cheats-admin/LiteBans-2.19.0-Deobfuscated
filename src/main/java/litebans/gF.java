@@ -8,7 +8,7 @@ import litebans.hl;
 import litebans.x;
 import org.jetbrains.annotations.Nullable;
 
-public static final class gF {
+public final class gF {
     private static /* synthetic */ String[] a;
 
     private gF() {
@@ -29,7 +29,7 @@ public static final class gF {
         if (ew.a((Object)string2, (Object)string)) return true;
         if (!bl2) return false;
         CharSequence charSequence = string2;
-        if (!new hN(x.b.a(string, a[0], (Object)a[1])).a(charSequence)) return false;
+        if (!new hN(x.b.a(string, "%", (Object)".*")).a(charSequence)) return false;
         return true;
     }
 
@@ -42,7 +42,7 @@ public static final class gF {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u513a", -210349793), hl.a("\u8bea\u8bee", 667323332)};
+        a = new String[]{"%", ".*"};
     }
 
     static {

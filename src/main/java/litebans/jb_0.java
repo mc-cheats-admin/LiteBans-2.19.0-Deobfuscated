@@ -2,10 +2,7 @@ package litebans;
 
 import litebans.eq;
 
-/*
- * Renamed from litebans.jb
- */
-public static class jb_0 {
+public class jb_0 {
     public static final String a() {
         return eq.c;
     }

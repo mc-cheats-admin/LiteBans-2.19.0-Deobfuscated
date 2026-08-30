@@ -26,17 +26,13 @@ import litebans.w;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.fH
- */
-public static class fh_0
+public class fh_0
 extends fB
 implements jW {
     private static /* synthetic */ String[] i;
 
     public fh_0(@NotNull di_0 di_02) {
-        super(i[0], di_02);
+        super("banlist", di_02);
     }
 
     @Override
@@ -46,7 +42,7 @@ implements jW {
 
     @Override
     public CharSequence a() {
-        return i[1];
+        return "";
     }
 
     @Override
@@ -91,7 +87,7 @@ implements jW {
                         d14 += -1.0;
                         d13 += -1.0;
                     }
-                    aa_0.a((fg_0)this, (CharSequence)bF.a((CharSequence)bF.a(ch3.a(am.b4), (CharSequence)i[2], (int)d14), (CharSequence)i[3], (int)d13));
+                    aa_0.a((fg_0)this, (CharSequence)bF.a((CharSequence)bF.a(ch3.a(am.b4), (CharSequence)"page", (int)d14), (CharSequence)"total", (int)d13));
                     fg_0 fg_05 = this;
                     boolean bl7 = false;
                     Collection collection = ch3.a((a_)this.a(), (long)d14, (long)d12, ((q_0)fg_05.h().a(q_0.class)).f().aA());
@@ -129,7 +125,7 @@ implements jW {
     }
 
     private static final void b() {
-        i = new String[]{hl.a("\udd1a\udd19\udd16\udd14\udd11\udd0b\udd0c", -387981960), hl.a("", -632965289), hl.a("\ud749\ud758\ud75e\ud75c", 796317497), hl.a("\u7772\u7769\u7772\u7767\u776a", -166234362)};
+        i = new String[]{"banlist", "", "page", "total"};
     }
 
     static {

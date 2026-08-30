@@ -22,12 +22,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.gC
- */
 @ai_0(a=0)
-public static class gc_0
+public class gc_0
 extends gn_0 {
     private FileConfiguration f;
     private static /* synthetic */ String[] g;
@@ -43,10 +39,10 @@ extends gn_0 {
             this.b(file);
             File file2 = file.getParentFile();
             if (file2 != null && !file2.exists() && !file2.mkdirs()) {
-                throw new IOException(g[0] + file2.getAbsolutePath());
+                throw new IOException("Could not create folder: " + file2.getAbsolutePath());
             }
             if (!file.exists() && !file.createNewFile()) {
-                throw new IOException(g[1] + file.getAbsolutePath());
+                throw new IOException("Could not create file: " + file.getAbsolutePath());
             }
             try {
                 this.a(new FileInputStream(file));
@@ -116,7 +112,7 @@ extends gn_0 {
 
     @Override
     public gn_0 a() {
-        this.f.loadFromString(g[2]);
+        this.f.loadFromString("");
         this.a((Throwable)null);
         return this;
     }
@@ -189,7 +185,7 @@ extends gn_0 {
     }
 
     private static final void a() {
-        g = new String[]{hl.a("\uf6ca\uf6e6\uf6fc\uf6e5\uf6ed\uf6a9\uf6e7\uf6e6\uf6fd\uf6a9\uf6ea\uf6fb\uf6ec\uf6e8\uf6fd\uf6ec\uf6a9\uf6ef\uf6e6\uf6e5\uf6ed\uf6ec\uf6fb\uf6b3\uf6a9", 2079782537), hl.a("\ucd72\ucd5e\ucd44\ucd5d\ucd55\ucd11\ucd5f\ucd5e\ucd45\ucd11\ucd52\ucd43\ucd54\ucd50\ucd45\ucd54\ucd11\ucd57\ucd58\ucd5d\ucd54\ucd0b\ucd11", -1722626767), hl.a("", -1264402614)};
+        g = new String[]{"Could not create folder: ", "Could not create file: ", ""};
     }
 
     static {

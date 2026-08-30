@@ -30,7 +30,7 @@ import java.util.Map;
 import litebans.c2;
 import litebans.lO;
 
-public static final class lH
+public final class lH
 extends lO
 implements Wrapper,
 AutoCloseable,

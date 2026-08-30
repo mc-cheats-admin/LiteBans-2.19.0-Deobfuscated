@@ -3,7 +3,7 @@ package litebans;
 import java.io.Serializable;
 import litebans.hp_0;
 
-public static final class i2
+public final class i2
 implements Cloneable,
 Serializable {
     public static final i2 c;

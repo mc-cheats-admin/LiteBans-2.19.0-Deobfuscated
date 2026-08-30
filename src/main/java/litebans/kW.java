@@ -4,7 +4,7 @@ import litebans.aJ;
 import litebans.lo_0;
 import org.jetbrains.annotations.NotNull;
 
-public static final class kW {
+public final class kW {
     private kW() {
     }
 

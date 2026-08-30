@@ -2,7 +2,7 @@ package litebans;
 
 import java.io.ByteArrayOutputStream;
 
-public static final class ga
+public final class ga
 extends ByteArrayOutputStream {
     ga(int n) {
         super(n);

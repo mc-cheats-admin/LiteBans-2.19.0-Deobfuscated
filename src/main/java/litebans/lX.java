@@ -14,10 +14,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class lX
+public final class lX
 implements cl_0 {
     private final di_0 a;
     private static /* synthetic */ String[] b;
@@ -42,7 +39,7 @@ implements cl_0 {
             new gf_0(this.a, string, string2, string3).run();
         }
         catch (Throwable throwable) {
-            this.a.getLogger().severe(b[0]);
+            this.a.getLogger().severe("Handling AuthMe login event failed. Further events will not be ");
             q_0 q_02 = (q_0)this.a.a(q_0.class);
             w2.a(throwable);
             em_0[] em_0Array = new em_0[]{this};
@@ -66,7 +63,7 @@ implements cl_0 {
     }
 
     private static final void a() {
-        b = new String[]{hl.a("\u2ad0\u2af9\u2af6\u2afc\u2af4\u2af1\u2af6\u2aff\u2ab8\u2ad9\u2aed\u2aec\u2af0\u2ad5\u2afd\u2ab8\u2af4\u2af7\u2aff\u2af1\u2af6\u2ab8\u2afd\u2aee\u2afd\u2af6\u2aec\u2ab8\u2afe\u2af9\u2af1\u2af4\u2afd\u2afc\u2ab6\u2ab8\u2ade\u2aed\u2aea\u2aec\u2af0\u2afd\u2aea\u2ab8\u2afd\u2aee\u2afd\u2af6\u2aec\u2aeb\u2ab8\u2aef\u2af1\u2af4\u2af4\u2ab8\u2af6\u2af7\u2aec\u2ab8\u2afa\u2afd\u2ab8\u2af0\u2af9\u2af6\u2afc\u2af4\u2afd\u2afc\u2ab6", -1412552040)};
+        b = new String[]{"Handling AuthMe login event failed. Further events will not be handled."};
     }
 
     static {

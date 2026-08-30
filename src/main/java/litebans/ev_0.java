@@ -11,10 +11,7 @@ import litebans.as;
 import litebans.x_0;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.ev
- */
-public static final class ev_0
+public final class ev_0
 implements DataSource {
     private final Driver a;
     private final aB b;

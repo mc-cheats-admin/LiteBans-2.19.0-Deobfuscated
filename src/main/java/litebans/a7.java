@@ -5,7 +5,7 @@ import litebans.cU;
 import litebans.iX;
 import litebans.kE;
 
-public static final class a7 {
+public final class a7 {
     public static final kE a;
     private static final long b;
     private static final cU c;

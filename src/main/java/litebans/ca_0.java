@@ -4,10 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-/*
- * Renamed from litebans.ca
- */
-public static final class ca_0
+public final class ca_0
 extends Enum {
     public static final ca_0 a = new ca_0("DES", 0, 26113);
     public static final ca_0 l = new ca_0("RC2pre52", 1, 26114);

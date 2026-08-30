@@ -23,7 +23,7 @@ import litebans.q_0;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class f7
+public final class f7
 extends fg_0 {
     private final String[] e;
     private final boolean f;
@@ -39,7 +39,7 @@ extends fg_0 {
     public void run() {
         Object object;
         if (this.f) {
-            object = new String[]{d[0], d[1]};
+            object = new String[]{"litebans.admin", "litebans.allow"};
             aa_0.a((fg_0)this, (String[])object);
         }
         object = fg_0.a;
@@ -147,17 +147,17 @@ extends fg_0 {
                 charSequence = f72.e[1];
                 switch (((String)charSequence).hashCode()) {
                     case 96417: {
-                        if (((String)charSequence).equals(d[2])) break;
+                        if (((String)charSequence).equals("add")) break;
                         return iv_0.a;
                     }
                     case 94627080: {
-                        if (!((String)charSequence).equals(d[3])) {
+                        if (!((String)charSequence).equals("check")) {
                             return iv_0.a;
                         }
                         break block21;
                     }
                     case -934610812: {
-                        if (!((String)charSequence).equals(d[4])) {
+                        if (!((String)charSequence).equals("remove")) {
                             return iv_0.a;
                         }
                         break block22;
@@ -194,7 +194,7 @@ extends fg_0 {
             aa_0.a((fg_0)f72, kR.a(ch2, (CharSequence)am.cA, (iA)object, false, 2, null));
             return iv_0.a;
         }
-        am am2 = am.c(d[5] + bl);
+        am am2 = am.c("ALLOW_CHECK_" + bl);
         fg_0 fg_02 = f72;
         ew.a(am2);
         aa_0.a(fg_02, kR.a(ch2, (CharSequence)am2, (iA)object, false, 2, null));
@@ -202,7 +202,7 @@ extends fg_0 {
     }
 
     private static final void a() {
-        d = new String[]{hl.a("\ue65d\ue658\ue645\ue654\ue653\ue650\ue65f\ue642\ue61f\ue650\ue655\ue65c\ue658\ue65f", -841554383), hl.a("\u10de\u10db\u10c6\u10d7\u10d0\u10d3\u10dc\u10c1\u109c\u10d3\u10de\u10de\u10dd\u10c5", -1830940494), hl.a("\u80d2\u80d7\u80d7", 1050706099), hl.a("\ued23\ued28\ued25\ued23\ued2b", 242478400), hl.a("\u66b0\u66a7\u66af\u66ad\u66b4\u66a7", 1029334722), hl.a("\u2901\u290c\u290c\u290f\u2917\u291f\u2903\u2908\u2905\u2903\u290b\u291f", -1615451840)};
+        d = new String[]{"litebans.admin", "litebans.allow", "add", "check", "remove", "ALLOW_CHECK_"};
     }
 
     static {

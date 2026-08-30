@@ -33,10 +33,7 @@ import litebans.x_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.gz
- */
-public static final class gz_0
+public final class gz_0
 extends fg_0 {
     private final String d;
     private final String g;
@@ -187,7 +184,7 @@ extends fg_0 {
                         bl7 = false;
                         object9 = object8;
                         boolean bl15 = false;
-                        object2 = ((q_0)((fg_0)object9).h().a(q_0.class)).b().a(e[0]);
+                        object2 = ((q_0)((fg_0)object9).h().a(q_0.class)).b().a("alts");
                         if (((CharSequence)object2).length() > 0) {
                             object9 = ((Object)object10.a((CharSequence)am.cr, ((fW)object8).l(), false)).toString();
                             CharSequence charSequence2 = object10.a(h1.a((CharSequence)((fW)fg_02).c(), (CharSequence)am.dr), ((fW)object8).l(), false);
@@ -213,8 +210,8 @@ extends fg_0 {
     }
 
     public final CharSequence a(@NotNull ch ch2, @NotNull iA iA2, @NotNull fW fW2) {
-        CharSequence charSequence = fW2.f() ? (CharSequence)am.cR.a(e[2], (Object)fW2.k()) : (CharSequence)this.f;
-        return h1.a(h1.a(kR.a(ch2, (CharSequence)am.P.a(e[3], (Object)charSequence), iA2, false, 2, null), (CharSequence)fW2.c()), (CharSequence)am.dr);
+        CharSequence charSequence = fW2.f() ? (CharSequence)am.cR.a("num", (Object)fW2.k()) : (CharSequence)this.f;
+        return h1.a(h1.a(kR.a(ch2, (CharSequence)am.P.a("ip", (Object)charSequence), iA2, false, 2, null), (CharSequence)fW2.c()), (CharSequence)am.dr);
     }
 
     private static final iv_0 a(CharSequence charSequence, ch ch2) {
@@ -223,7 +220,7 @@ extends fg_0 {
     }
 
     private static final void b() {
-        e = new String[]{hl.a("\u5a13\u5a1e\u5a06\u5a01", 1777359474), hl.a("\u052b\u0526\u053e\u0539", -770702006), hl.a("\u8b4b\u8b50\u8b48", -1440838875), hl.a("\u92ef\u92f6", 2113770118)};
+        e = new String[]{"alts", "alts", "num", "ip"};
     }
 
     static {

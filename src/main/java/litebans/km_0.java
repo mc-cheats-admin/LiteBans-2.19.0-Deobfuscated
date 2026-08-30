@@ -4,10 +4,7 @@ import java.util.zip.ZipException;
 import litebans.en_0;
 import litebans.i2;
 
-/*
- * Renamed from litebans.km
- */
-public static final class km_0
+public final class km_0
 implements en_0 {
     private static final i2 e = new i2(51966);
     private static final i2 d = new i2(0);

@@ -7,10 +7,7 @@ import litebans.bD;
 import litebans.ck_0;
 import litebans.jH;
 
-/*
- * Renamed from litebans.ks
- */
-public static class ks_0
+public class ks_0
 extends ArrayList
 implements List,
 bD,

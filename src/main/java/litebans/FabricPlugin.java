@@ -38,10 +38,7 @@ import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static class FabricPlugin
+public class FabricPlugin
 implements DedicatedServerModInitializer,
 di_0 {
     private static final Logger g;
@@ -186,7 +183,7 @@ di_0 {
     @Override
     public gn_0 o() {
         gn_0 gn_02;
-        this.d.o = gn_02 = this.a(new File(this.getDataFolder(), i[0]));
+        this.d.o = gn_02 = this.a(new File(this.getDataFolder(), "config.yml"));
         return gn_02;
     }
 
@@ -253,7 +250,7 @@ di_0 {
         this.f = new iy_0(hb_0.a(iy_0.class));
         String string = this.f.c();
         this.b = new cv_0(LoggerFactory.getLogger((String)string), string);
-        this.h = gk_0.b(this, ((ModContainer)FabricLoader.getInstance().getModContainer(i[1]).get()).getMetadata().getVersion().getFriendlyString().split(i[2])[1]);
+        this.h = gk_0.b(this, ((ModContainer)FabricLoader.getInstance().getModContainer("fabric-api").get()).getMetadata().getVersion().getFriendlyString().split("\\+")[1]);
         ServerLifecycleEvents.SERVER_STARTING.register(this::a);
         ServerLifecycleEvents.SERVER_STOPPING.register(this::b);
         this.d.c();
@@ -263,7 +260,7 @@ di_0 {
         this.h.a(minecraftServer);
         this.e = FabricLoader.getInstance().getModContainer(this.f.c()).orElse(null);
         try {
-            Class.forName(i[3]);
+            Class.forName("me.lucko.fabric.api.permissions.v0.Permissions");
             this.c = true;
         }
         catch (ClassNotFoundException classNotFoundException) {
@@ -311,7 +308,7 @@ di_0 {
     @Override
     public void a(Runnable runnable, long l3) {
         if (l3 < 0L) {
-            throw new IllegalArgumentException(i[4] + l3);
+            throw new IllegalArgumentException("Invalid delay " + l3);
         }
         try {
             this.c().schedule(runnable, l3 * 50L, TimeUnit.MILLISECONDS);
@@ -343,7 +340,7 @@ di_0 {
 
     private final void a(Exception exception) {
         if (this.d.m.get()) {
-            this.getLogger().warning(i[5]);
+            this.getLogger().warning("Startup was cancelled");
             return;
         }
         throw exception;
@@ -404,7 +401,7 @@ di_0 {
     }
 
     private static final void e() {
-        i = new String[]{hl.a("\u6fbc\u6fb0\u6fb1\u6fb9\u6fb6\u6fb8\u6ff1\u6fa6\u6fb2\u6fb3", 697397215), hl.a("\ubcf1\ubcf6\ubcf5\ubce5\ubcfe\ubcf4\ubcba\ubcf6\ubce7\ubcfe", -1597064041), hl.a("\u4add\u4aaa", -1418376575), hl.a("\u1a3e\u1a36\u1a7d\u1a3f\u1a26\u1a30\u1a38\u1a3c\u1a7d\u1a35\u1a32\u1a31\u1a21\u1a3a\u1a30\u1a7d\u1a32\u1a23\u1a3a\u1a7d\u1a23\u1a36\u1a21\u1a3e\u1a3a\u1a20\u1a20\u1a3a\u1a3c\u1a3d\u1a20\u1a7d\u1a25\u1a63\u1a7d\u1a03\u1a36\u1a21\u1a3e\u1a3a\u1a20\u1a20\u1a3a\u1a3c\u1a3d\u1a20", 106895955), hl.a("\u8f43\u8f64\u8f7c\u8f6b\u8f66\u8f63\u8f6e\u8f2a\u8f6e\u8f6f\u8f66\u8f6b\u8f73\u8f2a", 627674890), hl.a("\uc6c5\uc6e2\uc6f7\uc6e4\uc6e2\uc6e3\uc6e6\uc6b6\uc6e1\uc6f7\uc6e5\uc6b6\uc6f5\uc6f7\uc6f8\uc6f5\uc6f3\uc6fa\uc6fa\uc6f3\uc6f2", -1740847466)};
+        i = new String[]{"config.yml", "fabric-api", "\\+", "me.lucko.fabric.api.permissions.v0.Permissions", "Invalid delay ", "Startup was cancelled"};
     }
 }
 

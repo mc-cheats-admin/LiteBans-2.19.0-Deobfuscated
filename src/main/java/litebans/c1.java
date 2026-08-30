@@ -11,7 +11,7 @@ import litebans.lZ;
 import litebans.ll;
 import org.jetbrains.annotations.Nullable;
 
-public static final class c1 {
+public final class c1 {
     public static final lZ b;
     private final byte d;
     private final String e;
@@ -69,7 +69,7 @@ public static final class c1 {
     }
 
     public String toString() {
-        return c[0] + hy_0.b(this.d) + c[1] + this.e + c[2] + this.g + c[3] + this.a + c[4] + this.h + c[5] + this.j + c[6] + this.i + ')';
+        return "Template(id=" + hy_0.b(this.d) + ", name=" + this.e + ", type=" + this.g + ", defaults=" + this.a + ", ipTemplate=" + this.h + ", ladder=" + this.j + ", ladderExpiry=" + this.i + ')';
     }
 
     public int hashCode() {
@@ -130,11 +130,11 @@ public static final class c1 {
         c1.e();
         b = new lZ(null);
         k = new c5(null, null, null, null, ll.e(), ll.e());
-        l = new c1(-1, c[7], a_.h, k, false, ll.e(), 0L, null);
+        l = new c1(-1, "", a_.h, k, false, ll.e(), 0L, null);
     }
 
     private static final void e() {
-        c = new String[]{hl.a("\u3a76\u3a47\u3a4f\u3a52\u3a4e\u3a43\u3a56\u3a47\u3a0a\u3a4b\u3a46\u3a1f", 1070676514), hl.a("\u75d3\u75df\u7591\u759e\u7592\u759a\u75c2", -297241089), hl.a("\udd14\udd18\udd4c\udd41\udd48\udd5d\udd05", 124706104), hl.a("\u43fe\u43f2\u43b6\u43b7\u43b4\u43b3\u43a7\u43be\u43a6\u43a1\u43ef", -2044771374), hl.a("\u659c\u6590\u65d9\u65c0\u65e4\u65d5\u65dd\u65c0\u65dc\u65d1\u65c4\u65d5\u658d", -1899993680), hl.a("\u4cd5\u4cd9\u4c95\u4c98\u4c9d\u4c9d\u4c9c\u4c8b\u4cc4", -1970647815), hl.a("\u1234\u1238\u1274\u1279\u127c\u127c\u127d\u126a\u125d\u1260\u1268\u1271\u126a\u1261\u1225", -175042024), hl.a("", -112761265)};
+        c = new String[]{"Template(id=", ", name=", ", type=", ", defaults=", ", ipTemplate=", ", ladder=", ", ladderExpiry=", ""};
     }
 }
 

@@ -5,10 +5,7 @@ import java.util.NoSuchElementException;
 import java.util.ServiceConfigurationError;
 import java.util.ServiceLoader;
 
-/*
- * Renamed from litebans.jK
- */
-public static class jk_0
+public class jk_0
 implements Iterator {
     private Object b;
     private final Class c;

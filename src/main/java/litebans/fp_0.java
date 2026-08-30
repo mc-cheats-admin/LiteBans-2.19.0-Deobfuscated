@@ -7,11 +7,8 @@ import litebans.jv_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.fp
- */
 @hh_0
-public static final class fp_0
+public final class fp_0
 extends fB {
     private final String j;
     private final a_0 i;

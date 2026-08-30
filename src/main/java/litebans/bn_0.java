@@ -9,10 +9,7 @@ import litebans.bg_0;
 import litebans.cw_0;
 import litebans.ie_0;
 
-/*
- * Renamed from litebans.bn
- */
-public static class bn_0
+public class bn_0
 extends bg_0 {
     private final Gson b = new GsonBuilder().serializeNulls().setPrettyPrinting().registerTypeAdapter(ie_0.class, (Object)new cw_0(this)).create();
 

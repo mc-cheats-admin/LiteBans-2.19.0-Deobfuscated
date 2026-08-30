@@ -25,7 +25,7 @@ import litebans.u;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class ge
+public final class ge
 extends fg_0
 implements Runnable {
     private final AtomicBoolean f = new AtomicBoolean();
@@ -148,7 +148,7 @@ implements Runnable {
                                         while (object.next()) {
                                             Object object7 = object;
                                             boolean bl8 = false;
-                                            byArray[object7.getInt((String)ge.e[0])] = object7.getBytes(e[1]);
+                                            byArray[object7.getInt((String)"id")] = object7.getBytes("b");
                                         }
                                         object6 = iv_0.a;
                                     }
@@ -234,7 +234,7 @@ implements Runnable {
     private final void a(Exception exception, br br2, u u2) {
         char[] cArray;
         Object object;
-        this.h().getLogger().warning(e[2] + ((object = exception.getMessage()) != null && (object = bz.a((CharSequence)object, cArray = new char[]{' '}, false, 0, 6, null)) != null ? (String)object.get(1) : null) + ')');
+        this.h().getLogger().warning("Cache desync, reloading. (error " + ((object = exception.getMessage()) != null && (object = bz.a((CharSequence)object, cArray = new char[]{' '}, false, 0, 6, null)) != null ? (String)object.get(1) : null) + ')');
         br2.a((byte[][])null);
         u2.a(0);
         Object object2 = this;
@@ -248,7 +248,7 @@ implements Runnable {
     }
 
     private static final void a() {
-        e = new String[]{hl.a("\ub4b4\ub4b9", 347714781), hl.a("\uf396", 1270543348), hl.a("\u2f8e\u2fac\u2fae\u2fa5\u2fa8\u2fed\u2fa9\u2fa8\u2fbe\u2fb4\u2fa3\u2fae\u2fe1\u2fed\u2fbf\u2fa8\u2fa1\u2fa2\u2fac\u2fa9\u2fa4\u2fa3\u2faa\u2fe3\u2fed\u2fe5\u2fa8\u2fbf\u2fbf\u2fa2\u2fbf\u2fed", 1060581325)};
+        e = new String[]{"id", "b", "Cache desync, reloading. (error "};
     }
 
     static {

@@ -17,7 +17,7 @@ import litebans.w;
 import litebans.x_0;
 import org.jetbrains.annotations.NotNull;
 
-public static final class s
+public final class s
 extends n_0
 implements Runnable {
     public static final hs_0 d;

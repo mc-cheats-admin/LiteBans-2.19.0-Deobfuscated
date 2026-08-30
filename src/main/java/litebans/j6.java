@@ -9,7 +9,7 @@ import litebans.c0;
 import litebans.c2;
 import litebans.lJ;
 
-public static abstract class j6
+public abstract class j6
 implements DatabaseMetaData {
     protected final c2 b;
     protected final DatabaseMetaData a;

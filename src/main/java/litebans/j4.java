@@ -9,7 +9,7 @@ import java.lang.reflect.Type;
 import litebans.ei_0;
 import litebans.v_0;
 
-public static class j4
+public class j4
 implements JsonSerializer,
 JsonDeserializer {
     public ei_0 a(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) {

@@ -5,9 +5,6 @@ import litebans.ie_0;
 import org.yaml.snakeyaml.nodes.Node;
 import org.yaml.snakeyaml.representer.Represent;
 
-/*
- * Renamed from litebans.hx
- */
 static class hx_0
 implements Represent {
     final /* synthetic */ dw_0 a;

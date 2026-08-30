@@ -5,10 +5,7 @@ import litebans.en_0;
 import litebans.ew_0;
 import litebans.i2;
 
-/*
- * Renamed from litebans.Y
- */
-public static class y_0
+public class y_0
 implements en_0 {
     private i2 b;
     private byte[] c;

@@ -1,6 +1,6 @@
 package litebans;
 
-public static interface iI {
+public interface iI {
     public int b();
 
     public int e();

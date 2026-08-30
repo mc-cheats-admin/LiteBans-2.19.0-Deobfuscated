@@ -10,7 +10,7 @@ import litebans.w;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static class jJ
+public class jJ
 implements CharSequence {
     private final di_0 b;
     private String d;
@@ -24,7 +24,7 @@ implements CharSequence {
         this.d = eq_0.f.c(this.d);
         jJ jJ2 = this;
         boolean bl = false;
-        if (ew.a((Object)jJ2.d, (Object)a[0])) {
+        if (ew.a((Object)jJ2.d, (Object)"__ALL__")) {
             by2 = 0;
         } else {
             String string2 = jJ2.d().u();
@@ -75,19 +75,19 @@ implements CharSequence {
         String string;
         switch (this.c) {
             case 0: {
-                string = a[2];
+                string = "";
                 break;
             }
             case 1: {
-                string = a[3];
+                string = " AND(server_scope='*')";
                 break;
             }
             case 2: {
-                string = a[4];
+                string = " AND(server_scope='*' OR server_scope=?)";
                 break;
             }
             case 3: {
-                string = a[5];
+                string = " AND(server_scope='*' OR server_scope=? OR server_scope=?)";
                 break;
             }
             default: {
@@ -108,7 +108,7 @@ implements CharSequence {
     }
 
     private static final void b() {
-        a = new String[]{hl.a("\ued17\ued17\ued09\ued04\ued04\ued17\ued17", -743838392), hl.a("\u69cb\u69cb\u69d5\u69d8\u69d8\u69cb\u69cb", 227174804), hl.a("", 172800466), hl.a("\u7fdf\u7fbe\u7fb1\u7fbb\u7fd7\u7f8c\u7f9a\u7f8d\u7f89\u7f9a\u7f8d\u7fa0\u7f8c\u7f9c\u7f90\u7f8f\u7f9a\u7fc2\u7fd8\u7fd5\u7fd8\u7fd6", -1821540353), hl.a("\u417b\u411a\u4115\u411f\u4173\u4128\u413e\u4129\u412d\u413e\u4129\u4104\u4128\u4138\u4134\u412b\u413e\u4166\u417c\u4171\u417c\u417b\u4114\u4109\u417b\u4128\u413e\u4129\u412d\u413e\u4129\u4104\u4128\u4138\u4134\u412b\u413e\u4166\u4164\u4172", -810139301), hl.a("\uad33\uad52\uad5d\uad57\uad3b\uad60\uad76\uad61\uad65\uad76\uad61\uad4c\uad60\uad70\uad7c\uad63\uad76\uad2e\uad34\uad39\uad34\uad33\uad5c\uad41\uad33\uad60\uad76\uad61\uad65\uad76\uad61\uad4c\uad60\uad70\uad7c\uad63\uad76\uad2e\uad2c\uad33\uad5c\uad41\uad33\uad60\uad76\uad61\uad65\uad76\uad61\uad4c\uad60\uad70\uad7c\uad63\uad76\uad2e\uad2c\uad3a", -1404916461)};
+        a = new String[]{"__ALL__", "__ALL__", "", " AND(server_scope='*')", " AND(server_scope='*' OR server_scope=?)", " AND(server_scope='*' OR server_scope=? OR server_scope=?)"};
     }
 
     static {

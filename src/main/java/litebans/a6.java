@@ -19,10 +19,7 @@ import net.fabricmc.loader.api.metadata.ModDependency;
 import net.fabricmc.loader.api.metadata.ModMetadata;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class a6
+public final class a6
 implements ec_0 {
     private final di_0 a;
     private static /* synthetic */ String[] b;
@@ -118,7 +115,7 @@ implements ec_0 {
 
     @Override
     public String b() {
-        return FabricLoader.getInstance().getModContainer(b[1]).map(arg_0 -> a6.a(a6::a, arg_0)).orElse(b[2]);
+        return FabricLoader.getInstance().getModContainer("fabric-api").map(arg_0 -> a6.a(a6::a, arg_0)).orElse("null");
     }
 
     @Override
@@ -176,7 +173,7 @@ implements ec_0 {
     }
 
     private static final void a() {
-        b = new String[]{hl.a("", -342404319), hl.a("\u2ecf\u2ec8\u2ecb\u2edb\u2ec0\u2eca\u2e84\u2ec8\u2ed9\u2ec0", -1867764055), hl.a("\u96bb\u96a0\u96b9\u96b9", -686254379)};
+        b = new String[]{"", "fabric-api", "null"};
     }
 
     static {

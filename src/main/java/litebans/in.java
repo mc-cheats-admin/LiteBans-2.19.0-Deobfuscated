@@ -11,9 +11,6 @@ import litebans.kv_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
 static final class in
 implements eE,
 Serializable {
@@ -23,7 +20,7 @@ Serializable {
     private static /* synthetic */ String[] d;
 
     public in(@NotNull e0 e02, @Nullable Object object) {
-        ew.a((Object)e02, d[0]);
+        ew.a((Object)e02, "initializer");
         this.c = e02;
         this.b = kv_0.a;
         Object object2 = object;
@@ -76,7 +73,7 @@ Serializable {
     }
 
     public String toString() {
-        return this.b() ? String.valueOf(this.a()) : d[1];
+        return this.b() ? String.valueOf(this.a()) : "Lazy value not initialized ";
     }
 
     private final Object b() {
@@ -84,7 +81,7 @@ Serializable {
     }
 
     private static final void c() {
-        d = new String[]{hl.a("\u5191\u5196\u5191\u518c\u5191\u5199\u5194\u5191\u5182\u519d\u518a", 1017795064), hl.a("\u37ff\u37d2\u37c9\u37ca\u3793\u37c5\u37d2\u37df\u37c6\u37d6\u3793\u37dd\u37dc\u37c7\u3793\u37da\u37dd\u37da\u37c7\u37da\u37d2\u37df\u37da\u37c9\u37d6\u37d7\u3793\u37ca\u37d6\u37c7\u379d", 632436659)};
+        d = new String[]{"initializer", "Lazy value not initialized yet."};
     }
 
     static {

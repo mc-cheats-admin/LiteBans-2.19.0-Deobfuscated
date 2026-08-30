@@ -80,16 +80,13 @@ import litebans.x;
 import litebans.x_0;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.fK
- */
-public static final class fk_0
+public final class fk_0
 extends fV {
     public static final bC j;
     private static /* synthetic */ String[] k;
 
     public fk_0(@NotNull di_0 di_02) {
-        super(k[0], di_02);
+        super("ban", di_02);
     }
 
     @Override
@@ -116,7 +113,7 @@ extends fV {
                 if (var6_6.g()) {
                     var78_10 = var6_6;
                     var8_11 = false;
-                    var79_15 = fk_0.k[1] + var5_4;
+                    var79_15 = "[c] " + var5_4;
                     var78_10.a((Object)var79_15);
                 }
             }
@@ -149,19 +146,19 @@ extends fV {
                         if (var13_22.b()) {
                             var16_25 = fg_0.a;
                             var17_28 = var3_5.w() != null;
-                            var18_30 = hd_0.c + fk_0.k[2] + hd_0.F + fk_0.k[3];
+                            var18_30 = hd_0.c + "[LiteBans]" + hd_0.F + " Plugin access has been disabled!";
                             var19_32 = var1_1;
-                            var20_35 = fk_0.k[4];
+                            var20_35 = "litebans.admin";
                             var21_39 = false;
                             var19_33 = var19_32.e(var20_35);
                             var20_36 = false;
                             if (var19_33) {
                                 var21_39 = false;
-                                var22_41 = hd_0.c + fk_0.k[5] + hd_0.d + fk_0.k[6];
+                                var22_41 = hd_0.c + "[LiteBans]" + hd_0.d + " If you have bought LiteBans, contact Ruan on SpigotMC + ";
                                 var23_47 = false;
                                 if (var22_41 != null && var22_41.length() > 0 != false) {
                                     var23_48 = var18_30;
-                                    var24_53 = fk_0.k[7];
+                                    var24_53 = "\n";
                                     var25_62 = false;
                                     var23_48 = "" + var23_48 + var24_53;
                                     var24_54 = false;
@@ -265,54 +262,54 @@ extends fV {
                                                                                                     if (!var24_55.g()) ** GOTO lbl183
                                                                                                     var32_136 = var24_55;
                                                                                                     var28_71 = false;
-                                                                                                    v1 = new StringBuilder().append(fk_0.k[8]);
+                                                                                                    v1 = new StringBuilder().append("Timeout after ");
                                                                                                     var29_82 = fB.d;
                                                                                                     var30_104 /* !! */  = this.getName();
                                                                                                     var31_121 = false;
                                                                                                     var33_137 = var30_104 /* !! */ ;
                                                                                                     switch (var33_137.hashCode()) {
                                                                                                         case -1320563219: {
-                                                                                                            if (var33_137.equals(fk_0.k[9])) break;
+                                                                                                            if (var33_137.equals("dupeip")) break;
                                                                                                             ** break;
                                                                                                         }
                                                                                                         case 712910260: {
-                                                                                                            if (!var33_137.equals(fk_0.k[10])) {
+                                                                                                            if (!var33_137.equals("staffhistory")) {
                                                                                                                 ** break;
                                                                                                             }
                                                                                                             ** GOTO lbl171
                                                                                                         }
                                                                                                         case 926934164: {
-                                                                                                            if (!var33_137.equals(fk_0.k[11])) {
+                                                                                                            if (!var33_137.equals("history")) {
                                                                                                                 ** break;
                                                                                                             }
                                                                                                             ** GOTO lbl168
                                                                                                         }
                                                                                                     }
-                                                                                                    var34_155 /* !! */  = new String[]{fk_0.k[12], fk_0.k[13], fk_0.k[14], fk_0.k[15], fk_0.k[16]};
+                                                                                                    var34_155 /* !! */  = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
                                                                                                     v2 = var34_155 /* !! */ ;
                                                                                                     ** GOTO lbl177
 lbl168:
                                                                                                     // 1 sources
 
-                                                                                                    var34_155 /* !! */  = new String[]{fk_0.k[17], fk_0.k[18]};
+                                                                                                    var34_155 /* !! */  = new String[]{"hist", "litebans:history"};
                                                                                                     v2 = var34_155 /* !! */ ;
                                                                                                     ** GOTO lbl177
 lbl171:
                                                                                                     // 1 sources
 
-                                                                                                    var34_155 /* !! */  = new String[]{fk_0.k[19], fk_0.k[20]};
+                                                                                                    var34_155 /* !! */  = new String[]{"staffhist", "litebans:staffhistory"};
                                                                                                     v2 = var34_155 /* !! */ ;
                                                                                                     ** GOTO lbl177
 lbl174:
                                                                                                     // 4 sources
 
-                                                                                                    var34_155 /* !! */  = new String[]{fk_0.k[21] + (String)var30_104 /* !! */ };
+                                                                                                    var34_155 /* !! */  = new String[]{"litebans:" + (String)var30_104 /* !! */ };
                                                                                                     v2 = var34_155 /* !! */ ;
 lbl177:
                                                                                                     // 4 sources
 
                                                                                                     var35_170 = v2;
-                                                                                                    var36_182 /* !! */  = v1.append((Object)c_0.c(new l6(var3_5, Arrays.copyOf(var35_170, ((String[])var35_170).length)).b())).append(fk_0.k[22]).toString();
+                                                                                                    var36_182 /* !! */  = v1.append((Object)c_0.c(new l6(var3_5, Arrays.copyOf(var35_170, ((String[])var35_170).length)).b())).append(" seconds").toString();
                                                                                                     var32_136.a((Object)var36_182 /* !! */ );
                                                                                                     ** GOTO lbl183
 lbl182:
@@ -347,15 +344,15 @@ lbl183:
                                                                                                             ++var24_56;
                                                                                                             continue;
                                                                                                         }
-                                                                                                        if (ew.a((Object)var25_65, (Object)fk_0.k[23]) && (var20_38.F() || !var20_38.I() && var20_38.u().c() != a_.c)) {
+                                                                                                        if (ew.a((Object)var25_65, (Object)"duration:permanent") && (var20_38.F() || !var20_38.I() && var20_38.u().c() != a_.c)) {
                                                                                                             var20_38.b(-2L);
                                                                                                             var20_38.l(false);
                                                                                                             ++var24_56;
                                                                                                             continue;
                                                                                                         }
-                                                                                                        var25_65 = x.b.a(var25_65, fk_0.k[24], (Object)fk_0.k[25]);
+                                                                                                        var25_65 = x.b.a(var25_65, "\\-", (Object)"-");
                                                                                                         var28_73 = var24_56 == var20_38.A().size() - 1;
-                                                                                                        var29_83 = cg_0.a(dk.d.a(), var25_65, fk_0.k[26]);
+                                                                                                        var29_83 = cg_0.a(dk.d.a(), var25_65, "");
                                                                                                         var30_104 /* !! */  = this.a((cz)var20_38, var25_65);
                                                                                                         if (var30_104 /* !! */  == null) ** GOTO lbl214
                                                                                                         this.a((cz)var20_38, (c1)var30_104 /* !! */ );
@@ -399,7 +396,7 @@ lbl233:
                                                                                                             var34_155 /* !! */  = var20_38.t();
                                                                                                             v5 = var34_155 /* !! */ ;
                                                                                                             if (v5 == null || (v5 = (var35_170 = v5.a())) == null) {
-                                                                                                                v5 = fk_0.k[27];
+                                                                                                                v5 = "";
                                                                                                             }
                                                                                                             var20_38.b((String)v5);
                                                                                                             ++var24_56;
@@ -415,7 +412,7 @@ lbl251:
                                                                                                             ++var24_56;
                                                                                                             continue;
                                                                                                         }
-                                                                                                        var33_139 = cg_0.a(dk.d.b(), var25_65, fk_0.k[28]);
+                                                                                                        var33_139 = cg_0.a(dk.d.b(), var25_65, "");
                                                                                                         var34_155 /* !! */  = dk.d.a(var33_139);
                                                                                                         if (var34_155 /* !! */  == null) {
                                                                                                             if (var28_73) {
@@ -433,12 +430,12 @@ lbl251:
                                                                                                             if (var34_155 /* !! */  == null) {
                                                                                                                 if (((CharSequence)var20_38.s()).length() == 0) {
                                                                                                                     var20_38.b(var25_65);
-                                                                                                                    var37_184 /* !! */  = cg_0.a(dk.d.b(), (CharSequence)var35_170, fk_0.k[29]);
+                                                                                                                    var37_184 /* !! */  = cg_0.a(dk.d.b(), (CharSequence)var35_170, "");
                                                                                                                     var38_209 = dk.d.a((String)var37_184 /* !! */ );
                                                                                                                     if (var38_209 == null) {
                                                                                                                         this.b((cz)var20_38, (String)var35_170);
                                                                                                                     } else {
-                                                                                                                        var39_234 = bz.b(cg_0.a(dk.d.a(), (CharSequence)var35_170, fk_0.k[30]));
+                                                                                                                        var39_234 = bz.b(cg_0.a(dk.d.a(), (CharSequence)var35_170, ""));
                                                                                                                         if (var39_234 == null) {
                                                                                                                             this.b((cz)var20_38, (String)var35_170);
                                                                                                                         } else {
@@ -509,15 +506,15 @@ lbl304:
                                                                                                 case 4: 
                                                                                                 case 5: {
                                                                                                     if (var22_45.l()) {
-                                                                                                        var31_125 = new String[]{fk_0.k[31] + var22_45.u(), fk_0.k[32] + var22_45.u(), fk_0.k[33] + var22_45.u()};
+                                                                                                        var31_125 = new String[]{"litebans.temp" + var22_45.u(), "litebans + " + var22_45.u(), "litebans.ip" + var22_45.u()};
                                                                                                         v8 = var31_125;
                                                                                                     } else {
-                                                                                                        var31_125 = new String[]{fk_0.k[34] + var22_45.u(), fk_0.k[35] + var22_45.u()};
+                                                                                                        var31_125 = new String[]{"litebans + " + var22_45.u(), "litebans.ip" + var22_45.u()};
                                                                                                         v8 = var30_104 /* !! */  = var31_125;
                                                                                                     }
                                                                                                     if (var33_141) {
                                                                                                         var31_125 = var23_52;
-                                                                                                        var34_155 /* !! */  = fk_0.k[36] + var22_45.u();
+                                                                                                        var34_155 /* !! */  = "litebans.ip" + var22_45.u();
                                                                                                         var35_171 = false;
                                                                                                         var37_185 = var31_125.d();
                                                                                                         var38_208 = false;
@@ -544,7 +541,7 @@ lbl304:
                                                                                                 }
                                                                                                 case 6: {
                                                                                                     var30_104 /* !! */  = var23_52;
-                                                                                                    var31_125 = fk_0.k[37] + var22_45.u();
+                                                                                                    var31_125 = "litebans + " + var22_45.u();
                                                                                                     var34_156 = false;
                                                                                                     var35_170 = var30_104 /* !! */ .d();
                                                                                                     var37_183 = false;
@@ -570,8 +567,8 @@ lbl304:
                                                                                                 case 1: 
                                                                                                 case 2: 
                                                                                                 case 3: {
-                                                                                                    var30_104 /* !! */  = var22_45.F() != false ? fk_0.k[38] : fk_0.k[39] + var22_45.u();
-                                                                                                    var31_125 = new String[]{var30_104 /* !! */ , (String)var30_104 /* !! */  + fk_0.k[40]};
+                                                                                                    var30_104 /* !! */  = var22_45.F() != false ? "litebans.modify" : "litebans + " + var22_45.u();
+                                                                                                    var31_125 = new String[]{var30_104 /* !! */ , (String)var30_104 /* !! */  + ".own"};
                                                                                                     aa_0.a((fg_0)var23_52, (String[])var31_125);
                                                                                                     v9 = iv_0.a;
                                                                                                     break;
@@ -583,7 +580,7 @@ lbl304:
                                                                                             }
                                                                                             if (!var22_45.I() && var25_66) {
                                                                                                 var28_75 = var23_52;
-                                                                                                var29_85 = fk_0.k[41] + var22_45.u() + fk_0.k[42];
+                                                                                                var29_85 = "litebans.ip" + var22_45.u() + ".wildcard";
                                                                                                 var30_105 = false;
                                                                                                 var31_125 = var28_75.d();
                                                                                                 var34_157 = false;
@@ -613,7 +610,7 @@ lbl304:
                                                                                                 var28_76 = am.cC;
                                                                                                 var29_86 = false;
                                                                                                 if (var24_57) {
-                                                                                                    v10 = am.c(var23_52 + fk_0.k[43]);
+                                                                                                    v10 = am.c(var23_52 + "_USAGE");
                                                                                                 } else {
                                                                                                     switch (eY.a[var23_52.ordinal()]) {
                                                                                                         case 1: {
@@ -658,7 +655,7 @@ lbl304:
                                                                                                 var31_127 = am.aP;
                                                                                                 var33_143 = false;
                                                                                                 if (var24_57) {
-                                                                                                    v12 = am.c(var23_52 + fk_0.k[44]);
+                                                                                                    v12 = am.c(var23_52 + "_USAGE");
                                                                                                 } else {
                                                                                                     switch (eY.a[var23_52.ordinal()]) {
                                                                                                         case 1: {
@@ -707,7 +704,7 @@ lbl304:
                                                                                             if (bz.a(v16, (String)v17, true)) break block272;
                                                                                         }
                                                                                         var24_60 = var1_1;
-                                                                                        var25_67 = new String[]{fk_0.k[45] + var20_38.b(), fk_0.k[46] + var20_38.b() + '.' + var20_38.u().c()};
+                                                                                        var25_67 = new String[]{"litebans.server + " + var20_38.b(), "litebans.server + " + var20_38.b() + '.' + var20_38.u().c()};
                                                                                         var28_77 = false;
                                                                                         var29_88 = var24_60;
                                                                                         var30_107 = Arrays.copyOf(var25_67, var25_67.length);
@@ -760,7 +757,7 @@ lbl304:
                                                                             var20_38.m(true);
                                                                             var28_79 = fg_0.a;
                                                                             var29_93 = var1_1;
-                                                                            var30_109 /* !! */  = fk_0.k[47] + var20_38.u().c();
+                                                                            var30_109 /* !! */  = "litebans.ip" + var20_38.u().c();
                                                                             var31_130 = false;
                                                                             var33_145 = var29_93;
                                                                             var34_160 = false;
@@ -775,7 +772,7 @@ lbl304:
                                                                                 var35_173.a(var30_109 /* !! */ );
                                                                                 throw new as();
                                                                             }
-                                                                            var20_38.a(new iA(fk_0.k[48], fk_0.k[49], var20_38.s(), new Date()));
+                                                                            var20_38.a(new iA("#offline#", "#offline#", var20_38.s(), new Date()));
                                                                             break block278;
                                                                         }
                                                                         if (!var20_38.I()) break block279;
@@ -826,7 +823,7 @@ lbl304:
                                                                         v29 = null;
                                                                     } else {
                                                                         var37_191 = v28;
-                                                                        v29 = new iA(var37_191, var30_112, fk_0.k[50], new Date());
+                                                                        v29 = new iA(var37_191, var30_112, "#", new Date());
                                                                     }
                                                                 } else {
                                                                     v30 = bK.c.a(var30_112);
@@ -841,13 +838,13 @@ lbl304:
                                                                 }
                                                             } else {
                                                                 if (jj_0.a(var30_112)) {
-                                                                    new iA(h1.a(var30_112, 16), var30_112, fk_0.k[51], new Date());
+                                                                    new iA(h1.a(var30_112, 16), var30_112, "#", new Date());
                                                                 }
-                                                                v29 = new iA(h1.a(var30_112, 16), h1.a(var30_112), fk_0.k[52], new Date());
+                                                                v29 = new iA(h1.a(var30_112, 16), h1.a(var30_112), "#", new Date());
                                                             }
                                                             v32 = var28_79 = v29;
                                                             if (v32 == null) {
-                                                                var20_38.a(var13_22, (Object)am.aN.a(fk_0.k[53], (Object)var20_38.s()));
+                                                                var20_38.a(var13_22, (Object)am.aN.a("player", (Object)var20_38.s()));
                                                                 throw new as();
                                                             }
                                                             var20_38.a((iA)v32);
@@ -881,7 +878,7 @@ lbl304:
                                                         var28_79 = var25_68 /* !! */ ;
                                                         var29_99 = false;
                                                         if (var3_5.f().aa()) {
-                                                            var3_5.a((Object)(fk_0.k[54] + var28_79.c()));
+                                                            var3_5.a((Object)("Hiding IP address from broadcast: " + var28_79.c()));
                                                             var28_79.a(am.dk.toString());
                                                         } else {
                                                             var28_79.a(var28_79.c());
@@ -890,7 +887,7 @@ lbl304:
                                                         var28_79 = var25_68 /* !! */ .c();
                                                         v44 = var28_79;
                                                         if (v44 == null) {
-                                                            v44 = fk_0.k[55];
+                                                            v44 = "";
                                                         }
                                                         var20_38.b((String)v44);
                                                     }
@@ -958,15 +955,15 @@ lbl304:
                                                     var35_176 = i1.a(var47_411);
                                                     var37_196 = i1.a(((Number)var31_132.e()).doubleValue());
                                                     var38_216 = Math.min(var30_114.f().size(), var20_38.D() + 1);
-                                                    var3_5.a((Object)(fk_0.k[56] + var30_114.c() + fk_0.k[57] + var30_114.a() + fk_0.k[58] + (String)var35_176 + fk_0.k[59] + var37_196 + fk_0.k[60] + var38_216 + '/' + var29_100.size() + ')'));
+                                                    var3_5.a((Object)("Applying " + var30_114.c() + " template group " + var30_114.a() + ": weight " + (String)var35_176 + " => " + var37_196 + " (" + var38_216 + '/' + var29_100.size() + ')'));
                                                 }
                                                 var30_113 = Math.min(var29_100.size(), var20_38.D() + 1);
-                                                var3_5.a((Object)(fk_0.k[61] + var20_38.g().d() + fk_0.k[62] + var20_38.g().g() + fk_0.k[63] + var30_113 + '/' + var29_100.size()));
+                                                var3_5.a((Object)("Applying " + var20_38.g().d() + " template \"" + var20_38.g().g() + "\" at level " + var30_113 + '/' + var29_100.size()));
                                                 var33_149 = var20_38.L();
-                                                ew.b(var33_149, fk_0.k[64]);
+                                                ew.b(var33_149, "");
                                                 var31_132 = (cW)var33_149;
                                                 var34_164 = var20_38.g().h();
-                                                ew.b(var34_164, fk_0.k[65]);
+                                                ew.b(var34_164, "");
                                                 var33_149 = (cW)var34_164;
                                                 var35_176 = var31_132.a();
                                                 v47 = var35_176;
@@ -1021,7 +1018,7 @@ lbl304:
                                             var20_38.b(v50);
                                             v51 = var34_165 = var20_38.q();
                                             var33_152 = ew.a((Object)(v51 != null ? v51.e() : null), (Object)var1_1.a());
-                                            v52 = var34_165 = var33_152 != false ? fk_0.k[66] : fk_0.k[67];
+                                            v52 = var34_165 = var33_152 != false ? ".own" : "";
                                             if (var20_38.q() != null && !var33_152 && var3_5.f().ac()) {
                                                 var35_178 = fg_0.a;
                                                 v53 = var37_198 = var20_38.q();
@@ -1093,7 +1090,7 @@ lbl304:
                                             var32_136 = var35_179;
                                             var38_221 = false;
                                             v61 = var20_38.q();
-                                            var36_182 /* !! */  = fk_0.k[68] + (v61 != null ? v61.e() : null) + ' ' + var1_1.a() + fk_0.k[69] + var33_152 + ')';
+                                            var36_182 /* !! */  = "[0xff] " + (v61 != null ? v61.e() : null) + ' ' + var1_1.a() + " (x=" + var33_152 + ')';
                                             var32_136.a((Object)var36_182 /* !! */ );
                                         }
                                         if (var20_38.F()) {
@@ -1105,7 +1102,7 @@ lbl304:
                                             }
                                             var35_179 = v62;
                                             var37_201 = this;
-                                            var38_222 = fk_0.k[70] + (String)var34_165;
+                                            var38_222 = "litebans.modify" + (String)var34_165;
                                             var39_242 = false;
                                             var40_261 = var37_201.d();
                                             var41_288 = false;
@@ -1162,7 +1159,7 @@ lbl304:
                                             }
                                             var35_179 = v64;
                                             var37_202 = this;
-                                            var38_223 = fk_0.k[71] + (String)var34_165;
+                                            var38_223 = "litebans.delete" + (String)var34_165;
                                             var39_243 = false;
                                             var40_262 = var37_202.d();
                                             var41_290 = false;
@@ -1187,7 +1184,7 @@ lbl304:
                                             var20_38.a(var13_22, am.af);
                                         } else {
                                             var35_179 = this;
-                                            var37_203 = fk_0.k[72] + var20_38.u() + (String)var34_165;
+                                            var37_203 = "litebans + " + var20_38.u() + (String)var34_165;
                                             var38_224 = false;
                                             var39_244 = var35_179.d();
                                             var40_263 = false;
@@ -1242,16 +1239,16 @@ lbl304:
                                                     if (var39_244.a(var40_265)) {
                                                         var42_318 = var39_244;
                                                         var43_345 = false;
-                                                        var44_366 = fk_0.k[73] + var37_203.u().c() + fk_0.k[74] + var25_68 /* !! */ .a() + fk_0.k[75] + var25_68 /* !! */ .c() + fk_0.k[76] + var37_203.b() + fk_0.k[77] + var25_68 /* !! */ .d() + fk_0.k[78];
+                                                        var44_366 = "No active " + var37_203.u().c() + " found for uuid:" + var25_68 /* !! */ .a() + " / ip:" + var25_68 /* !! */ .c() + " on server:" + var37_203.b() + " (target: '" + var25_68 /* !! */ .d() + "')";
                                                         var45_385 = ew.a((Object)var37_203.s(), (Object)var25_68 /* !! */ .a()) == false;
                                                         var46_401 = false;
                                                         if (var45_385) {
                                                             var51_417 = false;
-                                                            var52_427 = fk_0.k[79];
+                                                            var52_427 = "Try targeting by UUID instead of name + ";
                                                             var53_435 = false;
                                                             if (var52_427.length() > 0 != false) {
                                                                 var53_436 = var44_366;
-                                                                var56_441 = fk_0.k[80];
+                                                                var56_441 = "\n";
                                                                 var57_448 = false;
                                                                 var53_436 = "" + var53_436 + var56_441;
                                                                 var56_442 = false;
@@ -1287,7 +1284,7 @@ lbl304:
                                                     var39_244 = v67;
                                                     if (var37_203.u() == a_.d && !var25_68 /* !! */ .b() && var24_61 && !jj_0.a(var25_68 /* !! */ .g())) {
                                                         var40_266 = var1_1;
-                                                        var41_293 = fk_0.k[81];
+                                                        var41_293 = "litebans.unban.queue";
                                                         var43_346 = false;
                                                         if (var40_266.e(var41_293) && !var37_203.K()) {
                                                             this.a((d9)var25_68 /* !! */ );
@@ -1337,12 +1334,12 @@ lbl304:
                                                     var56_443 = new CharSequence[2];
                                                     v73 = var51_418.a();
                                                     if (v73 == null) {
-                                                        v73 = fk_0.k[82];
+                                                        v73 = "";
                                                     }
                                                     var56_443[0] = bK.c.d(v73);
-                                                    var56_443[1] = var45_386.h() != false ? String.valueOf(var51_418.c()) : fk_0.k[83];
+                                                    var56_443[1] = var45_386.h() != false ? String.valueOf(var51_418.c()) : "";
                                                     var57_449 = false;
-                                                    var59_459 = lo_0.a(var56_443, (CharSequence)fk_0.k[84], null, null, 0, null, null, 62, null);
+                                                    var59_459 = lo_0.a(var56_443, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
                                                     aa_0.a((ch)var42_320, var58_456, var59_459, null, null, 12, null);
                                                 }
                                                 v74 = var13_22.e();
@@ -1402,12 +1399,12 @@ lbl304:
                                                         var51_418 = new CharSequence[2];
                                                         v78 = var44_368.a();
                                                         if (v78 == null) {
-                                                            v78 = fk_0.k[85];
+                                                            v78 = "";
                                                         }
                                                         var51_418[0] = bK.c.d(v78);
-                                                        var51_418[1] = var42_321.h() != false ? String.valueOf(var44_368.c()) : fk_0.k[86];
+                                                        var51_418[1] = var42_321.h() != false ? String.valueOf(var44_368.c()) : "";
                                                         var52_428 = false;
-                                                        var60_462 = lo_0.a(var51_418, (CharSequence)fk_0.k[87], null, null, 0, null, null, 62, null);
+                                                        var60_462 = lo_0.a(var51_418, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
                                                         aa_0.a((ch)var32_136, (ij)var36_182 /* !! */ , var60_462, null, null, 12, null);
                                                     }
                                                 }
@@ -1455,7 +1452,7 @@ lbl304:
                                             var41_297 = kR.a((ch)var33_154, var39_246.w(), var39_246.p(), var39_246.u(), var39_246.m(), false, false, 48, null);
                                             if (var41_297 == null || eq_0.f.b(var41_297.m()) && !eq_0.f.b(var39_246.m()) || var41_297.h() && !var39_246.h() || var41_297.h() && var39_246.h() && (!ew.a((Object)var39_246.w(), (Object)var41_297.w()) || !ew.a((Object)var39_246.p(), (Object)var41_297.p()))) ** GOTO lbl1262
                                             var42_322 = var31_134.d();
-                                            var43_349 = fk_0.k[88];
+                                            var43_349 = "litebans.override";
                                             var44_357 = false;
                                             var45_388 = var42_322;
                                             var46_403 = false;
@@ -1499,13 +1496,13 @@ lbl1249:
                                             kR.a((ch)var33_154, var19_34.d(), var19_34.H(), var39_246.b(), var41_297, false, 16, null);
                                             v81 = kR.a((ch)var33_154, (CharSequence)(var39_246.u() == a_.h ? am.dB : am.u), var41_297, false, 2, null);
                                             var43_349 = new CharSequence[4];
-                                            var43_349[0] = fk_0.k[89];
+                                            var43_349[0] = "bannedPlayer";
                                             ew.a(var34_168 /* !! */ );
-                                            var43_349[2] = fk_0.k[90];
+                                            var43_349[2] = "mutedPlayer";
                                             var43_349[3] = var34_168 /* !! */ ;
                                             var42_324 = kR.a((ch)var33_154, (CharSequence)h1.a(v81, var43_349), var37_204, false, 2, null);
                                             if (bz.c(var42_324, '#', false, 2, null)) {
-                                                var42_324 = x.b.a(var42_324, fk_0.k[91], (Object)var39_246.p());
+                                                var42_324 = x.b.a(var42_324, "#offline#", (Object)var39_246.p());
                                             }
                                             fo_0.a(fg_0.a, var31_134.d(), var42_324, null, 4, null);
                                             aa_0.a((ch)var33_154, var41_297, true, var24_61);
@@ -1558,7 +1555,7 @@ lbl1262:
                                                     throw new as();
                                                 }
                                             }
-                                            var35_180.a((ch)var33_154, (CharSequence)bF.a(v83, (CharSequence)fk_0.k[92], var35_180.h()));
+                                            var35_180.a((ch)var33_154, (CharSequence)bF.a(v83, (CharSequence)"tempDuration", var35_180.h()));
                                             switch (b7.a[var30_117.u().ordinal()]) {
                                                 case 1: {
                                                     aa_0.a((ch)var33_154, var30_117, var35_180.D());
@@ -1615,14 +1612,14 @@ lbl1262:
                                                         if (var43_351.w() == null) {
                                                             var46_408 = (fg_0)var40_272;
                                                             var51_423 = false;
-                                                            q_0.a((q_0)var46_408.h().a(q_0.class), (Object)fk_0.k[93], 0, 2, null);
+                                                            q_0.a((q_0)var46_408.h().a(q_0.class), (Object)"null", 0, 2, null);
                                                         } else {
                                                             var46_409 = var41_299.a(var43_351, 512);
                                                             var51_422 = var41_299.c(var43_351.w());
                                                             if (var51_422 == null) {
                                                                 var52_431 = (fg_0)var40_272;
                                                                 var53_439 = 0;
-                                                                q_0.a((q_0)var52_431.h().a(q_0.class), (Object)fk_0.k[94], 0, 2, null);
+                                                                q_0.a((q_0)var52_431.h().a(q_0.class), (Object)"null", 0, 2, null);
                                                             } else {
                                                                 var52_432 = var51_422.a();
                                                                 var53_439 = var46_409.size();
@@ -1634,7 +1631,7 @@ lbl1262:
                                                                 if (var56_447.a(var57_453)) {
                                                                     var59_461 = var56_447;
                                                                     var65_467 = false;
-                                                                    var59_461.a((Object)(fk_0.k[95] + var53_439));
+                                                                    var59_461.a((Object)("Active warnings: " + var53_439));
                                                                 }
                                                                 var57_454 = (fg_0)var40_272;
                                                                 var58_458 = 0;
@@ -1653,12 +1650,12 @@ lbl1262:
                                                                         var66_470[0] = var66_470[0].substring(0, var66_470[0].length() - 1);
                                                                     }
                                                                     if (!bz.c((CharSequence)var65_468, ':', false, 2, null) || !jj_0.a.d(var66_470[0])) {
-                                                                        var41_299.e().getLogger().warning(fk_0.k[96] + (String)var65_468 + fk_0.k[97]);
+                                                                        var41_299.e().getLogger().warning("Warning action is invalid (bad format): '" + (String)var65_468 + "'. Ignored + ");
                                                                         continue;
                                                                     }
                                                                     var68_473 = Integer.parseInt(var66_470[0]);
                                                                     if (var68_473 < 1 && !var67_471) {
-                                                                        var41_299.e().getLogger().warning(fk_0.k[98] + var68_473 + fk_0.k[99] + (String)var65_468 + fk_0.k[100]);
+                                                                        var41_299.e().getLogger().warning("Warning action is invalid (threshold " + var68_473 + " < 1): '" + (String)var65_468 + "'. Ignored + ");
                                                                         continue;
                                                                     }
                                                                     if (var53_439 != var68_473 && (!var67_471 || var53_439 <= var68_473)) continue;
@@ -1670,7 +1667,7 @@ lbl1262:
                                                                         var72_479 = var70_475.length();
                                                                         var69_474.a = var70_475.subSequence(var71_477, var72_479).toString();
                                                                     }
-                                                                    if (bF.b((CharSequence)var69_474.a, fk_0.k[101])) {
+                                                                    if (bF.b((CharSequence)var69_474.a, "list")) {
                                                                         var70_475 = new StringBuilder();
                                                                         var71_478 = var46_409;
                                                                         var72_479 = 0;
@@ -1679,9 +1676,9 @@ lbl1262:
                                                                             var76_485 = false;
                                                                             var70_475.append('\n').append(kR.a((ch)var41_299, (CharSequence)am.bC, var75_484, false, 2, null));
                                                                         }
-                                                                        var69_474.a = bF.a((CharSequence)var69_474.a, (CharSequence)fk_0.k[102], var70_475);
+                                                                        var69_474.a = bF.a((CharSequence)var69_474.a, (CharSequence)"list", var70_475);
                                                                     }
-                                                                    var69_474.a = kR.a((ch)var41_299, (CharSequence)bF.a(kR.a((ch)var41_299, (CharSequence)var69_474.a, var43_351, false, 2, null), (CharSequence)fk_0.k[103], (Object)var52_432), (iA)var51_422, false, 2, null);
+                                                                    var69_474.a = kR.a((ch)var41_299, (CharSequence)bF.a(kR.a((ch)var41_299, (CharSequence)var69_474.a, var43_351, false, 2, null), (CharSequence)"player", (Object)var52_432), (iA)var51_422, false, 2, null);
                                                                     var70_475 = (fg_0)var40_272;
                                                                     var71_477 = 0;
                                                                     ((q_0)var70_475.h().a(q_0.class)).a(10, var69_474.a);
@@ -1761,7 +1758,7 @@ lbl1262:
                                                         if (var40_274) {
                                                             var77_486 = var39_249;
                                                             var42_328 = false;
-                                                            var77_486.a(am.U.a(fk_0.k[104], (Object)var38_231.c()));
+                                                            var77_486.a(am.U.a("list", (Object)var38_231.c()));
                                                             throw new as();
                                                         }
                                                         var39_249 = fg_0.a;
@@ -1830,12 +1827,12 @@ lbl1262:
                                             var43_356 = new CharSequence[2];
                                             v89 = var40_279.a();
                                             if (v89 == null) {
-                                                v89 = fk_0.k[108];
+                                                v89 = "";
                                             }
                                             var43_356[0] = bK.c.d(v89);
-                                            var43_356[1] = var30_117.h() != false ? String.valueOf(var40_279.c()) : fk_0.k[109];
+                                            var43_356[1] = var30_117.h() != false ? String.valueOf(var40_279.c()) : "";
                                             var44_375 = false;
-                                            var60_464 = lo_0.a(var43_356, (CharSequence)fk_0.k[110], null, null, 0, null, null, 62, null);
+                                            var60_464 = lo_0.a(var43_356, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
                                             aa_0.a((ch)var32_136, (ij)var36_182 /* !! */ , var60_464, null, null, 12, null);
                                         }
                                         throw var31_135;
@@ -1843,12 +1840,12 @@ lbl1262:
                                     var42_330 = new CharSequence[2];
                                     v90 = var39_250.a();
                                     if (v90 == null) {
-                                        v90 = fk_0.k[105];
+                                        v90 = "";
                                     }
                                     var42_330[0] = bK.c.d(v90);
-                                    var42_330[1] = var30_117.h() != false ? String.valueOf(var39_250.c()) : fk_0.k[106];
+                                    var42_330[1] = var30_117.h() != false ? String.valueOf(var39_250.c()) : "";
                                     var43_355 = false;
-                                    var60_463 = lo_0.a(var42_330, (CharSequence)fk_0.k[107], null, null, 0, null, null, 62, null);
+                                    var60_463 = lo_0.a(var42_330, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
                                     aa_0.a((ch)var32_136, (ij)var36_182 /* !! */ , var60_463, null, null, 12, null);
                                 }
                                 var20_38.a(aI.e);
@@ -1934,7 +1931,7 @@ lbl1262:
             fg_02 = (fg_0)object;
             bl2 = false;
             ((o)fg_02.h().a(o.class)).f().clear();
-            ((fg_0)object).h().getLogger().warning(k[111]);
+            ((fg_0)object).h().getLogger().warning("Too many unbanned players in queue! Cleared list to prevent memory ");
         }
         if ((string2 = d92.g()) == null || (string2 = (string = string2).toLowerCase(Locale.ENGLISH)) == null) {
             return;
@@ -1963,7 +1960,7 @@ lbl1262:
     }
 
     private static final void b() {
-        k = new String[]{hl.a("\u946f\u946c\u9463", 1106547725), hl.a("\u73e8\u73d0\u73ee\u7393", -1510247501), hl.a("\uefed\ueffa\uefdf\uefc2\uefd3\ueff4\uefd7\uefd8\uefc5\uefeb", -910233674), hl.a("\ud1d7\ud1a7\ud19b\ud182\ud190\ud19e\ud199\ud1d7\ud196\ud194\ud194\ud192\ud184\ud184\ud1d7\ud19f\ud196\ud184\ud1d7\ud195\ud192\ud192\ud199\ud1d7\ud193\ud19e\ud184\ud196\ud195\ud19b\ud192\ud193\ud1d6", -1314991625), hl.a("\ud30b\ud30e\ud313\ud302\ud305\ud306\ud309\ud314\ud349\ud306\ud303\ud30a\ud30e\ud309", 916312935), hl.a("\ub068\ub07f\ub05a\ub047\ub056\ub071\ub052\ub05d\ub040\ub06e", 1084796979), hl.a("\u7851\u7838\u7817\u7851\u7808\u781e\u7804\u7851\u7819\u7810\u7807\u7814\u7851\u7813\u781e\u7804\u7816\u7819\u7805\u7851\u783d\u7818\u7805\u7814\u7833\u7810\u781f\u7802\u785d\u7851\u7812\u781e\u781f\u7805\u7810\u7812\u7805\u7851\u7823\u7804\u7810\u781f\u7851\u781e\u781f\u7851\u7822\u7801\u7818\u7816\u781e\u7805\u783c\u7832\u785f", -509577103), hl.a("\ue1d6", 908190172), hl.a("\ue925\ue918\ue91c\ue914\ue91e\ue904\ue905\ue951\ue910\ue917\ue905\ue914\ue903\ue951", -1727796879), hl.a("\u6643\u6652\u6657\u6642\u664e\u6657", 1167943207), hl.a("\ud2d4\ud2d3\ud2c6\ud2c1\ud2c1\ud2cf\ud2ce\ud2d4\ud2d3\ud2c8\ud2d5\ud2de", 1641599655), hl.a("\u05bb\u05ba\u05a0\u05a7\u05bc\u05a1\u05aa", 13174227), hl.a("\u69e6\u69eb\u69f3\u69f4", -951948921), hl.a("\u62cc\u62c9\u62d4\u62c5\u62c2\u62c1\u62ce\u62d3\u629a\u62c1\u62cc\u62d4\u62d3", -780115296), hl.a("\u161c\u1617\u161a\u161c\u1614\u161e\u1613\u160b\u160c", 1583945343), hl.a("\u1868\u186d\u1870\u1861\u1866\u1865\u186a\u1877\u183e\u1867\u186c\u1861\u1867\u186f\u1865\u1868\u1870\u1877", -1477634044), hl.a("\u2d90\u2d95\u2d88\u2d99\u2d9e\u2d9d\u2d92\u2d8f\u2dc6\u2d98\u2d89\u2d8c\u2d99\u2d95\u2d8c", 1305226748), hl.a("\ufb04\ufb05\ufb1f\ufb18", 926022508), hl.a("\u6751\u6754\u6749\u6758\u675f\u675c\u6753\u674e\u6707\u6755\u6754\u674e\u6749\u6752\u674f\u6744", -471505091), hl.a("\u2490\u2497\u2482\u2485\u2485\u248b\u248a\u2490\u2497", -374201117), hl.a("\uc953\uc956\uc94b\uc95a\uc95d\uc95e\uc951\uc94c\uc905\uc94c\uc94b\uc95e\uc959\uc959\uc957\uc956\uc94c\uc94b\uc950\uc94d\uc946", 1665321279), hl.a("\u78fb\u78fe\u78e3\u78f2\u78f5\u78f6\u78f9\u78e4\u78ad", 1521514647), hl.a("\u8d95\u8dc6\u8dd0\u8dd6\u8dda\u8ddb\u8dd1\u8dc6", -694710859), hl.a("\u66cd\u66dc\u66db\u66c8\u66dd\u66c0\u66c6\u66c7\u6693\u66d9\u66cc\u66db\u66c4\u66c8\u66c7\u66cc\u66c7\u66dd", -2134939991), hl.a("\u30dd\u30ac", -979816319), hl.a("\u0967", 1656228170), hl.a("", -408335398), hl.a("", -1817206363), hl.a("", 109283925), hl.a("", -1596420258), hl.a("", -158416211), hl.a("\uedb6\uedb3\uedae\uedbf\uedb8\uedbb\uedb4\ueda9\uedf4\uedae\uedbf\uedb7\uedaa", -503190054), hl.a("\u4969\u496c\u4971\u4960\u4967\u4964\u496b\u4976\u492b", 1608993029), hl.a("\u1684\u1681\u169c\u168d\u168a\u1689\u1686\u169b\u16c6\u1681\u1698", 971445992), hl.a("\u4e88\u4e8d\u4e90\u4e81\u4e86\u4e85\u4e8a\u4e97\u4eca", -17412380), hl.a("\u2161\u2164\u2179\u2168\u216f\u216c\u2163\u217e\u2123\u2164\u217d", 1882202381), hl.a("\u2ade\u2adb\u2ac6\u2ad7\u2ad0\u2ad3\u2adc\u2ac1\u2a9c\u2adb\u2ac2", -873321806), hl.a("\u85b2\u85b7\u85aa\u85bb\u85bc\u85bf\u85b0\u85ad\u85f0", 808355294), hl.a("\u1216\u1213\u120e\u121f\u1218\u121b\u1214\u1209\u1254\u1217\u1215\u121e\u1213\u121c\u1203", -476114310), hl.a("\u3836\u3833\u382e\u383f\u3838\u383b\u3834\u3829\u3874", -1826342822), hl.a("\ud195\ud1d4\ud1cc\ud1d5", -874065477), hl.a("\u34fb\u34fe\u34e3\u34f2\u34f5\u34f6\u34f9\u34e4\u34b9\u34fe\u34e7", 2130654359), hl.a("\uc979\uc920\uc93e\uc93b\uc933\uc934\uc936\uc925\uc933", -2002400937), hl.a("\uc0ed\uc0e7\uc0e1\uc0f3\uc0f5\uc0f7", 615891122), hl.a("\ua68b\ua681\ua687\ua695\ua693\ua691", 913417940), hl.a("\ua64e\ua64b\ua656\ua647\ua640\ua643\ua64c\ua651\ua60c\ua651\ua647\ua650\ua654\ua647\ua650\ua60c", 748660258), hl.a("\uc25b\uc25e\uc243\uc252\uc255\uc256\uc259\uc244\uc219\uc244\uc252\uc245\uc241\uc252\uc245\uc219", 265667127), hl.a("\ub565\ub560\ub57d\ub56c\ub56b\ub568\ub567\ub57a\ub527\ub560\ub579", 491697417), hl.a("\u62fa\u62b6\u62bf\u62bf\u62b5\u62b0\u62b7\u62bc\u62fa", 1493918425), hl.a("\u41e0\u41ac\u41a5\u41a5\u41af\u41aa\u41ad\u41a6\u41e0", 333005251), hl.a("\ua63a", -604592615), hl.a("\u7261", -746950078), hl.a("\u9520", -1943956221), hl.a("\uca63\uca7f\uca72\uca6a\uca76\uca61", -1796355565), hl.a("\u2ba5\u2b84\u2b89\u2b84\u2b83\u2b8a\u2bcd\u2ba4\u2bbd\u2bcd\u2b8c\u2b89\u2b89\u2b9f\u2b88\u2b9e\u2b9e\u2bcd\u2b8b\u2b9f\u2b82\u2b80\u2bcd\u2b8f\u2b9f\u2b82\u2b8c\u2b89\u2b8e\u2b8c\u2b9e\u2b99\u2bd7\u2bcd", -1382274067), hl.a("", 800010594), hl.a("\u3aab\u3a9a\u3a9a\u3a86\u3a93\u3a83\u3a84\u3a8d\u3aca", -745522454), hl.a("\u25f9\u25ad\u25bc\u25b4\u25a9\u25b5\u25b8\u25ad\u25bc\u25f9\u25be\u25ab\u25b6\u25ac\u25a9\u25f9", 1242310105), hl.a("\u46fd\u46e7\u46b0\u46a2\u46ae\u46a0\u46af\u46b3\u46e7", 1502037703), hl.a("\ua980\ua99d\ua99e\ua980", -1676957280), hl.a("\u33ad\u33a5", 633877389), hl.a("\u2700\u2731\u2731\u272d\u2738\u2728\u272f\u2726\u2761", 1486104385), hl.a("\ufe83\ufed7\ufec6\ufece\ufed3\ufecf\ufec2\ufed7\ufec6\ufe83\ufe81", 586415779), hl.a("\udd5b\udd59\udd18\udd0d\udd59\udd15\udd1c\udd0f\udd1c\udd15\udd59", 1331092857), hl.a("", -1673249004), hl.a("", 266069684), hl.a("\u55dd\u559c\u5584\u559d", 2019579379), hl.a("", 384783263), hl.a("\u900a\u9061\u9029\u9037\u9037\u900c\u9071", 336040017), hl.a("\ub850\ub858\ub808\ub84d", 1943648368), hl.a("\u2cc1\u2cc4\u2cd9\u2cc8\u2ccf\u2ccc\u2cc3\u2cde\u2c83\u2cc0\u2cc2\u2cc9\u2cc4\u2ccb\u2cd4", 79703213), hl.a("\ua70e\ua70b\ua716\ua707\ua700\ua703\ua70c\ua711\ua74c\ua706\ua707\ua70e\ua707\ua716\ua707", -1040799902), hl.a("\u2c8f\u2c8a\u2c97\u2c86\u2c81\u2c82\u2c8d\u2c90\u2ccd", 456535267), hl.a("\ueb63\ueb42\ueb0d\ueb4c\ueb4e\ueb59\ueb44\ueb5b\ueb48\ueb0d", 211348269), hl.a("\uc590\uc5d6\uc5df\uc5c5\uc5de\uc5d4\uc590\uc5d6\uc5df\uc5c2\uc590\uc5c5\uc5c5\uc5d9\uc5d4\uc58a", 445760944), hl.a("\u597d\u5972\u597d\u5934\u592d\u5967", 1213356381), hl.a("\ub4ca\ub485\ub484\ub4ca\ub499\ub48f\ub498\ub49c\ub48f\ub498\ub4d0", 2014491882), hl.a("\ue188\ue180\ue1dc\ue1c9\ue1da\ue1cf\ue1cd\ue1dc\ue192\ue188\ue18f", -1716526680), hl.a("\u19ee\u19e0", 400693705), hl.a("\u8d9f\u8db9\u8db2\u8deb\u8dbf\u8daa\u8db9\u8dac\u8dae\u8dbf\u8da2\u8da5\u8dac\u8deb\u8da9\u8db2\u8deb\u8d9e\u8d9e\u8d82\u8d8f\u8deb\u8da2\u8da5\u8db8\u8dbf\u8dae\u8daa\u8daf\u8deb\u8da4\u8dad\u8deb\u8da5\u8daa\u8da6\u8dae\u8de5", -1623224885), hl.a("\udca7", 1239669933), hl.a("\ufb20\ufb25\ufb38\ufb29\ufb2e\ufb2d\ufb22\ufb3f\ufb62\ufb39\ufb22\ufb2e\ufb2d\ufb22\ufb62\ufb3d\ufb39\ufb29\ufb39\ufb29", 2037709644), hl.a("", -465144705), hl.a("", 285719404), hl.a("\ud5d1", 1566649134), hl.a("", -1136681612), hl.a("", -1554218948), hl.a("\uca3b", -880462652), hl.a("\uc78e\uc78b\uc796\uc787\uc780\uc783\uc78c\uc791\uc7cc\uc78d\uc794\uc787\uc790\uc790\uc78b\uc786\uc787", -1169635358), hl.a("\u18db\u18d8\u18d7\u18d7\u18dc\u18dd\u18e9\u18d5\u18d8\u18c0\u18dc\u18cb", -593618759), hl.a("\ud364\ud37c\ud37d\ud36c\ud36d\ud359\ud365\ud368\ud370\ud36c\ud37b", -1114320119), hl.a("\u26ae\u26e2\u26eb\u26eb\u26e1\u26e4\u26e3\u26e8\u26ae", -111204723), hl.a("\ub259\ub248\ub240\ub25d\ub269\ub258\ub25f\ub24c\ub259\ub244\ub242\ub243", -1990610387), hl.a("\ueaea\ueaf1\ueae8\ueae8", 570026628), hl.a("\u2bce\u2bd5\u2bcc\u2bcc", -837866592), hl.a("\u6cf3\u6cd1\u6cc6\u6cdb\u6cc4\u6cd7\u6c92\u6cc5\u6cd3\u6cc0\u6cdc\u6cdb\u6cdc\u6cd5\u6cc1\u6c88\u6c92", 1032875186), hl.a("\u922d\u921b\u9208\u9214\u9213\u9214\u921d\u925a\u921b\u9219\u920e\u9213\u9215\u9214\u925a\u9213\u9209\u925a\u9213\u9214\u920c\u921b\u9216\u9213\u921e\u925a\u9252\u9218\u921b\u921e\u925a\u921c\u9215\u9208\u9217\u921b\u920e\u9253\u9240\u925a\u925d", -533425542), hl.a("\ua289\ua280\ua28e\ua2e7\ua2c9\ua2c0\ua2c1\ua2dc\ua2cb\ua2ca\ua280", -1034509650), hl.a("\ub263\ub255\ub246\ub25a\ub25d\ub25a\ub253\ub214\ub255\ub257\ub240\ub25d\ub25b\ub25a\ub214\ub25d\ub247\ub214\ub25d\ub25a\ub242\ub255\ub258\ub25d\ub250\ub214\ub21c\ub240\ub25c\ub246\ub251\ub247\ub25c\ub25b\ub258\ub250\ub214", 1229632052), hl.a("\uc090\uc08c\uc090\uc081\uc099\uc08a\uc090\uc097", 1887289520), hl.a("\uc153\uc15a\uc154\uc13d\uc113\uc11a\uc11b\uc106\uc111\uc110\uc15a", -1370635916), hl.a("\u214e\u214b\u2151\u2156", -1688854238), hl.a("\ue53f\ue53a\ue520\ue527", -1746213549), hl.a("\u91e6\u91fa\u91f7\u91ef\u91f3\u91e4", 1107857814), hl.a("\uf06a\uf06f\uf075\uf072", 413593606), hl.a("", -1859542706), hl.a("", 1128871481), hl.a("\ub3f8", -1355330297), hl.a("", 351800672), hl.a("", -1264878847), hl.a("\ud47c", -27252093), hl.a("\u2fda\u2fe1\u2fe1\u2fae\u2fe3\u2fef\u2fe0\u2ff7\u2fae\u2ffb\u2fe0\u2fec\u2fef\u2fe0\u2fe0\u2feb\u2fea\u2fae\u2ffe\u2fe2\u2fef\u2ff7\u2feb\u2ffc\u2ffd\u2fae\u2fe7\u2fe0\u2fae\u2fff\u2ffb\u2feb\u2ffb\u2feb\u2faf\u2fae\u2fcd\u2fe2\u2feb\u2fef\u2ffc\u2feb\u2fea\u2fae\u2fe2\u2fe7\u2ffd\u2ffa\u2fae\u2ffa\u2fe1\u2fae\u2ffe\u2ffc\u2feb\u2ff8\u2feb\u2fe0\u2ffa\u2fae\u2fe3\u2feb\u2fe3\u2fe1\u2ffc\u2ff7\u2fae\u2fe2\u2feb\u2fef\u2fe5\u2fa0", -1352388722), hl.a("\u74fe\u74c5\u74c5\u748a\u74c7\u74cb\u74c4\u74d3\u748a\u74df\u74c4\u74c8\u74cb\u74c4\u74c4\u74cf\u74ce\u748a\u74da\u74c6\u74cb\u74d3\u74cf\u74d8\u74d9\u748a\u74c3\u74c4\u748a\u74db\u74df\u74cf\u74df\u74cf\u748b\u748a\u74e9\u74c6\u74cf\u74cb\u74d8\u74cf\u74ce\u748a\u74c6\u74c3\u74d9\u74de\u748a\u74de\u74c5\u748a\u74da\u74d8\u74cf\u74dc\u74cf\u74c4\u74de\u748a\u74c7\u74cf\u74c7\u74c5\u74d8\u74d3\u748a\u74c6\u74cf\u74cb\u74c1\u7484", 575042730), hl.a("\uc698\uc69d\uc680\uc691\uc696\uc695\uc69a\uc687\uc6da\uc69b\uc682\uc691\uc686\uc686\uc69d\uc690\uc691", 1916585716), hl.a("\u7140\u7143\u714c\u714c\u7147\u7146\u7172\u714e\u7143\u715b\u7147\u7150", -1007914718), hl.a("\u72f2\u72ea\u72eb\u72fa\u72fb\u72cf\u72f3\u72fe\u72e6\u72fa\u72ed", 694842015), hl.a("\uf889\uf8c5\uf8cc\uf8cc\uf8c6\uf8c3\uf8c4\uf8cf\uf889", 998176938), hl.a("\ud0f6\ud0ed\ud0f4\ud0f4", 2036781208), hl.a("\ub2c3\ub2d8\ub2c1\ub2c1", -1522027859), hl.a("\u80bd\u809f\u8088\u8095\u808a\u8099\u80dc\u808b\u809d\u808e\u8092\u8095\u8092\u809b\u808f\u80c6\u80dc", 2116911356), hl.a("\ud596\ud5a0\ud5b3\ud5af\ud5a8\ud5af\ud5a6\ud5e1\ud5a0\ud5a2\ud5b5\ud5a8\ud5ae\ud5af\ud5e1\ud5a8\ud5b2\ud5e1\ud5a8\ud5af\ud5b7\ud5a0\ud5ad\ud5a8\ud5a5\ud5e1\ud5e9\ud5a3\ud5a0\ud5a5\ud5e1\ud5a7\ud5ae\ud5b3\ud5ac\ud5a0\ud5b5\ud5e8\ud5fb\ud5e1\ud5e6", -258157119), hl.a("\u91a2\u91ab\u91a5\u91cc\u91e2\u91eb\u91ea\u91f7\u91e0\u91e1\u91ab", 703238533), hl.a("\uc7fe\uc7c8\uc7db\uc7c7\uc7c0\uc7c7\uc7ce\uc789\uc7c8\uc7ca\uc7dd\uc7c0\uc7c6\uc7c7\uc789\uc7c0\uc7da\uc789\uc7c0\uc7c7\uc7df\uc7c8\uc7c5\uc7c0\uc7cd\uc789\uc781\uc7dd\uc7c1\uc7db\uc7cc\uc7da\uc7c1\uc7c6\uc7c5\uc7cd\uc789", 931776425), hl.a("\uadc2\uadde\uadc2\uadd3\uadcb\uadd8\uadc2\uadc5", -617239070), hl.a("\ufd12\ufd1b\ufd15\ufd7c\ufd52\ufd5b\ufd5a\ufd47\ufd50\ufd51\ufd1b", 1307835701), hl.a("\u2b64\u2b61\u2b7b\u2b7c", -1092146424), hl.a("\u8cf1\u8cf4\u8cee\u8ce9", 265587869), hl.a("\u6e4b\u6e57\u6e5a\u6e42\u6e5e\u6e49", -2014417349), hl.a("\u0670\u0661\u0669\u0674\u0640\u0671\u0676\u0665\u0670\u066d\u066b\u066a", -655555068), hl.a("\u3198\u3183\u319a\u319a", -449891850), hl.a("\u1deb\u1df0\u1de9\u1de9", 1844256133), hl.a("\u47d3\u47f1\u47e6\u47fb\u47e4\u47f7\u47b2\u47e5\u47f3\u47e0\u47fc\u47fb\u47fc\u47f5\u47e1\u47a8\u47b2", 1815889810), hl.a("\u3f4b\u3f7d\u3f6e\u3f72\u3f75\u3f72\u3f7b\u3f3c\u3f7d\u3f7f\u3f68\u3f75\u3f73\u3f72\u3f3c\u3f75\u3f6f\u3f3c\u3f75\u3f72\u3f6a\u3f7d\u3f70\u3f75\u3f78\u3f3c\u3f34\u3f7e\u3f7d\u3f78\u3f3c\u3f7a\u3f73\u3f6e\u3f71\u3f7d\u3f68\u3f35\u3f26\u3f3c\u3f3b", -1304412388), hl.a("\uf1f9\uf1f0\uf1fe\uf197\uf1b9\uf1b0\uf1b1\uf1ac\uf1bb\uf1ba\uf1f0", 1487860190), hl.a("\u6ed7\u6ee1\u6ef2\u6eee\u6ee9\u6eee\u6ee7\u6ea0\u6ee1\u6ee3\u6ef4\u6ee9\u6eef\u6eee\u6ea0\u6ee9\u6ef3\u6ea0\u6ee9\u6eee\u6ef6\u6ee1\u6eec\u6ee9\u6ee4\u6ea0\u6ea8\u6ef4\u6ee8\u6ef2\u6ee5\u6ef3\u6ee8\u6eef\u6eec\u6ee4\u6ea0", 1297247872), hl.a("\u5d02\u5d1e\u5d02\u5d13\u5d0b\u5d18\u5d02\u5d05", -153461470), hl.a("\u7e62\u7e6b\u7e65\u7e0c\u7e22\u7e2b\u7e2a\u7e37\u7e20\u7e21\u7e6b", -1237877179), hl.a("\u639b\u639e\u6384\u6383", 194995191), hl.a("\u5fe4\u5fe1\u5ffb\u5ffc", 1483235208), hl.a("\u6bac\u6bb0\u6bbd\u6ba5\u6bb9\u6bae", 1448307676), hl.a("\uc1e5\uc1e0\uc1fa\uc1fd", -1821851255)};
+        k = new String[]{"ban", "[c] ", "[LiteBans]", " Plugin access has been disabled!", "litebans.admin", "[LiteBans]", " If you have bought LiteBans, contact Ruan on ", "\n", "Timeout after ", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", " seconds", "duration:permanent", "\\-", "-", "", "", "", "", "", "litebans.temp", "", "litebans.ip", "", "litebans.ip", "litebans.ip", "", "litebans.modify", "", ".own", "litebans.ip", ".wildcard", "_USAGE", "_USAGE", "litebans + ", "litebans + ", "litebans.ip", "#offline#", "#offline#", "#", "#", "#", "player", "Hiding IP address from broadcast: ", "", "Applying ", " template group ", ": weight ", " => ", " (", "Applying ", " template \"", "\" at level ", "", "", ".own", "", "[0xff] ", " (x=", "litebans.modify", "litebans.delete", "", "No active ", " found for uuid:", " / ip:", " on server:", " (target: '", "')", "Try targeting by UUID instead of ", "\n", "litebans.unban.queue", "", "", "\ufeff", "", "", "\ufeff", "litebans.override", "bannedPlayer", "mutedPlayer", "#offline#", "tempDuration", "null", "null", "Active warnings: ", "Warning action is invalid (bad format): '", "' + ", "Warning action is invalid (threshold ", " < 1): '", "' + ", "list", "list", "player", "list", "", "", "\ufeff", "", "", "\ufeff", "Too many unbanned players in queue! Cleared list to prevent memory ", "Too many unbanned players in queue! Cleared list to prevent memory ", "litebans.override", "bannedPlayer", "mutedPlayer", "#offline#", "null", "null", "Active warnings: ", "Warning action is invalid (bad format): '", "' + ", "Warning action is invalid (threshold ", " < 1): '", "' + ", "list", "list", "player", "tempDuration", "null", "null", "Active warnings: ", "Warning action is invalid (bad format): '", "' + ", "Warning action is invalid (threshold ", " < 1): '", "' + ", "list", "list", "player", "list"};
     }
 }
 

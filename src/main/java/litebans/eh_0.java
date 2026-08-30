@@ -3,9 +3,6 @@ package litebans;
 import litebans.g8;
 import litebans.hm_0;
 
-/*
- * Renamed from litebans.eh
- */
 static class eh_0 {
     static final /* synthetic */ int[] a;
     static final /* synthetic */ int[] b;

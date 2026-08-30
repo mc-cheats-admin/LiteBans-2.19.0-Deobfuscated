@@ -1,6 +1,6 @@
 package litebans;
 
-public static final class aw {
+public final class aw {
     private final String a;
     private final String b;
 

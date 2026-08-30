@@ -13,7 +13,7 @@ import litebans.ij;
 import litebans.jv_0;
 import litebans.u;
 
-public static final class ka
+public final class ka
 implements fa_0 {
     final /* synthetic */ cz d;
     final /* synthetic */ u g;
@@ -29,13 +29,13 @@ implements fa_0 {
     @Override
     public boolean a(aK aK2, ij ij2, String string) {
         if (ij2 == ij.g && ew.a((Object)string, (Object)this.d.s()) && this.g.b(this)) {
-            fo_0.a(fg_0.a, this.f, bF.a((CharSequence)am.cs.a(e[0], (Object)this.d.s()), (CharSequence)e[1], (Object)this.d.H()), null, 4, null);
+            fo_0.a(fg_0.a, this.f, bF.a((CharSequence)am.cs.a("player", (Object)this.d.s()), (CharSequence)"executor", (Object)this.d.H()), null, 4, null);
         }
         return true;
     }
 
     private static final void a() {
-        e = new String[]{hl.a("\ubb9a\ubb86\ubb8b\ubb93\ubb8f\ubb98", -1410810902), hl.a("\u53bb\u53a6\u53bb\u53bd\u53ab\u53aa\u53b1\u53ac", -1267051554)};
+        e = new String[]{"player", "executor"};
     }
 
     static {

@@ -21,7 +21,7 @@ import litebans.ja;
 import litebans.kI;
 import litebans.kJ;
 
-public static abstract class c2
+public abstract class c2
 implements Connection {
     static final int d;
     static final int k;
@@ -162,7 +162,7 @@ implements Connection {
                 if (this.p && !this.j) {
                     this.r.rollback();
                     this.v = e6.b();
-                    n.b("%s - Executed rollback on connection %s due to dirty commit state on close().", new Object[]{this.h.e(), this.r.toString()});
+                    n.b("%s - Executed rollback on connection %s due to dirty commit state on close() + ", new Object[]{this.h.e(), this.r.toString()});
                 }
                 if (this.o != 0) {
                     this.h.a(this, this.o);

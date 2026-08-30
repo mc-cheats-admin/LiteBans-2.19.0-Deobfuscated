@@ -2,7 +2,7 @@ package litebans;
 
 import litebans.aJ;
 
-public static final class ag {
+public final class ag {
     private ag() {
     }
 

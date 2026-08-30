@@ -9,7 +9,7 @@ import litebans.iv_0;
 import litebans.n_0;
 import litebans.w;
 
-public static final class dF
+public final class dF
 implements Runnable {
     final /* synthetic */ w a;
     private static /* synthetic */ String[] b;
@@ -54,13 +54,13 @@ implements Runnable {
             }
         }
         n_02 = this.a;
-        String string = b[0];
+        String string = "Server information reset ";
         boolean bl = false;
         n_02.a.getLogger().severe(string);
     }
 
     private static final void a() {
-        b = new String[]{hl.a("\uf111\uf127\uf130\uf134\uf127\uf130\uf162\uf12b\uf12c\uf124\uf12d\uf130\uf12f\uf123\uf136\uf12b\uf12d\uf12c\uf162\uf130\uf127\uf131\uf127\uf136\uf162\uf121\uf12d\uf12f\uf132\uf12e\uf127\uf136\uf127\uf16c", -1576734398)};
+        b = new String[]{"Server information reset complete."};
     }
 
     static {

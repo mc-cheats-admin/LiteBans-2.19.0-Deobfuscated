@@ -1,9 +1,6 @@
 package litebans;
 
-/*
- * Renamed from litebans.cH
- */
-public static final class ch_0
+public final class ch_0
 implements Cloneable {
     private static final int c;
     private static final int d;

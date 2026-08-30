@@ -7,10 +7,7 @@ import litebans.dd;
 import litebans.dd_0;
 import litebans.i7;
 
-/*
- * Renamed from litebans.jt
- */
-public static class jt_0 {
+public class jt_0 {
     private static final int b = 255;
     static final dd_0 c = c4.b(null);
     static final dd_0 a = new dd();

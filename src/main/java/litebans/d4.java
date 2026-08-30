@@ -1,6 +1,6 @@
 package litebans;
 
-public static interface d4 {
+public interface d4 {
     public static final String h;
     public static final String A;
     public static final String r;

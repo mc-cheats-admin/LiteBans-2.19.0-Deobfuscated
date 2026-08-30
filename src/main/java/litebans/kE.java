@@ -4,7 +4,7 @@ import litebans.a7;
 import litebans.aJ;
 import litebans.cU;
 
-public static final class kE {
+public final class kE {
     private kE() {
     }
 

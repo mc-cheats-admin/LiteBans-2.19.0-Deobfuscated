@@ -4,9 +4,6 @@ import java.util.Comparator;
 import litebans.i7;
 import litebans.j;
 
-/*
- * Renamed from litebans.bl
- */
 static class bl_0
 implements Comparator {
     final /* synthetic */ j a;

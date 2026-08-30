@@ -23,10 +23,7 @@ import litebans.ln;
 import litebans.n_0;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.bd
- */
-public static class bd_0
+public class bd_0
 implements ln {
     private final di_0 a;
     public n_0[] d = di_0.a;
@@ -80,7 +77,7 @@ implements ln {
     public void k() {
         try {
             if (this.j.get()) {
-                this.a.getLogger().warning(l[0]);
+                this.a.getLogger().warning("onEnable() called while plugin is already enabled! This might break ");
                 this.i();
             }
             this.c = System.currentTimeMillis();
@@ -100,7 +97,7 @@ implements ln {
     }
 
     public @NotNull ThreadFactoryBuilder d() {
-        ThreadFactoryBuilder threadFactoryBuilder = new ThreadFactoryBuilder().setNameFormat(this.a.getName() + l[1]).setDaemon(true);
+        ThreadFactoryBuilder threadFactoryBuilder = new ThreadFactoryBuilder().setNameFormat(this.a.getName() + "-%1$d").setDaemon(true);
         return threadFactoryBuilder;
     }
 
@@ -121,7 +118,7 @@ implements ln {
 
     public void i() {
         if (this.m.get()) {
-            this.a.getLogger().severe(l[2]);
+            this.a.getLogger().severe("onDisable() called while plugin hasn't finished loading yet! This will be ignored to prevent errors. It's likely that another plugin stopped your server ");
             return;
         }
         this.n.set(true);
@@ -185,11 +182,11 @@ implements ln {
     }
 
     public String e() {
-        return 'v' + this.a.e() + l[3];
+        return 'v' + this.a.e() + " ";
     }
 
     public String g() {
-        return 'v' + this.a.e() + l[4] + this.a.g() + l[5];
+        return 'v' + this.a.e() + " enabled. Startup took " + this.a.g() + " ";
     }
 
     public ThreadPoolExecutor a(ThreadFactoryBuilder threadFactoryBuilder) {
@@ -205,7 +202,7 @@ implements ln {
     }
 
     private static final void a() {
-        l = new String[]{hl.a("\u28c1\u28c0\u28eb\u28c0\u28cf\u28cc\u28c2\u28cb\u2886\u2887\u288e\u28cd\u28cf\u28c2\u28c2\u28cb\u28ca\u288e\u28d9\u28c6\u28c7\u28c2\u28cb\u288e\u28de\u28c2\u28db\u28c9\u28c7\u28c0\u288e\u28c7\u28dd\u288e\u28cf\u28c2\u28dc\u28cb\u28cf\u28ca\u28d7\u288e\u28cb\u28c0\u28cf\u28cc\u28c2\u28cb\u28ca\u288f\u288e\u28fa\u28c6\u28c7\u28dd\u288e\u28c3\u28c7\u28c9\u28c6\u28da\u288e\u28cc\u28dc\u28cb\u28cf\u28c5\u288e\u28dd\u28c1\u28c3\u28cb\u28da\u28c6\u28c7\u28c0\u28c9\u2880", 229320878), hl.a("\u7f2a\u7f22\u7f36\u7f23\u7f63", 630554375), hl.a("\u0abf\u0abe\u0a94\u0ab9\u0aa3\u0ab1\u0ab2\u0abc\u0ab5\u0af8\u0af9\u0af0\u0ab3\u0ab1\u0abc\u0abc\u0ab5\u0ab4\u0af0\u0aa7\u0ab8\u0ab9\u0abc\u0ab5\u0af0\u0aa0\u0abc\u0aa5\u0ab7\u0ab9\u0abe\u0af0\u0ab8\u0ab1\u0aa3\u0abe\u0af7\u0aa4\u0af0\u0ab6\u0ab9\u0abe\u0ab9\u0aa3\u0ab8\u0ab5\u0ab4\u0af0\u0abc\u0abf\u0ab1\u0ab4\u0ab9\u0abe\u0ab7\u0af0\u0aa9\u0ab5\u0aa4\u0af1\u0af0\u0a84\u0ab8\u0ab9\u0aa3\u0af0\u0aa7\u0ab9\u0abc\u0abc\u0af0\u0ab2\u0ab5\u0af0\u0ab9\u0ab7\u0abe\u0abf\u0aa2\u0ab5\u0ab4\u0af0\u0aa4\u0abf\u0af0\u0aa0\u0aa2\u0ab5\u0aa6\u0ab5\u0abe\u0aa4\u0af0\u0ab5\u0aa2\u0aa2\u0abf\u0aa2\u0aa3\u0afe\u0af0\u0a99\u0aa4\u0af7\u0aa3\u0af0\u0abc\u0ab9\u0abb\u0ab5\u0abc\u0aa9\u0af0\u0aa4\u0ab8\u0ab1\u0aa4\u0af0\u0ab1\u0abe\u0abf\u0aa4\u0ab8\u0ab5\u0aa2\u0af0\u0aa0\u0abc\u0aa5\u0ab7\u0ab9\u0abe\u0af0\u0aa3\u0aa4\u0abf\u0aa0\u0aa0\u0ab5\u0ab4\u0af0\u0aa9\u0abf\u0aa5\u0aa2\u0af0\u0aa3\u0ab5\u0aa2\u0aa6\u0ab5\u0aa2\u0af0\u0ab1\u0aa3\u0aa9\u0abe\u0ab3\u0ab8\u0aa2\u0abf\u0abe\u0abf\u0aa5\u0aa3\u0abc\u0aa9\u0afe", -1464464688), hl.a("\u6571\u6535\u6538\u6522\u6530\u6533\u653d\u6534\u6535\u657f", -1947114159), hl.a("\u49bd\u49f8\u49f3\u49fc\u49ff\u49f1\u49f8\u49f9\u49b3\u49bd\u49ce\u49e9\u49fc\u49ef\u49e9\u49e8\u49ed\u49bd\u49e9\u49f2\u49f2\u49f6\u49bd", 2101103005), hl.a("\u2b3c\u2b71\u2b6f\u2b32", 1549806364)};
+        l = new String[]{"onEnable() called while plugin is already enabled! This might break ", "-%1$d", "onDisable() called while plugin hasn't finished loading yet! This will be ignored to prevent errors. It's likely that another plugin stopped your server ", " ", " enabled. Startup took ", " ms."};
     }
 
     static {

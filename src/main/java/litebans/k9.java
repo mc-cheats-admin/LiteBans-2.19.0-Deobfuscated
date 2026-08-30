@@ -13,7 +13,7 @@ import litebans.ll;
 import litebans.lo_0;
 import org.jetbrains.annotations.NotNull;
 
-public static final class k9 {
+public final class k9 {
     private final iX a;
     private byte[] b;
     private static /* synthetic */ String[] c;
@@ -60,15 +60,15 @@ public static final class k9 {
     }
 
     public String toString() {
-        return c[0] + lo_0.a(this.b, (CharSequence)c[1], null, null, 0, null, k9::a, 30, null) + ')';
+        return "Bitflipper(table=" + lo_0.a(this.b, (CharSequence)",", null, null, 0, null, k9::a, 30, null) + ')';
     }
 
     private static final CharSequence a(byte by2) {
-        return c[2] + Integer.toString(by2, jc_0.a(2));
+        return "0b" + Integer.toString(by2, jc_0.a(2));
     }
 
     private static final void a() {
-        c = new String[]{hl.a("\u9a89\u9aa2\u9abf\u9aad\u9aa7\u9aa2\u9abb\u9abb\u9aae\u9ab9\u9ae3\u9abf\u9aaa\u9aa9\u9aa7\u9aae\u9af6", 906271435), hl.a("\ua1fc", -1016421936), hl.a("\uaa78\uaa2a", 1309583944)};
+        c = new String[]{"Bitflipper(table=", ",", "0b"};
     }
 
     static {

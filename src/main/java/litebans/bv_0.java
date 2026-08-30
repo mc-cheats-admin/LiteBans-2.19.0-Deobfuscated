@@ -13,10 +13,7 @@ import litebans.i7;
 import litebans.jt_0;
 import litebans.lG;
 
-/*
- * Renamed from litebans.bV
- */
-public static class bv_0
+public class bv_0
 implements gu_0,
 lG {
     private static final bv_0[] aD;

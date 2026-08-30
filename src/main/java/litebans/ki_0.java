@@ -5,10 +5,7 @@ import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.Set;
 
-/*
- * Renamed from litebans.ki
- */
-public static final class ki_0
+public final class ki_0
 extends Enum {
     public static final ki_0 c = new ki_0("SETUID", 0, 2048);
     public static final ki_0 m = new ki_0("SETGUI", 1, 1024);

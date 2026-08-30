@@ -15,7 +15,7 @@ import litebans.q_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class jv
+public final class jv
 extends Entry {
     private final di_0 a;
     private static /* synthetic */ String[] b;
@@ -77,7 +77,7 @@ extends Entry {
         ew.a(a_2);
         Object object = fu2.a(a_2, this.getTemplateID());
         if (object == null || (object = ((c1)object).g()) == null) {
-            object = b[0];
+            object = "";
         }
         return object;
     }
@@ -88,7 +88,7 @@ extends Entry {
     }
 
     private static final void a() {
-        b = new String[]{hl.a("", -160891529)};
+        b = new String[]{""};
     }
 
     static {

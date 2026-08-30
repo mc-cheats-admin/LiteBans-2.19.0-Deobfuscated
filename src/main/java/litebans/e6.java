@@ -3,7 +3,7 @@ package litebans;
 import java.util.concurrent.TimeUnit;
 import litebans.ig;
 
-public static interface e6 {
+public interface e6 {
     public static final e6 b = ig.b();
     public static final TimeUnit[] c = new TimeUnit[]{TimeUnit.DAYS, TimeUnit.HOURS, TimeUnit.MINUTES, TimeUnit.SECONDS, TimeUnit.MILLISECONDS, TimeUnit.MICROSECONDS, TimeUnit.NANOSECONDS};
     public static final String[] a = new String[]{"ns", "\u00b5s", "ms", "s", "m", "h", "d"};

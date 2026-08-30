@@ -9,10 +9,7 @@ import litebans.ij;
 import litebans.x_0;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.fj
- */
-public static final class fj_0 {
+public final class fj_0 {
     private fj_0() {
     }
 

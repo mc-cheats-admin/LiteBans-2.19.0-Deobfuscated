@@ -27,16 +27,13 @@ import litebans.w;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class fa
+public final class fa
 extends fB
 implements jW {
     private static /* synthetic */ String[] i;
 
     public fa(@NotNull di_0 di_02) {
-        super(i[0], di_02);
+        super("history", di_02);
     }
 
     @Override
@@ -71,7 +68,7 @@ implements jW {
                     a_ a_2 = a_.l.a(string2);
                     String string3 = aa_0.a(this, jv_02, stringArray, null, 4, null);
                     if (((iA)object3).b() == null) {
-                        fg_0.a.a(string + i[1]);
+                        fg_0.a.a(string + "'s uuid is null");
                         throw new as();
                     }
                     int n = g3.a((jW)this, ch3.e(), stringArray, ll.e(), 0, 8, null);
@@ -123,7 +120,7 @@ implements jW {
     }
 
     private static final void a() {
-        i = new String[]{hl.a("\u5729\u5728\u5732\u5735\u572e\u5733\u5738", -1981851839), hl.a("\u1bc8\u1b9c\u1bcf\u1b9a\u1b9a\u1b86\u1b8b\u1bcf\u1b86\u1b9c\u1bcf\u1b81\u1b9a\u1b83\u1b83", 1113005039)};
+        i = new String[]{"history", "'s uuid is null"};
     }
 
     static {

@@ -24,7 +24,7 @@ import litebans.w_0;
 import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 
-public static final class dX
+public final class dX
 extends PacketAdapter {
     public static final j1 e;
     private final di_0 a;
@@ -34,10 +34,10 @@ extends PacketAdapter {
 
     public dX(@NotNull di_0 di_02) {
         ec_0 ec_02 = di_02.i();
-        ew.b(ec_02, d[0]);
+        ew.b(ec_02, "");
         Plugin plugin = ao_0.a((ao_0)ec_02, null, 1, null);
         PacketType[] packetTypeArray = new PacketType[1];
-        ew.b(j1.a(e), d[1]);
+        ew.b(j1.a(e), "");
         super(PacketAdapter.params((Plugin)plugin, (PacketType[])packetTypeArray).optionAsync());
         this.a = di_02;
         this.b = (q_0)this.a.a(q_0.class);
@@ -59,7 +59,7 @@ extends PacketAdapter {
                 object = object2;
                 bl2 = false;
                 WrappedChatComponent wrappedChatComponent2 = wrappedChatComponent;
-                ((q_0)object).a((Object)(d[2] + (wrappedChatComponent2 != null ? wrappedChatComponent2.getJson() : null)));
+                ((q_0)object).a((Object)("1 " + (wrappedChatComponent2 != null ? wrappedChatComponent2.getJson() : null)));
             }
             Object object3 = cV.a(wrappedChatComponent.getJson());
             object2 = w_0.a(Arrays.copyOf(object3, ((v_0[])object3).length));
@@ -68,7 +68,7 @@ extends PacketAdapter {
             if (((q_0)object3).g()) {
                 object = object3;
                 bl = false;
-                ((q_0)object).a((Object)(d[3] + (String)object2));
+                ((q_0)object).a((Object)("2 " + (String)object2));
             }
             ew.a(object2);
             if (bz.a((CharSequence)object2, hd_0.t, false, 2, null)) {
@@ -79,7 +79,7 @@ extends PacketAdapter {
                 if (((q_0)object4).g()) {
                     object = object4;
                     boolean bl4 = false;
-                    ((q_0)object).a((Object)(d[4] + object3.getJson()));
+                    ((q_0)object).a((Object)("3 " + object3.getJson()));
                 }
                 packetContainer.getChatComponents().write(0, object3);
             }
@@ -112,7 +112,7 @@ extends PacketAdapter {
     }
 
     private static final void c() {
-        d = new String[]{hl.a("", -1349291380), hl.a("", -1075930566), hl.a("\u68af\u68be", 1793681566), hl.a("\uf856\uf844", 611580004), hl.a("\u38bb\u38a8", 2073770120)};
+        d = new String[]{"", "", "1 ", "2 ", "3 "};
     }
 }
 

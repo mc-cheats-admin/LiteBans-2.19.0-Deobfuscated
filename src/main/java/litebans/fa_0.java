@@ -6,10 +6,7 @@ import litebans.iz;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.fA
- */
-public static interface fa_0 {
+public interface fa_0 {
     public static final iz a;
     public static final boolean c;
     public static final boolean b;

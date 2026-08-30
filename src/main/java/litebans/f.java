@@ -4,7 +4,7 @@ import java.io.InputStream;
 import litebans.e_0;
 import litebans.ja_0;
 
-public static class f
+public class f
 extends e_0 {
     private final InputStream y;
     private long o = 0L;

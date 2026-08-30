@@ -5,10 +5,7 @@ import net.minecraft.class_2561;
 import net.minecraft.class_5455;
 import net.minecraft.class_7225;
 
-/*
- * Renamed from litebans.is
- */
-public static class is_0
+public class is_0
 implements hd {
     @Override
     public Object a(CharSequence charSequence) {

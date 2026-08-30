@@ -2,7 +2,7 @@ package litebans;
 
 import java.util.concurrent.ThreadFactory;
 
-public static final class gc
+public final class gc
 implements ThreadFactory {
     private final String a;
     private final boolean b;

@@ -2,7 +2,7 @@ package litebans;
 
 import java.io.InputStream;
 
-public static class hw
+public class hw
 extends InputStream {
     private final InputStream b;
     private long a;

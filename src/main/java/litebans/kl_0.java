@@ -6,11 +6,7 @@ import litebans.cA;
 import litebans.dp_0;
 import litebans.fw_0;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.kl
- */
-public static abstract class kl_0
+public abstract class kl_0
 implements dp_0,
 Serializable {
     private transient dp_0 e;

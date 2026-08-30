@@ -8,10 +8,7 @@ import litebans.e0;
 import litebans.eE;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class cU
+public final class cU
 implements eE,
 Serializable {
     private final e0 a;

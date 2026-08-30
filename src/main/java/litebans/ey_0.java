@@ -4,9 +4,6 @@ import litebans.en_0;
 import litebans.ex_0;
 import litebans.kz_0;
 
-/*
- * Renamed from litebans.ey
- */
 static final class ey_0
 extends ex_0 {
     ey_0(kz_0 kz_02) {

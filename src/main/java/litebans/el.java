@@ -3,7 +3,7 @@ package litebans;
 import java.util.Locale;
 import litebans.eo_0;
 
-public static final class el
+public final class el
 implements eo_0 {
     public static final el a = new el();
 

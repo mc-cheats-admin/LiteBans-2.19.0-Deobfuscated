@@ -14,10 +14,7 @@ import litebans.jv_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.jq
- */
-public static class jq_0
+public class jq_0
 implements d8,
 Command,
 SuggestionProvider {
@@ -36,7 +33,7 @@ SuggestionProvider {
 
     public int run(CommandContext commandContext) {
         jv_0 jv_02 = this.e.a(commandContext.getSource());
-        String[] stringArray = commandContext.getInput().split(d[0]);
+        String[] stringArray = commandContext.getInput().split(" ");
         if (stringArray.length >= 2) {
             String[] stringArray2 = Arrays.copyOfRange(stringArray, 1, stringArray.length);
             this.a(jv_02, stringArray2);
@@ -73,7 +70,7 @@ SuggestionProvider {
 
     public CompletableFuture getSuggestions(CommandContext commandContext, SuggestionsBuilder suggestionsBuilder) {
         jv_0 jv_02 = this.e.a(commandContext.getSource());
-        String[] stringArray = commandContext.getInput().split(d[1]);
+        String[] stringArray = commandContext.getInput().split(" ");
         List list = this.suggest(jv_02, stringArray);
         list.forEach(arg_0 -> ((SuggestionsBuilder)suggestionsBuilder).suggest(arg_0));
         return suggestionsBuilder.buildFuture();
@@ -89,7 +86,7 @@ SuggestionProvider {
     }
 
     private static final void b() {
-        d = new String[]{hl.a("\u0905", 75303205), hl.a("\ubc4b", -512967573)};
+        d = new String[]{" ", " "};
     }
 
     static {

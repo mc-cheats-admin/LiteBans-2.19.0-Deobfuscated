@@ -16,7 +16,7 @@ implements eo_0 {
     public final String a(kL kL2) {
         kL kL3 = kL2;
         boolean bl = false;
-        return aR.f(aR.e(b[0] + kL3), b[1]);
+        return aR.f(aR.e("ALTER TABLE " + kL3), "removed_by_uuid VARCHAR(36)");
     }
 
     @Override
@@ -30,7 +30,7 @@ implements eo_0 {
     }
 
     private static final void a() {
-        b = new String[]{hl.a("\u4771\u477c\u4764\u4775\u4762\u4710\u4764\u4771\u4772\u477c\u4775\u4710", -1430960336), hl.a("\ua772\ua765\ua76d\ua76f\ua776\ua765\ua764\ua75f\ua762\ua779\ua75f\ua775\ua775\ua769\ua764\ua720\ua756\ua741\ua752\ua743\ua748\ua741\ua752\ua728\ua733\ua736\ua729", 920758016)};
+        b = new String[]{"ALTER TABLE ", "removed_by_uuid VARCHAR(36)"};
     }
 }
 

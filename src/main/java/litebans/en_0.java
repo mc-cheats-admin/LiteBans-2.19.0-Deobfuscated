@@ -2,10 +2,7 @@ package litebans;
 
 import litebans.i2;
 
-/*
- * Renamed from litebans.en
- */
-public static interface en_0 {
+public interface en_0 {
     public static final int a = 4;
 
     public i2 c();

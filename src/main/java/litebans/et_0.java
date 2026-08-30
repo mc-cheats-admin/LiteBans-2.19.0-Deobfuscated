@@ -9,10 +9,7 @@ import org.yaml.snakeyaml.nodes.Node;
 import org.yaml.snakeyaml.representer.Represent;
 import org.yaml.snakeyaml.representer.Representer;
 
-/*
- * Renamed from litebans.eT
- */
-public static final class et_0
+public final class et_0
 extends Representer {
     private static /* synthetic */ String[] a;
 
@@ -25,12 +22,12 @@ extends Representer {
     }
 
     private static final Node a(et_0 et_02, Object object) {
-        ew.b(object, a[0]);
+        ew.b(object, "");
         return et_02.represent(((ie_0)object).d);
     }
 
     private static final void a() {
-        a = new String[]{hl.a("", -1033773818)};
+        a = new String[]{""};
     }
 
     static {

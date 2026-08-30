@@ -8,10 +8,7 @@ import litebans.ca_0;
 import litebans.ci_0;
 import litebans.i2;
 
-/*
- * Renamed from litebans.aj
- */
-public static class aj_0
+public class aj_0
 extends av {
     private int k;
     private ca_0 g;

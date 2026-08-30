@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 import litebans.aB;
 import litebans.kI;
 
-public static final class bh {
+public final class bh {
     private static final Pattern a = Pattern.compile("(get|is)[A-Z].+");
 
     private bh() {
@@ -24,8 +24,8 @@ public static final class bh {
         }
         List<Method> list = Arrays.asList(object.getClass().getMethods());
         properties.forEach((object2, object3) -> {
-            if (object instanceof aB && object2.toString().startsWith("dataSource.")) {
-                ((aB)object).a(object2.toString().substring("dataSource.".length()), object3);
+            if (object instanceof aB && object2.toString().startsWith("")) {
+                ((aB)object).a(object2.toString().substring("".length()), object3);
             } else {
                 bh.a(object, object2.toString(), object3, list);
             }

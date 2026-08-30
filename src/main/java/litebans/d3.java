@@ -1,6 +1,6 @@
 package litebans;
 
-public static class d3
+public class d3
 extends RuntimeException {
     private static final long a = 929872118275916520L;
 

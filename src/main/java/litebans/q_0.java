@@ -115,11 +115,7 @@ import litebans.w;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.q
- */
-public static final class q_0
+public final class q_0
 extends n_0 {
     public static final ig_0 j;
     private byte b;
@@ -185,7 +181,7 @@ extends n_0 {
         if (eG2 != null) {
             return eG2;
         }
-        ew.e(w[0]);
+        ew.e("");
         return null;
     }
 
@@ -198,7 +194,7 @@ extends n_0 {
         if (k22 != null) {
             return k22;
         }
-        ew.e(w[1]);
+        ew.e("");
         return null;
     }
 
@@ -211,7 +207,7 @@ extends n_0 {
         if (fu2 != null) {
             return fu2;
         }
-        ew.e(w[2]);
+        ew.e("");
         return null;
     }
 
@@ -224,7 +220,7 @@ extends n_0 {
         if (h72 != null) {
             return h72;
         }
-        ew.e(w[3]);
+        ew.e("");
         return null;
     }
 
@@ -355,13 +351,13 @@ extends n_0 {
         if (this.g()) {
             if (object instanceof Throwable) {
                 n_0 n_02 = this;
-                String string = w[4];
+                String string = "0xAAA";
                 boolean bl = false;
                 n_02.a.getLogger().warning(string);
                 ((Throwable)object).printStackTrace();
             } else {
                 n_0 n_03 = this;
-                String string = w[5] + object;
+                String string = "0xAAA " + object;
                 boolean bl = false;
                 n_03.a.getLogger().warning(string);
                 Thread.dumpStack();
@@ -397,7 +393,7 @@ extends n_0 {
     public final String b(@Nullable String string) {
         Object object = this.B;
         if (object == null || (object = ((fv_0)object).b(string)) == null) {
-            object = w[6];
+            object = "geoip.unavailable";
         }
         return object;
     }
@@ -414,12 +410,12 @@ extends n_0 {
                 Object object;
                 o o2 = (o)q_02.a.a(o.class);
                 Object object2 = q_02.a.getDataFolder();
-                String string = w[7];
+                String string = "lockdown.yml";
                 boolean bl2 = false;
                 File file = new File((File)object2, string);
                 if (!file.exists() || gg_0.d() == null) {
                     object2 = q_02.a.getDataFolder();
-                    string = w[8];
+                    string = "lockdown.json";
                     bl2 = false;
                     file = new File((File)object2, string);
                 }
@@ -430,7 +426,7 @@ extends n_0 {
                     object2 = q_02.a.a(file).g();
                     gG gG3 = o2.e();
                     gG gG4 = o2.e();
-                    object = object2.b(w[9], gG3 != null ? gG3.c() : null).b(w[10], gG4 != null ? gG4.a() : null).h();
+                    object = object2.b("reason", gG3 != null ? gG3.c() : null).b("scope", gG4 != null ? gG4.a() : null).h();
                 }
             }
             catch (Exception exception) {
@@ -448,7 +444,7 @@ extends n_0 {
             n_0 n_02 = this;
             String string = exception.getMessage();
             if (string == null) {
-                string = w[22];
+                string = ".. + ";
             }
             String string2 = string;
             boolean bl = false;
@@ -467,7 +463,7 @@ extends n_0 {
                 q_03.a((Object)("" + '!' + by2 + '!'));
             }
         }
-        throw new RuntimeException(w[23] + by2);
+        throw new RuntimeException("Error 0x" + by2);
     }
 
     @Override
@@ -480,7 +476,7 @@ extends n_0 {
         this.c = 1;
         this.u();
         try {
-            this.a.a(w[24]);
+            this.a.a("config.yml");
         }
         catch (Exception exception) {
             this.a(exception);
@@ -493,11 +489,11 @@ extends n_0 {
         Throwable throwable = ((q_0)object).a.h().b();
         if (throwable != null) {
             Throwable throwable2 = throwable;
-            ((q_0)object).a(w[25], throwable2);
+            ((q_0)object).a("config", throwable2);
             if (((q_0)object).a.h().c().exists()) {
-                logger.severe(w[26]);
+                logger.severe("[!!] Your configuration might be invalid. It can be verified with https://yaml-online-parser.appspot.com/");
             } else {
-                logger.severe(w[27] + ((q_0)object).a.h().c().getAbsolutePath() + w[28]);
+                logger.severe("[!!] Configuration does not exist! Ensure that read/write permissions are correct. (\"" + ((q_0)object).a.h().c().getAbsolutePath() + "\")");
             }
             if (((q_0)object).a(2)) {
                 ((q_0)object).a(throwable2);
@@ -510,18 +506,14 @@ extends n_0 {
     private final void u() {
         if (gg_0.d() == null) {
             w w2 = (w)this.a.a(w.class);
-            jP jP2 = new jP(w[29], dg_0.class.getName(), w[30], w[31], w[32]);
+            jP jP2 = new jP("SnakeYAML", dg_0.class.getName(), "https://repo1.maven.org/maven2/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar", "2.4", "ef779af5d29a9dde8cc70ce0341f5c6f7735e23edff9685ceaa9d35359b7bb7f");
             Object object = litebans.w.a(w2, jP2, false, false, 2, null);
-            ew.b(object, w[33]);
+            ew.b(object, "");
             Class clazz = (Class)object;
             this.a.a(new eV(this, clazz));
         }
     }
 
-    /*
-     * Unable to fully structure code
-     * Could not resolve type clashes
-     */
     @Override
     public void e() {
         block97: {
@@ -544,9 +536,9 @@ extends n_0 {
                 var8_14 = null;
                 try {
                     block112: {
-                        var3_3.c().a(q_0.w[34]);
+                        var3_3.c().a("templates.yml");
                         var8_14 = var3_3.c().a(var3_3.b()).g();
-                        var8_14.a(gn_0.b(q_0.w[35], null));
+                        var8_14.a(gn_0.b("templates.yml", null));
                         var3_3.a(var8_14);
                         var3_3.d().clear();
                         var9_20 = var3_3;
@@ -563,7 +555,7 @@ extends n_0 {
                             var19_38 = (a_)var18_36;
                             var20_41 = var15_30;
                             var21_42 = false;
-                            var20_41.add(kc_0.a(var19_38, var11_23.a(var19_38 + q_0.w[36])));
+                            var20_41.add(kc_0.a(var19_38, var11_23.a(var19_38 + "-templates")));
                         }
                         var22_45 = (List)var15_30;
                         for (jT var13_26 : var22_45) {
@@ -599,19 +591,19 @@ extends n_0 {
                                         var34_68 = false;
                                         if (!(var32_63 != null)) {
                                             var35_73 = false;
-                                            var35_74 = q_0.w[37] + (String)var33_65 + '\'';
+                                            var35_74 = "Empty template: '" + (String)var33_65 + '\'';
                                             throw new IllegalArgumentException(var35_74.toString());
                                         }
                                         if (!(bz.c((CharSequence)var33_65, ' ', false, 2, null) == false && bz.c((CharSequence)var33_65, '.', false, 2, null) == false)) {
                                             var35_75 = false;
-                                            var35_76 = q_0.w[38] + (String)var33_65 + q_0.w[39];
+                                            var35_76 = "Template name '" + (String)var33_65 + "' cannot include dots or spaces! Use dashes or underscores instead + ";
                                             throw new IllegalArgumentException(var35_76.toString());
                                         }
-                                        var35_72 = q_0.w[40];
+                                        var35_72 = "";
                                         var36_81 = false;
                                         if (!(var32_63 != null)) {
                                             var37_86 = false;
-                                            var37_87 = var31_60 + q_0.w[41] + (String)var35_72 + q_0.w[42];
+                                            var37_87 = var31_60 + " template '" + (String)var35_72 + "' has invalid section + ";
                                             throw new IllegalArgumentException(var37_87.toString());
                                         }
                                         var38_92 = var32_63.a(false);
@@ -640,41 +632,41 @@ extends n_0 {
                                                                     if (var51_169 == null) continue;
                                                                     switch (var51_169.hashCode()) {
                                                                         case -1992012396: {
-                                                                            if (var51_169.equals(q_0.w[43])) break;
+                                                                            if (var51_169.equals("duration")) break;
                                                                             ** break;
                                                                         }
                                                                         case -1618876223: {
-                                                                            if (!var51_169.equals(q_0.w[44])) {
+                                                                            if (!var51_169.equals("broadcast")) {
                                                                                 ** break;
                                                                             }
                                                                             break block98;
                                                                         }
                                                                         case -934964668: {
-                                                                            if (!var51_169.equals(q_0.w[45])) {
+                                                                            if (!var51_169.equals("reason")) {
                                                                                 ** break;
                                                                             }
                                                                             break block99;
                                                                         }
                                                                         case 97513095: {
-                                                                            if (!var51_169.equals(q_0.w[46])) {
+                                                                            if (!var51_169.equals("flags")) {
                                                                                 ** break;
                                                                             }
                                                                             break block100;
                                                                         }
                                                                         case -517618225: {
-                                                                            if (!var51_169.equals(q_0.w[47])) {
+                                                                            if (!var51_169.equals("permission")) {
                                                                                 ** break;
                                                                             }
                                                                             break block101;
                                                                         }
                                                                         case 954925063: {
-                                                                            if (!var51_169.equals(q_0.w[48])) {
+                                                                            if (!var51_169.equals("message")) {
                                                                                 ** break;
                                                                             }
                                                                             break block102;
                                                                         }
                                                                         case -1161803523: {
-                                                                            if (!var51_169.equals(q_0.w[49])) {
+                                                                            if (!var51_169.equals("actions")) {
                                                                                 ** break;
                                                                             }
                                                                             break block103;
@@ -706,7 +698,7 @@ lbl150:
                                         var52_175 = jc.a[var31_60.ordinal()] == 1 ? new c5((String)var39_94, var40_99, (String)var41_105, (String)var42_109, var43_117, (List)var44_125) : (c5)new cW(var37_88, (String)var39_94, var40_99, (String)var41_105, (String)var42_109, var43_117, (List)var44_125);
                                         var36_80 = var29_52;
                                         var37_86 = false;
-                                        v2 = var32_63.a(q_0.w[50]);
+                                        v2 = var32_63.a("ladder");
                                         if (v2 != null) break block104;
                                         v3 = ll.e();
                                         break block105;
@@ -740,7 +732,7 @@ lbl150:
                                         var50_164 = false;
                                         if (!(var46_139 != null)) {
                                             var51_170 = false;
-                                            var51_171 = var31_60 + q_0.w[51] + (String)var33_65 + q_0.w[52];
+                                            var51_171 = var31_60 + " template '" + (String)var33_65 + "' has invalid section + ";
                                             throw new IllegalArgumentException(var51_171.toString());
                                         }
                                         var53_176 /* !! */  = var46_139.a(false);
@@ -769,41 +761,41 @@ lbl150:
                                                                     if (var66_194 == null) continue;
                                                                     switch (var66_194.hashCode()) {
                                                                         case -1992012396: {
-                                                                            if (var66_194.equals(q_0.w[53])) break;
+                                                                            if (var66_194.equals("duration")) break;
                                                                             ** break;
                                                                         }
                                                                         case -1618876223: {
-                                                                            if (!var66_194.equals(q_0.w[54])) {
+                                                                            if (!var66_194.equals("broadcast")) {
                                                                                 ** break;
                                                                             }
                                                                             break block106;
                                                                         }
                                                                         case -934964668: {
-                                                                            if (!var66_194.equals(q_0.w[55])) {
+                                                                            if (!var66_194.equals("reason")) {
                                                                                 ** break;
                                                                             }
                                                                             break block107;
                                                                         }
                                                                         case 97513095: {
-                                                                            if (!var66_194.equals(q_0.w[56])) {
+                                                                            if (!var66_194.equals("flags")) {
                                                                                 ** break;
                                                                             }
                                                                             break block108;
                                                                         }
                                                                         case -517618225: {
-                                                                            if (!var66_194.equals(q_0.w[57])) {
+                                                                            if (!var66_194.equals("permission")) {
                                                                                 ** break;
                                                                             }
                                                                             break block109;
                                                                         }
                                                                         case 954925063: {
-                                                                            if (!var66_194.equals(q_0.w[58])) {
+                                                                            if (!var66_194.equals("message")) {
                                                                                 ** break;
                                                                             }
                                                                             break block110;
                                                                         }
                                                                         case -1161803523: {
-                                                                            if (!var66_194.equals(q_0.w[59])) {
+                                                                            if (!var66_194.equals("actions")) {
                                                                                 ** break;
                                                                             }
                                                                             break block111;
@@ -837,15 +829,15 @@ lbl259:
                                     v3 = ll.c((Iterable)((List)var42_109));
                                 }
                                 var35_72 = v3;
-                                var67_195 = (long)db_0.a(dk.d, var32_63.a(q_0.w[60], q_0.w[61]), 0.0, 2, null);
-                                var38_91 = var32_63.a(q_0.w[62], false);
+                                var67_195 = (long)db_0.a(dk.d, var32_63.a("expire_ladder", "0"), 0.0, 2, null);
+                                var38_91 = var32_63.a("ip_template", false);
                                 var20_41.add(new c1(var30_53, (String)var33_65, (a_)var31_60, (c5)var52_175, var38_91, (List)var35_72, var67_195, null));
                             }
                             var18_36 = (List)var23_46;
                             ll.a((Collection)var17_35, (Iterable)var18_36);
                         }
-                        var9_20.c().getLogger().info(q_0.w[63] + var9_20.d().size() + q_0.w[64]);
-                        var12_24 = var11_23.a(q_0.w[65]);
+                        var9_20.c().getLogger().info("Loaded " + var9_20.d().size() + " templates from templates.yml!");
+                        var12_24 = var11_23.a("template-groups");
                         if (var12_24 == null) break block112;
                         var13_27 = var12_24.a(false);
                         v4 = var9_20.e();
@@ -870,15 +862,15 @@ lbl259:
                                         var27_50 = var23_46;
                                         var28_51 = false;
                                         v5 = var26_49;
-                                        var29_52 = v5 != null ? v5.a(q_0.w[66]) : null;
+                                        var29_52 = v5 != null ? v5.a("weights") : null;
                                         if (!(var26_49 != null)) {
                                             var30_55 = false;
-                                            var30_56 = q_0.w[67] + (String)var27_50 + '\'';
+                                            var30_56 = "Empty template group: '" + (String)var27_50 + '\'';
                                             throw new IllegalArgumentException(var30_56.toString());
                                         }
                                         if (!(var29_52 != null)) {
                                             var30_57 = false;
-                                            var30_58 = q_0.w[68] + (String)var27_50 + q_0.w[69];
+                                            var30_58 = "No weights for template group '" + (String)var27_50 + "'!";
                                             throw new IllegalArgumentException(var30_58.toString());
                                         }
                                         var30_59 /* !! */  = a_.values();
@@ -887,7 +879,7 @@ lbl259:
                                         for (var32_64 = 0; var32_64 < var33_66; ++var32_64) {
                                             var35_72 = var34_69 = var30_59 /* !! */ [var32_64];
                                             var36_82 = false;
-                                            if (!ew.a((Object)(var26_49.a(q_0.w[70], q_0.w[71]) != null ? var37_90.toLowerCase(Locale.ROOT) : null), (Object)var35_72.toString())) continue;
+                                            if (!ew.a((Object)(var26_49.a("type", "") != null ? var37_90.toLowerCase(Locale.ROOT) : null), (Object)var35_72.toString())) continue;
                                             v6 = var34_69;
                                             break block95;
                                         }
@@ -895,12 +887,12 @@ lbl259:
                                     }
                                     if (!(var38_93 != null && var38_93 == var38_93.c())) {
                                         var31_61 = false;
-                                        var31_62 = q_0.w[72] + (String)var27_50 + q_0.w[73] + var38_93;
+                                        var31_62 = "Template group '" + (String)var27_50 + "' type is missing: " + var38_93;
                                         throw new IllegalArgumentException(var31_62.toString());
                                     }
                                     var31_60 = var25_48;
                                     var32_64 = 0;
-                                    if (var26_49.a(q_0.w[74]) != null) break block113;
+                                    if (var26_49.a("ladder") != null) break block113;
                                     v7 = ll.e();
                                     break block114;
                                 }
@@ -932,7 +924,7 @@ lbl259:
                                     var46_140 = false;
                                     if (!(var42_112 != null)) {
                                         var47_146 = false;
-                                        var47_147 = var38_93 + q_0.w[75] + (String)var27_50 + q_0.w[76];
+                                        var47_147 = var38_93 + " template '" + (String)var27_50 + "' has invalid section + ";
                                         throw new IllegalArgumentException(var47_147.toString());
                                     }
                                     var48_156 = var42_112.a(false);
@@ -963,41 +955,41 @@ lbl259:
                                                                 if (var61_188 == null) continue;
                                                                 switch (var61_188.hashCode()) {
                                                                     case -1992012396: {
-                                                                        if (var61_188.equals(q_0.w[77])) break;
+                                                                        if (var61_188.equals("duration")) break;
                                                                         ** break;
                                                                     }
                                                                     case -1618876223: {
-                                                                        if (!var61_188.equals(q_0.w[78])) {
+                                                                        if (!var61_188.equals("broadcast")) {
                                                                             ** break;
                                                                         }
                                                                         break block115;
                                                                     }
                                                                     case -934964668: {
-                                                                        if (!var61_188.equals(q_0.w[79])) {
+                                                                        if (!var61_188.equals("reason")) {
                                                                             ** break;
                                                                         }
                                                                         break block116;
                                                                     }
                                                                     case 97513095: {
-                                                                        if (!var61_188.equals(q_0.w[80])) {
+                                                                        if (!var61_188.equals("flags")) {
                                                                             ** break;
                                                                         }
                                                                         break block117;
                                                                     }
                                                                     case -517618225: {
-                                                                        if (!var61_188.equals(q_0.w[81])) {
+                                                                        if (!var61_188.equals("permission")) {
                                                                             ** break;
                                                                         }
                                                                         break block118;
                                                                     }
                                                                     case 954925063: {
-                                                                        if (!var61_188.equals(q_0.w[82])) {
+                                                                        if (!var61_188.equals("message")) {
                                                                             ** break;
                                                                         }
                                                                         break block119;
                                                                     }
                                                                     case -1161803523: {
-                                                                        if (!var61_188.equals(q_0.w[83])) {
+                                                                        if (!var61_188.equals("actions")) {
                                                                             ** break;
                                                                         }
                                                                         break block120;
@@ -1031,10 +1023,10 @@ lbl430:
                                 v7 = ll.c((Iterable)((List)var37_90));
                             }
                             var30_59 /* !! */  = v7;
-                            var71_198 = (long)db_0.a(dk.d, var26_49.a(q_0.w[84], q_0.w[85]), 0.0, 2, null);
+                            var71_198 = (long)db_0.a(dk.d, var26_49.a("expire_ladder", "0"), 0.0, 2, null);
                             if (!(((Collection)var30_59 /* !! */ ).isEmpty() == false)) {
                                 var34_70 = false;
-                                var34_71 = q_0.w[86] + (String)var27_50 + q_0.w[87];
+                                var34_71 = "No ladder for template group '" + (String)var27_50 + "'!";
                                 throw new IllegalArgumentException(var34_71.toString());
                             }
                             var34_69 = var29_52.a(false);
@@ -1068,11 +1060,11 @@ lbl430:
                                 var46_141 = var25_48.a(var38_93, (String)var44_129.getKey());
                                 if (!(var46_141 != null)) {
                                     var47_149 = false;
-                                    var47_150 = q_0.w[88] + (String)var27_50 + q_0.w[89] + var38_93 + q_0.w[90] + (String)var44_129.getKey() + '\'';
+                                    var47_150 = "Template group '" + (String)var27_50 + "' refers to non-existing " + var38_93 + " template: '" + (String)var44_129.getKey() + '\'';
                                     throw new IllegalArgumentException(var47_150.toString());
                                 }
                                 if (((Collection)var46_141.b()).isEmpty() == false) {
-                                    var25_48.c().getLogger().warning(q_0.w[91] + (String)var44_129.getKey() + q_0.w[92] + (String)var27_50 + q_0.w[93] + (String)var44_129.getKey() + q_0.w[94]);
+                                    var25_48.c().getLogger().warning("Template '" + (String)var44_129.getKey() + "' belongs to template group '" + (String)var27_50 + "', its ladder will be ignored. Remove the ladder from '" + (String)var44_129.getKey() + "' to silence this warning + ");
                                 }
                                 var48_157 = (Map.Entry)var43_122;
                                 var49_161 = var46_141;
@@ -1084,7 +1076,7 @@ lbl430:
                             var33_65 = var37_90;
                             if (!(var33_65.isEmpty() == false)) {
                                 var35_78 = false;
-                                var35_79 = q_0.w[95] + (String)var27_50 + q_0.w[96];
+                                var35_79 = "No weights for template group '" + (String)var27_50 + "'!";
                                 throw new IllegalArgumentException(var35_79.toString());
                             }
                             var34_69 = var33_65.values();
@@ -1107,7 +1099,7 @@ lbl430:
                                 var37_90 = var36_84.next();
                                 var39_98 = ((Number)var37_90).floatValue();
                                 var40_103 = false;
-                                var25_48.c().getLogger().warning(q_0.w[97] + (String)var27_50 + q_0.w[98] + var39_98);
+                                var25_48.c().getLogger().warning("Template group '" + (String)var27_50 + "' includes a bad weight: " + var39_98);
                             }
                             var35_72 = var33_65;
                             var36_85 = false;
@@ -1156,7 +1148,7 @@ lbl430:
                         var20_41.a(ll.a(var69_196, (Iterable)var70_197));
                     }
                     if (((Collection)var9_20.e()).isEmpty() == false) {
-                        var9_20.c().getLogger().info(q_0.w[99] + var9_20.e().size() + q_0.w[100]);
+                        var9_20.c().getLogger().info("Loaded " + var9_20.e().size() + " template groups from templates.yml!");
                     } else {
                         var9_20.a(ll.e());
                     }
@@ -1185,7 +1177,7 @@ lbl430:
                 }
                 catch (Throwable var5_8) {
                     var6_9 = (n_0)var3_3;
-                    var7_11 = h1.a((CharSequence)q_0.w[101], (CharSequence)q_0.w[102]);
+                    var7_11 = h1.a((CharSequence)"Failed to hook into ServerListPlus + ", (CharSequence)"Try using the latest ServerListPlus development build + ");
                     var8_15 = false;
                     var9_20 = var6_9.a.getLogger();
                     var10_22 = false;
@@ -1203,7 +1195,7 @@ lbl430:
         var5_7 = var3_3.f();
         if (var5_7.W()) {
             var6_9 = var3_3.a.getDataFolder();
-            var7_12 = q_0.w[103];
+            var7_12 = "geoip";
             var8_16 = false;
             var9_20 = d6.c(new File((File)var6_9, var7_12));
             var3_3.a.b(new cz_0((q_0)var3_3, (File)var9_20, (eG)var5_7));
@@ -1214,23 +1206,23 @@ lbl430:
             var4_6 = false;
             var5_7 = (o)var3_3.a.a(o.class);
             var6_9 = var3_3.a.getDataFolder();
-            var7_13 = q_0.w[104];
+            var7_13 = "lockdown.yml";
             var8_17 = false;
             var9_20 = new File((File)var6_9, var7_13);
             if (!var9_20.exists() || gg_0.d() == null) {
                 var6_9 = var3_3.a.getDataFolder();
-                var7_13 = q_0.w[105];
+                var7_13 = "lockdown.json";
                 var8_17 = false;
                 var9_20 = new File((File)var6_9, var7_13);
             }
             if (var9_20.exists()) {
                 var6_9 = var3_3.a.a((File)var9_20).g();
-                var7_13 = var6_9.a(q_0.w[106], q_0.w[107]);
-                var8_18 = var6_9.a(q_0.w[108], q_0.w[109]);
+                var7_13 = var6_9.a("scope", "*");
+                var8_18 = var6_9.a("reason", "");
                 if (var3_3.f().D()) {
                     ew.a((Object)var8_18);
                     if (((CharSequence)var8_18).length() > 0) {
-                        var3_3.a.getLogger().info(q_0.w[110] + var8_18 + '\"');
+                        var3_3.a.getLogger().info("Applying saved lockdown, reason: \"" + var8_18 + '\"');
                         ew.a((Object)var7_13);
                         var5_7.a(var7_13, (CharSequence)var8_18, true);
                     }
@@ -1242,7 +1234,7 @@ lbl430:
             var5_7 = jb_0.c();
             var6_9 = var3_3.a.e();
             if (!ew.a(var5_7, var6_9)) {
-                var7_13 = q_0.w[111] + (String)var5_7 + q_0.w[112] + (String)var6_9 + '!';
+                var7_13 = "This is LiteBans version " + (String)var5_7 + ", NOT version " + (String)var6_9 + '!';
                 var8_19 = new hS((q_0)var3_3, var7_13);
                 var8_19.run();
                 var3_3.a.a(var8_19, 20L);
@@ -1266,10 +1258,10 @@ lbl430:
         RandomID randomID = null;
         try {
             Database database2 = Database.get();
-            ew.b(database2, w[113]);
+            ew.b(database2, "");
             database = (k4)database2;
             Events events2 = Events.get();
-            ew.b(events2, w[114]);
+            ew.b(events2, "");
             events = (cb)events2;
             playerProvider = PlayerProvider.get();
             randomID = RandomID.get();
@@ -1288,7 +1280,7 @@ lbl430:
 
     @Override
     public void b() {
-        this.a.a(w[117]);
+        this.a.a("config.yml");
         this.a.h().f();
         this.c = 0;
         this.e();
@@ -1388,22 +1380,22 @@ lbl430:
             if (c == '\u0000') break;
             --n2;
         }
-        return bz.b(string2 = ((Object)charSequence.subSequence(n, n2 + 1)).toString(), w[123], false, 2, null) || bz.b(string2, w[124], false, 2, null) || bz.b(string2, w[125], false, 2, null) || bz.b(string2, litebans.w.v.b(), false, 2, null) || bz.b(string2, litebans.w.v.d(), false, 2, null) || bz.b(string2, litebans.w.v.c(), false, 2, null) || bz.b(string2, w[126], false, 2, null) || bz.b(string2, w[127], false, 2, null) || bz.b(string2, w[128], false, 2, null) ? w[129] : string;
+        return bz.b(string2 = ((Object)charSequence.subSequence(n, n2 + 1)).toString(), "at java.lang.Thread.run(", false, 2, null) || bz.b(string2, "at java.util.concurrent.ThreadPoolExecutor$Worker.run(", false, 2, null) || bz.b(string2, "at java.util.concurrent.ThreadPoolExecutor.runWorker(", false, 2, null) || bz.b(string2, litebans.w.v.b(), false, 2, null) || bz.b(string2, litebans.w.v.d(), false, 2, null) || bz.b(string2, litebans.w.v.c(), false, 2, null) || bz.b(string2, "at sun.reflect.NativeConstructorAccessorImpl.newInstance", false, 2, null) || bz.b(string2, "at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(", false, 2, null) || bz.b(string2, "at java.lang.reflect.Constructor.newInstance(", false, 2, null) ? "" : string;
     }
 
     public final void a(@NotNull String string, @NotNull Throwable throwable) {
         int n;
         Object object = this;
-        String[] stringArray = w[130] + string + w[131];
+        String[] stringArray = "[!!] Could not load " + string + " + ";
         boolean bl = false;
         ((n_0)object).a.getLogger().severe((String)stringArray);
-        object = w[132];
-        Object object2 = new String[]{(String)object + w[133], (String)object + w[134], (String)object + w[135], (String)object + w[136], (String)object + w[137], object};
+        object = "org.bukkit.configuration.InvalidConfigurationException: ";
+        Object object2 = new String[]{(String)object + "while scanning an anchor", (String)object + "while scanning a simple key", (String)object + "while scanning for the next token", (String)object + "while parsing a block mapping", (String)object + "while parsing a block collection", object};
         stringArray = object2;
         object2 = null;
         String string2 = throwable.getMessage();
         if (string2 == null) {
-            string2 = w[138];
+            string2 = "";
         }
         object2 = string2;
         Object object3 = stringArray;
@@ -1413,27 +1405,27 @@ lbl430:
             String string3;
             String string4 = string3 = object3[n];
             boolean bl3 = false;
-            object2 = bz.a((String)object2, string4, w[139], false, 4, null);
+            object2 = bz.a((String)object2, string4, "", false, 4, null);
         }
-        object2 = bz.a((String)object2, w[140], w[141], false, 4, null);
+        object2 = bz.a((String)object2, "\\t(TAB)", "TAB", false, 4, null);
         object3 = this;
-        String string5 = w[142] + (String)object2;
+        String string5 = "[!!] Configuration error found: " + (String)object2;
         n = 0;
         object3.a.getLogger().severe(string5);
         object3 = this;
-        string5 = w[143] + string + w[144];
+        string5 = "[!!] LiteBans will use the default " + string + " until errors have been ";
         n = 0;
         object3.a.getLogger().severe(string5);
     }
 
     public final Object t() {
-        return this.a.i().c(w[147]);
+        return this.a.i().c("ServerListPlus");
     }
 
     public final q_0 o() {
         if (!this.q) {
             n_0 n_02 = this;
-            String string = this.a.getName() + w[148];
+            String string = this.a.getName() + " is not enabled yet!";
             boolean bl = false;
             n_02.a.getLogger().severe(string);
             throw new cP();
@@ -1446,10 +1438,10 @@ lbl430:
             return am.ay;
         }
         String string = object.toString();
-        if (ew.a((Object)string, (Object)w[149])) {
+        if (ew.a((Object)string, (Object)"true")) {
             return am.ap;
         }
-        if (ew.a((Object)string, (Object)w[150])) {
+        if (ew.a((Object)string, (Object)"false")) {
             return am.bW;
         }
         if (eq_0.f.b(string)) {
@@ -1463,19 +1455,19 @@ lbl430:
         String string2 = string = jv_02.b();
         boolean bl = false;
         if (string2 == null && !this.f().h()) {
-            this.a.getLogger().warning(w[151] + jv_02.i() + w[152] + object.getClass().getSimpleName());
+            this.a.getLogger().warning("Player[name=" + jv_02.i() + "].getAddress() returned null on " + object.getClass().getSimpleName());
         }
         return string;
     }
 
     public final boolean e(@NotNull String string) {
-        if (!this.f().p() && (bz.a(string, w[153], false, 2, null) || bz.a(string, w[154], false, 2, null))) {
+        if (!this.f().p() && (bz.a(string, "mute", false, 2, null) || bz.a(string, "muteip", false, 2, null))) {
             return false;
         }
-        if (!this.f().C() && bz.a(string, w[155], false, 2, null)) {
+        if (!this.f().C() && bz.a(string, "warn", false, 2, null)) {
             return false;
         }
-        return this.f().ab() || !ew.a((Object)string, (Object)w[156]);
+        return this.f().ab() || !ew.a((Object)string, (Object)"lockdown");
     }
 
     public final boolean p() {
@@ -1485,12 +1477,12 @@ lbl430:
     public final SimpleDateFormat a(@NotNull CharSequence charSequence, @NotNull CharSequence charSequence2) {
         SimpleDateFormat simpleDateFormat;
         try {
-            simpleDateFormat = new SimpleDateFormat(bz.a(((Object)charSequence).toString(), w[157], w[158], false, 4, null), this.z().d());
+            simpleDateFormat = new SimpleDateFormat(bz.a(((Object)charSequence).toString(), "YYYY", "yyyy", false, 4, null), this.z().d());
         }
         catch (Exception exception) {
             if (!(exception instanceof dr_0)) {
                 n_0 n_02 = this;
-                CharSequence charSequence3 = h1.a((CharSequence)(w[159] + charSequence + w[160] + charSequence2 + w[161]), (CharSequence)w[162]);
+                CharSequence charSequence3 = h1.a((CharSequence)("Invalid date format: \"" + charSequence + "\". Using default date format \"" + charSequence2 + "\" + "), (CharSequence)"Date format documentation: https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html");
                 boolean bl = false;
                 Logger logger = n_02.a.getLogger();
                 boolean bl2 = false;
@@ -1500,13 +1492,13 @@ lbl430:
         }
         SimpleDateFormat simpleDateFormat2 = simpleDateFormat;
         boolean bl = false;
-        simpleDateFormat2.setTimeZone(TimeZone.getTimeZone(w[163]));
+        simpleDateFormat2.setTimeZone(TimeZone.getTimeZone("UTC"));
         return simpleDateFormat;
     }
 
     public static /* synthetic */ SimpleDateFormat a(q_0 q_02, CharSequence charSequence, CharSequence charSequence2, int n, Object object) {
         if ((n & 2) != 0) {
-            charSequence2 = w[164];
+            charSequence2 = "yyyy-MM-dd";
         }
         return q_02.a(charSequence, charSequence2);
     }
@@ -1516,7 +1508,7 @@ lbl430:
     }
 
     private static final boolean c(q_0 q_02) {
-        return q_02.a.i().a(w[165]);
+        return q_02.a.i().a("AuthMe");
     }
 
     private static final void a(q_0 q_02, di_0 di_02) {
@@ -1535,9 +1527,9 @@ lbl430:
             boolean bl2 = false;
             gn_0 gn_02 = null;
             try {
-                k24.a().a(w[166]);
+                k24.a().a("messages.yml");
                 gn_02 = k24.a().a(k24.g()).g();
-                gn_02.a(gn_0.b(w[167], null));
+                gn_02.a(gn_0.b("messages.yml", null));
                 k24.a(gn_02);
                 object3 = k24;
                 boolean bl3 = false;
@@ -1561,20 +1553,20 @@ lbl430:
                     }
                     object2.b(string, bz.a(((Object)charSequence2).toString(), '\u00a7', '&', false, 4, null));
                 }
-                object3 = gn_02.a(w[168], w[169]);
-                if (!ew.a(object3, (Object)w[170])) {
+                object3 = gn_02.a("locale", "system");
+                if (!ew.a(object3, (Object)"system")) {
                     Locale locale = k24.b();
                     k24.a(new Locale((String)object3));
-                    k24.a().getLogger().info(w[171] + k24.d().getLanguage() + ')');
+                    k24.a().getLogger().info("Using configured locale (" + k24.d().getLanguage() + ')');
                     if (ew.a((Object)k24.d(), locale)) {
-                        object2 = w[172] + lo_0.a(Locale.getAvailableLocales(), null, null, null, 0, null, (eo_0)el.a, 31, null);
+                        object2 = "Supported locales: " + lo_0.a(Locale.getAvailableLocales(), null, null, null, 0, null, (eo_0)el.a, 31, null);
                         object = k24.a().getLogger();
-                        CharSequence charSequence = h1.a((CharSequence)w[173], (CharSequence)object2);
+                        CharSequence charSequence = h1.a((CharSequence)"Note: If the configured locale is unrecognized, the system default locale is ", (CharSequence)object2);
                         int n = 0;
                         ((Logger)object).info(((Object)charSequence).toString());
                     }
                 } else {
-                    k24.a().getLogger().info(w[174] + k24.d().getLanguage() + ')');
+                    k24.a().getLogger().info("Using system locale (" + k24.d().getLanguage() + ')');
                 }
                 k24.a((gn_0)null);
             }
@@ -1588,7 +1580,7 @@ lbl430:
                     gn_02.h();
                 }
                 catch (Exception exception) {
-                    k24.a().getLogger().severe(w[175]);
+                    k24.a().getLogger().severe("[!!] Could not save messages + ");
                     k24.e().a(exception);
                 }
             }
@@ -1596,9 +1588,9 @@ lbl430:
             boolean bl6 = false;
             object2 = am.a2;
             object = am.ad;
-            if (bz.a((CharSequence)object2, (CharSequence)w[176], false, 2, null) || bz.a((CharSequence)object, (CharSequence)w[177], false, 2, null)) {
-                ((am)object2).c3 = ((am)object2).a((CharSequence)w[178], (Object)w[179]);
-                ((am)object).c3 = ((am)object).a((CharSequence)w[180], (Object)w[181]);
+            if (bz.a((CharSequence)object2, (CharSequence)"$bannedPlayer", false, 2, null) || bz.a((CharSequence)object, (CharSequence)"$bannedPlayer", false, 2, null)) {
+                ((am)object2).c3 = ((am)object2).a((CharSequence)"$bannedPlayer", (Object)"$mutedPlayer");
+                ((am)object).c3 = ((am)object).a((CharSequence)"$bannedPlayer", (Object)"$warnedPlayer");
             }
             try {
                 db_0.a(dk.d, 0L, false, 2, null);
@@ -1606,9 +1598,9 @@ lbl430:
             catch (Exception exception) {
                 if (exception instanceof IllegalFormatException) {
                     CharSequence charSequence;
-                    String string = w[182];
+                    String string = "%d %s";
                     Logger logger = ((k2)object3).a().getLogger();
-                    charSequence = h1.a((CharSequence)(w[183] + am.b_ + w[184] + exception.getClass().getSimpleName() + ')'), (CharSequence)(w[185] + string + w[186]));
+                    charSequence = h1.a((CharSequence)("Duration format (\"" + am.b_ + "\") is invalid! (" + exception.getClass().getSimpleName() + ')'), (CharSequence)("Using default format instead (\"" + string + "\") + "));
                     boolean bl7 = false;
                     logger.warning(((Object)charSequence).toString());
                     am.b_.a(string);
@@ -1636,7 +1628,7 @@ lbl430:
             }
             catch (Throwable throwable) {
                 n_0 n_02 = q_03;
-                CharSequence charSequence = h1.a((CharSequence)w[187], (CharSequence)w[188]);
+                CharSequence charSequence = h1.a((CharSequence)"Failed to hook into ", (CharSequence)"Try using the latest ServerListPlus development ");
                 boolean bl2 = false;
                 Logger logger = n_02.a.getLogger();
                 boolean bl3 = false;
@@ -1681,35 +1673,35 @@ lbl430:
                     boolean bl3 = false;
                     ch ch3 = ch2;
                     boolean bl4 = false;
-                    ResultSet resultSet = eS.d(ch3.c((CharSequence)w[189]));
+                    ResultSet resultSet = eS.d(ch3.c((CharSequence)"SELECT NOW() as now"));
                     resultSet.next();
-                    Timestamp timestamp = resultSet.getTimestamp(w[190]);
+                    Timestamp timestamp = resultSet.getTimestamp("now");
                     Object object4 = q_02;
-                    Object object5 = w[191] + timestamp.getTime();
+                    Object object5 = "t: " + timestamp.getTime();
                     boolean bl5 = false;
                     ((n_0)object4).a.getLogger().info((String)object5);
                     object4 = q_02;
-                    object5 = w[192] + o2.a(timestamp.getTime(), true) + w[193] + o2.a(true);
+                    object5 = "f: " + o2.a(timestamp.getTime(), true) + " +" + o2.a(true);
                     bl5 = false;
                     ((n_0)object4).a.getLogger().info((String)object5);
                     ew.a(di_02);
-                    object5 = object4 = new gz_0(di_02, w[194], w[195], w[196]);
+                    object5 = object4 = new gz_0(di_02, "", "", "");
                     bl5 = false;
-                    iA iA2 = ch3.c(w[197]);
+                    iA iA2 = ch3.c("[CONSOLE]");
                     ew.a(iA2);
                     Object object6 = iA2;
                     String string = ((iA)object6).b();
                     ew.a((Object)string);
                     Object object7 = ((gz_0)object5).a(ch3, (iA)object6, new fW(string, ch3, null, false, 0, 28, null).i());
-                    if (!(!bz.a((CharSequence)object7, (CharSequence)w[198], false, 2, null))) {
+                    if (!(!bz.a((CharSequence)object7, (CharSequence)"))", false, 2, null))) {
                         boolean bl6 = false;
                         CharSequence charSequence = object7;
                         throw new IllegalArgumentException(((Object)charSequence).toString());
                     }
                     ch3.a(((iA)object6).b(), ((gz_0)object4).c(), a_.h, eq_0.f.b(), false, 1);
                     ch3.a(((iA)object6).b(), ((gz_0)object4).c(), a_.h, eq_0.f.b(), true, 1);
-                    object5 = w[199];
-                    String string2 = eq_0.f.c(w[200]);
+                    object5 = "*";
+                    String string2 = eq_0.f.c("global");
                     if (!eq_0.f.b(string2)) {
                         boolean bl7 = false;
                         String string3 = string2 + ' ' + eq_0.f.b();
@@ -1720,7 +1712,7 @@ lbl430:
                         String string4 = string2 + ' ' + (String)object5;
                         throw new IllegalArgumentException(string4.toString());
                     }
-                    d8 d82 = di_02.z().a(w[201]);
+                    d8 d82 = di_02.z().a("ban");
                     ew.a(d82);
                     object6 = d82;
                     object7 = fg_0.a;
@@ -1729,13 +1721,13 @@ lbl430:
                     try {
                         ((fo_0)object7).b().set(object8);
                         bl2 = false;
-                        String[] stringArray = new String[]{w[202], w[203]};
+                        String[] stringArray = new String[]{"test", "server:*"};
                         object6.a(di_02.y(), stringArray);
                     }
                     finally {
                         ((fo_0)object7).b().remove();
                     }
-                    iA iA3 = ch3.c(w[204]);
+                    iA iA3 = ch3.c("test");
                     ew.a(iA3);
                     object7 = iA3.b();
                     object8 = kR.a(ch3, (String)object7, null, a_.h, (String)object5, false, false, 48, null);
@@ -1745,11 +1737,11 @@ lbl430:
                         throw new IllegalArgumentException(string5.toString());
                     }
                     if (di_02.t() == 0 && !(!ew.a(di_02.b().getClass(), k_0.class))) {
-                        String string6 = w[205];
+                        String string6 = "Failed ";
                         throw new IllegalArgumentException(string6.toString());
                     }
                     n_0 n_02 = q_02;
-                    String string7 = w[206] + di_02.y().c();
+                    String string7 = "" + di_02.y().c();
                     boolean bl10 = false;
                     n_02.a.getLogger().info(string7);
                     object3 = iv_0.a;
@@ -1780,7 +1772,7 @@ lbl430:
             Object object2;
             block16: {
                 ec_0 ec_02 = di_02.i();
-                ew.b(ec_02, w[207]);
+                ew.b(ec_02, "");
                 e1 e12 = ((ao_0)ec_02).b();
                 object2 = e12.c();
                 object = e12.b();
@@ -1799,9 +1791,9 @@ lbl430:
                         if (ch3.a()) {
                             CharSequence charSequence;
                             kL kL2 = kL.g;
-                            Object object4 = w[208];
+                            Object object4 = "uuid";
                             int n = 0;
-                            ResultSet resultSet = eS.d(ch3.c(aR.d(aR.a(aR.a(aR.e(w[209] + object4 + w[210] + kL2), w[211]), (Number)1))));
+                            ResultSet resultSet = eS.d(ch3.c(aR.d(aR.a(aR.a(aR.e("SELECT " + object4 + " FROM " + kL2), "id"), (Number)1))));
                             object4 = resultSet;
                             n = 1;
                             boolean bl4 = false;
@@ -1822,10 +1814,10 @@ lbl430:
                             if (jj_0.a((String)((Object)kL2))) {
                                 object4 = UUID.fromString(jj_0.a.g((String)((Object)kL2)));
                                 ec_0 ec_03 = di_02.i();
-                                ew.b(ec_03, w[212]);
+                                ew.b(ec_03, "");
                                 ao_0 ao_02 = (ao_0)ec_03;
                                 ew.a(object4);
-                                e1.a(e12, ao_02.a((UUID)object4), w[213], null, 4, null);
+                                e1.a(e12, ao_02.a((UUID)object4), "test", null, 4, null);
                                 e12.a(object4);
                             }
                         }
@@ -1884,7 +1876,7 @@ lbl430:
     }
 
     private static final void v() {
-        w = new String[]{hl.a("", -1246926459), hl.a("", 1915114178), hl.a("", -729789697), hl.a("", 893984734), hl.a("\uf5e5\uf5ad\uf594\uf594\uf594", -736234027), hl.a("\u2e26\u2e6e\u2e57\u2e57\u2e57\u2e36", -2040648170), hl.a("\u50ef\u50ed\u50e7\u50e1\u50f8\u50a6\u50fd\u50e6\u50e9\u50fe\u50e9\u50e1\u50e4\u50e9\u50ea\u50e4\u50ed", -1056092024), hl.a("\uda4b\uda48\uda44\uda4c\uda43\uda48\uda50\uda49\uda09\uda5e\uda4a\uda4b", -1954751961), hl.a("\u550a\u5509\u5505\u550d\u5502\u5509\u5511\u5508\u5548\u550c\u5515\u5509\u5508", 796611942), hl.a("\u5d3b\u5d2c\u5d28\u5d3a\u5d26\u5d27", 1574329673), hl.a("\ue394\ue384\ue388\ue397\ue382", 1060168679), hl.a("\u3b5f\u3b5c\u3b50\u3b58\u3b57\u3b5c\u3b44\u3b5d\u3b1d\u3b4a\u3b5e\u3b5f", -2112013517), hl.a("\u72f9\u72fa\u72f6\u72fe\u72f1\u72fa\u72e2\u72fb\u72bb\u72ff\u72e6\u72fa\u72fb", -1012239723), hl.a("\u6fef\u6fff\u6ff3\u6fec\u6ff9", -1670615140), hl.a("\u7103", 561279273), hl.a("\u6a59\u6a4e\u6a4a\u6a58\u6a44\u6a45", 1804167723), hl.a("", -15736107), hl.a("\u3224\u3215\u3215\u3209\u321c\u320c\u320b\u3202\u3245\u3216\u3204\u3213\u3200\u3201\u3245\u3209\u320a\u3206\u320e\u3201\u320a\u3212\u320b\u3249\u3245\u3217\u3200\u3204\u3216\u320a\u320b\u325f\u3245\u3247", -1603718555), hl.a("\uffad\uffae\uffa2\uffaa\uffa5\uffae\uffb6\uffaf\uffef\uffb8\uffac\uffad", -803405887), hl.a("\uba4a\uba49\uba45\uba4d\uba42\uba49\uba51\uba48\uba08\uba4c\uba55\uba49\uba48", 1881586214), hl.a("\ue6a9\ue6be\ue6ba\ue6a8\ue6b4\ue6b5", 1686562523), hl.a("\uc9a0\uc9b0\uc9bc\uc9a3\uc9b6", 790481363), hl.a("\u475d\u475d\u475d", 1245595507), hl.a("\ua782\ua7b5\ua7b5\ua7a8\ua7b5\ua7e7\ua7f7\ua7bf", 246261703), hl.a("\u1977\u197b\u197a\u1972\u197d\u1973\u193a\u196d\u1979\u1978", 711203092), hl.a("\ua91a\ua916\ua917\ua91f\ua910\ua91e", 506767737), hl.a("\u14e4\u149e\u149e\u14e2\u149f\u14e6\u14d0\u14ca\u14cd\u149f\u14dc\u14d0\u14d1\u14d9\u14d6\u14d8\u14ca\u14cd\u14de\u14cb\u14d6\u14d0\u14d1\u149f\u14d2\u14d6\u14d8\u14d7\u14cb\u149f\u14dd\u14da\u149f\u14d6\u14d1\u14c9\u14de\u14d3\u14d6\u14db\u1491\u149f\u14f6\u14cb\u149f\u14dc\u14de\u14d1\u149f\u14dd\u14da\u149f\u14c9\u14da\u14cd\u14d6\u14d9\u14d6\u14da\u14db\u149f\u14c8\u14d6\u14cb\u14d7\u149f\u14d7\u14cb\u14cb\u14cf\u14cc\u1485\u1490\u1490\u14c6\u14de\u14d2\u14d3\u1492\u14d0\u14d1\u14d3\u14d6\u14d1\u14da\u1492\u14cf\u14de\u14cd\u14cc\u14da\u14cd\u1491\u14de\u14cf\u14cf\u14cc\u14cf\u14d0\u14cb\u1491\u14dc\u14d0\u14d2\u1490", 1347294399), hl.a("\u320a\u3270\u3270\u320c\u3271\u3212\u323e\u323f\u3237\u3238\u3236\u3224\u3223\u3230\u3225\u3238\u323e\u323f\u3271\u3235\u323e\u3234\u3222\u3271\u323f\u323e\u3225\u3271\u3234\u3229\u3238\u3222\u3225\u3270\u3271\u3214\u323f\u3222\u3224\u3223\u3234\u3271\u3225\u3239\u3230\u3225\u3271\u3223\u3234\u3230\u3235\u327e\u3226\u3223\u3238\u3225\u3234\u3271\u3221\u3234\u3223\u323c\u3238\u3222\u3222\u3238\u323e\u323f\u3222\u3271\u3230\u3223\u3234\u3271\u3232\u323e\u3223\u3223\u3234\u3232\u3225\u327f\u3271\u3279\u3273", -219073967), hl.a("\u53ac\u53a7", 292836238), hl.a("\uf75e\uf763\uf76c\uf766\uf768\uf754\uf74c\uf740\uf741", -225773811), hl.a("\ud76a\ud776\ud776\ud772\ud771\ud738\ud72d\ud72d\ud770\ud767\ud772\ud76d\ud733\ud72c\ud76f\ud763\ud774\ud767\ud76c\ud72c\ud76d\ud770\ud765\ud72d\ud76f\ud763\ud774\ud767\ud76c\ud730\ud72d\ud76d\ud770\ud765\ud72d\ud77b\ud763\ud76f\ud76e\ud72d\ud771\ud76c\ud763\ud769\ud767\ud77b\ud763\ud76f\ud76e\ud72d\ud730\ud72c\ud736\ud72d\ud771\ud76c\ud763\ud769\ud767\ud77b\ud763\ud76f\ud76e\ud72f\ud730\ud72c\ud736\ud72c\ud768\ud763\ud770", 1447024386), hl.a("\u6a19\u6a05\u6a1f", -252286421), hl.a("\u90c9\u90ca\u909b\u909b\u9095\u90cd\u90ca\u9099\u90c8\u909e\u9095\u90cd\u9095\u90c8\u90c8\u90c9\u9094\u90cf\u90cf\u909b\u909c\u90cf\u90c9\u909c\u909f\u9098\u909d\u90ca\u9099\u90cf\u909a\u90ca\u909b\u909b\u909f\u9099\u90c9\u909e\u909f\u90c9\u90c8\u90ca\u90ca\u9095\u909a\u9094\u9099\u90cf\u90c9\u90cd\u90cd\u9095\u90c8\u909f\u9099\u909f\u9099\u9095\u90ce\u909b\u90ce\u90ce\u909b\u90ca", -607416148), hl.a("", 1645062024), hl.a("\uecfb\uecea\uece2\uecff\uece3\uecee\uecfb\uecea\uecfc\ueca1\uecf6\uece2\uece3", 364375183), hl.a("\uae2a\uae3b\uae33\uae2e\uae32\uae3f\uae2a\uae3b\uae2d\uae70\uae27\uae33\uae32", -500912546), hl.a("\u36d6\u368f\u369e\u3696\u368b\u3697\u369a\u368f\u369e\u3688", -1285540101), hl.a("\u677e\u6756\u674b\u674f\u6742\u671b\u674f\u675e\u6756\u674b\u6757\u675a\u674f\u675e\u6701\u671b\u671c", 2120312635), hl.a("\u502b\u501a\u5012\u500f\u5013\u501e\u500b\u501a\u505f\u5011\u501e\u5012\u501a\u505f\u5058", -80392065), hl.a("\u3e86\u3e81\u3ec2\u3ec0\u3ecf\u3ecf\u3ece\u3ed5\u3e81\u3ec8\u3ecf\u3ec2\u3ecd\u3ed4\u3ec5\u3ec4\u3e81\u3ec5\u3ece\u3ed5\u3ed2\u3e81\u3ece\u3ed3\u3e81\u3ed2\u3ed1\u3ec0\u3ec2\u3ec4\u3ed2\u3e80\u3e81\u3ef4\u3ed2\u3ec4\u3e81\u3ec5\u3ec0\u3ed2\u3ec9\u3ec4\u3ed2\u3e81\u3ece\u3ed3\u3e81\u3ed4\u3ecf\u3ec5\u3ec4\u3ed3\u3ed2\u3ec2\u3ece\u3ed3\u3ec4\u3ed2\u3e81\u3ec8\u3ecf\u3ed2\u3ed5\u3ec4\u3ec0\u3ec5\u3e8f", -1745994079), hl.a("", -918792532), hl.a("\u6981\u69d5\u69c4\u69cc\u69d1\u69cd\u69c0\u69d5\u69c4\u6981\u6986", 348547489), hl.a("\u884d\u884a\u8802\u880b\u8819\u884a\u8803\u8804\u881c\u880b\u8806\u8803\u880e\u884a\u8819\u880f\u8809\u881e\u8803\u8805\u8804\u8844", -357267350), hl.a("\uab4d\uab5c\uab5b\uab48\uab5d\uab40\uab46\uab47", 596880169), hl.a("\u60ac\u60bc\u60a1\u60af\u60aa\u60ad\u60af\u60bd\u60ba", -585932594), hl.a("\u4dfb\u4dec\u4de8\u4dfa\u4de6\u4de7", -489402999), hl.a("\ufab4\ufabe\ufab3\ufab5\ufaa1", 1350957778), hl.a("\u5a29\u5a3c\u5a2b\u5a34\u5a30\u5a2a\u5a2a\u5a30\u5a36\u5a37", -800630183), hl.a("\u2578\u2570\u2566\u2566\u2574\u2572\u2570", 1406084373), hl.a("\ube5c\ube5e\ube49\ube54\ube52\ube53\ube4e", -271139267), hl.a("\u68be\u68b3\u68b6\u68b6\u68b7\u68a0", 793733330), hl.a("\u85bc\u85e8\u85f9\u85f1\u85ec\u85f0\u85fd\u85e8\u85f9\u85bc\u85bb", -1823898212), hl.a("\ucc03\ucc04\ucc4c\ucc45\ucc57\ucc04\ucc4d\ucc4a\ucc52\ucc45\ucc48\ucc4d\ucc40\ucc04\ucc57\ucc41\ucc47\ucc50\ucc4d\ucc4b\ucc4a\ucc0a", 88656932), hl.a("\ucd3b\ucd2a\ucd2d\ucd3e\ucd2b\ucd36\ucd30\ucd31", 236178783), hl.a("\u84e2\u84f2\u84ef\u84e1\u84e4\u84e3\u84e1\u84f3\u84f4", 890078336), hl.a("\u00dc\u00cb\u00cf\u00dd\u00c1\u00c0", 1059455150), hl.a("\u37c7\u37cd\u37c0\u37c6\u37d2", -1188612191), hl.a("\u4754\u4741\u4756\u4749\u474d\u4757\u4757\u474d\u474b\u474a", 532694820), hl.a("\uf358\uf350\uf346\uf346\uf354\uf352\uf350", 2095444789), hl.a("\u79fd\u79ff\u79e8\u79f5\u79f3\u79f2\u79ef", 1997371804), hl.a("\u2b15\u2b08\u2b00\u2b19\u2b02\u2b15\u2b2f\u2b1c\u2b11\u2b14\u2b14\u2b15\u2b02", -1304220816), hl.a("\ue86e", -1686640546), hl.a("\u6eda\u6ec3\u6eec\u6ec7\u6ed6\u6ede\u6ec3\u6edf\u6ed2\u6ec7\u6ed6", -983142733), hl.a("\u0740\u0763\u076d\u0768\u0769\u0768\u072c", -193919220), hl.a("\u821e\u824a\u825b\u8253\u824e\u8252\u825f\u824a\u825b\u824d\u821e\u8258\u824c\u8251\u8253\u821e\u824a\u825b\u8253\u824e\u8252\u825f\u824a\u825b\u824d\u8210\u8247\u8253\u8252\u821f", -370834882), hl.a("\ub271\ub260\ub268\ub275\ub269\ub264\ub271\ub260\ub228\ub262\ub277\ub26a\ub270\ub275\ub276", -448679419), hl.a("\ua927\ua935\ua939\ua937\ua938\ua924\ua923", 1488431440), hl.a("\u2e25\u2e0d\u2e10\u2e14\u2e19\u2e40\u2e14\u2e05\u2e0d\u2e10\u2e0c\u2e01\u2e14\u2e05\u2e40\u2e07\u2e12\u2e0f\u2e15\u2e10\u2e5a\u2e40\u2e47", 356724320), hl.a("\u8142\u8163\u812c\u817b\u8169\u8165\u816b\u8164\u8178\u817f\u812c\u816a\u8163\u817e\u812c\u8178\u8169\u8161\u817c\u8160\u816d\u8178\u8169\u812c\u816b\u817e\u8163\u8179\u817c\u812c\u812b", 1070498060), hl.a("\ua685\ua683", -1679513950), hl.a("\u9d31\u9d3c\u9d35\u9d20", -895312571), hl.a("", 861774631), hl.a("\u16a8\u1699\u1691\u168c\u1690\u169d\u1688\u1699\u16dc\u169b\u168e\u1693\u1689\u168c\u16dc\u16db", -593357060), hl.a("\uaa4b\uaa4c\uaa18\uaa15\uaa1c\uaa09\uaa4c\uaa05\uaa1f\uaa4c\uaa01\uaa05\uaa1f\uaa1f\uaa05\uaa02\uaa0b\uaa56\uaa4c", -1083463060), hl.a("\udc05\udc08\udc0d\udc0d\udc0c\udc1b", -1160323991), hl.a("\uae8d\uaed9\uaec8\uaec0\uaedd\uaec1\uaecc\uaed9\uaec8\uae8d\uae8a", 1771220653), hl.a("\u98bc\u98bb\u98f3\u98fa\u98e8\u98bb\u98f2\u98f5\u98ed\u98fa\u98f7\u98f2\u98ff\u98bb\u98e8\u98fe\u98f8\u98ef\u98f2\u98f4\u98f5\u98b5", 751474843), hl.a("\ud7e7\ud7f6\ud7f1\ud7e2\ud7f7\ud7ea\ud7ec\ud7ed", -686106749), hl.a("\u93d9\u93c9\u93d4\u93da\u93df\u93d8\u93da\u93c8\u93cf", -139422789), hl.a("\uddf8\uddef\uddeb\uddf9\udde5\udde4", -731718262), hl.a("\ucb0d\ucb07\ucb0a\ucb0c\ucb18", 620350315), hl.a("\u18ab\u18be\u18a9\u18b6\u18b2\u18a8\u18a8\u18b2\u18b4\u18b5", -978249509), hl.a("\uedc8\uedc0\uedd6\uedd6\uedc4\uedc2\uedc0", 914025893), hl.a("\u7c27\u7c25\u7c32\u7c2f\u7c29\u7c28\u7c35", 150633542), hl.a("\uf143\uf15e\uf156\uf14f\uf154\uf143\uf179\uf14a\uf147\uf142\uf142\uf143\uf154", 392032550), hl.a("\u0ea0", -1196945776), hl.a("\u5ce4\u5cc5\u5c8a\u5cc6\u5ccb\u5cce\u5cce\u5ccf\u5cd8\u5c8a\u5ccc\u5cc5\u5cd8\u5c8a\u5cde\u5ccf\u5cc7\u5cda\u5cc6\u5ccb\u5cde\u5ccf\u5c8a\u5ccd\u5cd8\u5cc5\u5cdf\u5cda\u5c8a\u5c8d", 588668074), hl.a("\u55c5\u55c3", 1206080994), hl.a("\ue93d\ue90c\ue904\ue919\ue905\ue908\ue91d\ue90c\ue949\ue90e\ue91b\ue906\ue91c\ue919\ue949\ue94e", -1530861207), hl.a("\u1eaf\u1ea8\u1efa\u1eed\u1eee\u1eed\u1efa\u1efb\u1ea8\u1efc\u1ee7\u1ea8\u1ee6\u1ee7\u1ee6\u1ea5\u1eed\u1ef0\u1ee1\u1efb\u1efc\u1ee1\u1ee6\u1eef\u1ea8", -489218424), hl.a("\uf8dd\uf889\uf898\uf890\uf88d\uf891\uf89c\uf889\uf898\uf8c7\uf8dd\uf8da", -1690175235), hl.a("\u5d41\u5d70\u5d78\u5d65\u5d79\u5d74\u5d61\u5d70\u5d35\u5d32", 36527381), hl.a("\u1b9b\u1b9c\u1bde\u1bd9\u1bd0\u1bd3\u1bd2\u1bdb\u1bcf\u1b9c\u1bc8\u1bd3\u1b9c\u1bc8\u1bd9\u1bd1\u1bcc\u1bd0\u1bdd\u1bc8\u1bd9\u1b9c\u1bdb\u1bce\u1bd3\u1bc9\u1bcc\u1b9c\u1b9b", 78584764), hl.a("\uc10b\uc100\uc10c\uc145\uc158\uc15f\uc10c\uc140\uc14d\uc148\uc148\uc149\uc15e\uc10c\uc15b\uc145\uc140\uc140\uc10c\uc14e\uc149\uc10c\uc145\uc14b\uc142\uc143\uc15e\uc149\uc148\uc102\uc10c\uc17e\uc149\uc141\uc143\uc15a\uc149\uc10c\uc158\uc144\uc149\uc10c\uc140\uc14d\uc148\uc148\uc149\uc15e\uc10c\uc14a\uc15e\uc143\uc141\uc10c\uc10b", 1517928748), hl.a("\u05d3\u05d4\u0580\u059b\u05d4\u0587\u059d\u0598\u0591\u059a\u0597\u0591\u05d4\u0580\u059c\u059d\u0587\u05d4\u0583\u0595\u0586\u059a\u059d\u059a\u0593\u05da", 1821705716), hl.a("\uc56a\uc54b\uc504\uc553\uc541\uc54d\uc543\uc54c\uc550\uc557\uc504\uc542\uc54b\uc556\uc504\uc550\uc541\uc549\uc554\uc548\uc545\uc550\uc541\uc504\uc543\uc556\uc54b\uc551\uc554\uc504\uc503", 1153877284), hl.a("\u4c61\u4c67", -345682874), hl.a("\u504f\u507e\u5076\u506b\u5077\u507a\u506f\u507e\u503b\u507c\u5069\u5074\u506e\u506b\u503b\u503c", -1917038565), hl.a("\u2fe8\u2fef\u2fa6\u2fa1\u2fac\u2fa3\u2fba\u2fab\u2faa\u2fbc\u2fef\u2fae\u2fef\u2fad\u2fae\u2fab\u2fef\u2fb8\u2faa\u2fa6\u2fa8\u2fa7\u2fbb\u2ff5\u2fef", -345034801), hl.a("\u88ec\u88cf\u88c1\u88c4\u88c5\u88c4\u8880", -642938720), hl.a("\ue62f\ue67b\ue66a\ue662\ue67f\ue663\ue66e\ue67b\ue66a\ue62f\ue668\ue67d\ue660\ue67a\ue67f\ue67c\ue62f\ue669\ue67d\ue660\ue662\ue62f\ue67b\ue66a\ue662\ue67f\ue663\ue66e\ue67b\ue66a\ue67c\ue621\ue676\ue662\ue663\ue62e", 1440474639), hl.a("\ud87d\ud85a\ud852\ud857\ud85e\ud85f\ud81b\ud84f\ud854\ud81b\ud853\ud854\ud854\ud850\ud81b\ud852\ud855\ud84f\ud854\ud81b\ud868\ud85e\ud849\ud84d\ud85e\ud849\ud877\ud852\ud848\ud84f\ud86b\ud857\ud84e\ud848\ud815", 1963972667), hl.a("\u5ecb\u5eed\u5ee6\u5ebf\u5eea\u5eec\u5ef6\u5ef1\u5ef8\u5ebf\u5eeb\u5ef7\u5efa\u5ebf\u5ef3\u5efe\u5eeb\u5efa\u5eec\u5eeb\u5ebf\u5ecc\u5efa\u5eed\u5ee9\u5efa\u5eed\u5ed3\u5ef6\u5eec\u5eeb\u5ecf\u5ef3\u5eea\u5eec\u5ebf\u5efb\u5efa\u5ee9\u5efa\u5ef3\u5ef0\u5eef\u5ef2\u5efa\u5ef1\u5eeb\u5ebf\u5efd\u5eea\u5ef6\u5ef3\u5efb\u5eb1", 759651999), hl.a("\ud067\ud065\ud06f\ud069\ud070", 1808453632), hl.a("\uba62\uba61\uba6d\uba65\uba6a\uba61\uba79\uba60\uba20\uba77\uba63\uba62", -490358258), hl.a("\udf6f\udf6c\udf60\udf68\udf67\udf6c\udf74\udf6d\udf2d\udf69\udf70\udf6c\udf6d", -1880760573), hl.a("\uf878\uf868\uf864\uf87b\uf86e", -150865909), hl.a("\ud54d", 1043453287), hl.a("\u2adf\u2ac8\u2acc\u2ade\u2ac2\u2ac3", -9753939), hl.a("", -877374732), hl.a("\uc383\uc3b2\uc3b2\uc3ae\uc3bb\uc3ab\uc3ac\uc3a5\uc3e2\uc3b1\uc3a3\uc3b4\uc3a7\uc3a6\uc3e2\uc3ae\uc3ad\uc3a1\uc3a9\uc3a6\uc3ad\uc3b5\uc3ac\uc3ee\uc3e2\uc3b0\uc3a7\uc3a3\uc3b1\uc3ad\uc3ac\uc3f8\uc3e2\uc3e0", 1056949186), hl.a("\u8e00\u8e3c\u8e3d\u8e27\u8e74\u8e3d\u8e27\u8e74\u8e18\u8e3d\u8e20\u8e31\u8e16\u8e35\u8e3a\u8e27\u8e74\u8e22\u8e31\u8e26\u8e27\u8e3d\u8e3b\u8e3a\u8e74", 428838484), hl.a("\u9c49\u9c45\u9c2b\u9c2a\u9c31\u9c45\u9c13\u9c00\u9c17\u9c16\u9c0c\u9c0a\u9c0b\u9c45", 981376101), hl.a("", -19555321), hl.a("", 1768712916), hl.a("\u63c6\u63fa\u63fb\u63e1\u63b2\u63fb\u63e1\u63b2\u63de\u63fb\u63e6\u63f7\u63d0\u63f3\u63fc\u63e1\u63b2\u63e4\u63f7\u63e0\u63e1\u63fb\u63fd\u63fc\u63b2", -1104125038), hl.a("\u53c3\u53cf\u53a1\u53a0\u53bb\u53cf\u5399\u538a\u539d\u539c\u5386\u5380\u5381\u53cf", -1462348817), hl.a("\u7565\u7569\u7568\u7560\u756f\u7561\u7528\u757f\u756b\u756a", -1820363514), hl.a("\uc58a\uc588\uc582\uc584\uc59d", 597935597), hl.a("\ub251\ub25d\ub25c\ub254\ub25b\ub255", 67613234), hl.a("\uf8f1\uf88b\uf88b\uf8f7\uf88a\uf8f3\uf8c5\uf8df\uf8d8\uf88a\uf8c9\uf8c5\uf8c4\uf8cc\uf8c3\uf8cd\uf8df\uf8d8\uf8cb\uf8de\uf8c3\uf8c5\uf8c4\uf88a\uf8c7\uf8c3\uf8cd\uf8c2\uf8de\uf88a\uf8c8\uf8cf\uf88a\uf8c3\uf8c4\uf8dc\uf8cb\uf8c6\uf8c3\uf8ce\uf884\uf88a\uf8e3\uf8de\uf88a\uf8c9\uf8cb\uf8c4\uf88a\uf8c8\uf8cf\uf88a\uf8dc\uf8cf\uf8d8\uf8c3\uf8cc\uf8c3\uf8cf\uf8ce\uf88a\uf8dd\uf8c3\uf8de\uf8c2\uf88a\uf8c2\uf8de\uf8de\uf8da\uf8d9\uf890\uf885\uf885\uf8d3\uf8cb\uf8c7\uf8c6\uf887\uf8c5\uf8c4\uf8c6\uf8c3\uf8c4\uf8cf\uf887\uf8da\uf8cb\uf8d8\uf8d9\uf8cf\uf8d8\uf884\uf8cb\uf8da\uf8da\uf8d9\uf8da\uf8c5\uf8de\uf884\uf8c9\uf8c5\uf8c7\uf885", 944306346), hl.a("\u5b7a\u5b00\u5b00\u5b7c\u5b01\u5b62\u5b4e\u5b4f\u5b47\u5b48\u5b46\u5b54\u5b53\u5b40\u5b55\u5b48\u5b4e\u5b4f\u5b01\u5b45\u5b4e\u5b44\u5b52\u5b01\u5b4f\u5b4e\u5b55\u5b01\u5b44\u5b59\u5b48\u5b52\u5b55\u5b00\u5b01\u5b64\u5b4f\u5b52\u5b54\u5b53\u5b44\u5b01\u5b55\u5b49\u5b40\u5b55\u5b01\u5b53\u5b44\u5b40\u5b45\u5b0e\u5b56\u5b53\u5b48\u5b55\u5b44\u5b01\u5b51\u5b44\u5b53\u5b4c\u5b48\u5b52\u5b52\u5b48\u5b4e\u5b4f\u5b52\u5b01\u5b40\u5b53\u5b44\u5b01\u5b42\u5b4e\u5b53\u5b53\u5b44\u5b42\u5b55\u5b0f\u5b01\u5b09\u5b03", -1321116895), hl.a("\ued37\ued3c", -1512116971), hl.a("\uf9b0\uf9a5\uf9f1\uf9bb\uf9b0\uf9a7\uf9b0\uf9ff\uf9bd\uf9b0\uf9bf\uf9b6\uf9ff\uf985\uf9b9\uf9a3\uf9b4\uf9b0\uf9b5\uf9ff\uf9a3\uf9a4\uf9bf\uf9f9", -344655407), hl.a("\u755b\u754e\u751a\u7550\u755b\u754c\u755b\u7514\u754f\u754e\u7553\u7556\u7514\u7559\u7555\u7554\u7559\u754f\u7548\u7548\u755f\u7554\u754e\u7514\u756e\u7552\u7548\u755f\u755b\u755e\u756a\u7555\u7555\u7556\u757f\u7542\u755f\u7559\u754f\u754e\u7555\u7548\u751e\u756d\u7555\u7548\u7551\u755f\u7548\u7514\u7548\u754f\u7554\u7512", 1798403386), hl.a("\uc563\uc576\uc522\uc568\uc563\uc574\uc563\uc52c\uc577\uc576\uc56b\uc56e\uc52c\uc561\uc56d\uc56c\uc561\uc577\uc570\uc570\uc567\uc56c\uc576\uc52c\uc556\uc56a\uc570\uc567\uc563\uc566\uc552\uc56d\uc56d\uc56e\uc547\uc57a\uc567\uc561\uc577\uc576\uc56d\uc570\uc52c\uc570\uc577\uc56c\uc555\uc56d\uc570\uc569\uc567\uc570\uc52a", 1915536642), hl.a("\udf4e\udf5b\udf0f\udf5c\udf5a\udf41\udf01\udf5d\udf4a\udf49\udf43\udf4a\udf4c\udf5b\udf01\udf61\udf4e\udf5b\udf46\udf59\udf4a\udf6c\udf40\udf41\udf5c\udf5b\udf5d\udf5a\udf4c\udf5b\udf40\udf5d\udf6e\udf4c\udf4c\udf4a\udf5c\udf5c\udf40\udf5d\udf66\udf42\udf5f\udf43\udf01\udf41\udf4a\udf58\udf66\udf41\udf5c\udf5b\udf4e\udf41\udf4c\udf4a", -1634410705), hl.a("\u6d5d\u6d48\u6d1c\u6d4f\u6d49\u6d52\u6d12\u6d4e\u6d59\u6d5a\u6d50\u6d59\u6d5f\u6d48\u6d12\u6d78\u6d59\u6d50\u6d59\u6d5b\u6d5d\u6d48\u6d55\u6d52\u6d5b\u6d7f\u6d53\u6d52\u6d4f\u6d48\u6d4e\u6d49\u6d5f\u6d48\u6d53\u6d4e\u6d7d\u6d5f\u6d5f\u6d59\u6d4f\u6d4f\u6d53\u6d4e\u6d75\u6d51\u6d4c\u6d50\u6d12\u6d52\u6d59\u6d4b\u6d75\u6d52\u6d4f\u6d48\u6d5d\u6d52\u6d5f\u6d59\u6d14", 736849212), hl.a("\ub050\ub045\ub011\ub05b\ub050\ub047\ub050\ub01f\ub05d\ub050\ub05f\ub056\ub01f\ub043\ub054\ub057\ub05d\ub054\ub052\ub045\ub01f\ub072\ub05e\ub05f\ub042\ub045\ub043\ub044\ub052\ub045\ub05e\ub043\ub01f\ub05f\ub054\ub046\ub078\ub05f\ub042\ub045\ub050\ub05f\ub052\ub054\ub019", 1645654065), hl.a("", -1509040289), hl.a("\uec6b\uec11\uec11\uec6d\uec10\uec73\uec5f\uec45\uec5c\uec54\uec10\uec5e\uec5f\uec44\uec10\uec5c\uec5f\uec51\uec54\uec10", 242740272), hl.a("\u5a56\u5a01\u5a15\u5a14\u5a56", 885086840), hl.a("\u4a06\u4a1b\u4a0e\u4a47\u4a0b\u4a1c\u4a02\u4a02\u4a00\u4a1d\u4a47\u4a0a\u4a06\u4a07\u4a0f\u4a00\u4a0e\u4a1c\u4a1b\u4a08\u4a1d\u4a00\u4a06\u4a07\u4a47\u4a20\u4a07\u4a1f\u4a08\u4a05\u4a00\u4a0d\u4a2a\u4a06\u4a07\u4a0f\u4a00\u4a0e\u4a1c\u4a1b\u4a08\u4a1d\u4a00\u4a06\u4a07\u4a2c\u4a11\u4a0a\u4a0c\u4a19\u4a1d\u4a00\u4a06\u4a07\u4a53\u4a49", 1356155497), hl.a("\ue9f6\ue9e9\ue9e8\ue9ed\ue9e4\ue9a1\ue9f2\ue9e2\ue9e0\ue9ef\ue9ef\ue9e8\ue9ef\ue9e6\ue9a1\ue9e0\ue9ef\ue9a1\ue9e0\ue9ef\ue9e2\ue9e9\ue9ee\ue9f3", 1866066305), hl.a("\ue541\ue55e\ue55f\ue55a\ue553\ue516\ue545\ue555\ue557\ue558\ue558\ue55f\ue558\ue551\ue516\ue557\ue516\ue545\ue55f\ue55b\ue546\ue55a\ue553\ue516\ue55d\ue553\ue54f", -820714186), hl.a("\u5893\u588c\u588d\u5888\u5881\u58c4\u5897\u5887\u5885\u588a\u588a\u588d\u588a\u5883\u58c4\u5882\u588b\u5896\u58c4\u5890\u588c\u5881\u58c4\u588a\u5881\u589c\u5890\u58c4\u5890\u588b\u588f\u5881\u588a", -1876338460), hl.a("\u2d3f\u2d20\u2d21\u2d24\u2d2d\u2d68\u2d38\u2d29\u2d3a\u2d3b\u2d21\u2d26\u2d2f\u2d68\u2d29\u2d68\u2d2a\u2d24\u2d27\u2d2b\u2d23\u2d68\u2d25\u2d29\u2d38\u2d38\u2d21\u2d26\u2d2f", 37301576), hl.a("\u47f5\u47ea\u47eb\u47ee\u47e7\u47a2\u47f2\u47e3\u47f0\u47f1\u47eb\u47ec\u47e5\u47a2\u47e3\u47a2\u47e0\u47ee\u47ed\u47e1\u47e9\u47a2\u47e1\u47ed\u47ee\u47ee\u47e7\u47e1\u47f6\u47eb\u47ed\u47ec", 1725581186), hl.a("", 1405262863), hl.a("", -696731904), hl.a("\u9a31\u9a19\u9a45\u9a39\u9a2c\u9a2f\u9a44", 1302370925), hl.a("\u91e2\u91f7\u91f4", 863343030), hl.a("\uc963\uc919\uc919\uc965\uc918\uc97b\uc957\uc956\uc95e\uc951\uc95f\uc94d\uc94a\uc959\uc94c\uc951\uc957\uc956\uc918\uc95d\uc94a\uc94a\uc957\uc94a\uc918\uc95e\uc957\uc94d\uc956\uc95c\uc902\uc918", 1847445816), hl.a("\u85a3\u85d9\u85d9\u85a5\u85d8\u85b4\u8591\u858c\u859d\u85ba\u8599\u8596\u858b\u85d8\u858f\u8591\u8594\u8594\u85d8\u858d\u858b\u859d\u85d8\u858c\u8590\u859d\u85d8\u859c\u859d\u859e\u8599\u858d\u8594\u858c\u85d8", -730888712), hl.a("\u2f32\u2f67\u2f7c\u2f66\u2f7b\u2f7e\u2f32\u2f77\u2f60\u2f60\u2f7d\u2f60\u2f61\u2f32\u2f7a\u2f73\u2f64\u2f77\u2f32\u2f70\u2f77\u2f77\u2f7c\u2f32\u2f74\u2f7b\u2f6a\u2f77\u2f76\u2f3c", 1347170066), hl.a("\u6432\u6415\u641d\u6418\u6411\u6410\u6454\u6400\u641b\u6454\u641c\u641b\u641b\u641f\u6454\u641d\u641a\u6400\u641b\u6454\u6427\u6411\u6406\u6402\u6411\u6406\u6438\u641d\u6407\u6400\u6424\u6418\u6401\u6407\u645a", 349660276), hl.a("\ua5bb\ua59d\ua596\ua5cf\ua59a\ua59c\ua586\ua581\ua588\ua5cf\ua59b\ua587\ua58a\ua5cf\ua583\ua58e\ua59b\ua58a\ua59c\ua59b\ua5cf\ua5bc\ua58a\ua59d\ua599\ua58a\ua59d\ua5a3\ua586\ua59c\ua59b\ua5bf\ua583\ua59a\ua59c\ua5cf\ua58b\ua58a\ua599\ua58a\ua583\ua580\ua59f\ua582\ua58a\ua581\ua59b\ua5cf\ua58d\ua59a\ua586\ua583\ua58b\ua5c1", -2120112657), hl.a("\ucda5\ucd93\ucd84\ucd80\ucd93\ucd84\ucdba\ucd9f\ucd85\ucd82\ucda6\ucd9a\ucd83\ucd85", -532034058), hl.a("\ua2c6\ua28f\ua295\ua2c6\ua288\ua289\ua292\ua2c6\ua283\ua288\ua287\ua284\ua28a\ua283\ua282\ua2c6\ua29f\ua283\ua292\ua2c7", -2032622874), hl.a("\uf9aa\uf9ac\uf9ab\uf9bb", 906033630), hl.a("\u7bf9\u7bfe\u7bf3\u7bec\u7bfa", 655850399), hl.a("\udf04\udf38\udf35\udf2d\udf31\udf26\udf0f\udf3a\udf35\udf39\udf31\udf69", -1928077484), hl.a("\u4788\u47fb\u47b2\u47b0\u47a1\u4794\u47b1\u47b1\u47a7\u47b0\u47a6\u47a6\u47fd\u47fc\u47f5\u47a7\u47b0\u47a1\u47a0\u47a7\u47bb\u47b0\u47b1\u47f5\u47bb\u47a0\u47b9\u47b9\u47f5\u47ba\u47bb\u47f5", 922568661), hl.a("\u43d7\u43cf\u43ce\u43df", -71875654), hl.a("\u4582\u459a\u459b\u458a\u4586\u459f", -918206993), hl.a("\u3d2a\u3d3c\u3d2f\u3d33", -838320803), hl.a("\u9768\u976b\u9767\u976f\u9760\u976b\u9773\u976a", -1992976636), hl.a("\u4c64\u4c64\u4c64\u4c64", -124957635), hl.a("\u4b1b\u4b1b\u4b1b\u4b1b", 1757039458), hl.a("\uf5b8\uf59f\uf587\uf590\uf59d\uf598\uf595\uf5d1\uf595\uf590\uf585\uf594\uf5d1\uf597\uf59e\uf583\uf59c\uf590\uf585\uf5cb\uf5d1\uf5d3", 1818031601), hl.a("\u6f46\u6f4a\u6f44\u6f31\u6f17\u6f0d\u6f0a\u6f03\u6f44\u6f00\u6f01\u6f02\u6f05\u6f11\u6f08\u6f10\u6f44\u6f00\u6f05\u6f10\u6f01\u6f44\u6f02\u6f0b\u6f16\u6f09\u6f05\u6f10\u6f44\u6f46", -1084919964), hl.a("\u7d8e\u7d82", -941261396), hl.a("\ud386\ud3a3\ud3b6\ud3a7\ud3e2\ud3a4\ud3ad\ud3b0\ud3af\ud3a3\ud3b6\ud3e2\ud3a6\ud3ad\ud3a1\ud3b7\ud3af\ud3a7\ud3ac\ud3b6\ud3a3\ud3b6\ud3ab\ud3ad\ud3ac\ud3f8\ud3e2\ud3aa\ud3b6\ud3b6\ud3b2\ud3b1\ud3f8\ud3ed\ud3ed\ud3a6\ud3ad\ud3a1\ud3b1\ud3ec\ud3ad\ud3b0\ud3a3\ud3a1\ud3ae\ud3a7\ud3ec\ud3a1\ud3ad\ud3af\ud3ed\ud3a8\ud3a3\ud3b4\ud3a3\ud3b1\ud3a7\ud3ed\ud3b6\ud3b7\ud3b6\ud3ad\ud3b0\ud3ab\ud3a3\ud3ae\ud3ed\ud3ab\ud3f3\ud3fa\ud3ac\ud3ed\ud3a4\ud3ad\ud3b0\ud3af\ud3a3\ud3b6\ud3ed\ud3b1\ud3ab\ud3af\ud3b2\ud3ae\ud3a7\ud386\ud3a3\ud3b6\ud3a7\ud384\ud3ad\ud3b0\ud3af\ud3a3\ud3b6\ud3ec\ud3aa\ud3b6\ud3af\ud3ae", -477441086), hl.a("\uc21d\uc21c\uc20b", 248169032), hl.a("\ufba8\ufba8\ufba8\ufba8\ufbfc\ufb9c\ufb9c\ufbfc\ufbb5\ufbb5", -2075198511), hl.a("\u3274\u3240\u3241\u325d\u3278\u3250", 857616949), hl.a("\ube87\ube8f\ube99\ube99\ube8b\ube8d\ube8f\ube99\ubec4\ube93\ube87\ube86", 1197063914), hl.a("\u5568\u5560\u5576\u5576\u5564\u5562\u5560\u5576\u552b\u557c\u5568\u5569", -1490922235), hl.a("\u0178\u017b\u0177\u0175\u0178\u0171", 1059586324), hl.a("\uf103\uf109\uf103\uf104\uf115\uf11d", -1991839376), hl.a("\ud77f\ud775\ud77f\ud778\ud769\ud761", 1310971660), hl.a("\uaab6\uaa90\uaa8a\uaa8d\uaa84\uaac3\uaa80\uaa8c\uaa8d\uaa85\uaa8a\uaa84\uaa96\uaa91\uaa86\uaa87\uaac3\uaa8f\uaa8c\uaa80\uaa82\uaa8f\uaa86\uaac3\uaacb", 528067299), hl.a("\ufde4\ufdc2\ufdc7\ufdc7\ufdd8\ufdc5\ufdc3\ufdd2\ufdd3\ufd97\ufddb\ufdd8\ufdd4\ufdd6\ufddb\ufdd2\ufdc4\ufd8d\ufd97", -154731081), hl.a("\udec9\udee8\udef3\udee2\udebd\udea7\udece\udee1\udea7\udef3\udeef\udee2\udea7\udee4\udee8\udee9\udee1\udeee\udee0\udef2\udef5\udee2\udee3\udea7\udeeb\udee8\udee4\udee6\udeeb\udee2\udea7\udeee\udef4\udea7\udef2\udee9\udef5\udee2\udee4\udee8\udee0\udee9\udeee\udefd\udee2\udee3\udeab\udea7\udef3\udeef\udee2\udea7\udef4\udefe\udef4\udef3\udee2\udeea\udea7\udee3\udee2\udee1\udee6\udef2\udeeb\udef3\udea7\udeeb\udee8\udee4\udee6\udeeb\udee2\udea7\udeee\udef4\udea7\udef2\udef4\udee2\udee3\udea9", 2001395335), hl.a("\uf7c4\uf7e2\uf7f8\uf7ff\uf7f6\uf7b1\uf7e2\uf7e8\uf7e2\uf7e5\uf7f4\uf7fc\uf7b1\uf7fd\uf7fe\uf7f2\uf7f0\uf7fd\uf7f4\uf7b1\uf7b9", -1314719855), hl.a("\ue9ee\ue994\ue994\ue9e8\ue995\ue9f6\ue9da\ue9c0\ue9d9\ue9d1\ue995\ue9db\ue9da\ue9c1\ue995\ue9c6\ue9d4\ue9c3\ue9d0\ue995\ue9d8\ue9d0\ue9c6\ue9c6\ue9d4\ue9d2\ue9d0\ue9c6\ue99b\ue9cc\ue9d8\ue9d9\ue99b", -1144133195), hl.a("\uddce\udd88\udd8b\udd84\udd84\udd8f\udd8e\uddba\udd86\udd8b\udd93\udd8f\udd98", 1859771882), hl.a("\u3358\u331e\u331d\u3312\u3312\u3319\u3318\u332c\u3310\u331d\u3305\u3319\u330e", -904383620), hl.a("\u73e7\u73a1\u73a2\u73ad\u73ad\u73a6\u73a7\u7393\u73af\u73a2\u73ba\u73a6\u73b1", -1540131901), hl.a("\ufa23\ufa6a\ufa72\ufa73\ufa62\ufa63\ufa57\ufa6b\ufa66\ufa7e\ufa62\ufa75", -609748473), hl.a("\u39de\u3998\u399b\u3994\u3994\u399f\u399e\u39aa\u3996\u399b\u3983\u399f\u3988", 1561344506), hl.a("\u240d\u245e\u2448\u245b\u2447\u244c\u244d\u2479\u2445\u2448\u2450\u244c\u245b", 418325545), hl.a("\u9ea8\u9ee9\u9ead\u9ea8\u9efe", -145383795), hl.a("\u82a9\u8298\u829f\u828c\u8299\u8284\u8282\u8283\u82cd\u828b\u8282\u829f\u8280\u828c\u8299\u82cd\u82c5\u82cf", -1468103955), hl.a("\u9985\u998e\u9987\u99ce\u99d4\u9987\u99ce\u99c9\u99d1\u99c6\u99cb\u99ce\u99c3\u9986\u9987\u998f", -144860761), hl.a("\uea5e\uea78\uea62\uea65\uea6c\uea2b\uea6f\uea6e\uea6d\uea6a\uea7e\uea67\uea7f\uea2b\uea6d\uea64\uea79\uea66\uea6a\uea7f\uea2b\uea62\uea65\uea78\uea7f\uea6e\uea6a\uea6f\uea2b\uea23\uea29", 1133898251), hl.a("\u5368\u5363\u5364", -1530571958), hl.a("\ue013\ue034\ue03c\ue039\ue030\ue031\ue075\ue021\ue03a\ue075\ue03d\ue03a\ue03a\ue03e\ue075\ue03c\ue03b\ue021\ue03a\ue075\ue006\ue030\ue027\ue023\ue030\ue027\ue019\ue03c\ue026\ue021\ue005\ue039\ue020\ue026\ue07b", 1743052885), hl.a("\u5056\u5070\u507b\u5022\u5077\u5071\u506b\u506c\u5065\u5022\u5076\u506a\u5067\u5022\u506e\u5063\u5076\u5067\u5071\u5076\u5022\u5051\u5067\u5070\u5074\u5067\u5070\u504e\u506b\u5071\u5076\u5052\u506e\u5077\u5071\u5022\u5066\u5067\u5074\u5067\u506e\u506d\u5072\u506f\u5067\u506c\u5076\u5022\u5060\u5077\u506b\u506e\u5066\u502c", 912478210), hl.a("\u788c\u789a\u7893\u789a\u789c\u788b\u78ff\u7891\u7890\u7888\u78f7\u78f6\u78ff\u78be\u78ac\u78ff\u78b1\u78b0\u78a8", -474515233), hl.a("\ubda6\ubda7\ubdbf", 1606139336), hl.a("\ue3b3\ue3fd\ue3e7", -385031225), hl.a("\ub0c5\ub099\ub083", 498774179), hl.a("\u4343\u4348", 1446593379), hl.a("", -676558073), hl.a("", -2141658229), hl.a("", 1439990272), hl.a("\u891d\u8905\u8909\u8908\u8915\u8909\u890a\u8903\u891b", 1550944582), hl.a("\ud71c\ud71c", -1012672715), hl.a("\u974f", -816867483), hl.a("\ubaf7\ubafc\ubaff\ubaf2\ubaf1\ubafc", 597080720), hl.a("\u65e5\u65e6\u65e9", -1902221945), hl.a("\ub616\ub607\ub611\ub616", 1108522594), hl.a("\ub5de\ub5c8\ub5df\ub5db\ub5c8\ub5df\ub597\ub587", -241781331), hl.a("\uf34c\uf35d\uf34b\uf34c", 1257370424), hl.a("\u35c0\u35e7\u35ef\u35ea\u35e3\u35e2\u35a6\u35f4\u35e3\u35f7\u35f3\u35ef\u35f4\u35e3\u35eb\u35e3\u35e8\u35f2\u35a8", -995281530), hl.a("", -1425464228), hl.a("", 1147479912), hl.a("\ub7c0\ub7c0\ub7dc\ub7d1", -1178945611), hl.a("\u9c38\u9c2e\u9c27\u9c2e\u9c28\u9c3f\u9c4b", 1740086379), hl.a("\ubbf0\ubb96\ubb82\ubb9f\ubb9d\ubbf0", 2003221456), hl.a("\u2cef\u2ce2", 1305750662), hl.a("", 1067473415), hl.a("\u6504\u6515\u6503\u6504", 1157457264)};
+        w = new String[]{"", "", "", "", "0xAAA", "0xAAA ", "geoip.unavailable", "lockdown.yml", "lockdown.json", "reason", "scope", "lockdown.yml", "lockdown.json", "scope", "*", "reason", "", "Applying saved lockdown, reason: \"", "lockdown.yml", "lockdown.json", "reason", "scope", ".. + ", "Error 0x", "config.yml", "config", "[!!] Your configuration might be invalid. It can be verified with https://yaml-online-parser.appspot.com/", "[!!] Configuration does not exist! Ensure that read/write permissions are correct. (\"", "\")", "SnakeYAML", "https://repo1.maven.org/maven2/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar", "2.4", "ef779af5d29a9dde8cc70ce0341f5c6f7735e23edff9685ceaa9d35359b7bb7f", "", "templates.yml", "templates.yml", "-templates", "Empty template: '", "Template name '", "' cannot include dots or spaces! Use dashes or underscores ", "", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "ladder", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "expire_ladder", "0", "ip_template", "Loaded ", " templates from templates.yml!", "template-groups", "weights", "Empty template group: '", "No weights for template group '", "'!", "type", "", "Template group '", "' type is missing: ", "ladder", " template '", "' has invalid ", "duration", "broadcast", "reason", "flags", "permission", "message", "actions", "expire_ladder", "0", "No ladder for template group '", "'!", "Template group '", "' refers to non-existing ", " template: '", "Template '", "' belongs to template group '", "', its ladder will be ignored. Remove the ladder from '", "' to silence this ", "No weights for template group '", "'!", "Template group '", "' includes a bad weight: ", "Loaded ", " template groups from templates.yml!", "Failed to hook into ", "Try using the latest ServerListPlus development ", "geoip", "lockdown.yml", "lockdown.json", "scope", "*", "reason", "", "Applying saved lockdown, reason: \"", "This is LiteBans version ", ", NOT version ", "", "", "This is LiteBans version ", ", NOT version ", "config.yml", "geoip", "config", "[!!] Your configuration might be invalid. It can be verified with https://yaml-online-parser.appspot.com/", "[!!] Configuration does not exist! Ensure that read/write permissions are correct. (\"", "\")", "at java.lang.Thread.run(", "at java.util.concurrent.ThreadPoolExecutor$Worker.run(", "at java.util.concurrent.ThreadPoolExecutor.runWorker(", "at sun.reflect.NativeConstructorAccessorImpl.newInstance", "at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(", "at java.lang.reflect.Constructor.newInstance(", "", "[!!] Could not load ", " + ", "org.bukkit.configuration.InvalidConfigurationException: ", "while scanning an anchor", "while scanning a simple key", "while scanning for the next token", "while parsing a block mapping", "while parsing a block collection", "", "", "\\t(TAB)", "TAB", "[!!] Configuration error found: ", "[!!] LiteBans will use the default ", " until errors have been ", "Failed to hook into ", "Try using the latest ServerListPlus development ", "ServerListPlus", " is not enabled yet!", "true", "false", "Player[name=", "].getAddress() returned null on ", "mute", "muteip", "warn", "lockdown", "YYYY", "yyyy", "Invalid date format: \"", "\". Using default date format \"", "\" + ", "Date format documentation: https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html", "UTC", "yyyy-MM-dd", "AuthMe", "messages.yml", "messages.yml", "locale", "system", "system", "Using configured locale (", "Supported locales: ", "Note: If the configured locale is unrecognized, the system default locale is ", "Using system locale (", "[!!] Could not save messages + ", "$bannedPlayer", "$bannedPlayer", "$bannedPlayer", "$mutedPlayer", "$bannedPlayer", "$warnedPlayer", "%d %s", "Duration format (\"", "\") is invalid! (", "Using default format instead (\"", "\") + ", "Failed to hook into ", "Try using the latest ServerListPlus development ", "SELECT NOW() as now", "now", "t: ", "f: ", " +", "", "", "", "[CONSOLE]", "))", "*", "global", "ban", "test", "server:*", "test", "Failed ", "", "", "uuid", "SELECT ", " FROM ", "id", "", "test"};
     }
 }
 

@@ -29,15 +29,12 @@ import litebans.lo_0;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.fy
- */
-public static final class fy_0
+public final class fy_0
 extends fB {
     private static /* synthetic */ String[] i;
 
     public fy_0(@NotNull di_0 di_02) {
-        super(i[0], di_02);
+        super("namehistory", di_02);
     }
 
     /*
@@ -77,7 +74,7 @@ extends fB {
                         fo_02.a(charSequence);
                         throw new as();
                     }
-                    aa_0.a((fg_0)this, ch3.a((CharSequence)bF.a((CharSequence)am.dH.a(i[1], (Object)string), (CharSequence)i[2], n)));
+                    aa_0.a((fg_0)this, ch3.a((CharSequence)bF.a((CharSequence)am.dH.a("target", (Object)string), (CharSequence)"limit", n)));
                     Iterable iterable = list;
                     boolean bl8 = false;
                     n2 = as_0.c(jm_0.a(ll.a(iterable, 10)), 16);
@@ -118,7 +115,7 @@ extends fB {
     }
 
     private static final void a() {
-        i = new String[]{hl.a("\u1126\u1129\u1125\u112d\u1120\u1121\u113b\u113c\u1127\u113a\u1131", 1772097864), hl.a("\u5d1d\u5d08\u5d1b\u5d0e\u5d0c\u5d1d", 411065705), hl.a("\uc231\uc234\uc230\uc234\uc229", 203539037)};
+        i = new String[]{"namehistory", "target", "limit"};
     }
 
     static {

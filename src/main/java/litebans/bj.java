@@ -4,7 +4,7 @@ import litebans.fa_0;
 import litebans.fg_0;
 import litebans.u;
 
-public static final class bj
+public final class bj
 implements Runnable {
     final /* synthetic */ fg_0 b;
     final /* synthetic */ fa_0 a;

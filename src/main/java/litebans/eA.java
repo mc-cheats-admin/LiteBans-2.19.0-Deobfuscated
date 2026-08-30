@@ -2,7 +2,7 @@ package litebans;
 
 import litebans.hl;
 
-public static final class eA
+public final class eA
 extends Enum {
     public static final eA c;
     private static final /* synthetic */ eA[] b;
@@ -31,12 +31,12 @@ extends Enum {
 
     static {
         eA.b();
-        c = new eA(a[0], 0);
+        c = new eA("SHOW_TEXT", 0);
         b = eA.a();
     }
 
     private static final void b() {
-        a = new String[]{hl.a("\u8182\u8199\u819e\u8186\u818e\u8185\u8194\u8189\u8185", 287277521)};
+        a = new String[]{"SHOW_TEXT"};
     }
 }
 

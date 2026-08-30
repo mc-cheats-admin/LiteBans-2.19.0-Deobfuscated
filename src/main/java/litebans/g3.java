@@ -30,7 +30,7 @@ import litebans.w;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class g3 {
+public final class g3 {
     private static /* synthetic */ String[] a;
 
     public static int a(@NotNull jW jW2, @NotNull di_0 di_02, @Nullable String[] stringArray, @NotNull Collection collection, int n) {
@@ -47,7 +47,7 @@ public static final class g3 {
 
     public static /* synthetic */ int a(jW jW2, di_0 di_02, String[] stringArray, Collection collection, int n, int n2, Object object) {
         if (object != null) {
-            throw new UnsupportedOperationException(a[0]);
+            throw new UnsupportedOperationException("");
         }
         if ((n2 & 8) != 0) {
             n = ((q_0)di_02.a(q_0.class)).f().aT();
@@ -55,9 +55,6 @@ public static final class g3 {
         return jW2.a(di_02, stringArray, collection, n);
     }
 
-    /*
-     * Unable to fully structure code
-     */
     public static void a(@NotNull jW var0, @NotNull ch var1_1, @NotNull Collection var2_2, @Nullable iA var3_3, @Nullable String[] var4_4, @NotNull fB var5_5, int var6_6) {
         var7_7 = var5_5;
         var8_8 = false;
@@ -66,7 +63,7 @@ public static final class g3 {
         var11_12 = w.a((w)var9_9.h().a(w.class), false, 1, null);
         var9_9 = new HashMap<K, V>();
         if (bz.b(var0.a()) == false && var3_3 != null) {
-            aa_0.a((fg_0)var7_7, (CharSequence)bF.a((CharSequence)bF.a(kR.a(var1_1, var0.a(), var3_3, false, 2, null), (CharSequence)g3.a[1], var6_6), (CharSequence)g3.a[2], var2_2.size()));
+            aa_0.a((fg_0)var7_7, (CharSequence)bF.a((CharSequence)bF.a(kR.a(var1_1, var0.a(), var3_3, false, 2, null), (CharSequence)"limit", var6_6), (CharSequence)"total", var2_2.size()));
         }
         for (dZ var13_13 : ll.a((Iterable)var2_2, var6_6)) {
             block19: {
@@ -99,7 +96,7 @@ public static final class g3 {
                     if (!var16_16.a(var17_18)) continue;
                     var19_22 = var16_16;
                     var20_23 = false;
-                    var19_22.a((Object)(g3.a[3] + var13_13));
+                    var19_22.a((Object)("r0 " + var13_13));
                     continue;
                 }
             }
@@ -124,7 +121,7 @@ public static final class g3 {
                 if (!var21_27.a(var22_28)) continue;
                 var19_22 = var21_27;
                 var24_35 = false;
-                var19_22.a((Object)(g3.a[4] + var13_13));
+                var19_22.a((Object)("r2 " + var13_13));
                 continue;
             }
             var21_26 = var1_1.a(var13_13);
@@ -134,7 +131,7 @@ public static final class g3 {
                 var24_35 = false;
                 var20_25 = "" + var22_29 + var23_32;
             }
-            if (ew.a((Object)g3.a[5], (Object)(var22_30 = var13_13.q())) || !var21_26 && var13_13.b(var11_12)) {
+            if (ew.a((Object)"#expired", (Object)(var22_30 = var13_13.q())) || !var21_26 && var13_13.b(var11_12)) {
                 var23_33 = var20_25;
                 var24_36 = am.dm;
                 var25_38 = false;
@@ -171,8 +168,8 @@ public static final class g3 {
                         var27_40 = false;
                         var30_42 = var28_41 = ((w)var26_39.h().a(w.class)).b(true) - var13_13.f();
                         var32_43 = false;
-                        var23_34 = ((am)var23_34).a(g3.a[6], (Object)db_0.a(dk.d, var30_42, false, 2, null));
-                        var23_34 = kR.a(var1_1, (CharSequence)bF.a(kR.a(var1_1, var23_34, var22_30, var13_13.s(), false, 4, null), (CharSequence)g3.a[7], (Object)var22_30), var13_13, (iA)var16_16, false, 4, null);
+                        var23_34 = ((am)var23_34).a("timeSince", (Object)db_0.a(dk.d, var30_42, false, 2, null));
+                        var23_34 = kR.a(var1_1, (CharSequence)bF.a(kR.a(var1_1, var23_34, var22_30, var13_13.s(), false, 4, null), (CharSequence)"displayName", (Object)var22_30), var13_13, (iA)var16_16, false, 4, null);
                     }
                 }
             }
@@ -184,7 +181,7 @@ public static final class g3 {
 
     public static /* synthetic */ void a(jW jW2, ch ch2, Collection collection, iA iA2, String[] stringArray, fB fB2, int n, int n2, Object object) {
         if (object != null) {
-            throw new UnsupportedOperationException(a[8]);
+            throw new UnsupportedOperationException("");
         }
         if ((n2 & 2) != 0) {
             iA2 = null;
@@ -193,7 +190,7 @@ public static final class g3 {
             stringArray = null;
         }
         if ((n2 & 8) != 0) {
-            ew.b(jW2, a[9]);
+            ew.b(jW2, "");
             fB2 = (fB)((Object)jW2);
         }
         if ((n2 & 0x10) != 0) {
@@ -222,7 +219,7 @@ public static final class g3 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("", 1840434884), hl.a("\u383a\u383f\u383b\u383f\u3822", -273991594), hl.a("\u41ef\u41f4\u41ef\u41fa\u41f7", 1920614811), hl.a("\uaa2d\uaa6f\uaa7f", -649942433), hl.a("\u2561\u2521\u2533", 715203859), hl.a("\uc296\uc2d0\uc2cd\uc2c5\uc2dc\uc2c7\uc2d0\uc2d1", 1356907189), hl.a("\u24fd\u24e0\u24e4\u24ec\u24da\u24e0\u24e7\u24ea\u24ec", 122692745), hl.a("\u1d5e\u1d53\u1d49\u1d4a\u1d56\u1d5b\u1d43\u1d74\u1d5b\u1d57\u1d5f", -638968518), hl.a("", -987245314), hl.a("", -1470560719)};
+        a = new String[]{"", "limit", "total", "r0 ", "r2 ", "#expired", "timeSince", "displayName", "", ""};
     }
 
     static {

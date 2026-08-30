@@ -4,10 +4,7 @@ import litebans.aJ;
 import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.fz
- */
-public static final class fz_0
+public final class fz_0
 extends RuntimeException {
     private static /* synthetic */ String[] a;
 
@@ -17,7 +14,7 @@ extends RuntimeException {
 
     public /* synthetic */ fz_0(String string, int n, aJ aJ2) {
         if ((n & 1) != 0) {
-            string = a[0];
+            string = "";
         }
         this(string);
     }
@@ -27,7 +24,7 @@ extends RuntimeException {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("", -282164671)};
+        a = new String[]{""};
     }
 
     static {

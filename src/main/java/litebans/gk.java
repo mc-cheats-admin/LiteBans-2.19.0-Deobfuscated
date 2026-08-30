@@ -14,7 +14,7 @@ import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 import litebans.iP;
 
-public static final class gk
+public final class gk
 implements List,
 RandomAccess,
 Serializable {

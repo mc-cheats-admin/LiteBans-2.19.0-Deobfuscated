@@ -49,12 +49,12 @@ import litebans.u;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class fO
+public final class fO
 extends fV {
     private static /* synthetic */ String[] j;
 
     public fO(@NotNull di_0 di_02) {
-        super(j[0], di_02);
+        super("kick", di_02);
     }
 
     /*
@@ -103,37 +103,37 @@ extends fV {
                                                 var17_26 = var14_20;
                                                 switch (var17_26.hashCode()) {
                                                     case -1320563219: {
-                                                        if (var17_26.equals(fO.j[1])) break;
+                                                        if (var17_26.equals("dupeip")) break;
                                                         ** break;
                                                     }
                                                     case 712910260: {
-                                                        if (!var17_26.equals(fO.j[2])) {
+                                                        if (!var17_26.equals("staffhistory")) {
                                                             ** break;
                                                         }
                                                         break block60;
                                                     }
                                                     case 926934164: {
-                                                        if (!var17_26.equals(fO.j[3])) {
+                                                        if (!var17_26.equals("history")) {
                                                             ** break;
                                                         }
                                                         break block61;
                                                     }
                                                 }
-                                                var18_29 /* !! */  = new String[]{fO.j[4], fO.j[5], fO.j[6], fO.j[7], fO.j[8]};
+                                                var18_29 /* !! */  = new String[]{"alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip"};
                                                 v1 = var18_29 /* !! */ ;
                                                 break block62;
                                             }
-                                            var18_29 /* !! */  = new String[]{fO.j[9], fO.j[10]};
+                                            var18_29 /* !! */  = new String[]{"hist", "litebans:history"};
                                             v1 = var18_29 /* !! */ ;
                                             break block62;
                                         }
-                                        var18_29 /* !! */  = new String[]{fO.j[11], fO.j[12]};
+                                        var18_29 /* !! */  = new String[]{"staffhist", "litebans:staffhistory"};
                                         v1 = var18_29 /* !! */ ;
                                         break block62;
 lbl58:
                                         // 4 sources
 
-                                        var18_29 /* !! */  = new String[]{fO.j[13] + (String)var14_20};
+                                        var18_29 /* !! */  = new String[]{"litebans:" + (String)var14_20};
                                         v1 = var18_29 /* !! */ ;
                                     }
                                     var12_15 = v1;
@@ -200,7 +200,7 @@ lbl58:
                                                     var13_19.A().remove(var22_44);
                                                 }
                                             }
-                                            var13_19.n().append(ll.a(var13_19.A(), fO.j[14], null, null, 0, null, null, 62, null));
+                                            var13_19.n().append(ll.a(var13_19.A(), " ", null, null, 0, null, null, 62, null));
                                             if (var18_31.a == null) {
                                                 var13_19.a(var10_13.c(var13_19.s()));
                                                 v6 = var13_19.t();
@@ -221,7 +221,7 @@ lbl58:
                                                                 v8 = null;
                                                             } else {
                                                                 var27_67 = v7;
-                                                                v8 = new iA((String)var27_67, (String)var21_33, fO.j[15], new Date());
+                                                                v8 = new iA((String)var27_67, (String)var21_33, "#", new Date());
                                                             }
                                                         } else {
                                                             v9 = bK.c.a((String)var21_33);
@@ -236,9 +236,9 @@ lbl58:
                                                         }
                                                     } else {
                                                         if (jj_0.a((String)var21_33)) {
-                                                            new iA(h1.a((String)var21_33, 16), (String)var21_33, fO.j[16], new Date());
+                                                            new iA(h1.a((String)var21_33, 16), (String)var21_33, "#", new Date());
                                                         }
-                                                        v8 = new iA(h1.a((String)var21_33, 16), h1.a((String)var21_33), fO.j[17], new Date());
+                                                        v8 = new iA(h1.a((String)var21_33, 16), h1.a((String)var21_33), "#", new Date());
                                                     }
                                                     var13_19.a(v8);
                                                 }
@@ -257,7 +257,7 @@ lbl58:
                                                 var13_19.a(var13_19.g().a(var13_19.D()));
                                                 var21_35 = this;
                                                 var23_48 = false;
-                                                ((q_0)var21_35.h().a(q_0.class)).a((Object)(fO.j[18] + var13_19.g().d() + fO.j[19] + var13_19.g().g() + fO.j[20] + (var13_19.D() + 1) + '/' + var13_19.g().b().size()));
+                                                ((q_0)var21_35.h().a(q_0.class)).a((Object)("Applying " + var13_19.g().d() + " template \"" + var13_19.g().g() + "\" at level " + (var13_19.D() + 1) + '/' + var13_19.g().b().size()));
                                                 if (bz.b(var13_19.n())) {
                                                     v14 = var13_19.n();
                                                     v15 = var13_19.L().a();
@@ -296,7 +296,7 @@ lbl58:
                                             var22_46 = fg_0.a;
                                             if (!var10_13.d().s() || var13_19.p()) ** GOTO lbl-1000
                                             var21_38 = var1_1;
-                                            var23_50 = fO.j[21];
+                                            var23_50 = "litebans.kick.global";
                                             var24_57 = false;
                                             var25_63 = var21_38;
                                             var26_66 = 0;
@@ -327,7 +327,7 @@ lbl58:
                                             var30_75 = 400L;
                                             var26_66 = 0;
                                             var23_51.h().a(new bj((fg_0)var23_51, var21_40), var30_75);
-                                            var13_19.a(var10_13, (CharSequence)am.dz.a(fO.j[22], (Object)var13_19.s()));
+                                            var13_19.a(var10_13, (CharSequence)am.dz.a("player", (Object)var13_19.s()));
                                         }
                                         if (fB.d.a(var10_13.e(), var15_23.h())) {
                                             var10_13.d().a((eo_0)LambdaMetafactory.metafactory(null, null, null, (Ljava/lang/Object;)Ljava/lang/Object;, a(litebans.jv_0 litebans.ch ), (Llitebans/ch;)Llitebans/iV;)((jv_0)var15_23));
@@ -335,7 +335,7 @@ lbl58:
                                         var13_19.a(aI.a);
                                         if (var13_19.a(var10_13, (jv_0)var15_23)) break block64;
                                         var22_46 = var15_23;
-                                        var21_36 = new String[]{fO.j[23], fO.j[24]};
+                                        var21_36 = new String[]{"litebans.exempt", "litebans.exempt.kick"};
                                         var23_48 = false;
                                         var24_59 = var21_36;
                                         var25_62 = false;
@@ -423,18 +423,18 @@ lbl58:
             Object object = u.j;
             boolean bl3 = cz2.B();
             boolean bl4 = false;
-            objectArray[4] = bl3 ? j[25] : j[26];
+            objectArray[4] = bl3 ? "1" : "0";
             object = u.j;
             bl3 = cz2.c();
             bl4 = false;
-            objectArray[5] = bl3 ? j[27] : j[28];
+            objectArray[5] = bl3 ? "1" : "0";
             object = cz2.g();
             bl3 = false;
             Object object2 = object;
             objectArray[6] = hy_0.b(object2 != null ? ((c1)object2).f() : (byte)-1);
             objectArray[7] = String.valueOf(cz2.D());
             boolean bl5 = false;
-            CharSequence charSequence2 = lo_0.a(objectArray, (CharSequence)j[29], null, null, 0, null, null, 62, null);
+            CharSequence charSequence2 = lo_0.a(objectArray, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
             aa_0.a(ch4, ij3, charSequence2, null, null, 12, null);
         }
     }
@@ -487,7 +487,7 @@ lbl58:
             if (((q_0)object2).a(n)) {
                 Object object4 = object2;
                 bl3 = false;
-                ((q_0)object4).a((Object)(j[30] + dZ2.b() + '\"'));
+                ((q_0)object4).a((Object)("Kick not added to database due to reason: \"" + dZ2.b() + '\"'));
             }
         }
         cz2.a(aI.c);
@@ -520,7 +520,7 @@ lbl58:
     }
 
     private static final void b() {
-        j = new String[]{hl.a("\ue388\ue38a\ue380\ue388", -1199643677), hl.a("\u7ad5\u7ac4\u7ac1\u7ad4\u7ad8\u7ac1", -1002997071), hl.a("\uefb3\uefb4\uefa1\uefa6\uefa6\uefa8\uefa9\uefb3\uefb4\uefaf\uefb2\uefb9", 72413120), hl.a("\u9c8b\u9c8a\u9c90\u9c97\u9c8c\u9c91\u9c9a", -650339101), hl.a("\ud0ba\ud0b7\ud0af\ud0a8", -1037446949), hl.a("\u42ac\u42a9\u42b4\u42a5\u42a2\u42a1\u42ae\u42b3\u42fa\u42a1\u42ac\u42b4\u42b3", 1267811008), hl.a("\u0b50\u0b5b\u0b56\u0b50\u0b58\u0b52\u0b5f\u0b47\u0b40", 1352731443), hl.a("\u2817\u2812\u280f\u281e\u2819\u281a\u2815\u2808\u2841\u2818\u2813\u281e\u2818\u2810\u281a\u2817\u280f\u2808", 12200059), hl.a("\u4af9\u4afc\u4ae1\u4af0\u4af7\u4af4\u4afb\u4ae6\u4aaf\u4af1\u4ae0\u4ae5\u4af0\u4afc\u4ae5", -427406699), hl.a("\u20cd\u20cc\u20d6\u20d1", -1036705627), hl.a("\ub850\ub855\ub848\ub859\ub85e\ub85d\ub852\ub84f\ub806\ub854\ub855\ub84f\ub848\ub853\ub84e\ub845", 1369225276), hl.a("\u8644\u8643\u8656\u8651\u8651\u865f\u865e\u8644\u8643", -1360558537), hl.a("\ud1fc\ud1f9\ud1e4\ud1f5\ud1f2\ud1f1\ud1fe\ud1e3\ud1aa\ud1e3\ud1e4\ud1f1\ud1f6\ud1f6\ud1f8\ud1f9\ud1e3\ud1e4\ud1ff\ud1e2\ud1e9", 2006045072), hl.a("\ueefe\ueefb\ueee6\ueef7\ueef0\ueef3\ueefc\ueee1\ueea8", -293998958), hl.a("\u8dfb", 1627098587), hl.a("\u3f55", 16858998), hl.a("\u5c1e", -714974147), hl.a("\ueb17", -786044108), hl.a("\u0892\u08a3\u08a3\u08bf\u08aa\u08ba\u08bd\u08b4\u08f3", -1429075757), hl.a("\u0123\u0177\u0166\u016e\u0173\u016f\u0162\u0177\u0166\u0123\u0121", -1889664765), hl.a("\u9726\u9724\u9765\u9770\u9724\u9768\u9761\u9772\u9761\u9768\u9724", -502360316), hl.a("\uf889\uf88c\uf891\uf880\uf887\uf884\uf88b\uf896\uf8cb\uf88e\uf88c\uf886\uf88e\uf8cb\uf882\uf889\uf88a\uf887\uf884\uf889", -1837958939), hl.a("\u71fd\u71e1\u71ec\u71f4\u71e8\u71ff", -1518571123), hl.a("\u16af\u16aa\u16b7\u16a6\u16a1\u16a2\u16ad\u16b0\u16ed\u16a6\u16bb\u16a6\u16ae\u16b3\u16b7", 1354962627), hl.a("\u362d\u3628\u3635\u3624\u3623\u3620\u362f\u3632\u366f\u3624\u3639\u3624\u362c\u3631\u3635\u366f\u362a\u3628\u3622\u362a", 1772303937), hl.a("\u6385", 1839489972), hl.a("\ucc92", 1664601250), hl.a("\u1789", 1007163320), hl.a("\uf770", 88143680), hl.a("\u0c0f", -1163070736), hl.a("\uffb7\uff95\uff9f\uff97\uffdc\uff92\uff93\uff88\uffdc\uff9d\uff98\uff98\uff99\uff98\uffdc\uff88\uff93\uffdc\uff98\uff9d\uff88\uff9d\uff9e\uff9d\uff8f\uff99\uffdc\uff98\uff89\uff99\uffdc\uff88\uff93\uffdc\uff8e\uff99\uff9d\uff8f\uff93\uff92\uffc6\uffdc\uffde", -407633924)};
+        j = new String[]{"kick", "dupeip", "staffhistory", "history", "alts", "litebans:alts", "checkalts", "litebans:checkalts", "litebans:dupeip", "hist", "litebans:history", "staffhist", "litebans:staffhistory", "litebans:", " ", "#", "#", "#", "Applying ", " template \"", "\" at level ", "litebans.kick.global", "player", "litebans.exempt", "litebans.exempt.kick", "1", "0", "1", "0", "\ufeff", "Kick not added to database due to reason: \""};
     }
 
     static {

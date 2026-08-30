@@ -13,10 +13,7 @@ import litebans.h0;
 import litebans.ju_0;
 import litebans.ks_0;
 
-/*
- * Renamed from litebans.ip
- */
-public static class ip_0 {
+public class ip_0 {
     public static final int k;
     public static final int h;
     public static final int l;

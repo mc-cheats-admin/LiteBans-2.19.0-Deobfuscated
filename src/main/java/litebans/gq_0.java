@@ -2,9 +2,6 @@ package litebans;
 
 import litebans.fx_0;
 
-/*
- * Renamed from litebans.gQ
- */
 static class gq_0 {
     static final /* synthetic */ int[] a;
 

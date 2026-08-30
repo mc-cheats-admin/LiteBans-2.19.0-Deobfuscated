@@ -18,11 +18,7 @@ import net.minecraft.server.level.ServerPlayer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.jh
- */
-public static class jh_0
+public class jh_0
 implements jv_0 {
     private final FabricPlugin d;
     private final WeakReference e;
@@ -39,7 +35,7 @@ implements jv_0 {
         this.e = new WeakReference<Object>(object);
         this.c = supplier;
         boolean bl = this.k = object instanceof ServerPlayer || object instanceof CommandSourceStack && ((CommandSourceStack)object).isPlayer();
-        this.i = this.k && object instanceof ServerPlayer ? ((ServerPlayer)object).getPlainTextName() : (object instanceof CommandSourceStack ? ((CommandSourceStack)object).getTextName() : g[0]);
+        this.i = this.k && object instanceof ServerPlayer ? ((ServerPlayer)object).getPlainTextName() : (object instanceof CommandSourceStack ? ((CommandSourceStack)object).getTextName() : "?");
     }
 
     public boolean equals(Object object) {
@@ -104,7 +100,7 @@ implements jv_0 {
     @Override
     public String a() {
         String string = this.h;
-        return string == null || string.equals(g[1]) ? (this.h = this.d().toString()) : string;
+        return string == null || string.equals("00000000-0000-0000-0000-000000000000") ? (this.h = this.d().toString()) : string;
     }
 
     @Override
@@ -155,7 +151,7 @@ implements jv_0 {
     @Override
     public void d(@NonNull String string) {
         if (string == null) {
-            throw new NullPointerException(g[2]);
+            throw new NullPointerException("reason is marked non-null but is null");
         }
         Object object = this.c();
         if (object == null) {
@@ -199,15 +195,15 @@ implements jv_0 {
             return;
         }
         if (this.e()) {
-            if (string.equals(g[3])) {
-                string = g[4];
+            if (string.equals("BungeeCord")) {
+                string = "bungeecord:main";
             }
             this.d.g().a(this.b(), string, byArray);
         }
     }
 
     private static final void a() {
-        g = new String[]{hl.a("\u6134", 1907384587), hl.a("\u095b\u095b\u095b\u095b\u095b\u095b\u095b\u095b\u0946\u095b\u095b\u095b\u095b\u0946\u095b\u095b\u095b\u095b\u0946\u095b\u095b\u095b\u095b\u0946\u095b\u095b\u095b\u095b\u095b\u095b\u095b\u095b\u095b\u095b\u095b\u095b", -849344149), hl.a("\ufef8\ufeef\ufeeb\ufef9\ufee5\ufee4\ufeaa\ufee3\ufef9\ufeaa\ufee7\ufeeb\ufef8\ufee1\ufeef\ufeee\ufeaa\ufee4\ufee5\ufee4\ufea7\ufee4\ufeff\ufee6\ufee6\ufeaa\ufee8\ufeff\ufefe\ufeaa\ufee3\ufef9\ufeaa\ufee4\ufeff\ufee6\ufee6", -344129910), hl.a("\ud23e\ud209\ud212\ud21b\ud219\ud219\ud23f\ud213\ud20e\ud218", -135671172), hl.a("\u4e6a\u4e7d\u4e66\u4e6f\u4e6d\u4e6d\u4e6b\u4e67\u4e7a\u4e6c\u4e32\u4e65\u4e69\u4e61\u4e66", 12668424)};
+        g = new String[]{"?", "00000000-0000-0000-0000-000000000000", "reason is marked non-null but is null", "BungeeCord", "bungeecord:main"};
     }
 
     static {

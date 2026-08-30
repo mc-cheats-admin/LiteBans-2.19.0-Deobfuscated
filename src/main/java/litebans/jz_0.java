@@ -5,11 +5,7 @@ import litebans.en_0;
 import litebans.i2;
 import litebans.iw_0;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.jz
- */
-public static class jz_0
+public class jz_0
 implements en_0 {
     private static final i2 e;
     private static final i2 d;

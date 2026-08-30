@@ -8,10 +8,7 @@ import net.md_5.bungee.chat.ChatVersion;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
 
-/*
- * Renamed from litebans.es
- */
-public static class es_0 {
+public class es_0 {
     private static boolean b;
     private static boolean c;
     private static boolean e;
@@ -45,19 +42,19 @@ public static class es_0 {
 
     static {
         es_0.d();
-        b = hb_0.a(a[0]);
-        c = hb_0.a(a[1]);
+        b = hb_0.a("org.bukkit.block.TestBlock");
+        c = hb_0.a("net.md_5.bungee.api.chat.BaseComponent");
         e = false;
         d = false;
         try {
-            AsyncPlayerPreLoginEvent.class.getMethod(a[2], new Class[0]);
+            AsyncPlayerPreLoginEvent.class.getMethod("kickMessage", new Class[0]);
             d = true;
-            Class.forName(a[3]);
+            Class.forName("io.papermc.paper.threadedregions.scheduler.RegionScheduler");
             int n = Thread.activeCount();
             Thread[] threadArray = new Thread[n];
             Thread.enumerate(threadArray);
             for (Thread thread : threadArray) {
-                if (thread == null || !thread.getName().startsWith(a[4])) continue;
+                if (thread == null || !thread.getName().startsWith("Folia Watchdog")) continue;
                 e = true;
             }
         }
@@ -67,7 +64,7 @@ public static class es_0 {
     }
 
     private static final void d() {
-        a = new String[]{hl.a("\ueb94\ueb89\ueb9c\uebd5\ueb99\ueb8e\ueb90\ueb90\ueb92\ueb8f\uebd5\ueb99\ueb97\ueb94\ueb98\ueb90\uebd5\uebaf\ueb9e\ueb88\ueb8f\uebb9\ueb97\ueb94\ueb98\ueb90", 1595796475), hl.a("\u4b33\u4b38\u4b29\u4b73\u4b30\u4b39\u4b02\u4b68\u4b73\u4b3f\u4b28\u4b33\u4b3a\u4b38\u4b38\u4b73\u4b3c\u4b2d\u4b34\u4b73\u4b3e\u4b35\u4b3c\u4b29\u4b73\u4b1f\u4b3c\u4b2e\u4b38\u4b1e\u4b32\u4b30\u4b2d\u4b32\u4b33\u4b38\u4b33\u4b29", 1848134493), hl.a("\ua487\ua485\ua48f\ua487\ua4a1\ua489\ua49f\ua49f\ua48d\ua48b\ua489", 2122163436), hl.a("\u51cd\u51cb\u518a\u51d4\u51c5\u51d4\u51c1\u51d6\u51c9\u51c7\u518a\u51d4\u51c5\u51d4\u51c1\u51d6\u518a\u51d0\u51cc\u51d6\u51c1\u51c5\u51c0\u51c1\u51c0\u51d6\u51c1\u51c3\u51cd\u51cb\u51ca\u51d7\u518a\u51d7\u51c7\u51cc\u51c1\u51c0\u51d1\u51c8\u51c1\u51d6\u518a\u51f6\u51c1\u51c3\u51cd\u51cb\u51ca\u51f7\u51c7\u51cc\u51c1\u51c0\u51d1\u51c8\u51c1\u51d6", 224612772), hl.a("\u8ecc\u8ee5\u8ee6\u8ee3\u8eeb\u8eaa\u8edd\u8eeb\u8efe\u8ee9\u8ee2\u8eee\u8ee5\u8eed", -2035839350)};
+        a = new String[]{"org.bukkit.block.TestBlock", "net.md_5.bungee.api.chat.BaseComponent", "kickMessage", "io.papermc.paper.threadedregions.scheduler.RegionScheduler", "Folia Watchdog"};
     }
 }
 

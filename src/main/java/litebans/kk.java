@@ -2,7 +2,7 @@ package litebans;
 
 import litebans.jv_0;
 
-public static final class kk
+public final class kk
 implements Runnable {
     final /* synthetic */ jv_0 a;
     final /* synthetic */ String b;

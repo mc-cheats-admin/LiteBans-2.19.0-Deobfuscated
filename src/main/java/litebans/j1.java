@@ -4,7 +4,7 @@ import litebans.aJ;
 import litebans.dX;
 import litebans.eE;
 
-public static final class j1 {
+public final class j1 {
     private j1() {
     }
 

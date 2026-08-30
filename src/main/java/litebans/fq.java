@@ -6,10 +6,7 @@ import litebans.fh_0;
 import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class fq
+public final class fq
 extends fh_0 {
     private static /* synthetic */ String[] j;
 
@@ -24,11 +21,11 @@ extends fh_0 {
 
     @Override
     public String getName() {
-        return j[0];
+        return "warnlist";
     }
 
     private static final void a() {
-        j = new String[]{hl.a("\uc342\uc354\uc347\uc35b\uc359\uc35c\uc346\uc341", -1348943051)};
+        j = new String[]{"warnlist"};
     }
 
     static {

@@ -22,10 +22,7 @@ import litebans.q_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.fv
- */
-public static final class fv_0 {
+public final class fv_0 {
     public static final ak_0 h;
     private final di_0 e;
     private Object d;
@@ -61,27 +58,27 @@ public static final class fv_0 {
             object2 = object;
             URL[] uRLArray = object2.toArray(new URL[0]);
             Object object3 = new Class[]{File.class};
-            Constructor<?> constructor = new URLClassLoader(uRLArray, Driver.class.getClassLoader()).loadClass(c[0]).getConstructor((Class<?>)object3);
+            Constructor<?> constructor = new URLClassLoader(uRLArray, Driver.class.getClassLoader()).loadClass("com.maxmind.geoip2.DatabaseReader$Builder").getConstructor((Class<?>)object3);
             object3 = new Object[]{file2};
             object = constructor.newInstance((Object[])object3);
-            Object object4 = this.d = object.getClass().getMethod(c[1], new Class[0]).invoke(object, new Object[0]);
+            Object object4 = this.d = object.getClass().getMethod("build", new Class[0]).invoke(object, new Object[0]);
             ew.a(object4);
             object3 = new Class[]{InetAddress.class};
-            this.a = object4.getClass().getMethod(c[2], (Class<?>)object3);
+            this.a = object4.getClass().getMethod("country", (Class<?>)object3);
             Method method2 = this.a;
             if (method2 == null) {
-                ew.e(c[3]);
+                ew.e("");
                 method2 = null;
             }
-            if ((method = (this.g = ((Class)(object3 = method2.getReturnType())).getMethod(c[4], new Class[0]))) == null) {
-                ew.e(c[5]);
+            if ((method = (this.g = ((Class)(object3 = method2.getReturnType())).getMethod("getCountry", new Class[0]))) == null) {
+                ew.e("");
                 method = null;
             }
-            this.b = method.getReturnType().getMethod(c[6], new Class[0]);
-            this.e.getLogger().info(c[7]);
-            object2 = this.b(c[8]);
-            if (!ew.a(object2, (Object)c[9])) {
-                this.e.getLogger().warning(c[10] + (String)object2 + ')');
+            this.b = method.getReturnType().getMethod("getName", new Class[0]);
+            this.e.getLogger().info("GeoIP support ");
+            object2 = this.b("8.8.8.8");
+            if (!ew.a(object2, (Object)"United States")) {
+                this.e.getLogger().warning("GeoIP database test failed. (" + (String)object2 + ')');
             }
         }
         catch (Throwable throwable) {
@@ -91,11 +88,11 @@ public static final class fv_0 {
 
     public final String b(@Nullable String string) {
         if (string == null) {
-            return c[11];
+            return "geoip.unavailable";
         }
         Object object = this.d;
         if (object == null) {
-            return c[12];
+            return "geoip.unavailable";
         }
         Object object2 = object;
         try {
@@ -104,31 +101,31 @@ public static final class fv_0 {
             InetAddress inetAddress = InetAddress.getByName(string);
             Method method = this.a;
             if (method == null) {
-                ew.e(c[13]);
+                ew.e("");
                 method = null;
             }
             Object object4 = new Object[]{inetAddress};
             Object object5 = method.invoke(object2, object4);
             Method method2 = this.g;
             if (method2 == null) {
-                ew.e(c[14]);
+                ew.e("");
                 method2 = null;
             }
             object4 = method2.invoke(object5, new Object[0]);
             Method method3 = this.b;
             if (method3 == null) {
-                ew.e(c[15]);
+                ew.e("");
                 method3 = null;
             }
             if ((string2 = (object3 = method3.invoke(object4, new Object[0])) instanceof String ? (String)object3 : null) == null) {
-                string2 = c[16];
+                string2 = "geoip.error";
             }
             return string2;
         }
         catch (Exception exception) {
             q_0 q_02 = (q_0)this.e.a(q_0.class);
             q_0.a(q_02, exception, 0, 2, null);
-            return c[17];
+            return "geoip.error";
         }
     }
 
@@ -192,7 +189,7 @@ public static final class fv_0 {
 
     private static final boolean a(File file, String string) {
         ew.a((Object)string);
-        return bz.a(string, c[18], false, 2, null);
+        return bz.a(string, ".jar", false, 2, null);
     }
 
     private static final String a(fv_0 fv_02, String string) {
@@ -212,7 +209,7 @@ public static final class fv_0 {
     }
 
     private static final void a() {
-        c = new String[]{hl.a("\u6a49\u6a45\u6a47\u6a04\u6a47\u6a4b\u6a52\u6a47\u6a43\u6a44\u6a4e\u6a04\u6a4d\u6a4f\u6a45\u6a43\u6a5a\u6a18\u6a04\u6a6e\u6a4b\u6a5e\u6a4b\u6a48\u6a4b\u6a59\u6a4f\u6a78\u6a4f\u6a4b\u6a4e\u6a4f\u6a58\u6a0e\u6a68\u6a5f\u6a43\u6a46\u6a4e\u6a4f\u6a58", 256338474), hl.a("\u0f15\u0f02\u0f1e\u0f1b\u0f13", 1512968055), hl.a("\u5ba8\u5ba4\u5bbe\u5ba5\u5bbf\u5bb9\u5bb2", -1228317749), hl.a("", -475529403), hl.a("\u69fe\u69fc\u69ed\u69da\u69f6\u69ec\u69f7\u69ed\u69eb\u69e0", -1870239335), hl.a("", -290641585), hl.a("\ua6c7\ua6c5\ua6d4\ua6ee\ua6c1\ua6cd\ua6c5", -774723936), hl.a("\u1822\u1800\u180a\u182c\u1835\u1845\u1816\u1810\u1815\u1815\u180a\u1817\u1811\u1845\u180c\u180b\u180c\u1811\u180c\u1804\u1809\u180c\u181f\u1800\u1801\u184b", 361633893), hl.a("\u59a7\u59b1\u59a7\u59b1\u59a7\u59b1\u59a7", 1465997727), hl.a("\u2d83\u2db8\u2dbf\u2da2\u2db3\u2db2\u2df6\u2d85\u2da2\u2db7\u2da2\u2db3\u2da5", -67097130), hl.a("\u6cd1\u6cf3\u6cf9\u6cdf\u6cc6\u6cb6\u6cf2\u6cf7\u6ce2\u6cf7\u6cf4\u6cf7\u6ce5\u6cf3\u6cb6\u6ce2\u6cf3\u6ce5\u6ce2\u6cb6\u6cf0\u6cf7\u6cff\u6cfa\u6cf3\u6cf2\u6cb8\u6cb6\u6cbe", -31036266), hl.a("\uf021\uf023\uf029\uf02f\uf036\uf068\uf033\uf028\uf027\uf030\uf027\uf02f\uf02a\uf027\uf024\uf02a\uf023", -865865658), hl.a("\ub704\ub706\ub70c\ub70a\ub713\ub74d\ub716\ub70d\ub702\ub715\ub702\ub70a\ub70f\ub702\ub701\ub70f\ub706", 882620259), hl.a("", -1560201848), hl.a("", -252850224), hl.a("", -1871898312), hl.a("\u0497\u0495\u049f\u0499\u0480\u04de\u0495\u0482\u0482\u049f\u0482", -606272272), hl.a("\u89fc\u89fe\u89f4\u89f2\u89eb\u89b5\u89fe\u89e9\u89e9\u89f4\u89e9", 289048987), hl.a("\u2a4b\u2a0f\u2a04\u2a17", -1662965147)};
+        c = new String[]{"com.maxmind.geoip2.DatabaseReader$Builder", "build", "country", "", "getCountry", "", "getName", "GeoIP support ", "8.8.8.8", "United States", "GeoIP database test failed. (", "geoip.unavailable", "geoip.unavailable", "", "", "", "geoip.error", "geoip.error", ".jar"};
     }
 }
 

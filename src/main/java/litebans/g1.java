@@ -27,7 +27,7 @@ import litebans.x_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class g1
+public final class g1
 extends fg_0 {
     private final cz f;
     private final jv_0 h;
@@ -144,19 +144,19 @@ extends fg_0 {
             String string;
             switch (br_0.a[dZ4.u().c().ordinal()]) {
                 case 1: {
-                    string = e[8];
+                    string = "banned";
                     break;
                 }
                 case 2: {
-                    string = e[9];
+                    string = "muted";
                     break;
                 }
                 case 3: {
-                    string = e[10];
+                    string = "warned";
                     break;
                 }
                 case 4: {
-                    string = e[11];
+                    string = "kicked";
                     break;
                 }
                 default: {
@@ -181,7 +181,7 @@ extends fg_0 {
     }
 
     private static final void c() {
-        e = new String[]{hl.a("\u0ab2\u0ab1\u0abe\u0abe\u0ab5\u0ab4", 296684240), hl.a("\u16c2\u16da\u16db\u16ca\u16cb", 414783151), hl.a("\ub17a\ub16c\ub17f\ub163\ub168\ub169", -2036551411), hl.a("\u0b36\u0b34\u0b3e\u0b36\u0b38\u0b39", -538506403), hl.a("\u3200\u3203\u320c\u320c\u3207\u3206", -221564318), hl.a("\u62df\u62c7\u62c6\u62d7\u62d6", -2017893710), hl.a("\ufaa9\ufabf\ufaac\ufab0\ufabb\ufaba", 1137572574), hl.a("\u3f63\u3f61\u3f6b\u3f63\u3f6d\u3f6c", -970440952), hl.a("\u0edd\u0ede\u0ed1\u0ed1\u0eda\u0edb", -1923019073), hl.a("\udb80\udb98\udb99\udb88\udb89", -97657875), hl.a("\u579f\u5789\u579a\u5786\u578d\u578c", 1228625896), hl.a("\u3124\u3126\u312c\u3124\u312a\u312b", -1154862769)};
+        e = new String[]{"banned", "muted", "warned", "kicked", "banned", "muted", "warned", "kicked", "banned", "muted", "warned", "kicked"};
     }
 
     static {

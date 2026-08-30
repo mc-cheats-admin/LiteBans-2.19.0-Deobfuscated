@@ -18,12 +18,12 @@ import litebans.lo_0;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class fh
+public final class fh
 extends fB {
     private static /* synthetic */ String[] i;
 
     public fh(@NotNull di_0 di_02) {
-        super(i[0], di_02);
+        super("lastuuid", di_02);
     }
 
     /*
@@ -68,7 +68,7 @@ extends fB {
     }
 
     private static final void a() {
-        i = new String[]{hl.a("\uf2ea\uf2e7\uf2f5\uf2f2\uf2f3\uf2f3\uf2ef\uf2e2", -1803160954)};
+        i = new String[]{"lastuuid"};
     }
 
     static {

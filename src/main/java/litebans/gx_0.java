@@ -38,10 +38,7 @@ import net.md_5.bungee.api.event.LoginEvent;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.gx
- */
-public static final class gx_0
+public final class gx_0
 extends gu {
     private final ConcurrentHashMap g = new ConcurrentHashMap();
     private final ConcurrentHashMap e = new ConcurrentHashMap();
@@ -114,7 +111,7 @@ extends gu {
     public final void a(@NotNull LoginEvent var1_1) {
         block24: {
             v0 = this.h().i();
-            ew.b(v0, gx_0.f[0]);
+            ew.b(v0, "");
             var2_2 = (k1)v0;
             var3_3 = var1_1.getConnection();
             var4_4 = var3_3.getUniqueId();
@@ -125,7 +122,7 @@ extends gu {
             ew.a(var3_3);
             v2 = var2_2.a(var3_3);
             if (v2 == null) {
-                throw new AssertionError((Object)gx_0.f[1]);
+                throw new AssertionError((Object)"No default server");
             }
             var8_8 = v2;
             var9_9 = new dy_0();
@@ -154,17 +151,17 @@ extends gu {
                                 if (ew.a(var20_24, var22_31 & 255) <= 0) break block25;
                                 ew.a((Object)var6_6);
                                 this.a(var18_21, var6_6, var22_31);
-                                if (this.a(var18_21, var1_1, var5_5, var6_6, h1.a(hd_0.c, gx_0.f[2] + hd_0.i + hy_0.b(var22_31) + ' ' + hd_0.c + gx_0.f[3] + hd_0.u + hd_0.r + var6_6.length()), null, gx_0.f[4], false)) break block26;
+                                if (this.a(var18_21, var1_1, var5_5, var6_6, h1.a(hd_0.c, "Invalid username.\nMaximum " + hd_0.i + hy_0.b(var22_31) + ' ' + hd_0.c + "characters, found " + hd_0.u + hd_0.r + var6_6.length()), null, "KICK_OTHER", false)) break block26;
                             }
-                            var9_9.a = var18_21.a(var5_5, var7_7, a_.h, gx_0.f[5], true, 0);
+                            var9_9.a = var18_21.a(var5_5, var7_7, a_.h, "__ALL__", true, 0);
                             var20_25 = this;
                             var21_27 = 0;
                             if (((q_0)var20_25.h().a(q_0.class)).f().a6()) {
                                 ew.a((Object)var6_6);
-                                var20_25 = var18_21.a(var6_6, var5_5, gx_0.f[6], a_.h, true);
+                                var20_25 = var18_21.a(var6_6, var5_5, "__ALL__", a_.h, true);
                                 if (((Collection)var20_25).isEmpty() == false) {
                                     v3 = var9_9.a;
-                                    ew.b(v3, gx_0.f[7]);
+                                    ew.b(v3, "");
                                     kb_0.c(v3).addAll((Collection)var20_25);
                                 }
                             }
@@ -176,7 +173,7 @@ extends gu {
                             if (var20_25.a(var21_27)) {
                                 var24_34 = var20_25;
                                 var25_35 = false;
-                                var24_34.a((Object)(gx_0.f[8] + ((List)var9_9.a).size() + gx_0.f[9] + var6_6 + gx_0.f[10] + var4_4 + gx_0.f[11]));
+                                var24_34.a((Object)("Found " + ((List)var9_9.a).size() + " ban(s) for " + var6_6 + " (uuid: '" + var4_4 + "') + "));
                             }
                             var20_25 = this;
                             var21_27 = 0;
@@ -251,7 +248,7 @@ extends gu {
                         if (var25_38.a(var26_40)) {
                             var24_34 = var25_38;
                             var28_48 = false;
-                            var24_34.a((Object)(gx_0.f[12] + var10_10 + gx_0.f[13] + var23_33));
+                            var24_34.a((Object)("Ban for " + var10_10 + " (uncached): " + var23_33));
                         }
                         if (var23_33 != null) {
                             ew.a((Object)var6_6);
@@ -280,9 +277,6 @@ extends gu {
         }
     }
 
-    /*
-     * Unable to fully structure code
-     */
     @Override
     public void b(@NotNull Object var1_1) {
         try {
@@ -374,7 +368,7 @@ extends gu {
     public final boolean a(@NotNull Object object, @NotNull String string, @NotNull String string2, @Nullable String string3, @Nullable String string4, @NotNull dZ dZ2) {
         CharSequence charSequence = (CharSequence)this.e.get(dZ2);
         if (charSequence == null) {
-            charSequence = f[14];
+            charSequence = "null";
         }
         CharSequence charSequence2 = charSequence;
         Object object2 = this;
@@ -385,7 +379,7 @@ extends gu {
         if (((q_0)object2).a(n)) {
             Object object3 = object2;
             boolean bl2 = false;
-            ((q_0)object3).a((Object)(f[15] + string4 + f[16] + dZ2));
+            ((q_0)object3).a((Object)("Ban for " + string4 + " (cached): " + dZ2));
         }
         il_0.a(this.h().i(), object, charSequence2, null, false, null, 28, null);
         object2 = this;
@@ -420,7 +414,7 @@ extends gu {
     }
 
     private static final void c() {
-        f = new String[]{hl.a("", 253201626), hl.a("\u52e5\u52c4\u528b\u52cf\u52ce\u52cd\u52ca\u52de\u52c7\u52df\u528b\u52d8\u52ce\u52d9\u52dd\u52ce\u52d9", -888057173), hl.a("\u2ff6\u2fd1\u2fc9\u2fde\u2fd3\u2fd6\u2fdb\u2f9f\u2fca\u2fcc\u2fda\u2fcd\u2fd1\u2fde\u2fd2\u2fda\u2f91\u2fb5\u2ff2\u2fde\u2fc7\u2fd6\u2fd2\u2fca\u2fd2\u2f9f", 874459071), hl.a("\uf1aa\uf1a1\uf1a8\uf1bb\uf1a8\uf1aa\uf1bd\uf1ac\uf1bb\uf1ba\uf1e5\uf1e9\uf1af\uf1a6\uf1bc\uf1a7\uf1ad\uf1e9", 779612617), hl.a("\u03a2\u03a0\u03aa\u03a2\u03b6\u03a6\u03bd\u03a1\u03ac\u03bb", 1796998121), hl.a("\u4460\u4460\u447e\u4473\u4473\u4460\u4460", -587971521), hl.a("\u7e9e\u7e9e\u7e80\u7e8d\u7e8d\u7e9e\u7e9e", -375030079), hl.a("", 360295135), hl.a("\u0442\u046b\u0471\u046a\u0460\u0424", 211158020), hl.a("\uc3d7\uc395\uc396\uc399\uc3df\uc384\uc3de\uc3d7\uc391\uc398\uc385\uc3d7", 1335477239), hl.a("\u0a83\u0a8b\u0ad6\u0ad6\u0aca\u0ac7\u0a99\u0a83\u0a84", 677055139), hl.a("\uf6f8\uf6f6\uf6f1", -2060192033), hl.a("\u1093\u10b0\u10bf\u10f1\u10b7\u10be\u10a3\u10f1", -29421359), hl.a("\uec92\uec9a\uecc7\uecdc\uecd1\uecd3\uecd1\uecda\uecd7\uecd6\uec9b\uec88\uec92", 410578098), hl.a("\u47b1\u47aa\u47b3\u47b3", 220940255), hl.a("\ue88e\ue8ad\ue8a2\ue8ec\ue8aa\ue8a3\ue8be\ue8ec", -1210783540), hl.a("\u60a4\u60ac\u60e7\u60e5\u60e7\u60ec\u60e1\u60e0\u60ad\u60be\u60a4", -291413884)};
+        f = new String[]{"", "No default server", "Invalid username.\nMaximum ", "characters, found ", "KICK_OTHER", "__ALL__", "__ALL__", "", "Found ", " ban(s) for ", " (uuid: '", "') + ", "Ban for ", " (uncached): ", "null", "Ban for ", " (cached): "};
     }
 
     static {

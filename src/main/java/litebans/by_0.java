@@ -8,10 +8,7 @@ import litebans.d;
 import litebans.ie_0;
 import org.yaml.snakeyaml.Yaml;
 
-/*
- * Renamed from litebans.bY
- */
-public static class by_0
+public class by_0
 extends bg_0 {
     private final ThreadLocal b = new d(this);
 

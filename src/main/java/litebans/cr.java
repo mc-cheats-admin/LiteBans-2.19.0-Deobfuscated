@@ -26,7 +26,7 @@ implements Runnable {
             long l3 = this.b.t.a();
             long l5 = e6.b();
             if (e6.a(l5, 128L) < e6.a(this.a, dr.e(this.b))) {
-                dr.b(this.b).c("%s - Retrograde clock change detected (housekeeper delta=%s), soft-evicting connections from pool.", new Object[]{this.b.e, e6.e(this.a, l5)});
+                dr.b(this.b).c("%s - Retrograde clock change detected (housekeeper delta=%s), soft-evicting connections from ", new Object[]{this.b.e, e6.e(this.a, l5)});
                 this.a = l5;
                 this.b.a();
                 return;

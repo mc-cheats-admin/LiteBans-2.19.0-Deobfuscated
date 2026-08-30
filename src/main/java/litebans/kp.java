@@ -23,7 +23,7 @@ import java.util.Map;
 import litebans.as;
 import org.jetbrains.annotations.Nullable;
 
-public static final class kp
+public final class kp
 implements ResultSet {
     public final Void a() {
         throw new UnsupportedOperationException();

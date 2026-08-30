@@ -12,7 +12,7 @@ import litebans.hl;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class eS {
+public final class eS {
     private static /* synthetic */ String[] a;
 
     public static final ResultSet d(@NotNull bT bT2) {
@@ -25,14 +25,14 @@ public static final class eS {
         } else {
             String string = bT2.a();
             boolean bl = false;
-            if (bz.b(string, a[0], false, 2, null)) {
+            if (bz.b(string, "SELECT ", false, 2, null)) {
                 bT bT4 = bT2;
                 boolean bl2 = false;
                 resultSet = w2.a(bT4);
             } else {
                 string = bT2.a();
                 bl = false;
-                if (bz.b(string, a[1], false, 2, null) || bz.b(string, a[2], false, 2, null) || bz.b(string, a[3], false, 2, null) || bz.b(string, a[4], false, 2, null) || bz.b(string, a[5], false, 2, null)) {
+                if (bz.b(string, "INSERT ", false, 2, null) || bz.b(string, "DELETE ", false, 2, null) || bz.b(string, "UPDATE ", false, 2, null) || bz.b(string, "ALTER ", false, 2, null) || bz.b(string, "CREATE ", false, 2, null)) {
                     bT bT5 = bT2;
                     boolean bl3 = false;
                     resultSet = w2.c(bT5);
@@ -101,7 +101,7 @@ public static final class eS {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u6937\u6921\u6928\u6921\u6927\u6930\u6944", 678586724), hl.a("\u771f\u7718\u7705\u7713\u7704\u7702\u7776", -947423402), hl.a("\u5f0d\u5f0c\u5f05\u5f0c\u5f1d\u5f0c\u5f69", 350838601), hl.a("\ude66\ude63\ude77\ude72\ude67\ude76\ude13", -428876237), hl.a("\u792d\u7920\u7938\u7929\u793e\u794c", -169117332), hl.a("\u4b9e\u4b8f\u4b98\u4b9c\u4b89\u4b98\u4bfd", 1391021021)};
+        a = new String[]{"SELECT ", "INSERT ", "DELETE ", "UPDATE ", "ALTER ", "CREATE "};
     }
 
     static {

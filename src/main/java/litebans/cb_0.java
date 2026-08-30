@@ -3,10 +3,7 @@ package litebans;
 import litebans.dy_0;
 import litebans.jv_0;
 
-/*
- * Renamed from litebans.cB
- */
-public static final class cb_0
+public final class cb_0
 implements Runnable {
     final /* synthetic */ jv_0 a;
     final /* synthetic */ dy_0 b;

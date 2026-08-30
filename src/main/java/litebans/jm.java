@@ -21,10 +21,7 @@ import litebans.o;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class jm
+public final class jm
 implements ek_0 {
     private final di_0 c;
     private final o a;
@@ -39,9 +36,6 @@ implements ek_0 {
         return this.c;
     }
 
-    /*
-     * Unable to fully structure code
-     */
     @Subscribe(order=PostOrder.FIRST)
     public final void a(@NotNull ServerPreConnectEvent var1_1) {
         block12: {
@@ -55,13 +49,13 @@ implements ek_0 {
             }
             var3_3 = v0;
             v1 = this.c;
-            ew.b(v1, jm.b[0]);
+            ew.b(v1, "");
             var4_4 = (VelocityPlugin)v1;
             var5_5 = var3_3;
             var6_6 = false;
             ew.a(var2_2);
             var7_7 = var2_2;
-            var8_8 = jm.b[1];
+            var8_8 = "litebans.lockdown.bypass";
             var9_9 = false;
             var10_11 = var7_7;
             var11_14 = false;
@@ -146,7 +140,7 @@ implements ek_0 {
     }
 
     private static final void b() {
-        b = new String[]{hl.a("", 244885265), hl.a("\u9e42\u9e47\u9e5a\u9e4b\u9e4c\u9e4f\u9e40\u9e5d\u9e00\u9e42\u9e41\u9e4d\u9e45\u9e4a\u9e41\u9e59\u9e40\u9e00\u9e4c\u9e57\u9e5e\u9e4f\u9e5d\u9e5d", 1198169646)};
+        b = new String[]{"", "litebans.lockdown.bypass"};
     }
 
     static {

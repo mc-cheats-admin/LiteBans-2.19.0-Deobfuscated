@@ -10,10 +10,7 @@ import litebans.q_0;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Renamed from litebans.fF
- */
-public static final class ff_0
+public final class ff_0
 extends fg_0 {
     public ff_0(@NotNull di_0 di_02) {
         super(di_02);

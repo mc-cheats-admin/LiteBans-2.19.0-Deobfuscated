@@ -9,10 +9,7 @@ import java.util.logging.LogRecord;
 import litebans.hl;
 import org.slf4j.Logger;
 
-/*
- * Renamed from litebans.cv
- */
-public static class cv_0
+public class cv_0
 extends java.util.logging.Logger {
     private final Logger b;
     private static /* synthetic */ String[] a;
@@ -293,7 +290,7 @@ extends java.util.logging.Logger {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u61a1\u61b7\u61a4\u61b8\u61bf\u61b8\u61b1", 1977770486), hl.a("\u86a0\u86b6\u86a5\u86b6\u86a1\u86b6", -214399245)};
+        a = new String[]{"WARNING", "SEVERE"};
     }
 
     static {

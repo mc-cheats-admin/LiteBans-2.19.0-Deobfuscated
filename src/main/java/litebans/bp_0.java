@@ -6,10 +6,7 @@ import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.chat.ComponentSerializer;
 
-/*
- * Renamed from litebans.bp
- */
-public static class bp_0 {
+public class bp_0 {
     private static boolean b;
     private static /* synthetic */ String[] a;
 
@@ -27,11 +24,11 @@ public static class bp_0 {
 
     static {
         bp_0.a();
-        b = hb_0.a(a[0]);
+        b = hb_0.a("net.md_5.bungee.chat.ChatVersion");
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u5d2d\u5d26\u5d37\u5d6d\u5d2e\u5d27\u5d1c\u5d76\u5d6d\u5d21\u5d36\u5d2d\u5d24\u5d26\u5d26\u5d6d\u5d20\u5d2b\u5d22\u5d37\u5d6d\u5d00\u5d2b\u5d22\u5d37\u5d15\u5d26\u5d31\u5d30\u5d2a\u5d2c\u5d2d", -1345823421)};
+        a = new String[]{"net.md_5.bungee.chat.ChatVersion"};
     }
 }
 

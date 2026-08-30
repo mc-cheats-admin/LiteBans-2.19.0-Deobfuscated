@@ -12,10 +12,7 @@ import litebans.jv_0;
 import litebans.n_0;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.A
- */
-public static abstract class a_0
+public abstract class a_0
 extends n_0 {
     private final Map d = new HashMap();
     private Collection b;
@@ -56,7 +53,7 @@ extends n_0 {
     }
 
     public List a(@Nullable d8 d82, String string, jv_0 jv_02, String[] stringArray) {
-        this.a.getLogger().warning(c[1] + string);
+        this.a.getLogger().warning("No suggest implementation for /" + string);
         return Collections.emptyList();
     }
 
@@ -79,7 +76,7 @@ extends n_0 {
     }
 
     private static final void d() {
-        c = new String[]{hl.a("\uaf56\uaf5a\uaf58\uaf58\uaf54\uaf5b\uaf51\uaf15\uaf5c\uaf46\uaf15\uaf58\uaf54\uaf47\uaf5e\uaf50\uaf51\uaf15\uaf5b\uaf5a\uaf5b\uaf18\uaf5b\uaf40\uaf59\uaf59\uaf15\uaf57\uaf40\uaf41\uaf15\uaf5c\uaf46\uaf15\uaf5b\uaf40\uaf59\uaf59", -1577668811), hl.a("\u3cb4\u3c95\u3cda\u3c89\u3c8f\u3c9d\u3c9d\u3c9f\u3c89\u3c8e\u3cda\u3c93\u3c97\u3c8a\u3c96\u3c9f\u3c97\u3c9f\u3c94\u3c8e\u3c9b\u3c8e\u3c93\u3c95\u3c94\u3cda\u3c9c\u3c95\u3c88\u3cda\u3cd5", 1056128250)};
+        c = new String[]{"command is marked non-null but is null", "No suggest implementation for /"};
     }
 
     static {

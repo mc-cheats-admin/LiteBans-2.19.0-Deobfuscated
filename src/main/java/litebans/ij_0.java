@@ -2,10 +2,7 @@ package litebans;
 
 import litebans.iX;
 
-/*
- * Renamed from litebans.iJ
- */
-public static final class ij_0
+public final class ij_0
 extends iX {
     public ij_0() {
         super(0L, 1, null);

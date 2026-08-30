@@ -3,9 +3,6 @@ package litebans;
 import java.util.Arrays;
 import java.util.Objects;
 
-/*
- * Renamed from litebans.aT
- */
 static class at_0 {
     int r;
     int b;

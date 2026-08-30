@@ -27,10 +27,7 @@ import net.md_5.bungee.api.connection.Server;
 import net.md_5.bungee.api.event.ServerConnectEvent;
 import net.md_5.bungee.api.score.Scoreboard;
 
-/*
- * Renamed from litebans.hU
- */
-public static final class hu_0
+public final class hu_0
 implements ProxiedPlayer {
     final /* synthetic */ jv_0 a;
     final /* synthetic */ ServerInfo b;

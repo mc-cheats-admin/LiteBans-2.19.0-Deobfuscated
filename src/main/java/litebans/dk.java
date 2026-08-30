@@ -10,7 +10,7 @@ import litebans.iC;
 import litebans.kd;
 import org.jetbrains.annotations.NotNull;
 
-public static final class dk
+public final class dk
 extends Enum {
     public static final db_0 d;
     private final String[] o;
@@ -177,29 +177,29 @@ extends Enum {
     static {
         m = 0.0;
         dk.b();
-        String[] stringArray = new String[]{b[1], b[2], b[3], b[4], b[5], b[6], b[7]};
-        f = new dk(b[0], 0, stringArray);
-        stringArray = new String[]{b[9], b[10], b[11], b[12], b[13], b[14]};
-        i = new dk(b[8], 1, stringArray);
-        stringArray = new String[]{b[16], b[17], b[18], b[19], b[20]};
-        n = new dk(b[15], 2, stringArray);
-        stringArray = new String[]{b[22], b[23], b[24], b[25], b[26]};
-        a = new dk(b[21], 3, stringArray);
-        stringArray = new String[]{b[28], b[29], b[30], b[31], b[32], b[33]};
-        j = new dk(b[27], 4, stringArray);
-        stringArray = new String[]{b[35], b[36], b[37], b[38], b[39]};
-        g = new dk(b[34], 5, stringArray);
-        stringArray = new String[]{b[41], b[42], b[43], b[44], b[45], b[46]};
-        h = new dk(b[40], 6, stringArray);
+        String[] stringArray = new String[]{"s", "se", "sc", "sec", "secs", "second", "seconds"};
+        f = new dk("SECONDS", 0, stringArray);
+        stringArray = new String[]{"m", "mi", "min", "mins", "minute", "minutes"};
+        i = new dk("MINUTES", 1, stringArray);
+        stringArray = new String[]{"h", "hr", "hrs", "hour", "hours"};
+        n = new dk("HOURS", 2, stringArray);
+        stringArray = new String[]{"d", "da", "dy", "day", "days"};
+        a = new dk("DAYS", 3, stringArray);
+        stringArray = new String[]{"w", "we", "wk", "wks", "week", "weeks"};
+        j = new dk("WEEKS", 4, stringArray);
+        stringArray = new String[]{"mo", "mh", "mon", "month", "months"};
+        g = new dk("MONTHS", 5, stringArray);
+        stringArray = new String[]{"y", "ye", "yr", "yrs", "year", "years"};
+        h = new dk("YEARS", 6, stringArray);
         l = dkArray = new dk[]{dk.f, dk.i, dk.n, dk.a, dk.j, dk.g, dk.h};
         k = iC.a(l);
         d = new db_0(null);
-        c = new hN(b[47]);
-        e = new hN(b[48]);
+        c = new hN("[0-9.]");
+        e = new hN("[^0-9.]");
     }
 
     private static final void b() {
-        b = new String[]{hl.a("\u1737\u1721\u1727\u172b\u172a\u1720\u1737", 22288228), hl.a("\u9a7e", -184313331), hl.a("\u4622\u4634", -580237743), hl.a("\u7d61\u7d71", 2069003538), hl.a("\ufe20\ufe36\ufe30", 1679031891), hl.a("\u075c\u074a\u074c\u075c", 1533544239), hl.a("\uae42\uae54\uae52\uae5e\uae5f\uae55", 487239217), hl.a("\ue83e\ue828\ue82e\ue822\ue823\ue829\ue83e", 984934477), hl.a("\u046e\u046a\u046d\u0476\u0477\u0466\u0470", -1129380829), hl.a("\u1cf1", -282846052), hl.a("\ufad7\ufad3", 144571066), hl.a("\ua27f\ua27b\ua27c", 972333586), hl.a("\ucf33\ucf37\ucf30\ucf2d", -1106915490), hl.a("\u93bc\u93b8\u93bf\u93a4\u93a5\u93b4", -141323311), hl.a("\u771d\u7719\u771e\u7705\u7704\u7715\u7703", 760117104), hl.a("\u2222\u2225\u223f\u2238\u2239", 42607210), hl.a("\ua424", -1942641588), hl.a("\u7c2f\u7c35", -2102363065), hl.a("\ud725\ud73f\ud73e", -243411123), hl.a("\u43a1\u43a6\u43bc\u43bb", -1326562359), hl.a("\u258f\u2588\u2592\u2595\u2594", 1704338919), hl.a("\ud4d6\ud4d3\ud4cb\ud4c1", -1984637806), hl.a("\uf8af", -1863780149), hl.a("\u5a03\u5a06", -464954777), hl.a("\u547b\u5466", -1810213857), hl.a("\uf348\uf34d\uf355", -1746930900), hl.a("\ubd0b\ubd0e\ubd16\ubd1c", -1321484945), hl.a("\ubf2d\ubf3f\ubf3f\ubf31\ubf29", 1288814458), hl.a("\u8fee", -1320906855), hl.a("\u3842\u3850", 2084714549), hl.a("\ufd73\ufd6f", 292879620), hl.a("\u0ef2\u0eee\u0ef6", -476049787), hl.a("\uf24c\uf25e\uf25e\uf250", 69005883), hl.a("\u4324\u4336\u4336\u4338\u4320", 1872184147), hl.a("\udf8b\udf89\udf88\udf92\udf8e\udf95", 1255858118), hl.a("\u3b56\u3b54", 1390492475), hl.a("\uf065\uf060", -304091128), hl.a("\u762d\u762f\u762e", 1418884672), hl.a("\u6f8b\u6f89\u6f88\u6f92\u6f8e", -725258266), hl.a("\uff04\uff06\uff07\uff1d\uff01\uff1a", -1576861847), hl.a("\u677a\u6766\u6762\u6771\u6770", -2124519645), hl.a("\u443f", 905528390), hl.a("\uec26\uec3a", -866915233), hl.a("\u4172\u4179", -1730330357), hl.a("\u9933\u9938\u9939", 1396218186), hl.a("\u8d7a\u8d66\u8d62\u8d71", 83397891), hl.a("\u0fc7\u0fdb\u0fdf\u0fcc\u0fcd", -348975170), hl.a("\ub72a\ub741\ub75c\ub748\ub75f\ub72c", 753121137), hl.a("\ucfe9\ucfec\ucf82\ucf9f\ucf8b\ucf9c\ucfef", 471781298)};
+        b = new String[]{"SECONDS", "s", "se", "sc", "sec", "secs", "second", "seconds", "MINUTES", "m", "mi", "min", "mins", "minute", "minutes", "HOURS", "h", "hr", "hrs", "hour", "hours", "DAYS", "d", "da", "dy", "day", "days", "WEEKS", "w", "we", "wk", "wks", "week", "weeks", "MONTHS", "mo", "mh", "mon", "month", "months", "YEARS", "y", "ye", "yr", "yrs", "year", "years", "[0-9.]", "[^0-9.]"};
     }
 }
 

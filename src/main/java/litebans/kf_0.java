@@ -3,10 +3,7 @@ package litebans;
 import litebans.hl;
 import litebans.hm_0;
 
-/*
- * Renamed from litebans.kF
- */
-public static final class kf_0 {
+public final class kf_0 {
     private final hm_0 c;
     private final String a;
     private static /* synthetic */ String[] b;
@@ -20,7 +17,7 @@ public static final class kf_0 {
     }
 
     public String toString() {
-        return b[0] + (Object)((Object)this.a()) + b[1] + this.c() + b[2];
+        return "ClickEvent(action=" + (Object)((Object)this.a()) + ", value=" + this.c() + ")";
     }
 
     public boolean equals(Object object) {
@@ -57,7 +54,7 @@ public static final class kf_0 {
     }
 
     private static final void b() {
-        b = new String[]{hl.a("\u7c5a\u7c75\u7c70\u7c7a\u7c72\u7c5c\u7c6f\u7c7c\u7c77\u7c6d\u7c31\u7c78\u7c7a\u7c6d\u7c70\u7c76\u7c77\u7c24", 181500953), hl.a("\ubcc3\ubccf\ubc99\ubc8e\ubc83\ubc9a\ubc8a\ubcd2", 1899281647), hl.a("\u1249", 701174368)};
+        b = new String[]{"ClickEvent(action=", ", value=", ")"};
     }
 
     static {

@@ -36,12 +36,8 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.aO
- */
 @ai_0(a=0)
-public static final class ao_0
+public final class ao_0
 implements ec_0 {
     private final di_0 c;
     private final eE b;
@@ -63,7 +59,7 @@ implements ec_0 {
     }
 
     public final Plugin a(@NotNull di_0 di_02) {
-        ew.b(di_02, a[0]);
+        ew.b(di_02, "");
         return (Plugin)di_02;
     }
 
@@ -75,21 +71,21 @@ implements ec_0 {
     }
 
     public final void b(@NotNull jv_0 jv_02, @NotNull String string) {
-        if (!this.b(a[1])) {
-            this.a(a[2]);
+        if (!this.b("BungeeCord")) {
+            this.a("BungeeCord");
         }
         this.c().a(() -> ao_0.c(jv_02, string), 8L);
         if (jv_02.j()) {
             byte[] byArray = this.a(jv_02, string);
-            jv_02.a(a[3], byArray);
+            jv_02.a("BungeeCord", byArray);
         }
-        this.c().getLogger().info(a[4] + jv_02.i() + a[5]);
+        this.c().getLogger().info("Kicking " + jv_02.i() + " from ");
     }
 
     public final byte[] a(@NotNull jv_0 jv_02, @NotNull String string) {
         de_0 de_02 = er_0.a(de_0.c, this.b(), null, 2, null);
         ByteArrayDataOutput byteArrayDataOutput = ByteStreams.newDataOutput();
-        byteArrayDataOutput.writeUTF(a[6]);
+        byteArrayDataOutput.writeUTF("KickPlayerRaw");
         byteArrayDataOutput.writeUTF(jv_02.i());
         g8 g82 = de_02.a(1, 21, 5) ? g8.a : g8.c;
         byteArrayDataOutput.writeUTF(eg_0.a(string, g82));
@@ -104,7 +100,7 @@ implements ec_0 {
     }
 
     public final String b(@NotNull Object object) {
-        ew.b(object, a[7]);
+        ew.b(object, "");
         String string = ((OfflinePlayer)object).getName();
         ew.a((Object)string);
         return string;
@@ -197,13 +193,13 @@ implements ec_0 {
             String string2 = ((AsyncPlayerPreLoginEvent)object).getName();
             UUID uUID2 = ((AsyncPlayerPreLoginEvent)object).getUniqueId();
             if (uUID2 == null) {
-                throw new NullPointerException(object.getClass().getSimpleName() + a[8] + string2 + ')');
+                throw new NullPointerException(object.getClass().getSimpleName() + ".getUniqueId() == null (" + string2 + ')');
             }
             uUID = uUID2;
             InetAddress inetAddress = ((AsyncPlayerPreLoginEvent)object).getAddress();
             if (inetAddress == null) {
                 if (!bl) {
-                    this.c().getLogger().warning(object.getClass().getSimpleName() + a[9] + string2 + ')');
+                    this.c().getLogger().warning(object.getClass().getSimpleName() + ".getAddress() == null (" + string2 + ')');
                 }
                 string = null;
             } else {
@@ -275,10 +271,10 @@ implements ec_0 {
     private static final void c(jv_0 jv_02, String string) {
         if (jv_02.j()) {
             ByteArrayDataOutput byteArrayDataOutput = ByteStreams.newDataOutput();
-            byteArrayDataOutput.writeUTF(a[10]);
+            byteArrayDataOutput.writeUTF("KickPlayer");
             byteArrayDataOutput.writeUTF(jv_02.i());
             byteArrayDataOutput.writeUTF(string);
-            jv_02.a(a[11], byteArrayDataOutput.toByteArray());
+            jv_02.a("BungeeCord", byteArrayDataOutput.toByteArray());
         }
     }
 
@@ -288,7 +284,7 @@ implements ec_0 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("", 1872554281), hl.a("\ufc00\ufc37\ufc2c\ufc25\ufc27\ufc27\ufc01\ufc2d\ufc30\ufc26", -412025790), hl.a("\u1787\u17b0\u17ab\u17a2\u17a0\u17a0\u1786\u17aa\u17b7\u17a1", -1996154939), hl.a("\ub7f4\ub7c3\ub7d8\ub7d1\ub7d3\ub7d3\ub7f5\ub7d9\ub7c4\ub7d2", -1605978186), hl.a("\ubbc6\ubbe4\ubbee\ubbe6\ubbe4\ubbe3\ubbea\ubbad", 918666125), hl.a("\u35a2\u35e4\u35f0\u35ed\u35ef\u35a2\u35c0\u35f7\u35ec\u35e5\u35e7\u35e7\u35c1\u35ed\u35f0\u35e6\u35ac", -1313065598), hl.a("\u0687\u06a5\u06af\u06a7\u069c\u06a0\u06ad\u06b5\u06a9\u06be\u069e\u06ad\u06bb", -1782970676), hl.a("", -149221686), hl.a("\u0b66\u0b2f\u0b2d\u0b3c\u0b1d\u0b26\u0b21\u0b39\u0b3d\u0b2d\u0b01\u0b2c\u0b60\u0b61\u0b68\u0b75\u0b75\u0b68\u0b26\u0b3d\u0b24\u0b24\u0b68\u0b60", -1658778808), hl.a("\u5ded\u5da4\u5da6\u5db7\u5d82\u5da7\u5da7\u5db1\u5da6\u5db0\u5db0\u5deb\u5dea\u5de3\u5dfe\u5dfe\u5de3\u5dad\u5db6\u5daf\u5daf\u5de3\u5deb", -381592125), hl.a("\ufa63\ufa41\ufa4b\ufa43\ufa78\ufa44\ufa49\ufa51\ufa4d\ufa5a", -1396245976), hl.a("\u9d3a\u9d0d\u9d16\u9d1f\u9d1d\u9d1d\u9d3b\u9d17\u9d0a\u9d1c", 1122147704)};
+        a = new String[]{"", "BungeeCord", "BungeeCord", "BungeeCord", "Kicking ", " from ", "KickPlayerRaw", "", ".getUniqueId() == null (", ".getAddress() == null (", "KickPlayer", "BungeeCord"};
     }
 
     static {

@@ -27,10 +27,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class dy
+public final class dy
 implements cl_0 {
     private final di_0 b;
     private static /* synthetic */ String[] a;
@@ -46,7 +43,7 @@ implements cl_0 {
         o o2 = (o)this.b.a(o.class);
         q_0 q_02 = (q_0)this.b.a(q_0.class);
         ec_0 ec_02 = this.b.i();
-        ew.b(ec_02, a[0]);
+        ew.b(ec_02, "");
         String string = ((ao_0)ec_02).b(player);
         Serializable serializable = player.getAddress();
         String string2 = serializable != null && (serializable = ((InetSocketAddress)serializable).getAddress()) != null ? ((InetAddress)serializable).getHostAddress() : null;
@@ -89,7 +86,7 @@ implements cl_0 {
         jv_0 jv_02 = ch2.e().a(player);
         dZ dZ3 = kR.a(ch2, string, string2, a_.h, false, false, 24, null);
         if (q_02.a(4)) {
-            q_02.a((Object)(a[1] + dZ3 + a[2] + (dZ3 != null) + ')'));
+            q_02.a((Object)("Ban: " + dZ3 + " (valid: " + (dZ3 != null) + ')'));
         }
         if (dZ3 != null) {
             if (o2.a(dZ3, string3)) {
@@ -117,7 +114,7 @@ implements cl_0 {
     }
 
     private static final void b() {
-        a = new String[]{hl.a("", 492834520), hl.a("\u0ccb\u0ce8\u0ce7\u0cb3\u0ca9", 894176393), hl.a("\u92e7\u92ef\u92b1\u92a6\u92ab\u92ae\u92a3\u92fd\u92e7", -1373924665)};
+        a = new String[]{"", "Ban: ", " (valid: "};
     }
 
     static {

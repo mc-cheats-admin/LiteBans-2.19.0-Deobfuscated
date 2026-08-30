@@ -4,7 +4,7 @@ import litebans.av;
 import litebans.bj_0;
 import litebans.i2;
 
-public static class a1
+public class a1
 extends av {
     private int f;
     private bj_0 e;

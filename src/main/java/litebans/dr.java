@@ -36,10 +36,7 @@ import litebans.kI;
 import litebans.kJ;
 import litebans.kN;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class dr
+public final class dr
 extends dI
 implements iI,
 hR {
@@ -281,7 +278,7 @@ hR {
     private final synchronized void j() {
         int n = Math.min(this.t.f() - this.f(), this.t.i() - this.b()) - this.H.size();
         if (n <= 0) {
-            this.z.b("%s - Fill pool skipped, pool is at sufficient level.", new Object[]{this.e});
+            this.z.b("%s - Fill pool skipped, pool is at sufficient ", new Object[]{this.e});
         }
         for (int i = 0; i < n; ++i) {
             this.D.submit(i < n - 1 ? this.O : this.B);
@@ -371,7 +368,7 @@ hR {
         if (exception instanceof SQLException) {
             string = ((SQLException)exception).getSQLState();
         }
-        SQLTransientConnectionException sQLTransientConnectionException = new SQLTransientConnectionException(this.e + " - Connection is not available, request timed out after " + e6.d(l3) + "ms.", string, exception);
+        SQLTransientConnectionException sQLTransientConnectionException = new SQLTransientConnectionException(this.e + " - Connection is not available, request timed out after " + e6.d(l3) + "", string, exception);
         if (exception instanceof SQLException) {
             sQLTransientConnectionException.setNextException((SQLException)exception);
         }

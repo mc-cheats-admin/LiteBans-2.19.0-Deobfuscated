@@ -17,7 +17,7 @@ implements Serializable {
     private static /* synthetic */ String[] d;
 
     public k8(@NotNull String string, int n) {
-        ew.a((Object)string, d[0]);
+        ew.a((Object)string, "pattern");
         this.b = string;
         this.c = n;
     }
@@ -33,7 +33,7 @@ implements Serializable {
     }
 
     private static final void a() {
-        d = new String[]{hl.a("\u3353\u3342\u3357\u3357\u3346\u3351\u334d", -1327090909)};
+        d = new String[]{"pattern"};
     }
 }
 

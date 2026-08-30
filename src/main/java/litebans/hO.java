@@ -26,7 +26,7 @@ extends hk_0 {
         super(d82, string, di_02, Arrays.copyOf(stringArray, stringArray.length));
         this.e = di_02;
         ec_0 ec_02 = this.e.i();
-        ew.b(ec_02, d[0]);
+        ew.b(ec_02, "");
         if (((k1)ec_02).a()) {
             this.setPermissionMessage(y.b.a(am.cZ.toString()));
         }
@@ -35,12 +35,12 @@ extends hk_0 {
     @Override
     public List suggest(@NotNull jv_0 jv_02, @NotNull String[] stringArray) {
         a_0 a_02 = this.e.z();
-        ew.b(a_02, d[1]);
+        ew.b(a_02, "");
         return ((E)a_02).a(this, this.getName(), jv_02, stringArray);
     }
 
     private static final void a() {
-        d = new String[]{hl.a("", -1513808057), hl.a("", 669954740)};
+        d = new String[]{"", ""};
     }
 
     static {

@@ -20,10 +20,7 @@ import litebans.t;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class d1
+public final class d1
 implements ek_0 {
     private final di_0 d;
     private final t f;
@@ -83,7 +80,7 @@ implements ek_0 {
         new gf_0(this.d, object.i(), object.a(), object.b()).run();
         ew.a(jv_02);
         Object object2 = jv_02;
-        Object object3 = e[0];
+        Object object3 = "litebans.exempt.dupeip_join";
         boolean bl2 = false;
         jv_0 jv_03 = object2;
         boolean bl3 = false;
@@ -115,7 +112,7 @@ implements ek_0 {
     }
 
     private static final void c() {
-        e = new String[]{hl.a("\u3d02\u3d07\u3d1a\u3d0b\u3d0c\u3d0f\u3d00\u3d1d\u3d40\u3d0b\u3d16\u3d0b\u3d03\u3d1e\u3d1a\u3d40\u3d0a\u3d1b\u3d1e\u3d0b\u3d07\u3d1e\u3d31\u3d04\u3d01\u3d07\u3d00", -745259666)};
+        e = new String[]{"litebans.exempt.dupeip_join"};
     }
 
     static {

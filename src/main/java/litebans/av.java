@@ -6,7 +6,7 @@ import litebans.en_0;
 import litebans.ew_0;
 import litebans.i2;
 
-public static abstract class av
+public abstract class av
 implements en_0 {
     private final i2 d;
     private byte[] b;

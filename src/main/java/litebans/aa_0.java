@@ -47,10 +47,7 @@ import litebans.w;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.aa
- */
-public static final class aa_0 {
+public final class aa_0 {
     private static /* synthetic */ String[] a;
 
     public static final String a(@NotNull fg_0 fg_02, @NotNull jv_0 jv_02, @NotNull String[] stringArray, @NotNull String string) {
@@ -123,11 +120,11 @@ public static final class aa_0 {
             objectArray[1] = a_2;
             String string2 = string;
             if (string2 == null) {
-                string2 = a[0];
+                string2 = "";
             }
             objectArray[2] = string2;
             boolean bl = false;
-            charSequence2 = lo_0.a(objectArray, (CharSequence)a[1], null, null, 0, null, null, 62, null);
+            charSequence2 = lo_0.a(objectArray, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null);
         }
         u.a(u2, ij2, ch2, charSequence2, 0, 8, null);
     }
@@ -204,7 +201,7 @@ public static final class aa_0 {
             jv_02 = ch2.e().y();
         }
         jv_0 jv_03 = jv_02;
-        ch2.e().getLogger().info(a[2] + string + a[3] + j02.e() + a[4] + string4 + ')');
+        ch2.e().getLogger().info("Banning linked account: " + string + " (linked to " + j02.e() + " via " + string4 + ')');
         Object object = dZ3.u();
         boolean bl3 = dZ3.d();
         long l3 = dZ3.o();
@@ -260,8 +257,8 @@ public static final class aa_0 {
     }
 
     public static final CharSequence a(@NotNull ch ch2, @NotNull dZ dZ2, @Nullable iA iA2, long l3) {
-        CharSequence[] charSequenceArray = new CharSequence[]{a[5], db_0.a(dk.d, l3, false, 2, null)};
-        return kR.a(ch2, (CharSequence)bF.a((CharSequence)h1.a(kR.a(ch2, (CharSequence)am.b5, iA2, false, 2, null), charSequenceArray), (CharSequence)a[6], l3 / (long)1000), dZ2, false, 2, null);
+        CharSequence[] charSequenceArray = new CharSequence[]{"duration", db_0.a(dk.d, l3, false, 2, null)};
+        return kR.a(ch2, (CharSequence)bF.a((CharSequence)h1.a(kR.a(ch2, (CharSequence)am.b5, iA2, false, 2, null), charSequenceArray), (CharSequence)"seconds", l3 / (long)1000), dZ2, false, 2, null);
     }
 
     public static final void a(@NotNull ch ch2, @NotNull ch ch3, @NotNull dZ dZ2, long l3, long l5, long l7, @Nullable iA iA2, boolean bl) {
@@ -441,9 +438,6 @@ public static final class aa_0 {
         }
     }
 
-    /*
-     * Unable to fully structure code
-     */
     public static final void a(@NotNull fg_0 var0, @NotNull c1 var1_1, @NotNull c5 var2_2) {
         var3_3 = var1_1.h().c();
         var4_4 = var2_2.c();
@@ -507,14 +501,11 @@ public static final class aa_0 {
         return iA2;
     }
 
-    /*
-     * Unable to fully structure code
-     */
     public static final iA a(@NotNull ch var0, @NotNull String var1_1, boolean var2_2) {
         block4: {
             var3_3 = var1_1;
             if (bz.c((CharSequence)var3_3, ':', false, 2, null)) {
-                var3_3 = bz.a(var3_3, aa_0.a[7], null, 2, null);
+                var3_3 = bz.a(var3_3, "user:", null, 2, null);
             }
             var4_4 = aa_0.a(var0, var3_3);
             if (!var2_2) break block4;
@@ -547,9 +538,6 @@ public static final class aa_0 {
         return aa_0.a(ch2, string, bl);
     }
 
-    /*
-     * Unable to fully structure code
-     */
     public static final String[] a(@NotNull et var0, @NotNull String var1_1, @NotNull String[] var2_2) {
         block33: {
             block29: {
@@ -560,99 +548,99 @@ public static final class aa_0 {
                                 block27: {
                                     var3_3 = var1_1;
                                     var4_4 = var2_2.length;
-                                    var5_5 = bz.b((String)var3_3, aa_0.a[14], false, 2, null);
+                                    var5_5 = bz.b((String)var3_3, "temp", false, 2, null);
                                     if (var5_5) {
                                         var3_3 = var3_3.substring(4);
                                     }
-                                    if (var6_6 = bz.b((String)var3_3, aa_0.a[15], false, 2, null)) {
+                                    if (var6_6 = bz.b((String)var3_3, "litebans:", false, 2, null)) {
                                         var3_3 = var3_3.substring(9);
                                     }
                                     var8_7 = var3_3;
                                     switch (var8_7.hashCode()) {
                                         case -1396405339: {
-                                            if (!var8_7.equals(aa_0.a[16])) {
+                                            if (!var8_7.equals("ban-ip")) {
                                                 ** break;
                                             }
                                             break block27;
                                         }
                                         case 3641990: {
-                                            if (!var8_7.equals(aa_0.a[17])) {
+                                            if (!var8_7.equals("warn")) {
                                                 ** break;
                                             }
                                             break block28;
                                         }
                                         case 111426262: {
-                                            if (var8_7.equals(aa_0.a[18])) break;
+                                            if (var8_7.equals("unban")) break;
                                             ** break;
                                         }
                                         case -840127329: {
-                                            if (!var8_7.equals(aa_0.a[19])) {
+                                            if (!var8_7.equals("unwarn")) {
                                                 ** break;
                                             }
                                             break block29;
                                         }
                                         case 100403592: {
-                                            if (!var8_7.equals(aa_0.a[20])) {
+                                            if (!var8_7.equals("ipban")) {
                                                 ** break;
                                             }
                                             break block27;
                                         }
                                         case 93503862: {
-                                            if (!var8_7.equals(aa_0.a[21])) {
+                                            if (!var8_7.equals("banip")) {
                                                 ** break;
                                             }
                                             break block27;
                                         }
                                         case -1062781696: {
-                                            if (!var8_7.equals(aa_0.a[22])) {
+                                            if (!var8_7.equals("muteip")) {
                                                 ** break;
                                             }
                                             break block30;
                                         }
                                         case -1182108736: {
-                                            if (!var8_7.equals(aa_0.a[23])) {
+                                            if (!var8_7.equals("ipmute")) {
                                                 ** break;
                                             }
                                             break block30;
                                         }
                                         case 3363353: {
-                                            if (!var8_7.equals(aa_0.a[24])) {
+                                            if (!var8_7.equals("mute")) {
                                                 ** break;
                                             }
                                             break block31;
                                         }
                                         case -840405966: {
-                                            if (!var8_7.equals(aa_0.a[25])) {
+                                            if (!var8_7.equals("unmute")) {
                                                 ** break;
                                             }
                                             break block32;
                                         }
                                     }
-                                    v0 = aa_0.a[26];
+                                    v0 = "-U";
                                     break block33;
                                 }
-                                v0 = aa_0.a[27];
+                                v0 = "-I";
                                 break block33;
                             }
-                            v0 = aa_0.a[28];
+                            v0 = "-IM";
                             break block33;
                         }
-                        v0 = aa_0.a[29];
+                        v0 = "-M";
                         break block33;
                     }
-                    v0 = aa_0.a[30];
+                    v0 = "-MU";
                     break block33;
                 }
-                v0 = aa_0.a[31];
+                v0 = "-W";
                 break block33;
             }
-            v0 = aa_0.a[32];
+            v0 = "-WU";
             break block33;
 lbl69:
             // 11 sources
 
             if (!var6_6) {
-                v0 = aa_0.a[33];
+                v0 = "-";
             } else {
                 return var2_2;
             }
@@ -663,14 +651,14 @@ lbl69:
         }
         var8_7 = (String[])lo_0.a(var2_2, new String[var4_4 + 1], 1, 0, 0, 12, null);
         var8_7[0] = var7_8;
-        if (ew.a((Object)var7_8, (Object)aa_0.a[34])) {
+        if (ew.a((Object)var7_8, (Object)"-")) {
             return var2_2;
         }
         return var8_7;
     }
 
     private static final void a() {
-        a = new String[]{hl.a("", -1534689566), hl.a("\u16f1", -1369642994), hl.a("\uc5b2\uc591\uc59e\uc59e\uc599\uc59e\uc597\uc5d0\uc59c\uc599\uc59e\uc59b\uc595\uc594\uc5d0\uc591\uc593\uc593\uc59f\uc585\uc59e\uc584\uc5ca\uc5d0", -2128624144), hl.a("\ua370\ua378\ua33c\ua339\ua33e\ua33b\ua335\ua334\ua370\ua324\ua33f\ua370", -603348144), hl.a("\u8d25\u8d73\u8d6c\u8d64\u8d25", -1295217403), hl.a("\u065c\u064d\u064a\u0659\u064c\u0651\u0657\u0656", 1932985912), hl.a("\uea2a\uea3c\uea3a\uea36\uea37\uea3d\uea2a", -215750055), hl.a("\u55be\u55b8\u55ae\u55b9\u55f1", 789796299), hl.a("\ua33d", -2111266018), hl.a("\u6d39", 331902234), hl.a("\ua0ca", 646291689), hl.a("\ud32d", 500880142), hl.a("\u682d", -803641330), hl.a("\u4999", -435074630), hl.a("\ue4ea\ue4fb\ue4f3\ue4ee", 209642654), hl.a("\uf31b\uf31e\uf303\uf312\uf315\uf316\uf319\uf304\uf34d", 2131555191), hl.a("\ud19a\ud199\ud196\ud1d5\ud191\ud188", -96742920), hl.a("\u504d\u505b\u5048\u5054", -509587398), hl.a("\ufedb\ufec0\ufecc\ufecf\ufec0", 587333294), hl.a("\uf10a\uf111\uf108\uf11e\uf10d\uf111", 232649087), hl.a("\uc8e6\uc8ff\uc8ed\uc8ee\uc8e1", 880724111), hl.a("\u69db\u69d8\u69d7\u69d0\u69c9", -1007326791), hl.a("\u22c5\u22dd\u22dc\u22cd\u22c1\u22d8", -2127682904), hl.a("\u3c90\u3c89\u3c94\u3c8c\u3c8d\u3c9c", 970210553), hl.a("\u0815\u080d\u080c\u081d", -5699464), hl.a("\u01bc\u01a7\u01a4\u01bc\u01bd\u01ac", -1570504247), hl.a("\u8f4f\u8f37", -461402270), hl.a("\u7164\u7100", 1867739465), hl.a("\udb01\udb65\udb61", 1059773228), hl.a("\uf364\uf304", -741608631), hl.a("\u76ba\u76da\u76c2", 51345047), hl.a("\uf80e\uf874", -1839335389), hl.a("\ubc75\ubc0f\ubc0d", -1333543848), hl.a("\ud788", -670771291), hl.a("\u99df", 701995506)};
+        a = new String[]{"", "\ufeff", "Banning linked account: ", " (linked to ", " via ", "duration", "seconds", "user:", "#", "#", "#", "#", "#", "#", "temp", "litebans:", "ban-ip", "warn", "unban", "unwarn", "ipban", "banip", "muteip", "ipmute", "mute", "unmute", "-U", "-I", "-IM", "-M", "-MU", "-W", "-WU", "-", "-"};
     }
 
     static {

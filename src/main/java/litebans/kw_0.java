@@ -17,10 +17,7 @@ import litebans.i2;
 import litebans.il;
 import litebans.y_0;
 
-/*
- * Renamed from litebans.kw
- */
-public static class kw_0
+public class kw_0
 extends ZipEntry
 implements gu_0,
 il {

@@ -4,7 +4,7 @@ import litebans.di_0;
 import litebans.lb_0;
 import net.minecraft.class_3222;
 
-public static class l2
+public class l2
 extends lb_0 {
     public l2(di_0 di_02) {
         super(di_02);

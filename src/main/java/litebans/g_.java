@@ -18,7 +18,7 @@ import litebans.w;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class g_
+public final class g_
 extends fg_0 {
     private final String d;
     private final String g;
@@ -94,7 +94,7 @@ extends fg_0 {
         if (((q_0)object).a(n)) {
             Object object5 = object;
             boolean bl4 = false;
-            ((q_0)object5).a((Object)(h[0] + g_2.g + h[1] + string2 + h[2] + dZ2));
+            ((q_0)object5).a((Object)("Active mute for " + g_2.g + " on server " + string2 + ": " + dZ2));
         }
         if (dZ2 != null) {
             object = g_2;
@@ -109,7 +109,7 @@ extends fg_0 {
     }
 
     private static final void a() {
-        h = new String[]{hl.a("\u02d7\u02f5\u02e2\u02ff\u02e0\u02f3\u02b6\u02fb\u02e3\u02e2\u02f3\u02b6\u02f0\u02f9\u02e4\u02b6", 1194197654), hl.a("\u1580\u15cf\u15ce\u1580\u15d3\u15c5\u15d2\u15d6\u15c5\u15d2\u1580", 179770784), hl.a("\u50be\u50a4", -1989062524)};
+        h = new String[]{"Active mute for ", " on server ", ": "};
     }
 
     static {

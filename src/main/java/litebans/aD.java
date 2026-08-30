@@ -1,6 +1,6 @@
 package litebans;
 
-public static final class aD
+public final class aD
 extends Enum {
     public static final aD b = new aD("CONTINUE_EVICT", 0);
     public static final aD c = new aD("DO_NOT_EVICT", 1);

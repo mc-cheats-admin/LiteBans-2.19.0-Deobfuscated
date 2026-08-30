@@ -10,10 +10,7 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.aL
- */
-public static final class al_0 {
+public final class al_0 {
     private static /* synthetic */ String[] a;
 
     public static final void a(@NotNull n_0 n_02, @Nullable Object object) {
@@ -29,7 +26,7 @@ public static final class al_0 {
     }
 
     public static final boolean b(@NotNull Player player) {
-        return player.getClass().getSimpleName().length() > 8 && bz.b(player.getClass().getSimpleName(), a[0], false, 2, null);
+        return player.getClass().getSimpleName().length() > 8 && bz.b(player.getClass().getSimpleName(), "TemporaryPlayer", false, 2, null);
     }
 
     public static final boolean a(@Nullable Player player) {
@@ -46,7 +43,7 @@ public static final class al_0 {
     }
 
     private static final void a() {
-        a = new String[]{hl.a("\u70ba\u708b\u7083\u709e\u7081\u709c\u708f\u709c\u7097\u70be\u7082\u708f\u7097\u708b\u709c", 1384149230)};
+        a = new String[]{"TemporaryPlayer"};
     }
 
     static {

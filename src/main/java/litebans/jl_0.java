@@ -2,9 +2,6 @@ package litebans;
 
 import java.util.Arrays;
 
-/*
- * Renamed from litebans.jl
- */
 static class jl_0 {
     int k;
     int i;

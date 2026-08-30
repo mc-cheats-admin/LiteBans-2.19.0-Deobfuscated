@@ -25,7 +25,7 @@ import litebans.iw_0;
 import litebans.je_0;
 import litebans.kw_0;
 
-public static class k
+public class k
 extends e_0
 implements ha_0 {
     private final dd_0 x;
@@ -163,7 +163,7 @@ implements ha_0 {
                 return -1;
             }
             if (this.k.needsDictionary()) {
-                throw new ZipException("This archive needs a preset dictionary which is not supported by Commons Compress.");
+                throw new ZipException("This archive needs a preset dictionary which is not supported by Commons ");
             }
             if (n3 == -1) {
                 throw new IOException("Truncated ZIP file");

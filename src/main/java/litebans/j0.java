@@ -7,7 +7,7 @@ import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class j0 {
+public final class j0 {
     private final CharSequence g;
     private final String d;
     private final String b;
@@ -42,7 +42,7 @@ public static final class j0 {
     }
 
     public String toString() {
-        return c[0] + this.g + c[1] + this.d + c[2] + this.b + c[3] + this.f + c[4] + this.e + c[5] + this.a + ')';
+        return "DupeIPResult(prefix=" + this.g + ", name=" + this.d + ", uuid=" + this.b + ", date=" + this.f + ", ban=" + this.e + ", mute=" + this.a + ')';
     }
 
     public int hashCode() {
@@ -82,7 +82,7 @@ public static final class j0 {
     }
 
     private static final void a() {
-        c = new String[]{hl.a("\u4346\u4377\u4372\u4367\u434b\u4352\u4350\u4367\u4371\u4377\u436e\u4376\u432a\u4372\u4370\u4367\u4364\u436b\u437a\u433f", -28097790), hl.a("\ueffe\ueff2\uefbc\uefb3\uefbf\uefb7\uefef", -1435570222), hl.a("\u7ba7\u7bab\u7bfe\u7bfe\u7be2\u7bef\u7bb6", -320898165), hl.a("\u3872\u387e\u383a\u383f\u382a\u383b\u3863", -1174194082), hl.a("\uccb2\uccbe\uccfc\uccff\uccf0\ucca3", 373214366), hl.a("\uc5e2\uc5ee\uc5a3\uc5bb\uc5ba\uc5ab\uc5f3", 711378382)};
+        c = new String[]{"DupeIPResult(prefix=", ", name=", ", uuid=", ", date=", ", ban=", ", mute="};
     }
 
     static {

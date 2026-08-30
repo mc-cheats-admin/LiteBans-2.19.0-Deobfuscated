@@ -9,11 +9,8 @@ import litebans.j_0;
 import litebans.jv_0;
 import org.bukkit.entity.Player;
 
-/*
- * Renamed from litebans.K
- */
 @ai_0(a=0)
-public static class k_0
+public class k_0
 extends j_0 {
     public k_0(di_0 di_02) {
         super(di_02);

@@ -4,10 +4,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Objects;
 
-/*
- * Renamed from litebans.ay
- */
-public static class ay_0 {
+public class ay_0 {
     public static final boolean a(Collection collection, Iterator iterator) {
         Objects.requireNonNull(collection);
         Objects.requireNonNull(iterator);

@@ -23,12 +23,12 @@ import litebans.q_0;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class f4
+public final class f4
 extends fB {
     private static /* synthetic */ String[] i;
 
     public f4(@NotNull di_0 di_02) {
-        super(i[0], di_02);
+        super("dupeip", di_02);
     }
 
     /*
@@ -71,7 +71,7 @@ extends fB {
                             if (((q_0)var17_25.h().a(q_0.class)).f().O()) ** GOTO lbl-1000
                         }
                         var15_21 = var1_1;
-                        var16_23 = f4.i[1];
+                        var16_23 = "litebans.dupeip.viewip";
                         var17_26 = false;
                         var18_28 = var15_21;
                         var19_29 = false;
@@ -84,9 +84,9 @@ extends fB {
                             v0 = false;
                         }
                         var20_30 = v0;
-                        var15_21 = var14_20.f() != false ? am.cR.a(f4.i[2], (Object)var14_20.k()) : var14_20.j();
+                        var15_21 = var14_20.f() != false ? am.cR.a("num", (Object)var14_20.k()) : var14_20.j();
                         var16_24 = var20_30 != false ? (CharSequence)am.P : (CharSequence)am.G;
-                        v1 = bF.a(var16_24, (CharSequence)f4.i[3], var15_21);
+                        v1 = bF.a(var16_24, (CharSequence)"ip", var15_21);
                         v2 = var14_20.l();
                         ew.a(v2);
                         var16_24 = kR.a((ch)var12_18, v1, v2, false, 2, null);
@@ -112,7 +112,7 @@ extends fB {
     }
 
     private static final void a() {
-        i = new String[]{hl.a("\u6bdf\u6bce\u6bcb\u6bde\u6bd2\u6bcb", -1646433349), hl.a("\u937e\u937b\u9366\u9377\u9370\u9373\u937c\u9361\u933c\u9376\u9367\u9362\u9377\u937b\u9362\u933c\u9364\u937b\u9377\u9365\u937b\u9362", 1809224466), hl.a("\u37bc\u37a7\u37bf", -1429850158), hl.a("\uaba7\uabbe", -1428444210)};
+        i = new String[]{"dupeip", "litebans.dupeip.viewip", "num", "ip"};
     }
 
     static {

@@ -45,10 +45,7 @@ import org.bukkit.scheduler.BukkitScheduler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static class BukkitPlugin
+public class BukkitPlugin
 extends JavaPlugin
 implements di_0 {
     private final bd_0 d = new bd_0(this);
@@ -203,7 +200,7 @@ implements di_0 {
     @Override
     public gn_0 o() {
         gc_0 gc_02 = new gc_0(this);
-        gc_02.c(new File(this.getDataFolder(), b[0]));
+        gc_02.c(new File(this.getDataFolder(), "config.yml"));
         return gc_02;
     }
 
@@ -249,7 +246,7 @@ implements di_0 {
     public boolean onCommand(CommandSender commandSender, Command command, String string, String[] stringArray) {
         a_0 a_02 = this.z();
         if (a_02 == null || !(a_02 instanceof b_0)) {
-            this.getLogger().severe(b[1]);
+            this.getLogger().severe("No command manager found!");
             return true;
         }
         return ((b_0)a_02).onCommand(commandSender, command, string, stringArray);
@@ -278,7 +275,7 @@ implements di_0 {
     }
 
     public boolean d() {
-        return !hb_0.a(b[2]);
+        return !hb_0.a("org.bukkit.entity.Llama");
     }
 
     @Override
@@ -396,7 +393,7 @@ implements di_0 {
             if (object instanceof jv_0) {
                 return (jv_0)this.d.b.remove(((jv_0)object).i());
             }
-            throw new IllegalArgumentException(object == null ? b[3] : object.getClass().getName());
+            throw new IllegalArgumentException(object == null ? "null" : object.getClass().getName());
         }
         CommandSender commandSender = (CommandSender)object;
         return (jv_0)this.d.b.remove(commandSender.getName());
@@ -408,7 +405,7 @@ implements di_0 {
             if (object instanceof jv_0) {
                 return (jv_0)object;
             }
-            throw new IllegalArgumentException(object == null ? b[4] : object.getClass().getName());
+            throw new IllegalArgumentException(object == null ? "null" : object.getClass().getName());
         }
         Map map = this.d.b;
         CommandSender commandSender = (CommandSender)object;
@@ -426,7 +423,7 @@ implements di_0 {
     }
 
     private static final void e() {
-        b = new String[]{hl.a("\u4a67\u4a6b\u4a6a\u4a62\u4a6d\u4a63\u4a2a\u4a7d\u4a69\u4a68", 568478212), hl.a("\u92dc\u92fd\u92b2\u92f1\u92fd\u92ff\u92ff\u92f3\u92fc\u92f6\u92b2\u92ff\u92f3\u92fc\u92f3\u92f5\u92f7\u92e0\u92b2\u92f4\u92fd\u92e7\u92fc\u92f6\u92b3", -469855598), hl.a("\u7cce\u7cd3\u7cc6\u7c8f\u7cc3\u7cd4\u7cca\u7cca\u7cc8\u7cd5\u7c8f\u7cc4\u7ccf\u7cd5\u7cc8\u7cd5\u7cd8\u7c8f\u7ced\u7ccd\u7cc0\u7ccc\u7cc0", -1072792415), hl.a("\u9853\u9848\u9851\u9851", -234973123), hl.a("\uda45\uda5e\uda47\uda47", 1764022827)};
+        b = new String[]{"config.yml", "No command manager found!", "org.bukkit.entity.Llama", "null", "null"};
     }
 
     static {

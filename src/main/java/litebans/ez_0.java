@@ -3,10 +3,7 @@ package litebans;
 import litebans.bX;
 import litebans.ew;
 
-/*
- * Renamed from litebans.ez
- */
-public static final class ez_0
+public final class ez_0
 implements Comparable {
     public static final bX b;
     private final short c;

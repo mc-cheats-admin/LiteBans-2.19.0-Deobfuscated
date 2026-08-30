@@ -25,11 +25,7 @@ import litebans.jk_0;
 import litebans.k;
 import litebans.l;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.eP
- */
-public static class ep_0
+public class ep_0
 implements dm_0 {
     private static final int n;
     private static final int b;
@@ -85,10 +81,10 @@ implements dm_0 {
     @Override
     public e_0 a(String string, InputStream inputStream, String string2) {
         if (string == null) {
-            throw new IllegalArgumentException("Archivername must not be null.");
+            throw new IllegalArgumentException("Archivername must not be ");
         }
         if (inputStream == null) {
-            throw new IllegalArgumentException("InputStream must not be null.");
+            throw new IllegalArgumentException("InputStream must not be ");
         }
         if ("ar".equalsIgnoreCase(string)) {
             return new f(inputStream);
@@ -136,7 +132,7 @@ implements dm_0 {
         if (dm_02 != null) {
             return dm_02.a(string, inputStream, string2);
         }
-        throw new hc_0("Archiver: " + string + " not found.");
+        throw new hc_0("Archiver: " + string + " not ");
     }
 
     public SortedMap b() {

@@ -4,7 +4,7 @@ import java.nio.ByteBuffer;
 import java.util.UUID;
 import org.jetbrains.annotations.NotNull;
 
-public static final class i0 {
+public final class i0 {
     public static final byte[] a(@NotNull UUID uUID) {
         return ByteBuffer.wrap(new byte[16]).putLong(uUID.getMostSignificantBits()).putLong(uUID.getLeastSignificantBits()).array();
     }

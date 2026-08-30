@@ -7,9 +7,6 @@ import java.lang.reflect.Type;
 import litebans.bn_0;
 import litebans.ie_0;
 
-/*
- * Renamed from litebans.cw
- */
 static class cw_0
 implements JsonSerializer {
     final /* synthetic */ bn_0 a;

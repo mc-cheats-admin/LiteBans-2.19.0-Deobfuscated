@@ -10,7 +10,7 @@ import litebans.dd_0;
 import litebans.e_0;
 import litebans.je_0;
 
-public static class h
+public class h
 extends e_0
 implements d4 {
     private boolean J = false;

@@ -2,7 +2,7 @@ package litebans;
 
 import litebans.bs;
 
-public static final class bN
+public final class bN
 extends bs {
 }
 

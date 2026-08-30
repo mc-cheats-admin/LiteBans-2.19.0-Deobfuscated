@@ -4,9 +4,6 @@ import java.util.Arrays;
 import litebans.dd_0;
 import litebans.hp_0;
 
-/*
- * Renamed from litebans.cx
- */
 static class cx_0 {
     public static final int b(byte[] byArray) {
         int n = 0;

@@ -36,7 +36,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 @gy_0
-public static abstract class fS
+public abstract class fS
 extends fg_0 {
     private final String e;
     private String j;
@@ -62,7 +62,7 @@ extends fg_0 {
 
     public /* synthetic */ fS(di_0 di_02, String string, String string2, int n, long l3, int n2, aJ aJ2) {
         if ((n2 & 4) != 0) {
-            string2 = l[0];
+            string2 = "";
         }
         if ((n2 & 8) != 0) {
             n = 4096;
@@ -125,7 +125,7 @@ extends fg_0 {
     }
 
     public void a(@NotNull jv_0 jv_02) {
-        fo_0.a(fg_0.a, jv_02, bF.a((CharSequence)am.bo.a(l[1], (Object)this.g()), (CharSequence)l[2], this.f()), null, 4, null);
+        fo_0.a(fg_0.a, jv_02, bF.a((CharSequence)am.bo.a("bans", (Object)this.g()), (CharSequence)"ipbans", this.f()), null, 4, null);
     }
 
     public abstract void a(@NotNull String var1, @NotNull Connection var2, @NotNull ch var3, boolean var4);
@@ -139,7 +139,7 @@ extends fg_0 {
         String string2;
         String string3;
         if (string == null || bz.a((CharSequence)string, '#', false, 2, null)) {
-            return l[3];
+            return "#";
         }
         String string4 = string3 = (String)this.a().get(string);
         if (string4 != null) {
@@ -151,7 +151,7 @@ extends fg_0 {
         if (bl2) {
             cM cM2 = bK.c.a(string);
             if (cM2 == null) {
-                return l[4];
+                return "#";
             }
             string2 = String.valueOf(cM2.a());
         } else {
@@ -165,7 +165,7 @@ extends fg_0 {
     public String a(@NotNull UUID uUID) {
         String string = bK.c.f(uUID.toString());
         if (string == null) {
-            string = l[5];
+            string = "#";
         }
         return string;
     }
@@ -186,7 +186,7 @@ extends fg_0 {
                 }
             }
         } else {
-            this.h().getLogger().warning(l[6] + string);
+            this.h().getLogger().warning("Ignoring duplicate ban for " + string);
         }
     }
 
@@ -201,7 +201,7 @@ extends fg_0 {
         if ((object2 = uUID2) == null || (object2 = ((UUID)object2).toString()) == null) {
             object2 = object = this.b(string3);
         }
-        if (string4 == null && bz.b((String)object3, l[7], false, 2, null)) {
+        if (string4 == null && bz.b((String)object3, "#", false, 2, null)) {
             return;
         }
         fg_0 fg_02 = this;
@@ -224,19 +224,19 @@ extends fg_0 {
                 }
             }
         } else {
-            this.h().getLogger().warning(l[8] + a_2 + l[9] + string + l[10] + string4 + ')');
+            this.h().getLogger().warning("Ignoring duplicate " + a_2 + " for " + string + " (ip=" + string4 + ')');
         }
         if (string != null && object3 != null) {
-            new gf_0(this.h(), string, (String)object3, l[11]).run();
+            new gf_0(this.h(), string, (String)object3, "#").run();
         }
         if (string3 != null && object != null) {
-            new gf_0(this.h(), string3, (String)object, l[12]).run();
+            new gf_0(this.h(), string3, (String)object, "#").run();
         }
     }
 
     public static /* synthetic */ void a(fS fS2, ch ch2, String string, String string2, long l3, long l5, String string3, UUID uUID, UUID uUID2, String string4, AtomicLong atomicLong, a_ a_2, int n, Object object) {
         if (object != null) {
-            throw new UnsupportedOperationException(l[13]);
+            throw new UnsupportedOperationException("");
         }
         if ((n & 0x40) != 0) {
             uUID = null;
@@ -274,7 +274,7 @@ extends fg_0 {
     }
 
     private static final void b() {
-        l = new String[]{hl.a("", 1747308195), hl.a("\u5126\u5125\u512a\u5137", 1307791684), hl.a("\u63df\u63c6\u63d4\u63d7\u63d8\u63c5", 790193078), hl.a("\u2109", -371777238), hl.a("\ud021", 1844760578), hl.a("\ub0da", -763907847), hl.a("\ucf95\ucfbb\ucfb2\ucfb3\ucfae\ucfb5\ucfb2\ucfbb\ucffc\ucfb8\ucfa9\ucfac\ucfb0\ucfb5\ucfbf\ucfbd\ucfa8\ucfb9\ucffc\ucfbe\ucfbd\ucfb2\ucffc\ucfba\ucfb3\ucfae\ucffc", 1863503836), hl.a("\uee6f", -211685812), hl.a("\ub1d2\ub1fc\ub1f5\ub1f4\ub1e9\ub1f2\ub1f5\ub1fc\ub1bb\ub1ff\ub1ee\ub1eb\ub1f7\ub1f2\ub1f8\ub1fa\ub1ef\ub1fe\ub1bb", 1053995419), hl.a("\u87b7\u87f1\u87f8\u87e5\u87b7", 695043991), hl.a("\u7c27\u7c2f\u7c6e\u7c77\u7c3a", 1374321671), hl.a("\u5f67", -1793761468), hl.a("\u3389", -205376598), hl.a("", -1570423818)};
+        l = new String[]{"", "bans", "ipbans", "#", "#", "#", "Ignoring duplicate ban for ", "#", "Ignoring duplicate ", " for ", " (ip=", "#", "#", ""};
     }
 
     static {

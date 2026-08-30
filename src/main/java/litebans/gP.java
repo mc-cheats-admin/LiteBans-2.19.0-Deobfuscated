@@ -17,7 +17,7 @@ import litebans.v;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class gP
+public final class gP
 extends fg_0 {
     private final dZ f;
     private final CharSequence d;
@@ -61,12 +61,12 @@ extends fg_0 {
                 boolean bl2 = false;
                 fg_0 fg_03 = fg_02;
                 boolean bl3 = false;
-                object = bF.a(ch2, gP2.f, gP2.d(), (CharSequence)bF.a((CharSequence)am.bP.a(e[0], (Object)(((q_0)fg_03.h().a(q_0.class)).f().bh() ? gP2.d().g() : gP2.d().i())), (CharSequence)e[1], gP2.d), 0L, 8, null);
+                object = bF.a(ch2, gP2.f, gP2.d(), (CharSequence)bF.a((CharSequence)am.bP.a("mutedPlayer", (Object)(((q_0)fg_03.h().a(q_0.class)).f().bh() ? gP2.d().g() : gP2.d().i())), (CharSequence)"message", gP2.d), 0L, 8, null);
                 fg_0 fg_04 = gP2;
                 boolean bl4 = false;
                 o o2 = (o)fg_04.h().a(o.class);
                 bl2 = false;
-                o.a(o2, ch2, (CharSequence)object, e[2], a_.j, gP2.f.j(), false, false, null, 112, null);
+                o.a(o2, ch2, (CharSequence)object, "mute", a_.j, gP2.f.j(), false, false, null, 112, null);
                 aa_0.a(ch2, ij.q, (CharSequence)object, null, null, 12, null);
             }
         }
@@ -74,7 +74,7 @@ extends fg_0 {
     }
 
     private static final void a() {
-        e = new String[]{hl.a("\u1c04\u1c1c\u1c1d\u1c0c\u1c0d\u1c39\u1c05\u1c08\u1c10\u1c0c\u1c1b", -815850391), hl.a("\ubfaa\ubfa2\ubfb4\ubfb4\ubfa6\ubfa0\ubfa2", 1540276167), hl.a("\uaa5c\uaa44\uaa45\uaa54", -1130649039)};
+        e = new String[]{"mutedPlayer", "message", "mute"};
     }
 
     static {

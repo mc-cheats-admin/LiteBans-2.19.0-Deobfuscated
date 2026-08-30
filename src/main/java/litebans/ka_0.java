@@ -4,10 +4,7 @@ import java.awt.Color;
 import litebans.ae;
 import litebans.gq;
 
-/*
- * Renamed from litebans.kA
- */
-public static final class ka_0
+public final class ka_0
 implements Cloneable {
     private gq f;
     private Color g;

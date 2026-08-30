@@ -7,7 +7,7 @@ import litebans.g2;
 import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 
-public static final class hf {
+public final class hf {
     private static /* synthetic */ String[] a;
 
     private hf() {
@@ -26,7 +26,7 @@ public static final class hf {
         if (di_02 != null) {
             return di_02;
         }
-        ew.e(a[0]);
+        ew.e("");
         return null;
     }
 
@@ -39,7 +39,7 @@ public static final class hf {
     }
 
     private static final void b() {
-        a = new String[]{hl.a("", -60353703)};
+        a = new String[]{""};
     }
 
     static {

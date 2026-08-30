@@ -2,10 +2,7 @@ package litebans;
 
 import litebans.hl;
 
-/*
- * Renamed from litebans.lD
- */
-public static class ld_0 {
+public class ld_0 {
     public final String b;
     public final byte[] a;
     private static /* synthetic */ String[] c;
@@ -16,12 +13,12 @@ public static class ld_0 {
     }
 
     public ld_0() {
-        this.b = c[0];
+        this.b = "";
         this.a = new byte[0];
     }
 
     private static final void yYR() {
-        c = new String[]{hl.a("", 1176966387)};
+        c = new String[]{""};
     }
 
     static {

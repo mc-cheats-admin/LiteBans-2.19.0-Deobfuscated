@@ -1,6 +1,6 @@
 package litebans;
 
-public static interface jo {
+public interface jo {
     public long c();
 
     public void d(long var1);

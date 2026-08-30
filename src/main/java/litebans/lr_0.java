@@ -7,10 +7,7 @@ import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.lr
- */
-public static final class lr_0 {
+public final class lr_0 {
     private final cp_0 c;
     private final Object d;
     private String a;
@@ -42,7 +39,7 @@ public static final class lr_0 {
     }
 
     public String toString() {
-        return b[0] + this.c + b[1] + this.d + b[2] + this.a + ')';
+        return "FabricPreLoginEvent(data=" + this.c + ", login=" + this.d + ", cancelReason=" + this.a + ')';
     }
 
     public int hashCode() {
@@ -70,7 +67,7 @@ public static final class lr_0 {
     }
 
     private static final void b() {
-        b = new String[]{hl.a("\u641c\u643b\u6438\u6428\u6433\u6439\u640a\u6428\u643f\u6416\u6435\u643d\u6433\u6434\u641f\u642c\u643f\u6434\u642e\u6472\u643e\u643b\u642e\u643b\u6467", 589063258), hl.a("\ud938\ud934\ud978\ud97b\ud973\ud97d\ud97a\ud929", 1950406932), hl.a("\u64c1\u64cd\u648e\u648c\u6483\u648e\u6488\u6481\u64bf\u6488\u648c\u649e\u6482\u6483\u64d0", 643392749)};
+        b = new String[]{"FabricPreLoginEvent(data=", ", login=", ", cancelReason="};
     }
 
     static {

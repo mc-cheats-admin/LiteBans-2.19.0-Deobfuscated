@@ -25,7 +25,7 @@ import net.minecrell.serverlistplus.core.plugin.ServerListPlusPlugin;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class Z
+public final class Z
 implements BanProvider {
     private final di_0 a;
     private final ThreadLocal c;
@@ -107,7 +107,7 @@ implements BanProvider {
         Object object = dZ2;
         if (object == null || (object = ((dZ)object).b()) == null) {
             dZ dZ3 = this.a(playerIdentity.getUuid());
-            object = dZ3 != null ? dZ3.b() : (CharSequence)d[0];
+            object = dZ3 != null ? dZ3.b() : (CharSequence)"null";
         }
         return object.toString();
     }
@@ -155,19 +155,19 @@ implements BanProvider {
     }
 
     public final void a(@Nullable Object object) {
-        ew.b(object, d[1]);
+        ew.b(object, "");
         ServerListPlusPlugin serverListPlusPlugin = (ServerListPlusPlugin)object;
         ServerListPlusCore serverListPlusCore = serverListPlusPlugin.getCore();
         if (serverListPlusCore == null) {
-            throw new NullPointerException(d[2]);
+            throw new NullPointerException("core");
         }
         ServerListPlusCore serverListPlusCore2 = serverListPlusCore;
         serverListPlusCore2.setBanProvider((BanProvider)this);
-        this.a.getLogger().info(d[3]);
+        this.a.getLogger().info("Registered as ServerListPlus ban ");
     }
 
     private static final void a() {
-        d = new String[]{hl.a("\u9aae\u9ab5\u9aac\u9aac", 272014016), hl.a("", -1079278577), hl.a("\u1484\u1488\u1495\u1482", -1974201113), hl.a("\u6794\u67a3\u67a1\u67af\u67b5\u67b2\u67a3\u67b4\u67a3\u67a2\u67e6\u67a7\u67b5\u67e6\u6795\u67a3\u67b4\u67b0\u67a3\u67b4\u678a\u67af\u67b5\u67b2\u6796\u67aa\u67b3\u67b5\u67e6\u67a4\u67a7\u67a8\u67e6\u67b6\u67b4\u67a9\u67b0\u67af\u67a2\u67a3\u67b4\u67e8", -1613338682)};
+        d = new String[]{"null", "", "core", "Registered as ServerListPlus ban provider."};
     }
 
     static {

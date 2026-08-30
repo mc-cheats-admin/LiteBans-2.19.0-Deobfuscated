@@ -7,11 +7,7 @@ import litebans.fE;
 import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- * Renamed from litebans.fb
- */
-public static final class fb_0
+public final class fb_0
 extends fE {
     private static /* synthetic */ String[] j;
 
@@ -36,11 +32,11 @@ extends fE {
 
     @Override
     public String getName() {
-        return j[0];
+        return "checkwarn";
     }
 
     private static final void a() {
-        j = new String[]{hl.a("\udd1b\udd10\udd1d\udd1b\udd13\udd0f\udd19\udd0a\udd16", -292496008)};
+        j = new String[]{"checkwarn"};
     }
 
     static {

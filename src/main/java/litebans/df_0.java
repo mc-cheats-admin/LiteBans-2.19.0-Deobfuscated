@@ -8,10 +8,7 @@ import litebans.jR;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Renamed from litebans.df
- */
-public static final class df_0 {
+public final class df_0 {
     private df_0() {
     }
 

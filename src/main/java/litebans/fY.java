@@ -26,12 +26,12 @@ import litebans.q_0;
 import litebans.w;
 import org.jetbrains.annotations.NotNull;
 
-public static final class fY
+public final class fY
 extends fB {
     private static /* synthetic */ String[] i;
 
     public fY(@NotNull di_0 di_02) {
-        super(i[0], di_02);
+        super("geoip", di_02);
     }
 
     /*
@@ -164,17 +164,17 @@ extends fB {
         CharSequence[] charSequenceArray = this;
         boolean bl = false;
         object2 = ((q_0)charSequenceArray.h().a(q_0.class)).b((String)object);
-        CharSequence charSequence3 = ew.a((Object)(charSequenceArray = object2), (Object)i[1]) ? (CharSequence)am.ck : (ew.a((Object)charSequenceArray, (Object)i[2]) ? (CharSequence)am.da : (CharSequence)charSequence);
-        charSequenceArray = new CharSequence[]{i[3], object3};
+        CharSequence charSequence3 = ew.a((Object)(charSequenceArray = object2), (Object)"geoip.unavailable") ? (CharSequence)am.ck : (ew.a((Object)charSequenceArray, (Object)"geoip.error") ? (CharSequence)am.da : (CharSequence)charSequence);
+        charSequenceArray = new CharSequence[]{"target", object3};
         CharSequence charSequence4 = h1.a(charSequence3, charSequenceArray);
-        charSequenceArray = new CharSequence[]{i[4], object2};
+        charSequenceArray = new CharSequence[]{"result", object2};
         charSequence = h1.a(charSequence4, charSequenceArray);
         fg_0.a.a(charSequence);
         throw new as();
     }
 
     private static final void a() {
-        i = new String[]{hl.a("\ub46e\ub46c\ub466\ub460\ub479", 2020586505), hl.a("\uf4ee\uf4ec\uf4e6\uf4e0\uf4f9\uf4a7\uf4fc\uf4e7\uf4e8\uf4ff\uf4e8\uf4e0\uf4e5\uf4e8\uf4eb\uf4e5\uf4ec", 1373631625), hl.a("\u8bda\u8bd8\u8bd2\u8bd4\u8bcd\u8b93\u8bd8\u8bcf\u8bcf\u8bd2\u8bcf", 138972093), hl.a("\u7314\u7301\u7312\u7307\u7305\u7314", -289180832), hl.a("\uef7f\uef68\uef7e\uef78\uef61\uef79", -353112307)};
+        i = new String[]{"geoip", "geoip.unavailable", "geoip.error", "target", "result"};
     }
 
     static {

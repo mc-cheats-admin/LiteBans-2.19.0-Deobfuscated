@@ -26,7 +26,7 @@ import litebans.c2;
 import litebans.gi;
 import litebans.lJ;
 
-public static final class g4
+public final class g4
 extends gi
 implements Wrapper,
 AutoCloseable,

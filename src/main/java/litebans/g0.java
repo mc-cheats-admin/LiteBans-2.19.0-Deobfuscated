@@ -1,6 +1,6 @@
 package litebans;
 
-public static interface g0 {
+public interface g0 {
     public static final int f;
     public static final int c;
     public static final int e;

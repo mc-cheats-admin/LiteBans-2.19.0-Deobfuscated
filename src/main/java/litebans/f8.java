@@ -24,7 +24,7 @@ import litebans.w;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class f8
+public final class f8
 extends fg_0 {
     public static final eO e;
     private ConcurrentHashMap d = new ConcurrentHashMap();
@@ -67,7 +67,7 @@ extends fg_0 {
         if (((q_0)object3).a(n)) {
             Object object4 = object3;
             bl2 = false;
-            ((q_0)object4).a((Object)(f[1] + jv_02.i() + f[2] + object2));
+            ((q_0)object4).a((Object)("[+] Mute for " + jv_02.i() + " is " + object2));
         }
         if (object2 == null) {
             return;
@@ -125,8 +125,8 @@ extends fg_0 {
 
     private final String a(String string) {
         CharSequence charSequence = string;
-        hN hN2 = new hN(f[3]);
-        String string2 = f[4];
+        hN hN2 = new hN("^/[^ ]+:");
+        String string2 = "/";
         return hN2.a(charSequence, string2);
     }
 
@@ -163,7 +163,7 @@ extends fg_0 {
     }
 
     private static final void a() {
-        f = new String[]{hl.a("\uc6ce\uc6df\uc6c9\uc6ce", 1867237050), hl.a("\u062c\u065c\u062a\u0657\u063a\u0602\u0603\u0612\u0657\u0611\u0618\u0605\u0657", -278198665), hl.a("\u50ec\u50a5\u50bf\u50ec", -355446580), hl.a("\u6772\u6703\u6777\u6772\u670c\u6771\u6707\u6716", 1709008684), hl.a("\u4d4b", -1481093788)};
+        f = new String[]{"test", "[+] Mute for ", " is ", "^/[^ ]+:", "/"};
     }
 }
 

@@ -6,7 +6,7 @@ import litebans.c_0;
 import litebans.ew;
 import org.jetbrains.annotations.Nullable;
 
-public static final class aK {
+public final class aK {
     private final int a;
     private String c;
     private String b;

@@ -10,7 +10,7 @@ import litebans.ll;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class eM {
+public final class eM {
     private final String c;
     private final a_ b;
     private final Map a;
@@ -57,7 +57,7 @@ public static final class eM {
     }
 
     public String toString() {
-        return e[0] + this.c + e[1] + this.b + e[2] + this.a + e[3] + this.d + e[4] + this.g + e[5] + this.f + ')';
+        return "TemplateGroup(name=" + this.c + ", type=" + this.b + ", weights=" + this.a + ", templates=" + this.d + ", ladder=" + this.g + ", ladderExpiry=" + this.f + ')';
     }
 
     public int hashCode() {
@@ -97,7 +97,7 @@ public static final class eM {
     }
 
     private static final void g() {
-        e = new String[]{hl.a("\u752d\u751c\u7514\u7509\u7515\u7518\u750d\u751c\u753e\u750b\u7516\u750c\u7509\u7551\u7517\u7518\u7514\u751c\u7544", -770345607), hl.a("\u9668\u9664\u9630\u963d\u9634\u9621\u9679", -1903061436), hl.a("\uaa7c\uaa70\uaa27\uaa35\uaa39\uaa37\uaa38\uaa24\uaa23\uaa6d", 598583888), hl.a("\ue5f8\ue5f4\ue5a0\ue5b1\ue5b9\ue5a4\ue5b8\ue5b5\ue5a0\ue5b1\ue5a7\ue5e9", 741664212), hl.a("\u63e5\u63e9\u63a5\u63a8\u63ad\u63ad\u63ac\u63bb\u63f4", -1501142071), hl.a("\u682e\u6822\u686e\u6863\u6866\u6866\u6867\u6870\u6847\u687a\u6872\u686b\u6870\u687b\u683f", 390686722)};
+        e = new String[]{"TemplateGroup(name=", ", type=", ", weights=", ", templates=", ", ladder=", ", ladderExpiry="};
     }
 
     static {

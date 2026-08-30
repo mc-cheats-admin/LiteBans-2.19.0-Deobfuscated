@@ -6,7 +6,7 @@ import litebans.cy;
 import litebans.dZ;
 import litebans.hj_0;
 
-public static final class gD
+public final class gD
 implements Comparator {
     final /* synthetic */ dZ a;
 

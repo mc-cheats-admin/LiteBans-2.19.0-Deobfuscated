@@ -8,11 +8,8 @@ import litebans.hk_0;
 import net.md_5.bungee.api.plugin.Command;
 import net.md_5.bungee.api.plugin.Plugin;
 
-/*
- * Renamed from litebans.D
- */
 @ai_0(a=1)
-public static abstract class d_0
+public abstract class d_0
 extends a_0 {
     public d_0(di_0 di_02) {
         super(di_02);

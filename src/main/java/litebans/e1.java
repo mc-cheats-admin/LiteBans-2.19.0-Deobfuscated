@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 @ai_0(a=0)
-public static final class e1 {
+public final class e1 {
     private final ec_0 b;
     private final eE c;
     private final eE a;
@@ -58,7 +58,7 @@ public static final class e1 {
         e1 e12 = this;
         boolean bl = false;
         ec_0 ec_02 = e12.a().c().i();
-        ew.b(ec_02, d[0]);
+        ew.b(ec_02, "");
         ao_0 ao_02 = (ao_0)ec_02;
         Object object = this.c();
         if (!(object instanceof Permission)) return false;
@@ -75,7 +75,7 @@ public static final class e1 {
         }
         e12 = offlinePlayer;
         try {
-            object = ew.a((Object)string4, (Object)d[1]) ? null : string4;
+            object = ew.a((Object)string4, (Object)"default") ? null : string4;
             if (!(stringArray.length == 0) && permission2.hasGroupSupport()) {
                 objectArray = permission2.getPlayerGroups((String)object, (OfflinePlayer)e12);
                 for (String string5 : stringArray) {
@@ -107,7 +107,7 @@ public static final class e1 {
             return false;
         }
         Permission permission2 = permission;
-        ew.b(object, d[2]);
+        ew.b(object, "");
         return permission2.playerHas(string2, (OfflinePlayer)object, string);
     }
 
@@ -120,33 +120,33 @@ public static final class e1 {
 
     public final String a(@Nullable Object object) {
         if (object == null) {
-            return d[3];
+            return "";
         }
         ec_0 ec_02 = this.b;
-        ew.b(ec_02, d[4]);
+        ew.b(ec_02, "");
         ao_0 ao_02 = (ao_0)ec_02;
         Object object2 = this.c();
         Permission permission = object2 instanceof Permission ? (Permission)object2 : null;
         if (permission == null) {
-            return d[5];
+            return "";
         }
         Permission permission2 = permission;
         Object object3 = this.b();
         Chat chat = object3 instanceof Chat ? (Chat)object3 : null;
         if (chat == null) {
-            return d[6];
+            return "";
         }
         Chat chat2 = chat;
         if (object instanceof UUID) {
             Object object4 = ao_02.a((UUID)object);
             OfflinePlayer offlinePlayer = object4 instanceof OfflinePlayer ? (OfflinePlayer)object4 : null;
             if (offlinePlayer == null) {
-                return d[7];
+                return "";
             }
             object2 = offlinePlayer;
             String string = chat2.getPlayerPrefix(null, (OfflinePlayer)object2);
             if (string == null) {
-                string = d[8];
+                string = "";
             }
             return string;
         }
@@ -159,33 +159,33 @@ public static final class e1 {
 
     public final String b(@Nullable Object object) {
         if (object == null) {
-            return d[9];
+            return "";
         }
         ec_0 ec_02 = this.b;
-        ew.b(ec_02, d[10]);
+        ew.b(ec_02, "");
         ao_0 ao_02 = (ao_0)ec_02;
         Object object2 = this.c();
         Permission permission = object2 instanceof Permission ? (Permission)object2 : null;
         if (permission == null) {
-            return d[11];
+            return "";
         }
         Permission permission2 = permission;
         Object object3 = this.b();
         Chat chat = object3 instanceof Chat ? (Chat)object3 : null;
         if (chat == null) {
-            return d[12];
+            return "";
         }
         Chat chat2 = chat;
         if (object instanceof UUID) {
             Object object4 = ao_02.a((UUID)object);
             OfflinePlayer offlinePlayer = object4 instanceof OfflinePlayer ? (OfflinePlayer)object4 : null;
             if (offlinePlayer == null) {
-                return d[13];
+                return "";
             }
             object2 = offlinePlayer;
             String string = chat2.getPlayerSuffix(null, (OfflinePlayer)object2);
             if (string == null) {
-                string = d[14];
+                string = "";
             }
             return string;
         }
@@ -198,7 +198,7 @@ public static final class e1 {
 
     public final Object a(@NotNull String string) {
         ec_0 ec_02 = this.b;
-        ew.b(ec_02, d[15]);
+        ew.b(ec_02, "");
         ao_0 ao_02 = (ao_0)ec_02;
         try {
             e1 e12 = this;
@@ -216,12 +216,12 @@ public static final class e1 {
             String string2;
             String string3 = illegalStateException.getMessage();
             if (string3 == null) {
-                string3 = d[16];
+                string3 = "";
             }
-            if (bz.a((CharSequence)(string2 = string3), (CharSequence)d[17], false, 2, null)) {
+            if (bz.a((CharSequence)(string2 = string3), (CharSequence)"zip file", false, 2, null)) {
                 e1 e13 = this;
                 boolean bl = false;
-                e13.a().c().getLogger().warning(d[18] + string);
+                e13.a().c().getLogger().warning("Zip file was closed during access: " + string);
                 return null;
             }
             throw illegalStateException;
@@ -230,15 +230,15 @@ public static final class e1 {
     }
 
     private static final Object b(e1 e12) {
-        return e12.a(d[19]);
+        return e12.a("net.milkbowl.vault.permission.Permission");
     }
 
     private static final Object a(e1 e12) {
-        return e12.a(d[20]);
+        return e12.a("net.milkbowl.vault.chat.Chat");
     }
 
     private static final void d() {
-        d = new String[]{hl.a("", 679335416), hl.a("\uebc7\uebc6\uebc5\uebc2\uebd6\uebcf\uebd7", 1253632931), hl.a("", -2142591719), hl.a("", 1103385426), hl.a("", -994294914), hl.a("", -441578530), hl.a("", -1752312970), hl.a("", 1364113888), hl.a("", 2052464785), hl.a("", 925738509), hl.a("", 187922205), hl.a("", 180262873), hl.a("", -916633865), hl.a("", -1176268446), hl.a("", -1435780431), hl.a("", 1934567870), hl.a("", 1333648856), hl.a("\ua41d\ua40e\ua417\ua447\ua401\ua40e\ua40b\ua402", 748004455), hl.a("\u285a\u2869\u2870\u2820\u2866\u2869\u286c\u2865\u2820\u2877\u2861\u2873\u2820\u2863\u286c\u286f\u2873\u2865\u2864\u2820\u2864\u2875\u2872\u2869\u286e\u2867\u2820\u2861\u2863\u2863\u2865\u2873\u2873\u283a\u2820", 1423910912), hl.a("\u07e0\u07eb\u07fa\u07a0\u07e3\u07e7\u07e2\u07e5\u07ec\u07e1\u07f9\u07e2\u07a0\u07f8\u07ef\u07fb\u07e2\u07fa\u07a0\u07fe\u07eb\u07fc\u07e3\u07e7\u07fd\u07fd\u07e7\u07e1\u07e0\u07a0\u07de\u07eb\u07fc\u07e3\u07e7\u07fd\u07fd\u07e7\u07e1\u07e0", -823523442), hl.a("\u43f2\u43f9\u43e8\u43b2\u43f1\u43f5\u43f0\u43f7\u43fe\u43f3\u43eb\u43f0\u43b2\u43ea\u43fd\u43e9\u43f0\u43e8\u43b2\u43ff\u43f4\u43fd\u43e8\u43b2\u43df\u43f4\u43fd\u43e8", 2053391260)};
+        d = new String[]{"", "default", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "zip file", "Zip file was closed during access: ", "net.milkbowl.vault.permission.Permission", "net.milkbowl.vault.chat.Chat"};
     }
 
     static {

@@ -4,7 +4,7 @@ import java.awt.Color;
 import litebans.gq;
 import litebans.ka_0;
 
-public static final class ae {
+public final class ae {
     private gq e;
     private Color c;
     private String f;

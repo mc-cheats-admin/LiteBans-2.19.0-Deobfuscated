@@ -5,7 +5,7 @@ import litebans.hl;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public static final class jP {
+public final class jP {
     private final String c;
     private final String e;
     private final String d;
@@ -74,7 +74,7 @@ public static final class jP {
     }
 
     private static final void a() {
-        b = new String[]{hl.a("\u8ee3\u8ea7\u8eac\u8ebf", -1412133171), hl.a("\ud6dd\ud699\ud692\ud681", 2091243251), hl.a("\ueb6f\ueb2b\ueb20\ueb33", -14423231)};
+        b = new String[]{".jar", ".jar", ".jar"};
     }
 
     static {

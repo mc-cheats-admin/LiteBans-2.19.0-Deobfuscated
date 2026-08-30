@@ -6,7 +6,7 @@ import java.sql.Statement;
 import litebans.c2;
 import litebans.lJ;
 
-public static abstract class gi
+public abstract class gi
 implements ResultSet {
     protected final c2 c;
     protected final lJ a;

@@ -12,10 +12,7 @@ import litebans.q_0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/*
- * Duplicate member names - consider using --renamedupmembers true
- */
-public static final class v
+public final class v
 extends n_0 {
     private final eE c = bN.a(() -> v.a(this));
     private final Set b = Collections.newSetFromMap(new ConcurrentHashMap());
@@ -59,7 +56,7 @@ extends n_0 {
         if (q_02.a(n)) {
             q_0 q_03 = q_02;
             boolean bl3 = false;
-            q_03.a((Object)(d[0] + string));
+            q_03.a((Object)("Throttled! " + string));
         }
         return bl;
     }
@@ -79,7 +76,7 @@ extends n_0 {
     }
 
     private static final void d() {
-        d = new String[]{hl.a("\u792a\u7916\u790c\u7911\u790a\u790a\u7912\u791b\u791a\u795f\u795e", -628196994)};
+        d = new String[]{"Throttled! "};
     }
 
     static {

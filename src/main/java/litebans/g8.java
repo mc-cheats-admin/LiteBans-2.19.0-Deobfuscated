@@ -2,7 +2,7 @@ package litebans;
 
 import litebans.hl;
 
-public static final class g8
+public final class g8
 extends Enum {
     public static final g8 c;
     public static final g8 a;
@@ -32,13 +32,13 @@ extends Enum {
 
     static {
         g8.b();
-        c = new g8(d[0], 0);
-        a = new g8(d[1], 1);
+        c = new g8("V1_16", 0);
+        a = new g8("V1_21_5", 1);
         b = g8.a();
     }
 
     private static final void b() {
-        d = new String[]{hl.a("\u19e3\u1984\u19ea\u1984\u1983", -869525067), hl.a("\u96a2\u96c5\u96ab\u96c6\u96c5\u96ab\u96c1", 908433140)};
+        d = new String[]{"V1_16", "V1_21_5"};
     }
 }
 
