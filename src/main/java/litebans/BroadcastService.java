@@ -424,7 +424,7 @@ extends PluginModule {
     public final void BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, @Nullable String string3, @Nullable String string4, boolean flag) {
         String string5 = string3;
         ObjectUtilities.BaseCoreGenericHandler((Object)string5);
-        String string6 = 0123456789abcdefmvzabcdefmvzHandler.LiteBansModule_194(string5);
+        String string6 = HexEncodingHelper.LiteBansModule_194(string5);
         DiscordWebhookClient eG2 = this.m().LiteBansModule_194();
         PunishmentTableService p2 = (PunishmentTableService)this.plugin.BaseCoreGenericHandler(PunishmentTableService.class);
         boolean flag2 = !this.m().PunishmentTableService() && !this.plugin.LiteBansModule_401() && !eG2.GnuSparseMapHandler();
@@ -490,7 +490,7 @@ extends PluginModule {
         if (ch2.e().AsyncBackgroundTask_22() == 1 && dZ2.ServerSyncService() == BanHandler.LiteBansModule_240) {
             Object object = dZ2.DatabaseMonitorService();
             boolean flag = false;
-            if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler((String)object)) {
+            if (HexEncodingHelper.BaseCoreGenericHandler((String)object)) {
                 GeoIPLookupService_3 gu2 = this.c();
                 ObjectUtilities.LiteBansModule_31(gu2, "");
                 Object object2 = object = (KickOtherHandler)gu2;
@@ -539,7 +539,7 @@ extends PluginModule {
         if ((dZ3 != null ? dZ3.ServerSyncService() : null) == BanHandler.LiteBansModule_240) {
             Object object = dZ2.DatabaseMonitorService();
             int n = 0;
-            if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler((String)object) && this.plugin.AsyncBackgroundTask_22() == 1) {
+            if (HexEncodingHelper.BaseCoreGenericHandler((String)object) && this.plugin.AsyncBackgroundTask_22() == 1) {
                 GeoIPLookupService_3 gu2 = this.c();
                 ObjectUtilities.LiteBansModule_31(gu2, "");
                 object = (KickOtherHandler)gu2;

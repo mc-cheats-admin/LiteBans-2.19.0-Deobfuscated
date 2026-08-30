@@ -272,13 +272,13 @@ public final class CommandArgumentUtils {
     }
 
     public static final String BaseCoreGenericHandler(@NotNull MessageHandler messageHandler, @NotNull String string) {
-        String string2 = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.Utf8Handler_2(string).AsyncBackgroundTask_5() == 0 ? PlayerProvider.get().provide(string) : string;
+        String string2 = HexEncodingHelper.BaseCoreGenericHandler.Utf8Handler_2(string).AsyncBackgroundTask_5() == 0 ? PlayerProvider.get().provide(string) : string;
         ObjectUtilities.BaseCoreGenericHandler((Object)string2);
         return string2;
     }
 
     public static final String AsyncBackgroundTask_5(@NotNull MessageHandler messageHandler, @NotNull String string) {
-        if (!0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.LiteBansModule_240(string)) {
+        if (!HexEncodingHelper.BaseCoreGenericHandler.LiteBansModule_240(string)) {
             return string;
         }
         MessageHandler fg_03 = messageHandler;
@@ -291,7 +291,7 @@ public final class CommandArgumentUtils {
     }
 
     public static final CommandSenderWrapper LiteBansModule_31(@NotNull MessageHandler messageHandler, @NotNull String string) {
-        NameHandler_3 jp_02 = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.Utf8Handler_2(string);
+        NameHandler_3 jp_02 = HexEncodingHelper.BaseCoreGenericHandler.Utf8Handler_2(string);
         if (jp_02.AsyncBackgroundTask_5() == 1) {
             Object object;
             block5: {
@@ -482,7 +482,7 @@ public final class CommandArgumentUtils {
             {
                 v1 = false;
             }
-            if (v1 && !0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler(v3)) {
+            if (v1 && !HexEncodingHelper.BaseCoreGenericHandler(v3)) {
                 v2 = var4_4.LiteBansModule_31();
                 ObjectUtilities.BaseCoreGenericHandler((Object)v2);
                 return CommandArgumentUtils.BaseCoreGenericHandler(var0, v2);

@@ -141,7 +141,7 @@ static abstract class PoolEntry {
         return new InUseHandler(this.LiteBansModule_194(), this, this.ServerSyncService, this.HoverTextFormatter);
     }
 
-    void BaseCoreGenericHandler(Connection connection, 0a000Handler c22, int n) {
+    void BaseCoreGenericHandler(Connection connection, HexEncodingHelper c22, int n) {
         int n2 = 0;
         if ((n & 1) != 0 && c22.LiteBansModule_194() != this.ServerSyncService) {
             connection.setReadOnly(this.ServerSyncService);

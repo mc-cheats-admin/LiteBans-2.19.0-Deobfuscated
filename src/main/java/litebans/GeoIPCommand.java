@@ -84,7 +84,7 @@ extends AbstractCommand {
                 }
                 object2 = object3;
                 flag = false;
-                if (!0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.i((String)object2)) break block24;
+                if (!HexEncodingHelper.BaseCoreGenericHandler.i((String)object2)) break block24;
                 object = object3;
                 break block23;
             }

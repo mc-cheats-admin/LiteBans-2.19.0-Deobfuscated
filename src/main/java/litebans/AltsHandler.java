@@ -68,7 +68,7 @@ extends MessageHandler {
                     Object object8 = object7;
                     boolean flag7 = false;
                     Object object9 = ((ConfigService)((MessageHandler)object8).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194();
-                    UUID uUID = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.GnuSparseMapHandler(((AltsHandler)object6).AsyncBackgroundTask_5());
+                    UUID uUID = HexEncodingHelper.BaseCoreGenericHandler.GnuSparseMapHandler(((AltsHandler)object6).AsyncBackgroundTask_5());
                     if (uUID != null) {
                         object7 = uUID;
                         if (((DiscordWebhookClient)object9).e() > 1 && object5.AsyncBackgroundTask_5().CommandThrottleService() && ((LiteBansModule_206)messageHandler).n() && !AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)object5, (UUID)object7, null, 2, null)) {
@@ -118,7 +118,7 @@ extends MessageHandler {
                                         t2 = iterator.next();
                                         j05 = (LiteBansModule_327)t2;
                                         bl9 = false;
-                                        if (!(0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.GnuSparseMapHandler(j05.LiteBansModule_31()) == null ? false : !AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)object5, uUID2, null, 2, null))) continue;
+                                        if (!(HexEncodingHelper.BaseCoreGenericHandler.GnuSparseMapHandler(j05.LiteBansModule_31()) == null ? false : !AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)object5, uUID2, null, 2, null))) continue;
                                         object32.add(t2);
                                     }
                                     object8 = (List)object32;

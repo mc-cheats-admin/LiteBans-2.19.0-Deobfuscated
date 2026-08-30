@@ -46,7 +46,7 @@ extends AbstractCommand {
                     boolean flag3 = false;
                     LiteBansModule_82 ch3 = ch2;
                     boolean flag4 = false;
-                    if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.LiteBansModule_31(string) && (object3 = AllHandler_3.BaseCoreGenericHandler(ch3, CommandArgumentUtils.AsyncBackgroundTask_5(this, string), this.LiteBansModule_31(), null, false, 12, null)) != null) {
+                    if (HexEncodingHelper.BaseCoreGenericHandler.LiteBansModule_31(string) && (object3 = AllHandler_3.BaseCoreGenericHandler(ch3, CommandArgumentUtils.AsyncBackgroundTask_5(this, string), this.LiteBansModule_31(), null, false, 12, null)) != null) {
                         String string2 = ((SilentHandler)object3).DatabaseMonitorService();
                         if (string2 == null && (string2 = ((SilentHandler)object3).PunishmentTableService()) == null) {
                             MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(this.plugin());

@@ -4,7 +4,7 @@ import net.md_5.bungee.chat.ChatVersion;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
 
-public class OrgBukkitBlockHandler {
+public class BukkitBlockAdapter {
     private static boolean LiteBansModule_31;
     private static boolean c;
     private static boolean e;
@@ -35,7 +35,7 @@ public class OrgBukkitBlockHandler {
     }
 
     static {
-        OrgBukkitBlockHandler.AsyncBackgroundTask_5();
+        BukkitBlockAdapter.AsyncBackgroundTask_5();
         LiteBansModule_31 = StackTraceAnalyzer.BaseCoreGenericHandler("org.bukkit.block.TestBlock");
         c = StackTraceAnalyzer.BaseCoreGenericHandler("net.md_5.bungee.api.chat.BaseComponent");
         e = false;

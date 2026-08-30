@@ -21,7 +21,7 @@ public final class ProxyStatement {
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     public final String LiteBansModule_194(@NotNull String string) {
-        if (this.c(string) || !0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler(string) || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)LiteBansModule_91.BaseCoreGenericHandler())) {
+        if (this.c(string) || !HexEncodingHelper.BaseCoreGenericHandler(string) || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)LiteBansModule_91.BaseCoreGenericHandler())) {
             return null;
         }
         String string2 = this.AsyncBackgroundTask_5(string);

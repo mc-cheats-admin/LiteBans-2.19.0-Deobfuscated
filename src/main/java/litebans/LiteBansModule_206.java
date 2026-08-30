@@ -154,7 +154,7 @@ extends MessageHandler {
             var6_11 = null;
             var7_16 = var1_2;
             var8_13 = false;
-            if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.i((String)var7_16)) {
+            if (HexEncodingHelper.BaseCoreGenericHandler.i((String)var7_16)) {
                 var6_11 = var3_8;
                 this.AsyncBackgroundTask_21 = var1_2;
             } else {

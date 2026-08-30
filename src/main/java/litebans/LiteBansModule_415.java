@@ -6,12 +6,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 public abstract class LiteBansModule_415
 implements Statement {
-    protected final 0a000Handler LiteBansModule_31;
+    protected final HexEncodingHelper LiteBansModule_31;
     final Statement BaseCoreGenericHandler;
     private boolean c;
     private ResultSet AsyncBackgroundTask_5;
 
-    LiteBansModule_415(0a000Handler c22, Statement statement) {
+    LiteBansModule_415(HexEncodingHelper c22, Statement statement) {
         this.LiteBansModule_31 = c22;
         this.plugin = statement;
     }

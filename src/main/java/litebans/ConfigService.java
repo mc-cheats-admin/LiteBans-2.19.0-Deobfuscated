@@ -1082,7 +1082,7 @@ lbl430:
                     v5 = v3.AsyncBackgroundTask_22();
                     if (v5 == null) break block97;
                     v3.CommandThrottleService = var6_9 = new NullHandler_8(v3.BaseCoreGenericHandler);
-                    if (!OrgBukkitBlockHandler.c()) {
+                    if (!BukkitBlockAdapter.c()) {
                         var6_9.BaseCoreGenericHandler(v5);
                     }
                     break block97;
@@ -1533,7 +1533,7 @@ lbl430:
                 if (object != null) {
                     NullHandler_8 z = new NullHandler_8(q_03.BaseCoreGenericHandler);
                     q_03.CommandThrottleService = z;
-                    if (!OrgBukkitBlockHandler.c()) {
+                    if (!BukkitBlockAdapter.c()) {
                         z.BaseCoreGenericHandler(object);
                     }
                 }
@@ -1723,8 +1723,8 @@ lbl430:
                             } else {
                                 charSequence = kL2 = null;
                             }
-                            if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler((String)((Object)kL2))) {
-                                object4 = UUID.fromString(0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.g((String)((Object)kL2)));
+                            if (HexEncodingHelper.BaseCoreGenericHandler((String)((Object)kL2))) {
+                                object4 = UUID.fromString(HexEncodingHelper.BaseCoreGenericHandler.g((String)((Object)kL2)));
                                 LiteBansModule_158 ec_03 = plugin.i();
                                 ObjectUtilities.LiteBansModule_31(ec_03, "");
                                 BungeecordHandler_2 ao_02 = (BungeecordHandler_2)ec_03;

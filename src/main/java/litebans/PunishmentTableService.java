@@ -179,7 +179,7 @@ extends PluginModule {
 
     public final void BaseCoreGenericHandler(@NotNull String string, @NotNull SilentHandler dZ2) {
         try {
-            UUID uUID = UUID.fromString(0123456789abcdefmvzabcdefmvzHandler.LiteBansModule_194(string));
+            UUID uUID = UUID.fromString(HexEncodingHelper.LiteBansModule_194(string));
             ((Map)this.plugin().LiteBansModule_31()).put(uUID, dZ2);
         }
         catch (IllegalArgumentException illegalArgumentException) {

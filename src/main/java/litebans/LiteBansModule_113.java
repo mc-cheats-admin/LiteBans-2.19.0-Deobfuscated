@@ -77,7 +77,7 @@ public final class LiteBansModule_113 {
         if (string != null) {
             String string2 = string;
             boolean flag2 = false;
-            flag = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.i(string2);
+            flag = HexEncodingHelper.BaseCoreGenericHandler.i(string2);
         } else {
             flag = false;
         }

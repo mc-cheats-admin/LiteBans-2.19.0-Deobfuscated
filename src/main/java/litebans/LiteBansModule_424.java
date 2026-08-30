@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 public abstract class LiteBansModule_424
 extends LiteBansModule_415
 implements PreparedStatement {
-    LiteBansModule_424(0a000Handler c22, PreparedStatement preparedStatement) {
+    LiteBansModule_424(HexEncodingHelper c22, PreparedStatement preparedStatement) {
         super(c22, preparedStatement);
     }
 

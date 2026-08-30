@@ -166,7 +166,7 @@ implements Runnable {
             ObjectUtilities.BaseCoreGenericHandler((Object)string4);
             String string5 = string2;
             ObjectUtilities.BaseCoreGenericHandler((Object)string5);
-            this.LiteBansModule_194.offer(new LiteBansModule_95(string4, 0123456789abcdefmvzabcdefmvzHandler.LiteBansModule_194(string5), string3));
+            this.LiteBansModule_194.offer(new LiteBansModule_95(string4, HexEncodingHelper.LiteBansModule_194(string5), string3));
             ConfigService q_03 = configService;
             boolean flag = false;
             if (q_03.g()) {

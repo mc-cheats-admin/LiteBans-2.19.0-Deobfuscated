@@ -30,7 +30,7 @@ implements PlatformPlugin {
     private LiteBansModule_39 c = null;
     @Override
     public void m() {
-        if (OrgBukkitBlockHandler.c()) {
+        if (BukkitBlockAdapter.c()) {
             this.c.BaseCoreGenericHandler();
             return;
         }
@@ -203,7 +203,7 @@ implements PlatformPlugin {
 
     @Override
     public boolean ServerSyncService() {
-        if (OrgBukkitBlockHandler.c()) {
+        if (BukkitBlockAdapter.c()) {
             return false;
         }
         return this.getServer().isPrimaryThread();
@@ -239,7 +239,7 @@ implements PlatformPlugin {
 
     public void onLoad() {
         this.plugin(true);
-        if (OrgBukkitBlockHandler.c()) {
+        if (BukkitBlockAdapter.c()) {
             this.c = new LiteBansModule_39();
         }
         AsyncBackgroundTask_6 de2 = new AsyncBackgroundTask_6(this);
@@ -272,7 +272,7 @@ implements PlatformPlugin {
 
     @Override
     public void c(Runnable runnable) {
-        if (OrgBukkitBlockHandler.c()) {
+        if (BukkitBlockAdapter.c()) {
             runnable.run();
             return;
         }
@@ -281,7 +281,7 @@ implements PlatformPlugin {
 
     @Override
     public void LiteBansModule_31(Runnable runnable, long l3) {
-        if (OrgBukkitBlockHandler.c()) {
+        if (BukkitBlockAdapter.c()) {
             this.plugin(runnable, l3);
             return;
         }
@@ -290,7 +290,7 @@ implements PlatformPlugin {
 
     @Override
     public void BaseCoreGenericHandler(Runnable runnable) {
-        if (OrgBukkitBlockHandler.c()) {
+        if (BukkitBlockAdapter.c()) {
             this.LiteBansModule_31(runnable);
             return;
         }
@@ -299,7 +299,7 @@ implements PlatformPlugin {
 
     @Override
     public void BaseCoreGenericHandler(Runnable runnable, long l3) {
-        if (OrgBukkitBlockHandler.c()) {
+        if (BukkitBlockAdapter.c()) {
             this.c.BaseCoreGenericHandler(this.AsyncBackgroundTask_5).schedule(runnable, l3 * 50L, TimeUnit.MILLISECONDS);
             return;
         }
@@ -313,7 +313,7 @@ implements PlatformPlugin {
 
     @Override
     public void BaseCoreGenericHandler(Runnable runnable, long l3, long l5) {
-        if (OrgBukkitBlockHandler.c()) {
+        if (BukkitBlockAdapter.c()) {
             this.LiteBansModule_31(runnable, l3, l5);
             return;
         }
@@ -322,7 +322,7 @@ implements PlatformPlugin {
 
     @Override
     public void LiteBansModule_31(Runnable runnable, long l3, long l5) {
-        if (OrgBukkitBlockHandler.c()) {
+        if (BukkitBlockAdapter.c()) {
             this.c.BaseCoreGenericHandler(this.AsyncBackgroundTask_5).scheduleAtFixedRate(runnable, l3 * 50L, l5 * 50L, TimeUnit.MILLISECONDS);
             return;
         }

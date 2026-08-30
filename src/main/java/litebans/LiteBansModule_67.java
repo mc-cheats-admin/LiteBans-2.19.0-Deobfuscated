@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.Executor;
 public final class LiteBansModule_67
-extends 0a000Handler
+extends HexEncodingHelper
 implements Wrapper,
 AutoCloseable,
 Connection {

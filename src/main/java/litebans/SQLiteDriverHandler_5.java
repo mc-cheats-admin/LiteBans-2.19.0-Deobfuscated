@@ -7,12 +7,12 @@ import java.util.List;
 import org.jetbrains.annotations.NotNull;
 
 public final class SQLiteDriverHandler_5 {
-    private final Utf8mb4UnicodeCiHandler LiteBansModule_31;
-    public SQLiteDriverHandler_5(@NotNull Utf8mb4UnicodeCiHandler lq2) {
+    private final MySqlCharsetHelper LiteBansModule_31;
+    public SQLiteDriverHandler_5(@NotNull MySqlCharsetHelper lq2) {
         this.LiteBansModule_31 = lq2;
     }
 
-    public final Utf8mb4UnicodeCiHandler LiteBansModule_31() {
+    public final MySqlCharsetHelper LiteBansModule_31() {
         return this.LiteBansModule_31;
     }
 
@@ -20,7 +20,7 @@ public final class SQLiteDriverHandler_5 {
         BansHandler_2 kL3 = kL2;
         String[] filteredArgs = Arrays.copyOf(args, args.length);
         boolean flag = false;
-        Utf8mb4UnicodeCiHandler lq2 = this.LiteBansModule_31();
+        MySqlCharsetHelper lq2 = this.LiteBansModule_31();
         boolean flag2 = false;
         BansHandler_2 kL4 = kL3;
         char c = '(';

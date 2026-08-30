@@ -72,7 +72,7 @@ extends MessageHandler {
                 Object object7 = MessageHandler.BaseCoreGenericHandler;
                 object6 = object5;
                 flag4 = false;
-                byte by2 = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.i((String)object6);
+                byte by2 = HexEncodingHelper.BaseCoreGenericHandler.i((String)object6);
                 object = MessageKey.flag;
                 boolean flag7 = false;
                 ChatFormatter fo_04 = object7;
@@ -84,7 +84,7 @@ extends MessageHandler {
                     throw new CommandExitException();
                 }
                 object7 = ch2.c((String)object5);
-                by2 = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.Utf8Handler_2((String)object5).AsyncBackgroundTask_5();
+                by2 = HexEncodingHelper.BaseCoreGenericHandler.Utf8Handler_2((String)object5).AsyncBackgroundTask_5();
                 Object object8 = object7;
                 if ((object8 != null ? ((LiteBansModule_297)object8).LiteBansModule_31() : null) != null) {
                     object4 = object7;

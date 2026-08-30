@@ -510,7 +510,7 @@ Statement {
         }
     }
 
-    LiteBansModule_425(0a000Handler c22, Statement statement) {
+    LiteBansModule_425(HexEncodingHelper c22, Statement statement) {
         super(c22, statement);
     }
 }

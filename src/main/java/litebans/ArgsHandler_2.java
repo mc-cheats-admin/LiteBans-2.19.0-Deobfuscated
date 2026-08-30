@@ -31,7 +31,7 @@ public class ArgsHandler_2
 implements LiteBansModule_98 {
     protected final PlatformPlugin AsyncBackgroundTask_5;
     protected MinecraftServer c;
-    protected final LiteBansModule_252 BaseCoreGenericHandler = new NetMinecraftClassHandler();
+    protected final LiteBansModule_252 BaseCoreGenericHandler = new NmsClassReflector();
     public ArgsHandler_2(PlatformPlugin plugin) {
         this.AsyncBackgroundTask_5 = plugin;
     }

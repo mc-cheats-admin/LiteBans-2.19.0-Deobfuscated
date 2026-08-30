@@ -42,7 +42,7 @@ implements CommandSenderWrapper {
         if (commandSender == null || string.isEmpty()) {
             return;
         }
-        if (OrgBukkitBlockHandler.c()) {
+        if (BukkitBlockAdapter.c()) {
             if (commandSender instanceof BlockCommandSender) {
                 LiteBansModule_26.BaseCoreGenericHandler(this.GnuSparseMapHandler, ((BlockCommandSender)commandSender).getBlock().getLocation(), () -> this.GnuSparseMapHandler.getServer().dispatchCommand(commandSender, string));
             } else if (commandSender instanceof Entity) {
@@ -140,7 +140,7 @@ implements CommandSenderWrapper {
         }
         if (this.c) {
             Player player = (Player)commandSender;
-            if (OrgBukkitBlockHandler.c() || this.GnuSparseMapHandler.getServer().isPrimaryThread()) {
+            if (BukkitBlockAdapter.c() || this.GnuSparseMapHandler.getServer().isPrimaryThread()) {
                 player.kickPlayer(string);
             } else {
                 this.GnuSparseMapHandler.c(new AsyncBackgroundTask_13(this, player, string));
@@ -156,8 +156,8 @@ implements CommandSenderWrapper {
         }
         if (this.c) {
             Player player = (Player)commandSender;
-            if (OrgBukkitBlockHandler.LiteBansModule_31()) {
-                OrgBukkitBlockHandler.BaseCoreGenericHandler(player, string);
+            if (BukkitBlockAdapter.LiteBansModule_31()) {
+                BukkitBlockAdapter.BaseCoreGenericHandler(player, string);
             } else {
                 this.plugin(this.plugin(string));
             }
@@ -172,7 +172,7 @@ implements CommandSenderWrapper {
         if (commandSender == null) {
             return;
         }
-        if (OrgBukkitBlockHandler.c() && commandSender instanceof BlockCommandSender) {
+        if (BukkitBlockAdapter.c() && commandSender instanceof BlockCommandSender) {
             LiteBansModule_26.BaseCoreGenericHandler(this.GnuSparseMapHandler, ((BlockCommandSender)commandSender).getBlock().getLocation(), () -> commandSender.sendMessage(string));
             return;
         }

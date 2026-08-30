@@ -17,7 +17,7 @@ extends MessageHandler {
     @Override
     public void run() {
         CommandThrottleService v2 = (CommandThrottleService)this.LiteBansModule_240().BaseCoreGenericHandler(CommandThrottleService.class);
-        if (!v2.BaseCoreGenericHandler((byte)2, 0123456789abcdefmvzabcdefmvzHandler.LiteBansModule_194(this.e))) {
+        if (!v2.BaseCoreGenericHandler((byte)2, HexEncodingHelper.LiteBansModule_194(this.e))) {
             MessageHandler messageHandler = this;
             boolean flag = false;
             ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> BannedJoinHandler.BaseCoreGenericHandler(this, arg_0));

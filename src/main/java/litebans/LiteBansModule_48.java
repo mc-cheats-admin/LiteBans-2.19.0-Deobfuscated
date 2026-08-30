@@ -32,7 +32,7 @@ public final class LiteBansModule_48 {
     }
 
     public final Object BaseCoreGenericHandler(@NotNull Object object, @NotNull String string) {
-        if (!0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler(string)) {
+        if (!HexEncodingHelper.BaseCoreGenericHandler(string)) {
             return null;
         }
         UserManager userManager = this.c(object).getUserManager();

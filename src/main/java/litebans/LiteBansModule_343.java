@@ -6,11 +6,11 @@ public final class LiteBansModule_343 {
     private LiteBansModule_343() {
     }
 
-    public final Utf8mb4UnicodeCiHandler BaseCoreGenericHandler(@NotNull String string, @NotNull String string2) {
+    public final MySqlCharsetHelper BaseCoreGenericHandler(@NotNull String string, @NotNull String string2) {
         if (DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(string)) {
-            return new Utf8mb4UnicodeCiHandler(string, StringUtilities.LiteBansModule_31((CharSequence)string2) ? "" : "ENGINE=" + string2, " CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci", " UNSIGNED");
+            return new MySqlCharsetHelper(string, StringUtilities.LiteBansModule_31((CharSequence)string2) ? "" : "ENGINE=" + string2, " CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci", " UNSIGNED");
         }
-        return new Utf8mb4UnicodeCiHandler(string, "", "", " ");
+        return new MySqlCharsetHelper(string, "", "", " ");
     }
 
     public /* synthetic */ LiteBansModule_343(LiteBansModule_14 aJ2) {

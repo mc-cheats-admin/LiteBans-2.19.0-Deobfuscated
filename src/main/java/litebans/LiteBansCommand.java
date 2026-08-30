@@ -578,11 +578,11 @@ extends AbstractCommand {
         }
         switch (this.LiteBansModule_240().AsyncBackgroundTask_22()) {
             case 0: {
-                if (OrgBukkitBlockHandler.c()) {
+                if (BukkitBlockAdapter.c()) {
                     string = "Folia";
                     break;
                 }
-                if (OrgBukkitBlockHandler.BaseCoreGenericHandler()) {
+                if (BukkitBlockAdapter.BaseCoreGenericHandler()) {
                     string = "Paper";
                     break;
                 }

@@ -47,7 +47,7 @@ implements LiteBansModule_315 {
         return LiteBansModule_64.BaseCoreGenericHandler(this, this.g, this.BroadcastService, ja2, l3, this.Utf8Handler_2, this.m);
     }
 
-    void BaseCoreGenericHandler(0a000Handler c22, int n) {
+    void BaseCoreGenericHandler(HexEncodingHelper c22, int n) {
         this.PunishmentTableService.BaseCoreGenericHandler(this.g, c22, n);
     }
 

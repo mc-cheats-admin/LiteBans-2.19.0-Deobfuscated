@@ -284,7 +284,7 @@ public final class GeoIPLookupService {
             LiteBansModule_144 dy_03 = new LiteBansModule_144();
             dy_03.BaseCoreGenericHandler = "";
             byte by2 = ch2.e().AsyncBackgroundTask_22();
-            if (string3 != null && 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler(string3)) {
+            if (string3 != null && HexEncodingHelper.BaseCoreGenericHandler(string3)) {
                 if (by2 == 0) {
                     LiteBansModule_158 ec_02 = ch2.e().i();
                     ObjectUtilities.LiteBansModule_31(ec_02, "");

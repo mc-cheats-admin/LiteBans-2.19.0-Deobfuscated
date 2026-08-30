@@ -61,7 +61,7 @@ extends BansHandler {
                     boolean flag4 = StringUtilities.BaseCoreGenericHandler((CharSequence)string9, (CharSequence)("ip" + string2), false, 2, null);
                     String string10 = string4;
                     boolean flag5 = false;
-                    if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.i(string10) && !flag4) {
+                    if (HexEncodingHelper.BaseCoreGenericHandler.i(string10) && !flag4) {
                         this.m().warning("IP was stored InitializerHandler_3 UUID column for " + string7 + '!');
                         flag4 = true;
                     }
@@ -71,13 +71,13 @@ extends BansHandler {
                     }
                     string10 = string4;
                     flag5 = false;
-                    if (!0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler(string10)) {
+                    if (!HexEncodingHelper.BaseCoreGenericHandler(string10)) {
                         this.m().warning("Username ('" + string4 + "') was stored InitializerHandler_3 UUID column for " + string7 + '!');
                         string4 = this.LiteBansModule_31(string4);
                     }
                     string10 = string4;
                     flag5 = false;
-                    if (!0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler(string10)) {
+                    if (!HexEncodingHelper.BaseCoreGenericHandler(string10)) {
                         this.m().warning("Failed to import " + string7 + " for " + string4);
                         string4 = null;
                     }

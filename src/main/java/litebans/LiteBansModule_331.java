@@ -7,10 +7,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 public abstract class LiteBansModule_331
 implements DatabaseMetaData {
-    protected final 0a000Handler LiteBansModule_31;
+    protected final HexEncodingHelper LiteBansModule_31;
     protected final DatabaseMetaData BaseCoreGenericHandler;
 
-    LiteBansModule_331(0a000Handler c22, DatabaseMetaData databaseMetaData) {
+    LiteBansModule_331(HexEncodingHelper c22, DatabaseMetaData databaseMetaData) {
         this.LiteBansModule_31 = c22;
         this.plugin = databaseMetaData;
     }

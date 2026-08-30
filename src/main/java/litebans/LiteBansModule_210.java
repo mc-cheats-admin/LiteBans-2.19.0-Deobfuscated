@@ -1947,7 +1947,7 @@ ResultSet {
         }
     }
 
-    protected LiteBansModule_210(0a000Handler c22, LiteBansModule_415 lJ2, ResultSet resultSet) {
+    protected LiteBansModule_210(HexEncodingHelper c22, LiteBansModule_415 lJ2, ResultSet resultSet) {
         super(c22, lJ2, resultSet);
     }
 }

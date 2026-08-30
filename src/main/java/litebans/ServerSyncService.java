@@ -705,7 +705,7 @@ implements Runnable {
                             v3 = var19_50;
                             ObjectUtilities.c(v3, "element");
                             var21_57 = LiteBansModule_303.BaseCoreGenericHandler(ServerSyncService.GnuSparseMapHandler, (String)v3, 0, 2, null);
-                            this.plugin(v1, 0123456789abcdefmvzabcdefmvzHandler.LiteBansModule_194(var21_57[0]), var21_57[1], var20_54, v7);
+                            this.plugin(v1, HexEncodingHelper.LiteBansModule_194(var21_57[0]), var21_57[1], var20_54, v7);
                             v4 = KotlinUnitHandler.BaseCoreGenericHandler;
                             break;
                         }
@@ -807,7 +807,7 @@ lbl186:
                             v13 = var19_50;
                             ObjectUtilities.c(v13, "element");
                             var21_57 = ServerSyncService.GnuSparseMapHandler.BaseCoreGenericHandler((String)v13, 8);
-                            var25_89 = 0123456789abcdefmvzabcdefmvzHandler.LiteBansModule_194(var21_57[0]);
+                            var25_89 = HexEncodingHelper.LiteBansModule_194(var21_57[0]);
                             var27_108 = var21_57[1];
                             var28_114 = var21_57[2];
                             var29_122 = var21_57[3];

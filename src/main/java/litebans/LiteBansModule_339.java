@@ -1758,7 +1758,7 @@ DatabaseMetaData {
         }
     }
 
-    LiteBansModule_339(0a000Handler c22, DatabaseMetaData databaseMetaData) {
+    LiteBansModule_339(HexEncodingHelper c22, DatabaseMetaData databaseMetaData) {
         super(c22, databaseMetaData);
     }
 }

@@ -290,7 +290,7 @@ lbl183:
 lbl214:
                                                                                                         // 1 sources
 
-                                                                                                        if (!var20_38.F() && var20_38.BanHandler_5() || var20_38.ServerSyncService().c() == BanHandler.c || var20_38.DatabaseMonitorService() != -1L || !Character.isDigit(var25_65.charAt(0)) || StringUtilities.c((CharSequence)var25_65, ':', false, 2, null) || StringUtilities.c((CharSequence)var25_65, '%', false, 2, null) || StringUtilities.c((CharSequence)var25_65, '*', false, 2, null) || !0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.c(var29_83) || 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler(var25_65)) ** GOTO lbl296
+                                                                                                        if (!var20_38.F() && var20_38.BanHandler_5() || var20_38.ServerSyncService().c() == BanHandler.c || var20_38.DatabaseMonitorService() != -1L || !Character.isDigit(var25_65.charAt(0)) || StringUtilities.c((CharSequence)var25_65, ':', false, 2, null) || StringUtilities.c((CharSequence)var25_65, '%', false, 2, null) || StringUtilities.c((CharSequence)var25_65, '*', false, 2, null) || !HexEncodingHelper.BaseCoreGenericHandler.c(var29_83) || HexEncodingHelper.BaseCoreGenericHandler(var25_65)) ** GOTO lbl296
                                                                                                         if (!(((CharSequence)var20_38.AsyncBackgroundTask_21()).length() == 0) || var25_65.length() <= 1) ** GOTO lbl251
                                                                                                         var31_122 = BlackHandler.BaseCoreGenericHandler((CharSequence)var25_65);
                                                                                                         ObjectUtilities.BaseCoreGenericHandler(var17_29);
@@ -556,7 +556,7 @@ lbl304:
                                                                                                                 v11 = MessageKey.ah;
                                                                                                                 break;
                                                                                                             }
-                                                                                                            v11 = MessageKey.0a000Handler;
+                                                                                                            v11 = MessageKey.HexEncodingHelper;
                                                                                                             break;
                                                                                                         }
                                                                                                         case 3: {
@@ -601,7 +601,7 @@ lbl304:
                                                                                                                 v13 = MessageKey.ah;
                                                                                                                 break;
                                                                                                             }
-                                                                                                            v13 = MessageKey.0a000Handler;
+                                                                                                            v13 = MessageKey.HexEncodingHelper;
                                                                                                             break;
                                                                                                         }
                                                                                                         case 3: {
@@ -683,7 +683,7 @@ lbl304:
                                                                             if (var20_38.AsyncBackgroundTask_22() != null) break block276;
                                                                             var28_79 = var20_38.AsyncBackgroundTask_21();
                                                                             var29_92 = false;
-                                                                            if (!0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.i((String)var28_79)) break block277;
+                                                                            if (!HexEncodingHelper.BaseCoreGenericHandler.i((String)var28_79)) break block277;
                                                                             var20_38.m(true);
                                                                             var28_79 = MessageHandler.BaseCoreGenericHandler;
                                                                             var29_93 = v1;
@@ -723,7 +723,7 @@ lbl304:
                                                                     var20_38.AsyncBackgroundTask_5((String)v23);
                                                                     var20_38.BaseCoreGenericHandler(var29_95);
                                                                 }
-                                                                if (var20_38.AsyncBackgroundTask_22() != null || !0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.AsyncBackgroundTask_5(var20_38.AsyncBackgroundTask_21())) break block279;
+                                                                if (var20_38.AsyncBackgroundTask_22() != null || !HexEncodingHelper.BaseCoreGenericHandler.AsyncBackgroundTask_5(var20_38.AsyncBackgroundTask_21())) break block279;
                                                                 var29_96 = AllHandler_3.BaseCoreGenericHandler(var13_22, var20_38.AsyncBackgroundTask_21(), var20_38.ServerSyncService(), null, var20_38.BanHandler_2() == false, 4, null);
                                                                 if (var20_38.BanHandler_2()) break block282;
                                                                 v24 = var29_96;
@@ -747,7 +747,7 @@ lbl304:
                                                             var31_131 = ((ConfigService)var33_146.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().af();
                                                             var35_174 = false;
                                                             if (var31_131) {
-                                                                if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler(var30_112)) {
+                                                                if (HexEncodingHelper.BaseCoreGenericHandler(var30_112)) {
                                                                     v28 = LiteBansModule_50.c.LiteBansModule_194(var30_112);
                                                                     if (v28 == null) {
                                                                         v29 = null;
@@ -767,7 +767,7 @@ lbl304:
                                                                     }
                                                                 }
                                                             } else {
-                                                                if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler(var30_112)) {
+                                                                if (HexEncodingHelper.BaseCoreGenericHandler(var30_112)) {
                                                                     new LiteBansModule_297(LiteBansModule_242.BaseCoreGenericHandler(var30_112, 16), var30_112, "#", new Date());
                                                                 }
                                                                 v29 = new LiteBansModule_297(LiteBansModule_242.BaseCoreGenericHandler(var30_112, 16), LiteBansModule_242.BaseCoreGenericHandler(var30_112), "#", new Date());
@@ -788,7 +788,7 @@ lbl304:
                                                         ObjectUtilities.BaseCoreGenericHandler((Object)v35);
                                                         if (!StringUtilities.BaseCoreGenericHandler((CharSequence)v35, '#', false, 2, null)) {
                                                             v36 = var28_79 = var20_38.AsyncBackgroundTask_22();
-                                                            if (!0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.LiteBansModule_31(v36 != null ? v36.BaseCoreGenericHandler() : null) && AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(var13_22.e(), var20_38.CommandThrottleService())) {
+                                                            if (!HexEncodingHelper.BaseCoreGenericHandler.LiteBansModule_31(v36 != null ? v36.BaseCoreGenericHandler() : null) && AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(var13_22.e(), var20_38.CommandThrottleService())) {
                                                                 var13_22.AsyncBackgroundTask_5().BaseCoreGenericHandler((LiteBansModule_178)LambdaMetafactory.metafactory(null, null, null, (Ljava/lang/Object;)Ljava/lang/Object;, BaseCoreGenericHandler(litebans.NoneHandler_2 litebans.LiteBansModule_82 ), (Llitebans/LiteBansModule_82;)Llitebans/iV;)((NoneHandler_2)var20_38));
                                                             }
                                                         }
@@ -1212,7 +1212,7 @@ lbl304:
                                                         }
                                                     }
                                                     var39_244 = v67;
-                                                    if (var37_203.ServerSyncService() == BanHandler.AsyncBackgroundTask_5 && !var25_68 /* !! */ .LiteBansModule_31() && var24_61 && !0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler(var25_68 /* !! */ .g())) {
+                                                    if (var37_203.ServerSyncService() == BanHandler.AsyncBackgroundTask_5 && !var25_68 /* !! */ .LiteBansModule_31() && var24_61 && !HexEncodingHelper.BaseCoreGenericHandler(var25_68 /* !! */ .g())) {
                                                         var40_266 = v1;
                                                         var41_293 = "litebans.unban.queue";
                                                         var43_346 = false;
@@ -1579,7 +1579,7 @@ lbl1262:
                                                                         var67_471 = true;
                                                                         var66_470[0] = var66_470[0].substring(0, var66_470[0].length() - 1);
                                                                     }
-                                                                    if (!StringUtilities.c((CharSequence)var65_468, ':', false, 2, null) || !0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.AsyncBackgroundTask_5(var66_470[0])) {
+                                                                    if (!StringUtilities.c((CharSequence)var65_468, ':', false, 2, null) || !HexEncodingHelper.BaseCoreGenericHandler.AsyncBackgroundTask_5(var66_470[0])) {
                                                                         var41_299.e().getLogger().warning("Warning action is invalid (bad format): '" + (String)var65_468 + "'. Ignored + ");
                                                                         continue;
                                                                     }
@@ -1719,7 +1719,7 @@ lbl1262:
                                                         throw new CommandExitException();
                                                     }
                                                     for (LiteBansModule_327 var40_277 : var38_231.LiteBansModule_240()) {
-                                                        if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.GnuSparseMapHandler(var40_277.LiteBansModule_31()) == null || ObjectUtilities.BaseCoreGenericHandler((Object)var40_277.LiteBansModule_31(), (Object)var30_117.DatabaseMonitorService()) || var40_277.c() != null && ObjectUtilities.BaseCoreGenericHandler((Object)var40_277.c().DatabaseMonitorService(), (Object)var40_277.LiteBansModule_31()) || AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)var33_154, (UUID)var41_301, null, 2, null)) continue;
+                                                        if (HexEncodingHelper.BaseCoreGenericHandler.GnuSparseMapHandler(var40_277.LiteBansModule_31()) == null || ObjectUtilities.BaseCoreGenericHandler((Object)var40_277.LiteBansModule_31(), (Object)var30_117.DatabaseMonitorService()) || var40_277.c() != null && ObjectUtilities.BaseCoreGenericHandler((Object)var40_277.c().DatabaseMonitorService(), (Object)var40_277.LiteBansModule_31()) || AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)var33_154, (UUID)var41_301, null, 2, null)) continue;
                                                         var35_180.BaseCoreGenericHandler((LiteBansModule_82)var33_154, var40_277.e(), var40_277.LiteBansModule_31());
                                                         v87 = var35_180.AsyncBackgroundTask_22();
                                                         v88 = var35_180.AsyncBackgroundTask_22();

@@ -62,7 +62,7 @@ implements LiteBansModule_88 {
         }
         if (!this.LiteBansModule_31.n()) {
             this.LiteBansModule_31.getLogger().severe("Ignored " + asyncPlayerPreLoginEvent.getClass().getSimpleName() + "; plugin is not enabled yet!");
-            if (OrgBukkitBlockHandler.LiteBansModule_31()) {
+            if (BukkitBlockAdapter.LiteBansModule_31()) {
                 this.LiteBansModule_31.getLogger().severe("Enable late-bind InitializerHandler_3 spigot.yml to fix this problem, otherwise banned players can join before LiteBans has been ");
             }
             return;
@@ -72,7 +72,7 @@ implements LiteBansModule_88 {
     }
 
     private final void LiteBansModule_31() {
-        if (!OrgBukkitBlockHandler.c()) {
+        if (!BukkitBlockAdapter.c()) {
             return;
         }
         if (this.AsyncBackgroundTask_5.B() != null) {

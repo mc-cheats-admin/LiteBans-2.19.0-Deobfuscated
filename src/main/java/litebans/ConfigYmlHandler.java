@@ -227,7 +227,7 @@ PlatformPlugin {
         this.LiteBansModule_194 = new FabricModJsonHandler(StackTraceAnalyzer.BaseCoreGenericHandler(FabricModJsonHandler.class));
         String string = this.LiteBansModule_194.c();
         this.LiteBansModule_31 = new WarningHandler(LoggerFactory.getLogger((String)string), string);
-        this.LiteBansModule_240 = Method64396Handler.LiteBansModule_31(this, ((ModContainer)FabricLoader.getInstance().getModContainer("fabric-api").get()).getMetadata().getVersion().getFriendlyString().split("\\+")[1]);
+        this.LiteBansModule_240 = BytecodeReflectionHelper.LiteBansModule_31(this, ((ModContainer)FabricLoader.getInstance().getModContainer("fabric-api").get()).getMetadata().getVersion().getFriendlyString().split("\\+")[1]);
         ServerLifecycleEvents.SERVER_STARTING.register(this::BaseCoreGenericHandler);
         ServerLifecycleEvents.SERVER_STOPPING.register(this::LiteBansModule_31);
         this.AsyncBackgroundTask_5.c();

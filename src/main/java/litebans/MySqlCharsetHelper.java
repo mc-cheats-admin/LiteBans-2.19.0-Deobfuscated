@@ -3,7 +3,7 @@ package litebans;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public final class Utf8mb4UnicodeCiHandler {
+public final class MySqlCharsetHelper {
     public static final LiteBansModule_343 g;
     private final String AsyncBackgroundTask_5;
     private final String BaseCoreGenericHandler;
@@ -12,7 +12,7 @@ public final class Utf8mb4UnicodeCiHandler {
     public static final String LiteBansModule_240;
     public static final String LiteBansModule_31;
     public static final String i;
-    public Utf8mb4UnicodeCiHandler(@NotNull String string, @NotNull String string2, @NotNull String string3, @NotNull String string4) {
+    public MySqlCharsetHelper(@NotNull String string, @NotNull String string2, @NotNull String string3, @NotNull String string4) {
         this.AsyncBackgroundTask_5 = string;
         this.plugin = string2;
         this.c = string3;
@@ -51,10 +51,10 @@ public final class Utf8mb4UnicodeCiHandler {
         if (this == object) {
             return true;
         }
-        if (!(object instanceof Utf8mb4UnicodeCiHandler)) {
+        if (!(object instanceof MySqlCharsetHelper)) {
             return false;
         }
-        Utf8mb4UnicodeCiHandler lq2 = (Utf8mb4UnicodeCiHandler)object;
+        MySqlCharsetHelper lq2 = (MySqlCharsetHelper)object;
         if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5, (Object)lq2.AsyncBackgroundTask_5)) {
             return false;
         }
@@ -71,7 +71,7 @@ public final class Utf8mb4UnicodeCiHandler {
         i = " CHARACTER SET ascii COLLATE ascii_general_ci";
         LiteBansModule_31 = " CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";
         LiteBansModule_240 = "utf8mb4_unicode_ci";
-        Utf8mb4UnicodeCiHandler.LiteBansModule_31();
+        MySqlCharsetHelper.LiteBansModule_31();
         g = new LiteBansModule_343(null);
     }
 

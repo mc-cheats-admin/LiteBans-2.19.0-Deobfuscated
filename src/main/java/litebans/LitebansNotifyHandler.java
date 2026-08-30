@@ -79,7 +79,7 @@ public final class LitebansNotifyHandler {
                                                         continue;
                                                     }
                                                     if (StringUtilities.LiteBansModule_31(var10_10, "sender-uuid=", false, 2, null)) {
-                                                        var4_4.BaseCoreGenericHandler(0123456789abcdefmvzabcdefmvzHandler.LiteBansModule_194(var10_10.substring(12)));
+                                                        var4_4.BaseCoreGenericHandler(HexEncodingHelper.LiteBansModule_194(var10_10.substring(12)));
                                                         var4_4.i(true);
                                                         continue;
                                                     }

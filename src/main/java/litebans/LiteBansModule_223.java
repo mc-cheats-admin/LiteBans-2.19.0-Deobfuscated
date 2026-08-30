@@ -5,11 +5,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 public abstract class LiteBansModule_223
 implements ResultSet {
-    protected final 0a000Handler c;
+    protected final HexEncodingHelper c;
     protected final LiteBansModule_415 BaseCoreGenericHandler;
     final ResultSet LiteBansModule_31;
 
-    protected LiteBansModule_223(0a000Handler c22, LiteBansModule_415 lJ2, ResultSet resultSet) {
+    protected LiteBansModule_223(HexEncodingHelper c22, LiteBansModule_415 lJ2, ResultSet resultSet) {
         this.c = c22;
         this.plugin = lJ2;
         this.LiteBansModule_31 = resultSet;

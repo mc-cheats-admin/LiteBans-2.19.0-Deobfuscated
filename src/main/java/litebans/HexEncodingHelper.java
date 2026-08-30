@@ -11,7 +11,7 @@ import java.sql.Statement;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.Executor;
-public abstract class 0a000Handler
+public abstract class HexEncodingHelper
 implements Connection {
     static final int AsyncBackgroundTask_5;
     static final int Utf8Handler_2;
@@ -36,7 +36,7 @@ implements Connection {
     private String e;
     private String LiteBansModule_194;
 
-    protected 0a000Handler(InUseHandler kJ2, Connection connection, LiteBansModule_226 gk2, AsyncBackgroundTask_15 ja2, long l3, boolean flag, boolean flag2) {
+    protected HexEncodingHelper(InUseHandler kJ2, Connection connection, LiteBansModule_226 gk2, AsyncBackgroundTask_15 ja2, long l3, boolean flag, boolean flag2) {
         this.LiteBansModule_240 = kJ2;
         this.r = connection;
         this.g = gk2;
@@ -133,7 +133,7 @@ implements Connection {
                     continue;
                 }
                 catch (SQLException sQLException) {
-                    0a000Handler.n.c("%AsyncBackgroundTask_21 - Connection %AsyncBackgroundTask_21 marked CommandExitException broken because of HikariDataSource exception closing open statements during Connection.close()", new Object[]{this.LiteBansModule_240.e(), this.r.toString()});
+                    HexEncodingHelper.n.c("%AsyncBackgroundTask_21 - Connection %AsyncBackgroundTask_21 marked CommandExitException broken because of HikariDataSource exception closing open statements during Connection.close()", new Object[]{this.LiteBansModule_240.e(), this.r.toString()});
                     this.i.BaseCoreGenericHandler();
                     this.LiteBansModule_240.BaseCoreGenericHandler("(exception closing Statements during Connection.close())");
                     this.r = IsclosedHandler.BaseCoreGenericHandler;
@@ -328,7 +328,7 @@ implements Connection {
         LiteBansModule_401 = 4;
         Utf8Handler_2 = 2;
         AsyncBackgroundTask_5 = 1;
-        n = HikariLogger.BaseCoreGenericHandler(0a000Handler.class);
+        n = HikariLogger.BaseCoreGenericHandler(HexEncodingHelper.class);
         ServerSyncService = new HashSet();
         ServerSyncService.add("0A000");
         ServerSyncService.add("57P01");

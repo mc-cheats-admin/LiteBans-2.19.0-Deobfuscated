@@ -152,7 +152,7 @@ extends MessageHandler {
     }
 
     public final boolean BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull Object object, @NotNull String string, @NotNull String string2, @NotNull CharSequence charSequence, @Nullable SilentHandler dZ2, @NotNull String string3, boolean flag) {
-        UUID uUID = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.GnuSparseMapHandler(string);
+        UUID uUID = HexEncodingHelper.BaseCoreGenericHandler.GnuSparseMapHandler(string);
         if ((dZ2 == null || !ObjectUtilities.BaseCoreGenericHandler((Object)dZ2.DatabaseMonitorService(), (Object)string)) && uUID != null && ch2.BaseCoreGenericHandler(uUID, BanHandler.LiteBansModule_240) && flag) {
             ch2.e().getLogger().info(string2 + " was permitted to join the ");
             return false;

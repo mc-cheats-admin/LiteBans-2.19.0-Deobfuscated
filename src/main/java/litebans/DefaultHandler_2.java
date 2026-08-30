@@ -205,7 +205,7 @@ extends Database {
                 if (string == null) break block12;
                 object = string;
                 boolean flag = false;
-                if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.i((String)object) && !0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler(string)) break block13;
+                if (HexEncodingHelper.BaseCoreGenericHandler.i((String)object) && !HexEncodingHelper.BaseCoreGenericHandler(string)) break block13;
             }
             throw new IllegalArgumentException(c[7] + string);
         }
@@ -230,7 +230,7 @@ extends Database {
             for (Object t2 : iterable2) {
                 iA2 = (LiteBansModule_297)t2;
                 flag = false;
-                if (!0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler(iA2.LiteBansModule_31())) continue;
+                if (!HexEncodingHelper.BaseCoreGenericHandler(iA2.LiteBansModule_31())) continue;
                 collection.add(t2);
             }
             iterable = (List)collection;
@@ -294,8 +294,8 @@ extends Database {
             LiteBansModule_82 ch2 = (LiteBansModule_82)closeable;
             boolean flag = false;
             LiteBansModule_297 iA2 = ch2.c(string);
-            String string2 = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.g(iA2 != null ? iA2.LiteBansModule_31() : null);
-            if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler(string2)) {
+            String string2 = HexEncodingHelper.BaseCoreGenericHandler.g(iA2 != null ? iA2.LiteBansModule_31() : null);
+            if (HexEncodingHelper.BaseCoreGenericHandler(string2)) {
                 UUID uUID = UUID.fromString(string2);
                 return uUID;
             }

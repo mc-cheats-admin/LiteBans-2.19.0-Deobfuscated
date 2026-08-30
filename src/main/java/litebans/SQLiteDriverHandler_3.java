@@ -509,7 +509,7 @@ implements LiteBansModule_82 {
         if (string2 == null || StringUtilities.BaseCoreGenericHandler((CharSequence)string2, '#', false, 2, null)) {
             return CollectionUtilities.e();
         }
-        NameHandler_3 jp_02 = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.Utf8Handler_2(string2);
+        NameHandler_3 jp_02 = HexEncodingHelper.BaseCoreGenericHandler.Utf8Handler_2(string2);
         String string3 = jp_02.LiteBansModule_31();
         String string4 = LiteBansModule_401.BaseCoreGenericHandler(this, string3);
         if (jp_02.AsyncBackgroundTask_5() == 2 && StringUtilities.c((CharSequence)string2, '*', false, 2, null)) {
@@ -545,7 +545,7 @@ implements LiteBansModule_82 {
 
     @Override
     public LiteBansModule_297 BaseCoreGenericHandler(@NotNull ResultSet resultSet, boolean flag, @Nullable String string) {
-        return new LiteBansModule_297(resultSet.getString(m[58]), 0123456789abcdefmvzabcdefmvzHandler.LiteBansModule_194(resultSet.getString(m[59])), resultSet.getString(m[60]), this.g.BaseCoreGenericHandler(resultSet, m[61], flag, string));
+        return new LiteBansModule_297(resultSet.getString(m[58]), HexEncodingHelper.LiteBansModule_194(resultSet.getString(m[59])), resultSet.getString(m[60]), this.g.BaseCoreGenericHandler(resultSet, m[61], flag, string));
     }
 
     @Override
@@ -585,7 +585,7 @@ implements LiteBansModule_82 {
             boolean flag6;
             boolean flag7;
             Object object4;
-            String string4 = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.g(string);
+            String string4 = HexEncodingHelper.BaseCoreGenericHandler.g(string);
             AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, false, 1, null);
             if (flag2) {
                 object4 = this;
@@ -735,7 +735,7 @@ implements LiteBansModule_82 {
 
     @Override
     public SilentHandler BaseCoreGenericHandler(@NotNull String string, @NotNull BanHandler a_2, @NotNull String string2, boolean flag) {
-        if (!0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.AsyncBackgroundTask_5(string)) {
+        if (!HexEncodingHelper.BaseCoreGenericHandler.AsyncBackgroundTask_5(string)) {
             return null;
         }
         DescHandler hc2 = LiteBansModule_121.BaseCoreGenericHandler(DescHandler.GnuSparseMapHandler, this, string, string2, UuidHandler.AsyncBackgroundTask_5, flag, null, false, null, null, 240, null);
@@ -873,7 +873,7 @@ implements LiteBansModule_82 {
     public List BaseCoreGenericHandler(@NotNull String string) {
         Object object = string;
         boolean flag = false;
-        if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.i((String)object)) {
+        if (HexEncodingHelper.BaseCoreGenericHandler.i((String)object)) {
             return AllHandler_3.LiteBansModule_31(this, string, 0, 2, null);
         }
         object = this.c(string);
@@ -893,7 +893,7 @@ implements LiteBansModule_82 {
         if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)m[124])) {
             return new LiteBansModule_297(m[125], m[126], m[127], null, 8, null);
         }
-        NameHandler_3 jp_02 = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.Utf8Handler_2(string);
+        NameHandler_3 jp_02 = HexEncodingHelper.BaseCoreGenericHandler.Utf8Handler_2(string);
         String string2 = jp_02.LiteBansModule_31();
         String string3 = LiteBansModule_401.BaseCoreGenericHandler(this, string2);
         AsyncBackgroundTask_21 s2 = (AsyncBackgroundTask_21)this.LiteBansModule_240.BaseCoreGenericHandler(AsyncBackgroundTask_21.class);
@@ -937,7 +937,7 @@ implements LiteBansModule_82 {
         if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)m[132])) {
             return CollectionUtilities.BaseCoreGenericHandler(new LiteBansModule_297(m[133], m[134], m[135], null, 8, null));
         }
-        NameHandler_3 jp_02 = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.Utf8Handler_2(string);
+        NameHandler_3 jp_02 = HexEncodingHelper.BaseCoreGenericHandler.Utf8Handler_2(string);
         String string2 = jp_02.LiteBansModule_31();
         String string3 = LiteBansModule_401.BaseCoreGenericHandler(this, string2);
         Object object = this.c((CharSequence)(m[136] + this.g.Utf8Handler_2() + m[137] + BansHandler_2.g + m[138] + string3 + m[139] + n));
@@ -1038,7 +1038,7 @@ implements LiteBansModule_82 {
             throw new IllegalArgumentException(var16_25.toString());
         }
         var4_4 = var23_16.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)var4_4) + SQLiteDriverHandler_3.m[158] + var5_5), SQLiteDriverHandler_3.m[159]), SQLiteDriverHandler_3.m[160]), (Number)1)));
-        var5_5 = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.g(v2);
+        var5_5 = HexEncodingHelper.BaseCoreGenericHandler.g(v2);
         var6_6 = false;
         var8_12 /* !! */  = var7_8 /* !! */  = var4_4;
         var9_15 = false;
@@ -1146,7 +1146,7 @@ implements LiteBansModule_82 {
     public SilentHandler BaseCoreGenericHandler(@NotNull ResultSet resultSet, @NotNull BanHandler a_2) {
         String string;
         BanHandler a_3 = a_2.c();
-        String string2 = 0123456789abcdefmvzabcdefmvzHandler.LiteBansModule_194(resultSet.getString(m[167]));
+        String string2 = HexEncodingHelper.LiteBansModule_194(resultSet.getString(m[167]));
         String string3 = resultSet.getString(m[168]);
         CharSequence charSequence = resultSet.getString(m[169]);
         String string4 = resultSet.getString(m[170]);
@@ -1216,7 +1216,7 @@ implements LiteBansModule_82 {
             }
             ResultSet resultSet2 = resultSet;
             string = m[185];
-            0123456789abcdefmvzabcdefmvzHandler jj_02 = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler;
+            HexEncodingHelper jj_02 = HexEncodingHelper.BaseCoreGenericHandler;
             SilentHandler dZ3 = dZ2;
             boolean flag5 = false;
             try {
@@ -1278,7 +1278,7 @@ implements LiteBansModule_82 {
     @Override
     public void BaseCoreGenericHandler(@Nullable String string, long l3) {
         Object object;
-        String string2 = 0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.g(string);
+        String string2 = HexEncodingHelper.BaseCoreGenericHandler.g(string);
         String string3 = m[189] + DatabaseMonitorService.BaseCoreGenericHandler(this.AsyncBackgroundTask_5(), false, 1, null) + m[190];
         Object object2 = BansHandler_2.values();
         boolean flag = false;
@@ -2217,7 +2217,7 @@ implements LiteBansModule_82 {
     public final SQLiteDriverHandler_5 LiteBansModule_31() {
         DiscordWebhookClient eG2 = this.LiteBansModule_194.LiteBansModule_194();
         boolean flag = false;
-        return new SQLiteDriverHandler_5(Utf8mb4UnicodeCiHandler.g.BaseCoreGenericHandler(eG2.ElementsHandler(), eG2.BanHandler()));
+        return new SQLiteDriverHandler_5(MySqlCharsetHelper.g.BaseCoreGenericHandler(eG2.ElementsHandler(), eG2.BanHandler()));
     }
 
     public final CharSequence BaseCoreGenericHandler(@NotNull BansHandler_2 kL2, @NotNull SQLiteDriverHandler_5 jr_02) {

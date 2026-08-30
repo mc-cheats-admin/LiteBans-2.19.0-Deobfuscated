@@ -1110,7 +1110,7 @@ PreparedStatement {
         }
     }
 
-    LiteBansModule_416(0a000Handler c22, PreparedStatement preparedStatement) {
+    LiteBansModule_416(HexEncodingHelper c22, PreparedStatement preparedStatement) {
         super(c22, preparedStatement);
     }
 }

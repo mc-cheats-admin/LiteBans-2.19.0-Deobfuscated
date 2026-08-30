@@ -278,7 +278,7 @@ public final class AllHandler_3 {
                 if (sender != null) {
                     string4 = e12.BaseCoreGenericHandler(sender.c());
                     string5 = e12.LiteBansModule_31(sender.c());
-                } else if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler(string2)) {
+                } else if (HexEncodingHelper.BaseCoreGenericHandler(string2)) {
                     try {
                         UUID uUID = UUID.fromString(string2);
                         string4 = e12.BaseCoreGenericHandler(uUID);

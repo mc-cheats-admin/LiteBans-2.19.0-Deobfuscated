@@ -3,9 +3,9 @@ package litebans;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class Method64396Handler {
+public class BytecodeReflectionHelper {
     public static LiteBansModule_98 LiteBansModule_31(PlatformPlugin plugin, String string) {
-        ArgsHandler iy2 = Method64396Handler.BaseCoreGenericHandler(plugin, string);
+        ArgsHandler iy2 = BytecodeReflectionHelper.BaseCoreGenericHandler(plugin, string);
         if (iy2 != null) {
             return iy2;
         }
@@ -15,7 +15,7 @@ public class Method64396Handler {
             return new ArgsHandler_2(plugin);
         }
         catch (NoSuchMethodException noSuchMethodException) {
-            return Method64396Handler.c(plugin, string2);
+            return BytecodeReflectionHelper.c(plugin, string2);
         }
         catch (Exception | LinkageError throwable) {
             throw new RuntimeException("Compatibility check failed (1.21) for " + string, throwable);

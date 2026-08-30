@@ -670,7 +670,7 @@ public final class NoneHandler_2 {
         String string3 = null;
         string3 = string2;
         String string4 = this.z.toString();
-        string3 = 0123456789abcdefmvzabcdefmvzHandler.LiteBansModule_194(string3);
+        string3 = HexEncodingHelper.LiteBansModule_194(string3);
         if (q_03.r().LiteBansModule_31() || !q_03.LiteBansModule_194().LockdownService()) {
             q_03.BaseCoreGenericHandler(1, (Object)"Exempting is ");
             return false;
@@ -1102,7 +1102,7 @@ public final class NoneHandler_2 {
                                             am3 = MessageKey.ah;
                                             break;
                                         }
-                                        am3 = MessageKey.0a000Handler;
+                                        am3 = MessageKey.HexEncodingHelper;
                                         break;
                                     }
                                     case 3: {
@@ -1142,7 +1142,7 @@ public final class NoneHandler_2 {
                                             am2 = MessageKey.ah;
                                             break;
                                         }
-                                        am2 = MessageKey.0a000Handler;
+                                        am2 = MessageKey.HexEncodingHelper;
                                         break;
                                     }
                                     case 3: {
@@ -1250,7 +1250,7 @@ public final class NoneHandler_2 {
                             am6 = MessageKey.ah;
                             break;
                         }
-                        am6 = MessageKey.0a000Handler;
+                        am6 = MessageKey.HexEncodingHelper;
                         break;
                     }
                     case 3: {
@@ -1290,7 +1290,7 @@ public final class NoneHandler_2 {
                             am5 = MessageKey.ah;
                             break;
                         }
-                        am5 = MessageKey.0a000Handler;
+                        am5 = MessageKey.HexEncodingHelper;
                         break;
                     }
                     case 3: {
@@ -1428,7 +1428,7 @@ public final class NoneHandler_2 {
             if (!StringUtilities.c((CharSequence)string, '_', false, 2, null)) return false;
             String string2 = string;
             boolean flag = false;
-            if (!0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler.i(string2)) return false;
+            if (!HexEncodingHelper.BaseCoreGenericHandler.i(string2)) return false;
         }
         if (this.D.BaseCoreGenericHandler(string)) return false;
         return true;

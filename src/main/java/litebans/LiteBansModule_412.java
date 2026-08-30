@@ -2319,7 +2319,7 @@ CallableStatement {
         }
     }
 
-    protected LiteBansModule_412(0a000Handler c22, CallableStatement callableStatement) {
+    protected LiteBansModule_412(HexEncodingHelper c22, CallableStatement callableStatement) {
         super(c22, callableStatement);
     }
 }

@@ -172,7 +172,7 @@ lbl58:
                                                     var23_48 = ((ConfigService)var24_54.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().af();
                                                     var26_66 = 0;
                                                     if (var23_48) {
-                                                        if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler((String)var21_33)) {
+                                                        if (HexEncodingHelper.BaseCoreGenericHandler((String)var21_33)) {
                                                             v7 = LiteBansModule_50.c.LiteBansModule_194((String)var21_33);
                                                             if (v7 == null) {
                                                                 v8 = null;
@@ -192,7 +192,7 @@ lbl58:
                                                             }
                                                         }
                                                     } else {
-                                                        if (0123456789abcdefmvzabcdefmvzHandler.BaseCoreGenericHandler((String)var21_33)) {
+                                                        if (HexEncodingHelper.BaseCoreGenericHandler((String)var21_33)) {
                                                             new LiteBansModule_297(LiteBansModule_242.BaseCoreGenericHandler((String)var21_33, 16), (String)var21_33, "#", new Date());
                                                         }
                                                         v8 = new LiteBansModule_297(LiteBansModule_242.BaseCoreGenericHandler((String)var21_33, 16), LiteBansModule_242.BaseCoreGenericHandler((String)var21_33), "#", new Date());
