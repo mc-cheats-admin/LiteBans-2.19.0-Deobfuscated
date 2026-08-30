@@ -37,28 +37,28 @@ public final class ActionHandler {
     }
 
     public String toString() {
-        return "HoverEvent(action=" + (Object)((Object)this.AsyncBackgroundTask_5()) + ", contents=" + this.c() + ", legacy=" + this.LiteBansModule_31() + ")";
+        return "HoverEvent(action=" + (Object)(this.AsyncBackgroundTask_5()) + ", contents=" + this.c() + ", legacy=" + this.LiteBansModule_31() + ")";
     }
 
-    public boolean equals(Object object) {
-        if (object == this) {
+    public boolean equals(Object targetObj) {
+        if (targetObj == this) {
             return true;
         }
-        if (!(object instanceof ActionHandler)) {
+        if (!(targetObj instanceof ActionHandler)) {
             return false;
         }
-        ActionHandler eu_02 = (ActionHandler)object;
+        ActionHandler eu_02 = (ActionHandler)targetObj;
         if (this.LiteBansModule_31() != eu_02.LiteBansModule_31()) {
             return false;
         }
         ShowTextHandler eA2 = this.AsyncBackgroundTask_5();
         ShowTextHandler eA3 = eu_02.AsyncBackgroundTask_5();
-        if (eA2 == null ? eA3 != null : !((Object)((Object)eA2)).equals((Object)eA3)) {
+        if (eA2 == null ? eA3 != null : !((Object)(eA2)).equals(eA3)) {
             return false;
         }
         List list = this.c();
         List list2 = eu_02.c();
-        return !(list == null ? list2 != null : !((Object)list).equals(list2));
+        return !(list == null ? list2 != null : !(list).equals(list2));
     }
 
     public int hashCode() {
@@ -66,9 +66,9 @@ public final class ActionHandler {
         int n2 = 1;
         n2 = n2 * 59 + (this.LiteBansModule_31() ? 79 : 97);
         ShowTextHandler eA2 = this.AsyncBackgroundTask_5();
-        n2 = n2 * 59 + (eA2 == null ? 43 : ((Object)((Object)eA2)).hashCode());
+        n2 = n2 * 59 + (eA2 == null ? 43 : ((Object)(eA2)).hashCode());
         List list = this.c();
-        n2 = n2 * 59 + (list == null ? 43 : ((Object)list).hashCode());
+        n2 = n2 * 59 + (list == null ? 43 : (list).hashCode());
         return n2;
     }
 

@@ -29,7 +29,7 @@ extends BansHandler {
 
     @Override
     public boolean c(@NotNull String string) {
-        return super.c(string) || StringUtilities.BaseCoreGenericHandler((CharSequence)string, (CharSequence)"banned-players", false, 2, null) || StringUtilities.BaseCoreGenericHandler((CharSequence)string, (CharSequence)"essentials", false, 2, null);
+        return super.c(string) || StringUtilities.BaseCoreGenericHandler(string, (CharSequence)"banned-players", false, 2, null) || StringUtilities.BaseCoreGenericHandler(string, (CharSequence)"essentials", false, 2, null);
     }
 
     /*
@@ -37,28 +37,28 @@ extends BansHandler {
      */
     @Override
     public void BaseCoreGenericHandler(@NotNull String string, @NotNull Connection connection, @NotNull LiteBansModule_82 ch2, boolean flag) {
-        Object object = this.n;
-        Object object2 = LiteBansModule_344.LiteBansModule_31;
+        Object targetObj = this.n;
+        Object contextObj = LiteBansModule_344.LiteBansModule_31;
         int n = 8192;
-        Object object3 = object;
-        BufferedReader bufferedReader = (object3 = (Reader)new InputStreamReader((InputStream)new FileInputStream((File)object3), (Charset)object2)) instanceof BufferedReader ? (BufferedReader)object3 : new BufferedReader((Reader)object3, n);
-        object = bufferedReader;
-        object2 = null;
+        Object resultObj = targetObj;
+        BufferedReader bufferedReader = (resultObj = (Reader)new InputStreamReader((InputStream)new FileInputStreamthis, (Charset)contextObj)) instanceof BufferedReader ? (BufferedReader)resultObj : new BufferedReader((Reader)resultObj, n);
+        targetObj = bufferedReader;
+        contextObj = null;
         try {
-            Object object4 = (BufferedReader)object;
+            Object helperObj = (BufferedReader)targetObj;
             String string2 = CollectionUtilities.BaseCoreGenericHandler(ActionHandler_2.BaseCoreGenericHandler((Reader)bufferedReader), null, null, null, 0, null, null, 63, null);
-            Object object5 = NullHandler_5.BaseCoreGenericHandler(string2);
-            ObjectUtilities.LiteBansModule_31(object5, "");
-            NullHandler_7 ks_02 = (NullHandler_7)object5;
+            Object tempObj = NullHandler_5.BaseCoreGenericHandler(string2);
+            ObjectUtilities.LiteBansModule_31(tempObj, "");
+            NullHandler_7 ks_02 = (NullHandler_7)tempObj;
             this.plugin(ks_02, ch2);
-            object4 = KotlinUnitHandler.BaseCoreGenericHandler;
+            helperObj = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable) {
-            object2 = throwable;
+            contextObj = throwable;
             throw throwable;
         }
         finally {
-            BlockHandler.BaseCoreGenericHandler((Closeable)object, (Throwable)object2);
+            BlockHandler.BaseCoreGenericHandler((Closeable)targetObj, (Throwable)contextObj);
 }
 
     private final void BaseCoreGenericHandler(NullHandler_7 ks_02, LiteBansModule_82 ch2) {
@@ -74,10 +74,10 @@ extends BansHandler {
                 Date date = this.m.parse((String)gr_02.get("created"));
                 long l3 = date.getTime();
                 if ((String)gr_02.get("source") == null) continue;
-                string = BlackHandler.BaseCoreGenericHandler((CharSequence)string2);
+                string = BlackHandler.BaseCoreGenericHandler(string2);
                 long l5 = 0L;
                 String string5 = (String)gr_02.get("expires");
-                l5 = ObjectUtilities.BaseCoreGenericHandler((Object)string5, (Object)"forever") ? 0L : this.m.parse(string5).getTime();
+                l5 = ObjectUtilities.BaseCoreGenericHandler(string5, (Object)"forever") ? 0L : this.m.parse(string5).getTime();
                 String string6 = (String)gr_02.get("reason");
                 if (string6 == null) {
                     string6 = "";

@@ -82,14 +82,14 @@ extends FilterInputStream {
         for (l5 = 0L; l5 < l3; l5 += l7) {
             if (this.c == this.LiteBansModule_194) {
                 try {
-                    this.plugin(l3 - l5 < (long)this.LiteBansModule_194);
+                    this.plugin(l3 - l5 < this.LiteBansModule_194);
                 }
                 catch (LiteBansModule_320 it_02) {
                     return -1L;
 }
             l7 = 0L;
-            l7 = (long)this.c + (l3 - l5) <= (long)this.LiteBansModule_194 ? l3 - l5 : (long)this.LiteBansModule_194 - (long)this.c;
-            this.c = (int)((long)this.c + l7);
+            l7 = this.c + (l3 - l5) <= this.LiteBansModule_194 ? l3 - l5 : this.LiteBansModule_194 - this.c;
+            this.c = (int)(this.c + l7);
         }
         return l5;
     }
@@ -114,7 +114,7 @@ extends FilterInputStream {
         }
         if (!this.AsyncBackgroundTask_5 || this.LiteBansModule_31 == -1) {
             this.plugin(this.plugin, 0, this.LiteBansModule_194);
-            this.e += (long)this.LiteBansModule_194;
+            this.e += this.LiteBansModule_194;
         } else {
             boolean flag2;
             this.plugin(this.plugin, 0, 4);
@@ -123,7 +123,7 @@ extends FilterInputStream {
             boolean flag3 = flag2 = (n & 1) == 1;
             if (!flag2) {
                 this.plugin(this.plugin, 0, this.LiteBansModule_194);
-                this.e += (long)this.LiteBansModule_194;
+                this.e += this.LiteBansModule_194;
             } else {
                 int n2 = n >> 1 & 7;
                 int n3 = n >> 4 & 0xFFFFFFF;

@@ -29,40 +29,39 @@ extends PacketAdapter {
         Object[] objectArray = new Object[]{LiteBansModule_370.LiteBansModule_31(LiteBansModule_31), LiteBansModule_370.BaseCoreGenericHandler(LiteBansModule_31)};
         Plugin plugin = BungeecordHandler_2.BaseCoreGenericHandler((BungeecordHandler_2)ec_02, null, 1, null);
         LiteBansModule_134 ds2 = this;
-        Object object = objectArray;
-        Object[] objectArray2 = object;
+        Object targetObj = objectArray;
+        Object[] objectArray2 = targetObj;
         Collection collection = new ArrayList();
         Object[] objectArray3 = objectArray2;
         int n = objectArray3.length;
         for (int i = 0; i < n; ++i) {
             PacketType packetType;
-            Object object2;
-            Object object3 = object2 = objectArray3[i];
-            Object object4 = object3;
-            if ((object4 instanceof PacketType ? (PacketType)object4 : null) == null) continue;
+            Object resultObj = contextObj = objectArray3[i];
+            Object helperObj = resultObj;
+            if ((helperObj instanceof PacketType ? (PacketType)helperObj : null) == null) continue;
             packetType = packetType;
             collection.add(packetType);
         }
-        object = (List)collection;
+        targetObj = (List)collection;
         flag2 = false;
-        objectArray2 = object;
+        objectArray2 = targetObj;
         PacketType[] packetTypeArray2 = packetTypeArray = objectArray2.toArray(new PacketType[0]);
         super(PacketAdapter.params((Plugin)plugin, (PacketType[])Arrays.copyOf(packetTypeArray2, packetTypeArray2.length)).optionAsync());
         this.i = plugin;
-        this.LiteBansModule_194 = (PunishmentTableService)this.i.BaseCoreGenericHandler(PunishmentTableService.class);
-        this.plugin = (BroadcastService)this.i.BaseCoreGenericHandler(BroadcastService.class);
-        this.g = (ConfigService)this.i.BaseCoreGenericHandler(ConfigService.class);
-        this.AsyncBackgroundTask_5 = (DatabaseMonitorService)this.i.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        this.LiteBansModule_194 = this.i.BaseCoreGenericHandler(PunishmentTableService.class);
+        this.plugin = this.i.BaseCoreGenericHandler(BroadcastService.class);
+        this.g = this.i.BaseCoreGenericHandler(ConfigService.class);
+        this.AsyncBackgroundTask_5 = this.i.BaseCoreGenericHandler(DatabaseMonitorService.class);
     }
 
     public void onPacketReceiving(@NotNull PacketEvent packetEvent) {
         PacketType packetType = packetEvent.getPacketType();
-        if (packetEvent.isCancelled() || TemporaryplayerHandler.BaseCoreGenericHandler(packetEvent.getPlayer()) || TemporaryplayerHandler.c(packetEvent.getPlayer()) >= 759 && !ObjectUtilities.BaseCoreGenericHandler((Object)packetType, LiteBansModule_370.BaseCoreGenericHandler(LiteBansModule_31))) {
+        if (packetEvent.isCancelled() || TemporaryplayerHandler.BaseCoreGenericHandler(packetEvent.getPlayer()) || TemporaryplayerHandler.c(packetEvent.getPlayer()) >= 759 && !ObjectUtilities.BaseCoreGenericHandler(packetType, LiteBansModule_370.BaseCoreGenericHandler(LiteBansModule_31))) {
             return;
         }
-        String string = (ObjectUtilities.BaseCoreGenericHandler((Object)packetType, LiteBansModule_370.BaseCoreGenericHandler(LiteBansModule_31)) ? "/" : "") + this.plugin(packetEvent);
-        boolean flag = LiteBansModule_370.BaseCoreGenericHandler(LiteBansModule_31) != null && !ObjectUtilities.BaseCoreGenericHandler((Object)packetType, LiteBansModule_370.BaseCoreGenericHandler(LiteBansModule_31));
-        this.LiteBansModule_194.BaseCoreGenericHandler().BaseCoreGenericHandler((Object)packetEvent, string, this.i.BaseCoreGenericHandler(packetEvent.getPlayer()), flag);
+        String string = (ObjectUtilities.BaseCoreGenericHandler(packetType, LiteBansModule_370.BaseCoreGenericHandler(LiteBansModule_31)) ? "/" : "") + this.plugin(packetEvent);
+        boolean flag = LiteBansModule_370.BaseCoreGenericHandler(LiteBansModule_31) != null && !ObjectUtilities.BaseCoreGenericHandler(packetType, LiteBansModule_370.BaseCoreGenericHandler(LiteBansModule_31));
+        this.LiteBansModule_194.BaseCoreGenericHandler().BaseCoreGenericHandler(packetEvent, string, this.i.BaseCoreGenericHandler(packetEvent.getPlayer()), flag);
     }
 
     public final String BaseCoreGenericHandler(@NotNull PacketEvent packetEvent) {

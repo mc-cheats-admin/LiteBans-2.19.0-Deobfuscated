@@ -27,7 +27,7 @@ implements LiteBansModule_158 {
             Iterable iterable = FabricLoader.getInstance().getAllMods();
             for (Object t2 : iterable) {
                 ModContainer modContainer = (ModContainer)t2;
-                if (!ObjectUtilities.BaseCoreGenericHandler((Object)modContainer.getMetadata().getName(), (Object)string)) continue;
+                if (!ObjectUtilities.BaseCoreGenericHandler(modContainer.getMetadata().getName(), string)) continue;
                 v0 = t2;
                 break;
 }
@@ -64,7 +64,7 @@ implements LiteBansModule_158 {
                 } else {
                     for (Object t3 : iterable3) {
                         ModDependency modDependency = (ModDependency)t3;
-                        if (!ObjectUtilities.BaseCoreGenericHandler((Object)modDependency.getModId(), (Object)string)) continue;
+                        if (!ObjectUtilities.BaseCoreGenericHandler(modDependency.getModId(), string)) continue;
                         flag4 = true;
                         break;
                     }
@@ -98,27 +98,27 @@ implements LiteBansModule_158 {
     }
 
     @Override
-    public void BaseCoreGenericHandler(@NotNull Object object, @NotNull CharSequence charSequence, @NotNull String string, boolean flag, @NotNull String string2) {
-        Object object2 = object;
-        if (object2 instanceof LiteBansModule_422) {
-            ((LiteBansModule_422)object).BaseCoreGenericHandler(((Object)charSequence).toString());
-        } else if (object2 instanceof LiteBansModule_70) {
-            ((LiteBansModule_70)object).BaseCoreGenericHandler(true);
+    public void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence, @NotNull String string, boolean flag, @NotNull String string2) {
+        Object contextObj = targetObj;
+        if (contextObj instanceof LiteBansModule_422) {
+            targetObj.BaseCoreGenericHandler((charSequence).toString());
+        } else if (contextObj instanceof LiteBansModule_70) {
+            targetObj.BaseCoreGenericHandler(true);
 }
 
     @Override
-    public LiteBansModule_95 BaseCoreGenericHandler(@NotNull Object object, boolean flag) {
-        if (!(object instanceof LiteBansModule_422)) {
+    public LiteBansModule_95 BaseCoreGenericHandler(@NotNull Object targetObj, boolean flag) {
+        if (!(targetObj instanceof LiteBansModule_422)) {
             throw new UnsupportedOperationException();
         }
-        return ((LiteBansModule_422)object).BaseCoreGenericHandler();
+        return targetObj.BaseCoreGenericHandler();
     }
 
-    public Void BaseCoreGenericHandler(@NotNull Object object) {
+    public Void BaseCoreGenericHandler(@NotNull Object targetObj) {
         throw new UnsupportedOperationException();
     }
 
-    public Void BaseCoreGenericHandler(@NotNull Object object, @NotNull CharSequence charSequence) {
+    public Void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence) {
         throw new UnsupportedOperationException();
     }
 
@@ -131,8 +131,8 @@ implements LiteBansModule_158 {
         return modContainer.getMetadata().getVersion().getFriendlyString();
     }
 
-    private static final String BaseCoreGenericHandler(LiteBansModule_178 eo_02, Object object) {
-        return (String)eo_02.BaseCoreGenericHandler(object);
+    private static final String BaseCoreGenericHandler(LiteBansModule_178 eo_02, Object targetObj) {
+        return (String)eo_02.BaseCoreGenericHandler(targetObj);
     }
 
     @Override
@@ -141,12 +141,12 @@ implements LiteBansModule_158 {
     }
 
     @Override
-    public String BaseCoreGenericHandler(Object object) {
-        return (String)((Object)this.plugin(object));
+    public String BaseCoreGenericHandler(Object targetObj) {
+        return (String)(this.plugin(targetObj));
     }
 
     @Override
-    public void BaseCoreGenericHandler(Object object, CharSequence charSequence) {
-        this.plugin(object, charSequence);
+    public void BaseCoreGenericHandler(Object targetObj, CharSequence charSequence) {
+        this.plugin(targetObj, charSequence);
 }
 

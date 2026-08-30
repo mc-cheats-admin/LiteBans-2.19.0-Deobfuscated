@@ -13,7 +13,7 @@ implements Runnable {
     @Override
     public void run() {
 {
-                    v1 = (ConfigService)this.LiteBansModule_31.BaseCoreGenericHandler(ConfigService.class);
+                    v1 = this.LiteBansModule_31.BaseCoreGenericHandler(ConfigService.class);
                     ObjectUtilities.BaseCoreGenericHandler(v1);
                     arg1 = AbstractCommand.AsyncBackgroundTask_5;
                     arg2 = "update";
@@ -52,7 +52,7 @@ implements Runnable {
         arg8 = v0;
         arg9 = new LiteBansModule_15(new LiteBansModule_403(v1, Arrays.copyOf(arg8, ((String[])arg8).length)).LiteBansModule_31(), "disabled", "false", null);
         v1.BaseCoreGenericHandler(arg9);
-        arg8 = ((DatabaseMonitorService)this.LiteBansModule_31.BaseCoreGenericHandler(DatabaseMonitorService.class)).LiteBansModule_401();
+        arg8 = (this.LiteBansModule_31.BaseCoreGenericHandler(DatabaseMonitorService.class)).LiteBansModule_401();
         if (arg8 != null) {
             arg8.BaseCoreGenericHandler(arg9.e());
             arg8.LiteBansModule_31(arg9.AsyncBackgroundTask_5());

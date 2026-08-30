@@ -39,24 +39,20 @@ extends MessageHandler {
     @Override
     public void run() {
 {
-            Object object = this;
-            object = (DatabaseMonitorService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+                        targetObj = (DatabaseMonitorService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
             flag = false;
             try {
-                LiteBansModule_82 ch2 = ((DatabaseMonitorService)object).LiteBansModule_194();
+                LiteBansModule_82 ch2 = targetObj.LiteBansModule_194();
                 Closeable closeable = ch2;
                 Throwable throwable = null;
                 try {
-                    Object object2;
-                    Object object32;
-                    Object object4 = (LiteBansModule_82)closeable;
+                    Object helperObj = (LiteBansModule_82)closeable;
                     LiteBansModule_82 ch3 = ch2;
                     MessageHandler messageHandler = this;
-                    Object object5 = messageHandler;
-                    DiscordWebhookClient eG2 = ((ConfigService)((MessageHandler)object5).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194();
+                    Object tempObj = messageHandler;
+                    DiscordWebhookClient eG2 = ((ConfigService)((MessageHandler)tempObj).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194();
                     messageHandler = new LiteBansModule_206(this.g, ch3, null, false, 0, 28, null).i();
-                    Object object6 = this;
-                    object5 = ch3;
+                                        tempObj = ch3;
                     flag5 = false;
                     Object object7 = (MessageHandler)object6;
                     Object object8 = object7;
@@ -64,7 +60,7 @@ extends MessageHandler {
                     UUID uUID = HexEncodingHelper.BaseCoreGenericHandler.GnuSparseMapHandler(((AltsHandler)object6).AsyncBackgroundTask_5());
                     if (uUID != null) {
                         object7 = uUID;
-                        if (((DiscordWebhookClient)object9).e() > 1 && object5.AsyncBackgroundTask_5().CommandThrottleService() && ((LiteBansModule_206)messageHandler).n() && !AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)object5, (UUID)object7, null, 2, null)) {
+                        if (((DiscordWebhookClient)object9).e() > 1 && tempObj.AsyncBackgroundTask_5().CommandThrottleService() && ((LiteBansModule_206)messageHandler).n() && !AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)tempObj, (UUID)object7, null, 2, null)) {
                             Object v1;
 {
                                 Iterable iterable = ((LiteBansModule_206)messageHandler).LiteBansModule_240();
@@ -79,34 +75,34 @@ extends MessageHandler {
                                 LiteBansModule_327 j04 = j03;
                                 SilentHandler dZ2 = j04.c();
                                 ObjectUtilities.BaseCoreGenericHandler(dZ2);
-                                CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_82)object5, j04, dZ2, ((AltsHandler)object6).BaseCoreGenericHandler(), ((AltsHandler)object6).c(), ((AltsHandler)object6).AsyncBackgroundTask_5(), ((AltsHandler)object6).c(), false, 64, null);
+                                CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_82)tempObj, j04, dZ2, ((AltsHandler)object6).BaseCoreGenericHandler(), ((AltsHandler)object6).c(), ((AltsHandler)object6).AsyncBackgroundTask_5(), ((AltsHandler)object6).c(), false, 64, null);
                                 if (((DiscordWebhookClient)object9).e() > 2) {
                                     boolean bl9;
                                     LiteBansModule_327 j05;
                                     Object t2;
                                     Iterable iterable = ((LiteBansModule_206)messageHandler).LiteBansModule_240();
-                                    object2 = iterable;
+                                    contextObj = iterable;
                                     object32 = new ArrayList();
-                                    Iterator iterator = object2.iterator();
+                                    Iterator iterator = contextObj.iterator();
                                     while (iterator.hasNext()) {
                                         t2 = iterator.next();
                                         j05 = (LiteBansModule_327)t2;
                                         bl9 = false;
-                                        if (!(!ObjectUtilities.BaseCoreGenericHandler((Object)j05.LiteBansModule_31(), (Object)((AltsHandler)object6).AsyncBackgroundTask_5()) && j05.c() == null)) continue;
+                                        if (!(!ObjectUtilities.BaseCoreGenericHandler(j05.LiteBansModule_31(), (Object)((AltsHandler)object6).AsyncBackgroundTask_5()) && j05.c() == null)) continue;
                                         object32.add(t2);
                                     }
                                     iterable = (List)object32;
                                     bl10 = false;
-                                    object2 = iterable;
+                                    contextObj = iterable;
                                     object32 = new ArrayList();
                                     bl11 = false;
-                                    iterator = object2.iterator();
+                                    iterator = contextObj.iterator();
                                     while (iterator.hasNext()) {
                                         UUID uUID2;
                                         t2 = iterator.next();
                                         j05 = (LiteBansModule_327)t2;
                                         bl9 = false;
-                                        if (!(HexEncodingHelper.BaseCoreGenericHandler.GnuSparseMapHandler(j05.LiteBansModule_31()) == null ? false : !AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)object5, uUID2, null, 2, null))) continue;
+                                        if (!(HexEncodingHelper.BaseCoreGenericHandler.GnuSparseMapHandler(j05.LiteBansModule_31()) == null ? false : !AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)tempObj, uUID2, null, 2, null))) continue;
                                         object32.add(t2);
                                     }
                                     object8 = (List)object32;
@@ -114,7 +110,7 @@ extends MessageHandler {
                                     bl10 = false;
                                     for (Object object32 : iterable) {
                                         LiteBansModule_327 j06 = (LiteBansModule_327)object32;
-                                        CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_82)object5, j06, j04.c(), j06.e(), ((AltsHandler)object6).c(), j06.LiteBansModule_31(), ((AltsHandler)object6).c(), true);
+                                        CommandArgumentUtils.BaseCoreGenericHandler((LiteBansModule_82)tempObj, j06, j04.c(), j06.e(), ((AltsHandler)object6).c(), j06.LiteBansModule_31(), ((AltsHandler)object6).c(), true);
 }
                     object6 = messageHandler;
                     if (!((LiteBansModule_206)object6).e() && (((LiteBansModule_206)messageHandler).n() && eG2.LiteBansModule_27() || ((LiteBansModule_206)messageHandler).LiteBansModule_31() && eG2.PluginHookService() || ((LiteBansModule_206)messageHandler).m() >= eG2.ValueHandler())) {
@@ -138,14 +134,14 @@ extends MessageHandler {
                         object8 = messageHandler;
                         flag7 = false;
                         object9 = object8;
-                        object2 = ((ConfigService)((MessageHandler)object9).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_31().BaseCoreGenericHandler("alts");
-                        if (((CharSequence)object2).length() > 0) {
-                            object9 = ((Object)object10.BaseCoreGenericHandler((CharSequence)MessageKey.HistoryCleanupTask, ((LiteBansModule_206)object8).LiteBansModule_401(), false)).toString();
-                            CharSequence charSequence2 = object10.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler((CharSequence)((LiteBansModule_206)messageHandler).c(), (CharSequence)MessageKey.HikariPool), ((LiteBansModule_206)object8).LiteBansModule_401(), false);
-                            object32 = object10.BaseCoreGenericHandler((CharSequence)MessageKey.bt, ((LiteBansModule_206)object8).LiteBansModule_401(), false);
-                            ContentHandler.GnuSparseMapHandler.BaseCoreGenericHandler((LiteBansModule_82)object10, new ContentHandler((String)object2), (CharSequence)object32, charSequence2, ContentHandler.GnuSparseMapHandler.BaseCoreGenericHandler((LiteBansModule_82)object10, MessageKey.ca), (String)object9, null, false);
+                        contextObj = ((ConfigService)((MessageHandler)object9).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_31().BaseCoreGenericHandler("alts");
+                        if ((contextObj).length() > 0) {
+                            object9 = (object10.BaseCoreGenericHandler(MessageKey.HistoryCleanupTask, ((LiteBansModule_206)object8).LiteBansModule_401(), false)).toString();
+                            CharSequence charSequence2 = object10.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler((CharSequence)((LiteBansModule_206)messageHandler).c(), MessageKey.HikariPool), ((LiteBansModule_206)object8).LiteBansModule_401(), false);
+                            object32 = object10.BaseCoreGenericHandler(MessageKey.bt, ((LiteBansModule_206)object8).LiteBansModule_401(), false);
+                            ContentHandler.GnuSparseMapHandler.BaseCoreGenericHandler((LiteBansModule_82)object10, new ContentHandler((String)contextObj), object32, charSequence2, ContentHandler.GnuSparseMapHandler.BaseCoreGenericHandler((LiteBansModule_82)object10, MessageKey.ca), (String)object9, null, false);
 }
-                    object4 = KotlinUnitHandler.BaseCoreGenericHandler;
+                    helperObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable2) {
                     throwable = throwable2;
@@ -155,13 +151,13 @@ extends MessageHandler {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
 }
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break;
+                if (targetObj.LiteBansModule_31(sQLException)) break;
                 throw sQLException;
 }
 
     public final CharSequence BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull LiteBansModule_297 iA2, @NotNull LiteBansModule_206 fW2) {
-        CharSequence charSequence = fW2.LiteBansModule_194() ? (CharSequence)MessageKey.PoolBase.BaseCoreGenericHandler("num", (Object)fW2.Utf8Handler_2()) : (CharSequence)this.LiteBansModule_194;
-        return LiteBansModule_242.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler(ch2, (CharSequence)MessageKey.P.BaseCoreGenericHandler("ip", (Object)charSequence), iA2, false, 2, null), (CharSequence)fW2.c()), (CharSequence)MessageKey.HikariPool);
+        CharSequence charSequence = fW2.LiteBansModule_194() ? MessageKey.PoolBase.BaseCoreGenericHandler("num", fW2.Utf8Handler_2()) : this.LiteBansModule_194;
+        return LiteBansModule_242.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler(ch2, MessageKey.P.BaseCoreGenericHandler("ip", charSequence), iA2, false, 2, null), fW2.c()), MessageKey.HikariPool);
     }
 
     private static final KotlinUnitHandler BaseCoreGenericHandler(CharSequence charSequence, LiteBansModule_82 ch2) {

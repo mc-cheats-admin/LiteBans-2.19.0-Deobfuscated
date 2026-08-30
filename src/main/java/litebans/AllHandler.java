@@ -14,7 +14,7 @@ implements CharSequence {
         this.AsyncBackgroundTask_5 = string;
         this.AsyncBackgroundTask_5 = LiteBansModule_181.LiteBansModule_194.c(this.AsyncBackgroundTask_5);
         AllHandler jJ2 = this;
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)jJ2.AsyncBackgroundTask_5, (Object)"__ALL__")) {
+        if (ObjectUtilities.BaseCoreGenericHandler(jJ2.AsyncBackgroundTask_5, (Object)"__ALL__")) {
             by2 = 0;
         } else {
             String string2 = jJ2.AsyncBackgroundTask_5().ServerSyncService();
@@ -22,7 +22,7 @@ implements CharSequence {
             if (jJ2.AsyncBackgroundTask_5 != null && !LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(jJ2.AsyncBackgroundTask_5)) {
                 by3 = (byte)(by3 + 1);
             }
-            if (jJ2.LiteBansModule_31.LiteBansModule_401() && !ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)jJ2.AsyncBackgroundTask_5)) {
+            if (jJ2.LiteBansModule_31.LiteBansModule_401() && !ObjectUtilities.BaseCoreGenericHandler(string2, jJ2.AsyncBackgroundTask_5)) {
                 by3 = (byte)(by3 + 1);
             }
             by2 = by3;
@@ -35,7 +35,7 @@ implements CharSequence {
     }
 
     public final DatabaseMonitorService AsyncBackgroundTask_5() {
-        return (DatabaseMonitorService)this.LiteBansModule_31.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        return this.LiteBansModule_31.BaseCoreGenericHandler(DatabaseMonitorService.class);
     }
 
     public void BaseCoreGenericHandler(@NotNull LiteBansModule_60 bT2) {

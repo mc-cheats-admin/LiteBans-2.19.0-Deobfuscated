@@ -31,35 +31,28 @@ extends BansHandler {
      */
     private final void BaseCoreGenericHandler(Connection connection, boolean flag, LiteBansModule_82 ch2, BanHandler a_2, String string) {
         String string2 = "SELECT * FROM " + this.i() + "applicable_" + string;
-        Object object = this;
-        object = (ConfigService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
+                targetObj = (ConfigService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
         flag2 = false;
-        if (((ConfigService)object).g()) {
-            Object object2 = object;
-            ((ConfigService)object2).BaseCoreGenericHandler((Object)string2);
+        if (targetObj.g()) {
+            Object contextObj = targetObj;
+            ((ConfigService)contextObj).BaseCoreGenericHandler(string2);
         }
-        object = connection.prepareStatement(string2);
-        AutoCloseable autoCloseable = (AutoCloseable)object;
+        targetObj = connection.prepareStatement(string2);
+        AutoCloseable autoCloseable = (AutoCloseable)targetObj;
         Throwable throwable = null;
         try {
-            Object object3 = (PreparedStatement)autoCloseable;
-            if (object.execute()) {
-                ResultSet resultSet = object.getResultSet();
+            Object resultObj = (PreparedStatement)autoCloseable;
+            if (targetObj.execute()) {
+                ResultSet resultSet = targetObj.getResultSet();
                 AutoCloseable autoCloseable2 = resultSet;
                 Throwable throwable2 = null;
                 try {
-                    Object object4 = (ResultSet)autoCloseable2;
+                    Object helperObj = (ResultSet)autoCloseable2;
                     while (resultSet.next()) {
-                        Object object5;
                         String string3;
-                        Object object6;
                         long l3;
                         long l5;
-                        Object object7;
                         UUID uUID;
-                        Object object8;
-                        Object object9;
-                        Object object10;
 {
                             boolean flag6;
                             boolean flag7;
@@ -79,7 +72,7 @@ extends BansHandler {
                                 byArray = object9.getBytes("uuid");
                                 object12 = byArray;
                                 bl9 = false;
-                                if (object12 != null && ((Object)object12).length == 16) {
+                                if (object12 != null && (object12).length == 16) {
                                     object12 = byArray;
                                     ObjectUtilities.BaseCoreGenericHandler(object12);
                                     object11 = LiteBansModule_286.BaseCoreGenericHandler((byte[])object12);
@@ -96,11 +89,11 @@ extends BansHandler {
                             uUID = object11;
                             object9 = this;
                             object7 = resultSet;
-                            object12 = object11 = (Object)object7.getBytes("operator");
+                            object12 = object11 = object7.getBytes("operator");
                             bl9 = false;
                             object8 = object12;
                             flag7 = false;
-                            if (!(object8 != null && ((Object)object8).length == 16)) {
+                            if (!(object8 != null && (object8).length == 16)) {
                                 object11 = ((LibertybansHandler)object9).BaseCoreGenericHandler();
                             }
                             object12 = object11;
@@ -129,14 +122,14 @@ extends BansHandler {
                             if (uUID == null) {
                                 string3 = null;
                             } else {
-                                object5 = connection.prepareStatement("SELECT name FROM " + ((BansHandler)object6).i() + "latest_names WHERE uuid=?");
-                                AutoCloseable autoCloseable3 = (AutoCloseable)object5;
+                                tempObj = connection.prepareStatement("SELECT name FROM " + ((BansHandler)object6).i() + "latest_names WHERE uuid=?");
+                                AutoCloseable autoCloseable3 = (AutoCloseable)tempObj;
                                 Throwable throwable3 = null;
                                 try {
                                     Object object13 = (PreparedStatement)autoCloseable3;
-                                    object5.setBytes(1, LiteBansModule_286.BaseCoreGenericHandler(uUID));
-                                    object5.execute();
-                                    ResultSet resultSet3 = object5.getResultSet();
+                                    tempObj.setBytes(1, LiteBansModule_286.BaseCoreGenericHandler(uUID));
+                                    tempObj.execute();
+                                    ResultSet resultSet3 = tempObj.getResultSet();
                                     if (resultSet3 != null && resultSet3.next()) {
                                         String string4 = resultSet3.getString(1);
                                         string3 = string4;
@@ -157,10 +150,10 @@ extends BansHandler {
                         ObjectUtilities.BaseCoreGenericHandler(object7);
                         object6 = object7;
                         String string5 = this.plugin((UUID)object10);
-                        object5 = object9;
-                        BansHandler.BaseCoreGenericHandler(this, ch2, (String)object8, (String)object6, l5, l3, string5, uUID, (UUID)object10, (String)object5, null, a_2, 512, null);
+                        tempObj = object9;
+                        BansHandler.BaseCoreGenericHandler(this, ch2, (String)object8, (String)object6, l5, l3, string5, uUID, (UUID)object10, (String)tempObj, null, a_2, 512, null);
                     }
-                    object4 = KotlinUnitHandler.BaseCoreGenericHandler;
+                    helperObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable5) {
                     throwable2 = throwable5;
@@ -169,7 +162,7 @@ extends BansHandler {
                 finally {
                     CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
 }
-            object3 = KotlinUnitHandler.BaseCoreGenericHandler;
+            resultObj = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable6) {
             throwable = throwable6;
@@ -179,7 +172,7 @@ extends BansHandler {
             CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
 }
 
-    static /* synthetic */ void BaseCoreGenericHandler(LibertybansHandler fm2, Connection connection, boolean flag, LiteBansModule_82 ch2, BanHandler a_2, String string, int n, Object object) {
+    static /* synthetic */ void BaseCoreGenericHandler(LibertybansHandler fm2, Connection connection, boolean flag, LiteBansModule_82 ch2, BanHandler a_2, String string, int n, Object targetObj) {
         if ((n & 0x10) != 0) {
             String string2 = a_2.BaseCoreGenericHandler().name();
             string = string2.toLowerCase(Locale.ENGLISH);

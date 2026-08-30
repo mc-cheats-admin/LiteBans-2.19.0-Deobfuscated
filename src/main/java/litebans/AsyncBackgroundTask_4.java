@@ -30,25 +30,25 @@ implements Runnable {
                 logger2.info("Downloading GeoIP API.. + ");
                 for (String string2 : eG2.g()) {
                     CharSequence charSequence = string2;
-                    Object object = new NativepatternHandler(":(?!(//))");
+                    Object targetObj = new NativepatternHandler(":(?!(//))");
                     int n2 = 2;
-                    List list = ((NativepatternHandler)object).BaseCoreGenericHandler(charSequence, n2);
+                    List list = targetObj.BaseCoreGenericHandler(charSequence, n2);
                     charSequence = (String)list.get(0);
-                    object = (String)CollectionUtilities.BaseCoreGenericHandler(list, 1);
-                    if (ObjectUtilities.BaseCoreGenericHandler(object, (Object)"d4f611abd54f725c67ade1983e5637140fac151dbbbe223ce894b7100d2a090c")) {
-                        object = "81035e738fc392bcfb00be5d39f50fde56692ba305b21338412da9c0fc98e3fb";
+                    targetObj = (String)CollectionUtilities.BaseCoreGenericHandler(list, 1);
+                    if (ObjectUtilities.BaseCoreGenericHandler(targetObj, (Object)"d4f611abd54f725c67ade1983e5637140fac151dbbbe223ce894b7100d2a090c")) {
+                        targetObj = "81035e738fc392bcfb00be5d39f50fde56692ba305b21338412da9c0fc98e3fb";
                     }
                     String string3 = args.getAbsolutePath() + File.separator + ((String)charSequence).substring(StringUtilities.LiteBansModule_31(charSequence, '/', 0, false, 6, null) + 1);
                     MariaDBDriverHandler.BaseCoreGenericHandler(ConfigService.GnuSparseMapHandler, string3, (String)charSequence, null, null, 12, null);
                     File file2 = new File(string3);
                     String string4 = ConfigService.GnuSparseMapHandler.LiteBansModule_31(LiteBansModule_373.BaseCoreGenericHandler(file2));
-                    if (object == null || ObjectUtilities.BaseCoreGenericHandler((Object)string4, object)) continue;
+                    if (targetObj == null || ObjectUtilities.BaseCoreGenericHandler(string4, targetObj)) continue;
                     file2.delete();
-                    throw new LiteBansException_9(file2, (String)object, string4);
+                    throw new LiteBansException_9(file2, (String)targetObj, string4);
                 }
                 if (!file.exists()) {
                     logger2.info("Downloading GeoIP database (" + string + ").. + ");
-                    if (StringUtilities.BaseCoreGenericHandler((CharSequence)eG2.Utf8Handler_2(), (CharSequence)"YOUR_LICENSE_KEY", false, 2, null) || StringUtilities.BaseCoreGenericHandler((CharSequence)eG2.Utf8Handler_2(), (CharSequence)"/geolite + ", false, 2, null)) {
+                    if (StringUtilities.BaseCoreGenericHandler(eG2.Utf8Handler_2(), (CharSequence)"YOUR_LICENSE_KEY", false, 2, null) || StringUtilities.BaseCoreGenericHandler(eG2.Utf8Handler_2(), (CharSequence)"/geolite + ", false, 2, null)) {
                         logger2.warning("GeoIP download URL has not yet been ");
                         logger2.warning("https://gitlab.com/ruany/LiteBans/-/wikis/GeoIP#geoip-download-issue");
                         return;

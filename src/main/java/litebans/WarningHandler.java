@@ -32,7 +32,7 @@ extends java.util.logging.Logger {
     }
 
     @Override
-    public void entering(String string, String string2, Object object) {
+    public void entering(String string, String string2, Object targetObj) {
         throw new UnsupportedOperationException();
     }
 
@@ -47,7 +47,7 @@ extends java.util.logging.Logger {
     }
 
     @Override
-    public void exiting(String string, String string2, Object object) {
+    public void exiting(String string, String string2, Object targetObj) {
         throw new UnsupportedOperationException();
     }
 
@@ -198,7 +198,7 @@ extends java.util.logging.Logger {
     }
 
     @Override
-    public void log(Level level, String string, Object object) {
+    public void log(Level level, String string, Object targetObj) {
         throw new UnsupportedOperationException();
     }
 
@@ -226,7 +226,7 @@ extends java.util.logging.Logger {
     }
 
     @Override
-    public void logp(Level level, String string, String string2, String string3, Object object) {
+    public void logp(Level level, String string, String string2, String string3, Object targetObj) {
         throw new UnsupportedOperationException();
     }
 

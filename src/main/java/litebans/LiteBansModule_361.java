@@ -9,10 +9,10 @@ implements Comparator {
         this.plugin = a_2;
     }
 
-    public final int compare(Object object, Object object2) {
-        LiteBansModule_109 cy2 = (LiteBansModule_109)object2;
+    public final int compare(Object targetObj, Object contextObj) {
+        LiteBansModule_109 cy2 = (LiteBansModule_109)contextObj;
         LiteBansModule_34 b32 = cy2.AsyncBackgroundTask_5();
-        cy2 = (LiteBansModule_109)object;
+        cy2 = (LiteBansModule_109)targetObj;
         Comparable comparable = Long.valueOf(b32.BaseCoreGenericHandler(this.plugin));
         flag = false;
         b32 = cy2.AsyncBackgroundTask_5();

@@ -33,7 +33,7 @@ Statement,
 PreparedStatement {
     public boolean isWrapperFor(Class clazz) {
         try {
-            return ((PreparedStatement)this.plugin).isWrapperFor(clazz);
+            return (this.plugin).isWrapperFor(clazz);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -60,7 +60,7 @@ PreparedStatement {
     @Override
     public int getMaxFieldSize() {
         try {
-            return ((PreparedStatement)this.plugin).getMaxFieldSize();
+            return (this.plugin).getMaxFieldSize();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -69,7 +69,7 @@ PreparedStatement {
     @Override
     public void setMaxFieldSize(int n) {
         try {
-            ((PreparedStatement)this.plugin).setMaxFieldSize(n);
+            (this.plugin).setMaxFieldSize(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -78,7 +78,7 @@ PreparedStatement {
     @Override
     public int getMaxRows() {
         try {
-            return ((PreparedStatement)this.plugin).getMaxRows();
+            return (this.plugin).getMaxRows();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -87,7 +87,7 @@ PreparedStatement {
     @Override
     public void setMaxRows(int n) {
         try {
-            ((PreparedStatement)this.plugin).setMaxRows(n);
+            (this.plugin).setMaxRows(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -96,7 +96,7 @@ PreparedStatement {
     @Override
     public void setEscapeProcessing(boolean flag) {
         try {
-            ((PreparedStatement)this.plugin).setEscapeProcessing(flag);
+            (this.plugin).setEscapeProcessing(flag);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -105,7 +105,7 @@ PreparedStatement {
     @Override
     public int getQueryTimeout() {
         try {
-            return ((PreparedStatement)this.plugin).getQueryTimeout();
+            return (this.plugin).getQueryTimeout();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -114,7 +114,7 @@ PreparedStatement {
     @Override
     public void setQueryTimeout(int n) {
         try {
-            ((PreparedStatement)this.plugin).setQueryTimeout(n);
+            (this.plugin).setQueryTimeout(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -123,7 +123,7 @@ PreparedStatement {
     @Override
     public void cancel() {
         try {
-            ((PreparedStatement)this.plugin).cancel();
+            (this.plugin).cancel();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -132,7 +132,7 @@ PreparedStatement {
     @Override
     public SQLWarning getWarnings() {
         try {
-            return ((PreparedStatement)this.plugin).getWarnings();
+            return (this.plugin).getWarnings();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -141,7 +141,7 @@ PreparedStatement {
     @Override
     public void clearWarnings() {
         try {
-            ((PreparedStatement)this.plugin).clearWarnings();
+            (this.plugin).clearWarnings();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -150,7 +150,7 @@ PreparedStatement {
     @Override
     public void setCursorName(String string) {
         try {
-            ((PreparedStatement)this.plugin).setCursorName(string);
+            (this.plugin).setCursorName(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -177,7 +177,7 @@ PreparedStatement {
     @Override
     public int getUpdateCount() {
         try {
-            return ((PreparedStatement)this.plugin).getUpdateCount();
+            return (this.plugin).getUpdateCount();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -186,7 +186,7 @@ PreparedStatement {
     @Override
     public boolean getMoreResults() {
         try {
-            return ((PreparedStatement)this.plugin).getMoreResults();
+            return (this.plugin).getMoreResults();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -195,7 +195,7 @@ PreparedStatement {
     @Override
     public void setFetchDirection(int n) {
         try {
-            ((PreparedStatement)this.plugin).setFetchDirection(n);
+            (this.plugin).setFetchDirection(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -204,7 +204,7 @@ PreparedStatement {
     @Override
     public int getFetchDirection() {
         try {
-            return ((PreparedStatement)this.plugin).getFetchDirection();
+            return (this.plugin).getFetchDirection();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -213,7 +213,7 @@ PreparedStatement {
     @Override
     public void setFetchSize(int n) {
         try {
-            ((PreparedStatement)this.plugin).setFetchSize(n);
+            (this.plugin).setFetchSize(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -222,7 +222,7 @@ PreparedStatement {
     @Override
     public int getFetchSize() {
         try {
-            return ((PreparedStatement)this.plugin).getFetchSize();
+            return (this.plugin).getFetchSize();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -231,7 +231,7 @@ PreparedStatement {
     @Override
     public int getResultSetConcurrency() {
         try {
-            return ((PreparedStatement)this.plugin).getResultSetConcurrency();
+            return (this.plugin).getResultSetConcurrency();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -240,7 +240,7 @@ PreparedStatement {
     @Override
     public int getResultSetType() {
         try {
-            return ((PreparedStatement)this.plugin).getResultSetType();
+            return (this.plugin).getResultSetType();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -249,7 +249,7 @@ PreparedStatement {
     @Override
     public void addBatch(String string) {
         try {
-            ((PreparedStatement)this.plugin).addBatch(string);
+            (this.plugin).addBatch(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -258,7 +258,7 @@ PreparedStatement {
     @Override
     public void clearBatch() {
         try {
-            ((PreparedStatement)this.plugin).clearBatch();
+            (this.plugin).clearBatch();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -285,7 +285,7 @@ PreparedStatement {
     @Override
     public boolean getMoreResults(int n) {
         try {
-            return ((PreparedStatement)this.plugin).getMoreResults(n);
+            return (this.plugin).getMoreResults(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -357,7 +357,7 @@ PreparedStatement {
     @Override
     public int getResultSetHoldability() {
         try {
-            return ((PreparedStatement)this.plugin).getResultSetHoldability();
+            return (this.plugin).getResultSetHoldability();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -375,7 +375,7 @@ PreparedStatement {
     @Override
     public void setPoolable(boolean flag) {
         try {
-            ((PreparedStatement)this.plugin).setPoolable(flag);
+            (this.plugin).setPoolable(flag);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -384,7 +384,7 @@ PreparedStatement {
     @Override
     public boolean isPoolable() {
         try {
-            return ((PreparedStatement)this.plugin).isPoolable();
+            return (this.plugin).isPoolable();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -393,7 +393,7 @@ PreparedStatement {
     @Override
     public void closeOnCompletion() {
         try {
-            ((PreparedStatement)this.plugin).closeOnCompletion();
+            (this.plugin).closeOnCompletion();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -402,7 +402,7 @@ PreparedStatement {
     @Override
     public boolean isCloseOnCompletion() {
         try {
-            return ((PreparedStatement)this.plugin).isCloseOnCompletion();
+            return (this.plugin).isCloseOnCompletion();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -411,7 +411,7 @@ PreparedStatement {
     @Override
     public long getLargeUpdateCount() {
         try {
-            return ((PreparedStatement)this.plugin).getLargeUpdateCount();
+            return (this.plugin).getLargeUpdateCount();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -420,7 +420,7 @@ PreparedStatement {
     @Override
     public void setLargeMaxRows(long l3) {
         try {
-            ((PreparedStatement)this.plugin).setLargeMaxRows(l3);
+            (this.plugin).setLargeMaxRows(l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -429,7 +429,7 @@ PreparedStatement {
     @Override
     public long getLargeMaxRows() {
         try {
-            return ((PreparedStatement)this.plugin).getLargeMaxRows();
+            return (this.plugin).getLargeMaxRows();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -438,7 +438,7 @@ PreparedStatement {
     @Override
     public long[] executeLargeBatch() {
         try {
-            return ((PreparedStatement)this.plugin).executeLargeBatch();
+            return (this.plugin).executeLargeBatch();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -447,7 +447,7 @@ PreparedStatement {
     @Override
     public long executeLargeUpdate(String string) {
         try {
-            return ((PreparedStatement)this.plugin).executeLargeUpdate(string);
+            return (this.plugin).executeLargeUpdate(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -456,7 +456,7 @@ PreparedStatement {
     @Override
     public long executeLargeUpdate(String string, int n) {
         try {
-            return ((PreparedStatement)this.plugin).executeLargeUpdate(string, n);
+            return (this.plugin).executeLargeUpdate(string, n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -465,7 +465,7 @@ PreparedStatement {
     @Override
     public long executeLargeUpdate(String string, int[] nArray) {
         try {
-            return ((PreparedStatement)this.plugin).executeLargeUpdate(string, nArray);
+            return (this.plugin).executeLargeUpdate(string, nArray);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -474,7 +474,7 @@ PreparedStatement {
     @Override
     public long executeLargeUpdate(String string, String[] args) {
         try {
-            return ((PreparedStatement)this.plugin).executeLargeUpdate(string, args);
+            return (this.plugin).executeLargeUpdate(string, args);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -501,7 +501,7 @@ PreparedStatement {
     @Override
     public void setNull(int n, int n2) {
         try {
-            ((PreparedStatement)this.plugin).setNull(n, n2);
+            (this.plugin).setNull(n, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -510,7 +510,7 @@ PreparedStatement {
     @Override
     public void setBoolean(int n, boolean flag) {
         try {
-            ((PreparedStatement)this.plugin).setBoolean(n, flag);
+            (this.plugin).setBoolean(n, flag);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -519,7 +519,7 @@ PreparedStatement {
     @Override
     public void setByte(int n, byte by2) {
         try {
-            ((PreparedStatement)this.plugin).setByte(n, by2);
+            (this.plugin).setByte(n, by2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -528,7 +528,7 @@ PreparedStatement {
     @Override
     public void setShort(int n, short s2) {
         try {
-            ((PreparedStatement)this.plugin).setShort(n, s2);
+            (this.plugin).setShort(n, s2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -537,7 +537,7 @@ PreparedStatement {
     @Override
     public void setInt(int n, int n2) {
         try {
-            ((PreparedStatement)this.plugin).setInt(n, n2);
+            (this.plugin).setInt(n, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -546,7 +546,7 @@ PreparedStatement {
     @Override
     public void setLong(int n, long l3) {
         try {
-            ((PreparedStatement)this.plugin).setLong(n, l3);
+            (this.plugin).setLong(n, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -555,7 +555,7 @@ PreparedStatement {
     @Override
     public void setFloat(int n, float f10) {
         try {
-            ((PreparedStatement)this.plugin).setFloat(n, f10);
+            (this.plugin).setFloat(n, f10);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -564,7 +564,7 @@ PreparedStatement {
     @Override
     public void setDouble(int n, double d10) {
         try {
-            ((PreparedStatement)this.plugin).setDouble(n, d10);
+            (this.plugin).setDouble(n, d10);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -573,7 +573,7 @@ PreparedStatement {
     @Override
     public void setBigDecimal(int n, BigDecimal bigDecimal) {
         try {
-            ((PreparedStatement)this.plugin).setBigDecimal(n, bigDecimal);
+            (this.plugin).setBigDecimal(n, bigDecimal);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -582,7 +582,7 @@ PreparedStatement {
     @Override
     public void setString(int n, String string) {
         try {
-            ((PreparedStatement)this.plugin).setString(n, string);
+            (this.plugin).setString(n, string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -591,7 +591,7 @@ PreparedStatement {
     @Override
     public void setBytes(int n, byte[] byArray) {
         try {
-            ((PreparedStatement)this.plugin).setBytes(n, byArray);
+            (this.plugin).setBytes(n, byArray);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -600,7 +600,7 @@ PreparedStatement {
     @Override
     public void setDate(int n, Date date) {
         try {
-            ((PreparedStatement)this.plugin).setDate(n, date);
+            (this.plugin).setDate(n, date);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -609,7 +609,7 @@ PreparedStatement {
     @Override
     public void setTime(int n, Time time) {
         try {
-            ((PreparedStatement)this.plugin).setTime(n, time);
+            (this.plugin).setTime(n, time);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -618,7 +618,7 @@ PreparedStatement {
     @Override
     public void setTimestamp(int n, Timestamp timestamp) {
         try {
-            ((PreparedStatement)this.plugin).setTimestamp(n, timestamp);
+            (this.plugin).setTimestamp(n, timestamp);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -627,7 +627,7 @@ PreparedStatement {
     @Override
     public void setAsciiStream(int n, InputStream inputStream, int n2) {
         try {
-            ((PreparedStatement)this.plugin).setAsciiStream(n, inputStream, n2);
+            (this.plugin).setAsciiStream(n, inputStream, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -636,7 +636,7 @@ PreparedStatement {
     @Override
     public void setUnicodeStream(int n, InputStream inputStream, int n2) {
         try {
-            ((PreparedStatement)this.plugin).setUnicodeStream(n, inputStream, n2);
+            (this.plugin).setUnicodeStream(n, inputStream, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -645,7 +645,7 @@ PreparedStatement {
     @Override
     public void setBinaryStream(int n, InputStream inputStream, int n2) {
         try {
-            ((PreparedStatement)this.plugin).setBinaryStream(n, inputStream, n2);
+            (this.plugin).setBinaryStream(n, inputStream, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -654,25 +654,25 @@ PreparedStatement {
     @Override
     public void clearParameters() {
         try {
-            ((PreparedStatement)this.plugin).clearParameters();
+            (this.plugin).clearParameters();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(int n, Object object, int n2) {
+    public void setObject(int n, Object targetObj, int n2) {
         try {
-            ((PreparedStatement)this.plugin).setObject(n, object, n2);
+            (this.plugin).setObject(n, targetObj, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(int n, Object object) {
+    public void setObject(int n, Object targetObj) {
         try {
-            ((PreparedStatement)this.plugin).setObject(n, object);
+            (this.plugin).setObject(n, targetObj);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -690,7 +690,7 @@ PreparedStatement {
     @Override
     public void addBatch() {
         try {
-            ((PreparedStatement)this.plugin).addBatch();
+            (this.plugin).addBatch();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -699,7 +699,7 @@ PreparedStatement {
     @Override
     public void setCharacterStream(int n, Reader reader, int n2) {
         try {
-            ((PreparedStatement)this.plugin).setCharacterStream(n, reader, n2);
+            (this.plugin).setCharacterStream(n, reader, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -708,7 +708,7 @@ PreparedStatement {
     @Override
     public void setRef(int n, Ref ref) {
         try {
-            ((PreparedStatement)this.plugin).setRef(n, ref);
+            (this.plugin).setRef(n, ref);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -717,7 +717,7 @@ PreparedStatement {
     @Override
     public void setBlob(int n, Blob blob) {
         try {
-            ((PreparedStatement)this.plugin).setBlob(n, blob);
+            (this.plugin).setBlob(n, blob);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -726,7 +726,7 @@ PreparedStatement {
     @Override
     public void setClob(int n, Clob clob) {
         try {
-            ((PreparedStatement)this.plugin).setClob(n, clob);
+            (this.plugin).setClob(n, clob);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -735,7 +735,7 @@ PreparedStatement {
     @Override
     public void setArray(int n, Array array) {
         try {
-            ((PreparedStatement)this.plugin).setArray(n, array);
+            (this.plugin).setArray(n, array);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -744,7 +744,7 @@ PreparedStatement {
     @Override
     public ResultSetMetaData getMetaData() {
         try {
-            return ((PreparedStatement)this.plugin).getMetaData();
+            return (this.plugin).getMetaData();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -753,7 +753,7 @@ PreparedStatement {
     @Override
     public void setDate(int n, Date date, Calendar calendar) {
         try {
-            ((PreparedStatement)this.plugin).setDate(n, date, calendar);
+            (this.plugin).setDate(n, date, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -762,7 +762,7 @@ PreparedStatement {
     @Override
     public void setTime(int n, Time time, Calendar calendar) {
         try {
-            ((PreparedStatement)this.plugin).setTime(n, time, calendar);
+            (this.plugin).setTime(n, time, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -771,7 +771,7 @@ PreparedStatement {
     @Override
     public void setTimestamp(int n, Timestamp timestamp, Calendar calendar) {
         try {
-            ((PreparedStatement)this.plugin).setTimestamp(n, timestamp, calendar);
+            (this.plugin).setTimestamp(n, timestamp, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -780,7 +780,7 @@ PreparedStatement {
     @Override
     public void setNull(int n, int n2, String string) {
         try {
-            ((PreparedStatement)this.plugin).setNull(n, n2, string);
+            (this.plugin).setNull(n, n2, string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -789,7 +789,7 @@ PreparedStatement {
     @Override
     public void setURL(int n, URL uRL) {
         try {
-            ((PreparedStatement)this.plugin).setURL(n, uRL);
+            (this.plugin).setURL(n, uRL);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -798,7 +798,7 @@ PreparedStatement {
     @Override
     public ParameterMetaData getParameterMetaData() {
         try {
-            return ((PreparedStatement)this.plugin).getParameterMetaData();
+            return (this.plugin).getParameterMetaData();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -807,7 +807,7 @@ PreparedStatement {
     @Override
     public void setRowId(int n, RowId rowId) {
         try {
-            ((PreparedStatement)this.plugin).setRowId(n, rowId);
+            (this.plugin).setRowId(n, rowId);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -816,7 +816,7 @@ PreparedStatement {
     @Override
     public void setNString(int n, String string) {
         try {
-            ((PreparedStatement)this.plugin).setNString(n, string);
+            (this.plugin).setNString(n, string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -825,7 +825,7 @@ PreparedStatement {
     @Override
     public void setNCharacterStream(int n, Reader reader, long l3) {
         try {
-            ((PreparedStatement)this.plugin).setNCharacterStream(n, reader, l3);
+            (this.plugin).setNCharacterStream(n, reader, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -834,7 +834,7 @@ PreparedStatement {
     @Override
     public void setNClob(int n, NClob nClob) {
         try {
-            ((PreparedStatement)this.plugin).setNClob(n, nClob);
+            (this.plugin).setNClob(n, nClob);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -843,7 +843,7 @@ PreparedStatement {
     @Override
     public void setClob(int n, Reader reader, long l3) {
         try {
-            ((PreparedStatement)this.plugin).setClob(n, reader, l3);
+            (this.plugin).setClob(n, reader, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -852,7 +852,7 @@ PreparedStatement {
     @Override
     public void setBlob(int n, InputStream inputStream, long l3) {
         try {
-            ((PreparedStatement)this.plugin).setBlob(n, inputStream, l3);
+            (this.plugin).setBlob(n, inputStream, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -861,7 +861,7 @@ PreparedStatement {
     @Override
     public void setNClob(int n, Reader reader, long l3) {
         try {
-            ((PreparedStatement)this.plugin).setNClob(n, reader, l3);
+            (this.plugin).setNClob(n, reader, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -870,16 +870,16 @@ PreparedStatement {
     @Override
     public void setSQLXML(int n, SQLXML sQLXML) {
         try {
-            ((PreparedStatement)this.plugin).setSQLXML(n, sQLXML);
+            (this.plugin).setSQLXML(n, sQLXML);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(int n, Object object, int n2, int n3) {
+    public void setObject(int n, Object targetObj, int n2, int n3) {
         try {
-            ((PreparedStatement)this.plugin).setObject(n, object, n2, n3);
+            (this.plugin).setObject(n, targetObj, n2, n3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -888,7 +888,7 @@ PreparedStatement {
     @Override
     public void setAsciiStream(int n, InputStream inputStream, long l3) {
         try {
-            ((PreparedStatement)this.plugin).setAsciiStream(n, inputStream, l3);
+            (this.plugin).setAsciiStream(n, inputStream, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -897,7 +897,7 @@ PreparedStatement {
     @Override
     public void setBinaryStream(int n, InputStream inputStream, long l3) {
         try {
-            ((PreparedStatement)this.plugin).setBinaryStream(n, inputStream, l3);
+            (this.plugin).setBinaryStream(n, inputStream, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -906,7 +906,7 @@ PreparedStatement {
     @Override
     public void setCharacterStream(int n, Reader reader, long l3) {
         try {
-            ((PreparedStatement)this.plugin).setCharacterStream(n, reader, l3);
+            (this.plugin).setCharacterStream(n, reader, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -915,7 +915,7 @@ PreparedStatement {
     @Override
     public void setAsciiStream(int n, InputStream inputStream) {
         try {
-            ((PreparedStatement)this.plugin).setAsciiStream(n, inputStream);
+            (this.plugin).setAsciiStream(n, inputStream);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -924,7 +924,7 @@ PreparedStatement {
     @Override
     public void setBinaryStream(int n, InputStream inputStream) {
         try {
-            ((PreparedStatement)this.plugin).setBinaryStream(n, inputStream);
+            (this.plugin).setBinaryStream(n, inputStream);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -933,7 +933,7 @@ PreparedStatement {
     @Override
     public void setCharacterStream(int n, Reader reader) {
         try {
-            ((PreparedStatement)this.plugin).setCharacterStream(n, reader);
+            (this.plugin).setCharacterStream(n, reader);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -942,7 +942,7 @@ PreparedStatement {
     @Override
     public void setNCharacterStream(int n, Reader reader) {
         try {
-            ((PreparedStatement)this.plugin).setNCharacterStream(n, reader);
+            (this.plugin).setNCharacterStream(n, reader);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -951,7 +951,7 @@ PreparedStatement {
     @Override
     public void setClob(int n, Reader reader) {
         try {
-            ((PreparedStatement)this.plugin).setClob(n, reader);
+            (this.plugin).setClob(n, reader);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -960,7 +960,7 @@ PreparedStatement {
     @Override
     public void setBlob(int n, InputStream inputStream) {
         try {
-            ((PreparedStatement)this.plugin).setBlob(n, inputStream);
+            (this.plugin).setBlob(n, inputStream);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -969,25 +969,25 @@ PreparedStatement {
     @Override
     public void setNClob(int n, Reader reader) {
         try {
-            ((PreparedStatement)this.plugin).setNClob(n, reader);
+            (this.plugin).setNClob(n, reader);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(int n, Object object, SQLType sQLType, int n2) {
+    public void setObject(int n, Object targetObj, SQLType sQLType, int n2) {
         try {
-            ((PreparedStatement)this.plugin).setObject(n, object, sQLType, n2);
+            (this.plugin).setObject(n, targetObj, sQLType, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(int n, Object object, SQLType sQLType) {
+    public void setObject(int n, Object targetObj, SQLType sQLType) {
         try {
-            ((PreparedStatement)this.plugin).setObject(n, object, sQLType);
+            (this.plugin).setObject(n, targetObj, sQLType);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -996,7 +996,7 @@ PreparedStatement {
     @Override
     public long executeLargeUpdate() {
         try {
-            return ((PreparedStatement)this.plugin).executeLargeUpdate();
+            return (this.plugin).executeLargeUpdate();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);

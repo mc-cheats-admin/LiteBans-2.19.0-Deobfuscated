@@ -11,7 +11,7 @@ implements LiteBansModule_88 {
     private final BroadcastService c;
     public PlayerLoginListener(@NotNull PlatformPlugin plugin) {
         this.plugin = plugin;
-        this.c = (BroadcastService)this.plugin.BaseCoreGenericHandler(BroadcastService.class);
+        this.c = this.plugin.BaseCoreGenericHandler(BroadcastService.class);
     }
 
     public final PlatformPlugin BaseCoreGenericHandler() {
@@ -31,14 +31,14 @@ implements LiteBansModule_88 {
         LitebansLockdownBypassHandler gG3 = gG2;
         CommandSenderWrapper sender = gG3.LiteBansModule_240().BaseCoreGenericHandler(playerLoginEvent.getPlayer());
         ObjectUtilities.BaseCoreGenericHandler(sender);
-        Object object = sender;
-        Object object2 = "litebans.lockdown.bypass";
-        CommandSenderWrapper jv_03 = object;
-        if (!jv_03.e((String)object2)) {
-            object2 = gG3;
+        Object targetObj = sender;
+        Object contextObj = "litebans.lockdown.bypass";
+        CommandSenderWrapper senderWrapper = targetObj;
+        if (!senderWrapper.e((String)contextObj)) {
+            contextObj = gG3;
             flag2 = false;
-            object = gG2.BaseCoreGenericHandler(((DatabaseMonitorService)((MessageHandler)object2).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService(), false);
-            KickBannedHandler.BaseCoreGenericHandler(gG3.LiteBansModule_240().i(), playerLoginEvent, (CharSequence)object, null, false, "KICK_OTHER", 12, null);
+            targetObj = gG2.BaseCoreGenericHandler(((DatabaseMonitorService)((MessageHandler)contextObj).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService(), false);
+            KickBannedHandler.BaseCoreGenericHandler(gG3.LiteBansModule_240().i(), playerLoginEvent, targetObj, null, false, "KICK_OTHER", 12, null);
 }
 
     public PlayerLoginListener AsyncBackgroundTask_5() {

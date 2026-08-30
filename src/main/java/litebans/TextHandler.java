@@ -32,13 +32,13 @@ implements CommandSenderWrapper {
         this.e = commandSender.getName();
     }
 
-    public boolean equals(Object object) {
-        return this == object || object instanceof TextHandler && ((TextHandler)object).AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
+    public boolean equals(Object targetObj) {
+        return this == targetObj || targetObj instanceof TextHandler && targetObj.AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
     }
 
     @Override
     public void c(String string) {
-        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
+        CommandSender commandSender = this.Utf8Handler_2.get();
         if (commandSender == null || string.isEmpty()) {
             return;
         }
@@ -57,7 +57,7 @@ implements CommandSenderWrapper {
 
     @Override
     public String g() {
-        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
+        CommandSender commandSender = this.Utf8Handler_2.get();
         if (commandSender == null) {
             return this.e;
         }
@@ -73,7 +73,7 @@ implements CommandSenderWrapper {
     public String LiteBansModule_31() {
         CommandSender commandSender;
         String string = this.AsyncBackgroundTask_5;
-        if (string == null && (commandSender = (CommandSender)this.Utf8Handler_2.get()) != null) {
+        if (string == null && (commandSender = this.Utf8Handler_2.get()) != null) {
             this.AsyncBackgroundTask_5 = string = this.plugin(commandSender);
         }
         return string;
@@ -94,7 +94,7 @@ implements CommandSenderWrapper {
         UUID uUID;
         CommandSender commandSender;
         UUID uUID2 = this.i;
-        if (uUID2.equals(LiteBansModule_31) && this.c && (commandSender = (CommandSender)this.Utf8Handler_2.get()) != null && (uUID = ((Player)commandSender).getUniqueId()) != null) {
+        if (uUID2.equals(LiteBansModule_31) && this.c && (commandSender = this.Utf8Handler_2.get()) != null && (uUID = ((Player)commandSender).getUniqueId()) != null) {
             this.i = uUID;
             return uUID;
         }
@@ -112,7 +112,7 @@ implements CommandSenderWrapper {
         if (string == null) {
             return true;
         }
-        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
+        CommandSender commandSender = this.Utf8Handler_2.get();
         return commandSender != null && commandSender.hasPermission(string);
     }
 
@@ -123,7 +123,7 @@ implements CommandSenderWrapper {
 
     @Override
     public boolean GnuSparseMapHandler() {
-        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
+        CommandSender commandSender = this.Utf8Handler_2.get();
         return this.c && commandSender != null && ((Player)commandSender).isOnline();
     }
 
@@ -134,7 +134,7 @@ implements CommandSenderWrapper {
 
     @Override
     public void AsyncBackgroundTask_5(String string) {
-        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
+        CommandSender commandSender = this.Utf8Handler_2.get();
         if (commandSender == null) {
             return;
         }
@@ -148,7 +148,7 @@ implements CommandSenderWrapper {
 
     @Override
     public void LiteBansModule_31(String string) {
-        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
+        CommandSender commandSender = this.Utf8Handler_2.get();
         if (commandSender == null || string == null) {
             return;
         }
@@ -164,7 +164,7 @@ implements CommandSenderWrapper {
 
     @Override
     public void BaseCoreGenericHandler(String string) {
-        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
+        CommandSender commandSender = this.Utf8Handler_2.get();
         if (commandSender == null) {
             return;
         }
@@ -177,12 +177,12 @@ implements CommandSenderWrapper {
 
     @Override
     public void BaseCoreGenericHandler(String string, byte[] byArray) {
-        CommandSender commandSender = (CommandSender)this.Utf8Handler_2.get();
+        CommandSender commandSender = this.Utf8Handler_2.get();
         if (commandSender == null) {
             return;
         }
         if (this.c) {
-            ((Player)commandSender).sendPluginMessage((Plugin)this.GnuSparseMapHandler, string, byArray);
+            ((Player)commandSender).sendPluginMessage(this.GnuSparseMapHandler, string, byArray);
 }
 
     private final String BaseCoreGenericHandler(String string) {

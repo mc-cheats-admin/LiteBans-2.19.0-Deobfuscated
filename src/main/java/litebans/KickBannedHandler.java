@@ -3,8 +3,8 @@ package litebans;
 import org.jetbrains.annotations.NotNull;
 
 public final class KickBannedHandler {
-    public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_158 ec_02, Object object, CharSequence charSequence, String string, boolean flag, String string2, int n, Object object2) {
-        if (object2 != null) {
+    public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_158 ec_02, Object targetObj, CharSequence charSequence, String string, boolean flag, String string2, int n, Object contextObj) {
+        if (contextObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 2) != 0) {
@@ -19,7 +19,7 @@ public final class KickBannedHandler {
         if ((n & 0x10) != 0) {
             string2 = "KICK_BANNED";
         }
-        ec_02.BaseCoreGenericHandler(object, charSequence, string, flag, string2);
+        ec_02.BaseCoreGenericHandler(targetObj, charSequence, string, flag, string2);
     }
 
     public static boolean BaseCoreGenericHandler(@NotNull LiteBansModule_158 ec_02, @NotNull String string) {

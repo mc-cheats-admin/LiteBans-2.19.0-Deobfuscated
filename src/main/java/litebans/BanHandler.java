@@ -37,28 +37,27 @@ implements CharSequence {
      * WARNING - Possible parameter corruption
      * WARNING - void declaration
      */
-    /* synthetic */ BanHandler(BanHandler a_2, BansHandler_2 kL2, int object, LiteBansModule_14 aJ2) {
+    /* synthetic */ BanHandler(BanHandler a_2, BansHandler_2 kL2, int targetObj, LiteBansModule_14 aJ2) {
         void v4;
         void var1_-1;
 {
-            Object object2;
 {
                     void arg3;
                     if ((arg3 & 1) != 0) {
-                        object = null;
+                        targetObj = null;
                     }
                     if ((arg3 & 2) == 0) break;
-                    object2 = object;
-                    if (object2 == null) break;
-                    BansHandler_2 kL3 = object2.m;
-                    object2 = kL3;
+                    contextObj = targetObj;
+                    if (contextObj == null) break;
+                    BansHandler_2 kL3 = contextObj.m;
+                    contextObj = kL3;
                     if (kL3 != null) break;
                 }
-                object2 = (BansHandler_2)((Object)AssertionUtilities.BaseCoreGenericHandler());
+                contextObj = (BansHandler_2)(AssertionUtilities.BaseCoreGenericHandler());
             }
-            Object object3 = object2;
+            Object resultObj = contextObj;
         }
-        this((String)var1_-1, (int)kL2, (BanHandler)object, (BansHandler_2)v4);
+        this((String)var1_-1, (int)kL2, (BanHandler)targetObj, (BansHandler_2)v4);
     }
 
     public final BansHandler_2 BaseCoreGenericHandler() {

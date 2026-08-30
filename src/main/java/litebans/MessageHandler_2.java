@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 public final class MessageHandler_2
 extends Error {
     public MessageHandler_2(@NotNull String string) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "message");
+        ObjectUtilities.BaseCoreGenericHandler(string, "message");
         super(string);
     }
 

@@ -12,24 +12,23 @@ extends MessageHandler {
 
     @Override
     public void run() {
-        Object object = new String[]{"litebans.admin", "litebans.reveal"};
-        CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, (String[])object);
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5[1], (Object)"seed") && this.AsyncBackgroundTask_5().LiteBansModule_194()) {
-            object = this;
-            MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(BlackHandler.c(String.valueOf(((ConfigService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().ContinueEvictHandler())));
+        Object targetObj = new String[]{"litebans.admin", "litebans.reveal"};
+        CommandArgumentUtils.BaseCoreGenericHandler(this, (String[])targetObj);
+        if (ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5[1], (Object)"seed") && this.AsyncBackgroundTask_5().LiteBansModule_194()) {
+            targetObj = this;
+            MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(BlackHandler.c(String.valueOf(((ConfigService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().ContinueEvictHandler())));
             throw new CommandExitException();
         }
-        Object object2 = this;
-        object = ((ConfigService)((MessageHandler)object2).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).Utf8Handler_2();
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5[1], (Object)"web") && this.AsyncBackgroundTask_5().LiteBansModule_194()) {
-            object2 = new StringBuilder();
+                targetObj = ((ConfigService)((MessageHandler)contextObj).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).Utf8Handler_2();
+        if (ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5[1], (Object)"web") && this.AsyncBackgroundTask_5().LiteBansModule_194()) {
+            contextObj = new StringBuilder();
             for (n = 0; n < 1000; ++n) {
-                ((StringBuilder)object2).append((String)((LiteBansModule_409)object).BaseCoreGenericHandler().get(n));
+                ((StringBuilder)contextObj).append((String)targetObj.BaseCoreGenericHandler().get(n));
             }
-            MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(BlackHandler.c("" + ((LiteBansModule_409)object).LiteBansModule_31() + ':' + object2));
+            MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(BlackHandler.c("" + targetObj.LiteBansModule_31() + ':' + contextObj));
             throw new CommandExitException();
         }
-        long l3 = ((LiteBansModule_409)object).LiteBansModule_31(this.AsyncBackgroundTask_5[1]);
+        long l3 = targetObj.LiteBansModule_31(this.AsyncBackgroundTask_5[1]);
         if (l3 == -1L) {
             MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(BlackHandler.LiteBansModule_194("Invalid "));
             throw new CommandExitException();

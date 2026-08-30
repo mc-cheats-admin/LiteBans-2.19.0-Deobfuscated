@@ -34,7 +34,7 @@ Serializable {
     }
 
     public int LiteBansModule_31() {
-        return (int)this.LiteBansModule_194;
+        return this.LiteBansModule_194;
     }
 
     public static final byte[] BaseCoreGenericHandler(long l3) {
@@ -55,15 +55,15 @@ Serializable {
         return LiteBansModule_84.BaseCoreGenericHandler(byArray, 0);
     }
 
-    public boolean equals(Object object) {
-        if (object == null || !(object instanceof LiteBansModule_84)) {
+    public boolean equals(Object targetObj) {
+        if (targetObj == null || !(targetObj instanceof LiteBansModule_84)) {
             return false;
         }
-        return this.LiteBansModule_194 == ((LiteBansModule_84)object).BaseCoreGenericHandler();
+        return this.LiteBansModule_194 == targetObj.BaseCoreGenericHandler();
     }
 
     public int hashCode() {
-        return (int)this.LiteBansModule_194;
+        return this.LiteBansModule_194;
     }
 
     public Object clone() {

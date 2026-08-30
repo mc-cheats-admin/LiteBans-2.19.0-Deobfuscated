@@ -13,7 +13,7 @@ implements LiteBansModule_426 {
 
     public UpdateChecker(@NotNull PlatformPlugin plugin) {
         this.plugin = plugin;
-        this.LiteBansModule_31 = (PunishmentTableService)this.plugin.BaseCoreGenericHandler(PunishmentTableService.class);
+        this.LiteBansModule_31 = this.plugin.BaseCoreGenericHandler(PunishmentTableService.class);
     }
 
     public final PlatformPlugin BaseCoreGenericHandler() {
@@ -33,7 +33,7 @@ implements LiteBansModule_426 {
         ProxiedPlayer proxiedPlayer2 = proxiedPlayer;
         String string = chatEvent.getMessage();
         TestHandler_2 f82 = this.LiteBansModule_31.BaseCoreGenericHandler();
-        ObjectUtilities.BaseCoreGenericHandler((Object)string);
+        ObjectUtilities.BaseCoreGenericHandler(string);
         TestHandler_2.BaseCoreGenericHandler(f82, chatEvent, string, this.plugin.BaseCoreGenericHandler(proxiedPlayer2), false, 8, null);
     }
 

@@ -16,7 +16,7 @@ implements Comparator {
         return ky_02.c().compareTo(ky_03.c());
     }
 
-    public int compare(Object object, Object object2) {
-        return this.plugin((LiteBansModule_398)object, (LiteBansModule_398)object2);
+    public int compare(Object targetObj, Object contextObj) {
+        return this.plugin((LiteBansModule_398)targetObj, (LiteBansModule_398)contextObj);
 }
 

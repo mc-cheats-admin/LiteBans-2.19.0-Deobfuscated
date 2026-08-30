@@ -39,14 +39,14 @@ public final class LiteBansModule_34 {
         return n;
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof LiteBansModule_34)) {
+        if (!(targetObj instanceof LiteBansModule_34)) {
             return false;
         }
-        LiteBansModule_34 b32 = (LiteBansModule_34)object;
+        LiteBansModule_34 b32 = (LiteBansModule_34)targetObj;
         if (this.c != b32.c) {
             return false;
         }

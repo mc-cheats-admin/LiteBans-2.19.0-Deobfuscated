@@ -11,7 +11,7 @@ extends LiteBansModule_47 {
 
     @Override
     public void BaseCoreGenericHandler(NullHandler_4 ie_02, Writer writer) {
-        ((Yaml)this.LiteBansModule_31.get()).dump((Object)ie_02.AsyncBackgroundTask_5, writer);
+        (this.LiteBansModule_31.get()).dump(ie_02.AsyncBackgroundTask_5, writer);
     }
 
     @Override
@@ -21,7 +21,7 @@ extends LiteBansModule_47 {
 
     @Override
     public NullHandler_4 BaseCoreGenericHandler(Reader reader, NullHandler_4 ie_02) {
-        LinkedHashMap linkedHashMap = (LinkedHashMap)((Yaml)this.LiteBansModule_31.get()).loadAs(reader, LinkedHashMap.class);
+        LinkedHashMap linkedHashMap = (LinkedHashMap)(this.LiteBansModule_31.get()).loadAs(reader, LinkedHashMap.class);
         if (linkedHashMap == null) {
             linkedHashMap = new LinkedHashMap();
         }

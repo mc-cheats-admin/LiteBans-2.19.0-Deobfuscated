@@ -12,11 +12,11 @@ implements LiteBansModule_178 {
     }
 
     public final Boolean BaseCoreGenericHandler(Map.Entry entry) {
-        return this.plugin != null && ObjectUtilities.BaseCoreGenericHandler((Object)this.plugin, (Object)((SilentHandler)entry.getValue()).DatabaseMonitorService()) || this.LiteBansModule_31 != null && ((CharSequence)this.LiteBansModule_31).length() > 0 && ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_31, (Object)((SilentHandler)entry.getValue()).PunishmentTableService());
+        return this.plugin != null && ObjectUtilities.BaseCoreGenericHandler(this.plugin, (Object)((SilentHandler)entry.getValue()).DatabaseMonitorService()) || this.LiteBansModule_31 != null && (this.LiteBansModule_31).length() > 0 && ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_31, (Object)((SilentHandler)entry.getValue()).PunishmentTableService());
     }
 
     @Override
-    public Object BaseCoreGenericHandler(Object object) {
-        return this.plugin((Map.Entry)object);
+    public Object BaseCoreGenericHandler(Object targetObj) {
+        return this.plugin((Map.Entry)targetObj);
 }
 

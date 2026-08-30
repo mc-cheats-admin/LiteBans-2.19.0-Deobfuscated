@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable;
 
 public final class LiteBansModule_242 {
     public static final String BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull CharSequence[] charSequenceArray) {
-        String string = ((Object)charSequence).toString();
+        String string = (charSequence).toString();
         int n2 = charSequenceArray.length;
         if (n2 % 2 == 1) {
             throw new ArrayIndexOutOfBoundsException("Odd arg length " + n2);
@@ -18,7 +18,7 @@ public final class LiteBansModule_242 {
         while (n < n2) {
             CharSequence charSequence2 = charSequenceArray[n++];
             CharSequence charSequence3 = charSequenceArray[n++];
-            string = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string, charSequence2, charSequence3);
+            string = GeoIPLookupService.BaseCoreGenericHandler(string, charSequence2, charSequence3);
         }
         return string;
     }
@@ -83,7 +83,7 @@ public final class LiteBansModule_242 {
 
     public static final List BaseCoreGenericHandler(@NotNull List list) {
         String string = CollectionUtilities.BaseCoreGenericHandler(list, " ", null, null, 0, null, null, 62, null);
-        if (!StringUtilities.c((CharSequence)string, '\"', false, 2, null) && !StringUtilities.c((CharSequence)string, '\'', false, 2, null)) {
+        if (!StringUtilities.c(string, '\"', false, 2, null) && !StringUtilities.c(string, '\'', false, 2, null)) {
             return list;
         }
         ArrayList arrayList = new ArrayList();

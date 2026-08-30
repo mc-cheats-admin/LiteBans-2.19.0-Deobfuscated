@@ -9,10 +9,10 @@ extends ArgsHandler_2 {
     }
 
     @Override
-    public Object AsyncBackgroundTask_5(Object object) {
-        if (object instanceof class_3222) {
-            return ((class_3222)object).method_5671();
+    public Object AsyncBackgroundTask_5(Object targetObj) {
+        if (targetObj instanceof class_3222) {
+            return targetObj.method_5671();
         }
-        return object;
+        return targetObj;
 }
 

@@ -6,7 +6,7 @@ static class ValueHandler_2
 extends OptionHandler {
     public static final StringBuilder BaseCoreGenericHandler(@NotNull StringBuilder stringBuilder) {
         StringBuilder stringBuilder2;
-        ObjectUtilities.BaseCoreGenericHandler((Object)stringBuilder, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(stringBuilder, "<this>");
         StringBuilder stringBuilder3 = stringBuilder2 = stringBuilder;
         stringBuilder3.setLength(0);
         return stringBuilder2;

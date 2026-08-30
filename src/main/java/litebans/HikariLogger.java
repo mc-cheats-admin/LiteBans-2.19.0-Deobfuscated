@@ -45,8 +45,8 @@ extends Logger {
     }
 
     @Override
-    public void entering(String string, String string2, Object object) {
-        BaseCoreGenericHandler.entering(string, string2, object);
+    public void entering(String string, String string2, Object targetObj) {
+        BaseCoreGenericHandler.entering(string, string2, targetObj);
     }
 
     @Override
@@ -64,8 +64,8 @@ extends Logger {
     }
 
     @Override
-    public void exiting(String string, String string2, Object object) {
-        BaseCoreGenericHandler.exiting(string, string2, object);
+    public void exiting(String string, String string2, Object targetObj) {
+        BaseCoreGenericHandler.exiting(string, string2, targetObj);
     }
 
     @Override
@@ -195,8 +195,8 @@ extends Logger {
     }
 
     @Override
-    public void log(Level level, String string, Object object) {
-        BaseCoreGenericHandler.log(level, string, object);
+    public void log(Level level, String string, Object targetObj) {
+        BaseCoreGenericHandler.log(level, string, targetObj);
     }
 
     @Override
@@ -223,8 +223,8 @@ extends Logger {
     }
 
     @Override
-    public void logp(Level level, String string, String string2, String string3, Object object) {
-        BaseCoreGenericHandler.logp(level, string, string2, string3, object);
+    public void logp(Level level, String string, String string2, String string3, Object targetObj) {
+        BaseCoreGenericHandler.logp(level, string, string2, string3, targetObj);
     }
 
     @Override

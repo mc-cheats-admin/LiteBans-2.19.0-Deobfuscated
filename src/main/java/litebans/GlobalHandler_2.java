@@ -19,7 +19,7 @@ public final class GlobalHandler_2 {
     }
 
     public final boolean LiteBansModule_31(@Nullable String string) {
-        return ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)this.LiteBansModule_31()) || StringUtilities.BaseCoreGenericHandler(string, "global", true) || StringUtilities.BaseCoreGenericHandler(string, "all", true);
+        return ObjectUtilities.BaseCoreGenericHandler(string, this.LiteBansModule_31()) || StringUtilities.BaseCoreGenericHandler(string, "global", true) || StringUtilities.BaseCoreGenericHandler(string, "all", true);
     }
 
     public final boolean BaseCoreGenericHandler(@Nullable String string) {
@@ -39,10 +39,10 @@ public final class GlobalHandler_2 {
                 }
                 return new LiteBansModule_181(string2);
             }
-            if (ObjectUtilities.BaseCoreGenericHandler((Object)string3, (Object)"--")) {
+            if (ObjectUtilities.BaseCoreGenericHandler(string3, (Object)"--")) {
                 return this.c();
             }
-            if (!StringUtilities.BaseCoreGenericHandler((CharSequence)string3, '-', false, 2, null) || !StringUtilities.c((CharSequence)string3, 'g', false, 2, null)) continue;
+            if (!StringUtilities.BaseCoreGenericHandler(string3, '-', false, 2, null) || !StringUtilities.c(string3, 'g', false, 2, null)) continue;
             if (flag) {
                 iterator.remove();
             }
@@ -51,7 +51,7 @@ public final class GlobalHandler_2 {
         return this.c();
     }
 
-    public static /* synthetic */ LiteBansModule_181 BaseCoreGenericHandler(GlobalHandler_2 jG2, CommandSenderWrapper sender, List list, String string, boolean flag, int n, Object object) {
+    public static /* synthetic */ LiteBansModule_181 BaseCoreGenericHandler(GlobalHandler_2 jG2, CommandSenderWrapper sender, List list, String string, boolean flag, int n, Object targetObj) {
         if ((n & 8) != 0) {
             flag = true;
         }

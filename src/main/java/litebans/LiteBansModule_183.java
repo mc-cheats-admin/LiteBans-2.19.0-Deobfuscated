@@ -13,20 +13,20 @@ public final class LiteBansModule_183 {
         if (StringUtilities.LiteBansModule_31(string2, "git:", false, 2, null)) {
             string2 = StringUtilities.AsyncBackgroundTask_5(string2, ':', null, 2, null);
         }
-        if (StringUtilities.c((CharSequence)string2, '+', false, 2, null)) {
+        if (StringUtilities.c(string2, '+', false, 2, null)) {
             cArray = new char[]{'+'};
-            string2 = (String)StringUtilities.BaseCoreGenericHandler((CharSequence)string2, cArray, false, 0, 6, null).get(1);
+            string2 = (String)StringUtilities.BaseCoreGenericHandler(string2, cArray, false, 0, 6, null).get(1);
         }
-        if (StringUtilities.c((CharSequence)string2, '-', false, 2, null)) {
+        if (StringUtilities.c(string2, '-', false, 2, null)) {
             cArray = new char[]{'-'};
-            string2 = (String)StringUtilities.BaseCoreGenericHandler((CharSequence)string2, cArray, false, 0, 6, null).get(0);
+            string2 = (String)StringUtilities.BaseCoreGenericHandler(string2, cArray, false, 0, 6, null).get(0);
         }
         int n = integerArray[0];
         int n2 = integerArray[1];
         int n3 = integerArray[2];
-        if (StringUtilities.c((CharSequence)string2, '.', false, 2, null)) {
+        if (StringUtilities.c(string2, '.', false, 2, null)) {
             char[] cArray2 = new char[]{'.'};
-            List list = StringUtilities.BaseCoreGenericHandler((CharSequence)string2, cArray2, false, 0, 6, null);
+            List list = StringUtilities.BaseCoreGenericHandler(string2, cArray2, false, 0, 6, null);
             if (list.size() >= 3) {
                 Integer n4 = StringUtilities.BaseCoreGenericHandler((String)list.get(0));
                 n = n4 != null ? n4 : n;
@@ -41,7 +41,7 @@ public final class LiteBansModule_183 {
         return new LiteBansModule_120(n, n2, n3);
     }
 
-    public static /* synthetic */ LiteBansModule_120 BaseCoreGenericHandler(LiteBansModule_183 er_02, String string, Integer[] integerArray, int n, Object object) {
+    public static /* synthetic */ LiteBansModule_120 BaseCoreGenericHandler(LiteBansModule_183 er_02, String string, Integer[] integerArray, int n, Object targetObj) {
         if ((n & 2) != 0) {
             Integer[] integerArray2 = new Integer[]{1, 21, 5};
             integerArray = integerArray2;

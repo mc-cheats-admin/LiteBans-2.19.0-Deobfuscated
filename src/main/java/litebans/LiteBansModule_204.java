@@ -14,18 +14,18 @@ extends MessageHandler {
 
     @Override
     public void run() {
-        Object object = MessageHandler.BaseCoreGenericHandler;
+        Object targetObj = MessageHandler.BaseCoreGenericHandler;
         boolean flag = this.AsyncBackgroundTask_5.length < 2;
         CharSequence charSequence = BlackHandler.LiteBansModule_194("$command add-login <name> <UUID> <IP>");
-        ChatFormatter chatFormatter = object;
+        ChatFormatter chatFormatter = targetObj;
         if (flag) {
             ChatFormatter fo_03 = chatFormatter;
             fo_03.BaseCoreGenericHandler(charSequence);
             throw new CommandExitException();
         }
-        object = this;
+        targetObj = this;
         flag = false;
-        ((DatabaseMonitorService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> LiteBansModule_204.BaseCoreGenericHandler(this, arg_0));
+        ((DatabaseMonitorService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> LiteBansModule_204.BaseCoreGenericHandler(this, arg_0));
     }
 
     private final void LiteBansModule_31() {
@@ -35,22 +35,22 @@ extends MessageHandler {
     private static final KotlinUnitHandler BaseCoreGenericHandler(LiteBansModule_204 fL2, LiteBansModule_82 ch2) {
         Iterator iterator = MessageHandler.BaseCoreGenericHandler;
         boolean flag = ch2.LiteBansModule_31();
-        Object object = MessageKey.ServerEventListener;
+        Object targetObj = MessageKey.ServerEventListener;
         ChatFormatter chatFormatter = iterator;
         if (flag) {
             ChatFormatter fo_03 = chatFormatter;
-            fo_03.BaseCoreGenericHandler(object);
+            fo_03.BaseCoreGenericHandler(targetObj);
             throw new CommandExitException();
         }
         if (fL2.AsyncBackgroundTask_5.length == 2) {
-            Object object2 = new char[]{','};
-            iterator = StringUtilities.BaseCoreGenericHandler((CharSequence)fL2.AsyncBackgroundTask_5[1], object2, false, 0, 6, null).iterator();
+            Object contextObj = new char[]{','};
+            iterator = StringUtilities.BaseCoreGenericHandler(fL2.AsyncBackgroundTask_5[1], contextObj, false, 0, 6, null).iterator();
             while (iterator.hasNext()) {
-                object2 = (String)iterator.next();
-                Object object3 = LiteBansModule_50.c.BaseCoreGenericHandler((String)object2);
-                if (object3 == null || (object3 = ((LiteBansModule_89)object3).BaseCoreGenericHandler()) == null || (object3 = ((UUID)object3).toString()) == null) continue;
-                object = object3;
-                ch2.BaseCoreGenericHandler((String)object2, (String)object, (String)null, false, true);
+                contextObj = (String)iterator.next();
+                Object resultObj = LiteBansModule_50.c.BaseCoreGenericHandler((String)contextObj);
+                if (resultObj == null || (resultObj = this.BaseCoreGenericHandler()) == null || (resultObj = this.toString()) == null) continue;
+                targetObj = resultObj;
+                ch2.BaseCoreGenericHandler((String)contextObj, (String)targetObj, (String)null, false, true);
             }
             fL2.LiteBansModule_31();
             return KotlinUnitHandler.BaseCoreGenericHandler;
@@ -59,7 +59,7 @@ extends MessageHandler {
         if (fL2.AsyncBackgroundTask_5.length >= 4) {
             iterator = fL2.AsyncBackgroundTask_5[3];
         }
-        ch2.BaseCoreGenericHandler(fL2.AsyncBackgroundTask_5[1], fL2.AsyncBackgroundTask_5[2], (String)((Object)iterator), false, true);
+        ch2.BaseCoreGenericHandler(fL2.AsyncBackgroundTask_5[1], fL2.AsyncBackgroundTask_5[2], (String)(iterator), false, true);
         fL2.LiteBansModule_31();
         return KotlinUnitHandler.BaseCoreGenericHandler;
     }

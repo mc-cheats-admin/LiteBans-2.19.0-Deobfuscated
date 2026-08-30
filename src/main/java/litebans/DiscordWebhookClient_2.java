@@ -20,7 +20,7 @@ public final class DiscordWebhookClient_2 {
         this.c = file;
         this.e = new HashMap();
         this.LiteBansModule_194 = "";
-        this.plugin = (ConfigService)this.AsyncBackgroundTask_5.BaseCoreGenericHandler(ConfigService.class);
+        this.plugin = this.AsyncBackgroundTask_5.BaseCoreGenericHandler(ConfigService.class);
     }
 
     public /* synthetic */ DiscordWebhookClient_2(PlatformPlugin plugin, File file, int n, LiteBansModule_14 aJ2) {
@@ -41,7 +41,7 @@ public final class DiscordWebhookClient_2 {
             ConfigService q_03 = configService;
             q_03.BaseCoreGenericHandler((Object)("Fetch webhook: " + string + " => '" + string2 + '\''));
         }
-        return ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)"on") || ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)"true") || ((CharSequence)string2).length() == 0 ? this.LiteBansModule_194 : (ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)"off") || ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)"false") ? "" : string2);
+        return ObjectUtilities.BaseCoreGenericHandler(string2, (Object)"on") || ObjectUtilities.BaseCoreGenericHandler(string2, (Object)"true") || (string2).length() == 0 ? this.LiteBansModule_194 : (ObjectUtilities.BaseCoreGenericHandler(string2, (Object)"off") || ObjectUtilities.BaseCoreGenericHandler(string2, (Object)"false") ? "" : string2);
     }
 
     public final DiscordWebhookClient_2 BaseCoreGenericHandler() {
@@ -49,14 +49,12 @@ public final class DiscordWebhookClient_2 {
         DiscordWebhookClient_2 h73 = h72 = this;
         DatabaseService gn_02 = null;
         try {
-            Object object;
             boolean flag2;
             Iterable<String> iterable;
             Object[] objectArray;
             boolean flag3;
             BanHandler a_2;
             boolean flag4;
-            Object object2;
             this.AsyncBackgroundTask_5.BaseCoreGenericHandler("webhooks.yml");
             gn_02 = this.AsyncBackgroundTask_5.BaseCoreGenericHandler(this.c).g();
             gn_02.BaseCoreGenericHandler(DatabaseService.LiteBansModule_31("webhooks.yml", null));
@@ -70,9 +68,9 @@ public final class DiscordWebhookClient_2 {
             Collection collection = new ArrayList();
             for (Object t2 : iterable3) {
                 List list;
-                object2 = (BanHandler)t2;
+                contextObj = (BanHandler)t2;
                 flag4 = false;
-                a_2 = object2;
+                a_2 = contextObj;
                 flag3 = false;
                 switch (litebans.LiteBansModule_31.BaseCoreGenericHandler[a_2.ordinal()]) {
                     case 1: {
@@ -93,12 +91,12 @@ public final class DiscordWebhookClient_2 {
                 iterable = new ArrayList(CollectionUtilities.BaseCoreGenericHandler(iterable4, 10));
                 flag2 = false;
                 for (Object t3 : objectArray) {
-                    object = t3;
+                    targetObj = t3;
                     Collection collection2 = iterable;
-                    collection2.add(object.toString());
+                    collection2.add(targetObj.toString());
                 }
-                object2 = (List)iterable;
-                CollectionUtilities.BaseCoreGenericHandler(collection, (Iterable)object2);
+                contextObj = (List)iterable;
+                CollectionUtilities.BaseCoreGenericHandler(collection, (Iterable)contextObj);
             }
             iterable2 = ((TempHandler)object322).BaseCoreGenericHandler();
             Collection collection3 = (List)collection;
@@ -107,11 +105,10 @@ public final class DiscordWebhookClient_2 {
             collection = new ArrayList();
             flag7 = false;
             for (Object t2 : iterable3) {
-                Object object4;
                 List list;
-                object2 = (BanHandler)t2;
+                contextObj = (BanHandler)t2;
                 flag4 = false;
-                a_2 = object2;
+                a_2 = contextObj;
                 flag3 = false;
                 objectArray = a_2;
                 switch (litebans.LiteBansModule_31.BaseCoreGenericHandler[objectArray.ordinal()]) {
@@ -120,44 +117,44 @@ public final class DiscordWebhookClient_2 {
                         break;
                     }
                     case 2: {
-                        object4 = new Object[]{objectArray.c(), "un" + objectArray.c()};
-                        list = CollectionUtilities.LiteBansModule_31((Object[])object4);
+                        helperObj = new Object[]{objectArray.c(), "un" + objectArray.c()};
+                        list = CollectionUtilities.LiteBansModule_31((Object[])helperObj);
                         break;
                     }
                     default: {
-                        object4 = new Object[]{objectArray.c(), "temp_" + objectArray.c(), "temp_ip" + objectArray.c(), "ip" + objectArray.c(), "un" + objectArray.c()};
-                        list = CollectionUtilities.LiteBansModule_31((Object[])object4);
+                        helperObj = new Object[]{objectArray.c(), "temp_" + objectArray.c(), "temp_ip" + objectArray.c(), "ip" + objectArray.c(), "un" + objectArray.c()};
+                        list = CollectionUtilities.LiteBansModule_31((Object[])helperObj);
 }
                 iterable = list;
                 flag2 = false;
-                object4 = iterable;
+                helperObj = iterable;
                 Iterator iterator = new ArrayList(CollectionUtilities.BaseCoreGenericHandler(iterable, 10));
-                object = object4.iterator();
-                while (object.hasNext()) {
+                targetObj = helperObj.iterator();
+                while (targetObj.hasNext()) {
                     Object e;
-                    Object e10 = e = object.next();
+                    Object e10 = e = targetObj.next();
                     Iterator iterator2 = iterator;
                     iterator2.add(e10.toString());
                 }
-                objectArray = (List)((Object)iterator);
+                objectArray = (List)(iterator);
                 bl10 = false;
-                object4 = objectArray;
+                helperObj = objectArray;
                 iterable = new ArrayList(CollectionUtilities.BaseCoreGenericHandler((Iterable)objectArray, 10));
                 flag2 = false;
-                iterator = object4.iterator();
+                iterator = helperObj.iterator();
                 while (iterator.hasNext()) {
                     Object t4 = iterator.next();
-                    object = (String)t4;
+                    targetObj = (String)t4;
                     Iterable<String> iterable5 = iterable;
-                    iterable5.add("silent_" + (String)object);
+                    iterable5.add("silent_" + (String)targetObj);
                 }
-                object2 = (List)iterable;
-                CollectionUtilities.BaseCoreGenericHandler(collection, (Iterable)object2);
+                contextObj = (List)iterable;
+                CollectionUtilities.BaseCoreGenericHandler(collection, (Iterable)contextObj);
             }
             for (Object object322 : (Iterable)CollectionUtilities.BaseCoreGenericHandler(collection3, (Iterable)((List)collection))) {
-                ((Map)this.e).put(object322, this.plugin(gn_02, "" + (String)object322, ""));
+                (this.e).put(object322, this.plugin(gn_02, "" + (String)object322, ""));
             }
-            ((Map)this.e).put("alts", this.plugin(gn_02, "webhooks.alts", "off"));
+            (this.e).put("alts", this.plugin(gn_02, "webhooks.alts", "off"));
         }
         catch (Exception exception) {
             this.plugin.BaseCoreGenericHandler("webhooks", exception);
@@ -166,15 +163,15 @@ public final class DiscordWebhookClient_2 {
     }
 
     private final String BaseCoreGenericHandler(DatabaseService gn_02, String string, String string2) {
-        Object object = gn_02.BaseCoreGenericHandler(string, (Object)string2);
-        if (object instanceof Boolean) {
-            if (((Boolean)object).booleanValue()) {
+        Object targetObj = gn_02.BaseCoreGenericHandler(string, string2);
+        if (targetObj instanceof Boolean) {
+            if (targetObj.booleanValue()) {
                 return "on";
             }
             return "off";
         }
-        if (object instanceof String) {
-            return (String)object;
+        if (targetObj instanceof String) {
+            return (String)targetObj;
         }
         AssertionUtilities.BaseCoreGenericHandler();
         throw new CommandExitException();

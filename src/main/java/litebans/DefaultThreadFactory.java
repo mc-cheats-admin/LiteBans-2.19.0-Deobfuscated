@@ -25,11 +25,11 @@ implements Cloneable {
         return 3 * (7 * (13 * (17 * (this.e ? 1 : 0) + (this.GnuSparseMapHandler ? 1 : 0)) + (this.plugin ? 1 : 0)) + (this.LiteBansModule_240 ? 1 : 0));
     }
 
-    public boolean equals(Object object) {
-        if (!(object instanceof DefaultThreadFactory)) {
+    public boolean equals(Object targetObj) {
+        if (!(targetObj instanceof DefaultThreadFactory)) {
             return false;
         }
-        DefaultThreadFactory ch_02 = (DefaultThreadFactory)object;
+        DefaultThreadFactory ch_02 = (DefaultThreadFactory)targetObj;
         return ch_02.e == this.e && ch_02.GnuSparseMapHandler == this.GnuSparseMapHandler && ch_02.BaseCoreGenericHandler == this.plugin && ch_02.LiteBansModule_240 == this.LiteBansModule_240;
     }
 

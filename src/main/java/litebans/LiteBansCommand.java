@@ -43,8 +43,6 @@ extends AbstractCommand {
 
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, String[] args) {
-        Object object;
-        Object object2;
         if (args.length == 0 || args[0].equalsIgnoreCase("version")) {
             this.plugin(sender);
             return;
@@ -64,7 +62,7 @@ extends AbstractCommand {
         if (string2.equals("verify")) {
             boolean flag = LiteBansModule_50.c.AsyncBackgroundTask_5(sender.BaseCoreGenericHandler()).equals("2ccd0bb281214361803a945b8f0644ab");
             if (!flag) {
-                CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, new String[]{"litebans.admin", "litebans.verify"});
+                CommandArgumentUtils.BaseCoreGenericHandler(this, new String[]{"litebans.admin", "litebans.verify"});
             } else {
                 this.plugin(sender, BlackHandler.ServerSyncService + LiteBansModule_75.BaseCoreGenericHandler + " " + LiteBansModule_376.BaseCoreGenericHandler + " " + LiteBansModule_237.BaseCoreGenericHandler);
             }
@@ -226,10 +224,10 @@ extends AbstractCommand {
         if (string2.equals("timezone")) {
             SimpleDateFormat uUID = new SimpleDateFormat("yyyy-MM-LiteBansModule_118 HH:mm:ss");
             TimeZone string11 = TimeZone.getTimeZone(w2.n());
-            Calendar object3 = Calendar.getInstance(string11);
-            uUID.setCalendar(object3);
+            Calendar resultObj = Calendar.getInstance(string11);
+            uUID.setCalendar(resultObj);
             if (args.length == 1) {
-                this.plugin(sender, BlackHandler.i + "Current timezone: " + BlackHandler.m + w2.n() + "\n" + BlackHandler.i + "Current time: " + BlackHandler.m + uUID.format(object3.getTime()));
+                this.plugin(sender, BlackHandler.i + "Current timezone: " + BlackHandler.m + w2.n() + "\n" + BlackHandler.i + "Current time: " + BlackHandler.m + uUID.format(resultObj.getTime()));
             } else {
                 String string13 = args[1];
                 plugin.LiteBansModule_31(() -> {
@@ -285,10 +283,7 @@ extends AbstractCommand {
                     boolean flag = string.equals(GnuSparseMapHandler[96]) || string.contains(GnuSparseMapHandler[97]) || string.contains(GnuSparseMapHandler[98]);
                     Connection connection = null;
                     try (LiteBansModule_82 ch2 = w2.LiteBansModule_194();){
-                        Object object;
                         String string2;
-                        Object object2;
-                        Object object3;
                         if (ch2.LiteBansModule_31()) {
                             this.plugin(sender, MessageKey.ServerEventListener);
                             return;
@@ -296,8 +291,8 @@ extends AbstractCommand {
                         if (!flag) {
                             String string3;
                             Properties properties = new Properties();
-                            object3 = null;
-                            object2 = null;
+                            resultObj = null;
+                            contextObj = null;
                             string2 = GnuSparseMapHandler[99];
                             if (eG2.ai()) {
                                 string3 = eG2.m();
@@ -305,8 +300,8 @@ extends AbstractCommand {
                                 if (flag2) {
                                     string2 = GnuSparseMapHandler[101];
                                     string3 = new File(plugin.getDataFolder(), GnuSparseMapHandler[102]).getAbsolutePath();
-                                    object3 = eG2.P();
-                                    object2 = eG2.ah();
+                                    resultObj = eG2.P();
+                                    contextObj = eG2.ah();
                                 } else if (string.equals(GnuSparseMapHandler[103]) || string.equals(GnuSparseMapHandler[104])) {
                                     string2 = GnuSparseMapHandler[105];
                                     string3 = new File(GnuSparseMapHandler[106], GnuSparseMapHandler[107]).getAbsolutePath();
@@ -316,14 +311,14 @@ extends AbstractCommand {
                                 if (!(flag2 || file.exists() || file2.exists())) {
                                     throw new FileNotFoundException(string3);
                                 }
-                                this.plugin(sender, MessageKey.aO.BaseCoreGenericHandler(GnuSparseMapHandler[109], (Object)string3));
-                                object = GnuSparseMapHandler[110] + string2 + GnuSparseMapHandler[111] + file.getAbsolutePath();
+                                this.plugin(sender, MessageKey.aO.BaseCoreGenericHandler(GnuSparseMapHandler[109], string3));
+                                targetObj = GnuSparseMapHandler[110] + string2 + GnuSparseMapHandler[111] + file.getAbsolutePath();
                             } else {
                                 string2 = GnuSparseMapHandler[112];
-                                object3 = eG2.P();
-                                object2 = eG2.ah();
-                                object = GnuSparseMapHandler[113] + eG2.BanHandler_4() + '/' + eG2.TapeHandler();
-                                this.plugin(sender, MessageKey.aO.BaseCoreGenericHandler(GnuSparseMapHandler[114], object));
+                                resultObj = eG2.P();
+                                contextObj = eG2.ah();
+                                targetObj = GnuSparseMapHandler[113] + eG2.BanHandler_4() + '/' + eG2.TapeHandler();
+                                this.plugin(sender, MessageKey.aO.BaseCoreGenericHandler(GnuSparseMapHandler[114], targetObj));
                             }
                             Driver driver = (Driver)w2.BaseCoreGenericHandler(Objects.requireNonNull(w2.BaseCoreGenericHandler(configService, string2)), true, true);
                             if (driver == null) {
@@ -339,35 +334,35 @@ extends AbstractCommand {
                             properties.put(GnuSparseMapHandler[126], GnuSparseMapHandler[127]);
                             properties.put(GnuSparseMapHandler[128], GnuSparseMapHandler[129]);
                             properties.put(GnuSparseMapHandler[130], GnuSparseMapHandler[131]);
-                            if (object3 != null && !((String)object3).isEmpty()) {
-                                properties.put(GnuSparseMapHandler[132], object3);
+                            if (resultObj != null && !this.isEmpty()) {
+                                properties.put(GnuSparseMapHandler[132], resultObj);
                             }
-                            if (object2 != null && !((String)object2).isEmpty()) {
-                                properties.put(GnuSparseMapHandler[133], object2);
+                            if (contextObj != null && !((String)contextObj).isEmpty()) {
+                                properties.put(GnuSparseMapHandler[133], contextObj);
                             }
-                            connection = driver.connect((String)object, properties);
+                            connection = driver.connect((String)targetObj, properties);
                         } else {
-                            this.plugin(sender, MessageKey.aO.BaseCoreGenericHandler(GnuSparseMapHandler[134], (Object)GnuSparseMapHandler[135]));
+                            this.plugin(sender, MessageKey.aO.BaseCoreGenericHandler(GnuSparseMapHandler[134], GnuSparseMapHandler[135]));
                         }
                         boolean flag3 = eG2.X();
-                        object = plugin.LiteBansModule_194().BaseCoreGenericHandler(BansHandler.class, new Class[]{PlatformPlugin.class}, new Object[]{plugin});
-                        object3 = object.iterator();
-                        while (object3.hasNext()) {
-                            object2 = (BansHandler)object3.next();
-                            if (!((BansHandler)object2).c(string) || ((BansHandler)object2).LiteBansModule_401() && connection == null) continue;
-                            this.plugin(((BansHandler)object2).Utf8Handler_2());
+                        targetObj = plugin.LiteBansModule_194().BaseCoreGenericHandler(BansHandler.class, new Class[]{PlatformPlugin.class}, new Object[]{plugin});
+                        resultObj = targetObj.iterator();
+                        while (resultObj.hasNext()) {
+                            contextObj = (BansHandler)resultObj.next();
+                            if (!((BansHandler)contextObj).c(string) || ((BansHandler)contextObj).LiteBansModule_401() && connection == null) continue;
+                            this.plugin(((BansHandler)contextObj).Utf8Handler_2());
                             string2 = configService.n.az();
                             if (!string2.equals(GnuSparseMapHandler[136])) {
-                                ((BansHandler)object2).BaseCoreGenericHandler(string2);
+                                ((BansHandler)contextObj).BaseCoreGenericHandler(string2);
                             }
-                            ((BansHandler)object2).BaseCoreGenericHandler(string, connection, ch2, flag3);
+                            ((BansHandler)contextObj).BaseCoreGenericHandler(string, connection, ch2, flag3);
                             flag4 = true;
-                            ((BansHandler)object2).BaseCoreGenericHandler(sender);
-                            if (((BansHandler)object2).e()) break;
+                            ((BansHandler)contextObj).BaseCoreGenericHandler(sender);
+                            if (((BansHandler)contextObj).e()) break;
                             return;
                         }
                         if (!flag4) {
-                            this.plugin(sender, MessageKey.GeoIPLookupService.BaseCoreGenericHandler(GnuSparseMapHandler[137], (Object)string));
+                            this.plugin(sender, MessageKey.GeoIPLookupService.BaseCoreGenericHandler(GnuSparseMapHandler[137], string));
                             return;
                         }
                         this.plugin(w2, sender, true);
@@ -403,21 +398,21 @@ extends AbstractCommand {
             return;
         }
         if (string2.equals("json-disconnect") && args.length >= 3) {
-            CommandSenderWrapper jv_03;
+            CommandSenderWrapper senderWrapper;
             String string = args[1];
             String string6 = LiteBansModule_378.BaseCoreGenericHandler(Arrays.copyOfRange(args, 2, args.length), " ");
             if (configService.g()) {
                 configService.BaseCoreGenericHandler((Object)("target:" + string + ", reason:" + string6));
             }
-            if ((jv_03 = CommandArgumentUtils.LiteBansModule_31(this, string)) != null) {
+            if ((senderWrapper = CommandArgumentUtils.LiteBansModule_31(this, string)) != null) {
                 switch (plugin.AsyncBackgroundTask_22()) {
                     case 0: {
-                        LiteBansModule_139.LiteBansModule_31.BaseCoreGenericHandler(jv_03.c(), string6);
+                        LiteBansModule_139.LiteBansModule_31.BaseCoreGenericHandler(senderWrapper.c(), string6);
                         break;
                     }
                     case 1: {
                         GetcancelreasoncomponentsHandler k12 = (GetcancelreasoncomponentsHandler)plugin.i();
-                        k12.BaseCoreGenericHandler(jv_03, string6);
+                        k12.BaseCoreGenericHandler(senderWrapper, string6);
                         break;
                     }
                     default: {
@@ -427,10 +422,10 @@ extends AbstractCommand {
         }
         if (string2.equals("test-vault") && args.length >= 2) {
             String string = args[1];
-            object2 = UUID.fromString(string);
-            object = args.length == 3 ? args[2] : null;
+            contextObj = UUID.fromString(string);
+            targetObj = args.length == 3 ? args[2] : null;
             if (plugin.AsyncBackgroundTask_22() == 0) {
-                plugin.LiteBansModule_31(() -> this.plugin(plugin, (UUID)object2, (String)object, sender));
+                plugin.LiteBansModule_31(() -> this.plugin(plugin, (UUID)contextObj, (String)targetObj, sender));
                 return;
             }
             MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler("Command is not supported on this ");
@@ -438,20 +433,20 @@ extends AbstractCommand {
         if (string2.equals("refresh") && args.length >= 2) {
             String string;
             String string7 = LiteBansModule_50.c.e(args[1]);
-            object2 = null;
+            contextObj = null;
             if (args.length >= 3) {
-                object2 = args[2];
+                contextObj = args[2];
             }
-            object = o2.BaseCoreGenericHandler(string7);
+            targetObj = o2.BaseCoreGenericHandler(string7);
             String string8 = configService.n.LiteBansModule_25();
-            if (object != null && (string = object.LiteBansModule_240()) != null) {
+            if (targetObj != null && (string = targetObj.LiteBansModule_240()) != null) {
                 string8 = string;
             }
             string = null;
-            if (object != null) {
-                string = object.i();
+            if (targetObj != null) {
+                string = targetObj.i();
             }
-            p2.BaseCoreGenericHandler(string, string7, (String)object2, string8);
+            p2.BaseCoreGenericHandler(string, string7, (String)contextObj, string8);
             this.plugin(sender, BlackHandler.i + "Refreshed player: '" + string7 + "', server: " + string8);
             return;
         }
@@ -496,7 +491,7 @@ extends AbstractCommand {
     }
 
     public void LiteBansModule_31(CommandSenderWrapper sender) {
-        DatabaseMonitorService w2 = (DatabaseMonitorService)this.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+        DatabaseMonitorService w2 = this.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
         this.LiteBansModule_240().LiteBansModule_31(() -> {
             try (LiteBansModule_82 ch2 = w2.LiteBansModule_194();){
                 w2.BaseCoreGenericHandler(ch2, ((SQLiteDriverHandler_3)ch2).LiteBansModule_31(), true, true);
@@ -519,7 +514,7 @@ extends AbstractCommand {
                 if (!kL2.BaseCoreGenericHandler()) continue;
                 long l3 = 0L;
                 if (!flag) {
-                    this.plugin(sender, MessageKey.ValueHandler.BaseCoreGenericHandler("table", (Object)kL2.toString()));
+                    this.plugin(sender, MessageKey.ValueHandler.BaseCoreGenericHandler("table", kL2.toString()));
                 }
                 LiteBansModule_60 bT2 = ch2.c((CharSequence)("SELECT * FROM " + kL2));
                 ResultSet resultSet = w2.BaseCoreGenericHandler(bT2);
@@ -538,10 +533,10 @@ extends AbstractCommand {
                     ++n;
                 }
                 if (!flag) {
-                    this.plugin(sender, MessageKey.LiteBansModule_65.BaseCoreGenericHandler("amount", (Object)n));
+                    this.plugin(sender, MessageKey.LiteBansModule_65.BaseCoreGenericHandler("amount", n));
                 }
                 if (l3 <= 0L || flag) continue;
-                this.plugin(sender, MessageKey.LiteBansModule_25.BaseCoreGenericHandler("amount", (Object)l3));
+                this.plugin(sender, MessageKey.LiteBansModule_25.BaseCoreGenericHandler("amount", l3));
 }
         catch (Exception exception) {
             w2.BaseCoreGenericHandler(exception);
@@ -549,7 +544,7 @@ extends AbstractCommand {
 
     void BaseCoreGenericHandler(CommandSenderWrapper sender) {
         String string;
-        ConfigService configService = (ConfigService)this.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = this.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
         if (configService.DatabaseMonitorService() != null) {
             this.plugin(sender, BlackHandler.c + "[LiteBans] " + BlackHandler.F + "Plugin access has been disabled!");
             if (configService.GnuSparseMapHandler() != null) {

@@ -7,13 +7,13 @@ public final class LiteBansModule_303 {
     }
 
     public final String[] BaseCoreGenericHandler(@NotNull String string, int n) {
-        Object object = new char[]{'\ufeff'};
-        object = StringUtilities.BaseCoreGenericHandler((CharSequence)string, object, false, n, 2, null);
-        char[] cArray = object;
+        Object targetObj = new char[]{'\ufeff'};
+        targetObj = StringUtilities.BaseCoreGenericHandler(string, targetObj, false, n, 2, null);
+        char[] cArray = targetObj;
         return cArray.toArray(new String[0]);
     }
 
-    public static /* synthetic */ String[] BaseCoreGenericHandler(LiteBansModule_303 iF2, String string, int n, int n2, Object object) {
+    public static /* synthetic */ String[] BaseCoreGenericHandler(LiteBansModule_303 iF2, String string, int n, int n2, Object targetObj) {
         if ((n2 & 2) != 0) {
             n = 2;
         }

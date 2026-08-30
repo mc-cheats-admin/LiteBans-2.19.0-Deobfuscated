@@ -35,20 +35,19 @@ implements LiteBansModule_359 {
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
 {
-            Object object = this;
-            object = (DatabaseMonitorService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+                        targetObj = (DatabaseMonitorService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
             flag = false;
             try {
-                LiteBansModule_82 ch2 = ((DatabaseMonitorService)object).LiteBansModule_194();
+                LiteBansModule_82 ch2 = targetObj.LiteBansModule_194();
                 Closeable closeable = ch2;
                 Throwable throwable = null;
                 try {
                     double d10;
-                    Object object2 = (LiteBansModule_82)closeable;
+                    Object contextObj = (LiteBansModule_82)closeable;
                     LiteBansModule_82 ch3 = ch2;
                     MessageHandler messageHandler = this;
                     MessageHandler fg_03 = messageHandler;
-                    double d11 = AllHandler_3.BaseCoreGenericHandler(ch3, ((BanHandler)this.plugin()).BaseCoreGenericHandler(), null, ((ConfigService)fg_03.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_7(), 2, null);
+                    double d11 = AllHandler_3.BaseCoreGenericHandler(ch3, (this.plugin()).BaseCoreGenericHandler(), null, ((ConfigService)fg_03.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_7(), 2, null);
                     fg_03 = this;
                     flag5 = false;
                     MessageHandler fg_04 = fg_03;
@@ -60,11 +59,11 @@ implements LiteBansModule_359 {
                         d14 += -1.0;
                         d13 += -1.0;
                     }
-                    CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, (CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler(ch3.BaseCoreGenericHandler(MessageKey.LiteBansModule_35), (CharSequence)"page", (int)d14), (CharSequence)"total", (int)d13));
+                    CommandArgumentUtils.BaseCoreGenericHandler(this, GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(ch3.BaseCoreGenericHandler(MessageKey.LiteBansModule_35), (CharSequence)"page", (int)d14), (CharSequence)"total", (int)d13));
                     MessageHandler fg_05 = this;
-                    Collection collection = ch3.BaseCoreGenericHandler((BanHandler)this.plugin(), (long)d14, (long)d12, ((ConfigService)fg_05.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_7());
+                    Collection collection = ch3.BaseCoreGenericHandler(this.plugin(), (long)d14, (long)d12, ((ConfigService)fg_05.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_7());
                     LimitHandler.BaseCoreGenericHandler(this, ch3, collection, null, null, null, 0, 30, null);
-                    object2 = KotlinUnitHandler.BaseCoreGenericHandler;
+                    contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable2) {
                     throwable = throwable2;
@@ -74,7 +73,7 @@ implements LiteBansModule_359 {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
 }
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break;
+                if (targetObj.LiteBansModule_31(sQLException)) break;
                 throw sQLException;
 }
 
@@ -85,7 +84,7 @@ implements LiteBansModule_359 {
 
     @Override
     public void BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull Collection collection, @Nullable LiteBansModule_297 iA2, @Nullable String[] args, @NotNull AbstractCommand abstractCommand, int n) {
-        LimitHandler.BaseCoreGenericHandler((LiteBansModule_359)this, ch2, collection, iA2, args, abstractCommand, n);
+        LimitHandler.BaseCoreGenericHandler(this, ch2, collection, iA2, args, abstractCommand, n);
     }
 
     @Override

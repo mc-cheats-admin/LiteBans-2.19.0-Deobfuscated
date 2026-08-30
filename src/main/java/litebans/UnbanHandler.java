@@ -140,8 +140,8 @@ implements Function {
             arg5.BaseCoreGenericHandler(new LiteBansModule_352((LiteCommand)arg7, ((LiteCommand)arg7).getPermission(), arg11.BaseCoreGenericHandler, arg8), arg6);
 }
 
-    public Object apply(Object object) {
-        this.plugin(object);
+    public Object apply(Object targetObj) {
+        this.plugin(targetObj);
         return KotlinUnitHandler.BaseCoreGenericHandler;
     }
 

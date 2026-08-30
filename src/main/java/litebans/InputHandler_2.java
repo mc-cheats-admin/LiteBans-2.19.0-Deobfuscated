@@ -10,8 +10,8 @@ implements LiteBansModule_295 {
     private final int BaseCoreGenericHandler;
     private final LiteBansModule_96 LiteBansModule_31;
     public InputHandler_2(@NotNull CharSequence charSequence, int n, int n2, @NotNull LiteBansModule_96 cQ2) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "input");
-        ObjectUtilities.BaseCoreGenericHandler((Object)cQ2, "getNextMatch");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "input");
+        ObjectUtilities.BaseCoreGenericHandler(cQ2, "getNextMatch");
         this.e = charSequence;
         this.AsyncBackgroundTask_5 = n;
         this.plugin = n2;

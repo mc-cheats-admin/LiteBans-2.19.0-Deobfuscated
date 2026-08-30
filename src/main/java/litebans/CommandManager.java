@@ -38,7 +38,7 @@ extends PluginModule {
     }
 
     public @Nullable LiteCommand BaseCoreGenericHandler(String string) {
-        return (LiteCommand)this.AsyncBackgroundTask_5.get(string);
+        return this.AsyncBackgroundTask_5.get(string);
     }
 
     public Collection e() {

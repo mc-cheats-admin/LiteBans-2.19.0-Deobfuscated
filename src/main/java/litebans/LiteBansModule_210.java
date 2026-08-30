@@ -788,18 +788,18 @@ ResultSet {
 }
 
     @Override
-    public void updateObject(int n, Object object, int n2) {
+    public void updateObject(int n, Object targetObj, int n2) {
         try {
-            this.LiteBansModule_31.updateObject(n, object, n2);
+            this.LiteBansModule_31.updateObject(n, targetObj, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void updateObject(int n, Object object) {
+    public void updateObject(int n, Object targetObj) {
         try {
-            this.LiteBansModule_31.updateObject(n, object);
+            this.LiteBansModule_31.updateObject(n, targetObj);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -959,18 +959,18 @@ ResultSet {
 }
 
     @Override
-    public void updateObject(String string, Object object, int n) {
+    public void updateObject(String string, Object targetObj, int n) {
         try {
-            this.LiteBansModule_31.updateObject(string, object, n);
+            this.LiteBansModule_31.updateObject(string, targetObj, n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void updateObject(String string, Object object) {
+    public void updateObject(String string, Object targetObj) {
         try {
-            this.LiteBansModule_31.updateObject(string, object);
+            this.LiteBansModule_31.updateObject(string, targetObj);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1720,36 +1720,36 @@ ResultSet {
 }
 
     @Override
-    public void updateObject(int n, Object object, SQLType sQLType, int n2) {
+    public void updateObject(int n, Object targetObj, SQLType sQLType, int n2) {
         try {
-            this.LiteBansModule_31.updateObject(n, object, sQLType, n2);
+            this.LiteBansModule_31.updateObject(n, targetObj, sQLType, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void updateObject(String string, Object object, SQLType sQLType, int n) {
+    public void updateObject(String string, Object targetObj, SQLType sQLType, int n) {
         try {
-            this.LiteBansModule_31.updateObject(string, object, sQLType, n);
+            this.LiteBansModule_31.updateObject(string, targetObj, sQLType, n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void updateObject(int n, Object object, SQLType sQLType) {
+    public void updateObject(int n, Object targetObj, SQLType sQLType) {
         try {
-            this.LiteBansModule_31.updateObject(n, object, sQLType);
+            this.LiteBansModule_31.updateObject(n, targetObj, sQLType);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void updateObject(String string, Object object, SQLType sQLType) {
+    public void updateObject(String string, Object targetObj, SQLType sQLType) {
         try {
-            this.LiteBansModule_31.updateObject(string, object, sQLType);
+            this.LiteBansModule_31.updateObject(string, targetObj, sQLType);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);

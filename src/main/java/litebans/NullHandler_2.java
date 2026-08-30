@@ -154,11 +154,11 @@ implements ProxiedPlayer {
     }
 
     public String getName() {
-        Object object = this.LiteBansModule_31;
-        if (object == null || (object = object.getName()) == null) {
-            object = "null";
+        Object targetObj = this.LiteBansModule_31;
+        if (targetObj == null || (targetObj = targetObj.getName()) == null) {
+            targetObj = "null";
         }
-        return object;
+        return targetObj;
     }
 
     public PendingConnection getPendingConnection() {
@@ -197,11 +197,11 @@ implements ProxiedPlayer {
     }
 
     public UUID getUniqueId() {
-        Object object = this.LiteBansModule_31;
-        if (object == null || (object = object.getUniqueId()) == null) {
-            object = new UUID(0L, 0L);
+        Object targetObj = this.LiteBansModule_31;
+        if (targetObj == null || (targetObj = targetObj.getUniqueId()) == null) {
+            targetObj = new UUID(0L, 0L);
         }
-        return object;
+        return targetObj;
     }
 
     public boolean hasPermission(@NotNull String string) {

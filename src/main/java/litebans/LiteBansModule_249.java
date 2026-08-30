@@ -26,7 +26,7 @@ extends CommandManager {
 }
 
     public void LiteBansModule_31(LiteCommand command) {
-        VelocityPlugin velocityPlugin = (VelocityPlugin)this.plugin;
+        VelocityPlugin velocityPlugin = this.plugin;
         CommandManager commandManager = velocityPlugin.c.getCommandManager();
         commandManager.register(command.getName(), (Command)((LiteBansModule_53)command), command.getAliases());
 }

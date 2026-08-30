@@ -29,7 +29,7 @@ LiteBansModule_122 {
         String string = this.plugin;
         this.plugin = null;
         String string2 = string;
-        ObjectUtilities.BaseCoreGenericHandler((Object)string2);
+        ObjectUtilities.BaseCoreGenericHandler(string2);
         return string2;
     }
 

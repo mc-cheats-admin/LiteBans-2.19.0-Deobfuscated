@@ -24,54 +24,50 @@ extends MessageHandler {
         this.AsyncBackgroundTask_5 = concurrentHashMap;
     }
 
-    public final void BaseCoreGenericHandler(@NotNull Object object, @NotNull String string, @NotNull CommandSenderWrapper sender, boolean flag) {
+    public final void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull String string, @NotNull CommandSenderWrapper sender, boolean flag) {
         boolean flag2;
         boolean flag3;
         UUID uUID = sender.AsyncBackgroundTask_5();
-        Object object2 = this;
-        String string2 = ((ConfigService)((MessageHandler)object2).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).BaseCoreGenericHandler(sender, object);
-        Object object3 = this;
-        PunishmentTableService p2 = (PunishmentTableService)((MessageHandler)object3).LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class);
+                String string2 = ((ConfigService)((MessageHandler)contextObj).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).BaseCoreGenericHandler(sender, targetObj);
+                PunishmentTableService p2 = (PunishmentTableService)this.LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class);
         String string3 = sender.LiteBansModule_240();
         if (string3 == null) {
             MessageHandler messageHandler = this;
             flag3 = false;
             string3 = ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService();
         }
-        object2 = p2.BaseCoreGenericHandler(uUID, string2, string3);
-        object3 = this;
+        contextObj = p2.BaseCoreGenericHandler(uUID, string2, string3);
+        resultObj = this;
         n = 0;
-        object3 = (ConfigService)((MessageHandler)object3).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
+        resultObj = (ConfigService)this.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
         n = 100;
         flag3 = false;
-        if (((ConfigService)object3).BaseCoreGenericHandler(n)) {
-            Object object4 = object3;
+        if (this.BaseCoreGenericHandler(n)) {
+            Object helperObj = resultObj;
             flag2 = false;
-            ((ConfigService)object4).BaseCoreGenericHandler((Object)("[+] Mute for " + sender.i() + " is " + object2));
+            ((ConfigService)helperObj).BaseCoreGenericHandler((Object)("[+] Mute for " + sender.i() + " is " + contextObj));
         }
-        if (object2 == null) {
+        if (contextObj == null) {
             return;
         }
-        if (flag || ((CharSequence)string).length() == 0 || string.charAt(0) != '/') {
-            this.plugin(object, sender, string, (SilentHandler)object2);
+        if (flag || (string).length() == 0 || string.charAt(0) != '/') {
+            this.plugin(targetObj, sender, string, (SilentHandler)contextObj);
         } else {
             boolean flag5;
-            Object object5;
-            Object object6;
 {
                 object6 = new char[]{' '};
-                object3 = (String)StringUtilities.BaseCoreGenericHandler((CharSequence)string, object6, false, 0, 6, null).get(0);
-                object5 = this;
+                resultObj = (String)StringUtilities.BaseCoreGenericHandler(string, object6, false, 0, 6, null).get(0);
+                tempObj = this;
                 flag2 = false;
-                object6 = ((ConfigService)((MessageHandler)object5).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194();
-                object5 = null;
+                object6 = ((ConfigService)((MessageHandler)tempObj).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194();
+                tempObj = null;
                 Object object7 = string;
-                object5 = ((String)object7).toLowerCase(Locale.ROOT);
-                if (LiteBansModule_242.BaseCoreGenericHandler((CharSequence)object5)) {
-                    object5 = LiteBansModule_242.LiteBansModule_31((CharSequence)object5);
+                tempObj = ((String)object7).toLowerCase(Locale.ROOT);
+                if (LiteBansModule_242.BaseCoreGenericHandler(tempObj)) {
+                    tempObj = LiteBansModule_242.LiteBansModule_31(tempObj);
                 }
-                if (StringUtilities.c((CharSequence)object3, ':', false, 2, null) && object6.InitHandler()) {
-                    object5 = this.plugin((String)object5);
+                if (StringUtilities.c(resultObj, ':', false, 2, null) && object6.InitHandler()) {
+                    tempObj = this.plugin((String)tempObj);
                 }
                 object7 = object6.LiteBansModule_10();
                 if (object7 instanceof Collection && ((Collection)object7).isEmpty()) {
@@ -81,21 +77,21 @@ extends MessageHandler {
                     while (iterator.hasNext()) {
                         Object t2 = iterator.next();
                         String string4 = (String)t2;
-                        if (!StringUtilities.LiteBansModule_31((String)object5, string4, false, 2, null)) continue;
+                        if (!StringUtilities.LiteBansModule_31((String)tempObj, string4, false, 2, null)) continue;
                         flag5 = true;
                         break;
                     }
                     flag5 = false;
 }
-            if (flag5 || object6.LiteBansModule_9().contains(object5)) {
-                this.plugin(object, sender, string, (SilentHandler)object2);
+            if (flag5 || object6.LiteBansModule_9().contains(tempObj)) {
+                this.plugin(targetObj, sender, string, (SilentHandler)contextObj);
 }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(TestHandler_2 f82, Object object, String string, CommandSenderWrapper sender, boolean flag, int n, Object object2) {
+    public static /* synthetic */ void BaseCoreGenericHandler(TestHandler_2 f82, Object targetObj, String string, CommandSenderWrapper sender, boolean flag, int n, Object contextObj) {
         if ((n & 8) != 0) {
             flag = false;
         }
-        f82.BaseCoreGenericHandler(object, string, sender, flag);
+        f82.BaseCoreGenericHandler(targetObj, string, sender, flag);
     }
 
     private final String BaseCoreGenericHandler(String string) {
@@ -108,17 +104,16 @@ extends MessageHandler {
     /*
      * WARNING - Removed try catching itself - possible behaviour change.
      */
-    public final void BaseCoreGenericHandler(@NotNull Object object, @NotNull CommandSenderWrapper sender, @Nullable String string, @Nullable SilentHandler dZ2) {
-        KickBannedHandler.BaseCoreGenericHandler(this.LiteBansModule_240().i(), object, null, null, false, null, 30, null);
+    public final void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CommandSenderWrapper sender, @Nullable String string, @Nullable SilentHandler dZ2) {
+        KickBannedHandler.BaseCoreGenericHandler(this.LiteBansModule_240().i(), targetObj, null, null, false, null, 30, null);
         if (dZ2 != null) {
-            Object object2 = this;
-            object2 = (PunishmentTableService)((MessageHandler)object2).LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class);
+                        contextObj = (PunishmentTableService)((MessageHandler)contextObj).LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class);
             flag = false;
             ChatFormatter chatFormatter = MessageHandler.BaseCoreGenericHandler;
-            CommandSenderWrapper jv_03 = sender;
+            CommandSenderWrapper senderWrapper = sender;
             try {
-                chatFormatter.LiteBansModule_31().set(jv_03);
-                PlatformPlugin plugin = ((PunishmentTableService)object2).BaseCoreGenericHandler;
+                chatFormatter.LiteBansModule_31().set(senderWrapper);
+                PlatformPlugin plugin = ((PunishmentTableService)contextObj).BaseCoreGenericHandler;
                 CharSequence charSequence = string;
                 ObjectUtilities.BaseCoreGenericHandler(charSequence);
                 new MutedplayerHandler(plugin, dZ2, charSequence).run();

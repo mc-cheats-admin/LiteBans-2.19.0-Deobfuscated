@@ -35,7 +35,7 @@ implements LiteBansModule_158 {
         return (VelocityPlugin)plugin;
     }
 
-    public static /* synthetic */ VelocityPlugin BaseCoreGenericHandler(LiteBansModule_90 cm_02, PlatformPlugin plugin, int n, Object object) {
+    public static /* synthetic */ VelocityPlugin BaseCoreGenericHandler(LiteBansModule_90 cm_02, PlatformPlugin plugin, int n, Object targetObj) {
         if ((n & 1) != 0) {
             plugin = cm_02.c();
         }
@@ -44,9 +44,8 @@ implements LiteBansModule_158 {
 
     @Override
     public Object c(@NotNull String string) {
-        Object object = this;
-        object = string;
-        Optional optional = LiteBansModule_90.BaseCoreGenericHandler((LiteBansModule_90)object, null, (int)1, null).c.getPluginManager().getPlugin(((String)object).toLowerCase(Locale.ENGLISH));
+                targetObj = string;
+        Optional optional = LiteBansModule_90.BaseCoreGenericHandler((LiteBansModule_90)targetObj, null, (int)1, null).c.getPluginManager().getPlugin(targetObj.toLowerCase(Locale.ENGLISH));
         return optional.isPresent() && ((PluginContainer)optional.get()).getInstance().isPresent() ? ((PluginContainer)optional.get()).getInstance().get() : null;
     }
 
@@ -101,7 +100,7 @@ implements LiteBansModule_158 {
                     for (Object t3 : iterable3) {
                         PluginDependency pluginDependency = (PluginDependency)t3;
                         String string2 = string;
-                        if (!ObjectUtilities.BaseCoreGenericHandler((Object)pluginDependency.getId(), (Object)string2.toLowerCase(Locale.ENGLISH))) continue;
+                        if (!ObjectUtilities.BaseCoreGenericHandler(pluginDependency.getId(), string2.toLowerCase(Locale.ENGLISH))) continue;
                         flag5 = true;
                         break;
                     }
@@ -136,45 +135,45 @@ implements LiteBansModule_158 {
     }
 
     @Override
-    public void BaseCoreGenericHandler(@NotNull Object object, @NotNull CharSequence charSequence) {
-        if (!(object instanceof ServerPreConnectEvent)) {
+    public void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence) {
+        if (!(targetObj instanceof ServerPreConnectEvent)) {
             throw new UnsupportedOperationException();
         }
-        ((ServerPreConnectEvent)object).getPlayer().sendMessage((Component)this.plugin(charSequence));
+        targetObj.getPlayer().sendMessage(this.plugin(charSequence));
     }
 
     @Override
-    public void BaseCoreGenericHandler(@NotNull Object object, @NotNull CharSequence charSequence, @NotNull String string, boolean flag, @NotNull String string2) {
-        Object object2 = object;
-        if (object2 instanceof PlayerChatEvent) {
-            ((PlayerChatEvent)object).setResult(PlayerChatEvent.ChatResult.denied());
-        } else if (object2 instanceof CommandExecuteEvent) {
-            ((CommandExecuteEvent)object).setResult(CommandExecuteEvent.CommandResult.denied());
-        } else if (object2 instanceof ServerPreConnectEvent) {
-            ((ServerPreConnectEvent)object).setResult(ServerPreConnectEvent.ServerResult.denied());
-            if (flag && !((ServerPreConnectEvent)object).getPlayer().getCurrentServer().isPresent()) {
-                ((ServerPreConnectEvent)object).getPlayer().disconnect((Component)this.plugin(charSequence));
+    public void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence, @NotNull String string, boolean flag, @NotNull String string2) {
+        Object contextObj = targetObj;
+        if (contextObj instanceof PlayerChatEvent) {
+            targetObj.setResult(PlayerChatEvent.ChatResult.denied());
+        } else if (contextObj instanceof CommandExecuteEvent) {
+            targetObj.setResult(CommandExecuteEvent.CommandResult.denied());
+        } else if (contextObj instanceof ServerPreConnectEvent) {
+            targetObj.setResult(ServerPreConnectEvent.ServerResult.denied());
+            if (flag && !targetObj.getPlayer().getCurrentServer().isPresent()) {
+                targetObj.getPlayer().disconnect(this.plugin(charSequence));
 }
 
     public final TextComponent BaseCoreGenericHandler(@NotNull CharSequence charSequence) {
-        return LegacyComponentSerializer.legacySection().deserialize(((Object)charSequence).toString());
+        return LegacyComponentSerializer.legacySection().deserialize((charSequence).toString());
     }
 
     @Override
-    public LiteBansModule_95 BaseCoreGenericHandler(@NotNull Object object, boolean flag) {
-        if (!(object instanceof ServerPreConnectEvent)) {
+    public LiteBansModule_95 BaseCoreGenericHandler(@NotNull Object targetObj, boolean flag) {
+        if (!(targetObj instanceof ServerPreConnectEvent)) {
             throw new UnsupportedOperationException();
         }
-        Player player = ((ServerPreConnectEvent)object).getPlayer();
+        Player player = targetObj.getPlayer();
         return new LiteBansModule_95(player.getUsername(), player.getUniqueId().toString(), player.getRemoteAddress().getAddress().getHostAddress());
     }
 
     @Override
-    public String BaseCoreGenericHandler(@NotNull Object object) {
-        if (!(object instanceof ServerPreConnectEvent)) {
+    public String BaseCoreGenericHandler(@NotNull Object targetObj) {
+        if (!(targetObj instanceof ServerPreConnectEvent)) {
             throw new UnsupportedOperationException();
         }
-        return ((RegisteredServer)((ServerPreConnectEvent)object).getResult().getServer().get()).getServerInfo().getName();
+        return ((RegisteredServer)targetObj.getResult().getServer().get()).getServerInfo().getName();
     }
 
     @Override

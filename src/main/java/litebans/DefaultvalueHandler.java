@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 static class DefaultvalueHandler
 extends SelectorHandler {
     public static final char BaseCoreGenericHandler(@NotNull CharSequence charSequence) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
         if (charSequence.length() == 0) {
             throw new NoSuchElementException("Char sequence is ");
         }
@@ -14,12 +14,12 @@ extends SelectorHandler {
     }
 
     public static final Character BaseCoreGenericHandler(@NotNull CharSequence charSequence, int n) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
         return (0 <= n ? n < charSequence.length() : false) ? Character.valueOf(charSequence.charAt(n)) : null;
     }
 
     public static final char LiteBansModule_31(@NotNull CharSequence charSequence) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
         if (charSequence.length() == 0) {
             throw new NoSuchElementException("Char sequence is ");
         }
@@ -27,7 +27,7 @@ extends SelectorHandler {
     }
 
     public static final String LiteBansModule_31(@NotNull String string, int n) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
         if (!(n >= 0)) {
             String string2 = "Requested character count " + n + " is less than ";
             throw new IllegalArgumentException(string2.toString());
@@ -36,7 +36,7 @@ extends SelectorHandler {
     }
 
     public static final String BaseCoreGenericHandler(@NotNull String string, int n) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
         if (!(n >= 0)) {
             String string2 = "Requested character count " + n + " is less than ";
             throw new IllegalArgumentException(string2.toString());

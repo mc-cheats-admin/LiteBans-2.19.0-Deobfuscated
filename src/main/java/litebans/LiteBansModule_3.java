@@ -20,14 +20,14 @@ public final class LiteBansModule_3 {
         return Boolean.hashCode(this.plugin);
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof LiteBansModule_3)) {
+        if (!(targetObj instanceof LiteBansModule_3)) {
             return false;
         }
-        LiteBansModule_3 a42 = (LiteBansModule_3)object;
+        LiteBansModule_3 a42 = (LiteBansModule_3)targetObj;
         return this.plugin == a42.BaseCoreGenericHandler;
 }
 

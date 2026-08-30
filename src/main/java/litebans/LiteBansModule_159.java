@@ -42,8 +42,8 @@ LiteBansModule_122 {
         return this.LiteBansModule_31 > 0 ? this.c > this.e : this.c < this.e;
     }
 
-    public boolean equals(@Nullable Object object) {
-        return object instanceof LiteBansModule_159 && (this.plugin() && ((LiteBansModule_159)object).BaseCoreGenericHandler() || this.c == ((LiteBansModule_159)object).c && this.e == ((LiteBansModule_159)object).e && this.LiteBansModule_31 == ((LiteBansModule_159)object).LiteBansModule_31);
+    public boolean equals(@Nullable Object targetObj) {
+        return targetObj instanceof LiteBansModule_159 && (this.plugin() && targetObj.BaseCoreGenericHandler() || this.c == targetObj.c && this.e == targetObj.e && this.LiteBansModule_31 == targetObj.LiteBansModule_31);
     }
 
     public int hashCode() {

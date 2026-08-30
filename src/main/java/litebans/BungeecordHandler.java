@@ -20,22 +20,22 @@ implements CommandSenderWrapper {
     private UUID i = LiteBansModule_31;
     private String e = null;
     private String AsyncBackgroundTask_5;
-    public BungeecordHandler(ConfigYmlHandler fabricPlugin, Object object, @Nullable Supplier supplier) {
+    public BungeecordHandler(ConfigYmlHandler fabricPlugin, Object targetObj, @Nullable Supplier supplier) {
         this.LiteBansModule_194 = fabricPlugin;
-        this.g = new WeakReference<Object>(object);
+        this.g = new WeakReference<Object>(targetObj);
         this.Utf8Handler_2 = supplier;
-        this.GnuSparseMapHandler = object instanceof class_2168 && ((class_2168)object).method_43737();
-        this.c = this.GnuSparseMapHandler ? ((class_2168)object).method_9214() : "[Console]";
+        this.GnuSparseMapHandler = targetObj instanceof class_2168 && targetObj.method_43737();
+        this.c = this.GnuSparseMapHandler ? targetObj.method_9214() : "[Console]";
     }
 
-    public boolean equals(Object object) {
-        return this == object || object instanceof BungeecordHandler && ((BungeecordHandler)object).AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
+    public boolean equals(Object targetObj) {
+        return this == targetObj || targetObj instanceof BungeecordHandler && targetObj.AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
     }
 
     @Override
     public void c(@NotNull String string) {
-        Object object = this.c();
-        if (!(object instanceof class_2168) || string.isEmpty()) {
+        Object targetObj = this.c();
+        if (!(targetObj instanceof class_2168) || string.isEmpty()) {
             return;
         }
         this.LiteBansModule_194.g().LiteBansModule_31(this.c(), string);
@@ -59,8 +59,8 @@ implements CommandSenderWrapper {
     public @Nullable String LiteBansModule_31() {
         String string = this.AsyncBackgroundTask_5;
         if (string == null) {
-            Object object = this.c();
-            this.AsyncBackgroundTask_5 = string = this.LiteBansModule_194.g().BaseCoreGenericHandler(object);
+            Object targetObj = this.c();
+            this.AsyncBackgroundTask_5 = string = this.LiteBansModule_194.g().BaseCoreGenericHandler(targetObj);
         }
         return string;
     }
@@ -78,9 +78,8 @@ implements CommandSenderWrapper {
     @Override
     public @NonNull UUID AsyncBackgroundTask_5() {
         UUID uUID;
-        Object object;
         UUID uUID2 = this.i;
-        if (uUID2.equals(LiteBansModule_31) && this.GnuSparseMapHandler && (object = this.c()) != null && (uUID = this.plugin().method_5667()) != null) {
+        if (uUID2.equals(LiteBansModule_31) && this.GnuSparseMapHandler && (targetObj = this.c()) != null && (uUID = this.plugin().method_5667()) != null) {
             this.i = uUID;
             return uUID;
         }
@@ -98,17 +97,17 @@ implements CommandSenderWrapper {
         if (string == null) {
             return true;
         }
-        Object object = this.c();
-        if (object == null) {
+        Object targetObj = this.c();
+        if (targetObj == null) {
             return false;
         }
-        if (!this.LiteBansModule_194.AsyncBackgroundTask_5() || !this.GnuSparseMapHandler && object instanceof class_2168) {
-            return ((class_2168)object).method_9259(3);
+        if (!this.LiteBansModule_194.AsyncBackgroundTask_5() || !this.GnuSparseMapHandler && targetObj instanceof class_2168) {
+            return targetObj.method_9259(3);
         }
-        if (!(object instanceof class_2168) || !this.GnuSparseMapHandler()) {
+        if (!(targetObj instanceof class_2168) || !this.GnuSparseMapHandler()) {
             return false;
         }
-        return (Boolean)Permissions.check((UUID)this.AsyncBackgroundTask_5(), (String)string).get();
+        return (Boolean)Permissions.check(this.AsyncBackgroundTask_5(), (String)string).get();
     }
 
     @Override
@@ -118,15 +117,14 @@ implements CommandSenderWrapper {
 
     @Override
     public boolean GnuSparseMapHandler() {
-        Object object;
-        if (this.GnuSparseMapHandler && (object = this.c()) != null) {
+        if (this.GnuSparseMapHandler && (targetObj = this.c()) != null) {
             return !this.plugin().method_14239();
         }
         return this.c() != null;
     }
 
     private final class_3222 BaseCoreGenericHandler() {
-        return ((class_2168)this.c()).method_44023();
+        return (this.c()).method_44023();
     }
 
     @Override
@@ -139,21 +137,21 @@ implements CommandSenderWrapper {
         if (string == null) {
             throw new NullPointerException("reason is marked non-null but is null");
         }
-        Object object = this.c();
-        if (object == null) {
+        Object targetObj = this.c();
+        if (targetObj == null) {
             return;
         }
         if (this.e()) {
             if (this.LiteBansModule_194.ServerSyncService()) {
-                this.LiteBansModule_194.g().BaseCoreGenericHandler((Object)this.plugin(), string);
+                this.LiteBansModule_194.g().BaseCoreGenericHandler(this.plugin(), string);
             } else {
                 this.LiteBansModule_194.c(() -> this.AsyncBackgroundTask_5(string));
 }
 
     @Override
     public void LiteBansModule_31(String string) {
-        Object object = this.c();
-        this.LiteBansModule_194.g().c(object, string);
+        Object targetObj = this.c();
+        this.LiteBansModule_194.g().c(targetObj, string);
     }
 
     @Override
@@ -167,8 +165,8 @@ implements CommandSenderWrapper {
 
     @Override
     public void BaseCoreGenericHandler(String string, byte[] byArray) {
-        Object object = this.c();
-        if (object == null) {
+        Object targetObj = this.c();
+        if (targetObj == null) {
             return;
         }
         if (this.e()) {

@@ -5,13 +5,13 @@ public class ObjectUtilities {
     private ObjectUtilities() {
     }
 
-    public static void BaseCoreGenericHandler(Object object) {
-        if (object == null) {
+    public static void BaseCoreGenericHandler(Object targetObj) {
+        if (targetObj == null) {
             ObjectUtilities.BaseCoreGenericHandler();
 }
 
-    public static void LiteBansModule_31(Object object, String string) {
-        if (object == null) {
+    public static void LiteBansModule_31(Object targetObj, String string) {
+        if (targetObj == null) {
             ObjectUtilities.AsyncBackgroundTask_5(string);
 }
 
@@ -31,13 +31,13 @@ public class ObjectUtilities {
         ObjectUtilities.BaseCoreGenericHandler("lateinit property " + string + " has not been initialized");
     }
 
-    public static void c(Object object, String string) {
-        if (object == null) {
+    public static void c(Object targetObj, String string) {
+        if (targetObj == null) {
             throw (NullPointerException)ObjectUtilities.BaseCoreGenericHandler(new NullPointerException(string + " must not be null"));
 }
 
-    public static void BaseCoreGenericHandler(Object object, String string) {
-        if (object == null) {
+    public static void BaseCoreGenericHandler(Object targetObj, String string) {
+        if (targetObj == null) {
             ObjectUtilities.LiteBansModule_31(string);
 }
 
@@ -68,8 +68,8 @@ public class ObjectUtilities {
         return n < n2 ? -1 : (n == n2 ? 0 : 1);
     }
 
-    public static boolean BaseCoreGenericHandler(Object object, Object object2) {
-        return object == null ? object2 == null : object.equals(object2);
+    public static boolean BaseCoreGenericHandler(Object targetObj, Object contextObj) {
+        return targetObj == null ? contextObj == null : targetObj.equals(contextObj);
     }
 
     private static final Throwable BaseCoreGenericHandler(Throwable throwable) {

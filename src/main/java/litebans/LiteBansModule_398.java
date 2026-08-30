@@ -39,14 +39,14 @@ implements LiteBansModule_235 {
         return this.BroadcastService;
     }
 
-    public boolean equals(Object object) {
-        if (object == this) {
+    public boolean equals(Object targetObj) {
+        if (targetObj == this) {
             return true;
         }
-        if (object == null || !object.getClass().equals(this.getClass())) {
+        if (targetObj == null || !targetObj.getClass().equals(this.getClass())) {
             return false;
         }
-        LiteBansModule_398 ky_02 = (LiteBansModule_398)object;
+        LiteBansModule_398 ky_02 = (LiteBansModule_398)targetObj;
         if (ky_02.g == null) {
             return false;
         }

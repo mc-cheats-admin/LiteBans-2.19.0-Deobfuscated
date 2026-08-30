@@ -21,26 +21,26 @@ implements LiteBansModule_178 {
             MessageHandler messageHandler = this.c;
             byte by2 = ((ConfigService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().be();
             flag = false;
-            AllHandler_3.BaseCoreGenericHandler(ch2, LiteBansModule_242.BaseCoreGenericHandler(((Object)charSequence).toString(), by2 & 0xFF), this.AsyncBackgroundTask_5, this.plugin.LiteBansModule_31(), false, false, 16, null);
+            AllHandler_3.BaseCoreGenericHandler(ch2, LiteBansModule_242.BaseCoreGenericHandler((charSequence).toString(), by2 & 0xFF), this.AsyncBackgroundTask_5, this.plugin.LiteBansModule_31(), false, false, 16, null);
         } else if (this.plugin.e()) {
             CharSequence charSequence = this.plugin.i();
             MessageHandler fg_03 = this.c;
             byte by3 = ((ConfigService)fg_03.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().be();
             flag = false;
-            AllHandler_3.BaseCoreGenericHandler(ch2, LiteBansModule_242.BaseCoreGenericHandler(((Object)charSequence).toString(), by3 & 0xFF), this.plugin.BaseCoreGenericHandler(), this.plugin.LiteBansModule_31(), false, false, 16, null);
+            AllHandler_3.BaseCoreGenericHandler(ch2, LiteBansModule_242.BaseCoreGenericHandler((charSequence).toString(), by3 & 0xFF), this.plugin.BaseCoreGenericHandler(), this.plugin.LiteBansModule_31(), false, false, 16, null);
         } else if (this.plugin.LiteBansModule_194() && !StringUtilities.BaseCoreGenericHandler(this.LiteBansModule_31, "CONSOLE", true) || !this.plugin.LiteBansModule_194()) {
             CharSequence charSequence = this.LiteBansModule_31;
             MessageHandler fg_04 = this.c;
             byte by4 = ((ConfigService)fg_04.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().be();
             flag = false;
-            AllHandler_3.BaseCoreGenericHandler(ch2, LiteBansModule_242.BaseCoreGenericHandler(((Object)charSequence).toString(), by4 & 0xFF), this.AsyncBackgroundTask_5, "#", false, false, 16, null);
+            AllHandler_3.BaseCoreGenericHandler(ch2, LiteBansModule_242.BaseCoreGenericHandler((charSequence).toString(), by4 & 0xFF), this.AsyncBackgroundTask_5, "#", false, false, 16, null);
         } else if (this.plugin.LiteBansModule_194()) {
             AllHandler_3.BaseCoreGenericHandler(ch2, "CONSOLE", "CONSOLE", "#", false, false, 16, null);
 }
 
     @Override
-    public Object BaseCoreGenericHandler(Object object) {
-        this.plugin((LiteBansModule_82)object);
+    public Object BaseCoreGenericHandler(Object targetObj) {
+        this.plugintargetObj;
         return KotlinUnitHandler.BaseCoreGenericHandler;
 }
 

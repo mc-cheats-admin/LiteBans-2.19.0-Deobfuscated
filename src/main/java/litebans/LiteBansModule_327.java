@@ -50,30 +50,30 @@ public final class LiteBansModule_327 {
         return n;
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof LiteBansModule_327)) {
+        if (!(targetObj instanceof LiteBansModule_327)) {
             return false;
         }
-        LiteBansModule_327 j02 = (LiteBansModule_327)object;
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.g, j02.g)) {
+        LiteBansModule_327 j02 = (LiteBansModule_327)targetObj;
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.g, j02.g)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5, (Object)j02.AsyncBackgroundTask_5)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, j02.AsyncBackgroundTask_5)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_31, (Object)j02.LiteBansModule_31)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_31, j02.LiteBansModule_31)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_194, j02.LiteBansModule_194)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_194, j02.LiteBansModule_194)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.e, j02.e)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.e, j02.e)) {
             return false;
         }
-        return ObjectUtilities.BaseCoreGenericHandler((Object)this.plugin, j02.BaseCoreGenericHandler);
+        return ObjectUtilities.BaseCoreGenericHandler(this.plugin, j02.BaseCoreGenericHandler);
     }
 
     private static final void BaseCoreGenericHandler() {

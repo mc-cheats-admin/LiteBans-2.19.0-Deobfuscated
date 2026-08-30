@@ -35,7 +35,7 @@ implements AutoCloseable {
      */
     public LiteBansModule_315 BaseCoreGenericHandler(long l3, TimeUnit timeUnit) {
         int n;
-        List list = (List)this.plugin.get();
+        List list = this.plugin.get();
         for (n = list.size() - 1; n >= 0; --n) {
             LiteBansModule_315 iq2;
             Object e = list.remove(n);
@@ -58,7 +58,7 @@ implements AutoCloseable {
             l3 = timeUnit.toNanos(l3);
             do {
                 l5 = LiteBansModule_149.LiteBansModule_31();
-                LiteBansModule_315 iq5 = (LiteBansModule_315)this.c.poll(l3, TimeUnit.NANOSECONDS);
+                LiteBansModule_315 iq5 = this.c.poll(l3, TimeUnit.NANOSECONDS);
                 if (iq5 != null && !iq5.BaseCoreGenericHandler(0, 1)) continue;
                 LiteBansModule_315 iq6 = iq5;
                 return iq6;
@@ -83,7 +83,7 @@ implements AutoCloseable {
             }
             ++n;
         }
-        List list = (List)this.plugin.get();
+        List list = this.plugin.get();
         if (list.size() < 50) {
             list.add(this.AsyncBackgroundTask_5 ? new WeakReference<LiteBansModule_315>(iq2) : iq2);
 }
@@ -100,14 +100,14 @@ implements AutoCloseable {
 
     public boolean e(LiteBansModule_315 iq2) {
         if (!(iq2.BaseCoreGenericHandler(1, -1) || iq2.BaseCoreGenericHandler(-2, -1) || this.LiteBansModule_240)) {
-            LiteBansModule_31.c("Attempt to remove HikariDataSource object from the bag that was not borrowed or reserved: %AsyncBackgroundTask_21", new Object[]{iq2.toString()});
+            LiteBansModule_31.c("Attempt to remove HikariDataSource targetObj from the bag that was not borrowed or reserved: %AsyncBackgroundTask_21", new Object[]{iq2.toString()});
             return false;
         }
         boolean flag = this.g.remove(iq2);
         if (!flag && !this.LiteBansModule_240) {
-            LiteBansModule_31.c("Attempt to remove HikariDataSource object from the bag that does not exist: %AsyncBackgroundTask_21", new Object[]{iq2.toString()});
+            LiteBansModule_31.c("Attempt to remove HikariDataSource targetObj from the bag that does not exist: %AsyncBackgroundTask_21", new Object[]{iq2.toString()});
         }
-        ((List)this.plugin.get()).remove(iq2);
+        (this.plugin.get()).remove(iq2);
         return flag;
     }
 
@@ -123,7 +123,7 @@ implements AutoCloseable {
     }
 
     public List e() {
-        return (List)this.g.clone();
+        return this.g.clone();
     }
 
     public boolean BaseCoreGenericHandler(LiteBansModule_315 iq2) {
@@ -135,7 +135,7 @@ implements AutoCloseable {
             while (this.e.get() > 0 && !this.c.offer(iq2)) {
                 Thread.yield();
 } else {
-            LiteBansModule_31.c("Attempt to relinquish HikariDataSource object to the bag that was not reserved: {}", new Object[]{iq2});
+            LiteBansModule_31.c("Attempt to relinquish HikariDataSource targetObj to the bag that was not reserved: {}", new Object[]{iq2});
 }
 
     public int c() {

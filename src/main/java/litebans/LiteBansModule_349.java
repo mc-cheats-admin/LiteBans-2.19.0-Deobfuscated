@@ -13,7 +13,7 @@ implements LiteBansModule_200 {
 
     @Override
     public boolean BaseCoreGenericHandler(LiteBansModule_15 aK2, BroadcastHandler ij2, String string) {
-        if (ij2 == BroadcastHandler.CommandThrottleService && ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)this.AsyncBackgroundTask_5) && aK2 != null) {
+        if (ij2 == BroadcastHandler.CommandThrottleService && ObjectUtilities.BaseCoreGenericHandler(string, this.AsyncBackgroundTask_5) && aK2 != null) {
             this.e.add(aK2);
         }
         return true;

@@ -8,10 +8,10 @@ implements Serializable {
     private final Object AsyncBackgroundTask_5;
     private final Object BaseCoreGenericHandler;
     private final Object c;
-    public LiteBansModule_301(Object object, Object object2, Object object3) {
-        this.AsyncBackgroundTask_5 = object;
-        this.plugin = object2;
-        this.c = object3;
+    public LiteBansModule_301(Object targetObj, Object contextObj, Object resultObj) {
+        this.AsyncBackgroundTask_5 = targetObj;
+        this.plugin = contextObj;
+        this.c = resultObj;
     }
 
     public final Object BaseCoreGenericHandler() {
@@ -49,14 +49,14 @@ implements Serializable {
         return n;
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof LiteBansModule_301)) {
+        if (!(targetObj instanceof LiteBansModule_301)) {
             return false;
         }
-        LiteBansModule_301 id_02 = (LiteBansModule_301)object;
+        LiteBansModule_301 id_02 = (LiteBansModule_301)targetObj;
         if (!ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, id_02.AsyncBackgroundTask_5)) {
             return false;
         }

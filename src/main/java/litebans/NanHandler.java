@@ -6,7 +6,7 @@ static class NanHandler
 extends BuilderactionHandler_2 {
     public static final Double LiteBansModule_31(@NotNull String string) {
         String string2;
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
         try {
             Double d10;
             if (NanHandler.BaseCoreGenericHandler(string)) {
@@ -127,7 +127,7 @@ extends BuilderactionHandler_2 {
                     String string9;
                     n2 = n8;
                     String string10 = n2 == n5 + 3 - 1 ? "NaN" : (string9 = n2 == n5 + 8 - 1 ? "Infinity" : null);
-                    n10 = string9 == null ? -1 : (StringUtilities.LiteBansModule_31((CharSequence)string6, string9, n5, false) == n5 ? n8 + 1 : -1);
+                    n10 = string9 == null ? -1 : (StringUtilities.LiteBansModule_31(string6, string9, n5, false) == n5 ? n8 + 1 : -1);
                 } else {
                     n10 = n7 = n5;
 }

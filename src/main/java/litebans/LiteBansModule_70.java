@@ -6,16 +6,16 @@ public final class LiteBansModule_70 {
     private final Object BaseCoreGenericHandler;
     private boolean LiteBansModule_31;
 
-    public LiteBansModule_70(@NotNull Object object, boolean flag) {
-        this.plugin = object;
+    public LiteBansModule_70(@NotNull Object targetObj, boolean flag) {
+        this.plugin = targetObj;
         this.LiteBansModule_31 = flag;
     }
 
-    public /* synthetic */ LiteBansModule_70(Object object, boolean flag, int n, LiteBansModule_14 aJ2) {
+    public /* synthetic */ LiteBansModule_70(Object targetObj, boolean flag, int n, LiteBansModule_14 aJ2) {
         if ((n & 2) != 0) {
             flag = false;
         }
-        this(object, flag);
+        this(targetObj, flag);
     }
 
     public final boolean BaseCoreGenericHandler() {

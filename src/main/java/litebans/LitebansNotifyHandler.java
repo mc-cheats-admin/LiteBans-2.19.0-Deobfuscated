@@ -15,12 +15,12 @@ public final class LitebansNotifyHandler {
 for (arg3 = 0; arg3 < arg2; ++arg3) {
 {
                                                         arg4 = arg5 = v1[arg3];
-                                                        if (!StringUtilities.BaseCoreGenericHandler((CharSequence)arg4, '-', false, 2, null) || arg4.length() <= 1 || arg6) break;
-                                                        if (ObjectUtilities.BaseCoreGenericHandler((Object)arg4, (Object)"--")) {
+                                                        if (!StringUtilities.BaseCoreGenericHandler(arg4, '-', false, 2, null) || arg4.length() <= 1 || arg6) break;
+                                                        if (ObjectUtilities.BaseCoreGenericHandler(arg4, (Object)"--")) {
                                                             continue;
                                                         }
                                                         arg7   = new char[]{'-'};
-                                                        if (ObjectUtilities.BaseCoreGenericHandler((Object)(arg4 = StringUtilities.BaseCoreGenericHandler(arg4, arg7  )), (Object)"AsyncBackgroundTask_21") || ObjectUtilities.BaseCoreGenericHandler((Object)arg4, (Object)"AsyncBackgroundTask_21:true") || ObjectUtilities.BaseCoreGenericHandler((Object)arg4, (Object)("AsyncBackgroundTask_21:" + MessageKey.ap))) {
+                                                        if (ObjectUtilities.BaseCoreGenericHandler((Object)(arg4 = StringUtilities.BaseCoreGenericHandler(arg4, arg7  )), (Object)"AsyncBackgroundTask_21") || ObjectUtilities.BaseCoreGenericHandler(arg4, (Object)"AsyncBackgroundTask_21:true") || ObjectUtilities.BaseCoreGenericHandler(arg4, (Object)("AsyncBackgroundTask_21:" + MessageKey.ap))) {
                                                             if (!v3) {
 {
                                                                     arg7   = (char[])arg1.BaseCoreGenericHandler();
@@ -36,7 +36,7 @@ for (arg3 = 0; arg3 < arg2; ++arg3) {
                                                             arg1.Utf8Handler_2(true);
                                                             continue;
                                                         }
-                                                        if (ObjectUtilities.BaseCoreGenericHandler((Object)arg4, (Object)"AsyncBackgroundTask_21:false") || ObjectUtilities.BaseCoreGenericHandler((Object)arg4, (Object)("AsyncBackgroundTask_21:" + MessageKey.OutHandler))) {
+                                                        if (ObjectUtilities.BaseCoreGenericHandler(arg4, (Object)"AsyncBackgroundTask_21:false") || ObjectUtilities.BaseCoreGenericHandler(arg4, (Object)("AsyncBackgroundTask_21:" + MessageKey.OutHandler))) {
                                                             arg1.Utf8Handler_2(false);
                                                             arg1.LiteBansModule_240(false);
                                                             continue;
@@ -226,7 +226,7 @@ for (arg23 = 0; arg23 < arg22; ++arg23) {
             arg1.BanHandler_4();
 }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(LitebansNotifyHandler bL2, String[] args, boolean flag, boolean flag2, int n, Object object) {
+    public static /* synthetic */ void BaseCoreGenericHandler(LitebansNotifyHandler bL2, String[] args, boolean flag, boolean flag2, int n, Object targetObj) {
         if ((n & 1) != 0) {
             args = bL2.BaseCoreGenericHandler.z();
         }
@@ -240,6 +240,6 @@ for (arg23 = 0; arg23 < arg22; ++arg23) {
     }
 
     public final boolean BaseCoreGenericHandler(@NotNull String string) {
-        return StringUtilities.BaseCoreGenericHandler((CharSequence)string, '*', false, 2, null) && !StringUtilities.LiteBansModule_31((CharSequence)string, '*', false, 2, null) && string.length() > 3 && !StringUtilities.c((CharSequence)string, '.', false, 2, null) && !StringUtilities.c((CharSequence)string, ':', false, 2, null);
+        return StringUtilities.BaseCoreGenericHandler(string, '*', false, 2, null) && !StringUtilities.LiteBansModule_31(string, '*', false, 2, null) && string.length() > 3 && !StringUtilities.c(string, '.', false, 2, null) && !StringUtilities.c(string, ':', false, 2, null);
 }
 

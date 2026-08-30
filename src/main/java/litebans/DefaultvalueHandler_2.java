@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 static class DefaultvalueHandler_2
 extends KlassHandler {
     public static final Iterable BaseCoreGenericHandler(@NotNull LiteBansModule_295 i_2) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)i_2, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(i_2, "<this>");
         return new LiteBansModule_385(i_2);
     }
 

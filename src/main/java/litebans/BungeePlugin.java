@@ -20,7 +20,7 @@ implements PlatformPlugin {
     private final LiteBansCore c = new LiteBansCore(this);
     @Override
     public void m() {
-        this.getProxy().getScheduler().cancel((Plugin)this);
+        this.getProxy().getScheduler().cancel(this);
     }
 
     @Override
@@ -117,7 +117,7 @@ implements PlatformPlugin {
         if (threadPoolExecutor == null) {
             ThreadFactoryBuilder threadFactoryBuilder = this.c.AsyncBackgroundTask_5();
             try {
-                threadFactoryBuilder.setThreadFactory((ThreadFactory)new GroupedThreadFactory((Plugin)this, this.getName()));
+                threadFactoryBuilder.setThreadFactory((ThreadFactory)new GroupedThreadFactory(this, this.getName()));
             }
             catch (NoSuchMethodError noSuchMethodError) {
                 threadFactoryBuilder.setThreadFactory((ThreadFactory)GroupedThreadFactory.class.getConstructor(Plugin.class).newInstance(this));
@@ -215,7 +215,7 @@ implements PlatformPlugin {
         }
         for (LiteBansModule_175 em_02 : em_0Array) {
             if (!(em_02 instanceof LiteBansModule_426)) continue;
-            this.getProxy().getPluginManager().registerListener((Plugin)this, (Listener)((LiteBansModule_426)em_02));
+            this.getProxy().getPluginManager().registerListener(this, (Listener)((LiteBansModule_426)em_02));
 }
 
     @Override
@@ -244,7 +244,7 @@ implements PlatformPlugin {
             throw new IllegalArgumentException("Invalid delay: " + l3);
         }
         try {
-            this.getProxy().getScheduler().schedule((Plugin)this, runnable, l3 * 50L, TimeUnit.MILLISECONDS);
+            this.getProxy().getScheduler().schedule(this, runnable, l3 * 50L, TimeUnit.MILLISECONDS);
         }
         catch (RejectedExecutionException rejectedExecutionException) {
             this.plugin(rejectedExecutionException);
@@ -263,7 +263,7 @@ implements PlatformPlugin {
     @Override
     public void LiteBansModule_31(Runnable runnable, long l3, long l5) {
         try {
-            this.getProxy().getScheduler().schedule((Plugin)this, runnable, l3 * 50L, l5 * 50L, TimeUnit.MILLISECONDS);
+            this.getProxy().getScheduler().schedule(this, runnable, l3 * 50L, l5 * 50L, TimeUnit.MILLISECONDS);
         }
         catch (RejectedExecutionException rejectedExecutionException) {
             this.plugin(rejectedExecutionException);
@@ -294,7 +294,7 @@ implements PlatformPlugin {
 
     @Override
     public void r() {
-        this.getProxy().getPluginManager().unregisterListeners((Plugin)this);
+        this.getProxy().getPluginManager().unregisterListeners(this);
     }
 
     @Override
@@ -308,27 +308,27 @@ implements PlatformPlugin {
 }
 
     @Override
-    public CommandSenderWrapper LiteBansModule_31(Object object) {
-        if (!(object instanceof CommandSender)) {
-            if (object instanceof CommandSenderWrapper) {
-                return (CommandSenderWrapper)this.c.LiteBansModule_31.remove(((CommandSenderWrapper)object).i());
+    public CommandSenderWrapper LiteBansModule_31(Object targetObj) {
+        if (!(targetObj instanceof CommandSender)) {
+            if (targetObj instanceof CommandSenderWrapper) {
+                return this.c.LiteBansModule_31.remove(targetObj.i());
             }
             throw new IllegalArgumentException();
         }
-        CommandSender commandSender = (CommandSender)object;
-        return (CommandSenderWrapper)this.c.LiteBansModule_31.remove(commandSender.getName());
+        CommandSender commandSender = (CommandSender)targetObj;
+        return this.c.LiteBansModule_31.remove(commandSender.getName());
     }
 
     @Override
-    public CommandSenderWrapper BaseCoreGenericHandler(Object object) {
-        if (!(object instanceof CommandSender)) {
-            if (object instanceof CommandSenderWrapper) {
-                return (CommandSenderWrapper)object;
+    public CommandSenderWrapper BaseCoreGenericHandler(Object targetObj) {
+        if (!(targetObj instanceof CommandSender)) {
+            if (targetObj instanceof CommandSenderWrapper) {
+                return (CommandSenderWrapper)targetObj;
             }
             throw new IllegalArgumentException();
         }
         Map map = this.c.LiteBansModule_31;
-        CommandSender commandSender = (CommandSender)object;
+        CommandSender commandSender = (CommandSender)targetObj;
         CommandSenderWrapper sender = (CommandSenderWrapper)map.get(commandSender.getName());
         if (sender == null || sender.c() != commandSender) {
             sender = new LiteBansModule_154(this, commandSender);

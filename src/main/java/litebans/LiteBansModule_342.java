@@ -55,7 +55,7 @@ public final class LiteBansModule_342 {
 
     public final long BaseCoreGenericHandler() {
         long l3 = this.LiteBansModule_31() - 2;
-        long l5 = (long)this.LiteBansModule_194 & 0xFFFFL;
+        long l5 = this.LiteBansModule_194 & 0xFFFFL;
         l3 = l3++ * l3;
         long l7 = l3 * l3 * l3;
         long l8 = l5 * l5;

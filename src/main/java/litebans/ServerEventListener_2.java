@@ -18,10 +18,10 @@ implements LiteBansModule_171 {
     private final DatabaseMonitorService LiteBansModule_31;
     public ServerEventListener_2(@NotNull PlatformPlugin plugin) {
         this.AsyncBackgroundTask_5 = plugin;
-        this.LiteBansModule_194 = (AsyncBackgroundTask_22)this.AsyncBackgroundTask_5.BaseCoreGenericHandler(AsyncBackgroundTask_22.class);
-        this.plugin = (ConfigService)this.AsyncBackgroundTask_5.BaseCoreGenericHandler(ConfigService.class);
-        this.c = (BroadcastService)this.AsyncBackgroundTask_5.BaseCoreGenericHandler(BroadcastService.class);
-        this.LiteBansModule_31 = (DatabaseMonitorService)this.AsyncBackgroundTask_5.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        this.LiteBansModule_194 = this.AsyncBackgroundTask_5.BaseCoreGenericHandler(AsyncBackgroundTask_22.class);
+        this.plugin = this.AsyncBackgroundTask_5.BaseCoreGenericHandler(ConfigService.class);
+        this.c = this.AsyncBackgroundTask_5.BaseCoreGenericHandler(BroadcastService.class);
+        this.LiteBansModule_31 = this.AsyncBackgroundTask_5.BaseCoreGenericHandler(DatabaseMonitorService.class);
     }
 
     public final PlatformPlugin AsyncBackgroundTask_5() {
@@ -55,25 +55,24 @@ implements LiteBansModule_171 {
     @Subscribe
     public final void BaseCoreGenericHandler(@NotNull ServerConnectedEvent serverConnectedEvent) {
         RegisteredServer registeredServer;
-        Object object;
         String string;
         CommandSenderWrapper sender = this.AsyncBackgroundTask_5.BaseCoreGenericHandler(serverConnectedEvent.getPlayer());
         List list = this.plugin.LiteBansModule_194().aj();
-        if (list.contains(string = ((String)(object = (registeredServer = serverConnectedEvent.getServer()).getServerInfo().getName())).toLowerCase(Locale.ENGLISH))) {
+        if (list.contains(string = ((String)(targetObj = (registeredServer = serverConnectedEvent.getServer()).getServerInfo().getName())).toLowerCase(Locale.ENGLISH))) {
             return;
         }
-        object = sender;
-        new LiteBansModule_221(this.AsyncBackgroundTask_5, object.i(), object.BaseCoreGenericHandler(), object.LiteBansModule_31()).run();
+        targetObj = sender;
+        new LiteBansModule_221(this.AsyncBackgroundTask_5, targetObj.i(), targetObj.BaseCoreGenericHandler(), targetObj.LiteBansModule_31()).run();
         ObjectUtilities.BaseCoreGenericHandler(sender);
-        Object object2 = sender;
-        Object object3 = "litebans.exempt.dupeip_join";
-        CommandSenderWrapper jv_03 = object2;
-        if (!jv_03.e((String)object3)) {
-            object2 = this.LiteBansModule_194;
-            ObjectUtilities.BaseCoreGenericHandler(object);
-            object3 = object;
+        Object contextObj = sender;
+        Object resultObj = "litebans.exempt.dupeip_join";
+        CommandSenderWrapper senderWrapper = contextObj;
+        if (!senderWrapper.ethis) {
+            contextObj = this.LiteBansModule_194;
+            ObjectUtilities.BaseCoreGenericHandler(targetObj);
+            resultObj = targetObj;
             flag2 = false;
-            ((AsyncBackgroundTask_22)object2).BaseCoreGenericHandler(object3.i(), object3.BaseCoreGenericHandler(), object3.LiteBansModule_31());
+            ((AsyncBackgroundTask_22)contextObj).BaseCoreGenericHandler(resultObj.i(), resultObj.BaseCoreGenericHandler(), resultObj.LiteBansModule_31());
 }
 
     public ServerEventListener_2 LiteBansModule_31() {

@@ -44,7 +44,7 @@ extends Enum {
     }
 
     public static final DesHandler BaseCoreGenericHandler(int n) {
-        return (DesHandler)((Object)Utf8Handler_2.get(n));
+        return (DesHandler)(Utf8Handler_2.get(n));
     }
 
     static {

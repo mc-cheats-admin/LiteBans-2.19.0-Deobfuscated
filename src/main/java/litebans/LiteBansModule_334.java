@@ -19,14 +19,14 @@ implements LiteBansModule_235 {
         return n2;
     }
 
-    public boolean equals(Object object) {
-        if (this == object) {
+    public boolean equals(Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (object == null || this.getClass() != object.getClass()) {
+        if (targetObj == null || this.getClass() != targetObj.getClass()) {
             return false;
         }
-        LiteBansModule_334 ja_02 = (LiteBansModule_334)object;
+        LiteBansModule_334 ja_02 = (LiteBansModule_334)targetObj;
         if (this.e == null) {
             return ja_02.e == null;
         }

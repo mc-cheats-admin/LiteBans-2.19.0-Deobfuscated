@@ -34,7 +34,7 @@ implements PlatformPlugin {
             this.c.BaseCoreGenericHandler();
             return;
         }
-        this.plugin().cancelTasks((Plugin)this);
+        this.plugin().cancelTasks(this);
     }
 
     @Override
@@ -259,7 +259,7 @@ implements PlatformPlugin {
         }
         for (LiteBansModule_175 em_02 : em_0Array) {
             if (!(em_02 instanceof LiteBansModule_88)) continue;
-            this.getServer().getPluginManager().registerEvents((Listener)((LiteBansModule_88)em_02), (Plugin)this);
+            this.getServer().getPluginManager().registerEvents((Listener)((LiteBansModule_88)em_02), this);
 }
 
     @Override
@@ -273,7 +273,7 @@ implements PlatformPlugin {
             runnable.run();
             return;
         }
-        this.plugin().runTask((Plugin)this, runnable);
+        this.plugin().runTask(this, runnable);
     }
 
     @Override
@@ -282,7 +282,7 @@ implements PlatformPlugin {
             this.plugin(runnable, l3);
             return;
         }
-        this.plugin().runTaskLater((Plugin)this, runnable, l3);
+        this.plugin().runTaskLater(this, runnable, l3);
     }
 
     @Override
@@ -291,7 +291,7 @@ implements PlatformPlugin {
             this.LiteBansModule_31(runnable);
             return;
         }
-        this.plugin().runTaskAsynchronously((Plugin)this, runnable);
+        this.plugin().runTaskAsynchronously(this, runnable);
     }
 
     @Override
@@ -300,7 +300,7 @@ implements PlatformPlugin {
             this.c.BaseCoreGenericHandler(this.AsyncBackgroundTask_5).schedule(runnable, l3 * 50L, TimeUnit.MILLISECONDS);
             return;
         }
-        this.plugin().runTaskLaterAsynchronously((Plugin)this, runnable, l3);
+        this.plugin().runTaskLaterAsynchronously(this, runnable, l3);
     }
 
     @Override
@@ -314,7 +314,7 @@ implements PlatformPlugin {
             this.LiteBansModule_31(runnable, l3, l5);
             return;
         }
-        this.plugin().runTaskTimer((Plugin)this, runnable, l3, l5);
+        this.plugin().runTaskTimer(this, runnable, l3, l5);
     }
 
     @Override
@@ -323,7 +323,7 @@ implements PlatformPlugin {
             this.c.BaseCoreGenericHandler(this.AsyncBackgroundTask_5).scheduleAtFixedRate(runnable, l3 * 50L, l5 * 50L, TimeUnit.MILLISECONDS);
             return;
         }
-        this.plugin().runTaskTimerAsynchronously((Plugin)this, runnable, l3, l5);
+        this.plugin().runTaskTimerAsynchronously(this, runnable, l3, l5);
     }
 
     @Override
@@ -346,7 +346,7 @@ implements PlatformPlugin {
 
     @Override
     public void r() {
-        HandlerList.unregisterAll((Plugin)this);
+        HandlerList.unregisterAll(this);
     }
 
     @Override
@@ -360,27 +360,27 @@ implements PlatformPlugin {
 }
 
     @Override
-    public CommandSenderWrapper LiteBansModule_31(Object object) {
-        if (!(object instanceof CommandSender)) {
-            if (object instanceof CommandSenderWrapper) {
-                return (CommandSenderWrapper)this.AsyncBackgroundTask_5.LiteBansModule_31.remove(((CommandSenderWrapper)object).i());
+    public CommandSenderWrapper LiteBansModule_31(Object targetObj) {
+        if (!(targetObj instanceof CommandSender)) {
+            if (targetObj instanceof CommandSenderWrapper) {
+                return this.AsyncBackgroundTask_5.LiteBansModule_31.remove(targetObj.i());
             }
-            throw new IllegalArgumentException(object == null ? "null" : object.getClass().getName());
+            throw new IllegalArgumentException(targetObj == null ? "null" : targetObj.getClass().getName());
         }
-        CommandSender commandSender = (CommandSender)object;
-        return (CommandSenderWrapper)this.AsyncBackgroundTask_5.LiteBansModule_31.remove(commandSender.getName());
+        CommandSender commandSender = (CommandSender)targetObj;
+        return this.AsyncBackgroundTask_5.LiteBansModule_31.remove(commandSender.getName());
     }
 
     @Override
-    public CommandSenderWrapper BaseCoreGenericHandler(Object object) {
-        if (!(object instanceof CommandSender)) {
-            if (object instanceof CommandSenderWrapper) {
-                return (CommandSenderWrapper)object;
+    public CommandSenderWrapper BaseCoreGenericHandler(Object targetObj) {
+        if (!(targetObj instanceof CommandSender)) {
+            if (targetObj instanceof CommandSenderWrapper) {
+                return (CommandSenderWrapper)targetObj;
             }
-            throw new IllegalArgumentException(object == null ? "null" : object.getClass().getName());
+            throw new IllegalArgumentException(targetObj == null ? "null" : targetObj.getClass().getName());
         }
         Map map = this.AsyncBackgroundTask_5.LiteBansModule_31;
-        CommandSender commandSender = (CommandSender)object;
+        CommandSender commandSender = (CommandSender)targetObj;
         CommandSenderWrapper sender = (CommandSenderWrapper)map.get(commandSender.getName());
         if (sender == null || sender.c() != commandSender) {
             sender = new TextHandler(this, commandSender);

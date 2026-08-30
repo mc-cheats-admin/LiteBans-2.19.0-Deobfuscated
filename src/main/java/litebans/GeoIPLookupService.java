@@ -11,50 +11,49 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public final class GeoIPLookupService {
-    public static final String BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, @Nullable Object object) {
+    public static final String BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, @Nullable Object targetObj) {
         CharSequence charSequence3 = charSequence2;
-        return LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler((Object)charSequence, (Object)("" + '$' + charSequence3), object);
+        return LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(charSequence, (Object)("" + '$' + charSequence3), targetObj);
     }
 
     public static final String BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, @NotNull LiteBansModule_146 messageSupplier) {
-        return GeoIPLookupService.BaseCoreGenericHandler(charSequence, charSequence2) ? GeoIPLookupService.BaseCoreGenericHandler(charSequence, charSequence2, messageSupplier.BaseCoreGenericHandler()) : ((Object)charSequence).toString();
+        return GeoIPLookupService.BaseCoreGenericHandler(charSequence, charSequence2) ? GeoIPLookupService.BaseCoreGenericHandler(charSequence, charSequence2, messageSupplier.BaseCoreGenericHandler()) : (charSequence).toString();
     }
 
     public static final CharSequence BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull SilentHandler dZ2, int n, int n2) {
         ConfigService configService = (ConfigService)ch2.e().BaseCoreGenericHandler(ConfigService.class);
-        Object object = dZ2;
-        if (object != null && ((SilentHandler)object).r() != -1 && (object = configService.AsyncBackgroundTask_21().BaseCoreGenericHandler(dZ2)) != null) {
-            Object object2;
-            LiteBansModule_174 eM2 = configService.AsyncBackgroundTask_21().BaseCoreGenericHandler(dZ2.ServerSyncService(), (LiteBansModule_65)object);
+        Object targetObj = dZ2;
+        if (targetObj != null && targetObj.r() != -1 && (targetObj = configService.AsyncBackgroundTask_21().BaseCoreGenericHandler(dZ2)) != null) {
+            LiteBansModule_174 eM2 = configService.AsyncBackgroundTask_21().BaseCoreGenericHandler(dZ2.ServerSyncService(), (LiteBansModule_65)targetObj);
             int n3 = n;
             LiteBansModule_66 c52 = null;
             if (eM2 != null) {
                 if (n3 == -1) {
                     String string = dZ2.DatabaseMonitorService();
-                    ObjectUtilities.BaseCoreGenericHandler((Object)string);
-                    object2 = ch2.BaseCoreGenericHandler(string, dZ2.PunishmentTableService(), eM2, (LiteBansModule_65)object);
-                    n3 = (int)Math.floor(((Number)((LiteBansModule_354)object2).e()).doubleValue()) + n2;
+                    ObjectUtilities.BaseCoreGenericHandler(string);
+                    contextObj = ch2.BaseCoreGenericHandler(string, dZ2.PunishmentTableService(), eM2, (LiteBansModule_65)targetObj);
+                    n3 = (int)Math.floor(((Number)((LiteBansModule_354)contextObj).e()).doubleValue()) + n2;
                 }
                 c52 = eM2.BaseCoreGenericHandler(n3);
             } else {
                 if (n3 == -1) {
                     String string = dZ2.DatabaseMonitorService();
-                    ObjectUtilities.BaseCoreGenericHandler((Object)string);
-                    n3 = ch2.BaseCoreGenericHandler((LiteBansModule_65)object, string, dZ2.PunishmentTableService()) + n2;
+                    ObjectUtilities.BaseCoreGenericHandler(string);
+                    n3 = ch2.BaseCoreGenericHandler((LiteBansModule_65)targetObj, string, dZ2.PunishmentTableService()) + n2;
                 }
-                c52 = ((LiteBansModule_65)object).BaseCoreGenericHandler(n3);
+                c52 = targetObj.BaseCoreGenericHandler(n3);
             }
             String string = c52.e();
-            Object object3 = object2 = string != null ? (CharSequence)string : (CharSequence)((LiteBansModule_65)object).LiteBansModule_240().e();
-            if (object2 == null) {
+            Object resultObj = contextObj = string != null ? string : (CharSequence)targetObj.LiteBansModule_240().e();
+            if (contextObj == null) {
                 return null;
             }
-            return GeoIPLookupService.BaseCoreGenericHandler(ch2, (CharSequence)object2, (LiteBansModule_65)object, n3);
+            return GeoIPLookupService.BaseCoreGenericHandler(ch2, contextObj, (LiteBansModule_65)targetObj, n3);
         }
         return null;
     }
 
-    public static /* synthetic */ CharSequence BaseCoreGenericHandler(LiteBansModule_82 ch2, SilentHandler dZ2, int n, int n2, int n3, Object object) {
+    public static /* synthetic */ CharSequence BaseCoreGenericHandler(LiteBansModule_82 ch2, SilentHandler dZ2, int n, int n2, int n3, Object targetObj) {
         if ((n3 & 2) != 0) {
             n = -1;
         }
@@ -73,25 +72,24 @@ public final class GeoIPLookupService {
         CharSequence charSequence2 = ObjectUtilities.BaseCoreGenericHandler(c13.LiteBansModule_194() & 0xFF, 0xFFFFFFFF & 0xFF) < 0 ? c12.g() : MessageKey.ay;
         int n2 = n + 1;
         CharSequence[] charSequenceArray = new CharSequence[]{"templateName", charSequence2};
-        return LiteBansModule_242.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler(charSequence, (CharSequence)"templateStep", n2), charSequenceArray);
+        return LiteBansModule_242.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(charSequence, (CharSequence)"templateStep", n2), charSequenceArray);
     }
 
     public static final LiteBansModule_354 BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @Nullable String string) {
-        Object object;
         if (string == null) {
             return new LiteBansModule_354("", "");
         }
-        Object object2 = null;
+        Object contextObj = null;
         if (ch2.e().i().c("LuckPerms") != null) {
-            object2 = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler();
+            contextObj = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler();
         }
-        if (object2 != null && (object = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler(object2, string)) != null) {
+        if (contextObj != null && (targetObj = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler(contextObj, string)) != null) {
             String string2;
-            String string3 = LiteBansModule_48.LiteBansModule_31.AsyncBackgroundTask_5(object);
+            String string3 = LiteBansModule_48.LiteBansModule_31.AsyncBackgroundTask_5(targetObj);
             if (string3 == null) {
                 string3 = "";
             }
-            if ((string2 = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler(object)) == null) {
+            if ((string2 = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler(targetObj)) == null) {
                 string2 = "";
             }
             return new LiteBansModule_354(string3, string2);
@@ -102,14 +100,14 @@ public final class GeoIPLookupService {
     public static final CharSequence BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull SilentHandler dZ2, @NotNull CommandSenderWrapper sender, int n) {
         CharSequence charSequence = GeoIPLookupService.BaseCoreGenericHandler(ch2, dZ2, n, -1);
         if (charSequence == null) {
-            charSequence = dZ2.HoverTextFormatter() ? (CharSequence)MessageKey.F : (CharSequence)MessageKey.bS;
+            charSequence = dZ2.HoverTextFormatter() ? MessageKey.F : MessageKey.bS;
         }
         return GeoIPLookupService.BaseCoreGenericHandler(ch2, dZ2, sender, charSequence, 0L, 8, null);
     }
 
     public static final String BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull SilentHandler dZ2, @NotNull CommandSenderWrapper sender) {
-        String string = ((Object)dZ2.LiteBansModule_31()).toString();
-        CharSequence charSequence = ((CharSequence)string).length() == 0 ? (CharSequence)MessageKey.InitializerHandler : (CharSequence)MessageKey.bf;
+        String string = (dZ2.LiteBansModule_31()).toString();
+        CharSequence charSequence = (string).length() == 0 ? MessageKey.InitializerHandler : MessageKey.bf;
         CharSequence[] charSequenceArray = new CharSequence[]{"reason", string};
         charSequence = LiteBansModule_242.BaseCoreGenericHandler(charSequence, charSequenceArray);
         return GeoIPLookupService.BaseCoreGenericHandler(ch2, dZ2, sender, charSequence, 0L, 8, null);
@@ -117,14 +115,14 @@ public final class GeoIPLookupService {
 
     public static final String BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull String string, @NotNull String string2) {
         CharSequence[] charSequenceArray = new CharSequence[]{"serverOrigin", string2};
-        String string3 = LiteBansModule_242.BaseCoreGenericHandler((CharSequence)MessageKey.LiteBansModule_116.BaseCoreGenericHandler("geoip", (Object)string), charSequenceArray);
+        String string3 = LiteBansModule_242.BaseCoreGenericHandler(MessageKey.LiteBansModule_116.BaseCoreGenericHandler("geoip", string), charSequenceArray);
         return MessageKey.BaseCoreGenericHandler(string3, true);
     }
 
     public static final CharSequence BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull SilentHandler dZ2, @Nullable String string, @Nullable String string2, @Nullable String string3, @Nullable String string4, int n) {
         CharSequence charSequence = GeoIPLookupService.BaseCoreGenericHandler(ch2, dZ2, n, -1);
         if (charSequence == null) {
-            charSequence = dZ2.HoverTextFormatter() ? (CharSequence)MessageKey.F : (CharSequence)MessageKey.bS;
+            charSequence = dZ2.HoverTextFormatter() ? MessageKey.F : MessageKey.bS;
         }
         charSequence = GeoIPLookupService.BaseCoreGenericHandler(ch2, dZ2, charSequence, 0L, false, 12, null);
         return GeoIPLookupService.BaseCoreGenericHandler(ch2, string, string, string2, string3, string4, new Date(System.currentTimeMillis()), charSequence, false, 128, null);
@@ -135,7 +133,7 @@ public final class GeoIPLookupService {
         return GeoIPLookupService.BaseCoreGenericHandler(ch2, sender, charSequence2, false, 4, null);
     }
 
-    public static /* synthetic */ String BaseCoreGenericHandler(LiteBansModule_82 ch2, SilentHandler dZ2, CommandSenderWrapper sender, CharSequence charSequence, long l3, int n, Object object) {
+    public static /* synthetic */ String BaseCoreGenericHandler(LiteBansModule_82 ch2, SilentHandler dZ2, CommandSenderWrapper sender, CharSequence charSequence, long l3, int n, Object targetObj) {
         if ((n & 8) != 0) {
             l3 = DatabaseMonitorService.BaseCoreGenericHandler(ch2.AsyncBackgroundTask_5(), false, 1, null);
         }
@@ -162,9 +160,9 @@ public final class GeoIPLookupService {
         if (charSequence4 == null) {
             charSequence4 = "";
         }
-        CharSequence charSequence5 = flag2 ? (CharSequence)MessageKey.LiteBansModule_60 : o2.BaseCoreGenericHandler(dZ2.LiteBansModule_401(), false);
+        CharSequence charSequence5 = flag2 ? MessageKey.LiteBansModule_60 : o2.BaseCoreGenericHandler(dZ2.LiteBansModule_401(), false);
         long l5 = dZ2.LiteBansModule_194();
-        CharSequence charSequence6 = l5 <= 0L ? (CharSequence)MessageKey.ay : o2.BaseCoreGenericHandler(l5, true);
+        CharSequence charSequence6 = l5 <= 0L ? MessageKey.ay : o2.BaseCoreGenericHandler(l5, true);
         long l7 = l3 - dZ2.BroadcastService();
         long l8 = dZ2.LiteBansModule_401() - l3;
         if (l7 - (long)999 <= 999L) {
@@ -173,17 +171,17 @@ public final class GeoIPLookupService {
         if (l8 <= 999L) {
             l8 += (long)999;
         }
-        CharSequence charSequence7 = dZ2.LiteBansModule_31(l3) ? (CharSequence)MessageKey.HikariConfig : (CharSequence)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, l8, false, 2, null);
+        CharSequence charSequence7 = dZ2.LiteBansModule_31(l3) ? MessageKey.HikariConfig : PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, l8, false, 2, null);
         charSequence2 = GeoIPLookupService.LiteBansModule_31(charSequence2);
-        Object object = new CharSequence[]{"duration", charSequence7};
-        charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, (CharSequence[])object);
+        Object targetObj = new CharSequence[]{"duration", charSequence7};
+        charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, (CharSequence[])targetObj);
         charSequence2 = ch2.BaseCoreGenericHandler(charSequence2, o2.BaseCoreGenericHandler(dZ2.LiteBansModule_433(), string), string, flag);
-        object = configService;
+        targetObj = configService;
         CharSequence[] charSequenceArray = new CharSequence[]{"removalReason", charSequence4};
         charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, charSequenceArray);
-        charSequenceArray = new CharSequence[]{"serverScope", ((ConfigService)object).LiteBansModule_31((Object)string2)};
+        charSequenceArray = new CharSequence[]{"serverScope", targetObj.LiteBansModule_31(string2)};
         CharSequence charSequence8 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, charSequenceArray);
-        charSequenceArray = new CharSequence[]{"serverOrigin", ((ConfigService)object).LiteBansModule_31((Object)string4)};
+        charSequenceArray = new CharSequence[]{"serverOrigin", targetObj.LiteBansModule_31(string4)};
         charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence8, charSequenceArray);
         charSequenceArray = new CharSequence[]{"dateStart", charSequence3};
         CharSequence charSequence9 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, charSequenceArray);
@@ -197,21 +195,21 @@ public final class GeoIPLookupService {
         charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, charSequenceArray);
         charSequenceArray = new CharSequence[]{"timeSince", PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, l7, false, 2, null)};
         charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, charSequenceArray);
-        charSequence2 = GeoIPLookupService.BaseCoreGenericHandler(charSequence2, (CharSequence)"uuid", (Object)dZ2.DatabaseMonitorService());
-        charSequenceArray = new CharSequence[]{"permanent", ((ConfigService)object).LiteBansModule_31(flag2)};
+        charSequence2 = GeoIPLookupService.BaseCoreGenericHandler(charSequence2, (CharSequence)"uuid", dZ2.DatabaseMonitorService());
+        charSequenceArray = new CharSequence[]{"permanent", targetObj.LiteBansModule_31(flag2)};
         charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, charSequenceArray);
-        charSequenceArray = new CharSequence[]{"ipban", ((ConfigService)object).LiteBansModule_31(dZ2.LiteBansModule_240())};
+        charSequenceArray = new CharSequence[]{"ipban", targetObj.LiteBansModule_31(dZ2.LiteBansModule_240())};
         charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, charSequenceArray);
-        charSequenceArray = new CharSequence[]{"silent", ((ConfigService)object).LiteBansModule_31(dZ2.AsyncBackgroundTask_5())};
+        charSequenceArray = new CharSequence[]{"silent", targetObj.LiteBansModule_31(dZ2.AsyncBackgroundTask_5())};
         charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, charSequenceArray);
         charSequenceArray = new CharSequence[]{"type", string3};
         charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, charSequenceArray);
         charSequence2 = GeoIPLookupService.BaseCoreGenericHandler(ch2, charSequence2);
-        object = new CharSequence[]{"active", configService.LiteBansModule_31(dZ2.AsyncBackgroundTask_22() && !dZ2.LiteBansModule_31(l3))};
-        charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, (CharSequence[])object);
+        targetObj = new CharSequence[]{"active", configService.LiteBansModule_31(dZ2.AsyncBackgroundTask_22() && !dZ2.LiteBansModule_31(l3))};
+        charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, (CharSequence[])targetObj);
         charSequence2 = GeoIPLookupService.BaseCoreGenericHandler(charSequence2, (CharSequence)"geoip", () -> GeoIPLookupService.BaseCoreGenericHandler(configService, dZ2));
-        object = new CharSequence[]{"reason", dZ2.LiteBansModule_31()};
-        charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, (CharSequence[])object);
+        targetObj = new CharSequence[]{"reason", dZ2.LiteBansModule_31()};
+        charSequence2 = LiteBansModule_242.BaseCoreGenericHandler(charSequence2, (CharSequence[])targetObj);
         if (flag) {
             charSequence2 = MessageKey.BaseCoreGenericHandler(charSequence2, true);
         }
@@ -220,7 +218,7 @@ public final class GeoIPLookupService {
         return charSequence2;
     }
 
-    public static /* synthetic */ CharSequence BaseCoreGenericHandler(LiteBansModule_82 ch2, SilentHandler dZ2, CharSequence charSequence, long l3, boolean flag, int n, Object object) {
+    public static /* synthetic */ CharSequence BaseCoreGenericHandler(LiteBansModule_82 ch2, SilentHandler dZ2, CharSequence charSequence, long l3, boolean flag, int n, Object targetObj) {
         if ((n & 4) != 0) {
             l3 = DatabaseMonitorService.BaseCoreGenericHandler(ch2.AsyncBackgroundTask_5(), false, 1, null);
         }
@@ -235,21 +233,21 @@ public final class GeoIPLookupService {
     }
 
     public static final String BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull CommandSenderWrapper sender, @NotNull CharSequence charSequence, boolean flag) {
-        String string = ((Object)charSequence).toString();
+        String string = (charSequence).toString();
         if (GeoIPLookupService.LiteBansModule_31(string, "player")) {
             if (ch2.e().AsyncBackgroundTask_22() == 0) {
                 LiteBansModule_158 ec_02 = ch2.e().i();
                 ObjectUtilities.LiteBansModule_31(ec_02, "");
                 DefaultHandler e12 = ((BungeecordHandler_2)ec_02).LiteBansModule_31();
-                string = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string, (CharSequence)"playerPrefix", () -> GeoIPLookupService.BaseCoreGenericHandler(e12, sender)), (CharSequence)"playerSuffix", () -> GeoIPLookupService.LiteBansModule_31(e12, sender));
+                string = GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(string, (CharSequence)"playerPrefix", () -> GeoIPLookupService.BaseCoreGenericHandler(e12, sender)), (CharSequence)"playerSuffix", () -> GeoIPLookupService.LiteBansModule_31(e12, sender));
             } else {
                 LiteBansModule_354 jT2 = GeoIPLookupService.BaseCoreGenericHandler(ch2, sender.BaseCoreGenericHandler());
-                string = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string, (CharSequence)"playerPrefix", () -> GeoIPLookupService.BaseCoreGenericHandler(jT2)), (CharSequence)"playerSuffix", () -> GeoIPLookupService.LiteBansModule_31(jT2));
+                string = GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(string, (CharSequence)"playerPrefix", () -> GeoIPLookupService.BaseCoreGenericHandler(jT2)), (CharSequence)"playerSuffix", () -> GeoIPLookupService.LiteBansModule_31(jT2));
 }
         return GeoIPLookupService.BaseCoreGenericHandler(ch2, sender.i(), sender.g(), sender.BaseCoreGenericHandler(), sender.LiteBansModule_31(), sender.LiteBansModule_240(), new java.util.Date(), string, flag);
     }
 
-    public static /* synthetic */ String BaseCoreGenericHandler(LiteBansModule_82 ch2, CommandSenderWrapper sender, CharSequence charSequence, boolean flag, int n, Object object) {
+    public static /* synthetic */ String BaseCoreGenericHandler(LiteBansModule_82 ch2, CommandSenderWrapper sender, CharSequence charSequence, boolean flag, int n, Object targetObj) {
         if ((n & 4) != 0) {
             flag = true;
         }
@@ -260,21 +258,21 @@ public final class GeoIPLookupService {
         String string6;
         ConfigService configService = (ConfigService)ch2.e().BaseCoreGenericHandler(ConfigService.class);
         LiteBansModule_144 dy_02 = new LiteBansModule_144();
-        Object object = string5;
-        if (object == null) {
-            object = dy_02.BaseCoreGenericHandler = configService.LiteBansModule_194().LiteBansModule_25();
+        Object targetObj = string5;
+        if (targetObj == null) {
+            targetObj = dy_02.BaseCoreGenericHandler = configService.LiteBansModule_194().LiteBansModule_25();
         }
-        if (StringUtilities.LiteBansModule_31((CharSequence)(string6 = ((Object)charSequence).toString()))) {
+        if (StringUtilities.LiteBansModule_31((CharSequence)(string6 = (charSequence).toString()))) {
             return string6;
         }
-        string6 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string6, (CharSequence)"geoip", () -> GeoIPLookupService.BaseCoreGenericHandler(configService, string4));
-        string6 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string6, (CharSequence)"name", (Object)string), (CharSequence)"target", (Object)string);
-        if (GeoIPLookupService.LiteBansModule_31(string6 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string6, (CharSequence)"uuid", (Object)string3), "player")) {
+        string6 = GeoIPLookupService.BaseCoreGenericHandler(string6, (CharSequence)"geoip", () -> GeoIPLookupService.BaseCoreGenericHandler(configService, string4));
+        string6 = GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(string6, (CharSequence)"name", string), (CharSequence)"target", string);
+        if (GeoIPLookupService.LiteBansModule_31(string6 = GeoIPLookupService.BaseCoreGenericHandler(string6, (CharSequence)"uuid", string3), "player")) {
             CharSequence[] charSequenceArray;
-            Object object2 = configService;
-            String string7 = ((ConfigService)object2).LiteBansModule_194().SetHandler() ? string2 : string;
-            object2 = new LiteBansModule_144();
-            ((LiteBansModule_144)object2).BaseCoreGenericHandler = "";
+            Object contextObj = configService;
+            String string7 = ((ConfigService)contextObj).LiteBansModule_194().SetHandler() ? string2 : string;
+            contextObj = new LiteBansModule_144();
+            ((LiteBansModule_144)contextObj).BaseCoreGenericHandler = "";
             LiteBansModule_144 dy_03 = new LiteBansModule_144();
             dy_03.BaseCoreGenericHandler = "";
             byte by2 = ch2.e().AsyncBackgroundTask_22();
@@ -285,30 +283,30 @@ public final class GeoIPLookupService {
                     charSequenceArray = ((BungeecordHandler_2)ec_02).LiteBansModule_31();
                     try {
                         UUID uUID = UUID.fromString(string3);
-                        string6 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string6, (CharSequence)"playerPrefix", () -> GeoIPLookupService.BaseCoreGenericHandler((DefaultHandler)charSequenceArray, uUID));
-                        string6 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string6, (CharSequence)"playerSuffix", () -> GeoIPLookupService.LiteBansModule_31((DefaultHandler)charSequenceArray, uUID));
+                        string6 = GeoIPLookupService.BaseCoreGenericHandler(string6, (CharSequence)"playerPrefix", () -> GeoIPLookupService.BaseCoreGenericHandler((DefaultHandler)charSequenceArray, uUID));
+                        string6 = GeoIPLookupService.BaseCoreGenericHandler(string6, (CharSequence)"playerSuffix", () -> GeoIPLookupService.LiteBansModule_31((DefaultHandler)charSequenceArray, uUID));
                     }
                     catch (IllegalArgumentException illegalArgumentException) {
                         ConfigService.BaseCoreGenericHandler(configService, illegalArgumentException, 0, 2, null);
 } else {
                     charSequenceArray = GeoIPLookupService.BaseCoreGenericHandler(ch2, string3);
-                    ((LiteBansModule_144)object2).BaseCoreGenericHandler = charSequenceArray.LiteBansModule_31();
+                    ((LiteBansModule_144)contextObj).BaseCoreGenericHandler = charSequenceArray.LiteBansModule_31();
                     dy_03.BaseCoreGenericHandler = charSequenceArray.e();
 }
-            string6 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string6, (CharSequence)"playerPrefix", () -> GeoIPLookupService.BaseCoreGenericHandler((LiteBansModule_144)object2));
-            string6 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string6, (CharSequence)"playerSuffix", () -> GeoIPLookupService.LiteBansModule_31(dy_03));
+            string6 = GeoIPLookupService.BaseCoreGenericHandler(string6, (CharSequence)"playerPrefix", () -> GeoIPLookupService.BaseCoreGenericHandler((LiteBansModule_144)contextObj));
+            string6 = GeoIPLookupService.BaseCoreGenericHandler(string6, (CharSequence)"playerSuffix", () -> GeoIPLookupService.LiteBansModule_31(dy_03));
             charSequenceArray = new CharSequence[]{"playerServer", dy_02.BaseCoreGenericHandler};
-            string6 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)LiteBansModule_242.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string6, (CharSequence)"playerDisplayName", (Object)string7), (CharSequence)"playerName", (Object)string), (CharSequence)"playerUUID", (Object)string3), (CharSequence)"playerIP", (Object)string4), charSequenceArray), (CharSequence)"playerLoginDate", () -> GeoIPLookupService.BaseCoreGenericHandler(ch2, date));
-            string6 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string6, (CharSequence)"playerBans", () -> GeoIPLookupService.LiteBansModule_31(ch2, string3, dy_02)), (CharSequence)"playerMutes", () -> GeoIPLookupService.BaseCoreGenericHandler(ch2, string3, dy_02)), (CharSequence)"playerWarnings", () -> GeoIPLookupService.c(ch2, string3, dy_02)), (CharSequence)"playerKicks", () -> GeoIPLookupService.AsyncBackgroundTask_5(ch2, string3, dy_02));
-            string6 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string6, (CharSequence)"player", (Object)string7);
+            string6 = GeoIPLookupService.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(string6, (CharSequence)"playerDisplayName", string7), (CharSequence)"playerName", string), (CharSequence)"playerUUID", string3), (CharSequence)"playerIP", string4), charSequenceArray), (CharSequence)"playerLoginDate", () -> GeoIPLookupService.BaseCoreGenericHandler(ch2, date));
+            string6 = GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(string6, (CharSequence)"playerBans", () -> GeoIPLookupService.LiteBansModule_31(ch2, string3, dy_02)), (CharSequence)"playerMutes", () -> GeoIPLookupService.BaseCoreGenericHandler(ch2, string3, dy_02)), (CharSequence)"playerWarnings", () -> GeoIPLookupService.c(ch2, string3, dy_02)), (CharSequence)"playerKicks", () -> GeoIPLookupService.AsyncBackgroundTask_5(ch2, string3, dy_02));
+            string6 = GeoIPLookupService.BaseCoreGenericHandler(string6, (CharSequence)"player", string7);
         }
         if (!flag) {
-            return ((Object)ch2.BaseCoreGenericHandler((CharSequence)string6)).toString();
+            return (ch2.BaseCoreGenericHandler(string6)).toString();
         }
-        return MessageKey.BaseCoreGenericHandler(ch2.BaseCoreGenericHandler((CharSequence)string6), true);
+        return MessageKey.BaseCoreGenericHandler(ch2.BaseCoreGenericHandler(string6), true);
     }
 
-    public static /* synthetic */ String BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, String string2, String string3, String string4, String string5, java.util.Date date, CharSequence charSequence, boolean flag, int n, Object object) {
+    public static /* synthetic */ String BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, String string2, String string3, String string4, String string5, java.util.Date date, CharSequence charSequence, boolean flag, int n, Object targetObj) {
         if ((n & 0x80) != 0) {
             flag = true;
         }
@@ -316,9 +314,9 @@ public final class GeoIPLookupService {
     }
 
     public static final String BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull CharSequence charSequence) {
-        String string = ((Object)charSequence).toString();
+        String string = (charSequence).toString();
         try {
-            string = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)string, (CharSequence)"activeBans", () -> GeoIPLookupService.LiteBansModule_31(ch2)), (CharSequence)"activeMutes", () -> GeoIPLookupService.g(ch2)), (CharSequence)"activeWarnings", () -> GeoIPLookupService.e(ch2)), (CharSequence)"totalBans", () -> GeoIPLookupService.AsyncBackgroundTask_5(ch2)), (CharSequence)"totalMutes", () -> GeoIPLookupService.BaseCoreGenericHandler(ch2)), (CharSequence)"totalWarnings", () -> GeoIPLookupService.LiteBansModule_194(ch2)), (CharSequence)"totalKicks", () -> GeoIPLookupService.c(ch2));
+            string = GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(string, (CharSequence)"activeBans", () -> GeoIPLookupService.LiteBansModule_31(ch2)), (CharSequence)"activeMutes", () -> GeoIPLookupService.g(ch2)), (CharSequence)"activeWarnings", () -> GeoIPLookupService.e(ch2)), (CharSequence)"totalBans", () -> GeoIPLookupService.AsyncBackgroundTask_5(ch2)), (CharSequence)"totalMutes", () -> GeoIPLookupService.BaseCoreGenericHandler(ch2)), (CharSequence)"totalWarnings", () -> GeoIPLookupService.LiteBansModule_194(ch2)), (CharSequence)"totalKicks", () -> GeoIPLookupService.c(ch2));
         }
         catch (Exception exception) {
             DatabaseMonitorService w2 = (DatabaseMonitorService)ch2.e().BaseCoreGenericHandler(DatabaseMonitorService.class);
@@ -330,53 +328,52 @@ public final class GeoIPLookupService {
     public static final String BaseCoreGenericHandler(@NotNull CharSequence charSequence) {
         boolean flag;
         CharSequence charSequence2;
-        Object object;
         CharSequence charSequence3 = "executor";
         CharSequence charSequence4 = "" + '$' + charSequence3;
         charSequence3 = null;
-        Object object2 = new CharSequence[]{"bannerDisplayName", charSequence4};
-        CharSequence charSequence5 = LiteBansModule_242.BaseCoreGenericHandler(charSequence, (CharSequence[])object2);
-        object2 = new CharSequence[]{"banningPlayer", charSequence4};
-        CharSequence charSequence6 = LiteBansModule_242.BaseCoreGenericHandler(charSequence5, (CharSequence[])object2);
-        object2 = new CharSequence[]{"bannerName", charSequence4};
-        CharSequence charSequence7 = LiteBansModule_242.BaseCoreGenericHandler(charSequence6, (CharSequence[])object2);
-        object2 = new CharSequence[]{"bannedBy", charSequence4};
-        CharSequence charSequence8 = LiteBansModule_242.BaseCoreGenericHandler(charSequence7, (CharSequence[])object2);
-        object2 = new CharSequence[]{"mutedBy", charSequence4};
-        CharSequence charSequence9 = LiteBansModule_242.BaseCoreGenericHandler(charSequence8, (CharSequence[])object2);
-        object2 = new CharSequence[]{"warnedBy", charSequence4};
-        CharSequence charSequence10 = LiteBansModule_242.BaseCoreGenericHandler(charSequence9, (CharSequence[])object2);
-        object2 = new CharSequence[]{"kickedBy", charSequence4};
-        CharSequence charSequence11 = LiteBansModule_242.BaseCoreGenericHandler(charSequence10, (CharSequence[])object2);
-        object2 = new CharSequence[]{"kicker", charSequence4};
-        CharSequence charSequence12 = LiteBansModule_242.BaseCoreGenericHandler(charSequence11, (CharSequence[])object2);
-        object2 = new CharSequence[]{"displayName", charSequence4};
-        CharSequence charSequence13 = LiteBansModule_242.BaseCoreGenericHandler(charSequence12, (CharSequence[])object2);
-        object2 = new CharSequence[2];
-        object2[0] = "bannedFrom";
+        Object contextObj = new CharSequence[]{"bannerDisplayName", charSequence4};
+        CharSequence charSequence5 = LiteBansModule_242.BaseCoreGenericHandler(charSequence, (CharSequence[])contextObj);
+        contextObj = new CharSequence[]{"banningPlayer", charSequence4};
+        CharSequence charSequence6 = LiteBansModule_242.BaseCoreGenericHandler(charSequence5, (CharSequence[])contextObj);
+        contextObj = new CharSequence[]{"bannerName", charSequence4};
+        CharSequence charSequence7 = LiteBansModule_242.BaseCoreGenericHandler(charSequence6, (CharSequence[])contextObj);
+        contextObj = new CharSequence[]{"bannedBy", charSequence4};
+        CharSequence charSequence8 = LiteBansModule_242.BaseCoreGenericHandler(charSequence7, (CharSequence[])contextObj);
+        contextObj = new CharSequence[]{"mutedBy", charSequence4};
+        CharSequence charSequence9 = LiteBansModule_242.BaseCoreGenericHandler(charSequence8, (CharSequence[])contextObj);
+        contextObj = new CharSequence[]{"warnedBy", charSequence4};
+        CharSequence charSequence10 = LiteBansModule_242.BaseCoreGenericHandler(charSequence9, (CharSequence[])contextObj);
+        contextObj = new CharSequence[]{"kickedBy", charSequence4};
+        CharSequence charSequence11 = LiteBansModule_242.BaseCoreGenericHandler(charSequence10, (CharSequence[])contextObj);
+        contextObj = new CharSequence[]{"kicker", charSequence4};
+        CharSequence charSequence12 = LiteBansModule_242.BaseCoreGenericHandler(charSequence11, (CharSequence[])contextObj);
+        contextObj = new CharSequence[]{"displayName", charSequence4};
+        CharSequence charSequence13 = LiteBansModule_242.BaseCoreGenericHandler(charSequence12, (CharSequence[])contextObj);
+        contextObj = new CharSequence[2];
+        contextObj[0] = "bannedFrom";
         CharSequence charSequence14 = "dateStart";
-        object2[1] = "" + '$' + charSequence14;
-        CharSequence charSequence15 = LiteBansModule_242.BaseCoreGenericHandler(charSequence13, (CharSequence[])object2);
-        object2 = new CharSequence[2];
-        object2[0] = "bannedUntil";
+        contextObj[1] = "" + '$' + charSequence14;
+        CharSequence charSequence15 = LiteBansModule_242.BaseCoreGenericHandler(charSequence13, (CharSequence[])contextObj);
+        contextObj = new CharSequence[2];
+        contextObj[0] = "bannedUntil";
         charSequence14 = "dateEnd";
         flag3 = false;
-        object2[1] = "" + '$' + charSequence14;
-        CharSequence charSequence16 = LiteBansModule_242.BaseCoreGenericHandler(charSequence15, (CharSequence[])object2);
-        object2 = new CharSequence[2];
-        object2[0] = "banTimeLeft";
+        contextObj[1] = "" + '$' + charSequence14;
+        CharSequence charSequence16 = LiteBansModule_242.BaseCoreGenericHandler(charSequence15, (CharSequence[])contextObj);
+        contextObj = new CharSequence[2];
+        contextObj[0] = "banTimeLeft";
         charSequence14 = "duration";
         flag3 = false;
-        object2[1] = "" + '$' + charSequence14;
-        charSequence3 = LiteBansModule_242.BaseCoreGenericHandler(charSequence16, (CharSequence[])object2);
-        object2 = BanHandler.LiteBansModule_401.BaseCoreGenericHandler();
-        Object object3 = object2;
-        Collection collection = new ArrayList(CollectionUtilities.BaseCoreGenericHandler((Iterable)object2, 10));
-        Iterator iterator = object3.iterator();
+        contextObj[1] = "" + '$' + charSequence14;
+        charSequence3 = LiteBansModule_242.BaseCoreGenericHandler(charSequence16, (CharSequence[])contextObj);
+        contextObj = BanHandler.LiteBansModule_401.BaseCoreGenericHandler();
+        Object resultObj = contextObj;
+        Collection collection = new ArrayList(CollectionUtilities.BaseCoreGenericHandler((Iterable)contextObj, 10));
+        Iterator iterator = resultObj.iterator();
         while (iterator.hasNext()) {
             String string;
-            object = iterator.next();
-            charSequence2 = (BanHandler)object;
+            targetObj = iterator.next();
+            charSequence2 = (BanHandler)targetObj;
             Collection collection2 = collection;
             flag = false;
             BanHandler a_2 = charSequence2;
@@ -403,24 +400,24 @@ public final class GeoIPLookupService {
 }
             collection2.add(string);
         }
-        object2 = (List)collection;
+        contextObj = (List)collection;
         flag4 = false;
-        object3 = object2.iterator();
-        while (object3.hasNext()) {
-            collection = object3.next();
-            String string = (String)((Object)collection);
-            object = new CharSequence[2];
-            object[0] = string + "Player";
+        resultObj = contextObj.iterator();
+        while (resultObj.hasNext()) {
+            collection = resultObj.next();
+            String string = (String)(collection);
+            targetObj = new CharSequence[2];
+            targetObj[0] = string + "Player";
             charSequence2 = "playerDisplayName";
             flag = false;
-            object[1] = "" + '$' + charSequence2;
-            charSequence3 = LiteBansModule_242.BaseCoreGenericHandler(charSequence3, object);
-            object = new CharSequence[2];
-            object[0] = string + "IP";
+            targetObj[1] = "" + '$' + charSequence2;
+            charSequence3 = LiteBansModule_242.BaseCoreGenericHandler(charSequence3, targetObj);
+            targetObj = new CharSequence[2];
+            targetObj[0] = string + "IP";
             charSequence2 = "playerDisplayName";
             flag = false;
-            object[1] = "" + '$' + charSequence2;
-            charSequence3 = LiteBansModule_242.BaseCoreGenericHandler(charSequence3, object);
+            targetObj[1] = "" + '$' + charSequence2;
+            charSequence3 = LiteBansModule_242.BaseCoreGenericHandler(charSequence3, targetObj);
         }
         return charSequence3;
     }

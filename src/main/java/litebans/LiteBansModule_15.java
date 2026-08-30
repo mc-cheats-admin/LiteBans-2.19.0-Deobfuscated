@@ -57,21 +57,21 @@ public final class LiteBansModule_15 {
         return n;
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof LiteBansModule_15)) {
+        if (!(targetObj instanceof LiteBansModule_15)) {
             return false;
         }
-        LiteBansModule_15 aK2 = (LiteBansModule_15)object;
+        LiteBansModule_15 aK2 = (LiteBansModule_15)targetObj;
         if (this.plugin != aK2.BaseCoreGenericHandler) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.c, (Object)aK2.c)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.c, aK2.c)) {
             return false;
         }
-        return ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_31, (Object)aK2.LiteBansModule_31);
+        return ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_31, aK2.LiteBansModule_31);
     }
 
     public /* synthetic */ LiteBansModule_15(int n, String string, String string2, LiteBansModule_14 aJ2) {

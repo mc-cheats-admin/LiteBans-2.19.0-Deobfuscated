@@ -20,11 +20,11 @@ public final class TempHandler {
             if (string2 == null) {
                 return null;
             }
-            Object object = string2;
-            String string3 = StringUtilities.c(((String)object).toLowerCase(Locale.ROOT), 'AsyncBackgroundTask_21', null, 2, null);
-            object = BanHandler.LiteBansModule_401.BaseCoreGenericHandler();
-            Object object2 = object;
-            Iterator iterator = object2.iterator();
+            Object targetObj = string2;
+            String string3 = StringUtilities.c(targetObj.toLowerCase(Locale.ROOT), 'AsyncBackgroundTask_21', null, 2, null);
+            targetObj = BanHandler.LiteBansModule_401.BaseCoreGenericHandler();
+            Object contextObj = targetObj;
+            Iterator iterator = contextObj.iterator();
             while (iterator.hasNext()) {
                 Object t2;
                 Object t3 = t2 = iterator.next();

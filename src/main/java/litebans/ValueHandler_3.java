@@ -17,8 +17,8 @@ LiteBansModule_122 {
     }
 
     @Override
-    public boolean equals(@Nullable Object object) {
-        return object instanceof Map && ((Map)object).isEmpty();
+    public boolean equals(@Nullable Object targetObj) {
+        return targetObj instanceof Map && targetObj.isEmpty();
     }
 
     @Override
@@ -40,16 +40,16 @@ LiteBansModule_122 {
     }
 
     @Override
-    public boolean containsKey(@Nullable Object object) {
+    public boolean containsKey(@Nullable Object targetObj) {
         return false;
     }
 
     public boolean BaseCoreGenericHandler(@NotNull Void void_) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)void_, BaseCoreGenericHandler[1]);
+        ObjectUtilities.BaseCoreGenericHandler(void_, BaseCoreGenericHandler[1]);
         return false;
     }
 
-    public Void LiteBansModule_31(@Nullable Object object) {
+    public Void LiteBansModule_31(@Nullable Object targetObj) {
         return null;
     }
 
@@ -69,7 +69,7 @@ LiteBansModule_122 {
         return LiteBansModule_31;
     }
 
-    public Void BaseCoreGenericHandler(Object object) {
+    public Void BaseCoreGenericHandler(Object targetObj) {
         throw new UnsupportedOperationException(BaseCoreGenericHandler[3]);
     }
 
@@ -88,15 +88,15 @@ LiteBansModule_122 {
     }
 
     @Override
-    public final boolean containsValue(Object object) {
-        if (!(object instanceof Void)) {
+    public final boolean containsValue(Object targetObj) {
+        if (!(targetObj instanceof Void)) {
             return false;
         }
-        return this.plugin((Void)object);
+        return this.plugintargetObj;
     }
 
-    public Object get(Object object) {
-        return this.LiteBansModule_31(object);
+    public Object get(Object targetObj) {
+        return this.LiteBansModule_31(targetObj);
     }
 
     public final Set entrySet() {
@@ -111,12 +111,12 @@ LiteBansModule_122 {
         return this.LiteBansModule_31();
     }
 
-    public Object put(Object object, Object object2) {
+    public Object put(Object targetObj, Object contextObj) {
         throw new UnsupportedOperationException(BaseCoreGenericHandler[6]);
     }
 
-    public Object remove(Object object) {
-        return this.plugin(object);
+    public Object remove(Object targetObj) {
+        return this.plugin(targetObj);
     }
 
     static {

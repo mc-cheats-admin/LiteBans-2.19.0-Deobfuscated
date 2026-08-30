@@ -23,8 +23,8 @@ JsonDeserializer {
         return jsonSerializationContext.serialize(ei_02.BaseCoreGenericHandler());
     }
 
-    public JsonElement serialize(Object object, Type type, JsonSerializationContext jsonSerializationContext) {
-        return this.plugin((LiteBansModule_167)object, type, jsonSerializationContext);
+    public JsonElement serialize(Object targetObj, Type type, JsonSerializationContext jsonSerializationContext) {
+        return this.plugin((LiteBansModule_167)targetObj, type, jsonSerializationContext);
     }
 
     public Object deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) {

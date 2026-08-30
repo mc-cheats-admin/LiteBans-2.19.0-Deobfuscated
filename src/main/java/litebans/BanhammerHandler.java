@@ -21,19 +21,19 @@ extends BansHandler {
         AutoCloseable autoCloseable = preparedStatement;
         Throwable throwable = null;
         try {
-            Object object = (PreparedStatement)autoCloseable;
+            Object targetObj = (PreparedStatement)autoCloseable;
             if (preparedStatement.execute()) {
                 ResultSet resultSet = preparedStatement.getResultSet();
                 AutoCloseable autoCloseable2 = resultSet;
                 Throwable throwable2 = null;
                 try {
-                    Object object2 = (ResultSet)autoCloseable2;
+                    Object contextObj = (ResultSet)autoCloseable2;
                     while (resultSet.next()) {
                         PreparedStatement preparedStatement2 = connection.prepareStatement("SELECT * FROM " + this.i() + "players WHERE SQLiteDriverHandler_4=?");
                         AutoCloseable autoCloseable3 = preparedStatement2;
                         Throwable throwable3 = null;
                         try {
-                            Object object3 = (PreparedStatement)autoCloseable3;
+                            Object resultObj = (PreparedStatement)autoCloseable3;
                             preparedStatement2.setInt(1, resultSet.getInt("player_id"));
                             preparedStatement2.execute();
                             ResultSet resultSet2 = preparedStatement2.getResultSet();
@@ -54,10 +54,10 @@ extends BansHandler {
                                 Date date2 = o3.BaseCoreGenericHandler(resultSet, "expires_at", false, ((ConfigService)fg_03.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().ElementsHandler());
                                 long l5 = date2.getTime();
                                 BansHandler fS2 = this;
-                                ObjectUtilities.BaseCoreGenericHandler((Object)string3);
+                                ObjectUtilities.BaseCoreGenericHandler(string3);
                                 BansHandler.BaseCoreGenericHandler(fS2, ch2, string2, string3, l3, l5, null, null, null, null, null, null, 1984, null);
                             }
-                            object3 = KotlinUnitHandler.BaseCoreGenericHandler;
+                            resultObj = KotlinUnitHandler.BaseCoreGenericHandler;
                         }
                         catch (Throwable throwable4) {
                             throwable3 = throwable4;
@@ -66,7 +66,7 @@ extends BansHandler {
                         finally {
                             CloseactionHandler.BaseCoreGenericHandler(autoCloseable3, throwable3);
 }
-                    object2 = KotlinUnitHandler.BaseCoreGenericHandler;
+                    contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable5) {
                     throwable2 = throwable5;
@@ -75,7 +75,7 @@ extends BansHandler {
                 finally {
                     CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
 }
-            object = KotlinUnitHandler.BaseCoreGenericHandler;
+            targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable6) {
             throwable = throwable6;

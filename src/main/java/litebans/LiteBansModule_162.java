@@ -12,8 +12,8 @@ implements LiteBansModule_178 {
     }
 
     @Override
-    public Object BaseCoreGenericHandler(Object object) {
-        return SQLiteDriverHandler.AsyncBackgroundTask_5(this.plugin((BansHandler_2)object));
+    public Object BaseCoreGenericHandler(Object targetObj) {
+        return SQLiteDriverHandler.AsyncBackgroundTask_5(this.plugintargetObj);
     }
 
     static {

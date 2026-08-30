@@ -7,17 +7,17 @@ public final class LiteBansModule_422 {
     private final LiteBansModule_95 c;
     private final Object AsyncBackgroundTask_5;
     private String BaseCoreGenericHandler;
-    public LiteBansModule_422(@NotNull LiteBansModule_95 cp_02, @NotNull Object object, @Nullable String string) {
+    public LiteBansModule_422(@NotNull LiteBansModule_95 cp_02, @NotNull Object targetObj, @Nullable String string) {
         this.c = cp_02;
-        this.AsyncBackgroundTask_5 = object;
+        this.AsyncBackgroundTask_5 = targetObj;
         this.plugin = string;
     }
 
-    public /* synthetic */ LiteBansModule_422(LiteBansModule_95 cp_02, Object object, String string, int n, LiteBansModule_14 aJ2) {
+    public /* synthetic */ LiteBansModule_422(LiteBansModule_95 cp_02, Object targetObj, String string, int n, LiteBansModule_14 aJ2) {
         if ((n & 4) != 0) {
             string = null;
         }
-        this(cp_02, object, string);
+        this(cp_02, targetObj, string);
     }
 
     public final LiteBansModule_95 BaseCoreGenericHandler() {
@@ -43,20 +43,20 @@ public final class LiteBansModule_422 {
         return n;
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof LiteBansModule_422)) {
+        if (!(targetObj instanceof LiteBansModule_422)) {
             return false;
         }
-        LiteBansModule_422 lr_02 = (LiteBansModule_422)object;
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.c, lr_02.c)) {
+        LiteBansModule_422 lr_02 = (LiteBansModule_422)targetObj;
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.c, lr_02.c)) {
             return false;
         }
         if (!ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, lr_02.AsyncBackgroundTask_5)) {
             return false;
         }
-        return ObjectUtilities.BaseCoreGenericHandler((Object)this.plugin, (Object)lr_02.BaseCoreGenericHandler);
+        return ObjectUtilities.BaseCoreGenericHandler(this.plugin, lr_02.BaseCoreGenericHandler);
 }
 

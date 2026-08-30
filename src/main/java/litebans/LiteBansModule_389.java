@@ -61,8 +61,8 @@ public final class LiteBansModule_389 {
     }
 
     public static final double BaseCoreGenericHandler(@NotNull String[] args, int n, double d10) {
-        Object object = (String)ArrayUtilities.BaseCoreGenericHandler((Object[])args, n);
-        return object != null && (object = StringUtilities.LiteBansModule_31((String)object)) != null ? (Double)object : d10;
+        Object targetObj = (String)ArrayUtilities.BaseCoreGenericHandler((Object[])args, n);
+        return targetObj != null && (targetObj = StringUtilities.LiteBansModule_31targetObj) != null ? (Double)targetObj : d10;
     }
 
     public static final boolean BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull byte[] byArray2, int n, int n2) {

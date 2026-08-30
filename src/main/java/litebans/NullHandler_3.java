@@ -34,7 +34,7 @@ LiteBansModule_86 {
         return NullHandler_3.BaseCoreGenericHandler(this);
     }
 
-    private static final String BaseCoreGenericHandler(String string, Object object, StringBuffer stringBuffer) {
+    private static final String BaseCoreGenericHandler(String string, Object targetObj, StringBuffer stringBuffer) {
         stringBuffer.append('\"');
         if (string == null) {
             stringBuffer.append("null");
@@ -42,7 +42,7 @@ LiteBansModule_86 {
             NullHandler_5.BaseCoreGenericHandler(string, stringBuffer);
         }
         stringBuffer.append('\"').append(':');
-        stringBuffer.append(NullHandler_5.BaseCoreGenericHandler(object));
+        stringBuffer.append(NullHandler_5.BaseCoreGenericHandler(targetObj));
         return stringBuffer.toString();
     }
 

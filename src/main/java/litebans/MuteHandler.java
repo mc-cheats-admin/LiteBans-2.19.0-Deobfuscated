@@ -31,11 +31,10 @@ public final class MuteHandler {
     }
 
     public final String[] BaseCoreGenericHandler(@NotNull ConfigService configService) {
-        Object object = this;
-        String[] args = new String[]{"mute", "warn", "unban", "unmute", "unwarn", "tempban", "tempmute", "ipban", "banip", "ban-ip", "ipmute", "muteip", "tempipban", "tempbanip", "tempipmute", "tempmuteip"};
-        object = args;
+                String[] args = new String[]{"mute", "warn", "unban", "unmute", "unwarn", "tempban", "tempmute", "ipban", "banip", "ban-ip", "ipmute", "muteip", "tempipban", "tempbanip", "tempipmute", "tempmuteip"};
+        targetObj = args;
         flag = false;
-        args = object;
+        args = targetObj;
         Collection collection = new ArrayList();
         int n = args.length;
         for (int i = 0; i < n; ++i) {
@@ -44,9 +43,9 @@ public final class MuteHandler {
             if (!configService.e(string2)) continue;
             collection.add(string);
         }
-        object = (List)collection;
+        targetObj = (List)collection;
         flag = false;
-        args = object;
+        args = targetObj;
         return args.toArray(new String[0]);
     }
 
@@ -57,7 +56,7 @@ public final class MuteHandler {
             plugin.LiteBansModule_31(u2.LiteBansModule_240());
 }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(MuteHandler et2, PlatformPlugin plugin, int n, int n2, Object object) {
+    public static /* synthetic */ void BaseCoreGenericHandler(MuteHandler et2, PlatformPlugin plugin, int n, int n2, Object targetObj) {
         if ((n2 & 2) != 0) {
             n = -1;
         }
@@ -77,7 +76,7 @@ public final class MuteHandler {
                             arg9 = ((String[])arg7).length;
                             for (arg10 = 0; arg10 < arg9; ++arg10) {
                                 arg11 = arg12 = arg7[arg10];
-                                if (!StringUtilities.BaseCoreGenericHandler((CharSequence)arg11, '-', false, 2, null)) continue;
+                                if (!StringUtilities.BaseCoreGenericHandler(arg11, '-', false, 2, null)) continue;
                                 ++arg13;
                             }
                             arg14 = arg13;
@@ -101,19 +100,19 @@ public final class MuteHandler {
                                 }
                                 arg7 = v0;
                                 arg18 = "";
-                                v1 = arg13 = StringUtilities.BaseCoreGenericHandler((CharSequence)arg7, '.', false, 2, null) != false || StringUtilities.BaseCoreGenericHandler((CharSequence)arg7, '*', false, 2, null) != false ? 1 : 0;
+                                v1 = arg13 = StringUtilities.BaseCoreGenericHandler(arg7, '.', false, 2, null) != false || StringUtilities.BaseCoreGenericHandler(arg7, '*', false, 2, null) != false ? 1 : 0;
                                 if (arg13 != 0) {
-                                    arg18 = String.valueOf(StringUtilities.BaseCoreGenericHandler((CharSequence)arg7));
+                                    arg18 = String.valueOf(StringUtilities.BaseCoreGenericHandler(arg7));
                                     arg7 = arg7.substring(1);
                                 }
-                                if (StringUtilities.LiteBansModule_31((CharSequence)arg7) == false) {
+                                if (StringUtilities.LiteBansModule_31(arg7) == false) {
                                     arg17 = (ServerSyncService)arg1.BaseCoreGenericHandler(ServerSyncService.class);
-                                    arg12 = arg17.LiteBansModule_31(arg9 = arg17.BaseCoreGenericHandler(StringUtilities.BaseCoreGenericHandler((CharSequence)arg7)));
+                                    arg12 = arg17.LiteBansModule_31(arg9 = arg17.BaseCoreGenericHandler(StringUtilities.BaseCoreGenericHandler(arg7)));
                                     if (arg12 == null) {
                                         this.plugin(arg1, arg9);
                                         return arg5;
                                     }
-                                    for (Object arg19 : (Object)arg17.BaseCoreGenericHandler((String)arg7)) {
+                                    for (Object arg19 : arg17.BaseCoreGenericHandler((String)arg7)) {
                                         if ((Iterable)arg12.BaseCoreGenericHandler().get((int)arg19) == null) continue;
                                         arg20 = arg21;
                                         for (T arg22 : arg20) {
@@ -150,9 +149,9 @@ public final class MuteHandler {
                         arg28   = v2;
                         if (StringUtilities.BaseCoreGenericHandler(arg28  , ((Enum)arg11).toString(), false, 2, null)) ** GOTO lbl-1000
                         if (StringUtilities.BaseCoreGenericHandler(v2, "ip", false, 2, null)) {
-                            arg28   = (CharSequence)arg11;
+                            arg28   = arg11;
                             arg29 = "ip";
-                            ** if (!StringUtilities.LiteBansModule_31((CharSequence)((CharSequence)v2), (CharSequence)((CharSequence)(arg28   + arg29)), (boolean)false, (int)2, null)) goto lbl-1000
+                            ** if (!StringUtilities.LiteBansModule_31((CharSequence)(v2), (CharSequence)((CharSequence)(arg28   + arg29)), (boolean)false, (int)2, null)) goto lbl-1000
                         }
                         ** GOTO lbl-1000
 lbl-1000:
@@ -198,7 +197,7 @@ lbl-1000:
                 arg35 = arg7;
                 arg36 = arg5;
                 arg12 = arg36;
-                arg35.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler((CharSequence)v2, (CharSequence)Arrays.toString(arg12.toArray(new String[0]))));
+                arg35.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler(v2, Arrays.toString(arg12.toArray(new String[0]))));
             }
             return arg5;
         }
@@ -210,15 +209,15 @@ lbl-1000:
         LiteBansModule_15 aK2;
         String string2;
         DatabaseMonitorService w2 = (DatabaseMonitorService)plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
-        Object object = new String[]{"global", "local"};
-        String[] args = object;
-        object = plugin.i().BaseCoreGenericHandler();
+        Object targetObj = new String[]{"global", "local"};
+        String[] args = targetObj;
+        targetObj = plugin.i().BaseCoreGenericHandler();
         Collection collection = w2.e().values();
         HashSet hashSet = new HashSet();
         for (String string3 : args) {
             if (this.plugin(string3, string, hashSet, n)) break;
         }
-        Iterator<Object> iterator = object.iterator();
+        Iterator<Object> iterator = targetObj.iterator();
         while (iterator.hasNext() && !this.plugin(string2 = (String)iterator.next(), string, hashSet, n)) {
         }
         iterator = collection.iterator();
@@ -227,7 +226,7 @@ lbl-1000:
         arrayList.addAll(hashSet);
     }
 
-    static /* synthetic */ void BaseCoreGenericHandler(MuteHandler et2, PlatformPlugin plugin, String string, ArrayList arrayList, int n, int n2, Object object) {
+    static /* synthetic */ void BaseCoreGenericHandler(MuteHandler et2, PlatformPlugin plugin, String string, ArrayList arrayList, int n, int n2, Object targetObj) {
         if ((n2 & 8) != 0) {
             n = 5;
         }
@@ -238,7 +237,7 @@ lbl-1000:
         if (string == null) {
             return false;
         }
-        if (StringUtilities.LiteBansModule_31((CharSequence)string2) || StringUtilities.c(string, string2, true)) {
+        if (StringUtilities.LiteBansModule_31(string2) || StringUtilities.c(string, string2, true)) {
             hashSet.add("server:" + string);
         }
         return hashSet.size() >= n;

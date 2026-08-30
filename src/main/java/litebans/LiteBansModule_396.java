@@ -263,14 +263,14 @@ LiteBansModule_309 {
             this.GnuSparseMapHandler();
 }
 
-    public boolean equals(Object object) {
-        if (this == object) {
+    public boolean equals(Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (object == null || this.getClass() != object.getClass()) {
+        if (targetObj == null || this.getClass() != targetObj.getClass()) {
             return false;
         }
-        LiteBansModule_396 kw_02 = (LiteBansModule_396)object;
+        LiteBansModule_396 kw_02 = (LiteBansModule_396)targetObj;
         String string = this.getName();
         String string2 = kw_02.getName();
         if (string == null ? string2 != null : !string.equals(string2)) {

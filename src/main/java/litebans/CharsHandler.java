@@ -11,8 +11,8 @@ extends OldvalueHandler {
     public static final String BaseCoreGenericHandler(@NotNull String string, @NotNull char[] cArray) {
         CharSequence charSequence;
 {
-            ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
-            ObjectUtilities.BaseCoreGenericHandler((Object)cArray, "chars");
+            ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
+            ObjectUtilities.BaseCoreGenericHandler(cArray, "chars");
             String string2 = string;
             CharSequence charSequence2 = string2;
             int n = charSequence2.length();
@@ -24,13 +24,13 @@ extends OldvalueHandler {
             }
             charSequence = "";
         }
-        return ((Object)charSequence).toString();
+        return (charSequence).toString();
     }
 
     public static final boolean LiteBansModule_31(@NotNull CharSequence charSequence) {
         boolean flag;
 {
-            ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
+            ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
             CharSequence charSequence2 = charSequence;
             for (int i = 0; i < charSequence2.length(); ++i) {
                 char c;
@@ -45,21 +45,21 @@ extends OldvalueHandler {
     }
 
     public static final int BaseCoreGenericHandler(@NotNull CharSequence charSequence) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
         return charSequence.length() - 1;
     }
 
     public static final String BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull LiteBansModule_166 eI2) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)eI2, "range");
-        return ((Object)charSequence.subSequence(eI2.LiteBansModule_31(), eI2.c() + 1)).toString();
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(eI2, "range");
+        return (charSequence.subSequence(eI2.LiteBansModule_31(), eI2.c() + 1)).toString();
     }
 
     public static final String LiteBansModule_31(@NotNull String string, char c, @NotNull String string2) {
         String string3;
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)string2, "missingDelimiterValue");
-        int n = StringUtilities.BaseCoreGenericHandler((CharSequence)string, c, 0, false, 6, null);
+        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string2, "missingDelimiterValue");
+        int n = StringUtilities.BaseCoreGenericHandler(string, c, 0, false, 6, null);
         if (n == -1) {
             string3 = string2;
         } else {
@@ -69,7 +69,7 @@ extends OldvalueHandler {
         return string3;
     }
 
-    public static /* synthetic */ String BaseCoreGenericHandler(String string, char c, String string2, int n, Object object) {
+    public static /* synthetic */ String BaseCoreGenericHandler(String string, char c, String string2, int n, Object targetObj) {
         if ((n & 2) != 0) {
             string2 = string;
         }
@@ -78,9 +78,9 @@ extends OldvalueHandler {
 
     public static final String BaseCoreGenericHandler(@NotNull String string, char c, @NotNull String string2) {
         String string3;
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)string2, "missingDelimiterValue");
-        int n = StringUtilities.BaseCoreGenericHandler((CharSequence)string, c, 0, false, 6, null);
+        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string2, "missingDelimiterValue");
+        int n = StringUtilities.BaseCoreGenericHandler(string, c, 0, false, 6, null);
         if (n == -1) {
             string3 = string2;
         } else {
@@ -92,7 +92,7 @@ extends OldvalueHandler {
         return string3;
     }
 
-    public static /* synthetic */ String LiteBansModule_31(String string, char c, String string2, int n, Object object) {
+    public static /* synthetic */ String LiteBansModule_31(String string, char c, String string2, int n, Object targetObj) {
         if ((n & 2) != 0) {
             string2 = string;
         }
@@ -101,10 +101,10 @@ extends OldvalueHandler {
 
     public static final String BaseCoreGenericHandler(@NotNull String string, @NotNull String string2, @NotNull String string3) {
         String string4;
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)string2, "delimiter");
-        ObjectUtilities.BaseCoreGenericHandler((Object)string3, "missingDelimiterValue");
-        int n = StringUtilities.BaseCoreGenericHandler((CharSequence)string, string2, 0, false, 6, null);
+        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string2, "delimiter");
+        ObjectUtilities.BaseCoreGenericHandler(string3, "missingDelimiterValue");
+        int n = StringUtilities.BaseCoreGenericHandler(string, string2, 0, false, 6, null);
         if (n == -1) {
             string4 = string3;
         } else {
@@ -116,7 +116,7 @@ extends OldvalueHandler {
         return string4;
     }
 
-    public static /* synthetic */ String BaseCoreGenericHandler(String string, String string2, String string3, int n, Object object) {
+    public static /* synthetic */ String BaseCoreGenericHandler(String string, String string2, String string3, int n, Object targetObj) {
         if ((n & 2) != 0) {
             string3 = string;
         }
@@ -125,9 +125,9 @@ extends OldvalueHandler {
 
     public static final String AsyncBackgroundTask_5(@NotNull String string, char c, @NotNull String string2) {
         String string3;
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)string2, "missingDelimiterValue");
-        int n = StringUtilities.LiteBansModule_31((CharSequence)string, c, 0, false, 6, null);
+        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string2, "missingDelimiterValue");
+        int n = StringUtilities.LiteBansModule_31(string, c, 0, false, 6, null);
         if (n == -1) {
             string3 = string2;
         } else {
@@ -137,7 +137,7 @@ extends OldvalueHandler {
         return string3;
     }
 
-    public static /* synthetic */ String c(String string, char c, String string2, int n, Object object) {
+    public static /* synthetic */ String c(String string, char c, String string2, int n, Object targetObj) {
         if ((n & 2) != 0) {
             string2 = string;
         }
@@ -146,9 +146,9 @@ extends OldvalueHandler {
 
     public static final String c(@NotNull String string, char c, @NotNull String string2) {
         String string3;
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)string2, "missingDelimiterValue");
-        int n = StringUtilities.LiteBansModule_31((CharSequence)string, c, 0, false, 6, null);
+        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string2, "missingDelimiterValue");
+        int n = StringUtilities.LiteBansModule_31(string, c, 0, false, 6, null);
         if (n == -1) {
             string3 = string2;
         } else {
@@ -160,7 +160,7 @@ extends OldvalueHandler {
         return string3;
     }
 
-    public static /* synthetic */ String AsyncBackgroundTask_5(String string, char c, String string2, int n, Object object) {
+    public static /* synthetic */ String AsyncBackgroundTask_5(String string, char c, String string2, int n, Object targetObj) {
         if ((n & 2) != 0) {
             string2 = string;
         }
@@ -168,8 +168,8 @@ extends OldvalueHandler {
     }
 
     public static final boolean BaseCoreGenericHandler(@NotNull CharSequence charSequence, int n, @NotNull CharSequence charSequence2, int n2, int n3, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence2, "other");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence2, "other");
         if (n2 < 0 || n < 0 || n > charSequence.length() - n3 || n2 > charSequence2.length() - n3) {
             return false;
         }
@@ -181,11 +181,11 @@ extends OldvalueHandler {
     }
 
     public static final boolean BaseCoreGenericHandler(@NotNull CharSequence charSequence, char c, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
         return charSequence.length() > 0 && LiteBansModule_338.BaseCoreGenericHandler(charSequence.charAt(0), c, flag);
     }
 
-    public static /* synthetic */ boolean BaseCoreGenericHandler(CharSequence charSequence, char c, boolean flag, int n, Object object) {
+    public static /* synthetic */ boolean BaseCoreGenericHandler(CharSequence charSequence, char c, boolean flag, int n, Object targetObj) {
         if ((n & 2) != 0) {
             flag = false;
         }
@@ -193,11 +193,11 @@ extends OldvalueHandler {
     }
 
     public static final boolean c(@NotNull CharSequence charSequence, char c, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
         return charSequence.length() > 0 && LiteBansModule_338.BaseCoreGenericHandler(charSequence.charAt(StringUtilities.BaseCoreGenericHandler(charSequence)), c, flag);
     }
 
-    public static /* synthetic */ boolean LiteBansModule_31(CharSequence charSequence, char c, boolean flag, int n, Object object) {
+    public static /* synthetic */ boolean LiteBansModule_31(CharSequence charSequence, char c, boolean flag, int n, Object targetObj) {
         if ((n & 2) != 0) {
             flag = false;
         }
@@ -205,15 +205,15 @@ extends OldvalueHandler {
     }
 
     public static final boolean c(@NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence2, "prefix");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence2, "prefix");
         if (!flag && charSequence instanceof String && charSequence2 instanceof String) {
             return StringUtilities.LiteBansModule_31((String)charSequence, (String)charSequence2, false, 2, null);
         }
         return StringUtilities.BaseCoreGenericHandler(charSequence, 0, charSequence2, 0, charSequence2.length(), flag);
     }
 
-    public static /* synthetic */ boolean c(CharSequence charSequence, CharSequence charSequence2, boolean flag, int n, Object object) {
+    public static /* synthetic */ boolean c(CharSequence charSequence, CharSequence charSequence2, boolean flag, int n, Object targetObj) {
         if ((n & 2) != 0) {
             flag = false;
         }
@@ -221,15 +221,15 @@ extends OldvalueHandler {
     }
 
     public static final boolean BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence2, "suffix");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence2, "suffix");
         if (!flag && charSequence instanceof String && charSequence2 instanceof String) {
             return StringUtilities.BaseCoreGenericHandler((String)charSequence, (String)charSequence2, false, 2, null);
         }
         return StringUtilities.BaseCoreGenericHandler(charSequence, charSequence.length() - charSequence2.length(), charSequence2, 0, charSequence2.length(), flag);
     }
 
-    public static /* synthetic */ boolean LiteBansModule_31(CharSequence charSequence, CharSequence charSequence2, boolean flag, int n, Object object) {
+    public static /* synthetic */ boolean LiteBansModule_31(CharSequence charSequence, CharSequence charSequence2, boolean flag, int n, Object targetObj) {
         if ((n & 2) != 0) {
             flag = false;
         }
@@ -238,8 +238,8 @@ extends OldvalueHandler {
 
     public static final int LiteBansModule_31(@NotNull CharSequence charSequence, @NotNull char[] cArray, int n, boolean flag) {
         int n2;
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)cArray, "chars");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(cArray, "chars");
         if (!flag && cArray.length == 1 && charSequence instanceof String) {
             char c = ArrayUtilities.BaseCoreGenericHandler(cArray);
             return ((String)charSequence).indexOf(c, n);
@@ -271,8 +271,8 @@ extends OldvalueHandler {
     }
 
     public static final int BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull char[] cArray, int n, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)cArray, "chars");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(cArray, "chars");
         if (!flag && cArray.length == 1 && charSequence instanceof String) {
             char c = ArrayUtilities.BaseCoreGenericHandler(cArray);
             return ((String)charSequence).lastIndexOf(c, n);
@@ -330,7 +330,7 @@ extends OldvalueHandler {
         return -1;
     }
 
-    static /* synthetic */ int BaseCoreGenericHandler(CharSequence charSequence, CharSequence charSequence2, int n, int n2, boolean flag, boolean flag2, int n3, Object object) {
+    static /* synthetic */ int BaseCoreGenericHandler(CharSequence charSequence, CharSequence charSequence2, int n, int n2, boolean flag, boolean flag2, int n3, Object targetObj) {
         if ((n3 & 0x10) != 0) {
             flag2 = false;
         }
@@ -380,7 +380,7 @@ extends OldvalueHandler {
                         Iterable iterable = collection;
                         for (Object t3 : iterable) {
                             String string = (String)t3;
-                            if (!StringUtilities.BaseCoreGenericHandler((CharSequence)string, 0, charSequence, n6, string.length(), flag)) continue;
+                            if (!StringUtilities.BaseCoreGenericHandler(string, 0, charSequence, n6, string.length(), flag)) continue;
                             v2 = t3;
                             break;
 }
@@ -396,7 +396,7 @@ extends OldvalueHandler {
 
     public static final int BaseCoreGenericHandler(@NotNull CharSequence charSequence, char c, int n, boolean flag) {
         int n2;
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
         if (flag || !(charSequence instanceof String)) {
             char[] cArray = new char[]{c};
             n2 = StringUtilities.LiteBansModule_31(charSequence, cArray, n, flag);
@@ -406,7 +406,7 @@ extends OldvalueHandler {
         return n2;
     }
 
-    public static /* synthetic */ int BaseCoreGenericHandler(CharSequence charSequence, char c, int n, boolean flag, int n2, Object object) {
+    public static /* synthetic */ int BaseCoreGenericHandler(CharSequence charSequence, char c, int n, boolean flag, int n2, Object targetObj) {
         if ((n2 & 2) != 0) {
             n = 0;
         }
@@ -417,12 +417,12 @@ extends OldvalueHandler {
     }
 
     public static final int LiteBansModule_31(@NotNull CharSequence charSequence, @NotNull String string, int n, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "string");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string, "string");
         return flag || !(charSequence instanceof String) ? CharsHandler.BaseCoreGenericHandler(charSequence, string, n, charSequence.length(), flag, false, 16, null) : ((String)charSequence).indexOf(string, n);
     }
 
-    public static /* synthetic */ int BaseCoreGenericHandler(CharSequence charSequence, String string, int n, boolean flag, int n2, Object object) {
+    public static /* synthetic */ int BaseCoreGenericHandler(CharSequence charSequence, String string, int n, boolean flag, int n2, Object targetObj) {
         if ((n2 & 2) != 0) {
             n = 0;
         }
@@ -434,7 +434,7 @@ extends OldvalueHandler {
 
     public static final int LiteBansModule_31(@NotNull CharSequence charSequence, char c, int n, boolean flag) {
         int n2;
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
         if (flag || !(charSequence instanceof String)) {
             char[] cArray = new char[]{c};
             n2 = StringUtilities.BaseCoreGenericHandler(charSequence, cArray, n, flag);
@@ -444,7 +444,7 @@ extends OldvalueHandler {
         return n2;
     }
 
-    public static /* synthetic */ int LiteBansModule_31(CharSequence charSequence, char c, int n, boolean flag, int n2, Object object) {
+    public static /* synthetic */ int LiteBansModule_31(CharSequence charSequence, char c, int n, boolean flag, int n2, Object targetObj) {
         if ((n2 & 2) != 0) {
             n = StringUtilities.BaseCoreGenericHandler(charSequence);
         }
@@ -455,12 +455,12 @@ extends OldvalueHandler {
     }
 
     public static final int BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull String string, int n, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "string");
-        return flag || !(charSequence instanceof String) ? CharsHandler.BaseCoreGenericHandler(charSequence, (CharSequence)string, n, 0, flag, true) : ((String)charSequence).lastIndexOf(string, n);
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string, "string");
+        return flag || !(charSequence instanceof String) ? CharsHandler.BaseCoreGenericHandler(charSequence, string, n, 0, flag, true) : ((String)charSequence).lastIndexOf(string, n);
     }
 
-    public static /* synthetic */ int LiteBansModule_31(CharSequence charSequence, String string, int n, boolean flag, int n2, Object object) {
+    public static /* synthetic */ int LiteBansModule_31(CharSequence charSequence, String string, int n, boolean flag, int n2, Object targetObj) {
         if ((n2 & 2) != 0) {
             n = StringUtilities.BaseCoreGenericHandler(charSequence);
         }
@@ -471,12 +471,12 @@ extends OldvalueHandler {
     }
 
     public static final boolean LiteBansModule_31(@NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence2, "other");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence2, "other");
         return charSequence2 instanceof String ? StringUtilities.BaseCoreGenericHandler(charSequence, (String)charSequence2, 0, flag, 2, null) >= 0 : CharsHandler.BaseCoreGenericHandler(charSequence, charSequence2, 0, charSequence.length(), flag, false, 16, null) >= 0;
     }
 
-    public static /* synthetic */ boolean BaseCoreGenericHandler(CharSequence charSequence, CharSequence charSequence2, boolean flag, int n, Object object) {
+    public static /* synthetic */ boolean BaseCoreGenericHandler(CharSequence charSequence, CharSequence charSequence2, boolean flag, int n, Object targetObj) {
         if ((n & 2) != 0) {
             flag = false;
         }
@@ -484,11 +484,11 @@ extends OldvalueHandler {
     }
 
     public static final boolean LiteBansModule_31(@NotNull CharSequence charSequence, char c, boolean flag) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
         return StringUtilities.BaseCoreGenericHandler(charSequence, c, 0, flag, 2, null) >= 0;
     }
 
-    public static /* synthetic */ boolean c(CharSequence charSequence, char c, boolean flag, int n, Object object) {
+    public static /* synthetic */ boolean c(CharSequence charSequence, char c, boolean flag, int n, Object targetObj) {
         if ((n & 2) != 0) {
             flag = false;
         }
@@ -500,7 +500,7 @@ extends OldvalueHandler {
         return new InputHandler_2(charSequence, n, n2, (arg_0, arg_1) -> CharsHandler.BaseCoreGenericHandler(cArray, flag, arg_0, arg_1));
     }
 
-    static /* synthetic */ LiteBansModule_295 BaseCoreGenericHandler(CharSequence charSequence, char[] cArray, int n, boolean flag, int n2, int n3, Object object) {
+    static /* synthetic */ LiteBansModule_295 BaseCoreGenericHandler(CharSequence charSequence, char[] cArray, int n, boolean flag, int n2, int n3, Object targetObj) {
         if ((n3 & 2) != 0) {
             n = 0;
         }
@@ -519,7 +519,7 @@ extends OldvalueHandler {
         return new InputHandler_2(charSequence, n, n2, (arg_0, arg_1) -> CharsHandler.BaseCoreGenericHandler(list, flag, arg_0, arg_1));
     }
 
-    static /* synthetic */ LiteBansModule_295 BaseCoreGenericHandler(CharSequence charSequence, String[] args, int n, boolean flag, int n2, int n3, Object object) {
+    static /* synthetic */ LiteBansModule_295 BaseCoreGenericHandler(CharSequence charSequence, String[] args, int n, boolean flag, int n2, int n3, Object targetObj) {
         if ((n3 & 2) != 0) {
             n = 0;
         }
@@ -539,16 +539,15 @@ extends OldvalueHandler {
 }
 
     public static final List BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull String[] args, boolean flag, int n) {
-        Object object;
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)args, "delimiters");
-        if (args.length == 1 && !(((CharSequence)(object = args[0])).length() == 0)) {
-            return CharsHandler.BaseCoreGenericHandler(charSequence, (String)object, flag, n);
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(args, "delimiters");
+        if (args.length == 1 && !(((CharSequence)(targetObj = args[0])).length() == 0)) {
+            return CharsHandler.BaseCoreGenericHandler(charSequence, (String)targetObj, flag, n);
         }
-        object = LiteBansModule_233.BaseCoreGenericHandler(CharsHandler.BaseCoreGenericHandler(charSequence, args, 0, flag, n, 2, null));
-        Object object2 = object;
-        Collection collection = new ArrayList(CollectionUtilities.BaseCoreGenericHandler((Iterable)object, 10));
-        Iterator iterator = object2.iterator();
+        targetObj = LiteBansModule_233.BaseCoreGenericHandler(CharsHandler.BaseCoreGenericHandler(charSequence, args, 0, flag, n, 2, null));
+        Object contextObj = targetObj;
+        Collection collection = new ArrayList(CollectionUtilities.BaseCoreGenericHandler((Iterable)targetObj, 10));
+        Iterator iterator = contextObj.iterator();
         while (iterator.hasNext()) {
             Object t2 = iterator.next();
             LiteBansModule_166 eI2 = (LiteBansModule_166)t2;
@@ -558,7 +557,7 @@ extends OldvalueHandler {
         return (List)collection;
     }
 
-    public static /* synthetic */ List BaseCoreGenericHandler(CharSequence charSequence, String[] args, boolean flag, int n, int n2, Object object) {
+    public static /* synthetic */ List BaseCoreGenericHandler(CharSequence charSequence, String[] args, boolean flag, int n, int n2, Object targetObj) {
         if ((n2 & 2) != 0) {
             flag = false;
         }
@@ -569,8 +568,8 @@ extends OldvalueHandler {
     }
 
     public static final List BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull char[] cArray, boolean flag, int n) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)cArray, "delimiters");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(cArray, "delimiters");
         if (cArray.length == 1) {
             return CharsHandler.BaseCoreGenericHandler(charSequence, String.valueOf(cArray[0]), flag, n);
         }
@@ -585,7 +584,7 @@ extends OldvalueHandler {
         return (List)collection;
     }
 
-    public static /* synthetic */ List BaseCoreGenericHandler(CharSequence charSequence, char[] cArray, boolean flag, int n, int n2, Object object) {
+    public static /* synthetic */ List BaseCoreGenericHandler(CharSequence charSequence, char[] cArray, boolean flag, int n, int n2, Object targetObj) {
         if ((n2 & 2) != 0) {
             flag = false;
         }
@@ -599,27 +598,27 @@ extends OldvalueHandler {
         StringUtilities.BaseCoreGenericHandler(n);
         int n3 = StringUtilities.LiteBansModule_31(charSequence, string, n2, flag);
         if (n3 == -1 || n == 1) {
-            return CollectionUtilities.BaseCoreGenericHandler(((Object)charSequence).toString());
+            return CollectionUtilities.BaseCoreGenericHandler((charSequence).toString());
         }
         boolean flag2 = n > 0;
         ArrayList<String> arrayList = new ArrayList<String>(flag2 ? LiteBansModule_20.AsyncBackgroundTask_5(n, 10) : 10);
         do {
-            arrayList.add(((Object)charSequence.subSequence(n2, n3)).toString());
+            arrayList.add((charSequence.subSequence(n2, n3)).toString());
             n2 = n3 + string.length();
         } while ((!flag2 || arrayList.size() != n - 1) && (n3 = StringUtilities.LiteBansModule_31(charSequence, string, n2, flag)) != -1);
-        arrayList.add(((Object)charSequence.subSequence(n2, charSequence.length())).toString());
+        arrayList.add((charSequence.subSequence(n2, charSequence.length())).toString());
         return arrayList;
     }
 
     private static final LiteBansModule_354 BaseCoreGenericHandler(char[] cArray, boolean flag, CharSequence charSequence, int n) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "$this$DelimitedRangesSequence");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "$this$DelimitedRangesSequence");
         int n2 = StringUtilities.LiteBansModule_31(charSequence, cArray, n, flag);
         return n2 < 0 ? null : LiteBansModule_371.BaseCoreGenericHandler(n2, 1);
     }
 
     private static final LiteBansModule_354 BaseCoreGenericHandler(List list, boolean flag, CharSequence charSequence, int n) {
         LiteBansModule_354 jT2;
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "$this$DelimitedRangesSequence");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "$this$DelimitedRangesSequence");
         LiteBansModule_354 jT3 = CharsHandler.BaseCoreGenericHandler(charSequence, list, n, flag, false);
         if (jT3 != null) {
             LiteBansModule_354 jT4 = jT3;

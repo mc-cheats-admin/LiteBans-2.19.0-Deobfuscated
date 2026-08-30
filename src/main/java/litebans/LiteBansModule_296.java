@@ -32,17 +32,16 @@ extends LiteBansModule_153 {
     }
 
     public LiteBansModule_296(InputStream inputStream, String string) {
-        Object object;
         this.e = new Bzlib2Handler(inputStream);
         this.LiteBansModule_194 = false;
         this.r = string;
         this.m = Utf8Handler.LiteBansModule_31(string);
         try {
-            object = this.e.LiteBansModule_31();
-            if (!LiteBansModule_108.BaseCoreGenericHandler(object)) {
+            targetObj = this.e.LiteBansModule_31();
+            if (!LiteBansModule_108.BaseCoreGenericHandler(targetObj)) {
                 throw new LiteBansModule_294();
             }
-            this.g = new LiteBansModule_316((byte[])object, this.m);
+            this.g = new LiteBansModule_316((byte[])targetObj, this.m);
             this.e.BaseCoreGenericHandler(this.g.BaseCoreGenericHandler(), this.g.AsyncBackgroundTask_5());
             this.LiteBansModule_240 = new byte[4096];
             this.LiteBansModule_31();
@@ -51,8 +50,8 @@ extends LiteBansModule_153 {
         catch (IOException iOException) {
             throw new LiteBansException_8(iOException.getMessage(), iOException);
         }
-        object = new LiteBansModule_163(2, 2, 4, " + ");
-        this.i.put(2, object);
+        targetObj = new LiteBansModule_163(2, 2, 4, " + ");
+        this.i.put(2, targetObj);
         this.AsyncBackgroundTask_21 = new PriorityQueue(10, new LiteBansModule_392(this));
     }
 
@@ -70,7 +69,7 @@ extends LiteBansModule_153 {
         if (TapeHandler.AsyncBackgroundTask_5 != this.LiteBansModule_401.BaseCoreGenericHandler()) {
             throw new LiteBansModule_308();
         }
-        if (this.e.skip(1024L * (long)this.LiteBansModule_401.LiteBansModule_31()) == -1L) {
+        if (this.e.skip(1024L * this.LiteBansModule_401.LiteBansModule_31()) == -1L) {
             throw new EOFException();
         }
         this.BroadcastService = this.LiteBansModule_401.LiteBansModule_31();
@@ -85,7 +84,7 @@ extends LiteBansModule_153 {
         if (TapeHandler.LiteBansModule_240 != this.LiteBansModule_401.BaseCoreGenericHandler()) {
             throw new LiteBansModule_308();
         }
-        if (this.e.skip(1024L * (long)this.LiteBansModule_401.LiteBansModule_31()) == -1L) {
+        if (this.e.skip(1024L * this.LiteBansModule_401.LiteBansModule_31()) == -1L) {
             throw new EOFException();
         }
         this.BroadcastService = this.LiteBansModule_401.LiteBansModule_31();

@@ -10,20 +10,20 @@ public final class LiteBansModule_246 {
     private LiteBansModule_246() {
     }
 
-    public final String BaseCoreGenericHandler(@NotNull Object object, @NotNull Object object2, @Nullable Object object3) {
-        return this.plugin(object.toString(), object2.toString(), object3);
+    public final String BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull Object contextObj, @Nullable Object resultObj) {
+        return this.plugin(targetObj.toString(), contextObj.toString(), resultObj);
     }
 
-    public final String BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull String string, @Nullable Object object) {
-        if (!StringUtilities.BaseCoreGenericHandler(charSequence, (CharSequence)string, false, 2, null)) {
-            return ((Object)charSequence).toString();
+    public final String BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull String string, @Nullable Object targetObj) {
+        if (!StringUtilities.BaseCoreGenericHandler(charSequence, string, false, 2, null)) {
+            return (charSequence).toString();
         }
         Pattern pattern = (Pattern)LiteBansModule_433.BaseCoreGenericHandler().get(string);
         if (pattern == null) {
             pattern = this.plugin(string);
         }
-        String string2 = pattern.matcher(charSequence).replaceAll(Matcher.quoteReplacement(String.valueOf(object)));
-        ObjectUtilities.BaseCoreGenericHandler((Object)string2);
+        String string2 = pattern.matcher(charSequence).replaceAll(Matcher.quoteReplacement(String.valueOf(targetObj)));
+        ObjectUtilities.BaseCoreGenericHandler(string2);
         return string2;
     }
 

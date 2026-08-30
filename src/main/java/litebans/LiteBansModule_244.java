@@ -245,37 +245,37 @@ implements LiteBansModule_82 {
 
     @Override
     public List BaseCoreGenericHandler(@NotNull LiteBansModule_297 iA2, @NotNull BanHandler a_2, @NotNull String string, boolean flag, int n) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, iA2, a_2, string, flag, n);
+        return AllHandler_3.BaseCoreGenericHandler(this, iA2, a_2, string, flag, n);
     }
 
     @Override
     public List LiteBansModule_31(@NotNull ResultSet resultSet, @NotNull BanHandler a_2) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, resultSet, a_2);
+        return AllHandler_3.BaseCoreGenericHandler(this, resultSet, a_2);
     }
 
     @Override
     public String BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, sender);
+        return AllHandler_3.BaseCoreGenericHandler(this, sender);
     }
 
     @Override
     public CharSequence LiteBansModule_31(@NotNull CharSequence charSequence, @NotNull CommandSenderWrapper sender) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence, sender);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence, sender);
     }
 
     @Override
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable String string, @Nullable String string2, boolean flag) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence, string, string2, flag);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence, string, string2, flag);
     }
 
     @Override
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence);
     }
 
     @Override
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable LiteBansModule_297 iA2, boolean flag) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence, iA2, flag);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence, iA2, flag);
     }
 
     @Override
@@ -285,32 +285,32 @@ implements LiteBansModule_82 {
 
     @Override
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull LiteBansModule_113 d92) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence, d92);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence, d92);
     }
 
     @Override
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable SilentHandler dZ2, boolean flag) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence, dZ2, flag);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence, dZ2, flag);
     }
 
     @Override
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable SilentHandler dZ2, @Nullable LiteBansModule_297 iA2, boolean flag) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence, dZ2, iA2, flag);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence, dZ2, iA2, flag);
     }
 
     @Override
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable String string, @Nullable String string2, @Nullable String string3, @Nullable String string4, @Nullable String string5) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence, string, string2, string3, string4, string5);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence, string, string2, string3, string4, string5);
     }
 
     @Override
     public boolean BaseCoreGenericHandler(@NotNull SilentHandler dZ2, @NotNull CommandSenderWrapper sender) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, dZ2, sender);
+        return AllHandler_3.BaseCoreGenericHandler(this, dZ2, sender);
     }
 
     @Override
     public boolean BaseCoreGenericHandler(@Nullable SilentHandler dZ2) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, dZ2);
+        return AllHandler_3.BaseCoreGenericHandler(this, dZ2);
     }
 
     @Override

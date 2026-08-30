@@ -35,25 +35,25 @@ implements LiteBansModule_247 {
 
     @Override
     public void BaseCoreGenericHandler() {
-        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
         configService.BaseCoreGenericHandler();
         FabricNetworkHandler t_02 = this;
         PlatformPlugin plugin = t_02.BaseCoreGenericHandler;
         ObjectUtilities.LiteBansModule_31(plugin, "");
         LiteBansModule_98 cr_02 = ((ConfigYmlHandler)plugin).g();
         if (!t_02.BaseCoreGenericHandler.BaseCoreGenericHandler("net.fabricmc.fabric.impl.gamerule.rpc.FabricTypedRule", new LiteBansModule_275(t_02, cr_02)) && !t_02.BaseCoreGenericHandler.BaseCoreGenericHandler("net.fabricmc.fabric.api.networking.v1.LoginPacketSender", new LiteBansModule_83(t_02, cr_02))) {
-            PlatformPlugin di_03 = t_02.BaseCoreGenericHandler;
+            PlatformPlugin pluginWrapper = t_02.BaseCoreGenericHandler;
             ObjectUtilities.BaseCoreGenericHandler(cr_02);
-            new LiteBansModule_302(di_03, cr_02).c();
+            new LiteBansModule_302(pluginWrapper, cr_02).c();
         }
         if (configService.LiteBansModule_194().PunishmentTableService()) {
             new LiteBansModule_110(this.plugin).BaseCoreGenericHandler();
 }
 
     public final void LiteBansModule_31(@NotNull class_3248 class_32482, @NotNull ServerLoginNetworking.LoginSynchronizer loginSynchronizer, @NotNull LiteBansModule_95 cp_02, @NotNull class_2535 class_25352) {
-        BroadcastService o2 = (BroadcastService)this.plugin.BaseCoreGenericHandler(BroadcastService.class);
-        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
-        DatabaseMonitorService w2 = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        BroadcastService o2 = this.plugin.BaseCoreGenericHandler(BroadcastService.class);
+        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        DatabaseMonitorService w2 = this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
         PlatformPlugin plugin = this.plugin;
         ObjectUtilities.LiteBansModule_31(plugin, "");
         ConfigYmlHandler fabricPlugin = (ConfigYmlHandler)plugin;
@@ -74,21 +74,21 @@ implements LiteBansModule_247 {
     }
 
     private static final void BaseCoreGenericHandler(ConfigService configService, BroadcastService o2, LiteBansModule_422 lr_02, ConfigYmlHandler fabricPlugin, class_3248 class_32482, LiteBansModule_95 cp_02, DatabaseMonitorService w2) {
-        Object object = configService;
-        if (object.g()) {
-            ConfigService q_03 = object;
+        Object targetObj = configService;
+        if (targetObj.g()) {
+            ConfigService q_03 = targetObj;
             q_03.BaseCoreGenericHandler((Object)("Login " + cp_02));
         }
         o2.c().LiteBansModule_31(lr_02);
-        object = null;
-        object = V116Handler.BaseCoreGenericHandler;
+        targetObj = null;
+        targetObj = V116Handler.BaseCoreGenericHandler;
         if (fabricPlugin.LiteBansModule_31() < 770) {
-            object = V116Handler.c;
+            targetObj = V116Handler.c;
         }
         if (lr_02.c() != null) {
-            Object object2 = fabricPlugin.g().AsyncBackgroundTask_5().LiteBansModule_31(LiteBansModule_164.BaseCoreGenericHandler(lr_02.c(), (V116Handler)((Object)object)));
-            ObjectUtilities.LiteBansModule_31(object2, "");
-            class_2561 class_25612 = (class_2561)object2;
+            Object contextObj = fabricPlugin.g().AsyncBackgroundTask_5().LiteBansModule_31(LiteBansModule_164.BaseCoreGenericHandler(lr_02.c(), (V116Handler)(targetObj)));
+            ObjectUtilities.LiteBansModule_31(contextObj, "");
+            class_2561 class_25612 = (class_2561)contextObj;
             class_32482.method_14380(class_25612);
         } else {
             LitebansLockdownBypassHandler gG2;
@@ -99,14 +99,14 @@ implements LiteBansModule_247 {
             LitebansLockdownBypassHandler gG4 = gG2 = gG3;
             if (gG4.c() != null && fabricPlugin.AsyncBackgroundTask_5() && !((Boolean)Permissions.check((UUID)UUID.fromString(cp_02.g()), (String)"litebans.lockdown.bypass").get()).booleanValue()) {
                 String string = gG2.BaseCoreGenericHandler(w2.ServerSyncService(), false);
-                Object object3 = fabricPlugin.g().AsyncBackgroundTask_5().LiteBansModule_31(LiteBansModule_164.BaseCoreGenericHandler(string, (V116Handler)((Object)object)));
-                ObjectUtilities.LiteBansModule_31(object3, "");
-                class_2561 class_25613 = (class_2561)object3;
+                Object resultObj = fabricPlugin.g().AsyncBackgroundTask_5().LiteBansModule_31(LiteBansModule_164.BaseCoreGenericHandler(string, (V116Handler)(targetObj)));
+                ObjectUtilities.LiteBansModule_31(resultObj, "");
+                class_2561 class_25613 = (class_2561)resultObj;
                 class_32482.method_14380(class_25613);
 }
 
     @Override
-    public void BaseCoreGenericHandler(Object object, Object object2, Object object3, Object object4) {
-        this.plugin((class_3248)object, (ServerLoginNetworking.LoginSynchronizer)object2, (LiteBansModule_95)object3, (class_2535)object4);
+    public void BaseCoreGenericHandler(Object targetObj, Object contextObj, Object resultObj, Object helperObj) {
+        this.plugin((class_3248)targetObj, (ServerLoginNetworking.LoginSynchronizer)contextObj, (LiteBansModule_95)resultObj, (class_2535)helperObj);
 }
 

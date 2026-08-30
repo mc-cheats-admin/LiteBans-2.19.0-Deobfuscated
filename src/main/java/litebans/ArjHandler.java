@@ -111,7 +111,7 @@ implements LiteBansModule_128 {
         if ("7z".equalsIgnoreCase(string)) {
             throw new LiteBansModule_257("7z");
         }
-        LiteBansModule_128 dm_02 = (LiteBansModule_128)this.LiteBansModule_31().get(ArjHandler.BaseCoreGenericHandler(string));
+        LiteBansModule_128 dm_02 = this.LiteBansModule_31().get(ArjHandler.BaseCoreGenericHandler(string));
         if (dm_02 != null) {
             return dm_02.BaseCoreGenericHandler(string, inputStream, string2);
         }

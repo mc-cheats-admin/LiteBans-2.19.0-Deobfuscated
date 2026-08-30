@@ -3,8 +3,8 @@ package litebans;
 import java.util.Collections;
 import java.util.Set;
 static class BuilderactionHandler {
-    public static final Set BaseCoreGenericHandler(Object object) {
-        return Collections.singleton(object);
+    public static final Set BaseCoreGenericHandler(Object targetObj) {
+        return Collections.singleton(targetObj);
     }
 
     private static final void BaseCoreGenericHandler() {

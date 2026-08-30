@@ -7,8 +7,8 @@ import org.jetbrains.annotations.NotNull;
 
 public final class OutHandler {
     public static final long BaseCoreGenericHandler(@NotNull InputStream inputStream, @NotNull OutputStream outputStream, int n) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)inputStream, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)outputStream, "out");
+        ObjectUtilities.BaseCoreGenericHandler(inputStream, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(outputStream, "out");
         long l3 = 0L;
         byte[] byArray = new byte[n];
         int n2 = inputStream.read(byArray);
@@ -20,7 +20,7 @@ public final class OutHandler {
         return l3;
     }
 
-    public static /* synthetic */ long BaseCoreGenericHandler(InputStream inputStream, OutputStream outputStream, int n, int n2, Object object) {
+    public static /* synthetic */ long BaseCoreGenericHandler(InputStream inputStream, OutputStream outputStream, int n, int n2, Object targetObj) {
         if ((n2 & 2) != 0) {
             n = 8192;
         }
@@ -28,7 +28,7 @@ public final class OutHandler {
     }
 
     public static final byte[] BaseCoreGenericHandler(@NotNull InputStream inputStream) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)inputStream, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(inputStream, "<this>");
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(Math.max(8192, inputStream.available()));
         OutHandler.BaseCoreGenericHandler(inputStream, byteArrayOutputStream, 0, 2, null);
         return byteArrayOutputStream.toByteArray();

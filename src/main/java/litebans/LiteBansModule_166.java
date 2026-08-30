@@ -26,8 +26,8 @@ LiteBansModule_239 {
     }
 
     @Override
-    public boolean equals(@Nullable Object object) {
-        return object instanceof LiteBansModule_166 && (this.plugin() && ((LiteBansModule_166)object).BaseCoreGenericHandler() || this.c() == ((LiteBansModule_166)object).c() && this.LiteBansModule_31() == ((LiteBansModule_166)object).LiteBansModule_31());
+    public boolean equals(@Nullable Object targetObj) {
+        return targetObj instanceof LiteBansModule_166 && (this.plugin() && targetObj.BaseCoreGenericHandler() || this.c() == targetObj.c() && this.LiteBansModule_31() == targetObj.LiteBansModule_31());
     }
 
     @Override

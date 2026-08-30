@@ -25,16 +25,16 @@ implements Comparable {
         return LiteBansModule_283.c(this.c);
     }
 
-    public static boolean BaseCoreGenericHandler(byte by2, Object object) {
-        if (!(object instanceof LiteBansModule_283)) {
+    public static boolean BaseCoreGenericHandler(byte by2, Object targetObj) {
+        if (!(targetObj instanceof LiteBansModule_283)) {
             return false;
         }
-        byte by3 = ((LiteBansModule_283)object).BaseCoreGenericHandler();
+        byte by3 = targetObj.BaseCoreGenericHandler();
         return by2 == by3;
     }
 
-    public boolean equals(Object object) {
-        return LiteBansModule_283.BaseCoreGenericHandler(this.c, object);
+    public boolean equals(Object targetObj) {
+        return LiteBansModule_283.BaseCoreGenericHandler(this.c, targetObj);
     }
 
     private /* synthetic */ LiteBansModule_283(byte by2) {
@@ -53,9 +53,9 @@ implements Comparable {
         return this.c;
     }
 
-    public int compareTo(Object object) {
+    public int compareTo(Object targetObj) {
         LiteBansModule_283 hy_02 = this;
-        byte by2 = ((LiteBansModule_283)object).BaseCoreGenericHandler();
+        byte by2 = targetObj.BaseCoreGenericHandler();
         return ObjectUtilities.BaseCoreGenericHandler(hy_02.BaseCoreGenericHandler() & 0xFF, by2 & 0xFF);
     }
 

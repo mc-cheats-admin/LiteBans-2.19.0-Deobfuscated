@@ -84,14 +84,14 @@ static class LiteBansModule_22 {
         return this.ServerSyncService == null ? 0 : this.ServerSyncService.hashCode();
     }
 
-    public boolean equals(Object object) {
-        if (this == object) {
+    public boolean equals(Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (object == null || this.getClass() != object.getClass()) {
+        if (targetObj == null || this.getClass() != targetObj.getClass()) {
             return false;
         }
-        LiteBansModule_22 at_02 = (LiteBansModule_22)object;
+        LiteBansModule_22 at_02 = (LiteBansModule_22)targetObj;
         return this.r == at_02.r && this.LiteBansModule_31 == at_02.LiteBansModule_31 && this.Utf8Handler_2 == at_02.Utf8Handler_2 && this.BroadcastService == at_02.BroadcastService && this.AsyncBackgroundTask_5 == at_02.AsyncBackgroundTask_5 && this.g == at_02.g && this.AsyncBackgroundTask_22 == at_02.AsyncBackgroundTask_22 && this.LiteBansModule_194 == at_02.LiteBansModule_194 && this.GnuSparseMapHandler == at_02.GnuSparseMapHandler && this.plugin == at_02.BaseCoreGenericHandler && this.LiteBansModule_240 == at_02.LiteBansModule_240 && this.i == at_02.i && this.m == at_02.m && this.c == at_02.c && this.n == at_02.n && this.e == at_02.e && this.LiteBansModule_401 == at_02.LiteBansModule_401 && this.PunishmentTableService == at_02.PunishmentTableService && this.CommandThrottleService == at_02.CommandThrottleService && Objects.equals(this.ServerSyncService, at_02.ServerSyncService) && Objects.equals(this.AsyncBackgroundTask_21, at_02.AsyncBackgroundTask_21) && Arrays.deepEquals((Object[])this.q, (Object[])at_02.q);
 }
 

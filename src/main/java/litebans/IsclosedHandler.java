@@ -12,7 +12,7 @@ static final class IsclosedHandler {
     }
 
     private static final Connection BaseCoreGenericHandler() {
-        InvocationHandler invocationHandler = (object, method, objectArray) -> {
+        InvocationHandler invocationHandler = (targetObj, method, objectArray) -> {
             String string = method.getName();
             if ("isClosed".equals(string)) {
                 return Boolean.TRUE;

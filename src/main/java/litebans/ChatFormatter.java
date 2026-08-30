@@ -11,8 +11,8 @@ public final class ChatFormatter {
         return MessageHandler.c();
     }
 
-    public final Void BaseCoreGenericHandler(@Nullable Object object) {
-        throw new LiteBansException(object);
+    public final Void BaseCoreGenericHandler(@Nullable Object targetObj) {
+        throw new LiteBansException(targetObj);
     }
 
     /*
@@ -28,24 +28,24 @@ public final class ChatFormatter {
         HoverTextFormatter y2 = (HoverTextFormatter)plugin.BaseCoreGenericHandler(HoverTextFormatter.class);
         CharSequence charSequence2 = charSequence;
         int n = 4096;
-        String string = LiteBansModule_242.BaseCoreGenericHandler(((Object)charSequence2).toString(), n);
+        String string = LiteBansModule_242.BaseCoreGenericHandler((charSequence2).toString(), n);
         String string2 = y2.BaseCoreGenericHandler(sender, string);
         if (string2 == null) {
             return;
         }
         charSequence2 = string2;
         if (!sender.e() && plugin.AsyncBackgroundTask_22() == 0) {
-            PlatformPlugin di_03 = plugin;
+            PlatformPlugin pluginWrapper = plugin;
             flag2 = false;
-            PlatformPlugin di_04 = di_03;
-            if (!(!di_04.isEnabled() || di_03.AsyncBackgroundTask_21())) {
+            PlatformPlugin pluginWrapper = pluginWrapper;
+            if (!(!pluginWrapper.isEnabled() || pluginWrapper.AsyncBackgroundTask_21())) {
                 plugin.c(() -> ChatFormatter.BaseCoreGenericHandler(sender, (String)charSequence2));
                 return;
 }
         sender.BaseCoreGenericHandler((String)charSequence2);
     }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(ChatFormatter chatFormatter, CommandSenderWrapper sender, CharSequence charSequence, PlatformPlugin plugin, int n, Object object) {
+    public static /* synthetic */ void BaseCoreGenericHandler(ChatFormatter chatFormatter, CommandSenderWrapper sender, CharSequence charSequence, PlatformPlugin plugin, int n, Object targetObj) {
         if ((n & 4) != 0) {
             plugin = LiteBansModule_209.LiteBansModule_31.BaseCoreGenericHandler();
         }

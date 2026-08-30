@@ -14,16 +14,16 @@ import org.jetbrains.annotations.Nullable;
 
 static class DefaultvalueHandler_5
 extends KlassHandler_2 {
-    public static final boolean BaseCoreGenericHandler(@NotNull Iterable iterable, Object object) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
+    public static final boolean BaseCoreGenericHandler(@NotNull Iterable iterable, Object targetObj) {
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
         if (iterable instanceof Collection) {
-            return ((Collection)iterable).contains(object);
+            return ((Collection)iterable).contains(targetObj);
         }
-        return CollectionUtilities.LiteBansModule_31(iterable, object) >= 0;
+        return CollectionUtilities.LiteBansModule_31(iterable, targetObj) >= 0;
     }
 
     public static final Object LiteBansModule_31(@NotNull Iterable iterable, int n) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
         if (iterable instanceof List) {
             return ((List)iterable).get(n);
         }
@@ -31,8 +31,8 @@ extends KlassHandler_2 {
     }
 
     public static final Object BaseCoreGenericHandler(@NotNull Iterable iterable, int n, @NotNull LiteBansModule_178 eo_02) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)eo_02, "defaultValue");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(eo_02, "defaultValue");
         if (iterable instanceof List) {
             List list = (List)iterable;
             return (0 <= n ? n < list.size() : false) ? list.get(n) : eo_02.BaseCoreGenericHandler(n);
@@ -50,7 +50,7 @@ extends KlassHandler_2 {
     }
 
     public static final Object LiteBansModule_240(@NotNull Iterable iterable) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
         if (iterable instanceof List) {
             return CollectionUtilities.LiteBansModule_31((List)iterable);
         }
@@ -62,7 +62,7 @@ extends KlassHandler_2 {
     }
 
     public static final Object LiteBansModule_31(@NotNull List list) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)list, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(list, "<this>");
         if (list.isEmpty()) {
             throw new NoSuchElementException("List is ");
         }
@@ -70,25 +70,25 @@ extends KlassHandler_2 {
     }
 
     public static final Object AsyncBackgroundTask_5(@NotNull List list) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)list, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(list, "<this>");
         return list.isEmpty() ? null : list.get(0);
     }
 
     public static final Object BaseCoreGenericHandler(@NotNull List list, int n) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)list, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(list, "<this>");
         return (0 <= n ? n < list.size() : false) ? list.get(n) : null;
     }
 
-    public static final int LiteBansModule_31(@NotNull Iterable iterable, Object object) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
+    public static final int LiteBansModule_31(@NotNull Iterable iterable, Object targetObj) {
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
         if (iterable instanceof List) {
-            return ((List)iterable).indexOf(object);
+            return ((List)iterable).indexOf(targetObj);
         }
         for (Object t2 : iterable) {
             if (n < 0) {
                 CollectionUtilities.LiteBansModule_31();
             }
-            if (ObjectUtilities.BaseCoreGenericHandler(object, t2)) {
+            if (ObjectUtilities.BaseCoreGenericHandler(targetObj, t2)) {
                 return n;
             }
             ++n;
@@ -97,7 +97,7 @@ extends KlassHandler_2 {
     }
 
     public static final Object BaseCoreGenericHandler(@NotNull List list) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)list, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(list, "<this>");
         if (list.isEmpty()) {
             throw new NoSuchElementException("List is ");
         }
@@ -105,7 +105,7 @@ extends KlassHandler_2 {
     }
 
     public static final Object BaseCoreGenericHandler(@NotNull Iterable iterable) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
         if (iterable instanceof List) {
             return CollectionUtilities.c((List)iterable);
         }
@@ -121,7 +121,7 @@ extends KlassHandler_2 {
     }
 
     public static final Object c(@NotNull List list) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)list, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(list, "<this>");
         switch (list.size()) {
             case 0: {
                 throw new NoSuchElementException("List is ");
@@ -136,7 +136,7 @@ extends KlassHandler_2 {
     }
 
     public static final List BaseCoreGenericHandler(@NotNull Iterable iterable, int n) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
         if (!(n >= 0)) {
             String string = "Requested element count " + n + " is less than ";
             throw new IllegalArgumentException(string.toString());
@@ -161,7 +161,7 @@ extends KlassHandler_2 {
     }
 
     public static final List c(@NotNull Iterable iterable) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
         if (iterable instanceof Collection && ((Collection)iterable).size() <= 1) {
             return CollectionUtilities.LiteBansModule_194(iterable);
         }
@@ -172,7 +172,7 @@ extends KlassHandler_2 {
 
     public static final List e(@NotNull Iterable iterable) {
         List list;
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
         if (iterable instanceof Collection) {
             if (((Collection)iterable).size() <= 1) {
                 return CollectionUtilities.LiteBansModule_194(iterable);
@@ -190,8 +190,8 @@ extends KlassHandler_2 {
 
     public static final List BaseCoreGenericHandler(@NotNull Iterable iterable, @NotNull Comparator comparator) {
         List list;
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)comparator, "comparator");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(comparator, "comparator");
         if (iterable instanceof Collection) {
             if (((Collection)iterable).size() <= 1) {
                 return CollectionUtilities.LiteBansModule_194(iterable);
@@ -208,8 +208,8 @@ extends KlassHandler_2 {
     }
 
     public static final Collection BaseCoreGenericHandler(@NotNull Iterable iterable, @NotNull Collection collection) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "destination");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(collection, "destination");
         for (Object t2 : iterable) {
             collection.add(t2);
         }
@@ -217,12 +217,12 @@ extends KlassHandler_2 {
     }
 
     public static final HashSet g(@NotNull Iterable iterable) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
         return (HashSet)CollectionUtilities.BaseCoreGenericHandler(iterable, new HashSet(LiteBansModule_348.BaseCoreGenericHandler(CollectionUtilities.BaseCoreGenericHandler(iterable, 12))));
     }
 
     public static final List LiteBansModule_194(@NotNull Iterable iterable) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
         if (iterable instanceof Collection) {
             List list;
             switch (((Collection)iterable).size()) {
@@ -243,7 +243,7 @@ extends KlassHandler_2 {
     }
 
     public static final List AsyncBackgroundTask_5(@NotNull Iterable iterable) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
         if (iterable instanceof Collection) {
             return CollectionUtilities.BaseCoreGenericHandler((Collection)iterable);
         }
@@ -251,12 +251,12 @@ extends KlassHandler_2 {
     }
 
     public static final List BaseCoreGenericHandler(@NotNull Collection collection) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(collection, "<this>");
         return new ArrayList(collection);
     }
 
     public static final Set LiteBansModule_31(@NotNull Iterable iterable) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
         if (iterable instanceof Collection) {
             Set set;
             switch (((Collection)iterable).size()) {
@@ -276,17 +276,17 @@ extends KlassHandler_2 {
         return LiteBansModule_5.BaseCoreGenericHandler((Set)CollectionUtilities.BaseCoreGenericHandler(iterable, new LinkedHashSet()));
     }
 
-    public static final List BaseCoreGenericHandler(@NotNull Collection collection, Object object) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "<this>");
+    public static final List BaseCoreGenericHandler(@NotNull Collection collection, Object targetObj) {
+        ObjectUtilities.BaseCoreGenericHandler(collection, "<this>");
         ArrayList<Object> arrayList = new ArrayList<Object>(collection.size() + 1);
         arrayList.addAll(collection);
-        arrayList.add(object);
+        arrayList.add(targetObj);
         return arrayList;
     }
 
     public static final List BaseCoreGenericHandler(@NotNull Collection collection, @NotNull Iterable iterable) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "elements");
+        ObjectUtilities.BaseCoreGenericHandler(collection, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "elements");
         if (iterable instanceof Collection) {
             ArrayList arrayList = new ArrayList(collection.size() + ((Collection)iterable).size());
             arrayList.addAll(collection);
@@ -299,12 +299,12 @@ extends KlassHandler_2 {
     }
 
     public static final Appendable BaseCoreGenericHandler(@NotNull Iterable iterable, @NotNull Appendable appendable, @NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, @NotNull CharSequence charSequence3, int n, @NotNull CharSequence charSequence4, @Nullable LiteBansModule_178 eo_02) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)appendable, "buffer");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "separator");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence2, "prefix");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence3, "postfix");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence4, "truncated");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(appendable, "buffer");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "separator");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence2, "prefix");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence3, "postfix");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence4, "truncated");
         appendable.append(charSequence2);
         for (Object t2 : iterable) {
             if (++n2 > 1) {
@@ -321,15 +321,15 @@ extends KlassHandler_2 {
     }
 
     public static final String BaseCoreGenericHandler(@NotNull Iterable iterable, @NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, @NotNull CharSequence charSequence3, int n, @NotNull CharSequence charSequence4, @Nullable LiteBansModule_178 eo_02) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "separator");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence2, "prefix");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence3, "postfix");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence4, "truncated");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "separator");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence2, "prefix");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence3, "postfix");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence4, "truncated");
         return ((StringBuilder)CollectionUtilities.BaseCoreGenericHandler(iterable, new StringBuilder(), charSequence, charSequence2, charSequence3, n, charSequence4, eo_02)).toString();
     }
 
-    public static /* synthetic */ String BaseCoreGenericHandler(Iterable iterable, CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, int n, CharSequence charSequence4, LiteBansModule_178 eo_02, int n2, Object object) {
+    public static /* synthetic */ String BaseCoreGenericHandler(Iterable iterable, CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, int n, CharSequence charSequence4, LiteBansModule_178 eo_02, int n2, Object targetObj) {
         if ((n2 & 1) != 0) {
             charSequence = ", ";
         }

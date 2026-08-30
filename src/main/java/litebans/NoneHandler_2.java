@@ -172,8 +172,8 @@ public final class NoneHandler_2 {
         }
         if ((n2 & 0x20000000) != 0) {
             ChatFormatter chatFormatter = MessageHandler.BaseCoreGenericHandler;
-            CommandSenderWrapper jv_03 = sender;
-            string2 = jv_03.e() ? jv_03.BaseCoreGenericHandler() : jv_03.i();
+            CommandSenderWrapper senderWrapper = sender;
+            string2 = senderWrapper.e() ? senderWrapper.BaseCoreGenericHandler() : senderWrapper.i();
         }
         if ((n3 & 1) != 0) {
             string5 = "";
@@ -451,17 +451,17 @@ public final class NoneHandler_2 {
 
     public final void BaseCoreGenericHandler(@NotNull InitHandler aI2) {
         this.CommandThrottleService = aI2;
-        Object object = this.AsyncBackgroundTask_21;
-        Iterator iterator = object.iterator();
+        Object targetObj = this.AsyncBackgroundTask_21;
+        Iterator iterator = targetObj.iterator();
         while (iterator.hasNext()) {
             Object t2 = iterator.next();
             Consumer consumer = (Consumer)t2;
             consumer.accept(this);
         }
         if (this.CommandThrottleService == InitHandler.g) {
-            object = MessageHandler.BaseCoreGenericHandler;
+            targetObj = MessageHandler.BaseCoreGenericHandler;
             flag = false;
-            ((ChatFormatter)object).BaseCoreGenericHandler("");
+            targetObj.BaseCoreGenericHandler("");
             throw new CommandExitException();
 }
 
@@ -546,7 +546,7 @@ public final class NoneHandler_2 {
                     AssertionUtilities.BaseCoreGenericHandler();
                     throw new CommandExitException();
 }
-            this.plugin(ch2, (Object)charSequence);
+            this.plugin(ch2, charSequence);
             throw new CommandExitException();
 }
 
@@ -579,7 +579,7 @@ public final class NoneHandler_2 {
                     arg15 = arg11.BaseCoreGenericHandler();
                     arg13.BaseCoreGenericHandler((Object)("for " + arg11.BaseCoreGenericHandler() + ' ' + arg14.e(arg15)));
                 }
-                if (ObjectUtilities.BaseCoreGenericHandler((Object)arg11.BaseCoreGenericHandler(), (Object)"none")) ** GOTO lbl-1000
+                if (ObjectUtilities.BaseCoreGenericHandler(arg11.BaseCoreGenericHandler(), (Object)"none")) ** GOTO lbl-1000
                 arg12 = v2;
                 arg16 = arg11.BaseCoreGenericHandler();
                 if (arg12.e(arg16)) lbl-1000:
@@ -622,8 +622,6 @@ public final class NoneHandler_2 {
     }
 
     public final boolean LiteBansModule_31(@NotNull LiteBansModule_82 ch2, @NotNull String string, @NotNull String string2) {
-        Object object;
-        Object object2;
         ConfigService configService;
         BroadcastService o2 = (BroadcastService)ch2.e().BaseCoreGenericHandler(BroadcastService.class);
         ConfigService q_03 = (ConfigService)ch2.e().BaseCoreGenericHandler(ConfigService.class);
@@ -645,12 +643,12 @@ public final class NoneHandler_2 {
             configService = q_04;
             configService.BaseCoreGenericHandler((Object)(string + " is not InitializerHandler_3 "));
         }
-        Object object3 = o2.AsyncBackgroundTask_5();
+        Object resultObj = o2.AsyncBackgroundTask_5();
         by2 = ch2.e().AsyncBackgroundTask_22();
         if (by2 == 0) {
-            object2 = null;
+            contextObj = null;
             try {
-                object2 = UUID.fromString(string3);
+                contextObj = UUID.fromString(string3);
             }
             catch (IllegalArgumentException illegalArgumentException) {
                 q_03.BaseCoreGenericHandler(illegalArgumentException, 0);
@@ -659,11 +657,11 @@ public final class NoneHandler_2 {
             LiteBansModule_158 ec_02 = ch2.e().i();
             ObjectUtilities.LiteBansModule_31(ec_02, "");
             BungeecordHandler_2 ao_02 = (BungeecordHandler_2)ec_02;
-            flag = ao_02.LiteBansModule_31().c() != null && ao_02.LiteBansModule_31().BaseCoreGenericHandler(string3, (UUID)object2, string4, "litebans.exempt", q_03.LiteBansModule_194().aL(), q_03.LiteBansModule_194().CommandExitException());
+            flag = ao_02.LiteBansModule_31().c() != null && ao_02.LiteBansModule_31().BaseCoreGenericHandler(string3, (UUID)contextObj, string4, "litebans.exempt", q_03.LiteBansModule_194().aL(), q_03.LiteBansModule_194().CommandExitException());
         } else if (by2 == 3 || by2 == 1 || by2 == 2) {
-            object2 = o2.BaseCoreGenericHandler(string3);
-            if (object2 != null) {
-                flag = object2.e("litebans.exempt") || object2.e("litebans + " + string4);
+            contextObj = o2.BaseCoreGenericHandler(string3);
+            if (contextObj != null) {
+                flag = contextObj.e("litebans.exempt") || contextObj.e("litebans + " + string4);
             } else if (ch2.e().AsyncBackgroundTask_22() == 1) {
                 boolean flag2;
                 GetcancelreasoncomponentsHandler k12;
@@ -688,8 +686,8 @@ public final class NoneHandler_2 {
             AssertionUtilities.BaseCoreGenericHandler();
             throw new CommandExitException();
         }
-        if (!flag && object3 != null && (object = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler(object3, string3)) != null) {
-            flag = LiteBansModule_48.LiteBansModule_31.LiteBansModule_31(object, "litebans.exempt") || LiteBansModule_48.LiteBansModule_31.LiteBansModule_31(object, "litebans + " + string4);
+        if (!flag && resultObj != null && (targetObj = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler(resultObj, string3)) != null) {
+            flag = LiteBansModule_48.LiteBansModule_31.LiteBansModule_31(targetObj, "litebans.exempt") || LiteBansModule_48.LiteBansModule_31.LiteBansModule_31(targetObj, "litebans + " + string4);
         }
         ConfigService q_05 = q_03;
         int n3 = 1;
@@ -704,11 +702,11 @@ public final class NoneHandler_2 {
         ConfigService configService = (ConfigService)ch2.e().BaseCoreGenericHandler(ConfigService.class);
         String string3 = a_2.toString();
         for (String string4 : configService.LiteBansModule_194().r()) {
-            Object object = new char[]{':'};
-            object = StringUtilities.BaseCoreGenericHandler((CharSequence)string4, object, false, 2, 2, null);
-            Object object2 = object;
-            String[] args = object2.toArray(new String[0]);
-            if (!ObjectUtilities.BaseCoreGenericHandler(object = args[0], (Object)string2) && !StringUtilities.BaseCoreGenericHandler((String)object, string, true) || args.length != 1 && !StringUtilities.BaseCoreGenericHandler(args[1], string3, true)) continue;
+            Object targetObj = new char[]{':'};
+            targetObj = StringUtilities.BaseCoreGenericHandler(string4, targetObj, false, 2, 2, null);
+            Object contextObj = targetObj;
+            String[] args = contextObj.toArray(new String[0]);
+            if (!ObjectUtilities.BaseCoreGenericHandler(targetObj = args[0], string2) && !StringUtilities.BaseCoreGenericHandler((String)targetObj, string, true) || args.length != 1 && !StringUtilities.BaseCoreGenericHandler(args[1], string3, true)) continue;
             ConfigService q_03 = configService;
             int n = 1;
             if (q_03.BaseCoreGenericHandler(n)) {
@@ -724,24 +722,21 @@ public final class NoneHandler_2 {
         boolean flag;
         boolean flag2;
         boolean flag3;
-        Object object;
         ConfigService configService;
 {
-            Object object2;
             BroadcastService o2 = (BroadcastService)ch2.e().BaseCoreGenericHandler(BroadcastService.class);
             configService = (ConfigService)ch2.e().BaseCoreGenericHandler(ConfigService.class);
             if (this.BroadcastService.LiteBansModule_194()) {
                 return true;
             }
             if (this.BroadcastService.e()) {
-                Object object3;
-                if (configService.LiteBansModule_194().ac() && (object3 = o2.AsyncBackgroundTask_5()) != null && string != null) {
-                    object = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler(object3, this.BroadcastService.BaseCoreGenericHandler());
-                    object2 = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler(object3, string);
-                    if (object != null && object2 != null) {
+                if (configService.LiteBansModule_194().ac() && (resultObj = o2.AsyncBackgroundTask_5()) != null && string != null) {
+                    targetObj = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler(resultObj, this.BroadcastService.BaseCoreGenericHandler());
+                    contextObj = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler(resultObj, string);
+                    if (targetObj != null && contextObj != null) {
                         int n;
-                        int n2 = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler(object3, object);
-                        if (n2 >= (n = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler(object3, object2))) {
+                        int n2 = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler(resultObj, targetObj);
+                        if (n2 >= (n = LiteBansModule_48.LiteBansModule_31.BaseCoreGenericHandler(resultObj, contextObj))) {
                             ConfigService q_03 = configService;
                             int n3 = 1;
                             if (q_03.BaseCoreGenericHandler(n3)) {
@@ -761,34 +756,34 @@ public final class NoneHandler_2 {
                     configService.BaseCoreGenericHandler(1, (Object)"Missing user!");
                 }
                 if (!configService.LiteBansModule_194().HikariConfig()) {
-                    object3 = configService;
+                    resultObj = configService;
                     int n = 1;
-                    if (((ConfigService)object3).BaseCoreGenericHandler(n)) {
-                        Object object4 = object3;
-                        ((ConfigService)object4).BaseCoreGenericHandler((Object)"allow_exempt_bypass is ");
+                    if (this.BaseCoreGenericHandler(n)) {
+                        Object helperObj = resultObj;
+                        ((ConfigService)helperObj).BaseCoreGenericHandler((Object)"allow_exempt_bypass is ");
                     }
                     return false;
 }
-            object = this.BroadcastService;
-            object2 = new String[]{"litebans.exempt.bypass", "litebans.exempt + " + this.z};
+            targetObj = this.BroadcastService;
+            contextObj = new String[]{"litebans.exempt.bypass", "litebans.exempt + " + this.z};
             flag3 = false;
-            Object object5 = object2;
-            int n = ((String[])object5).length;
+            Object tempObj = contextObj;
+            int n = ((String[])tempObj).length;
             for (int i = 0; i < n; ++i) {
                 String string2;
-                String string3 = string2 = object5[i];
-                if (!object.e(string3)) continue;
+                String string3 = string2 = tempObj[i];
+                if (!targetObj.e(string3)) continue;
                 flag2 = true;
                 break;
             }
             flag2 = false;
         }
         if (flag = flag2) {
-            object = configService;
+            targetObj = configService;
             int n = 1;
             flag3 = false;
-            if (((ConfigService)object).BaseCoreGenericHandler(n)) {
-                Object object6 = object;
+            if (targetObj.BaseCoreGenericHandler(n)) {
+                Object object6 = targetObj;
                 ((ConfigService)object6).BaseCoreGenericHandler((Object)(this.BroadcastService.i() + " bypasses exempt "));
 }
         return flag;
@@ -800,8 +795,8 @@ public final class NoneHandler_2 {
             ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, sender, AllHandler_3.BaseCoreGenericHandler(ch2, charSequence, this.BanHandler_4, this.Utf8Handler_2, false, 4, null), null, 4, null);
 }
 
-    public final Void BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @Nullable Object object) {
-        MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler(ch2, (CharSequence)String.valueOf(object), this.BanHandler_4, this.Utf8Handler_2, false, 4, null));
+    public final Void BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @Nullable Object targetObj) {
+        MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler(ch2, String.valueOf(targetObj), this.BanHandler_4, this.Utf8Handler_2, false, 4, null));
         throw new CommandExitException();
     }
 
@@ -818,7 +813,7 @@ public final class NoneHandler_2 {
         this.B = LiteBansModule_181.LiteBansModule_194.BaseCoreGenericHandler(this.B, w2.ServerSyncService(), this.BroadcastService);
     }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(NoneHandler_2 cz2, LiteBansModule_82 ch2, List list, boolean flag, int n, Object object) {
+    public static /* synthetic */ void BaseCoreGenericHandler(NoneHandler_2 cz2, LiteBansModule_82 ch2, List list, boolean flag, int n, Object targetObj) {
         if ((n & 1) != 0) {
             list = cz2.q;
         }
@@ -899,7 +894,7 @@ public final class NoneHandler_2 {
                         this.DatabaseMonitorService = PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, arg44, false, 2, null);
                     } else {
                         arg45 = arg42;
-                        this.plugin(v1, (Object)MessageKey.g.BaseCoreGenericHandler("duration", (Object)PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, arg45, false, 2, null)));
+                        this.plugin(v1, MessageKey.g.BaseCoreGenericHandler("duration", PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, arg45, false, 2, null)));
                         throw new CommandExitException();
 }
 
@@ -909,11 +904,11 @@ public final class NoneHandler_2 {
         int n;
         DiscordWebhookClient eG2 = ((ConfigService)ch2.e().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194();
         boolean flag = this.z == BanHandler.g ? eG2.i() : (this.z == BanHandler.c ? true : (this.BanHandler_5() ? eG2.ad() : eG2.aq()));
-        Object object = this.A;
-        int n3 = object.length() - 1;
+        Object targetObj = this.A;
+        int n3 = targetObj.length() - 1;
         while (n2 <= n3) {
             n = !flag3 ? n2 : n3;
-            c = object.charAt(n);
+            c = targetObj.charAt(n);
             char c10 = c = ObjectUtilities.BaseCoreGenericHandler(c, 32) <= 0 ? (char)'\u0001' : '\u0000';
             if (!flag3) {
                 if (c == '\u0000') {
@@ -926,23 +921,23 @@ public final class NoneHandler_2 {
             if (c == '\u0000') break;
             --n3;
         }
-        if (StringUtilities.c(charSequence = object.subSequence(n2, n3 + 1), '{', false, 2, null) || StringUtilities.c(charSequence, '}', false, 2, null)) {
-            object = this.BroadcastService;
+        if (StringUtilities.c(charSequence = targetObj.subSequence(n2, n3 + 1), '{', false, 2, null) || StringUtilities.c(charSequence, '}', false, 2, null)) {
+            targetObj = this.BroadcastService;
             String string = "litebans.admin";
             n2 = 0;
-            Object object2 = object;
+            Object contextObj = targetObj;
             flag3 = false;
-            if (!object2.e(string)) {
-                charSequence = StringUtilities.BaseCoreGenericHandler(StringUtilities.BaseCoreGenericHandler(StringUtilities.BaseCoreGenericHandler(StringUtilities.BaseCoreGenericHandler(((Object)charSequence).toString(), "{hoverText:", "", false, 4, null), "{run:", "", false, 4, null), "{url:", "", false, 4, null), J[43], J[44], false, 4, null);
+            if (!contextObj.e(string)) {
+                charSequence = StringUtilities.BaseCoreGenericHandler(StringUtilities.BaseCoreGenericHandler(StringUtilities.BaseCoreGenericHandler(StringUtilities.BaseCoreGenericHandler((charSequence).toString(), "{hoverText:", "", false, 4, null), "{run:", "", false, 4, null), "{url:", "", false, 4, null), J[43], J[44], false, 4, null);
 }
         if (StringUtilities.c(charSequence, '\n', false, 2, null)) {
-            object = this.BroadcastService;
+            targetObj = this.BroadcastService;
             String string = J[45];
             n2 = 0;
-            Object object3 = object;
+            Object resultObj = targetObj;
             flag3 = false;
-            if (!object3.e(string)) {
-                charSequence = StringUtilities.BaseCoreGenericHandler(((Object)charSequence).toString(), J[46], J[47], false, 4, null);
+            if (!resultObj.e(string)) {
+                charSequence = StringUtilities.BaseCoreGenericHandler((charSequence).toString(), J[46], J[47], false, 4, null);
 }
         if (!this.BanHandler_5()) {
             if (StringUtilities.LiteBansModule_31(charSequence)) {
@@ -957,9 +952,9 @@ public final class NoneHandler_2 {
                             charSequence2 = string2;
                         } else {
                             CharSequence charSequence3;
-                            Object object4 = this.z;
+                            Object helperObj = this.z;
                             flag3 = false;
-                            switch (LiteBansModule_274.BaseCoreGenericHandler[((BanHandler)object4).c().ordinal()]) {
+                            switch (LiteBansModule_274.BaseCoreGenericHandler[((BanHandler)helperObj).c().ordinal()]) {
                                 case 1: {
                                     charSequence3 = MessageKey.Utf8Handler_2;
                                     break;
@@ -975,14 +970,14 @@ public final class NoneHandler_2 {
                             if (charSequence3 == null) {
                                 MessageKey am2;
                                 MessageKey am3;
-                                object4 = BanHandler_3.GnuSparseMapHandler;
+                                helperObj = BanHandler_3.GnuSparseMapHandler;
                                 BanHandler a_2 = this.z;
                                 n = 0;
                                 c = '\u0000';
-                                Object object5 = MessageKey.cC;
+                                Object tempObj = MessageKey.cC;
                                 switch (LiteBansModule_190.BaseCoreGenericHandler[a_2.ordinal()]) {
                                     case 1: {
-                                        if (object5 == MessageKey.LockdownCommandHandler) {
+                                        if (tempObj == MessageKey.LockdownCommandHandler) {
                                             am3 = MessageKey.NullHandler;
                                             break;
                                         }
@@ -990,7 +985,7 @@ public final class NoneHandler_2 {
                                         break;
                                     }
                                     case 2: {
-                                        if (object5 == MessageKey.LockdownCommandHandler) {
+                                        if (tempObj == MessageKey.LockdownCommandHandler) {
                                             am3 = MessageKey.ah;
                                             break;
                                         }
@@ -1002,18 +997,18 @@ public final class NoneHandler_2 {
                                         break;
                                     }
                                     default: {
-                                        am3 = object5;
+                                        am3 = tempObj;
 }
                                 CharSequence charSequence4 = am3;
-                                object5 = MessageHandler.BaseCoreGenericHandler;
+                                tempObj = MessageHandler.BaseCoreGenericHandler;
                                 flag5 = a_2 == BanHandler.g;
-                                Object object6 = object5;
+                                Object object6 = tempObj;
                                 if (flag5) {
                                     Object object7 = object6;
                                     ((ChatFormatter)object7).BaseCoreGenericHandler(charSequence4);
                                     throw new CommandExitException();
                                 }
-                                Object object8 = object4;
+                                Object object8 = helperObj;
                                 MessageKey am4 = MessageKey.LockdownCommandHandler;
                                 switch (LiteBansModule_190.BaseCoreGenericHandler[a_2.ordinal()]) {
                                     case 1: {
@@ -1039,17 +1034,17 @@ public final class NoneHandler_2 {
                                     default: {
                                         am2 = am4;
 }
-                                object5 = am2;
-                                MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler(charSequence4, true, (CharSequence)object5));
+                                tempObj = am2;
+                                MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler(charSequence4, true, tempObj));
                                 throw new CommandExitException();
 }
                     charSequence = charSequence2;
                 } else {
                     CharSequence charSequence5;
-                    object = MessageHandler.BaseCoreGenericHandler;
+                    targetObj = MessageHandler.BaseCoreGenericHandler;
                     CharSequence charSequence6 = MessageKey.cl;
                     n2 = 0;
-                    Object object9 = object;
+                    Object object9 = targetObj;
                     flag3 = false;
                     if (flag) {
                         Object object10 = object9;
@@ -1078,10 +1073,10 @@ public final class NoneHandler_2 {
                     charSequence = charSequence7;
 } else if (StringUtilities.LiteBansModule_31(charSequence)) {
             CharSequence charSequence8;
-            object = MessageHandler.BaseCoreGenericHandler;
+            targetObj = MessageHandler.BaseCoreGenericHandler;
             Object object11 = MessageKey.be;
             n2 = 0;
-            Object object12 = object;
+            Object object12 = targetObj;
             flag3 = false;
             if (flag) {
                 Object object13 = object12;
@@ -1175,7 +1170,7 @@ public final class NoneHandler_2 {
                         am5 = am7;
 }
                 object14 = am5;
-                MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler(charSequence9, true, (CharSequence)object14));
+                MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler(charSequence9, true, object14));
                 throw new CommandExitException();
             }
             charSequence = charSequence8;
@@ -1227,7 +1222,7 @@ public final class NoneHandler_2 {
                     break;
                 }
                 case 7: {
-                    v2 = ((CharSequence)this.A).length() == 0 != false ? MessageKey.LiteBansModule_4 : MessageKey.LiteBansModule_78;
+                    v2 = (this.A).length() == 0 != false ? MessageKey.LiteBansModule_4 : MessageKey.LiteBansModule_78;
                     break;
                 }
                 default: {
@@ -1239,29 +1234,27 @@ public final class NoneHandler_2 {
     }
 
     public final void BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @Nullable CommandSenderWrapper sender, @Nullable LiteBansModule_113 d92, boolean flag) {
-        Object object;
-        Object object2;
         NoneHandler_2 cz2 = this;
         if (cz2.PlayerQuitListener) {
             return;
         }
         LiteBansModule_113 d93 = d92;
         if (d93 == null) {
-            CommandSenderWrapper jv_03 = sender;
-            ObjectUtilities.BaseCoreGenericHandler(jv_03);
-            object2 = jv_03.i();
-            object = sender.BaseCoreGenericHandler();
+            CommandSenderWrapper senderWrapper = sender;
+            ObjectUtilities.BaseCoreGenericHandler(senderWrapper);
+            contextObj = senderWrapper.i();
+            targetObj = sender.BaseCoreGenericHandler();
             String string = ch2.BaseCoreGenericHandler(sender);
             String string2 = sender.LiteBansModule_31();
-            d93 = new LiteBansModule_113((String)object2, null, string, (String)object, string2, sender, null, 66, null);
+            d93 = new LiteBansModule_113((String)contextObj, null, string, (String)targetObj, string2, sender, null, 66, null);
         }
         CharSequence charSequence = cz2.BaseCoreGenericHandler(ch2, d93);
-        object2 = cz2.Utf8Handler_2;
-        object = ch2.e();
-        new BannedHandler(cz2, sender, (LiteBansModule_297)object2, charSequence, (PlatformPlugin)object, null, flag, false, 160, null).run();
+        contextObj = cz2.Utf8Handler_2;
+        targetObj = ch2.e();
+        new BannedHandler(cz2, sender, (LiteBansModule_297)contextObj, charSequence, (PlatformPlugin)targetObj, null, flag, false, 160, null).run();
     }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(NoneHandler_2 cz2, LiteBansModule_82 ch2, CommandSenderWrapper sender, LiteBansModule_113 d92, boolean flag, int n, Object object) {
+    public static /* synthetic */ void BaseCoreGenericHandler(NoneHandler_2 cz2, LiteBansModule_82 ch2, CommandSenderWrapper sender, LiteBansModule_113 d92, boolean flag, int n, Object targetObj) {
         if ((n & 2) != 0) {
             d92 = null;
         }
@@ -1288,8 +1281,8 @@ public final class NoneHandler_2 {
     public final boolean LiteBansModule_194(@Nullable String string) {
         if (!this.LiteBansModule_240) return false;
         if (string == null) return false;
-        if (!StringUtilities.c((CharSequence)string, '*', false, 2, null) && !StringUtilities.c((CharSequence)string, '%', false, 2, null)) {
-            if (!StringUtilities.c((CharSequence)string, '_', false, 2, null)) return false;
+        if (!StringUtilities.c(string, '*', false, 2, null) && !StringUtilities.c(string, '%', false, 2, null)) {
+            if (!StringUtilities.c(string, '_', false, 2, null)) return false;
             String string2 = string;
             if (!HexEncodingHelper.BaseCoreGenericHandler.i(string2)) return false;
         }
@@ -1297,7 +1290,7 @@ public final class NoneHandler_2 {
         return true;
     }
 
-    public static /* synthetic */ boolean BaseCoreGenericHandler(NoneHandler_2 cz2, String string, int n, Object object) {
+    public static /* synthetic */ boolean BaseCoreGenericHandler(NoneHandler_2 cz2, String string, int n, Object targetObj) {
         if ((n & 1) != 0) {
             string = cz2.HoverTextFormatter;
         }

@@ -120,7 +120,7 @@ Serializable {
         Date date;
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("0x5455 Zip Extra Field: Flags=");
-        stringBuilder.append(Integer.toBinaryString(LiteBansModule_188.BaseCoreGenericHandler((int)this.g))).append(" ");
+        stringBuilder.append(Integer.toBinaryString(LiteBansModule_188.BaseCoreGenericHandler(this.g))).append(" ");
         if (this.LiteBansModule_401 && this.Utf8Handler_2 != null) {
             date = this.LiteBansModule_31();
             stringBuilder.append(" Modify:[").append(date).append("] ");
@@ -140,9 +140,9 @@ Serializable {
         return super.clone();
     }
 
-    public boolean equals(Object object) {
-        if (object instanceof LiteBansModule_97) {
-            LiteBansModule_97 cq_02 = (LiteBansModule_97)object;
+    public boolean equals(Object targetObj) {
+        if (targetObj instanceof LiteBansModule_97) {
+            LiteBansModule_97 cq_02 = (LiteBansModule_97)targetObj;
             return (this.g & 7) == (cq_02.g & 7) && (this.Utf8Handler_2 == cq_02.Utf8Handler_2 || this.Utf8Handler_2 != null && this.Utf8Handler_2.equals(cq_02.Utf8Handler_2)) && (this.GnuSparseMapHandler == cq_02.GnuSparseMapHandler || this.GnuSparseMapHandler != null && this.GnuSparseMapHandler.equals(cq_02.GnuSparseMapHandler)) && (this.e == cq_02.e || this.e != null && this.e.equals(cq_02.e));
         }
         return false;

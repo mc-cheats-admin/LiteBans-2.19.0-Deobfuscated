@@ -4,14 +4,14 @@ import org.jetbrains.annotations.NotNull;
 
 static class InitializerHandler {
     public static final LiteBansModule_161 BaseCoreGenericHandler(@NotNull LiteBansModule_146 messageSupplier) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)messageSupplier, "initializer");
+        ObjectUtilities.BaseCoreGenericHandler(messageSupplier, "initializer");
         return new InitializerHandler_3(messageSupplier, null, 2, null);
     }
 
     public static final LiteBansModule_161 BaseCoreGenericHandler(@NotNull SynchronizedHandler l42, @NotNull LiteBansModule_146 messageSupplier) {
         LiteBansModule_161 eE2;
-        ObjectUtilities.BaseCoreGenericHandler((Object)l42, "mode");
-        ObjectUtilities.BaseCoreGenericHandler((Object)messageSupplier, "initializer");
+        ObjectUtilities.BaseCoreGenericHandler(l42, "mode");
+        ObjectUtilities.BaseCoreGenericHandler(messageSupplier, "initializer");
         switch (LiteBansModule_345.BaseCoreGenericHandler[l42.ordinal()]) {
             case 1: {
                 eE2 = new InitializerHandler_3(messageSupplier, null, 2, null);

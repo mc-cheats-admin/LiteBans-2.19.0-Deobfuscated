@@ -12,18 +12,18 @@ import org.jetbrains.annotations.Nullable;
 
 static class DestinationHandler_2
 extends DestinationHandler {
-    public static final boolean LiteBansModule_31(@NotNull Object[] objectArray, Object object) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
-        return ArrayUtilities.BaseCoreGenericHandler(objectArray, object) >= 0;
+    public static final boolean LiteBansModule_31(@NotNull Object[] objectArray, Object targetObj) {
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "<this>");
+        return ArrayUtilities.BaseCoreGenericHandler(objectArray, targetObj) >= 0;
     }
 
     public static final boolean LiteBansModule_31(@NotNull char[] cArray, char c) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)cArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(cArray, "<this>");
         return ArrayUtilities.BaseCoreGenericHandler(cArray, c) >= 0;
     }
 
     public static final Object LiteBansModule_31(@NotNull Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "<this>");
         if (objectArray.length == 0) {
             throw new NoSuchElementException("Array is ");
         }
@@ -31,7 +31,7 @@ extends DestinationHandler {
     }
 
     public static final byte BaseCoreGenericHandler(@NotNull byte[] byArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)byArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(byArray, "<this>");
         if (byArray.length == 0) {
             throw new NoSuchElementException("Array is ");
         }
@@ -39,7 +39,7 @@ extends DestinationHandler {
     }
 
     public static final int LiteBansModule_31(@NotNull int[] nArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)nArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(nArray, "<this>");
         if (nArray.length == 0) {
             throw new NoSuchElementException("Array is ");
         }
@@ -47,18 +47,18 @@ extends DestinationHandler {
     }
 
     public static final Object e(@NotNull Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "<this>");
         return objectArray.length == 0 ? null : objectArray[0];
     }
 
     public static final Object BaseCoreGenericHandler(@NotNull Object[] objectArray, int n) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "<this>");
         return (0 <= n ? n < objectArray.length : false) ? objectArray[n] : null;
     }
 
-    public static final int BaseCoreGenericHandler(@NotNull Object[] objectArray, Object object) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
-        if (object == null) {
+    public static final int BaseCoreGenericHandler(@NotNull Object[] objectArray, Object targetObj) {
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "<this>");
+        if (targetObj == null) {
             int n = objectArray.length;
             for (int i = 0; i < n; ++i) {
                 if (objectArray[i] != null) continue;
@@ -66,14 +66,14 @@ extends DestinationHandler {
 } else {
             int n = objectArray.length;
             for (int i = 0; i < n; ++i) {
-                if (!ObjectUtilities.BaseCoreGenericHandler(object, objectArray[i])) continue;
+                if (!ObjectUtilities.BaseCoreGenericHandler(targetObj, objectArray[i])) continue;
                 return i;
 }
         return -1;
     }
 
     public static final int BaseCoreGenericHandler(@NotNull char[] cArray, char c) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)cArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(cArray, "<this>");
         int n = cArray.length;
         for (int i = 0; i < n; ++i) {
             if (c != cArray[i]) continue;
@@ -83,7 +83,7 @@ extends DestinationHandler {
     }
 
     public static final Object c(@NotNull Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "<this>");
         if (objectArray.length == 0) {
             throw new NoSuchElementException("Array is ");
         }
@@ -91,7 +91,7 @@ extends DestinationHandler {
     }
 
     public static final char BaseCoreGenericHandler(@NotNull char[] cArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)cArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(cArray, "<this>");
         switch (cArray.length) {
             case 0: {
                 throw new NoSuchElementException("Array is ");
@@ -106,27 +106,27 @@ extends DestinationHandler {
     }
 
     public static final int LiteBansModule_194(@NotNull Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "<this>");
         return objectArray.length - 1;
     }
 
     public static final int LiteBansModule_31(@NotNull byte[] byArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)byArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(byArray, "<this>");
         return byArray.length - 1;
     }
 
     public static final Collection BaseCoreGenericHandler(@NotNull Object[] objectArray, @NotNull Collection collection) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "destination");
-        for (Object object : objectArray) {
-            collection.add(object);
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(collection, "destination");
+        for (Object targetObj : objectArray) {
+            collection.add(targetObj);
         }
         return collection;
     }
 
     public static final Collection BaseCoreGenericHandler(@NotNull char[] cArray, @NotNull Collection collection) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)cArray, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "destination");
+        ObjectUtilities.BaseCoreGenericHandler(cArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(collection, "destination");
         for (char c : cArray) {
             collection.add(Character.valueOf(c));
         }
@@ -134,18 +134,18 @@ extends DestinationHandler {
     }
 
     public static final HashSet LiteBansModule_31(@NotNull char[] cArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)cArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(cArray, "<this>");
         return (HashSet)ArrayUtilities.BaseCoreGenericHandler(cArray, (Collection)new HashSet(LiteBansModule_348.BaseCoreGenericHandler(LiteBansModule_20.AsyncBackgroundTask_5(cArray.length, 128))));
     }
 
     public static final List AsyncBackgroundTask_5(@NotNull Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "<this>");
         return new ArrayList(CollectionUtilities.BaseCoreGenericHandler(objectArray));
     }
 
     public static final Set BaseCoreGenericHandler(@NotNull Object[] objectArray) {
         Set set;
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "<this>");
         switch (objectArray.length) {
             case 0: {
                 set = LiteBansModule_5.c();
@@ -162,19 +162,19 @@ extends DestinationHandler {
     }
 
     public static final Appendable BaseCoreGenericHandler(@NotNull Object[] objectArray, @NotNull Appendable appendable, @NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, @NotNull CharSequence charSequence3, int n, @NotNull CharSequence charSequence4, @Nullable LiteBansModule_178 eo_02) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)appendable, "buffer");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "separator");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence2, "prefix");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence3, "postfix");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence4, "truncated");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(appendable, "buffer");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "separator");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence2, "prefix");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence3, "postfix");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence4, "truncated");
         appendable.append(charSequence2);
-        for (Object object : objectArray) {
+        for (Object targetObj : objectArray) {
             if (++n2 > 1) {
                 appendable.append(charSequence);
             }
             if (n >= 0 && n2 > n) break;
-            StringUtilities.BaseCoreGenericHandler(appendable, object, eo_02);
+            StringUtilities.BaseCoreGenericHandler(appendable, targetObj, eo_02);
         }
         if (n >= 0 && n2 > n) {
             appendable.append(charSequence4);
@@ -184,12 +184,12 @@ extends DestinationHandler {
     }
 
     public static final Appendable BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull Appendable appendable, @NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, @NotNull CharSequence charSequence3, int n, @NotNull CharSequence charSequence4, @Nullable LiteBansModule_178 eo_02) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)byArray, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)appendable, "buffer");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "separator");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence2, "prefix");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence3, "postfix");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence4, "truncated");
+        ObjectUtilities.BaseCoreGenericHandler(byArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(appendable, "buffer");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "separator");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence2, "prefix");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence3, "postfix");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence4, "truncated");
         appendable.append(charSequence2);
         for (byte by2 : byArray) {
             Appendable appendable2;
@@ -198,7 +198,7 @@ extends DestinationHandler {
             }
             if (n >= 0 && n2 > n) break;
             if (eo_02 != null) {
-                appendable2 = appendable.append((CharSequence)eo_02.BaseCoreGenericHandler(by2));
+                appendable2 = appendable.append(eo_02.BaseCoreGenericHandler(by2));
                 continue;
             }
             appendable2 = appendable.append(String.valueOf(by2));
@@ -211,15 +211,15 @@ extends DestinationHandler {
     }
 
     public static final String BaseCoreGenericHandler(@NotNull Object[] objectArray, @NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, @NotNull CharSequence charSequence3, int n, @NotNull CharSequence charSequence4, @Nullable LiteBansModule_178 eo_02) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "separator");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence2, "prefix");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence3, "postfix");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence4, "truncated");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "separator");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence2, "prefix");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence3, "postfix");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence4, "truncated");
         return ((StringBuilder)ArrayUtilities.BaseCoreGenericHandler(objectArray, (Appendable)new StringBuilder(), charSequence, charSequence2, charSequence3, n, charSequence4, eo_02)).toString();
     }
 
-    public static /* synthetic */ String BaseCoreGenericHandler(Object[] objectArray, CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, int n, CharSequence charSequence4, LiteBansModule_178 eo_02, int n2, Object object) {
+    public static /* synthetic */ String BaseCoreGenericHandler(Object[] objectArray, CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, int n, CharSequence charSequence4, LiteBansModule_178 eo_02, int n2, Object targetObj) {
         if ((n2 & 1) != 0) {
             charSequence = ", ";
         }
@@ -242,15 +242,15 @@ extends DestinationHandler {
     }
 
     public static final String BaseCoreGenericHandler(@NotNull byte[] byArray, @NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, @NotNull CharSequence charSequence3, int n, @NotNull CharSequence charSequence4, @Nullable LiteBansModule_178 eo_02) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)byArray, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "separator");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence2, "prefix");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence3, "postfix");
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence4, "truncated");
+        ObjectUtilities.BaseCoreGenericHandler(byArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "separator");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence2, "prefix");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence3, "postfix");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence4, "truncated");
         return ((StringBuilder)ArrayUtilities.BaseCoreGenericHandler(byArray, (Appendable)new StringBuilder(), charSequence, charSequence2, charSequence3, n, charSequence4, eo_02)).toString();
     }
 
-    public static /* synthetic */ String BaseCoreGenericHandler(byte[] byArray, CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, int n, CharSequence charSequence4, LiteBansModule_178 eo_02, int n2, Object object) {
+    public static /* synthetic */ String BaseCoreGenericHandler(byte[] byArray, CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, int n, CharSequence charSequence4, LiteBansModule_178 eo_02, int n2, Object targetObj) {
         if ((n2 & 1) != 0) {
             charSequence = ", ";
         }
@@ -273,7 +273,7 @@ extends DestinationHandler {
     }
 
     public static final int BaseCoreGenericHandler(@NotNull int[] nArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)nArray, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(nArray, "<this>");
         for (int n2 : nArray) {
             n += n2;
         }

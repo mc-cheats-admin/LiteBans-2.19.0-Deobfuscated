@@ -25,13 +25,8 @@ extends BansHandler {
         AutoCloseable autoCloseable = preparedStatement;
         Throwable throwable = null;
         try {
-            Object object;
             String string2;
-            Object object2;
-            Object object3;
-            Object object4;
             boolean flag2;
-            Object object5;
             Throwable throwable2;
             AutoCloseable autoCloseable2;
             AutoCloseable autoCloseable3;
@@ -41,29 +36,29 @@ extends BansHandler {
                 autoCloseable2 = autoCloseable3;
                 throwable2 = null;
                 try {
-                    object5 = (ResultSet)autoCloseable2;
+                    tempObj = (ResultSet)autoCloseable2;
                     flag2 = false;
                     while (autoCloseable3.next()) {
-                        object4 = autoCloseable3.getString("banned");
-                        object3 = autoCloseable3.getString("banned_by");
-                        object2 = autoCloseable3.getString("ban_reason");
+                        helperObj = autoCloseable3.getString("banned");
+                        resultObj = autoCloseable3.getString("banned_by");
+                        contextObj = autoCloseable3.getString("ban_reason");
                         long l3 = autoCloseable3.getLong("ban_time") * 1000L;
                         long l5 = autoCloseable3.getLong("ban_expires_on") * 1000L;
-                        string2 = this.LiteBansModule_31((String)object4);
-                        ObjectUtilities.BaseCoreGenericHandler(object2);
-                        object = new SilentHandler(BanHandler.LiteBansModule_240, string2, null, (CharSequence)object2, this.LiteBansModule_31((String)object3), (String)object3, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), null, l3, l5, 0, false, false, false, 0L, 31744, null);
+                        string2 = this.LiteBansModule_31((String)helperObj);
+                        ObjectUtilities.BaseCoreGenericHandler(contextObj);
+                        targetObj = new SilentHandler(BanHandler.LiteBansModule_240, string2, null, contextObj, this.LiteBansModule_31this, (String)resultObj, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), null, l3, l5, 0, false, false, false, 0L, 31744, null);
                         if (AllHandler_3.BaseCoreGenericHandler(ch2, string2, null, null, false, false, 30, null) == null) {
-                            ch2.c((SilentHandler)object);
+                            ch2.ctargetObj;
                             this.g().incrementAndGet();
                         } else {
-                            this.m().warning("Ignoring duplicate ban for " + (String)object4);
+                            this.m().warning("Ignoring duplicate ban for " + (String)helperObj);
                         }
                         if (string2 == null) continue;
                         PlatformPlugin plugin = this.LiteBansModule_240();
-                        ObjectUtilities.BaseCoreGenericHandler(object4);
-                        new LiteBansModule_221(plugin, (String)object4, string2, "#").run();
+                        ObjectUtilities.BaseCoreGenericHandler(helperObj);
+                        new LiteBansModule_221(plugin, (String)helperObj, string2, "#").run();
                     }
-                    object5 = KotlinUnitHandler.BaseCoreGenericHandler;
+                    tempObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable3) {
                     throwable2 = throwable3;
@@ -78,38 +73,37 @@ extends BansHandler {
                 autoCloseable2 = autoCloseable3;
                 throwable2 = null;
                 try {
-                    object5 = (PreparedStatement)autoCloseable2;
+                    tempObj = (PreparedStatement)autoCloseable2;
                     flag2 = false;
                     if (autoCloseable3.execute()) {
-                        object4 = autoCloseable3.getResultSet();
-                        object3 = (AutoCloseable)object4;
-                        object2 = null;
+                        helperObj = autoCloseable3.getResultSet();
+                        resultObj = (AutoCloseable)helperObj;
+                        contextObj = null;
                         try {
-                            Object object7 = (ResultSet)object3;
-                            while (object4.next()) {
-                                String string3 = object4.getString("banned");
-                                String string4 = object4.getString("banned_by");
-                                string2 = object4.getString("ban_reason");
-                                object = this;
-                                long l7 = object4.getLong("ban_time");
+                            Object object7 = (ResultSet)resultObj;
+                            while (helperObj.next()) {
+                                String string3 = helperObj.getString("banned");
+                                String string4 = helperObj.getString("banned_by");
+                                string2 = helperObj.getString("ban_reason");
+                                targetObj = this;
+                                long l7 = helperObj.getLong("ban_time");
                                 long l8 = l7 * 1000L;
-                                Object object8 = this;
-                                long l9 = object4.getLong("ban_expires_on");
+                                                                long l9 = helperObj.getLong("ban_expires_on");
                                 long l10 = l9 * 1000L;
-                                ObjectUtilities.BaseCoreGenericHandler((Object)string2);
+                                ObjectUtilities.BaseCoreGenericHandler(string2);
                                 object8 = new SilentHandler(BanHandler.LiteBansModule_240, null, string3, string2, this.LiteBansModule_31(string4), string4, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), null, l8, l10, 0, false, true, false, 0L, 27648, null);
                                 this.plugin(ch2, (SilentHandler)object8, this.g(), this.LiteBansModule_194());
                             }
                             object7 = KotlinUnitHandler.BaseCoreGenericHandler;
                         }
                         catch (Throwable throwable4) {
-                            object2 = throwable4;
+                            contextObj = throwable4;
                             throw throwable4;
                         }
                         finally {
-                            CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)object3, (Throwable)object2);
+                            CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)resultObj, (Throwable)contextObj);
 }
-                    object5 = KotlinUnitHandler.BaseCoreGenericHandler;
+                    tempObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable5) {
                     throwable2 = throwable5;

@@ -18,9 +18,8 @@ extends AbstractModule {
         Object[] objectArray = this.c;
         int n = objectArray.length;
         for (int i = 0; i < n; ++i) {
-            Object object;
-            Object object2 = object = objectArray[i];
-            TemporaryplayerHandler.LiteBansModule_31(this, object2);
+            Object contextObj = targetObj = objectArray[i];
+            TemporaryplayerHandler.LiteBansModule_31(this, contextObj);
 }
 
     @Override
@@ -30,7 +29,7 @@ extends AbstractModule {
 
     @Override
     public void e() {
-        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
         configService.e();
         DiscordWebhookClient eG2 = configService.LiteBansModule_194();
         new ServerEventListener(this.plugin).AsyncBackgroundTask_5();
@@ -40,9 +39,9 @@ extends AbstractModule {
             LiteBansModule_175 em_02;
             LiteBansModule_175[] em_0Array = new LiteBansModule_175[1];
             LiteBansModule_175[] em_0Array2 = em_0Array;
-            PlatformPlugin di_03 = plugin;
+            PlatformPlugin pluginWrapper = plugin;
             em_0Array2[n] = em_02 = (LiteBansModule_175)new PlayerJoinListener(this.plugin);
-            di_03.LiteBansModule_31(em_0Array);
+            pluginWrapper.LiteBansModule_31(em_0Array);
         }
         this.plugin.c(() -> PluginHookService.BaseCoreGenericHandler(configService, this));
         if (configService.LiteBansModule_194().PunishmentTableService()) {
@@ -52,7 +51,7 @@ extends AbstractModule {
 
     @Override
     public LiteBansModule_88 BaseCoreGenericHandler(@NotNull LiteBansModule_360 commandContext) {
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)commandContext.getName(), (Object)"lockdown")) {
+        if (ObjectUtilities.BaseCoreGenericHandler(commandContext.getName(), (Object)"lockdown")) {
             return new PlayerLoginListener(this.plugin);
         }
         return (LiteBansModule_88)super.BaseCoreGenericHandler(commandContext);
@@ -86,8 +85,8 @@ extends AbstractModule {
                     PluginModule module = q;
                     Object[] objectArray2 = new Object[]{new LiteBansModule_134(q.BaseCoreGenericHandler), new LiteBansModule_143(q.BaseCoreGenericHandler)};
                     PluginHookService q2 = q;
-                    for (Object object : objectArray = objectArray2) {
-                        TemporaryplayerHandler.BaseCoreGenericHandler(module, object);
+                    for (Object targetObj : objectArray = objectArray2) {
+                        TemporaryplayerHandler.BaseCoreGenericHandler(module, targetObj);
                     }
                     Object[] objectArray3 = objectArray;
                     q2.c = Arrays.copyOf(objectArray3, objectArray3.length);

@@ -13,7 +13,7 @@ Serializable {
     private final Object e;
     private static final AtomicReferenceFieldUpdater c;
     public InitializerHandler_4(@NotNull LiteBansModule_146 messageSupplier) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)messageSupplier, "initializer");
+        ObjectUtilities.BaseCoreGenericHandler(messageSupplier, "initializer");
         this.AsyncBackgroundTask_5 = messageSupplier;
         this._value = LiteBansModule_394.BaseCoreGenericHandler;
         this.e = LiteBansModule_394.BaseCoreGenericHandler;
@@ -21,15 +21,14 @@ Serializable {
 
     @Override
     public Object BaseCoreGenericHandler() {
-        Object object;
-        Object object2 = this._value;
-        if (object2 != LiteBansModule_394.BaseCoreGenericHandler) {
-            return object2;
+        Object contextObj = this._value;
+        if (contextObj != LiteBansModule_394.BaseCoreGenericHandler) {
+            return contextObj;
         }
         LiteBansModule_146 messageSupplier = this.AsyncBackgroundTask_5;
-        if (messageSupplier != null && c.compareAndSet(this, LiteBansModule_394.BaseCoreGenericHandler, object = messageSupplier.BaseCoreGenericHandler())) {
+        if (messageSupplier != null && c.compareAndSet(this, LiteBansModule_394.BaseCoreGenericHandler, targetObj = messageSupplier.BaseCoreGenericHandler())) {
             this.AsyncBackgroundTask_5 = null;
-            return object;
+            return targetObj;
         }
         return this._value;
     }

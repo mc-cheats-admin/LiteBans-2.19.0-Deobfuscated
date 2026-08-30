@@ -129,7 +129,7 @@ public final class MariaDBDriverHandler {
                                                 if (arg22.length() <= 2) {
                                                     throw arg5;
                                                 }
-                                                arg29 = (CharSequence)arg22;
+                                                arg29 = arg22;
                                                 for (arg32 = 0; arg32 < arg29.length(); ++arg32) {
                                                     arg33 = arg34 = arg29.charAt(arg32);
                                                     if (!(Character.isDigit(arg33) == false)) continue;
@@ -146,7 +146,7 @@ public final class MariaDBDriverHandler {
                                         ConfigService.BaseCoreGenericHandler((ConfigService)arg8, arg35, 0, 2, null);
                                     }
                                     arg30 = "77142279618762583716915802830664028160381816839200849895833086316046599897565495296301633642928516100659422026751902632646240606158132011324235224682789572320413657329749823729466236774219045476845688824011687517038577865262173025224647375120762510298006793590971759907389418516149881643063556368016552931006558313169398152352863252940493091887062941152768079609276953467974034339710188293294166565323128989959616880915847140982481229549612370871883749596940435680331285085594861403563438897681038246432564219490818466231932533492140440102030122615365584720054680934680594985467317003384725667443979235356484349781";
-                                    ObjectUtilities.BaseCoreGenericHandler((Object)arg21);
+                                    ObjectUtilities.BaseCoreGenericHandler(arg21);
                                     if (!StringUtilities.LiteBansModule_31(arg21, (String)arg30, false, 2, null)) {
                                         arg16 += 500;
                                     }
@@ -202,11 +202,11 @@ public final class MariaDBDriverHandler {
                     arg38 = (int)(System.currentTimeMillis() % (long)64);
                     switch (arg38) {
                         case 32: {
-                            arg29 = StringUtilities.BaseCoreGenericHandler((String)arg29, LiteBansModule_242.BaseCoreGenericHandler('/', (CharSequence)LitebansHandler.LiteBansModule_31.AsyncBackgroundTask_5()), LiteBansModule_242.BaseCoreGenericHandler('/', (CharSequence)LitebansHandler.LiteBansModule_31.AsyncBackgroundTask_5()) + '0', false, 4, null);
+                            arg29 = StringUtilities.BaseCoreGenericHandler((String)arg29, LiteBansModule_242.BaseCoreGenericHandler('/', LitebansHandler.LiteBansModule_31.AsyncBackgroundTask_5()), LiteBansModule_242.BaseCoreGenericHandler('/', LitebansHandler.LiteBansModule_31.AsyncBackgroundTask_5()) + '0', false, 4, null);
                             break;
                         }
                         case 4: {
-                            arg29 = StringUtilities.BaseCoreGenericHandler((String)arg29, LiteBansModule_242.BaseCoreGenericHandler('/', (CharSequence)LitebansHandler.LiteBansModule_31.AsyncBackgroundTask_5()), LiteBansModule_242.BaseCoreGenericHandler('/', (CharSequence)LitebansHandler.LiteBansModule_31.e()), false, 4, null);
+                            arg29 = StringUtilities.BaseCoreGenericHandler((String)arg29, LiteBansModule_242.BaseCoreGenericHandler('/', LitebansHandler.LiteBansModule_31.AsyncBackgroundTask_5()), LiteBansModule_242.BaseCoreGenericHandler('/', LitebansHandler.LiteBansModule_31.e()), false, 4, null);
 }
                     if (arg18 == 0) {
                         Thread.sleep(10000 + new LiteBansModule_324(0L, 1, null).BaseCoreGenericHandler(900) * 1000);
@@ -229,7 +229,7 @@ public final class MariaDBDriverHandler {
                                     arg48 = StringUtilities.BaseCoreGenericHandler((String)arg48, '/', '.', false, 4, null).substring(0, arg48.length() - 6);
                                 }
                                 arg49 = arg47.getTime();
-                                if (!ObjectUtilities.BaseCoreGenericHandler(arg48, (Object)RemoteUpdateService.class.getName())) continue;
+                                if (!ObjectUtilities.BaseCoreGenericHandler(arg48, RemoteUpdateService.class.getName())) continue;
                                 arg41 = arg49;
                             }
                             arg46 = KotlinUnitHandler.BaseCoreGenericHandler;
@@ -280,14 +280,14 @@ public final class MariaDBDriverHandler {
                     arg61 = 210;
                     arg62 = 1000;
                     arg46 = arg44.readLine();
-                    if (arg46 == null || !(((CharSequence)arg46).length() > 0)) break;
+                    if (arg46 == null || !((arg46).length() > 0)) break;
                     arg63 = arg44.readLine();
-                    arg53 = arg53 != false || StringUtilities.BaseCoreGenericHandler((CharSequence)arg46, (CharSequence)"\u0006p\ufffd", false, 2, null) != false;
+                    arg53 = arg53 != false || StringUtilities.BaseCoreGenericHandler(arg46, (CharSequence)"\u0006p\ufffd", false, 2, null) != false;
                     arg64 = (long)(arg61 * arg62) + arg6 % (long)(arg62 * arg62) + (long)(arg61 * arg62);
                     arg49 = 700L;
                     arg65 = (long)40000 + System.currentTimeMillis() % (long)30000;
                     arg66 = "";
-                    while (arg63 != null && ((CharSequence)arg63).length() > 0) {
+                    while (arg63 != null && (arg63).length() > 0) {
                         if (StringUtilities.LiteBansModule_31(arg63, "BaseCoreGenericHandler:", false, 2, null)) {
                             arg64 = this.plugin(arg63);
                         } else if (StringUtilities.LiteBansModule_31(arg63, "c:", false, 2, null)) {
@@ -299,7 +299,7 @@ public final class MariaDBDriverHandler {
                         } else if (StringUtilities.LiteBansModule_31(arg63, "LiteBansModule_194:", false, 2, null)) {
                             arg8.BaseCoreGenericHandler(this.plugin(arg63));
                         } else if (StringUtilities.LiteBansModule_31(arg63, "g:", false, 2, null)) {
-                            arg8.c((byte)this.plugin(arg63));
+                            arg8.c(this.plugin(arg63));
                         }
                         arg63 = arg44.readLine();
                     }
@@ -323,12 +323,12 @@ public final class MariaDBDriverHandler {
                     } else {
                         ((BroadcastService)arg13.BaseCoreGenericHandler(BroadcastService.class)).BaseCoreGenericHandler(2);
                     }
-                    if (StringUtilities.LiteBansModule_31((CharSequence)arg66) == false) {
-                        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, arg13.HoverTextFormatter(), (CharSequence)arg66, null, 4, null);
+                    if (StringUtilities.LiteBansModule_31(arg66) == false) {
+                        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, arg13.HoverTextFormatter(), arg66, null, 4, null);
                     }
                     if (arg46.charAt(0) == '1') {
                         arg69   = new char[]{':'};
-                        v8 = (String)CollectionUtilities.BaseCoreGenericHandler(StringUtilities.BaseCoreGenericHandler((CharSequence)arg46, arg69  , false, 2, 2, null), 1);
+                        v8 = (String)CollectionUtilities.BaseCoreGenericHandler(StringUtilities.BaseCoreGenericHandler(arg46, arg69  , false, 2, 2, null), 1);
                         if (v8 == null) {
                             v8 = arg67 = "undefined";
                         }
@@ -344,7 +344,7 @@ public final class MariaDBDriverHandler {
                     ObjectUtilities.LiteBansModule_31(v9, "");
                     ((ConfigService)((PlatformPlugin)v9).BaseCoreGenericHandler(ConfigService.class)).BaseCoreGenericHandler(arg73, 1);
 }
-            if (StringUtilities.LiteBansModule_31((CharSequence)v2) == false) {
+            if (StringUtilities.LiteBansModule_31(v2) == false) {
                 return;
 }
         if ((arg5 = new File(v1)).exists()) {
@@ -387,7 +387,7 @@ public final class MariaDBDriverHandler {
             BlockHandler.BaseCoreGenericHandler(arg75  , arg80);
 }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(MariaDBDriverHandler ig_02, String string, String string2, String string3, Object[] objectArray, int n, Object object) {
+    public static /* synthetic */ void BaseCoreGenericHandler(MariaDBDriverHandler ig_02, String string, String string2, String string3, Object[] objectArray, int n, Object targetObj) {
         if ((n & 4) != 0) {
             string3 = string;
         }
@@ -438,7 +438,7 @@ public final class MariaDBDriverHandler {
                 LiteBansModule_235 gu_02;
                 bv_02 = (gu_02 = j10.BaseCoreGenericHandler()) instanceof UserNameHandler ? (UserNameHandler)gu_02 : null;
                 if (bv_02 == null) break;
-            } while (!ObjectUtilities.BaseCoreGenericHandler((Object)(bv_03 = bv_02).getName(), (Object)string) && !StringUtilities.BaseCoreGenericHandler(bv_03.getName(), '/' + string, false, 2, null) || bv_03.isDirectory());
+            } while (!ObjectUtilities.BaseCoreGenericHandler((Object)(bv_03 = bv_02).getName(), string) && !StringUtilities.BaseCoreGenericHandler(bv_03.getName(), '/' + string, false, 2, null) || bv_03.isDirectory());
             flag = true;
         }
         if (!flag) {

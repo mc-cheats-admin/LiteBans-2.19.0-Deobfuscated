@@ -68,9 +68,9 @@ public final class TemplatesYmlHandler {
 {
             Iterable iterable = this.g;
             Iterable iterable2 = iterable;
-            Object object = iterable2;
+            Object targetObj = iterable2;
             Collection collection = new ArrayList();
-            Iterator iterator = object.iterator();
+            Iterator iterator = targetObj.iterator();
             while (iterator.hasNext()) {
                 Object t2 = iterator.next();
                 LiteBansModule_65 c12 = (LiteBansModule_65)t2;
@@ -80,8 +80,8 @@ public final class TemplatesYmlHandler {
             iterable = (List)collection;
             flag = false;
             for (Object e : iterable) {
-                object = (LiteBansModule_65)e;
-                if (!StringUtilities.BaseCoreGenericHandler(((LiteBansModule_65)object).g(), string, true)) continue;
+                targetObj = (LiteBansModule_65)e;
+                if (!StringUtilities.BaseCoreGenericHandler(targetObj.g(), string, true)) continue;
                 v0 = e;
                 break;
 }
@@ -97,9 +97,9 @@ public final class TemplatesYmlHandler {
 {
             Iterable iterable = this.g;
             Iterable iterable2 = iterable;
-            Object object = iterable2;
+            Object targetObj = iterable2;
             Collection collection = new ArrayList();
-            Iterator iterator = object.iterator();
+            Iterator iterator = targetObj.iterator();
             while (iterator.hasNext()) {
                 Object t2 = iterator.next();
                 LiteBansModule_65 c12 = (LiteBansModule_65)t2;
@@ -109,8 +109,8 @@ public final class TemplatesYmlHandler {
             iterable = (List)collection;
             flag = false;
             for (Object e : iterable) {
-                object = (LiteBansModule_65)e;
-                if (!(((LiteBansModule_65)object).LiteBansModule_194() == by2)) continue;
+                targetObj = (LiteBansModule_65)e;
+                if (!(targetObj.LiteBansModule_194() == by2)) continue;
                 v0 = e;
                 break;
 }
@@ -122,9 +122,9 @@ public final class TemplatesYmlHandler {
 {
             Iterable iterable = this.g;
             Iterable iterable2 = iterable;
-            Object object = iterable2;
+            Object targetObj = iterable2;
             Collection collection = new ArrayList();
-            Iterator iterator = object.iterator();
+            Iterator iterator = targetObj.iterator();
             while (iterator.hasNext()) {
                 Object t2 = iterator.next();
                 LiteBansModule_65 c12 = (LiteBansModule_65)t2;
@@ -134,8 +134,8 @@ public final class TemplatesYmlHandler {
             iterable = (List)collection;
             flag = false;
             for (Object e : iterable) {
-                object = (LiteBansModule_65)e;
-                if (!((((LiteBansModule_65)object).LiteBansModule_194() & 0xFF) == n)) continue;
+                targetObj = (LiteBansModule_65)e;
+                if (!((targetObj.LiteBansModule_194() & 0xFF) == n)) continue;
                 v0 = e;
                 break;
 }
@@ -158,48 +158,46 @@ public final class TemplatesYmlHandler {
             iterable = (List)collection22;
             flag = false;
             for (Collection collection22 : iterable) {
-                LiteBansModule_174 eM3 = (LiteBansModule_174)((Object)collection22);
+                LiteBansModule_174 eM3 = (LiteBansModule_174)(collection22);
                 if (!eM3.e().containsKey(c12)) continue;
                 collection = collection22;
                 break;
             }
             collection = null;
         }
-        return (LiteBansModule_174)((Object)collection);
+        return (LiteBansModule_174)(collection);
     }
 
     public final List BaseCoreGenericHandler(@NotNull BanHandler a_2) {
-        Object object;
         boolean flag;
-        Object object2;
         Iterable iterable = this.g;
         Iterable iterable2 = iterable;
         Iterable iterable3 = iterable2;
         Iterator iterator = new ArrayList();
         for (Object t2 : iterable3) {
-            object2 = (LiteBansModule_65)t2;
+            contextObj = (LiteBansModule_65)t2;
             flag = false;
-            if (!(((LiteBansModule_65)object2).AsyncBackgroundTask_5() == a_2.c())) continue;
+            if (!(((LiteBansModule_65)contextObj).AsyncBackgroundTask_5() == a_2.c())) continue;
             iterator.add(t2);
         }
-        iterable = (List)((Object)iterator);
+        iterable = (List)(iterator);
         flag2 = false;
         iterable2 = iterable;
         Collection collection = new ArrayList();
         for (Object e : iterable2) {
             boolean flag6;
 {
-                object = (LiteBansModule_65)e;
-                object2 = ((LiteBansModule_65)object).LiteBansModule_240().LiteBansModule_31();
+                targetObj = (LiteBansModule_65)e;
+                contextObj = targetObj.LiteBansModule_240().LiteBansModule_31();
                 flag = false;
-                if (object2 instanceof Collection && ((Collection)object2).isEmpty()) {
+                if (contextObj instanceof Collection && ((Collection)contextObj).isEmpty()) {
                     flag6 = false;
                 } else {
-                    Iterator iterator2 = object2.iterator();
+                    Iterator iterator2 = contextObj.iterator();
                     while (iterator2.hasNext()) {
                         Object t3 = iterator2.next();
                         String string = (String)t3;
-                        if (!StringUtilities.BaseCoreGenericHandler((CharSequence)string, (CharSequence)"--hide", false, 2, null)) continue;
+                        if (!StringUtilities.BaseCoreGenericHandler(string, (CharSequence)"--hide", false, 2, null)) continue;
                         flag6 = true;
                         break;
                     }
@@ -214,9 +212,9 @@ public final class TemplatesYmlHandler {
         collection = new ArrayList(CollectionUtilities.BaseCoreGenericHandler(iterable, 10));
         flag5 = false;
         for (Object t4 : iterable2) {
-            object = (LiteBansModule_65)t4;
+            targetObj = (LiteBansModule_65)t4;
             Collection collection2 = collection;
-            collection2.add(LiteBansModule_283.AsyncBackgroundTask_5(((LiteBansModule_65)object).LiteBansModule_194()));
+            collection2.add(LiteBansModule_283.AsyncBackgroundTask_5(targetObj.LiteBansModule_194()));
         }
         return (List)collection;
     }
@@ -228,7 +226,7 @@ public final class TemplatesYmlHandler {
             String string2 = kr_02.e(string);
             if (string2 != null) {
                 char[] cArray = new char[]{' '};
-                list2 = StringUtilities.BaseCoreGenericHandler((CharSequence)string2, cArray, false, 0, 6, null);
+                list2 = StringUtilities.BaseCoreGenericHandler(string2, cArray, false, 0, 6, null);
             } else {
                 list2 = list = null;
             }
@@ -242,7 +240,7 @@ public final class TemplatesYmlHandler {
         if (this.c) {
             throw exception;
         }
-        ConfigService configService = (ConfigService)this.AsyncBackgroundTask_5.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = this.AsyncBackgroundTask_5.BaseCoreGenericHandler(ConfigService.class);
         configService.BaseCoreGenericHandler("templates", exception);
         if (configService.BaseCoreGenericHandler(1)) {
             configService.BaseCoreGenericHandler(exception);

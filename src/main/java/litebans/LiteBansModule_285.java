@@ -31,13 +31,13 @@ implements CommandSenderWrapper {
         this.c = this.AsyncBackgroundTask_5 ? ((Player)commandSource).getUsername() : "[Console]";
     }
 
-    public boolean equals(Object object) {
-        return this == object || object instanceof LiteBansModule_285 && ((LiteBansModule_285)object).AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
+    public boolean equals(Object targetObj) {
+        return this == targetObj || targetObj instanceof LiteBansModule_285 && targetObj.AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
     }
 
     @Override
     public void c(String string) {
-        CommandSource commandSource = (CommandSource)this.e.get();
+        CommandSource commandSource = this.e.get();
         if (commandSource == null || string.isEmpty()) {
             return;
         }
@@ -58,7 +58,7 @@ implements CommandSenderWrapper {
     public @Nullable String LiteBansModule_31() {
         CommandSource commandSource;
         String string = this.g;
-        if (string == null && (commandSource = (CommandSource)this.e.get()) != null) {
+        if (string == null && (commandSource = this.e.get()) != null) {
             this.g = string = this.plugin(commandSource);
         }
         return string;
@@ -71,7 +71,7 @@ implements CommandSenderWrapper {
 
     @Override
     public @Nullable String LiteBansModule_240() {
-        CommandSource commandSource = (CommandSource)this.e.get();
+        CommandSource commandSource = this.e.get();
         if (commandSource == null) {
             return null;
         }
@@ -91,7 +91,7 @@ implements CommandSenderWrapper {
         UUID uUID;
         CommandSource commandSource;
         UUID uUID2 = this.GnuSparseMapHandler;
-        if (uUID2.equals(LiteBansModule_31) && this.AsyncBackgroundTask_5 && (commandSource = (CommandSource)this.e.get()) != null && (uUID = ((Player)commandSource).getUniqueId()) != null) {
+        if (uUID2.equals(LiteBansModule_31) && this.AsyncBackgroundTask_5 && (commandSource = this.e.get()) != null && (uUID = ((Player)commandSource).getUniqueId()) != null) {
             this.GnuSparseMapHandler = uUID;
             return uUID;
         }
@@ -105,9 +105,9 @@ implements CommandSenderWrapper {
     }
 
     public int BaseCoreGenericHandler() {
-        Object object = this.c();
-        if (object instanceof Player) {
-            Player player = (Player)object;
+        Object targetObj = this.c();
+        if (targetObj instanceof Player) {
+            Player player = (Player)targetObj;
             return player.getProtocolVersion().getProtocol();
         }
         return 0;
@@ -118,7 +118,7 @@ implements CommandSenderWrapper {
         if (string == null) {
             return true;
         }
-        CommandSource commandSource = (CommandSource)this.e.get();
+        CommandSource commandSource = this.e.get();
         return commandSource != null && commandSource.hasPermission(string);
     }
 
@@ -130,7 +130,7 @@ implements CommandSenderWrapper {
     @Override
     public boolean GnuSparseMapHandler() {
         CommandSource commandSource;
-        if (this.AsyncBackgroundTask_5 && (commandSource = (CommandSource)this.e.get()) != null) {
+        if (this.AsyncBackgroundTask_5 && (commandSource = this.e.get()) != null) {
             return ((Player)commandSource).isActive();
         }
         return this.e.get() != null;
@@ -146,7 +146,7 @@ implements CommandSenderWrapper {
         if (string == null) {
             throw new NullPointerException("reason is marked non-null but is null");
         }
-        CommandSource commandSource = (CommandSource)this.e.get();
+        CommandSource commandSource = this.e.get();
         if (commandSource == null) {
             return;
         }
@@ -156,7 +156,7 @@ implements CommandSenderWrapper {
 
     @Override
     public void LiteBansModule_31(String string) {
-        CommandSource commandSource = (CommandSource)this.e.get();
+        CommandSource commandSource = this.e.get();
         if (commandSource == null) {
             return;
         }
@@ -165,7 +165,7 @@ implements CommandSenderWrapper {
 
     @Override
     public void BaseCoreGenericHandler(String string) {
-        CommandSource commandSource = (CommandSource)this.e.get();
+        CommandSource commandSource = this.e.get();
         if (commandSource == null) {
             return;
         }
@@ -174,7 +174,7 @@ implements CommandSenderWrapper {
 
     @Override
     public void BaseCoreGenericHandler(String string, byte[] byArray) {
-        CommandSource commandSource = (CommandSource)this.e.get();
+        CommandSource commandSource = this.e.get();
         if (commandSource == null) {
             return;
         }

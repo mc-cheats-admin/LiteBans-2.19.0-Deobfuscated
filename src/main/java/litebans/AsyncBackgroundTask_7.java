@@ -23,10 +23,10 @@ implements Runnable {
                 Closeable closeable = ch2;
                 Throwable throwable = null;
                 try {
-                    Object object = (LiteBansModule_82)closeable;
+                    Object targetObj = (LiteBansModule_82)closeable;
                     LiteBansModule_82 ch3 = ch2;
                     w2.BaseCoreGenericHandler(ch3, true);
-                    object = KotlinUnitHandler.BaseCoreGenericHandler;
+                    targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable2) {
                     throwable = throwable2;

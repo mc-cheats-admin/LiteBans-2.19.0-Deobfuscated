@@ -24,7 +24,7 @@ implements Runnable {
             Events$Listener events$Listener = (Events$Listener)t2;
             try {
                 Events$Listener events$Listener2 = events$Listener;
-                events$Listener2.broadcastSent(((Object)this.plugin).toString(), this.LiteBansModule_31);
+                events$Listener2.broadcastSent((this.plugin).toString(), this.LiteBansModule_31);
             }
             catch (Throwable throwable) {
                 LiteBansModule_268.BaseCoreGenericHandler.BaseCoreGenericHandler(ch2, throwable);

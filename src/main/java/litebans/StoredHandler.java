@@ -64,7 +64,7 @@ extends Enum {
     }
 
     public static final StoredHandler BaseCoreGenericHandler(int n) {
-        return (StoredHandler)((Object)LiteBansModule_240.get(n));
+        return (StoredHandler)(LiteBansModule_240.get(n));
     }
 
     static {

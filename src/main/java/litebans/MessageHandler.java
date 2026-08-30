@@ -17,19 +17,19 @@ implements Runnable {
     }
 
     public final ConfigService LiteBansModule_31() {
-        return (ConfigService)this.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
+        return this.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
     }
 
     public final PunishmentTableService e() {
-        return (PunishmentTableService)this.LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class);
+        return this.LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class);
     }
 
     public final BroadcastService BaseCoreGenericHandler() {
-        return (BroadcastService)this.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
+        return this.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
     }
 
     public final DatabaseMonitorService g() {
-        return (DatabaseMonitorService)this.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+        return this.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
     }
 
     public final CommandSenderWrapper AsyncBackgroundTask_5() {

@@ -13,7 +13,7 @@ public final class CollectionHandler {
     public static final Object[] BaseCoreGenericHandler(@NotNull Collection collection) {
         Object[] objectArray;
 {
-            ObjectUtilities.BaseCoreGenericHandler((Object)collection, "collection");
+            ObjectUtilities.BaseCoreGenericHandler(collection, "collection");
             int n = collection.size();
             if (n == 0) {
                 objectArray = LiteBansModule_31;
@@ -54,7 +54,7 @@ public final class CollectionHandler {
     public static final Object[] BaseCoreGenericHandler(@NotNull Collection collection, @Nullable Object[] objectArray) {
         Object[] objectArray2;
 {
-            ObjectUtilities.BaseCoreGenericHandler((Object)collection, "collection");
+            ObjectUtilities.BaseCoreGenericHandler(collection, "collection");
             if (objectArray == null) {
                 throw new NullPointerException();
             }
@@ -77,9 +77,9 @@ public final class CollectionHandler {
                     if (n2 <= objectArray.length) {
                         objectArray3 = objectArray;
                     } else {
-                        Object object = Array.newInstance(objectArray.getClass().getComponentType(), n2);
-                        ObjectUtilities.LiteBansModule_31(object, "");
-                        objectArray3 = (Object[])object;
+                        Object targetObj = Array.newInstance(objectArray.getClass().getComponentType(), n2);
+                        ObjectUtilities.LiteBansModule_31(targetObj, "");
+                        objectArray3 = (Object[])targetObj;
                     }
                     Object[] objectArray4 = objectArray3;
                     n2 = 0;

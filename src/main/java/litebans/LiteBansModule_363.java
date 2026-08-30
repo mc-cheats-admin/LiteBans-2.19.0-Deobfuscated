@@ -82,9 +82,9 @@ implements LiteBansModule_177 {
         return stringBuilder.toString();
     }
 
-    public boolean equals(Object object) {
-        if (object instanceof LiteBansModule_363) {
-            LiteBansModule_363 jz_02 = (LiteBansModule_363)object;
+    public boolean equals(Object targetObj) {
+        if (targetObj instanceof LiteBansModule_363) {
+            LiteBansModule_363 jz_02 = (LiteBansModule_363)targetObj;
             return (this.LiteBansModule_240 == jz_02.LiteBansModule_240 || this.LiteBansModule_240 != null && this.LiteBansModule_240.equals(jz_02.LiteBansModule_240)) && (this.LiteBansModule_194 == jz_02.LiteBansModule_194 || this.LiteBansModule_194 != null && this.LiteBansModule_194.equals(jz_02.LiteBansModule_194)) && (this.g == jz_02.g || this.g != null && this.g.equals(jz_02.g));
         }
         return false;

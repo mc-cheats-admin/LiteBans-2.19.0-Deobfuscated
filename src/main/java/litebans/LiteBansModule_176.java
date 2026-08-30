@@ -13,12 +13,12 @@ implements LiteBansModule_178 {
     }
 
     public final void BaseCoreGenericHandler(LiteBansModule_342 jg_02) {
-        ((Collection)this.LiteBansModule_31).add(jg_02.c());
+        (this.LiteBansModule_31).add(jg_02.c());
     }
 
     @Override
-    public Object BaseCoreGenericHandler(Object object) {
-        this.plugin((LiteBansModule_342)object);
+    public Object BaseCoreGenericHandler(Object targetObj) {
+        this.plugintargetObj;
         return KotlinUnitHandler.BaseCoreGenericHandler;
 }
 

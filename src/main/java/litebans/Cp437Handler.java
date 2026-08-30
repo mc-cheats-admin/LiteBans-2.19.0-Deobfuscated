@@ -92,7 +92,7 @@ extends LiteBansModule_153 {
             if (n3 > 2600) continue;
             byArray = new byte[n3];
             this.plugin(this.GnuSparseMapHandler, byArray);
-            long l3 = (long)this.AsyncBackgroundTask_5(this.GnuSparseMapHandler) & 0xFFFFFFFFL;
+            long l3 = this.AsyncBackgroundTask_5(this.GnuSparseMapHandler) & 0xFFFFFFFFL;
             CRC32 cRC32 = new CRC32();
             cRC32.update(byArray);
             if (l3 != cRC32.getValue()) continue;
@@ -121,7 +121,7 @@ extends LiteBansModule_153 {
         jl_02.AsyncBackgroundTask_21 = dataInputStream2.readUnsignedByte();
         jl_02.BroadcastService = this.AsyncBackgroundTask_5(dataInputStream2);
         jl_02.q = this.AsyncBackgroundTask_5(dataInputStream2);
-        jl_02.LiteBansModule_194 = 0xFFFFFFFFL & (long)this.AsyncBackgroundTask_5(dataInputStream2);
+        jl_02.LiteBansModule_194 = 0xFFFFFFFFL & this.AsyncBackgroundTask_5(dataInputStream2);
         jl_02.BaseCoreGenericHandler = this.AsyncBackgroundTask_5(dataInputStream2);
         jl_02.GnuSparseMapHandler = this.LiteBansModule_31(dataInputStream2);
         jl_02.LiteBansModule_401 = this.LiteBansModule_31(dataInputStream2);
@@ -140,7 +140,7 @@ extends LiteBansModule_153 {
         if (n2 > 0) {
             jl_02.e = new byte[n2];
             this.plugin(this.GnuSparseMapHandler, jl_02.e);
-            long l3 = 0xFFFFFFFFL & (long)this.AsyncBackgroundTask_5(this.GnuSparseMapHandler);
+            long l3 = 0xFFFFFFFFL & this.AsyncBackgroundTask_5(this.GnuSparseMapHandler);
             CRC32 cRC32 = new CRC32();
             cRC32.update(jl_02.e);
             if (l3 != cRC32.getValue()) {

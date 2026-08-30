@@ -15,12 +15,12 @@ public final class LiteBansModule_139 {
     private LiteBansModule_139() {
     }
 
-    public final void BaseCoreGenericHandler(@Nullable Object object, @NotNull String string) {
+    public final void BaseCoreGenericHandler(@Nullable Object targetObj, @NotNull String string) {
         PacketContainer packetContainer = new PacketContainer(PacketType.Play.Server.KICK_DISCONNECT);
-        packetContainer.getChatComponents().write(0, (Object)WrappedChatComponent.fromJson((String)string));
+        packetContainer.getChatComponents().write(0, WrappedChatComponent.fromJson((String)string));
         ProtocolManager protocolManager = ProtocolLibrary.getProtocolManager();
-        ObjectUtilities.LiteBansModule_31(object, "");
-        protocolManager.sendServerPacket((Player)object, packetContainer);
+        ObjectUtilities.LiteBansModule_31(targetObj, "");
+        protocolManager.sendServerPacket((Player)targetObj, packetContainer);
     }
 
     public final boolean LiteBansModule_31() {

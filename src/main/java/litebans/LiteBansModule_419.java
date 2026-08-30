@@ -14,7 +14,7 @@ extends RandomID {
 
     @Override
     public String convert(long l3) {
-        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
         return configService.Utf8Handler_2().BaseCoreGenericHandler(l3);
     }
 
@@ -23,7 +23,7 @@ extends RandomID {
         if (string == null) {
             return -1L;
         }
-        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
         return configService.Utf8Handler_2().LiteBansModule_31(string);
 }
 

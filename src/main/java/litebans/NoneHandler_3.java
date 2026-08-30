@@ -20,10 +20,10 @@ public final class NoneHandler_3 {
                     }
                     t2 = iterator.next();
                     LiteBansModule_109 cy2 = (LiteBansModule_109)t2;
-                    if (ObjectUtilities.BaseCoreGenericHandler((Object)cy2.BaseCoreGenericHandler(), (Object)"none")) break;
-                    CommandSenderWrapper jv_03 = sender;
+                    if (ObjectUtilities.BaseCoreGenericHandler(cy2.BaseCoreGenericHandler(), (Object)"none")) break;
+                    CommandSenderWrapper senderWrapper = sender;
                     String string = cy2.BaseCoreGenericHandler();
-                    if (!jv_03.e(string)) break;
+                    if (!senderWrapper.e(string)) break;
                 }
                 flag = true;
                 continue;

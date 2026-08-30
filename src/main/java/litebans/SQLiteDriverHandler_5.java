@@ -22,20 +22,20 @@ public final class SQLiteDriverHandler_5 {
         MySqlCharsetHelper lq2 = this.LiteBansModule_31();
         BansHandler_2 kL4 = kL3;
         char c = '(';
-        Object object = filteredArgs;
+        Object targetObj = filteredArgs;
         StringBuilder stringBuilder = new StringBuilder();
-        String[] parsedArgs = object;
+        String[] parsedArgs = targetObj;
         Collection collection = new ArrayList();
         int n = parsedArgs.length;
         for (int i = 0; i < n; ++i) {
             String string;
             String string2 = string = parsedArgs[i];
-            boolean flag6 = ((CharSequence)string2).length() > 0;
+            boolean flag6 = (string2).length() > 0;
             if (!flag6) continue;
             collection.add(string);
         }
-        object = CollectionUtilities.BaseCoreGenericHandler((List)collection, ",", null, null, 0, null, null, 62, null);
-        CharSequence charSequence = stringBuilder.append(c + (String)object).append(')').append(lq2.AsyncBackgroundTask_5()).append(lq2.c()).toString();
+        targetObj = CollectionUtilities.BaseCoreGenericHandler((List)collection, ",", null, null, 0, null, null, 62, null);
+        CharSequence charSequence = stringBuilder.append(c + (String)targetObj).append(')').append(lq2.AsyncBackgroundTask_5()).append(lq2.c()).toString();
         return SQLiteDriverHandler.e("CREATE TABLE IF NOT EXISTS " + kL4 + charSequence);
     }
 

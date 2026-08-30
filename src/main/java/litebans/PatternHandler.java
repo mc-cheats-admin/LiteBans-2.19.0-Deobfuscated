@@ -11,7 +11,7 @@ implements Serializable {
     private final int c;
     private static final long BaseCoreGenericHandler;
     public PatternHandler(@NotNull String string, int n) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "pattern");
+        ObjectUtilities.BaseCoreGenericHandler(string, "pattern");
         this.LiteBansModule_31 = string;
         this.c = n;
     }

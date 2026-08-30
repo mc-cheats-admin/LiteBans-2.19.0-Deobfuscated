@@ -343,13 +343,13 @@ PlatformPlugin {
     }
 
     @Override
-    public CommandSenderWrapper LiteBansModule_31(Object object) {
-        return this.LiteBansModule_240.c(object);
+    public CommandSenderWrapper LiteBansModule_31(Object targetObj) {
+        return this.LiteBansModule_240.c(targetObj);
     }
 
     @Override
-    public CommandSenderWrapper BaseCoreGenericHandler(Object object) {
-        return this.LiteBansModule_240.LiteBansModule_31(object);
+    public CommandSenderWrapper BaseCoreGenericHandler(Object targetObj) {
+        return this.LiteBansModule_240.LiteBansModule_31(targetObj);
     }
 
     public ModContainer LiteBansModule_240() {

@@ -110,9 +110,9 @@ Serializable {
         return super.clone();
     }
 
-    public boolean equals(Object object) {
-        if (object instanceof LiteBansModule_356) {
-            LiteBansModule_356 ju2 = (LiteBansModule_356)object;
+    public boolean equals(Object targetObj) {
+        if (targetObj instanceof LiteBansModule_356) {
+            LiteBansModule_356 ju2 = (LiteBansModule_356)targetObj;
             return this.LiteBansModule_194 == ju2.LiteBansModule_194 && this.e.equals(ju2.e) && this.g.equals(ju2.g);
         }
         return false;

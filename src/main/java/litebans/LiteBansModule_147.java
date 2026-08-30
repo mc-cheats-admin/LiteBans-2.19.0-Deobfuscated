@@ -16,7 +16,7 @@ implements JsonDeserializer {
     public static final ThreadLocal BaseCoreGenericHandler;
     public LiteBansModule_147(V116Handler g82) {
         this.LiteBansModule_194 = g82;
-        this.e = new GsonBuilder().registerTypeAdapter(LiteBansModule_432.class, (Object)this).registerTypeAdapter(HttpHandler.class, (Object)new TextHandler_2(this)).registerTypeAdapter(LiteBansModule_368.class, (Object)new BoldHandler()).registerTypeAdapter(LiteBansModule_167.class, (Object)new LiteBansModule_330()).create();
+        this.e = new GsonBuilder().registerTypeAdapter(LiteBansModule_432.class, this).registerTypeAdapter(HttpHandler.class, new TextHandler_2(this)).registerTypeAdapter(LiteBansModule_368.class, new BoldHandler()).registerTypeAdapter(LiteBansModule_167.class, new LiteBansModule_330()).create();
     }
 
     public static LiteBansModule_147 BaseCoreGenericHandler(V116Handler g82) {
@@ -27,7 +27,7 @@ implements JsonDeserializer {
             case BaseCoreGenericHandler: {
                 return c;
 }
-        throw new IllegalArgumentException("Unknown version " + (Object)((Object)g82));
+        throw new IllegalArgumentException("Unknown version " + (Object)(g82));
     }
 
     @Deprecated
@@ -40,14 +40,14 @@ implements JsonDeserializer {
         if (jsonElement.isJsonArray()) {
             return (LiteBansModule_432[])this.e.fromJson(jsonElement, LiteBansModule_432[].class);
         }
-        return new LiteBansModule_432[]{(LiteBansModule_432)this.e.fromJson(jsonElement, LiteBansModule_432.class)};
+        return new LiteBansModule_432[]{this.e.fromJson(jsonElement, LiteBansModule_432.class)};
     }
 
     public String BaseCoreGenericHandler(LiteBansModule_432[] v_0Array) {
         if (v_0Array.length == 1) {
-            return this.e.toJson((Object)v_0Array[0]);
+            return this.e.toJson(v_0Array[0]);
         }
-        return this.e.toJson((Object)new HttpHandler(v_0Array));
+        return this.e.toJson(new HttpHandler(v_0Array));
     }
 
     public LiteBansModule_432 BaseCoreGenericHandler(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) {

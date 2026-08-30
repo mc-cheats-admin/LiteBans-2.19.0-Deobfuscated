@@ -15,7 +15,7 @@ implements LiteBansModule_171 {
 
     public PlayerChatListener(@NotNull PlatformPlugin plugin) {
         this.LiteBansModule_31 = plugin;
-        this.plugin = (PunishmentTableService)this.LiteBansModule_31.BaseCoreGenericHandler(PunishmentTableService.class);
+        this.plugin = this.LiteBansModule_31.BaseCoreGenericHandler(PunishmentTableService.class);
     }
 
     public final PlatformPlugin LiteBansModule_31() {
@@ -30,8 +30,8 @@ implements LiteBansModule_171 {
         Player player = playerChatEvent.getPlayer();
         String string = playerChatEvent.getMessage();
         TestHandler_2 f82 = this.plugin.BaseCoreGenericHandler();
-        ObjectUtilities.BaseCoreGenericHandler((Object)string);
-        f82.BaseCoreGenericHandler((Object)playerChatEvent, string, this.LiteBansModule_31.BaseCoreGenericHandler(player), true);
+        ObjectUtilities.BaseCoreGenericHandler(string);
+        f82.BaseCoreGenericHandler(playerChatEvent, string, this.LiteBansModule_31.BaseCoreGenericHandler(player), true);
     }
 
     @Subscribe(order=PostOrder.EARLY)

@@ -9,7 +9,7 @@ extends PlayerProvider {
     private final ConfigService c;
     public PlayerproviderHandler(@NotNull PlatformPlugin plugin) {
         this.LiteBansModule_31 = plugin;
-        this.c = (ConfigService)this.LiteBansModule_31.BaseCoreGenericHandler(ConfigService.class);
+        this.c = this.LiteBansModule_31.BaseCoreGenericHandler(ConfigService.class);
     }
 
     @Override

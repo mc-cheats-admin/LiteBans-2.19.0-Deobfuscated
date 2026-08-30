@@ -7,27 +7,27 @@ implements LiteBansModule_135,
 LiteBansModule_196 {
     private final int i;
     private final int LiteBansModule_240;
-    public LiteBansModule_387(int n, Object object, Class clazz, String string, String string2, int n2) {
-        super(object, clazz, string, string2, (n2 & 1) == 1);
+    public LiteBansModule_387(int n, Object targetObj, Class clazz, String string, String string2, int n2) {
+        super(targetObj, clazz, string, string2, (n2 & 1) == 1);
         this.i = n;
         this.LiteBansModule_240 = n2 >> 1;
     }
 
     @Override
     protected LiteBansModule_133 e() {
-        return Reflection.function((LiteBansModule_387)this);
+        return Reflection.function(this);
     }
 
-    public boolean equals(Object object) {
-        if (object == this) {
+    public boolean equals(Object targetObj) {
+        if (targetObj == this) {
             return true;
         }
-        if (object instanceof LiteBansModule_387) {
-            LiteBansModule_387 kp_02 = (LiteBansModule_387)object;
-            return this.plugin().equals(kp_02.BaseCoreGenericHandler()) && this.AsyncBackgroundTask_5().equals(kp_02.AsyncBackgroundTask_5()) && this.LiteBansModule_240 == kp_02.LiteBansModule_240 && this.i == kp_02.i && ObjectUtilities.BaseCoreGenericHandler(this.c(), kp_02.c()) && ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_31(), kp_02.LiteBansModule_31());
+        if (targetObj instanceof LiteBansModule_387) {
+            LiteBansModule_387 kp_02 = (LiteBansModule_387)targetObj;
+            return this.plugin().equals(kp_02.BaseCoreGenericHandler()) && this.AsyncBackgroundTask_5().equals(kp_02.AsyncBackgroundTask_5()) && this.LiteBansModule_240 == kp_02.LiteBansModule_240 && this.i == kp_02.i && ObjectUtilities.BaseCoreGenericHandler(this.c(), kp_02.c()) && ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_31(), kp_02.LiteBansModule_31());
         }
-        if (object instanceof LiteBansModule_196) {
-            return object.equals(this.plugin());
+        if (targetObj instanceof LiteBansModule_196) {
+            return targetObj.equals(this.plugin());
         }
         return false;
     }

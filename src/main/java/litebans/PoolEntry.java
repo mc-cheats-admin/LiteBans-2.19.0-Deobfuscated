@@ -112,7 +112,7 @@ static abstract class PoolEntry {
                     return true;
 }
             finally {
-                this.plugin(connection, (long)this.LiteBansModule_31);
+                this.plugin(connection, this.LiteBansModule_31);
                 if (this.PunishmentTableService && !this.HoverTextFormatter) {
                     connection.rollback();
 }
@@ -123,7 +123,7 @@ static abstract class PoolEntry {
 }
 
     Exception g() {
-        return (Exception)this.DatabaseMonitorService.get();
+        return this.DatabaseMonitorService.get();
     }
 
     public DataSource c() {
@@ -152,7 +152,7 @@ static abstract class PoolEntry {
             n2 |= 8;
         }
         if ((n & 0x10) != 0 && c22.g() != this.LiteBansModule_31) {
-            this.plugin(connection, (long)this.LiteBansModule_31);
+            this.plugin(connection, this.LiteBansModule_31);
             n2 |= 0x10;
         }
         if ((n & 0x20) != 0 && this.LiteBansModule_401 != null && !this.LiteBansModule_401.equals(c22.c())) {
@@ -165,12 +165,12 @@ static abstract class PoolEntry {
 
     void LiteBansModule_31() {
         if (this.Utf8Handler_2 instanceof ThreadPoolExecutor) {
-            ((ThreadPoolExecutor)this.Utf8Handler_2).shutdownNow();
+            (this.Utf8Handler_2).shutdownNow();
 }
 
     long LiteBansModule_240() {
         try {
-            return this.BroadcastService != null ? (long)this.BroadcastService.getLoginTimeout() : TimeUnit.SECONDS.toSeconds(5L);
+            return this.BroadcastService != null ? this.BroadcastService.getLoginTimeout() : TimeUnit.SECONDS.toSeconds(5L);
         }
         catch (SQLException sQLException) {
             return TimeUnit.SECONDS.toSeconds(5L);
@@ -282,7 +282,7 @@ static abstract class PoolEntry {
                 connection.setSchema(this.LiteBansModule_401);
             }
             this.plugin(connection, this.AsyncBackgroundTask_22.LiteBansModule_31(), true);
-            this.plugin(connection, (long)this.LiteBansModule_31);
+            this.plugin(connection, this.LiteBansModule_31);
         }
         catch (SQLException sQLException) {
             throw new LiteBansException_6(sQLException);

@@ -115,7 +115,7 @@ implements Connection {
         if (n > 0) {
             for (int i = 0; i < n && this.r != IsclosedHandler.BaseCoreGenericHandler; ++i) {
                 try {
-                    Statement statement = (Statement)this.g.get(i);
+                    Statement statement = this.g.get(i);
                     Throwable throwable = null;
                     if (statement == null) continue;
                     if (throwable != null) {
@@ -187,47 +187,47 @@ implements Connection {
 
     @Override
     public CallableStatement prepareCall(String string) {
-        return LiteBansModule_64.BaseCoreGenericHandler(this, (CallableStatement)this.plugin(this.r.prepareCall(string)));
+        return LiteBansModule_64.BaseCoreGenericHandler(this, this.plugin(this.r.prepareCall(string)));
     }
 
     @Override
     public CallableStatement prepareCall(String string, int n, int n2) {
-        return LiteBansModule_64.BaseCoreGenericHandler(this, (CallableStatement)this.plugin(this.r.prepareCall(string, n, n2)));
+        return LiteBansModule_64.BaseCoreGenericHandler(this, this.plugin(this.r.prepareCall(string, n, n2)));
     }
 
     @Override
     public CallableStatement prepareCall(String string, int n, int n2, int n3) {
-        return LiteBansModule_64.BaseCoreGenericHandler(this, (CallableStatement)this.plugin(this.r.prepareCall(string, n, n2, n3)));
+        return LiteBansModule_64.BaseCoreGenericHandler(this, this.plugin(this.r.prepareCall(string, n, n2, n3)));
     }
 
     @Override
     public PreparedStatement prepareStatement(String string) {
-        return LiteBansModule_64.BaseCoreGenericHandler(this, (PreparedStatement)this.plugin(this.r.prepareStatement(string)));
+        return LiteBansModule_64.BaseCoreGenericHandler(this, this.plugin(this.r.prepareStatement(string)));
     }
 
     @Override
     public PreparedStatement prepareStatement(String string, int n) {
-        return LiteBansModule_64.BaseCoreGenericHandler(this, (PreparedStatement)this.plugin(this.r.prepareStatement(string, n)));
+        return LiteBansModule_64.BaseCoreGenericHandler(this, this.plugin(this.r.prepareStatement(string, n)));
     }
 
     @Override
     public PreparedStatement prepareStatement(String string, int n, int n2) {
-        return LiteBansModule_64.BaseCoreGenericHandler(this, (PreparedStatement)this.plugin(this.r.prepareStatement(string, n, n2)));
+        return LiteBansModule_64.BaseCoreGenericHandler(this, this.plugin(this.r.prepareStatement(string, n, n2)));
     }
 
     @Override
     public PreparedStatement prepareStatement(String string, int n, int n2, int n3) {
-        return LiteBansModule_64.BaseCoreGenericHandler(this, (PreparedStatement)this.plugin(this.r.prepareStatement(string, n, n2, n3)));
+        return LiteBansModule_64.BaseCoreGenericHandler(this, this.plugin(this.r.prepareStatement(string, n, n2, n3)));
     }
 
     @Override
     public PreparedStatement prepareStatement(String string, int[] nArray) {
-        return LiteBansModule_64.BaseCoreGenericHandler(this, (PreparedStatement)this.plugin(this.r.prepareStatement(string, nArray)));
+        return LiteBansModule_64.BaseCoreGenericHandler(this, this.plugin(this.r.prepareStatement(string, nArray)));
     }
 
     @Override
     public PreparedStatement prepareStatement(String string, String[] args) {
-        return LiteBansModule_64.BaseCoreGenericHandler(this, (PreparedStatement)this.plugin(this.r.prepareStatement(string, args)));
+        return LiteBansModule_64.BaseCoreGenericHandler(this, this.plugin(this.r.prepareStatement(string, args)));
     }
 
     @Override

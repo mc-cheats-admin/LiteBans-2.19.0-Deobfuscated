@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 static class InputHandler
 extends NanHandler {
     public static final Integer BaseCoreGenericHandler(@NotNull String string) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
         return StringUtilities.BaseCoreGenericHandler(string, 10);
     }
 
@@ -17,7 +17,7 @@ extends NanHandler {
 {
             int n5;
 {
-                ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+                ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
                 LiteBansModule_338.BaseCoreGenericHandler(n);
                 n4 = string.length();
                 if (n4 == 0) {
@@ -73,7 +73,7 @@ extends NanHandler {
     }
 
     public static final Long LiteBansModule_31(@NotNull String string) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
         return StringUtilities.LiteBansModule_31(string, 10);
     }
 
@@ -85,7 +85,7 @@ extends NanHandler {
 {
             int n3;
 {
-                ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+                ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
                 LiteBansModule_338.BaseCoreGenericHandler(n);
                 n2 = string.length();
                 if (n2 == 0) {

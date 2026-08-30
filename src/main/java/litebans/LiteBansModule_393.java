@@ -25,8 +25,8 @@ implements LiteBansModule_390 {
     }
 
     @Override
-    public DatabaseService LiteBansModule_31(String string, Object object) {
-        this.LiteBansModule_31.set(string, object);
+    public DatabaseService LiteBansModule_31(String string, Object targetObj) {
+        this.LiteBansModule_31.set(string, targetObj);
         return this.plugin;
     }
 
@@ -44,8 +44,8 @@ implements LiteBansModule_390 {
     }
 
     @Override
-    public Object BaseCoreGenericHandler(String string, Object object) {
-        return this.LiteBansModule_31.get(string, object);
+    public Object BaseCoreGenericHandler(String string, Object targetObj) {
+        return this.LiteBansModule_31.get(string, targetObj);
     }
 
     @Override

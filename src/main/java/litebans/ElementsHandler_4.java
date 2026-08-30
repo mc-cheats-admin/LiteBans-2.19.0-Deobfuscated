@@ -16,7 +16,7 @@ LiteBansModule_122 {
     public abstract Iterator iterator();
 
     @Override
-    public boolean contains(Object object) {
+    public boolean contains(Object targetObj) {
         boolean flag;
 {
             Iterable iterable = this;
@@ -27,7 +27,7 @@ LiteBansModule_122 {
                 while (iterator.hasNext()) {
                     Object t2;
                     Object t3 = t2 = iterator.next();
-                    if (!ObjectUtilities.BaseCoreGenericHandler(t3, object)) continue;
+                    if (!ObjectUtilities.BaseCoreGenericHandler(t3, targetObj)) continue;
                     flag = true;
                     break;
                 }
@@ -39,7 +39,7 @@ LiteBansModule_122 {
     public boolean containsAll(@NotNull Collection collection) {
         boolean flag;
 {
-            ObjectUtilities.BaseCoreGenericHandler((Object)collection, "elements");
+            ObjectUtilities.BaseCoreGenericHandler(collection, "elements");
             Iterable iterable = collection;
             if (((Collection)iterable).isEmpty()) {
                 flag = true;
@@ -72,16 +72,16 @@ LiteBansModule_122 {
     }
 
     public Object[] toArray(@NotNull Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "array");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "array");
         return CollectionHandler.BaseCoreGenericHandler(this, objectArray);
     }
 
-    public boolean add(Object object) {
+    public boolean add(Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
     @Override
-    public boolean remove(Object object) {
+    public boolean remove(Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
@@ -102,8 +102,8 @@ LiteBansModule_122 {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
-    private static final CharSequence BaseCoreGenericHandler(ElementsHandler_4 gb_02, Object object) {
-        return object == gb_02 ? (CharSequence)"(this Collection)" : (CharSequence)String.valueOf(object);
+    private static final CharSequence BaseCoreGenericHandler(ElementsHandler_4 gb_02, Object targetObj) {
+        return targetObj == gb_02 ? (CharSequence)"(this Collection)" : String.valueOf(targetObj);
     }
 
     @Override

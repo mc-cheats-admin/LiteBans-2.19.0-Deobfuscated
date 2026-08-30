@@ -31,7 +31,7 @@ implements LiteBansModule_426 {
     @EventHandler
     public final void BaseCoreGenericHandler(@NotNull PlayerDisconnectEvent playerDisconnectEvent) {
         this.plugin.LiteBansModule_31(playerDisconnectEvent.getPlayer());
-        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
         int n = configService.m();
         LiteBansModule_158 ec_02 = this.plugin.i();
         ObjectUtilities.LiteBansModule_31(ec_02, "");

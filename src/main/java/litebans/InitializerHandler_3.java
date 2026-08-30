@@ -10,22 +10,22 @@ Serializable {
     private LiteBansModule_146 c;
     private volatile Object LiteBansModule_31;
     private final Object BaseCoreGenericHandler;
-    public InitializerHandler_3(@NotNull LiteBansModule_146 messageSupplier, @Nullable Object object) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)messageSupplier, "initializer");
+    public InitializerHandler_3(@NotNull LiteBansModule_146 messageSupplier, @Nullable Object targetObj) {
+        ObjectUtilities.BaseCoreGenericHandler(messageSupplier, "initializer");
         this.c = messageSupplier;
         this.LiteBansModule_31 = LiteBansModule_394.BaseCoreGenericHandler;
-        Object object2 = object;
-        if (object2 == null) {
-            object2 = this;
+        Object contextObj = targetObj;
+        if (contextObj == null) {
+            contextObj = this;
         }
-        this.plugin = object2;
+        this.plugin = contextObj;
     }
 
-    public /* synthetic */ InitializerHandler_3(LiteBansModule_146 messageSupplier, Object object, int n, LiteBansModule_14 aJ2) {
+    public /* synthetic */ InitializerHandler_3(LiteBansModule_146 messageSupplier, Object targetObj, int n, LiteBansModule_14 aJ2) {
         if ((n & 2) != 0) {
-            object = null;
+            targetObj = null;
         }
-        this(messageSupplier, object);
+        this(messageSupplier, targetObj);
     }
 
     /*
@@ -33,28 +33,25 @@ Serializable {
      */
     @Override
     public Object BaseCoreGenericHandler() {
-        Object object;
-        Object object2 = this.LiteBansModule_31;
-        if (object2 != LiteBansModule_394.BaseCoreGenericHandler) {
-            return object2;
+        Object contextObj = this.LiteBansModule_31;
+        if (contextObj != LiteBansModule_394.BaseCoreGenericHandler) {
+            return contextObj;
         }
-        Object object3 = this.plugin;
-        synchronized (object3) {
-            Object object4;
-            Object object5 = this.LiteBansModule_31;
-            if (object5 != LiteBansModule_394.BaseCoreGenericHandler) {
-                object4 = object5;
+        Object resultObj = this.plugin;
+        synchronized (resultObj) {
+            Object tempObj = this.LiteBansModule_31;
+            if (tempObj != LiteBansModule_394.BaseCoreGenericHandler) {
+                helperObj = tempObj;
             } else {
-                Object object6;
                 LiteBansModule_146 messageSupplier = this.c;
                 ObjectUtilities.BaseCoreGenericHandler(messageSupplier);
                 this.LiteBansModule_31 = object6 = messageSupplier.BaseCoreGenericHandler();
                 this.c = null;
-                object4 = object6;
+                helperObj = object6;
             }
-            object = object4;
+            targetObj = helperObj;
         }
-        return object;
+        return targetObj;
     }
 
     @Override

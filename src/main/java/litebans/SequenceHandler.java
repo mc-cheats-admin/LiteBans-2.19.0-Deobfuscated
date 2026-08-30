@@ -8,7 +8,7 @@ public final class SequenceHandler
 implements LiteBansModule_295 {
     private final AtomicReference BaseCoreGenericHandler;
     public SequenceHandler(@NotNull LiteBansModule_295 i_2) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)i_2, "sequence");
+        ObjectUtilities.BaseCoreGenericHandler(i_2, "sequence");
         this.plugin = new AtomicReference<LiteBansModule_295>(i_2);
     }
 

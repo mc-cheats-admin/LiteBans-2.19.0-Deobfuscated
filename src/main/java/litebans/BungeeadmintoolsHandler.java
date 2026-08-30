@@ -27,33 +27,24 @@ extends BansHandler {
         AutoCloseable autoCloseable = preparedStatement;
         Throwable throwable = null;
         try {
-            Object object = (PreparedStatement)autoCloseable;
+            Object targetObj = (PreparedStatement)autoCloseable;
             ResultSet resultSet = preparedStatement.executeQuery();
             AutoCloseable autoCloseable2 = resultSet;
             Throwable throwable2 = null;
             try {
-                Object object2 = (ResultSet)autoCloseable2;
+                Object contextObj = (ResultSet)autoCloseable2;
                 while (resultSet.next()) {
-                    Object object3;
                     try {
-                        Object object4;
                         String string2;
-                        Object object5;
-                        Object object6;
-                        Object object7;
-                        Object object8;
-                        Object object9;
-                        Object object10;
-                        Object object11;
                         boolean flag4;
                         String string3 = resultSet.getString("UUID");
-                        object3 = null;
+                        resultObj = null;
                         String string4 = null;
                         String string5 = null;
                         string5 = resultSet.getString("ban_ip");
-                        boolean flag5 = string5 != null && ((CharSequence)string5).length() > 0 ? true : (flag4 = false);
+                        boolean flag5 = string5 != null && (string5).length() > 0 ? true : (flag4 = false);
                         if (string3 != null) {
-                            object3 = LiteBansModule_50.c.e(string3);
+                            resultObj = LiteBansModule_50.c.e(string3);
                             try {
                                 object11 = connection.prepareStatement("SELECT " + this.i() + "player,lastip FROM " + this.i() + "players WHERE UUID=? ORDER BY lastlogin DESC LIMIT 1");
                                 object10 = (AutoCloseable)object11;
@@ -65,12 +56,12 @@ extends BansHandler {
                                     object7 = resultSet2;
                                     object6 = null;
                                     try {
-                                        object5 = (ResultSet)object7;
+                                        tempObj = (ResultSet)object7;
                                         if (resultSet2.next()) {
                                             string4 = resultSet2.getString(this.i() + "player");
                                             string5 = resultSet2.getString("lastip");
                                         }
-                                        object5 = KotlinUnitHandler.BaseCoreGenericHandler;
+                                        tempObj = KotlinUnitHandler.BaseCoreGenericHandler;
                                     }
                                     catch (Throwable throwable3) {
                                         object6 = throwable3;
@@ -92,8 +83,8 @@ extends BansHandler {
                                 object10 = this;
                                 ((DatabaseMonitorService)((MessageHandler)object10).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(exception);
 }
-                        if (string4 == null && object3 != null) {
-                            string4 = this.plugin(UUID.fromString((String)object3));
+                        if (string4 == null && resultObj != null) {
+                            string4 = this.plugin(UUID.fromStringthis);
                         }
                         object11 = resultSet.getString("ban_staff");
                         object10 = null;
@@ -106,10 +97,10 @@ extends BansHandler {
                                     Object object12 = (PreparedStatement)object8;
                                     preparedStatement2.setString(1, (String)object11);
                                     object6 = preparedStatement2.executeQuery();
-                                    object5 = (AutoCloseable)object6;
+                                    tempObj = (AutoCloseable)object6;
                                     Throwable throwable6 = null;
                                     try {
-                                        Object object13 = object5;
+                                        Object object13 = tempObj;
                                         if (object6.next()) {
                                             object10 = LiteBansModule_50.c.e(object6.getString("UUID"));
                                         }
@@ -120,7 +111,7 @@ extends BansHandler {
                                         throw throwable7;
                                     }
                                     finally {
-                                        CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)object5, throwable6);
+                                        CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)tempObj, throwable6);
                                     }
                                     object12 = KotlinUnitHandler.BaseCoreGenericHandler;
                                 }
@@ -155,27 +146,27 @@ extends BansHandler {
                         if (resultSet.getTimestamp("ban_end") == null) {
                             l5 = -1L;
                         }
-                        if (flag4 || AllHandler_3.BaseCoreGenericHandler(ch2, (String)object3, null, null, false, false, 30, null) == null) {
-                            CharSequence charSequence = (CharSequence)object9;
+                        if (flag4 || AllHandler_3.BaseCoreGenericHandler(ch2, (String)resultObj, null, null, false, false, 30, null) == null) {
+                            CharSequence charSequence = object9;
                             Object object14 = object10;
                             if (object14 == null) {
                                 object14 = "#";
                             }
-                            SilentHandler dZ2 = new SilentHandler(BanHandler.LiteBansModule_240, (String)object3, string5, charSequence, (String)object14, (String)object11, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), null, l3, l5, 0, false, flag4, false, 0L, 27648, null);
+                            SilentHandler dZ2 = new SilentHandler(BanHandler.LiteBansModule_240, (String)resultObj, string5, charSequence, (String)object14, (String)object11, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), null, l3, l5, 0, false, flag4, false, 0L, 27648, null);
                             ch2.c(dZ2);
-                            object4 = flag4 ? this.LiteBansModule_194().incrementAndGet() : this.g().incrementAndGet();
+                            helperObj = flag4 ? this.LiteBansModule_194().incrementAndGet() : this.g().incrementAndGet();
                         } else {
-                            this.m().warning("Ignoring duplicate ban for " + (String)object3);
-                            object4 = KotlinUnitHandler.BaseCoreGenericHandler;
+                            this.m().warning("Ignoring duplicate ban for " + (String)resultObj);
+                            helperObj = KotlinUnitHandler.BaseCoreGenericHandler;
                         }
-                        if (string4 == null || object3 == null) continue;
-                        new LiteBansModule_221(this.LiteBansModule_240(), string4, (String)object3, "#").run();
+                        if (string4 == null || resultObj == null) continue;
+                        new LiteBansModule_221(this.LiteBansModule_240(), string4, (String)resultObj, "#").run();
                     }
                     catch (Exception exception) {
-                        object3 = this;
-                        ((DatabaseMonitorService)((MessageHandler)object3).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(exception);
+                        resultObj = this;
+                        ((DatabaseMonitorService)this.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(exception);
 }
-                object2 = KotlinUnitHandler.BaseCoreGenericHandler;
+                contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
             }
             catch (Throwable throwable9) {
                 throwable2 = throwable9;
@@ -184,7 +175,7 @@ extends BansHandler {
             finally {
                 CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
             }
-            object = KotlinUnitHandler.BaseCoreGenericHandler;
+            targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable10) {
             throwable = throwable10;

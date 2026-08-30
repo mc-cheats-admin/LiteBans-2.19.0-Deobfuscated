@@ -48,20 +48,20 @@ public final class LiteBansModule_95 {
         return n;
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof LiteBansModule_95)) {
+        if (!(targetObj instanceof LiteBansModule_95)) {
             return false;
         }
-        LiteBansModule_95 cp_02 = (LiteBansModule_95)object;
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.c, (Object)cp_02.c)) {
+        LiteBansModule_95 cp_02 = (LiteBansModule_95)targetObj;
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.c, cp_02.c)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5, (Object)cp_02.AsyncBackgroundTask_5)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, cp_02.AsyncBackgroundTask_5)) {
             return false;
         }
-        return ObjectUtilities.BaseCoreGenericHandler((Object)this.plugin, (Object)cp_02.BaseCoreGenericHandler);
+        return ObjectUtilities.BaseCoreGenericHandler(this.plugin, cp_02.BaseCoreGenericHandler);
 }
 

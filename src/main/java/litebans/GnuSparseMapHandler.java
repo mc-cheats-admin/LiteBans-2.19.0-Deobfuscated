@@ -92,7 +92,7 @@ extends LiteBansModule_153 {
         }
         long l5 = 0L;
         while (l5 < l3 && this.BroadcastService < this.PunishmentTableService.size()) {
-            InputStream inputStream = (InputStream)this.PunishmentTableService.get(this.BroadcastService);
+            InputStream inputStream = this.PunishmentTableService.get(this.BroadcastService);
             if ((l5 += inputStream.skip(l3 - l5)) >= l3) continue;
             ++this.BroadcastService;
         }
@@ -119,7 +119,7 @@ extends LiteBansModule_153 {
             return null;
         }
         if (this.AsyncBackgroundTask_5 != null) {
-            LiteBansModule_341.BaseCoreGenericHandler((InputStream)this, Long.MAX_VALUE);
+            LiteBansModule_341.BaseCoreGenericHandler(this, Long.MAX_VALUE);
             this.LiteBansModule_194();
         }
         if ((byArray2 = this.LiteBansModule_240()) == null) {
@@ -164,9 +164,9 @@ extends LiteBansModule_153 {
     }
 
     private final void LiteBansModule_194() {
-        if (!this.GnuSparseMapHandler() && this.g > 0L && this.g % (long)this.LiteBansModule_401 != 0L) {
-            long l3 = this.g / (long)this.LiteBansModule_401 + 1L;
-            long l5 = l3 * (long)this.LiteBansModule_401 - this.g;
+        if (!this.GnuSparseMapHandler() && this.g > 0L && this.g % this.LiteBansModule_401 != 0L) {
+            long l3 = this.g / this.LiteBansModule_401 + 1L;
+            long l5 = l3 * this.LiteBansModule_401 - this.g;
             long l7 = LiteBansModule_341.BaseCoreGenericHandler(this.i, l5);
             this.LiteBansModule_31(l7);
 }
@@ -263,7 +263,7 @@ extends LiteBansModule_153 {
             l5 += lArray[1];
             arrayList.add(new LiteBansModule_292(l3, l8));
         }
-        l3 = (long)this.LiteBansModule_401 - l5 % (long)this.LiteBansModule_401;
+        l3 = this.LiteBansModule_401 - l5 % this.LiteBansModule_401;
         LiteBansModule_341.BaseCoreGenericHandler(this.i, l3);
         return arrayList;
     }
@@ -375,7 +375,7 @@ do {
         }
         finally {
             if (flag && flag2) {
-                this.plugin((long)this.LiteBansModule_401);
+                this.plugin(this.LiteBansModule_401);
                 this.i.reset();
 }
 
@@ -414,7 +414,7 @@ do {
         if (this.BroadcastService >= this.PunishmentTableService.size()) {
             return -1;
         }
-        InputStream inputStream = (InputStream)this.PunishmentTableService.get(this.BroadcastService);
+        InputStream inputStream = this.PunishmentTableService.get(this.BroadcastService);
         int n3 = inputStream.read(byArray, n, n2);
         if (this.BroadcastService == this.PunishmentTableService.size() - 1) {
             return n3;
@@ -443,24 +443,23 @@ do {
     }
 
     private final void g() {
-        long l3 = this.LiteBansModule_31() % (long)this.r;
+        long l3 = this.LiteBansModule_31() % this.r;
         if (l3 > 0L) {
-            long l5 = LiteBansModule_341.BaseCoreGenericHandler(this.i, (long)this.r - l3);
+            long l5 = LiteBansModule_341.BaseCoreGenericHandler(this.i, this.r - l3);
             this.LiteBansModule_31(l5);
 }
 
     private final void i() {
-        Object object;
         this.BroadcastService = -1;
         this.PunishmentTableService = new ArrayList();
         List list = this.AsyncBackgroundTask_5.LiteBansModule_194();
         if (list != null && list.size() > 1) {
-            object = new LiteBansModule_52(this);
-            Collections.sort(list, object);
+            targetObj = new LiteBansModule_52(this);
+            Collections.sort(list, targetObj);
         }
         if (list != null) {
             LiteBansModule_292 i72;
-            object = new LiteBansModule_129(null);
+            targetObj = new LiteBansModule_129(null);
             long l3 = 0L;
             Iterator iterator = list.iterator();
             while (iterator.hasNext() && ((i72 = (LiteBansModule_292)iterator.next()).BaseCoreGenericHandler() != 0L || i72.LiteBansModule_31() != 0L)) {
@@ -468,7 +467,7 @@ do {
                     throw new IOException("Corrupted struct sparse detected");
                 }
                 if (i72.BaseCoreGenericHandler() - l3 > 0L) {
-                    this.PunishmentTableService.add(new LiteBansModule_279((InputStream)object, i72.BaseCoreGenericHandler() - l3));
+                    this.PunishmentTableService.add(new LiteBansModule_279((InputStream)targetObj, i72.BaseCoreGenericHandler() - l3));
                 }
                 if (i72.LiteBansModule_31() > 0L) {
                     this.PunishmentTableService.add(new LiteBansModule_279(this.i, i72.LiteBansModule_31()));

@@ -5,7 +5,7 @@ public class LiteBansModule_253 {
         return configService.n;
     }
 
-    public static void BaseCoreGenericHandler(ConfigService configService, Object object) {
-        configService.BaseCoreGenericHandler((DiscordWebhookClient)object);
+    public static void BaseCoreGenericHandler(ConfigService configService, Object targetObj) {
+        configService.BaseCoreGenericHandlertargetObj;
 }
 

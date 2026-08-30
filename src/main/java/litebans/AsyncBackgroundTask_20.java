@@ -48,10 +48,10 @@ implements Runnable {
                 Closeable closeable = ch2;
                 Throwable throwable = null;
                 try {
-                    Object object = (LiteBansModule_82)closeable;
+                    Object targetObj = (LiteBansModule_82)closeable;
                     LiteBansModule_82 ch3 = ch2;
                     this.plugin(ch3);
-                    object = KotlinUnitHandler.BaseCoreGenericHandler;
+                    targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable2) {
                     throwable = throwable2;
@@ -130,8 +130,8 @@ implements Runnable {
             int n = jv_0Array2.length;
             for (int i = 0; i < n; ++i) {
                 CommandSenderWrapper sender;
-                CommandSenderWrapper jv_03 = sender = jv_0Array2[i];
-                if (!ch2.BaseCoreGenericHandler(dZ2, jv_03)) continue;
+                CommandSenderWrapper senderWrapper = sender = jv_0Array2[i];
+                if (!ch2.BaseCoreGenericHandler(dZ2, senderWrapper)) continue;
                 flag = false;
                 break;
             }
@@ -150,8 +150,8 @@ implements Runnable {
         return r_02.BaseCoreGenericHandler(ch2, jv_0Array, dZ2);
     }
 
-    private static final boolean BaseCoreGenericHandler(LiteBansModule_178 eo_02, Object object) {
-        return (Boolean)eo_02.BaseCoreGenericHandler(object);
+    private static final boolean BaseCoreGenericHandler(LiteBansModule_178 eo_02, Object targetObj) {
+        return (Boolean)eo_02.BaseCoreGenericHandler(targetObj);
     }
 
     private static final boolean BaseCoreGenericHandler(AsyncBackgroundTask_20 r_02, LiteBansModule_82 ch2, CommandSenderWrapper[] jv_0Array, Collection collection) {
@@ -173,8 +173,8 @@ implements Runnable {
         return !flag;
     }
 
-    private static final boolean c(LiteBansModule_178 eo_02, Object object) {
-        return (Boolean)eo_02.BaseCoreGenericHandler(object);
+    private static final boolean c(LiteBansModule_178 eo_02, Object targetObj) {
+        return (Boolean)eo_02.BaseCoreGenericHandler(targetObj);
     }
 
     private static final boolean BaseCoreGenericHandler(KickOtherHandler gx_02, SilentHandler dZ2) {
@@ -210,8 +210,8 @@ implements Runnable {
         return flag;
     }
 
-    private static final boolean LiteBansModule_31(LiteBansModule_178 eo_02, Object object) {
-        return (Boolean)eo_02.BaseCoreGenericHandler(object);
+    private static final boolean LiteBansModule_31(LiteBansModule_178 eo_02, Object targetObj) {
+        return (Boolean)eo_02.BaseCoreGenericHandler(targetObj);
     }
 
     static {

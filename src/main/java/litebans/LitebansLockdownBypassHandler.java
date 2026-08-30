@@ -30,16 +30,14 @@ implements LiteBansModule_360 {
     @Override
     public void run() {
 {
-            v1 = this;
-            if (v1.LiteBansModule_240 != null && v1.LiteBansModule_240().AsyncBackgroundTask_22() != 3) {
+                        if (v1.LiteBansModule_240 != null && v1.LiteBansModule_240().AsyncBackgroundTask_22() != 3) {
                 v3 = v1;
                 v5 = (AbstractModule)v3.LiteBansModule_240().LiteBansModule_31(AbstractModule.class);
                 v0 = v1.e = v5.BaseCoreGenericHandler((LiteBansModule_360)v3);
                 if (v0 != null) {
                     v0.BaseCoreGenericHandler();
 }
-            v1 = this;
-            if (v1.LiteBansModule_240 == null) break;
+                        if (v1.LiteBansModule_240 == null) break;
             v3 = v1.BaseCoreGenericHandler(v1.LiteBansModule_194, false);
             v4 = v1.LiteBansModule_240().q();
             arg1 = v4;
@@ -80,8 +78,7 @@ implements LiteBansModule_360 {
                 ObjectUtilities.BaseCoreGenericHandler(arg10);
                 v3.BaseCoreGenericHandler(arg10, (String)v3);
 }
-        v1 = this;
-        if (v1.AsyncBackgroundTask_5) {
+                if (v1.AsyncBackgroundTask_5) {
             v3 = v1;
             if (((DatabaseMonitorService)v3.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).m()) {
                 v4 = (CommandSenderWrapper)MessageHandler.BaseCoreGenericHandler.LiteBansModule_31().get();
@@ -107,18 +104,18 @@ implements LiteBansModule_360 {
             gG2.LiteBansModule_240().BaseCoreGenericHandler(em_0Array);
 }
 
-    public final void BaseCoreGenericHandler(@NotNull Object object, @NotNull String string, boolean flag) {
-        KickBannedHandler.BaseCoreGenericHandler(this.LiteBansModule_240().i(), object, string, null, flag, "KICK_OTHER", 4, null);
+    public final void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull String string, boolean flag) {
+        KickBannedHandler.BaseCoreGenericHandler(this.LiteBansModule_240().i(), targetObj, string, null, flag, "KICK_OTHER", 4, null);
     }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(LitebansLockdownBypassHandler gG2, Object object, String string, boolean flag, int n, Object object2) {
+    public static /* synthetic */ void BaseCoreGenericHandler(LitebansLockdownBypassHandler gG2, Object targetObj, String string, boolean flag, int n, Object contextObj) {
         if ((n & 2) != 0) {
             string = "";
         }
         if ((n & 4) != 0) {
             flag = true;
         }
-        gG2.BaseCoreGenericHandler(object, string, flag);
+        gG2.BaseCoreGenericHandler(targetObj, string, flag);
     }
 
     public final String BaseCoreGenericHandler(@NotNull String string, boolean flag) {

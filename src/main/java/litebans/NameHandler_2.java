@@ -31,7 +31,7 @@ public final class NameHandler_2 {
     }
 
     public final LiteBansModule_178 BaseCoreGenericHandler(@NotNull LiteBansModule_178 eo_02, @NotNull LiteBansModule_178 eo_03) {
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)eo_02, this.plugin())) {
+        if (ObjectUtilities.BaseCoreGenericHandler(eo_02, this.plugin())) {
             return eo_03;
         }
         return this.LiteBansModule_31(eo_02, eo_03);
@@ -40,7 +40,7 @@ public final class NameHandler_2 {
     public final String BaseCoreGenericHandler(@NotNull SQLiteDriverHandler_3 gZ2, @NotNull String string) {
         CharSequence charSequence;
         String string2 = string;
-        boolean flag = ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"name");
+        boolean flag = ObjectUtilities.BaseCoreGenericHandler(string, (Object)"name");
         StringBuilder stringBuilder = new StringBuilder().append(string2);
         if (flag) {
             CharSequence charSequence2 = gZ2.c().LiteBansModule_240();
@@ -49,7 +49,7 @@ public final class NameHandler_2 {
         } else {
             charSequence = "=?";
         }
-        string2 = stringBuilder.append((Object)charSequence).toString();
+        string2 = stringBuilder.append(charSequence).toString();
         if (flag) {
             string2 = string2 + gZ2.c().LiteBansModule_401();
         }

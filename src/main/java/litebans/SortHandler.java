@@ -338,12 +338,12 @@ public final class SortHandler {
         byte by2 = 0;
         by2 = (byte)n;
         List list = this.m;
-        Object object = list;
-        Object object2 = object.iterator();
-        while (object2.hasNext()) {
+        Object targetObj = list;
+        Object contextObj = targetObj.iterator();
+        while (contextObj.hasNext()) {
             byte[] byArray3;
             boolean flag2;
-            Object t2 = object2.next();
+            Object t2 = contextObj.next();
             LiteBansModule_342 jg_02 = (LiteBansModule_342)t2;
             if (++n3 > n2) {
                 return byArray2;
@@ -366,13 +366,13 @@ public final class SortHandler {
             by2 = (byte)(by2 + -1);
             n3 += -1;
         }
-        object = this;
+        targetObj = this;
         Object arg1 = null;
-        object2 = byArray.toString();
+        contextObj = byArray.toString();
         return byArray2;
     }
 
-    public static /* synthetic */ byte[] BaseCoreGenericHandler(SortHandler br2, byte[] byArray, int n, int n2, LiteBansModule_178 eo_02, int n3, Object object) {
+    public static /* synthetic */ byte[] BaseCoreGenericHandler(SortHandler br2, byte[] byArray, int n, int n2, LiteBansModule_178 eo_02, int n3, Object targetObj) {
         if ((n3 & 2) != 0) {
             n = 128;
         }
@@ -401,7 +401,7 @@ public final class SortHandler {
                 byArray2[n3] = this.LiteBansModule_31(byArray[n3]);
 }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(SortHandler br2, byte[] byArray, byte[] byArray2, boolean flag, boolean flag2, int n, Object object) {
+    public static /* synthetic */ void BaseCoreGenericHandler(SortHandler br2, byte[] byArray, byte[] byArray2, boolean flag, boolean flag2, int n, Object targetObj) {
         if ((n & 4) != 0) {
             flag = true;
         }
@@ -446,8 +446,6 @@ public final class SortHandler {
     public final byte[] BroadcastService() {
         Serializable serializable;
         Iterator iterator;
-        Object object;
-        Object object2;
         byte by222;
         byte[] byArray = this.ServerSyncService.LiteBansModule_31();
         int n = this.plugin.size();
@@ -455,49 +453,46 @@ public final class SortHandler {
         HashMap hashMap = new HashMap(32);
         HashMap hashMap2 = new HashMap(this.ServerSyncService.LiteBansModule_31().length);
         for (LiteBansModule_354 jT2 : this.plugin) {
-            Object object3;
             int n2 = ((Number)jT2.LiteBansModule_31()).intValue();
             byte by3 = ((Number)jT2.e()).byteValue();
             for (byte by222 : this.HoverTextFormatter) {
                 if ((byte)(by3 ^ by222) >= by3) continue;
                 n3 |= by222;
             }
-            object2 = hashMap2;
-            object = n2;
+            contextObj = hashMap2;
+            targetObj = n2;
             by222 = 0;
-            iterator = object2.get(object);
+            iterator = contextObj.get(targetObj);
             if (iterator == null) {
                 serializable = new ArrayList(32);
-                object2.put(object, serializable);
-                object3 = serializable;
+                contextObj.put(targetObj, serializable);
+                resultObj = serializable;
             } else {
-                object3 = iterator;
+                resultObj = iterator;
             }
-            ArrayList object4 = (ArrayList)object3;
-            ((Collection)object4).add((byte)n3);
+            ArrayList helperObj = (ArrayList)resultObj;
+            ((Collection)helperObj).add((byte)n3);
         }
         Map map = hashMap2;
         Iterator iterator2 = map.entrySet().iterator();
         while (iterator2.hasNext()) {
             Serializable serializable2;
             int n4;
-            Object object5;
             int n5;
             Map.Entry entry;
             Map.Entry entry2 = entry = iterator2.next();
-            object2 = (ArrayList)entry2.getValue();
-            object = ((ArrayList)object2).iterator();
-            while (object.hasNext()) {
-                Object object4;
-                by222 = ((Number)object.next()).byteValue();
+            contextObj = (ArrayList)entry2.getValue();
+            targetObj = ((ArrayList)contextObj).iterator();
+            while (targetObj.hasNext()) {
+                by222 = ((Number)targetObj.next()).byteValue();
                 iterator = hashMap;
                 serializable = by222;
                 n5 = 0;
-                object5 = iterator.get(serializable);
-                if (object5 == null) {
+                tempObj = iterator.get(serializable);
+                if (tempObj == null) {
                     int n2;
                     n4 = 0;
-                    Iterable iterable = (Iterable)object2;
+                    Iterable iterable = (Iterable)contextObj;
                     if (iterable instanceof Collection && ((Collection)iterable).isEmpty()) {
                         n2 = 0;
                     } else {
@@ -510,11 +505,11 @@ public final class SortHandler {
                     }
                     Integer n8 = n2;
                     iterator.put(serializable, n8);
-                    object4 = n8;
+                    helperObj = n8;
                 } else {
-                    object4 = object5;
+                    helperObj = tempObj;
                 }
-                int n9 = ((Number)object4).intValue();
+                int n9 = ((Number)helperObj).intValue();
                 this.plugin(n9, by222, ((Number)entry2.getKey()).intValue(), bE2);
             }
             Iterable iterable = ((Map)hashMap).entrySet();
@@ -526,20 +521,20 @@ public final class SortHandler {
             if (!iterator.hasNext()) {
                 serializable2 = serializable;
             } else {
-                Map.Entry entry3 = (Map.Entry)((Object)serializable);
+                Map.Entry entry3 = (Map.Entry)(serializable);
                 n5 = ((Number)entry3.getValue()).intValue();
                 do {
-                    object5 = iterator.next();
-                    Map.Entry entry4 = (Map.Entry)object5;
+                    tempObj = iterator.next();
+                    Map.Entry entry4 = (Map.Entry)tempObj;
                     n4 = ((Number)entry4.getValue()).intValue();
                     if (n5 >= n4) continue;
-                    serializable = object5;
+                    serializable = tempObj;
                     n5 = n4;
                 } while (iterator.hasNext());
                 serializable2 = serializable;
             }
-            object = (Map.Entry)((Object)serializable2);
-            this.plugin(((Number)object.getValue()).intValue(), ((Number)object.getKey()).byteValue(), ((Number)entry2.getKey()).intValue(), bE2);
+            targetObj = (Map.Entry)(serializable2);
+            this.plugin(((Number)targetObj.getValue()).intValue(), ((Number)targetObj.getKey()).byteValue(), ((Number)entry2.getKey()).intValue(), bE2);
             hashMap.clear();
         }
         this.plugin = CollectionUtilities.e();
@@ -588,7 +583,7 @@ public final class SortHandler {
             return 0;
         }
         byte by3 = LiteBansModule_245.AsyncBackgroundTask_5(this.LiteBansModule_240, this.B);
-        byte by4 = (byte)this.ServerSyncService.BaseCoreGenericHandler(this, by2);
+        byte by4 = this.ServerSyncService.BaseCoreGenericHandler(this, by2);
         return (byte)((byte)(by2 ^ by4) + by3);
     }
 
@@ -597,43 +592,41 @@ public final class SortHandler {
         byte[] byArray3;
         int n;
         this.B.BaseCoreGenericHandler(this.BanHandler_5);
-        Object object = new char[]{','};
-        List list = CollectionUtilities.BaseCoreGenericHandler((Collection)StringUtilities.BaseCoreGenericHandler((CharSequence)string, object, false, 0, 6, null));
+        Object targetObj = new char[]{','};
+        List list = CollectionUtilities.BaseCoreGenericHandler((Collection)StringUtilities.BaseCoreGenericHandler(string, targetObj, false, 0, 6, null));
         if (list.size() <= 1) {
-            Object object2;
-            Object object3;
-            object = this;
-            Object object4 = plugin;
-            if (object4 != null && (object4 = (ConfigService)object4.BaseCoreGenericHandler(ConfigService.class)) != null) {
+            targetObj = this;
+            Object helperObj = plugin;
+            if (helperObj != null && (helperObj = (ConfigService)helperObj.BaseCoreGenericHandler(ConfigService.class)) != null) {
                 String[] args;
                 String[] filteredArgs;
                 String[] parsedArgs;
-                Object object5 = object4;
-                object3 = AbstractCommand.AsyncBackgroundTask_5;
-                object2 = ((Object)string).toString();
-                if (ObjectUtilities.BaseCoreGenericHandler(object2, (Object)"sort")) {
+                Object tempObj = helperObj;
+                resultObj = AbstractCommand.AsyncBackgroundTask_5;
+                contextObj = (string).toString();
+                if (ObjectUtilities.BaseCoreGenericHandler(contextObj, (Object)"sort")) {
                     parsedArgs = new String[]{"00"};
                     filteredArgs = parsedArgs;
                 } else {
-                    parsedArgs = new String[]{"01:" + (String)object2};
+                    parsedArgs = new String[]{"01:" + (String)contextObj};
                     filteredArgs = parsedArgs;
                 }
-                if (new LiteBansModule_403((ConfigService)object5, Arrays.copyOf(args = filteredArgs, args.length)).LiteBansModule_31() == object5.hashCode()) {
+                if (new LiteBansModule_403((ConfigService)tempObj, Arrays.copyOf(args = filteredArgs, args.length)).LiteBansModule_31() == tempObj.hashCode()) {
                     throw new IllegalArgumentException();
 }
-            object = this;
+            targetObj = this;
             byte[] byArray4 = string.getBytes(LiteBansModule_344.AsyncBackgroundTask_5);
-            Object object6 = object2 = (object3 = (Object)byArray4);
+            Object object6 = contextObj = (resultObj = byArray4);
             for (Object object7 : object6) {
                 int n3 = n2++;
                 Object object8 = object7;
                 int n4 = n3;
-                char[] cArray = object;
+                char[] cArray = targetObj;
                 byArray4[n4] = cArray.n()[object8 - 44];
             }
-            return object3;
+            return resultObj;
         }
-        object = new StringBuilder(16);
+        targetObj = new StringBuilder(16);
         StringBuilder stringBuilder = new StringBuilder(string.length());
         SortHandler br2 = this;
         int n5 = 1500;
@@ -646,8 +639,8 @@ public final class SortHandler {
             long l5 = br2.m().c()[1];
             bl11 = false;
             br2.LiteBansModule_31(byArray, n6, flag, bl12);
-            StringUtilities.BaseCoreGenericHandler((StringBuilder)object).append(string2).append(',');
-            n = br2.BaseCoreGenericHandler(byArray, n6, (CharSequence)object, flag);
+            StringUtilities.BaseCoreGenericHandlertargetObj.append(string2).append(',');
+            n = br2.BaseCoreGenericHandler(byArray, n6, targetObj, flag);
             if (n >= Math.min(7 * n6, n7)) {
                 n5 += 4 * n6;
                 list.remove(string2);
@@ -702,7 +695,7 @@ public final class SortHandler {
         this.Utf8Handler_2();
     }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(SortHandler br2, byte[] byArray, int n, boolean flag, boolean flag2, int n2, Object object) {
+    public static /* synthetic */ void BaseCoreGenericHandler(SortHandler br2, byte[] byArray, int n, boolean flag, boolean flag2, int n2, Object targetObj) {
         if ((n2 & 2) != 0) {
             n = 16000;
         }
@@ -720,7 +713,7 @@ public final class SortHandler {
     }
 
     public final void Utf8Handler_2() {
-        if (!((Collection)this.m).isEmpty()) {
+        if (!(this.m).isEmpty()) {
             List list;
             List list2 = this.m;
             ObjectUtilities.LiteBansModule_31(list2, "");

@@ -42,7 +42,7 @@ extends Enum {
     }
 
     public static final NoneHandler BaseCoreGenericHandler(int n) {
-        return (NoneHandler)((Object)AsyncBackgroundTask_5.get(n));
+        return (NoneHandler)(AsyncBackgroundTask_5.get(n));
     }
 
     static {

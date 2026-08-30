@@ -23,10 +23,9 @@ extends LiteBansModule_432 {
 
     private static final void BaseCoreGenericHandler(String string, LiteBansType gq2, Consumer consumer) {
         StringBuilder stringBuilder = new StringBuilder();
-        Object object = new HttpHandler();
+        Object targetObj = new HttpHandler();
         Matcher matcher = i.matcher(string);
         for (int i = 0; i < string.length(); ++i) {
-            Object object2;
             char c = string.charAt(i);
             if (c == '\u00a7') {
                 LiteBansType gq3;
@@ -36,12 +35,12 @@ extends LiteBansModule_432 {
                     c = (char)(c + 32);
                 }
                 if (c == 'LiteBansModule_433' && i + 12 < string.length()) {
-                    object2 = new StringBuilder("#");
+                    contextObj = new StringBuilder("#");
                     for (int i10 = 0; i10 < 6; ++i10) {
-                        ((StringBuilder)object2).append(string.charAt(i + 2 + i10 * 2));
+                        ((StringBuilder)contextObj).append(string.charAt(i + 2 + i10 * 2));
                     }
                     try {
-                        gq3 = LiteBansType.BaseCoreGenericHandler(((StringBuilder)object2).toString());
+                        gq3 = LiteBansType.BaseCoreGenericHandler(((StringBuilder)contextObj).toString());
                     }
                     catch (IllegalArgumentException illegalArgumentException) {
                         gq3 = null;
@@ -52,38 +51,38 @@ extends LiteBansModule_432 {
                 }
                 if (gq3 == null) continue;
                 if (stringBuilder.length() > 0) {
-                    object2 = object;
-                    object = new HttpHandler((HttpHandler)object2);
-                    ((HttpHandler)object2).c(stringBuilder.toString());
+                    contextObj = targetObj;
+                    targetObj = new HttpHandler((HttpHandler)contextObj);
+                    ((HttpHandler)contextObj).c(stringBuilder.toString());
                     stringBuilder = new StringBuilder();
-                    consumer.accept(object2);
+                    consumer.accept(contextObj);
                 }
                 if (gq3 == LiteBansType.AsyncBackgroundTask_22) {
-                    ((LiteBansModule_432)object).AsyncBackgroundTask_5(true);
+                    targetObj.AsyncBackgroundTask_5(true);
                     continue;
                 }
                 if (gq3 == LiteBansType.Utf8Handler_2) {
-                    ((LiteBansModule_432)object).c(true);
+                    targetObj.c(true);
                     continue;
                 }
                 if (gq3 == LiteBansType.A) {
-                    ((LiteBansModule_432)object).LiteBansModule_31(true);
+                    targetObj.LiteBansModule_31(true);
                     continue;
                 }
                 if (gq3 == LiteBansType.c) {
-                    ((LiteBansModule_432)object).e(true);
+                    targetObj.e(true);
                     continue;
                 }
                 if (gq3 == LiteBansType.LiteBansModule_31) {
-                    ((LiteBansModule_432)object).BaseCoreGenericHandler((Boolean)true);
+                    targetObj.BaseCoreGenericHandler((Boolean)true);
                     continue;
                 }
                 if (gq3 == LiteBansType.ServerSyncService) {
                     gq3 = gq2;
                 }
-                object = new HttpHandler();
-                ((LiteBansModule_432)object).BaseCoreGenericHandler(gq3);
-                ((LiteBansModule_432)object).BaseCoreGenericHandler(true);
+                targetObj = new HttpHandler();
+                targetObj.BaseCoreGenericHandler(gq3);
+                targetObj.BaseCoreGenericHandler(true);
                 continue;
             }
             int n = HttpHandler.BaseCoreGenericHandler(string, i);
@@ -92,26 +91,26 @@ extends LiteBansModule_432 {
             }
             if (matcher.region(i, n).find()) {
                 if (stringBuilder.length() > 0) {
-                    object2 = object;
-                    object = new HttpHandler((HttpHandler)object2);
-                    ((HttpHandler)object2).c(stringBuilder.toString());
+                    contextObj = targetObj;
+                    targetObj = new HttpHandler((HttpHandler)contextObj);
+                    ((HttpHandler)contextObj).c(stringBuilder.toString());
                     stringBuilder = new StringBuilder();
-                    consumer.accept(object2);
+                    consumer.accept(contextObj);
                 }
-                object2 = object;
-                object = new HttpHandler((HttpHandler)object2);
-                String string2 = BlackHandler.BaseCoreGenericHandler((CharSequence)string.substring(i, n));
-                ((HttpHandler)object).c(string2);
-                ((LiteBansModule_432)object).BaseCoreGenericHandler(new LiteBansModule_377(OpenUrlHandler.e, string2.startsWith("http") ? string2 : "http://" + string2));
-                consumer.accept(object);
+                contextObj = targetObj;
+                targetObj = new HttpHandler((HttpHandler)contextObj);
+                String string2 = BlackHandler.BaseCoreGenericHandler(string.substring(i, n));
+                targetObj.c(string2);
+                targetObj.BaseCoreGenericHandler(new LiteBansModule_377(OpenUrlHandler.e, string2.startsWith("http") ? string2 : "http://" + string2));
+                consumer.accept(targetObj);
                 i += n - i - 1;
-                object = object2;
+                targetObj = contextObj;
                 continue;
             }
             stringBuilder.append(c);
         }
-        ((HttpHandler)object).c(stringBuilder.toString());
-        consumer.accept(object);
+        targetObj.c(stringBuilder.toString());
+        consumer.accept(targetObj);
     }
 
     private static final int BaseCoreGenericHandler(String string, int n) {
@@ -169,18 +168,18 @@ extends LiteBansModule_432 {
     }
 
     @Override
-    public boolean equals(Object object) {
-        if (object == this) {
+    public boolean equals(Object targetObj) {
+        if (targetObj == this) {
             return true;
         }
-        if (!(object instanceof HttpHandler)) {
+        if (!(targetObj instanceof HttpHandler)) {
             return false;
         }
-        HttpHandler w_02 = (HttpHandler)object;
-        if (!w_02.BaseCoreGenericHandler((Object)this)) {
+        HttpHandler w_02 = (HttpHandler)targetObj;
+        if (!w_02.BaseCoreGenericHandler(this)) {
             return false;
         }
-        if (!super.equals(object)) {
+        if (!super.equals(targetObj)) {
             return false;
         }
         String string = this.LiteBansModule_31();
@@ -189,8 +188,8 @@ extends LiteBansModule_432 {
     }
 
     @Override
-    protected boolean BaseCoreGenericHandler(Object object) {
-        return object instanceof HttpHandler;
+    protected boolean BaseCoreGenericHandler(Object targetObj) {
+        return targetObj instanceof HttpHandler;
     }
 
     @Override

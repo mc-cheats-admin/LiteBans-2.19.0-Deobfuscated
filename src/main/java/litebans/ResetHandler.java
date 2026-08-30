@@ -15,8 +15,8 @@ implements LiteBansModule_178 {
     }
 
     @Override
-    public Object BaseCoreGenericHandler(Object object) {
-        this.plugin((AtomicLong)object);
+    public Object BaseCoreGenericHandler(Object targetObj) {
+        this.plugintargetObj;
         return KotlinUnitHandler.BaseCoreGenericHandler;
     }
 

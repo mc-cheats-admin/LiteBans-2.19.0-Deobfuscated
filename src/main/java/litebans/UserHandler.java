@@ -23,11 +23,10 @@ implements DataSource {
      * WARNING - void declaration
      */
     public UserHandler(String string, String string2, Properties properties, String string3, String string4) {
-        Object object;
         this.AsyncBackgroundTask_5 = string;
         this.LiteBansModule_194 = new Properties();
-        for (Map.Entry object2 : properties.entrySet()) {
-            this.LiteBansModule_194.setProperty(object2.getKey().toString(), object2.getValue().toString());
+        for (Map.Entry contextObj : properties.entrySet()) {
+            this.LiteBansModule_194.setProperty(contextObj.getKey().toString(), contextObj.getValue().toString());
         }
         if (string3 != null) {
             this.LiteBansModule_194.put("user", this.LiteBansModule_194.getProperty("user", string3));
@@ -36,9 +35,9 @@ implements DataSource {
             this.LiteBansModule_194.put("password", this.LiteBansModule_194.getProperty("password", string4));
         }
         if (string2 != null) {
-            object = DriverManager.getDrivers();
-            while (object.hasMoreElements()) {
-                Driver driver = (Driver)object.nextElement();
+            targetObj = DriverManager.getDrivers();
+            while (targetObj.hasMoreElements()) {
+                Driver driver = (Driver)targetObj.nextElement();
                 if (!driver.getClass().getName().equals(string2)) continue;
                 this.LiteBansModule_31 = driver;
                 break;
@@ -72,16 +71,16 @@ implements DataSource {
                     catch (Exception exception) {
                         e.c("Failed to create instance of driver class {}, trying jdbcUrl resolution", new Object[]{string2, exception});
 }
-        object = string.replaceAll("([?&;]password=)[^&#;]*(.*)", "$1<masked>$2");
+        targetObj = string.replaceAll("([?&;]password=)[^&#;]*(.*)", "$1<masked>$2");
         try {
             if (this.LiteBansModule_31 == null) {
                 this.LiteBansModule_31 = DriverManager.getDriver(string);
-                e.LiteBansModule_31("Loaded driver with class name {} for jdbcUrl={}", new Object[]{this.LiteBansModule_31.getClass().getName(), object});
+                e.LiteBansModule_31("Loaded driver with class name {} for jdbcUrl={}", new Object[]{this.LiteBansModule_31.getClass().getName(), targetObj});
             } else if (!this.LiteBansModule_31.acceptsURL(string)) {
-                throw new RuntimeException("Driver " + string2 + " claims to not accept jdbcUrl, " + (String)object);
+                throw new RuntimeException("Driver " + string2 + " claims to not accept jdbcUrl, " + (String)targetObj);
 }
         catch (SQLException sQLException) {
-            throw new RuntimeException("Failed to get driver instance for jdbcUrl=" + (String)object, sQLException);
+            throw new RuntimeException("Failed to get driver instance for jdbcUrl=" + (String)targetObj, sQLException);
 }
 
     @Override
@@ -91,7 +90,7 @@ implements DataSource {
 
     @Override
     public Connection getConnection(String string, String string2) {
-        Properties properties = (Properties)this.LiteBansModule_194.clone();
+        Properties properties = this.LiteBansModule_194.clone();
         if (string != null) {
             properties.put("user", string);
             if (properties.containsKey("username")) {

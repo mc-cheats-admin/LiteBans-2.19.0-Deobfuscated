@@ -10,7 +10,7 @@ implements LiteBansModule_178 {
     }
 
     @Override
-    public Object BaseCoreGenericHandler(Object object) {
-        return this.plugin((Locale)object);
+    public Object BaseCoreGenericHandler(Object targetObj) {
+        return this.plugintargetObj;
 }
 

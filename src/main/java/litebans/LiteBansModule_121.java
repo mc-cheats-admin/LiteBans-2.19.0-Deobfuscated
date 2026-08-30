@@ -12,7 +12,7 @@ public final class LiteBansModule_121 {
         return new DescHandler(ch2, string, jR2, flag, new AllHandler(ch3.e(), string2), string3, flag2, number, number2);
     }
 
-    public static /* synthetic */ DescHandler BaseCoreGenericHandler(LiteBansModule_121 df_02, LiteBansModule_82 ch2, String string, String string2, UuidHandler jR2, boolean flag, String string3, boolean flag2, Number number, Number number2, int n, Object object) {
+    public static /* synthetic */ DescHandler BaseCoreGenericHandler(LiteBansModule_121 df_02, LiteBansModule_82 ch2, String string, String string2, UuidHandler jR2, boolean flag, String string3, boolean flag2, Number number, Number number2, int n, Object targetObj) {
         if ((n & 4) != 0) {
             jR2 = UuidHandler.g;
         }

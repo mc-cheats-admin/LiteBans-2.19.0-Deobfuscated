@@ -16,7 +16,7 @@ implements DataSource {
     public LiteBansModule_187(@NotNull Driver driver, @NotNull HikariConfig aB2) {
         this.plugin = driver;
         this.LiteBansModule_31 = aB2;
-        this.setLoginTimeout((int)this.LiteBansModule_31.c());
+        this.setLoginTimeout(this.LiteBansModule_31.c());
     }
 
     @Override

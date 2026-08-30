@@ -33,7 +33,7 @@ LiteBansModule_235 {
             return 0;
         }
         long l3 = this.H;
-        int n = (int)(l3 % (long)this.J);
+        int n = (int)(l3 % this.J);
         if (n > 0) {
             return this.J - n;
         }
@@ -47,14 +47,14 @@ LiteBansModule_235 {
         return n2;
     }
 
-    public boolean equals(Object object) {
-        if (this == object) {
+    public boolean equals(Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (object == null || this.getClass() != object.getClass()) {
+        if (targetObj == null || this.getClass() != targetObj.getClass()) {
             return false;
         }
-        LiteBansModule_115 da_02 = (LiteBansModule_115)object;
+        LiteBansModule_115 da_02 = (LiteBansModule_115)targetObj;
         if (this.L == null) {
             return da_02.L == null;
         }

@@ -24,19 +24,18 @@ public final class LiteBansModule_326 {
         Closeable closeable = jarInputStream;
         Throwable throwable = null;
         try {
-            Object object;
-            Object object2 = (JarInputStream)closeable;
+            Object contextObj = (JarInputStream)closeable;
             JarEntry jarEntry = null;
-            while ((object = (jarEntry = jarInputStream.getNextJarEntry())) != null && (object = ((ZipEntry)object).getName()) != null) {
-                Object object3 = object;
-                if (((String)object3).length() > 6) {
-                    object3 = StringUtilities.BaseCoreGenericHandler((String)object3, '/', '.', false, 4, null).substring(0, ((String)object3).length() - 6);
+            while ((targetObj = (jarEntry = jarInputStream.getNextJarEntry())) != null && (targetObj = targetObj.getName()) != null) {
+                Object resultObj = targetObj;
+                if (this.length() > 6) {
+                    resultObj = StringUtilities.BaseCoreGenericHandler((String)resultObj, '/', '.', false, 4, null).substring(0, this.length() - 6);
                 }
                 long l5 = jarEntry.getTime();
-                if (!ObjectUtilities.BaseCoreGenericHandler(object3, (Object)RemoteUpdateService.class.getName())) continue;
+                if (!ObjectUtilities.BaseCoreGenericHandler(resultObj, RemoteUpdateService.class.getName())) continue;
                 l3 = l5;
             }
-            object2 = KotlinUnitHandler.BaseCoreGenericHandler;
+            contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable2) {
             throwable = throwable2;

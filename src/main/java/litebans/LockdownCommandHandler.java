@@ -10,7 +10,7 @@ implements LiteBansModule_426 {
     private final BroadcastService LiteBansModule_31;
     public LockdownCommandHandler(@NotNull PlatformPlugin plugin) {
         this.c = plugin;
-        this.LiteBansModule_31 = (BroadcastService)this.c.BaseCoreGenericHandler(BroadcastService.class);
+        this.LiteBansModule_31 = this.c.BaseCoreGenericHandler(BroadcastService.class);
     }
 
     @EventHandler(priority=-64)
@@ -61,7 +61,7 @@ implements LiteBansModule_426 {
                             arg10 = arg9.next();
                             arg11 = (String)arg10;
                             arg12 = arg2;
-                            ObjectUtilities.BaseCoreGenericHandler((Object)arg11);
+                            ObjectUtilities.BaseCoreGenericHandler(arg11);
                             arg13 = arg11;
                             if (!(StringUtilities.BaseCoreGenericHandler(arg12.BaseCoreGenericHandler(), arg13, true) == false)) continue;
                             v3 = arg10;
@@ -73,10 +73,10 @@ implements LiteBansModule_426 {
                     } else {
                         v1.setTarget(arg1.getServerInfo((String)arg7));
                         arg8 = v2;
-                        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)arg8, (CharSequence)arg4, null, 4, null);
+                        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)arg8, arg4, null, 4, null);
 } else {
                     LitebansLockdownBypassHandler.BaseCoreGenericHandler(arg2, v1, null, false, 2, null);
-                    ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, v2, (CharSequence)arg4, null, 4, null);
+                    ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, v2, arg4, null, 4, null);
 }
 
     public LockdownCommandHandler LiteBansModule_31() {

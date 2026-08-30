@@ -46,9 +46,9 @@ implements Iterator {
         if (!this.plugin()) {
             throw new NoSuchElementException("No more elements for service " + this.c.getName());
         }
-        Object object = this.LiteBansModule_31;
+        Object targetObj = this.LiteBansModule_31;
         this.LiteBansModule_31 = null;
-        return object;
+        return targetObj;
     }
 
     @Override

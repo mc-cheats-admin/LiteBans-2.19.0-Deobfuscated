@@ -17,7 +17,7 @@ extends ConfigurationManager {
     }
 
     private final Collection BaseCoreGenericHandler() {
-        return ((BungeePlugin)this.plugin).getProxy().getPlayers();
+        return (this.plugin).getProxy().getPlayers();
     }
 
     @Override

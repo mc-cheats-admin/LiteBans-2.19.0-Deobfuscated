@@ -27,7 +27,7 @@ public final class OtherHandler {
 }
 
     public final int BaseCoreGenericHandler(@NotNull Collection collection) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "c");
+        ObjectUtilities.BaseCoreGenericHandler(collection, "c");
         int n = 1;
         Iterator iterator = collection.iterator();
         while (iterator.hasNext()) {
@@ -39,8 +39,8 @@ public final class OtherHandler {
     }
 
     public final boolean BaseCoreGenericHandler(@NotNull Collection collection, @NotNull Collection collection2) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "c");
-        ObjectUtilities.BaseCoreGenericHandler((Object)collection2, "other");
+        ObjectUtilities.BaseCoreGenericHandler(collection, "c");
+        ObjectUtilities.BaseCoreGenericHandler(collection2, "other");
         if (collection.size() != collection2.size()) {
             return false;
         }

@@ -5,19 +5,19 @@ public abstract class LiteBansModule_160 {
         return "Content()";
     }
 
-    public boolean equals(Object object) {
-        if (object == this) {
+    public boolean equals(Object targetObj) {
+        if (targetObj == this) {
             return true;
         }
-        if (!(object instanceof LiteBansModule_160)) {
+        if (!(targetObj instanceof LiteBansModule_160)) {
             return false;
         }
-        LiteBansModule_160 ed_02 = (LiteBansModule_160)object;
+        LiteBansModule_160 ed_02 = (LiteBansModule_160)targetObj;
         return ed_02.BaseCoreGenericHandler(this);
     }
 
-    protected boolean BaseCoreGenericHandler(Object object) {
-        return object instanceof LiteBansModule_160;
+    protected boolean BaseCoreGenericHandler(Object targetObj) {
+        return targetObj instanceof LiteBansModule_160;
     }
 
     public int hashCode() {

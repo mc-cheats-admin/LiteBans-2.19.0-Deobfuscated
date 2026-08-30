@@ -10,7 +10,7 @@ LiteBansModule_122 {
     private final Object[] LiteBansModule_31;
     private int c;
     public ArrayHandler_2(@NotNull Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "array");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "array");
         this.LiteBansModule_31 = objectArray;
     }
 
@@ -20,17 +20,16 @@ LiteBansModule_122 {
     }
 
     public Object next() {
-        Object object;
         try {
             int n = this.c;
             this.c = n + 1;
-            object = this.LiteBansModule_31[n];
+            targetObj = this.LiteBansModule_31[n];
         }
         catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
             --this.c;
             throw new NoSuchElementException(arrayIndexOutOfBoundsException.getMessage());
         }
-        return object;
+        return targetObj;
     }
 
     @Override

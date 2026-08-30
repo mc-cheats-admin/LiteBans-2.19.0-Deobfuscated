@@ -13,10 +13,10 @@ implements JsonSerializer {
     }
 
     public JsonElement BaseCoreGenericHandler(NullHandler_4 ie_02, Type type, JsonSerializationContext jsonSerializationContext) {
-        return jsonSerializationContext.serialize((Object)ie_02.AsyncBackgroundTask_5);
+        return jsonSerializationContext.serialize(ie_02.AsyncBackgroundTask_5);
     }
 
-    public JsonElement serialize(Object object, Type type, JsonSerializationContext jsonSerializationContext) {
-        return this.plugin((NullHandler_4)object, type, jsonSerializationContext);
+    public JsonElement serialize(Object targetObj, Type type, JsonSerializationContext jsonSerializationContext) {
+        return this.plugin((NullHandler_4)targetObj, type, jsonSerializationContext);
 }
 

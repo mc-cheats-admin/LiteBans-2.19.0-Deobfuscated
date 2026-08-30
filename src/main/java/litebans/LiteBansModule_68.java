@@ -38,14 +38,14 @@ implements LiteBansModule_390 {
     }
 
     @Override
-    public DatabaseService LiteBansModule_31(String string, Object object) {
-        this.LiteBansModule_31.BaseCoreGenericHandler(string, object);
+    public DatabaseService LiteBansModule_31(String string, Object targetObj) {
+        this.LiteBansModule_31.BaseCoreGenericHandler(string, targetObj);
         return this.plugin;
     }
 
     @Override
-    public Object BaseCoreGenericHandler(String string, Object object) {
-        return this.LiteBansModule_31.LiteBansModule_31(string, object);
+    public Object BaseCoreGenericHandler(String string, Object targetObj) {
+        return this.LiteBansModule_31.LiteBansModule_31(string, targetObj);
     }
 
     @Override

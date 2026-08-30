@@ -9,7 +9,7 @@ Serializable {
     private LiteBansModule_146 BaseCoreGenericHandler;
     private Object LiteBansModule_31;
     public InitializerHandler_2(@NotNull LiteBansModule_146 messageSupplier) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)messageSupplier, "initializer");
+        ObjectUtilities.BaseCoreGenericHandler(messageSupplier, "initializer");
         this.plugin = messageSupplier;
         this.LiteBansModule_31 = LiteBansModule_394.BaseCoreGenericHandler;
     }

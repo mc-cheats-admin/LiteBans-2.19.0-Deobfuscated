@@ -132,13 +132,13 @@ implements PreparedStatement {
     }
 
     @Override
-    public void setObject(int n, Object object, int n2) {
-        this.plugin.setObject(n, object, n2);
+    public void setObject(int n, Object targetObj, int n2) {
+        this.plugin.setObject(n, targetObj, n2);
     }
 
     @Override
-    public void setObject(int n, Object object) {
-        this.plugin.setObject(n, object);
+    public void setObject(int n, Object targetObj) {
+        this.plugin.setObject(n, targetObj);
     }
 
     @Override
@@ -252,8 +252,8 @@ implements PreparedStatement {
     }
 
     @Override
-    public void setObject(int n, Object object, int n2, int n3) {
-        this.plugin.setObject(n, object, n2, n3);
+    public void setObject(int n, Object targetObj, int n2, int n3) {
+        this.plugin.setObject(n, targetObj, n2, n3);
     }
 
     @Override
@@ -307,13 +307,13 @@ implements PreparedStatement {
     }
 
     @Override
-    public void setObject(int n, Object object, SQLType sQLType, int n2) {
-        this.plugin.setObject(n, object, sQLType, n2);
+    public void setObject(int n, Object targetObj, SQLType sQLType, int n2) {
+        this.plugin.setObject(n, targetObj, sQLType, n2);
     }
 
     @Override
-    public void setObject(int n, Object object, SQLType sQLType) {
-        this.plugin.setObject(n, object, sQLType);
+    public void setObject(int n, Object targetObj, SQLType sQLType) {
+        this.plugin.setObject(n, targetObj, sQLType);
     }
 
     @Override

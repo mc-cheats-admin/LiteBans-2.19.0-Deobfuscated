@@ -20,15 +20,15 @@ extends CommandManager {
     @Override
     public void BaseCoreGenericHandler() {
         super.BaseCoreGenericHandler();
-        ((ConfigYmlHandler)this.plugin).g().BaseCoreGenericHandler((T object) -> {
+        (this.plugin).g().BaseCoreGenericHandler((T targetObj) -> {
             for (LiteCommand command : this.e()) {
-                this.plugin(new LiteBansModule_352(command, command.getPermission(), this.plugin, command.getAliases()), (CommandDispatcher)object);
+                this.plugin(new LiteBansModule_352(command, command.getPermission(), this.plugin, command.getAliases()), (CommandDispatcher)targetObj);
             }
             return Void.TYPE;
         });
     }
 
     public void BaseCoreGenericHandler(LiteBansModule_352 jq_02, CommandDispatcher commandDispatcher) {
-        ((ConfigYmlHandler)this.plugin).g().BaseCoreGenericHandler(jq_02, commandDispatcher);
+        (this.plugin).g().BaseCoreGenericHandler(jq_02, commandDispatcher);
 }
 

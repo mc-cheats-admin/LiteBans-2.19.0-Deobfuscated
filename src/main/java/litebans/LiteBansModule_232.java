@@ -4,12 +4,12 @@ import org.jetbrains.annotations.NotNull;
 
 public final class LiteBansModule_232 {
     public static final LiteBansModule_283 BaseCoreGenericHandler(@NotNull String string) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
         return LiteBansModule_232.BaseCoreGenericHandler(string, 10);
     }
 
     public static final LiteBansModule_283 BaseCoreGenericHandler(@NotNull String string, int n) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
         LiteBansModule_72 c_02 = LiteBansModule_232.LiteBansModule_31(string, n);
         if (c_02 == null) {
             return null;
@@ -24,7 +24,7 @@ public final class LiteBansModule_232 {
 
     public static final LiteBansModule_72 LiteBansModule_31(@NotNull String string, int n) {
         int n2;
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(string, "<this>");
         LiteBansModule_338.BaseCoreGenericHandler(n);
         int n3 = string.length();
         if (n3 == 0) {

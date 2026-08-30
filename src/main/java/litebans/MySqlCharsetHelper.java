@@ -47,24 +47,24 @@ public final class MySqlCharsetHelper {
         return n;
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof MySqlCharsetHelper)) {
+        if (!(targetObj instanceof MySqlCharsetHelper)) {
             return false;
         }
-        MySqlCharsetHelper lq2 = (MySqlCharsetHelper)object;
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5, (Object)lq2.AsyncBackgroundTask_5)) {
+        MySqlCharsetHelper lq2 = (MySqlCharsetHelper)targetObj;
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, lq2.AsyncBackgroundTask_5)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.plugin, (Object)lq2.BaseCoreGenericHandler)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.plugin, lq2.BaseCoreGenericHandler)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.c, (Object)lq2.c)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.c, lq2.c)) {
             return false;
         }
-        return ObjectUtilities.BaseCoreGenericHandler((Object)this.e, (Object)lq2.e);
+        return ObjectUtilities.BaseCoreGenericHandler(this.e, lq2.e);
     }
 
     static {

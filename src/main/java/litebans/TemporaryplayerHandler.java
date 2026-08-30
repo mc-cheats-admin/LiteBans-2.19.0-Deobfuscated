@@ -8,14 +8,14 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public final class TemporaryplayerHandler {
-    public static final void BaseCoreGenericHandler(@NotNull PluginModule module, @Nullable Object object) {
-        if (object != null) {
-            ProtocolLibrary.getProtocolManager().addPacketListener((PacketListener)object);
+    public static final void BaseCoreGenericHandler(@NotNull PluginModule module, @Nullable Object targetObj) {
+        if (targetObj != null) {
+            ProtocolLibrary.getProtocolManager().addPacketListenertargetObj;
 }
 
-    public static final void LiteBansModule_31(@NotNull PluginModule module, @Nullable Object object) {
-        if (object != null) {
-            ProtocolLibrary.getProtocolManager().removePacketListener((PacketListener)object);
+    public static final void LiteBansModule_31(@NotNull PluginModule module, @Nullable Object targetObj) {
+        if (targetObj != null) {
+            ProtocolLibrary.getProtocolManager().removePacketListenertargetObj;
 }
 
     public static final boolean LiteBansModule_31(@NotNull Player player) {

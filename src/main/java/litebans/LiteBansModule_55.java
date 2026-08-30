@@ -12,9 +12,9 @@ public class LiteBansModule_55 {
     public int LiteBansModule_240 = 0;
     public Object e = null;
 
-    public LiteBansModule_55(int n, Object object) {
+    public LiteBansModule_55(int n, Object targetObj) {
         this.LiteBansModule_240 = n;
-        this.e = object;
+        this.e = targetObj;
     }
 
     public String toString() {

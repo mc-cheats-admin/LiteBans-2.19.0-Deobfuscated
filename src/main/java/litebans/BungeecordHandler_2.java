@@ -43,7 +43,7 @@ implements LiteBansModule_158 {
         return (Plugin)plugin;
     }
 
-    public static /* synthetic */ Plugin BaseCoreGenericHandler(BungeecordHandler_2 ao_02, PlatformPlugin plugin, int n, Object object) {
+    public static /* synthetic */ Plugin BaseCoreGenericHandler(BungeecordHandler_2 ao_02, PlatformPlugin plugin, int n, Object targetObj) {
         if ((n & 1) != 0) {
             plugin = ao_02.c();
         }
@@ -79,10 +79,10 @@ implements LiteBansModule_158 {
         return BungeecordHandler_2.BaseCoreGenericHandler(this, null, 1, null).getServer().getOfflinePlayer(uUID);
     }
 
-    public final String LiteBansModule_31(@NotNull Object object) {
-        ObjectUtilities.LiteBansModule_31(object, "");
-        String string = ((OfflinePlayer)object).getName();
-        ObjectUtilities.BaseCoreGenericHandler((Object)string);
+    public final String LiteBansModule_31(@NotNull Object targetObj) {
+        ObjectUtilities.LiteBansModule_31(targetObj, "");
+        String string = targetObj.getName();
+        ObjectUtilities.BaseCoreGenericHandler(string);
         return string;
     }
 
@@ -94,18 +94,17 @@ implements LiteBansModule_158 {
     @Override
     public List LiteBansModule_31(@NotNull String string) {
         Collection collection;
-        Object object32;
-        Object object2 = Bukkit.getServer().getPluginManager().getPlugins();
-        Object[] objectArray = object2;
-        Collection collection2 = new ArrayList(((Object[])object2).length);
+        Object contextObj = Bukkit.getServer().getPluginManager().getPlugins();
+        Object[] objectArray = contextObj;
+        Collection collection2 = new ArrayList(((Object[])contextObj).length);
         for (Object object32 : objectArray) {
             Plugin plugin = (Plugin)object32;
             collection = collection2;
             collection.add(plugin.getDescription());
         }
-        object2 = (List)collection2;
+        contextObj = (List)collection2;
         flag = false;
-        objectArray = object2;
+        objectArray = contextObj;
         collection2 = new ArrayList();
         flag2 = false;
         for (Object t2 : objectArray) {
@@ -113,10 +112,10 @@ implements LiteBansModule_158 {
             if (!(object32.getDepend().contains(string) || object32.getSoftDepend().contains(string))) continue;
             collection2.add(t2);
         }
-        object2 = (List)collection2;
+        contextObj = (List)collection2;
         flag = false;
-        objectArray = object2;
-        collection2 = new ArrayList(CollectionUtilities.BaseCoreGenericHandler((Iterable)object2, 10));
+        objectArray = contextObj;
+        collection2 = new ArrayList(CollectionUtilities.BaseCoreGenericHandler((Iterable)contextObj, 10));
         flag2 = false;
         for (Object t3 : objectArray) {
             object32 = (PluginDescriptionFile)t3;
@@ -144,90 +143,90 @@ implements LiteBansModule_158 {
         BungeecordHandler_2.BaseCoreGenericHandler(this, null, 1, null).getServer().getMessenger().registerOutgoingPluginChannel(BungeecordHandler_2.BaseCoreGenericHandler(this, null, 1, null), string);
     }
 
-    public final String c(@NotNull Object object) {
+    public final String c(@NotNull Object targetObj) {
         String string;
-        Object object2 = object;
-        if (object2 instanceof AsyncPlayerChatEvent) {
-            string = ((AsyncPlayerChatEvent)object).getMessage();
-        } else if (object2 instanceof PlayerCommandPreprocessEvent) {
-            string = ((PlayerCommandPreprocessEvent)object).getMessage();
+        Object contextObj = targetObj;
+        if (contextObj instanceof AsyncPlayerChatEvent) {
+            string = targetObj.getMessage();
+        } else if (contextObj instanceof PlayerCommandPreprocessEvent) {
+            string = targetObj.getMessage();
         } else {
-            this.plugin(object);
+            this.plugin(targetObj);
             throw new CommandExitException();
         }
         String string2 = string;
-        ObjectUtilities.BaseCoreGenericHandler((Object)string2);
+        ObjectUtilities.BaseCoreGenericHandler(string2);
         return string2;
     }
 
     @Override
-    public LiteBansModule_95 BaseCoreGenericHandler(@NotNull Object object, boolean flag) {
+    public LiteBansModule_95 BaseCoreGenericHandler(@NotNull Object targetObj, boolean flag) {
         String string;
         UUID uUID;
-        if (object instanceof AsyncPlayerPreLoginEvent) {
-            String string2 = ((AsyncPlayerPreLoginEvent)object).getName();
-            UUID uUID2 = ((AsyncPlayerPreLoginEvent)object).getUniqueId();
+        if (targetObj instanceof AsyncPlayerPreLoginEvent) {
+            String string2 = targetObj.getName();
+            UUID uUID2 = targetObj.getUniqueId();
             if (uUID2 == null) {
-                throw new NullPointerException(object.getClass().getSimpleName() + ".getUniqueId() == null (" + string2 + ')');
+                throw new NullPointerException(targetObj.getClass().getSimpleName() + ".getUniqueId() == null (" + string2 + ')');
             }
             uUID = uUID2;
-            InetAddress inetAddress = ((AsyncPlayerPreLoginEvent)object).getAddress();
+            InetAddress inetAddress = targetObj.getAddress();
             if (inetAddress == null) {
                 if (!flag) {
-                    this.c().getLogger().warning(object.getClass().getSimpleName() + ".getAddress() == null (" + string2 + ')');
+                    this.c().getLogger().warning(targetObj.getClass().getSimpleName() + ".getAddress() == null (" + string2 + ')');
                 }
                 string = null;
             } else {
                 string = inetAddress.getHostAddress();
 } else {
-            this.plugin(object);
+            this.plugin(targetObj);
             throw new CommandExitException();
         }
         String string3 = string;
-        return new LiteBansModule_95(((AsyncPlayerPreLoginEvent)object).getName(), uUID.toString(), string3);
+        return new LiteBansModule_95(targetObj.getName(), uUID.toString(), string3);
     }
 
-    public Void BaseCoreGenericHandler(@NotNull Object object, @NotNull CharSequence charSequence) {
+    public Void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public String BaseCoreGenericHandler(@NotNull Object object) {
+    public String BaseCoreGenericHandler(@NotNull Object targetObj) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public void BaseCoreGenericHandler(@NotNull Object object, @NotNull CharSequence charSequence, @NotNull String string, boolean flag, @NotNull String string2) {
-        if (object instanceof AsyncPlayerPreLoginEvent) {
-            ((AsyncPlayerPreLoginEvent)object).disallow(AsyncPlayerPreLoginEvent.Result.valueOf((String)string2), ((Object)charSequence).toString());
+    public void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence, @NotNull String string, boolean flag, @NotNull String string2) {
+        if (targetObj instanceof AsyncPlayerPreLoginEvent) {
+            targetObj.disallow(AsyncPlayerPreLoginEvent.Result.valueOf((String)string2), (charSequence).toString());
             return;
         }
-        if (object instanceof PlayerLoginEvent) {
-            ((PlayerLoginEvent)object).disallow(PlayerLoginEvent.Result.valueOf((String)string2), ((Object)charSequence).toString());
+        if (targetObj instanceof PlayerLoginEvent) {
+            targetObj.disallow(PlayerLoginEvent.Result.valueOf((String)string2), (charSequence).toString());
             return;
         }
-        if (object instanceof Cancellable) {
+        if (targetObj instanceof Cancellable) {
             if (flag) {
-                ((Cancellable)object).setCancelled(true);
+                targetObj.setCancelled(true);
             }
-            if (object instanceof AsyncPlayerChatEvent) {
+            if (targetObj instanceof AsyncPlayerChatEvent) {
                 BungeecordHandler_2 ao_02 = this;
-                AsyncPlayerChatEvent asyncPlayerChatEvent = (AsyncPlayerChatEvent)object;
+                AsyncPlayerChatEvent asyncPlayerChatEvent = (AsyncPlayerChatEvent)targetObj;
                 try {
                     asyncPlayerChatEvent.getRecipients().clear();
                 }
                 catch (UnsupportedOperationException unsupportedOperationException) {
                 }
-                ((AsyncPlayerChatEvent)object).setMessage(string + ((AsyncPlayerChatEvent)object).getMessage());
-            } else if (object instanceof PlayerCommandPreprocessEvent) {
-                ((PlayerCommandPreprocessEvent)object).setMessage('/' + string + ((PlayerCommandPreprocessEvent)object).getMessage());
+                targetObj.setMessage(string + targetObj.getMessage());
+            } else if (targetObj instanceof PlayerCommandPreprocessEvent) {
+                targetObj.setMessage('/' + string + targetObj.getMessage());
 } else {
-            this.plugin(object);
+            this.plugin(targetObj);
             throw new CommandExitException();
 }
 
-    private final Void BaseCoreGenericHandler(Object object) {
-        throw new MessageHandler_2(object.getClass().getName());
+    private final Void BaseCoreGenericHandler(Object targetObj) {
+        throw new MessageHandler_2(targetObj.getClass().getName());
     }
 
     @Override
@@ -249,8 +248,8 @@ implements LiteBansModule_158 {
 }
 
     @Override
-    public void BaseCoreGenericHandler(Object object, CharSequence charSequence) {
-        this.plugin(object, charSequence);
+    public void BaseCoreGenericHandler(Object targetObj, CharSequence charSequence) {
+        this.plugin(targetObj, charSequence);
     }
 
     private static final void BaseCoreGenericHandler() {

@@ -37,7 +37,7 @@ implements LiteBansModule_51 {
     public final void BaseCoreGenericHandler(@NotNull class_3248 class_32482, @NotNull MinecraftServer minecraftServer, @NotNull LoginPacketSender loginPacketSender, @NotNull ServerLoginNetworking.LoginSynchronizer loginSynchronizer) {
         PluginModule module = this.plugin.LiteBansModule_31(AbstractModule.class);
         ObjectUtilities.LiteBansModule_31(module, "");
-        LiteBansModule_247 h82 = (LiteBansModule_247)((Object)module);
+        LiteBansModule_247 h82 = (LiteBansModule_247)(module);
         if (!(class_32482 instanceof AccessLoginData_1_21)) {
             AssertionUtilities.BaseCoreGenericHandler();
             throw new CommandExitException();

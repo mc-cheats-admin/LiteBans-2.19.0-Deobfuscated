@@ -88,8 +88,8 @@ JsonDeserializer {
         return jsonObject;
     }
 
-    public JsonElement serialize(Object object, Type type, JsonSerializationContext jsonSerializationContext) {
-        return this.plugin((LiteBansModule_368)object, type, jsonSerializationContext);
+    public JsonElement serialize(Object targetObj, Type type, JsonSerializationContext jsonSerializationContext) {
+        return this.plugin((LiteBansModule_368)targetObj, type, jsonSerializationContext);
     }
 
     public Object deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) {

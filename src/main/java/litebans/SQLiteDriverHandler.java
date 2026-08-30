@@ -32,19 +32,19 @@ implements CharSequence {
 
     public static String LiteBansModule_31(String string) {
         String string2 = string;
-        if (StringUtilities.c((CharSequence)string2, '{', false, 2, null)) {
+        if (StringUtilities.c(string2, '{', false, 2, null)) {
             ConfigService configService = (ConfigService)LiteBansModule_209.LiteBansModule_31.BaseCoreGenericHandler().BaseCoreGenericHandler(ConfigService.class);
             BroadcastService o2 = (BroadcastService)LiteBansModule_209.LiteBansModule_31.BaseCoreGenericHandler().BaseCoreGenericHandler(BroadcastService.class);
             String string3 = configService.LiteBansModule_194().ElementsHandler();
             String string4 = "1";
             String string5 = "0";
-            if (ObjectUtilities.BaseCoreGenericHandler((Object)string3, (Object)"pgsql")) {
+            if (ObjectUtilities.BaseCoreGenericHandler(string3, (Object)"pgsql")) {
                 string4 = "B'1'";
                 string5 = "B'0'";
             }
-            string2 = LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[5], (Object)string4);
-            string2 = LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[6], (Object)string5);
-            string2 = LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[7], (Object)(!ObjectUtilities.BaseCoreGenericHandler((Object)string3, (Object)LiteBansModule_31[8]) ? LiteBansModule_31[9] : LiteBansModule_31[10]));
+            string2 = LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[5], string4);
+            string2 = LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[6], string5);
+            string2 = LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[7], (Object)(!ObjectUtilities.BaseCoreGenericHandler(string3, LiteBansModule_31[8]) ? LiteBansModule_31[9] : LiteBansModule_31[10]));
             string2 = LiteBansModule_433.LiteBansModule_31.BaseCoreGenericHandler(string2, LiteBansModule_31[11], (Object)("" + o2.LiteBansModule_240() + '?' + o2.LiteBansModule_401()));
         }
         return string2;
@@ -193,15 +193,15 @@ implements CharSequence {
         return SQLiteDriverHandler.BaseCoreGenericHandler(this.plugin);
     }
 
-    public static boolean BaseCoreGenericHandler(String string, Object object) {
-        if (!(object instanceof SQLiteDriverHandler)) {
+    public static boolean BaseCoreGenericHandler(String string, Object targetObj) {
+        if (!(targetObj instanceof SQLiteDriverHandler)) {
             return false;
         }
-        return ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)((SQLiteDriverHandler)object).c());
+        return ObjectUtilities.BaseCoreGenericHandler(string, (Object)targetObj.c());
     }
 
-    public boolean equals(Object object) {
-        return SQLiteDriverHandler.BaseCoreGenericHandler(this.plugin, object);
+    public boolean equals(Object targetObj) {
+        return SQLiteDriverHandler.BaseCoreGenericHandler(this.plugin, targetObj);
     }
 
     private /* synthetic */ SQLiteDriverHandler(String string) {

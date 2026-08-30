@@ -21,7 +21,7 @@ public final class LiteBansModule_268 {
 
     public final Entry BaseCoreGenericHandler(@NotNull PlatformPlugin plugin, @NotNull SilentHandler dZ2) {
         SilentHandler dZ3 = dZ2;
-        return new LiteBansModule_358(plugin, dZ3.BaseCoreGenericHandler(), dZ3.ServerSyncService().c().toString(), dZ3.DatabaseMonitorService(), dZ3.PunishmentTableService(), ((Object)dZ3.LiteBansModule_31()).toString(), dZ3.e(), dZ3.LiteBansModule_433(), dZ3.AsyncBackgroundTask_21(), dZ3.q(), String.valueOf(dZ3.CommandThrottleService()), dZ3.BroadcastService(), dZ3.LiteBansModule_401(), dZ3.m(), dZ3.GnuSparseMapHandler(), dZ3.r(), dZ3.AsyncBackgroundTask_5(), dZ3.LiteBansModule_240(), dZ3.AsyncBackgroundTask_22());
+        return new LiteBansModule_358(plugin, dZ3.BaseCoreGenericHandler(), dZ3.ServerSyncService().c().toString(), dZ3.DatabaseMonitorService(), dZ3.PunishmentTableService(), (dZ3.LiteBansModule_31()).toString(), dZ3.e(), dZ3.LiteBansModule_433(), dZ3.AsyncBackgroundTask_21(), dZ3.q(), String.valueOf(dZ3.CommandThrottleService()), dZ3.BroadcastService(), dZ3.LiteBansModule_401(), dZ3.m(), dZ3.GnuSparseMapHandler(), dZ3.r(), dZ3.AsyncBackgroundTask_5(), dZ3.LiteBansModule_240(), dZ3.AsyncBackgroundTask_22());
     }
 
     public final void BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull PlatformPlugin plugin, @NotNull SilentHandler dZ2) {

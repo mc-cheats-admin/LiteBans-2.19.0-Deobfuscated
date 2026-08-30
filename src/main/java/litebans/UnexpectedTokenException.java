@@ -10,10 +10,10 @@ extends Exception {
     private Object g;
     private int c;
 
-    public UnexpectedTokenException(int n, int n2, Object object) {
+    public UnexpectedTokenException(int n, int n2, Object targetObj) {
         this.c = n;
         this.LiteBansModule_31 = n2;
-        this.g = object;
+        this.g = targetObj;
     }
 
     public String toString() {

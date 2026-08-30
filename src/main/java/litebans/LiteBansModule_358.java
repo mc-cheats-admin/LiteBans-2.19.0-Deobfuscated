@@ -57,15 +57,15 @@ extends Entry {
 
     @Override
     public String getTemplateName() {
-        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
         TemplatesYmlHandler fu2 = configService.AsyncBackgroundTask_21();
         BanHandler a_2 = BanHandler.LiteBansModule_401.BaseCoreGenericHandler(this.getType());
         ObjectUtilities.BaseCoreGenericHandler(a_2);
-        Object object = fu2.BaseCoreGenericHandler(a_2, this.getTemplateID());
-        if (object == null || (object = ((LiteBansModule_65)object).g()) == null) {
-            object = "";
+        Object targetObj = fu2.BaseCoreGenericHandler(a_2, this.getTemplateID());
+        if (targetObj == null || (targetObj = targetObj.g()) == null) {
+            targetObj = "";
         }
-        return object;
+        return targetObj;
     }
 
     @Override

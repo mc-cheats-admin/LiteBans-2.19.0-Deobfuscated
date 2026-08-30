@@ -66,14 +66,14 @@ public final class LiteBansType {
         return n;
     }
 
-    public boolean equals(Object object) {
-        if (this == object) {
+    public boolean equals(Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (object == null || this.getClass() != object.getClass()) {
+        if (targetObj == null || this.getClass() != targetObj.getClass()) {
             return false;
         }
-        LiteBansType gq2 = (LiteBansType)object;
+        LiteBansType gq2 = (LiteBansType)targetObj;
         return Objects.equals(this.BanHandler_2, gq2.BanHandler_2);
     }
 

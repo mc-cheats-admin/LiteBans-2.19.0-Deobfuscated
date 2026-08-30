@@ -32,7 +32,7 @@ extends InputStream {
         }
         int n4 = n2;
         if ((long)n4 > this.plugin) {
-            n4 = (int)this.plugin;
+            n4 = this.plugin;
         }
         if ((n3 = this.LiteBansModule_31.read(byArray, n, n4)) >= 0) {
             this.plugin -= (long)n3;

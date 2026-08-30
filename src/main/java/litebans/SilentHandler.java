@@ -215,7 +215,7 @@ implements Comparable {
                 SilentHandler dZ2 = this;
                 charSequence = (!dZ2.HoverTextFormatter() ? "temp_" : "") + (cz3.HoverTextFormatter() ? "ip" : "") + cz3.ServerSyncService();
 }
-        return stringBuilder.append((Object)charSequence).toString();
+        return stringBuilder.append(charSequence).toString();
     }
 
     /*
@@ -237,12 +237,12 @@ implements Comparable {
     public final void BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, @NotNull CharSequence charSequence) {
         this.Utf8Handler_2 = string;
         this.q = string2;
-        this.m = ((Object)charSequence).toString();
+        this.m = (charSequence).toString();
     }
 
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Entry(type=").append((Object)this.AsyncBackgroundTask_5).append(", uuid=").append(this.LiteBansModule_401).append(", ip=").append(this.e).append(", reason=").append((Object)this.LiteBansModule_31).append(", executorUUID=").append(this.AsyncBackgroundTask_22).append(", executorName=").append(this.LiteBansModule_240).append(", serverScope=").append(this.LiteBansModule_194).append(", serverOrigin=").append(this.g).append(", dateStart=").append(this.BroadcastService).append(", dateEnd=").append(this.PunishmentTableService).append(", template=").append((Object)LiteBansModule_283.LiteBansModule_31(this.i)).append(", silent=");
+        stringBuilder.append("Entry(type=").append(this.AsyncBackgroundTask_5).append(", uuid=").append(this.LiteBansModule_401).append(", ip=").append(this.e).append(", reason=").append(this.LiteBansModule_31).append(", executorUUID=").append(this.AsyncBackgroundTask_22).append(", executorName=").append(this.LiteBansModule_240).append(", serverScope=").append(this.LiteBansModule_194).append(", serverOrigin=").append(this.g).append(", dateStart=").append(this.BroadcastService).append(", dateEnd=").append(this.PunishmentTableService).append(", template=").append(LiteBansModule_283.LiteBansModule_31(this.i)).append(", silent=");
         stringBuilder.append(this.ServerSyncService).append(", ipban=").append(this.CommandThrottleService).append(", active=").append(this.n).append(", SQLiteDriverHandler_4=").append(this.c).append(')');
         return stringBuilder.toString();
     }
@@ -266,36 +266,36 @@ implements Comparable {
         return n;
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof SilentHandler)) {
+        if (!(targetObj instanceof SilentHandler)) {
             return false;
         }
-        SilentHandler dZ2 = (SilentHandler)object;
+        SilentHandler dZ2 = (SilentHandler)targetObj;
         if (this.AsyncBackgroundTask_5 != dZ2.AsyncBackgroundTask_5) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_401, (Object)dZ2.LiteBansModule_401)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_401, dZ2.LiteBansModule_401)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.e, (Object)dZ2.e)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.e, dZ2.e)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_31, dZ2.LiteBansModule_31)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_31, dZ2.LiteBansModule_31)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_22, (Object)dZ2.AsyncBackgroundTask_22)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_22, dZ2.AsyncBackgroundTask_22)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_240, (Object)dZ2.LiteBansModule_240)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_240, dZ2.LiteBansModule_240)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_194, (Object)dZ2.LiteBansModule_194)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_194, dZ2.LiteBansModule_194)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.g, (Object)dZ2.g)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.g, dZ2.g)) {
             return false;
         }
         if (this.BroadcastService != dZ2.BroadcastService) {
@@ -319,8 +319,8 @@ implements Comparable {
         return this.c == dZ2.c;
     }
 
-    public int compareTo(Object object) {
-        return this.plugin((SilentHandler)object);
+    public int compareTo(Object targetObj) {
+        return this.plugintargetObj;
     }
 
     public /* synthetic */ SilentHandler(BanHandler a_2, String string, String string2, CharSequence charSequence, String string3, String string4, String string5, String string6, long l3, long l5, byte by2, boolean flag, boolean flag2, boolean flag3, long l7, LiteBansModule_14 aJ2) {

@@ -12,24 +12,24 @@ extends MessageHandler {
 
     @Override
     public void run() {
-        Object object = new String[]{"litebans.admin", "litebans.unlink"};
-        CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, (String[])object);
-        object = this;
-        ((DatabaseMonitorService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> LitebansAdminHandler_4.BaseCoreGenericHandler(this, arg_0));
+        Object targetObj = new String[]{"litebans.admin", "litebans.unlink"};
+        CommandArgumentUtils.BaseCoreGenericHandler(this, (String[])targetObj);
+        targetObj = this;
+        ((DatabaseMonitorService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> LitebansAdminHandler_4.BaseCoreGenericHandler(this, arg_0));
     }
 
     private static final KotlinUnitHandler BaseCoreGenericHandler(LitebansAdminHandler_4 go2, LiteBansModule_82 ch2) {
-        Object object = MessageHandler.BaseCoreGenericHandler;
+        Object targetObj = MessageHandler.BaseCoreGenericHandler;
         boolean flag = ch2.LiteBansModule_31();
         CharSequence charSequence = MessageKey.ServerEventListener;
-        ChatFormatter chatFormatter = object;
+        ChatFormatter chatFormatter = targetObj;
         if (flag) {
             ChatFormatter fo_03 = chatFormatter;
             fo_03.BaseCoreGenericHandler(charSequence);
             throw new CommandExitException();
         }
-        object = go2.AsyncBackgroundTask_5[1];
-        LiteBansModule_297 iA2 = ch2.c((String)object);
+        targetObj = go2.AsyncBackgroundTask_5[1];
+        LiteBansModule_297 iA2 = ch2.ctargetObj;
         if (iA2 == null) {
             MessageHandler.BaseCoreGenericHandler.BaseCoreGenericHandler(MessageKey.aN);
             throw new CommandExitException();

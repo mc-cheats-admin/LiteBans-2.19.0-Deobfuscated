@@ -25,16 +25,16 @@ implements Comparable {
         return LiteBansModule_72.AsyncBackgroundTask_5(this.LiteBansModule_31);
     }
 
-    public static boolean BaseCoreGenericHandler(int n, Object object) {
-        if (!(object instanceof LiteBansModule_72)) {
+    public static boolean BaseCoreGenericHandler(int n, Object targetObj) {
+        if (!(targetObj instanceof LiteBansModule_72)) {
             return false;
         }
-        int n2 = ((LiteBansModule_72)object).BaseCoreGenericHandler();
+        int n2 = targetObj.BaseCoreGenericHandler();
         return n == n2;
     }
 
-    public boolean equals(Object object) {
-        return LiteBansModule_72.BaseCoreGenericHandler(this.LiteBansModule_31, object);
+    public boolean equals(Object targetObj) {
+        return LiteBansModule_72.BaseCoreGenericHandler(this.LiteBansModule_31, targetObj);
     }
 
     private /* synthetic */ LiteBansModule_72(int n) {
@@ -53,9 +53,9 @@ implements Comparable {
         return this.LiteBansModule_31;
     }
 
-    public int compareTo(Object object) {
+    public int compareTo(Object targetObj) {
         LiteBansModule_72 c_02 = this;
-        int n = ((LiteBansModule_72)object).BaseCoreGenericHandler();
+        int n = targetObj.BaseCoreGenericHandler();
         return LiteBansModule_150.BaseCoreGenericHandler(c_02.BaseCoreGenericHandler(), n);
     }
 

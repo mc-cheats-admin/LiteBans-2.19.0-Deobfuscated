@@ -12,46 +12,46 @@ implements Serializable {
     public static final LiteralHandler LiteBansModule_31;
     private final Pattern c;
     public NativepatternHandler(@NotNull Pattern pattern) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)pattern, "nativePattern");
+        ObjectUtilities.BaseCoreGenericHandler(pattern, "nativePattern");
         this.c = pattern;
     }
 
     public NativepatternHandler(@NotNull String string) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "pattern");
+        ObjectUtilities.BaseCoreGenericHandler(string, "pattern");
         this(Pattern.compile(string));
     }
 
     public final boolean BaseCoreGenericHandler(@NotNull CharSequence charSequence) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "input");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "input");
         return this.c.matcher(charSequence).matches();
     }
 
     public final String LiteBansModule_31(@NotNull CharSequence charSequence, @NotNull String string) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "input");
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "replacement");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "input");
+        ObjectUtilities.BaseCoreGenericHandler(string, "replacement");
         return this.c.matcher(charSequence).replaceAll(string);
     }
 
     public final String BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull String string) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "input");
-        ObjectUtilities.BaseCoreGenericHandler((Object)string, "replacement");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "input");
+        ObjectUtilities.BaseCoreGenericHandler(string, "replacement");
         return this.c.matcher(charSequence).replaceFirst(string);
     }
 
     public final List BaseCoreGenericHandler(@NotNull CharSequence charSequence, int n) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)charSequence, "input");
+        ObjectUtilities.BaseCoreGenericHandler(charSequence, "input");
         StringUtilities.BaseCoreGenericHandler(n);
         Matcher matcher = this.c.matcher(charSequence);
         if (n == 1 || !matcher.find()) {
-            return CollectionUtilities.BaseCoreGenericHandler(((Object)charSequence).toString());
+            return CollectionUtilities.BaseCoreGenericHandler((charSequence).toString());
         }
         ArrayList<String> arrayList = new ArrayList<String>(n > 0 ? LiteBansModule_20.AsyncBackgroundTask_5(n, 10) : 10);
         int n3 = n - 1;
         do {
-            arrayList.add(((Object)charSequence.subSequence(n2, matcher.start())).toString());
+            arrayList.add((charSequence.subSequence(n2, matcher.start())).toString());
             n2 = matcher.end();
         } while ((n3 < 0 || arrayList.size() != n3) && matcher.find());
-        arrayList.add(((Object)charSequence.subSequence(n2, charSequence.length())).toString());
+        arrayList.add((charSequence.subSequence(n2, charSequence.length())).toString());
         return arrayList;
     }
 

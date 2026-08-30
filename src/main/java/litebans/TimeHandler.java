@@ -10,7 +10,7 @@ extends DescHandler {
 
     @Override
     public void e() {
-        this.plugin(SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler(this.plugin(), (LiteBansModule_178)this.n.BaseCoreGenericHandler));
+        this.plugin(SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler(this.plugin(), this.n.BaseCoreGenericHandler));
     }
 
     private static final void BaseCoreGenericHandler() {

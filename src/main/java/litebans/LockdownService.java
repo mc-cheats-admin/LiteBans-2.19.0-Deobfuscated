@@ -21,7 +21,7 @@ extends AbstractModule {
 
     @Override
     public void e() {
-        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
         configService.e();
         new MetricsService(this.plugin).BaseCoreGenericHandler();
         if (configService.LiteBansModule_194().PunishmentTableService()) {
@@ -30,7 +30,7 @@ extends AbstractModule {
 
     @Override
     public LiteBansModule_426 BaseCoreGenericHandler(@NotNull LiteBansModule_360 commandContext) {
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)commandContext.getName(), (Object)"lockdown")) {
+        if (ObjectUtilities.BaseCoreGenericHandler(commandContext.getName(), (Object)"lockdown")) {
             return new LockdownCommandHandler(this.plugin);
         }
         return (LiteBansModule_426)super.BaseCoreGenericHandler(commandContext);

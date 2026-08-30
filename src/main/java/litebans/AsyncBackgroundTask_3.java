@@ -19,9 +19,9 @@ implements Runnable {
     }
 
     private final int BaseCoreGenericHandler() {
-        Object object = this.LiteBansModule_31[0];
-        ObjectUtilities.LiteBansModule_31(object, "");
-        String string = (String)object;
+        Object targetObj = this.LiteBansModule_31[0];
+        ObjectUtilities.LiteBansModule_31(targetObj, "");
+        String string = (String)targetObj;
         Object[] objectArray = new Object[]{this.LiteBansModule_31[1]};
         ConfigService.GnuSparseMapHandler.BaseCoreGenericHandler("/dev/null", string, "/dev/null", objectArray);
         return 0;

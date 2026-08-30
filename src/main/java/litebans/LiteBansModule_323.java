@@ -93,11 +93,11 @@ implements Serializable {
         return LiteBansModule_323.BaseCoreGenericHandler(byArray, 0);
     }
 
-    public boolean equals(Object object) {
-        if (object == null || !(object instanceof LiteBansModule_323)) {
+    public boolean equals(Object targetObj) {
+        if (targetObj == null || !(targetObj instanceof LiteBansModule_323)) {
             return false;
         }
-        return this.LiteBansModule_240.equals(((LiteBansModule_323)object).BaseCoreGenericHandler());
+        return this.LiteBansModule_240.equals(targetObj.BaseCoreGenericHandler());
     }
 
     public int hashCode() {

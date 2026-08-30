@@ -13,8 +13,8 @@ implements LiteBansModule_88 {
     private final ConfigService AsyncBackgroundTask_5;
     public ServerEventListener(@NotNull PlatformPlugin plugin) {
         this.LiteBansModule_31 = plugin;
-        this.c = (BroadcastService)this.LiteBansModule_31.BaseCoreGenericHandler(BroadcastService.class);
-        this.AsyncBackgroundTask_5 = (ConfigService)this.LiteBansModule_31.BaseCoreGenericHandler(ConfigService.class);
+        this.c = this.LiteBansModule_31.BaseCoreGenericHandler(BroadcastService.class);
+        this.AsyncBackgroundTask_5 = this.LiteBansModule_31.BaseCoreGenericHandler(ConfigService.class);
     }
 
     public final BroadcastService c() {
@@ -69,13 +69,13 @@ implements LiteBansModule_88 {
             return;
         }
         if (this.AsyncBackgroundTask_5.B() != null) {
-            Object object = this.AsyncBackgroundTask_5.B();
-            ObjectUtilities.LiteBansModule_31(object, "");
-            AtomicBoolean atomicBoolean = ((NullHandler_8)object).c();
+            Object targetObj = this.AsyncBackgroundTask_5.B();
+            ObjectUtilities.LiteBansModule_31(targetObj, "");
+            AtomicBoolean atomicBoolean = targetObj.c();
             if (atomicBoolean.compareAndSet(false, true)) {
-                Object object2 = this.AsyncBackgroundTask_5.B();
-                ObjectUtilities.LiteBansModule_31(object2, "");
-                ((NullHandler_8)object2).BaseCoreGenericHandler(this.AsyncBackgroundTask_5.AsyncBackgroundTask_22());
+                Object contextObj = this.AsyncBackgroundTask_5.B();
+                ObjectUtilities.LiteBansModule_31(contextObj, "");
+                ((NullHandler_8)contextObj).BaseCoreGenericHandler(this.AsyncBackgroundTask_5.AsyncBackgroundTask_22());
 }
 
     public ServerEventListener AsyncBackgroundTask_5() {

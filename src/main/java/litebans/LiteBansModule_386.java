@@ -486,25 +486,25 @@ implements ResultSet {
     }
 
     @Override
-    public void updateObject(int n, @Nullable Object object, int n2) {
+    public void updateObject(int n, @Nullable Object targetObj, int n2) {
         this.plugin();
         throw new CommandExitException();
     }
 
     @Override
-    public void updateObject(int n, @Nullable Object object) {
+    public void updateObject(int n, @Nullable Object targetObj) {
         this.plugin();
         throw new CommandExitException();
     }
 
     @Override
-    public void updateObject(@Nullable String string, @Nullable Object object, int n) {
+    public void updateObject(@Nullable String string, @Nullable Object targetObj, int n) {
         this.plugin();
         throw new CommandExitException();
     }
 
     @Override
-    public void updateObject(@Nullable String string, @Nullable Object object) {
+    public void updateObject(@Nullable String string, @Nullable Object targetObj) {
         this.plugin();
         throw new CommandExitException();
     }

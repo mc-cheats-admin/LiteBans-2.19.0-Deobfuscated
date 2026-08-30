@@ -163,7 +163,7 @@ implements LiteBansModule_251 {
                 int n4 = this.LiteBansModule_31();
                 if (n4 > 0) {
                     LiteBansModule_248 h92 = this.BroadcastService;
-                    LiteBansModule_248.LiteBansModule_31(h92, LiteBansModule_248.c(h92) + (long)this.z.limit());
+                    LiteBansModule_248.LiteBansModule_31(h92, LiteBansModule_248.c(h92) + this.z.limit());
                 } else {
                     if (n4 != -1) break;
                     return -1;
@@ -195,7 +195,7 @@ implements LiteBansModule_251 {
             int n;
             for (l5 = 0L; l5 < l3; l5 += (long)n) {
                 long l7 = l3 - l5;
-                n = this.read(this.e, 0, (int)((long)this.e.length > l7 ? l7 : (long)this.e.length));
+                n = this.read(this.e, 0, (int)(this.e.length > l7 ? l7 : this.e.length));
                 if (n != -1) continue;
                 return l5;
             }
@@ -314,7 +314,7 @@ implements LiteBansModule_251 {
     }
 
     private final void BaseCoreGenericHandler(byte[] byArray, int n, int n2) {
-        ((PushbackInputStream)this.q).unread(byArray, n, n2);
+        (this.q).unread(byArray, n, n2);
         this.plugin((long)n2);
     }
 

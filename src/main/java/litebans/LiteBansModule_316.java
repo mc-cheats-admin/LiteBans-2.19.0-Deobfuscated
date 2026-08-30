@@ -58,14 +58,14 @@ public class LiteBansModule_316 {
         return n;
     }
 
-    public boolean equals(Object object) {
-        if (this == object) {
+    public boolean equals(Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (object == null || !object.getClass().equals(this.getClass())) {
+        if (targetObj == null || !targetObj.getClass().equals(this.getClass())) {
             return false;
         }
-        LiteBansModule_316 iq_02 = (LiteBansModule_316)object;
+        LiteBansModule_316 iq_02 = (LiteBansModule_316)targetObj;
         if (this.Utf8Handler_2 != iq_02.Utf8Handler_2) {
             return false;
         }

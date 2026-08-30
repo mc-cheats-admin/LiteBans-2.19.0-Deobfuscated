@@ -10,13 +10,13 @@ extends BuilderactionHandler {
     }
 
     public static final Set BaseCoreGenericHandler(@NotNull Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "elements");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "elements");
         return ArrayUtilities.BaseCoreGenericHandler(objectArray);
     }
 
     public static final Set BaseCoreGenericHandler(@NotNull Set set) {
         Set set2;
-        ObjectUtilities.BaseCoreGenericHandler((Object)set, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(set, "<this>");
         switch (set.size()) {
             case 0: {
                 set2 = LiteBansModule_5.c();

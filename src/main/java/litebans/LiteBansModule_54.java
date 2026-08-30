@@ -7,11 +7,11 @@ import java.io.Writer;
 import java.util.LinkedHashMap;
 public class LiteBansModule_54
 extends LiteBansModule_47 {
-    private final Gson LiteBansModule_31 = new GsonBuilder().serializeNulls().setPrettyPrinting().registerTypeAdapter(NullHandler_4.class, (Object)new LiteBansModule_106(this)).create();
+    private final Gson LiteBansModule_31 = new GsonBuilder().serializeNulls().setPrettyPrinting().registerTypeAdapter(NullHandler_4.class, new LiteBansModule_106(this)).create();
 
     @Override
     public void BaseCoreGenericHandler(NullHandler_4 ie_02, Writer writer) {
-        this.LiteBansModule_31.toJson((Object)ie_02.AsyncBackgroundTask_5, (Appendable)writer);
+        this.LiteBansModule_31.toJson(ie_02.AsyncBackgroundTask_5, (Appendable)writer);
     }
 
     @Override
@@ -21,7 +21,7 @@ extends LiteBansModule_47 {
 
     @Override
     public NullHandler_4 BaseCoreGenericHandler(Reader reader, NullHandler_4 ie_02) {
-        LinkedHashMap linkedHashMap = (LinkedHashMap)this.LiteBansModule_31.fromJson(reader, LinkedHashMap.class);
+        LinkedHashMap linkedHashMap = this.LiteBansModule_31.fromJson(reader, LinkedHashMap.class);
         if (linkedHashMap == null) {
             linkedHashMap = new LinkedHashMap();
         }

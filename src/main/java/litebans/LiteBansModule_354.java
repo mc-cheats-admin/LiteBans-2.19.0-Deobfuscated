@@ -7,9 +7,9 @@ public final class LiteBansModule_354
 implements Serializable {
     private final Object LiteBansModule_31;
     private final Object c;
-    public LiteBansModule_354(Object object, Object object2) {
-        this.LiteBansModule_31 = object;
-        this.c = object2;
+    public LiteBansModule_354(Object targetObj, Object contextObj) {
+        this.LiteBansModule_31 = targetObj;
+        this.c = contextObj;
     }
 
     public final Object LiteBansModule_31() {
@@ -38,14 +38,14 @@ implements Serializable {
         return n;
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof LiteBansModule_354)) {
+        if (!(targetObj instanceof LiteBansModule_354)) {
             return false;
         }
-        LiteBansModule_354 jT2 = (LiteBansModule_354)object;
+        LiteBansModule_354 jT2 = (LiteBansModule_354)targetObj;
         if (!ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_31, jT2.LiteBansModule_31)) {
             return false;
         }

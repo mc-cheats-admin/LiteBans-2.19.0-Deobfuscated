@@ -21,25 +21,25 @@ implements CommandSenderWrapper {
     private UUID GnuSparseMapHandler = LiteBansModule_31;
     private String LiteBansModule_240 = null;
     private String LiteBansModule_194;
-    public BungeecordHandler_3(ConfigYmlHandler fabricPlugin, Object object, @Nullable Supplier supplier) {
+    public BungeecordHandler_3(ConfigYmlHandler fabricPlugin, Object targetObj, @Nullable Supplier supplier) {
         this.AsyncBackgroundTask_5 = fabricPlugin;
-        this.e = new WeakReference<Object>(object);
+        this.e = new WeakReference<Object>(targetObj);
         this.c = supplier;
-        boolean flag = this.Utf8Handler_2 = object instanceof ServerPlayer || object instanceof CommandSourceStack && ((CommandSourceStack)object).isPlayer();
-        this.i = this.Utf8Handler_2 && object instanceof ServerPlayer ? ((ServerPlayer)object).getPlainTextName() : (object instanceof CommandSourceStack ? ((CommandSourceStack)object).getTextName() : "?");
+        boolean flag = this.Utf8Handler_2 = targetObj instanceof ServerPlayer || targetObj instanceof CommandSourceStack && targetObj.isPlayer();
+        this.i = this.Utf8Handler_2 && targetObj instanceof ServerPlayer ? targetObj.getPlainTextName() : (targetObj instanceof CommandSourceStack ? targetObj.getTextName() : "?");
     }
 
-    public boolean equals(Object object) {
-        return this == object || object instanceof BungeecordHandler_3 && ((BungeecordHandler_3)object).AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
+    public boolean equals(Object targetObj) {
+        return this == targetObj || targetObj instanceof BungeecordHandler_3 && targetObj.AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
     }
 
     @Override
     public void c(@NotNull String string) {
-        Object object = this.c();
-        if (!(object instanceof CommandSourceStack) || string.isEmpty()) {
+        Object targetObj = this.c();
+        if (!(targetObj instanceof CommandSourceStack) || string.isEmpty()) {
             return;
         }
-        this.AsyncBackgroundTask_5.g().LiteBansModule_31(object, string);
+        this.AsyncBackgroundTask_5.g().LiteBansModule_31(targetObj, string);
     }
 
     @Override
@@ -60,8 +60,8 @@ implements CommandSenderWrapper {
     public @Nullable String LiteBansModule_31() {
         String string = this.LiteBansModule_194;
         if (string == null) {
-            Object object = this.c();
-            this.LiteBansModule_194 = string = this.AsyncBackgroundTask_5.g().BaseCoreGenericHandler(object);
+            Object targetObj = this.c();
+            this.LiteBansModule_194 = string = this.AsyncBackgroundTask_5.g().BaseCoreGenericHandler(targetObj);
         }
         return string;
     }
@@ -79,9 +79,8 @@ implements CommandSenderWrapper {
     @Override
     public @NonNull UUID AsyncBackgroundTask_5() {
         UUID uUID;
-        Object object;
         UUID uUID2 = this.GnuSparseMapHandler;
-        if (uUID2.equals(LiteBansModule_31) && this.Utf8Handler_2 && (object = this.c()) != null && (uUID = this.LiteBansModule_31().getUUID()) != null) {
+        if (uUID2.equals(LiteBansModule_31) && this.Utf8Handler_2 && (targetObj = this.c()) != null && (uUID = this.LiteBansModule_31().getUUID()) != null) {
             this.GnuSparseMapHandler = uUID;
             return uUID;
         }
@@ -99,17 +98,17 @@ implements CommandSenderWrapper {
         if (string == null) {
             return true;
         }
-        Object object = this.c();
-        if (object == null) {
+        Object targetObj = this.c();
+        if (targetObj == null) {
             return false;
         }
-        if (!this.AsyncBackgroundTask_5.AsyncBackgroundTask_5() || !this.Utf8Handler_2 && object instanceof CommandSourceStack) {
-            return this.AsyncBackgroundTask_5.g().AsyncBackgroundTask_5(object, string);
+        if (!this.AsyncBackgroundTask_5.AsyncBackgroundTask_5() || !this.Utf8Handler_2 && targetObj instanceof CommandSourceStack) {
+            return this.AsyncBackgroundTask_5.g().AsyncBackgroundTask_5(targetObj, string);
         }
-        if (!(object instanceof CommandSourceStack) || !this.GnuSparseMapHandler()) {
+        if (!(targetObj instanceof CommandSourceStack) || !this.GnuSparseMapHandler()) {
             return false;
         }
-        return (Boolean)Permissions.check((UUID)this.AsyncBackgroundTask_5(), (String)string).get();
+        return (Boolean)Permissions.check(this.AsyncBackgroundTask_5(), (String)string).get();
     }
 
     @Override
@@ -119,15 +118,15 @@ implements CommandSenderWrapper {
 
     @Override
     public boolean GnuSparseMapHandler() {
-        Object object = this.c();
-        if (this.Utf8Handler_2 && object != null) {
+        Object targetObj = this.c();
+        if (this.Utf8Handler_2 && targetObj != null) {
             return !this.LiteBansModule_31().hasDisconnected();
         }
-        return object != null;
+        return targetObj != null;
     }
 
     private final ServerPlayer LiteBansModule_31() {
-        CommandSourceStack commandSourceStack = (CommandSourceStack)this.c();
+        CommandSourceStack commandSourceStack = this.c();
         if (commandSourceStack == null) {
             return null;
         }
@@ -144,29 +143,29 @@ implements CommandSenderWrapper {
         if (string == null) {
             throw new NullPointerException("reason is marked non-null but is null");
         }
-        Object object = this.c();
-        if (object == null) {
+        Object targetObj = this.c();
+        if (targetObj == null) {
             return;
         }
         if (this.e()) {
             if (this.AsyncBackgroundTask_5.ServerSyncService()) {
-                this.AsyncBackgroundTask_5.g().BaseCoreGenericHandler((Object)this.LiteBansModule_31(), string);
+                this.AsyncBackgroundTask_5.g().BaseCoreGenericHandler(this.LiteBansModule_31(), string);
             } else {
                 this.AsyncBackgroundTask_5.c(() -> this.AsyncBackgroundTask_5(string));
 }
 
     @Override
     public void LiteBansModule_31(String string) {
-        Object object = this.c();
-        this.AsyncBackgroundTask_5.g().c(object, string);
+        Object targetObj = this.c();
+        this.AsyncBackgroundTask_5.g().c(targetObj, string);
     }
 
     @Override
     public void BaseCoreGenericHandler(String string) {
         if (!this.Utf8Handler_2) {
-            Object object = this.c();
-            if (object != null) {
-                ((CommandSourceStack)object).sendSystemMessage((Component)this.AsyncBackgroundTask_5.g().AsyncBackgroundTask_5().BaseCoreGenericHandler(BlackHandler.BaseCoreGenericHandler((CharSequence)string)));
+            Object targetObj = this.c();
+            if (targetObj != null) {
+                targetObj.sendSystemMessage(this.AsyncBackgroundTask_5.g().AsyncBackgroundTask_5().BaseCoreGenericHandler(BlackHandler.BaseCoreGenericHandler(string)));
 } else {
             V116Handler g82 = V116Handler.c;
             if (this.AsyncBackgroundTask_5.g().LiteBansModule_31() >= 770) {
@@ -177,8 +176,8 @@ implements CommandSenderWrapper {
 
     @Override
     public void BaseCoreGenericHandler(String string, byte[] byArray) {
-        Object object = this.c();
-        if (object == null) {
+        Object targetObj = this.c();
+        if (targetObj == null) {
             return;
         }
         if (this.e()) {

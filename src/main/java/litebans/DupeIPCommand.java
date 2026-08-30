@@ -17,13 +17,10 @@ extends AbstractCommand {
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper v1, @NotNull String[] v2) {
 {
-            arg1 = this;
-            arg2 = CommandArgumentUtils.BaseCoreGenericHandler(arg1, (String)ArrayUtilities.LiteBansModule_31(v2));
-            arg3 = this;
-            arg4 = arg3;
+                        arg2 = CommandArgumentUtils.BaseCoreGenericHandler(arg1, (String)ArrayUtilities.LiteBansModule_31(v2));
+                        arg4 = arg3;
             arg5 = LiteBansModule_389.BaseCoreGenericHandler(v2, 1, ((ConfigService)arg4.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().HoverTextFormatter());
-            arg3 = this;
-            arg3 = (DatabaseMonitorService)arg3.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+                        arg3 = (DatabaseMonitorService)arg3.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
             try {
                 arg4 = arg3.LiteBansModule_194();
                 arg6 = (Closeable)arg4;
@@ -34,8 +31,7 @@ extends AbstractCommand {
                             arg9 = new LiteBansModule_206(arg2, (LiteBansModule_82)arg8, v1, false, arg5).i();
                             if (arg9.e()) break;
                             if (v1.LiteBansModule_194()) break;
-                            arg10 = this;
-                            arg11 = arg10;
+                                                        arg11 = arg10;
                             if (((ConfigService)arg11.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().O()) ** GOTO lbl-1000
                         }
                         arg10 = v1;
@@ -46,8 +42,8 @@ extends AbstractCommand {
                         } else {
                         }
                         arg14 = v0;
-                        arg10 = arg9.LiteBansModule_194() != false ? MessageKey.PoolBase.BaseCoreGenericHandler("num", (Object)arg9.Utf8Handler_2()) : arg9.GnuSparseMapHandler();
-                        arg15 = arg14 != false ? (CharSequence)MessageKey.P : (CharSequence)MessageKey.BanHandler_4;
+                        arg10 = arg9.LiteBansModule_194() != false ? MessageKey.PoolBase.BaseCoreGenericHandler("num", arg9.Utf8Handler_2()) : arg9.GnuSparseMapHandler();
+                        arg15 = arg14 != false ? MessageKey.P : MessageKey.BanHandler_4;
                         v1 = GeoIPLookupService.BaseCoreGenericHandler(arg15, (CharSequence)"ip", arg10);
                         v2 = arg9.LiteBansModule_401();
                         ObjectUtilities.BaseCoreGenericHandler(v2);

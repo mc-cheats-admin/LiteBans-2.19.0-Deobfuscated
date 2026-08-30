@@ -18,9 +18,9 @@ implements LiteBansModule_426 {
     private final BroadcastService LiteBansModule_31;
     public MetricsService(@NotNull PlatformPlugin plugin) {
         this.c = plugin;
-        this.e = (AsyncBackgroundTask_22)this.c.BaseCoreGenericHandler(AsyncBackgroundTask_22.class);
-        this.AsyncBackgroundTask_5 = (ConfigService)this.c.BaseCoreGenericHandler(ConfigService.class);
-        this.LiteBansModule_31 = (BroadcastService)this.c.BaseCoreGenericHandler(BroadcastService.class);
+        this.e = this.c.BaseCoreGenericHandler(AsyncBackgroundTask_22.class);
+        this.AsyncBackgroundTask_5 = this.c.BaseCoreGenericHandler(ConfigService.class);
+        this.LiteBansModule_31 = this.c.BaseCoreGenericHandler(BroadcastService.class);
         this.AsyncBackgroundTask_5.e();
     }
 
@@ -48,7 +48,7 @@ implements LiteBansModule_426 {
         PlatformPlugin plugin = this.c;
         ObjectUtilities.LiteBansModule_31(plugin, "");
         loginEvent.registerIntent((Plugin)((BungeePlugin)plugin));
-        ((BungeePlugin)this.c).BaseCoreGenericHandler(() -> MetricsService.BaseCoreGenericHandler(this, loginEvent));
+        (this.c).BaseCoreGenericHandler(() -> MetricsService.BaseCoreGenericHandler(this, loginEvent));
     }
 
     @EventHandler
@@ -60,25 +60,24 @@ implements LiteBansModule_426 {
     @EventHandler
     public final void BaseCoreGenericHandler(@NotNull ServerConnectedEvent serverConnectedEvent) {
         Server server;
-        Object object;
         String string;
         CommandSenderWrapper sender = this.c.BaseCoreGenericHandler(serverConnectedEvent.getPlayer());
         List list = this.AsyncBackgroundTask_5.LiteBansModule_194().aj();
-        if (list.contains(string = ((String)(object = (server = serverConnectedEvent.getServer()).getInfo().getName())).toLowerCase(Locale.ENGLISH))) {
+        if (list.contains(string = ((String)(targetObj = (server = serverConnectedEvent.getServer()).getInfo().getName())).toLowerCase(Locale.ENGLISH))) {
             return;
         }
-        object = sender;
-        new LiteBansModule_221(this.c, object.i(), object.BaseCoreGenericHandler(), object.LiteBansModule_31()).run();
+        targetObj = sender;
+        new LiteBansModule_221(this.c, targetObj.i(), targetObj.BaseCoreGenericHandler(), targetObj.LiteBansModule_31()).run();
         ObjectUtilities.BaseCoreGenericHandler(sender);
-        Object object2 = sender;
-        Object object3 = "litebans.exempt.dupeip_join";
-        CommandSenderWrapper jv_03 = object2;
-        if (!jv_03.e((String)object3)) {
-            object2 = this.e;
-            ObjectUtilities.BaseCoreGenericHandler(object);
-            object3 = object;
+        Object contextObj = sender;
+        Object resultObj = "litebans.exempt.dupeip_join";
+        CommandSenderWrapper senderWrapper = contextObj;
+        if (!senderWrapper.ethis) {
+            contextObj = this.e;
+            ObjectUtilities.BaseCoreGenericHandler(targetObj);
+            resultObj = targetObj;
             flag2 = false;
-            ((AsyncBackgroundTask_22)object2).BaseCoreGenericHandler(object3.i(), object3.BaseCoreGenericHandler(), object3.LiteBansModule_31());
+            ((AsyncBackgroundTask_22)contextObj).BaseCoreGenericHandler(resultObj.i(), resultObj.BaseCoreGenericHandler(), resultObj.LiteBansModule_31());
 }
 
     @Override

@@ -14,7 +14,7 @@ implements LiteBansModule_51 {
 
     public LiteBansModule_364(@NotNull PlatformPlugin plugin) {
         this.LiteBansModule_31 = plugin;
-        this.plugin = (PunishmentTableService)this.LiteBansModule_31.BaseCoreGenericHandler(PunishmentTableService.class);
+        this.plugin = this.LiteBansModule_31.BaseCoreGenericHandler(PunishmentTableService.class);
     }
 
     public final PlatformPlugin BaseCoreGenericHandler() {
@@ -35,7 +35,7 @@ implements LiteBansModule_51 {
         LiteBansModule_70 c92 = new LiteBansModule_70(playerChatMessage, false, 2, null);
         TestHandler_2 f82 = this.plugin.BaseCoreGenericHandler();
         ObjectUtilities.BaseCoreGenericHandler(sender);
-        f82.BaseCoreGenericHandler((Object)c92, string, sender, true);
+        f82.BaseCoreGenericHandler(c92, string, sender, true);
         return !c92.BaseCoreGenericHandler();
     }
 

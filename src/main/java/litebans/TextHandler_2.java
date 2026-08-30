@@ -33,8 +33,8 @@ JsonDeserializer {
         return jsonObject;
     }
 
-    public JsonElement serialize(Object object, Type type, JsonSerializationContext jsonSerializationContext) {
-        return this.plugin((HttpHandler)object, type, jsonSerializationContext);
+    public JsonElement serialize(Object targetObj, Type type, JsonSerializationContext jsonSerializationContext) {
+        return this.plugin((HttpHandler)targetObj, type, jsonSerializationContext);
     }
 
     public Object deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) {

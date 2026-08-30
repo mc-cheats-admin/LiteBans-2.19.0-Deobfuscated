@@ -11,7 +11,7 @@ implements Represent {
         this.plugin = dw_02;
     }
 
-    public Node representData(Object object) {
-        return this.plugin.represent(((NullHandler_4)object).AsyncBackgroundTask_5);
+    public Node representData(Object targetObj) {
+        return this.plugin.represent(targetObj.AsyncBackgroundTask_5);
 }
 

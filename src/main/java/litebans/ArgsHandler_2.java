@@ -42,10 +42,10 @@ implements LiteBansModule_98 {
     }
 
     @Override
-    public void BaseCoreGenericHandler(Object object, String string) {
+    public void BaseCoreGenericHandler(Object targetObj, String string) {
         int n = this.LiteBansModule_31();
         V116Handler g82 = n >= 770 ? V116Handler.BaseCoreGenericHandler : V116Handler.c;
-        ((class_3222)object).field_13987.method_52396((class_2561)this.AsyncBackgroundTask_5().LiteBansModule_31(LiteBansModule_164.BaseCoreGenericHandler(string, g82)));
+        targetObj.field_13987.method_52396(this.AsyncBackgroundTask_5().LiteBansModule_31(LiteBansModule_164.BaseCoreGenericHandler(string, g82)));
     }
 
     @Override
@@ -54,20 +54,20 @@ implements LiteBansModule_98 {
     }
 
     @Override
-    public String BaseCoreGenericHandler(Object object) {
+    public String BaseCoreGenericHandler(Object targetObj) {
         InetAddress inetAddress;
         SocketAddress socketAddress;
-        if (object instanceof class_2168) {
-            class_3222 class_32222 = ((class_2168)object).method_44023();
+        if (targetObj instanceof class_2168) {
+            class_3222 class_32222 = targetObj.method_44023();
             if (class_32222 == null) {
                 return null;
             }
             return this.plugin(class_32222.field_13987);
         }
-        if (object instanceof class_3244 && (socketAddress = (InetSocketAddress)((class_3244)object).method_48107()) != null && (inetAddress = ((InetSocketAddress)socketAddress).getAddress()) != null) {
+        if (targetObj instanceof class_3244 && (socketAddress = (InetSocketAddress)targetObj.method_48107()) != null && (inetAddress = ((InetSocketAddress)socketAddress).getAddress()) != null) {
             return inetAddress.getHostAddress();
         }
-        if (object instanceof class_2535 && (socketAddress = ((class_2535)object).method_10755()) instanceof InetSocketAddress && (inetAddress = ((InetSocketAddress)socketAddress).getAddress()) != null) {
+        if (targetObj instanceof class_2535 && (socketAddress = targetObj.method_10755()) instanceof InetSocketAddress && (inetAddress = ((InetSocketAddress)socketAddress).getAddress()) != null) {
             return inetAddress.getHostAddress();
         }
         return null;
@@ -98,8 +98,8 @@ implements LiteBansModule_98 {
     }
 
     @Override
-    public void LiteBansModule_31(Object object, String string) {
-        this.c.method_3734().method_44252((class_2168)object, string);
+    public void LiteBansModule_31(Object targetObj, String string) {
+        this.c.method_3734().method_44252((class_2168)targetObj, string);
     }
 
     @Override
@@ -113,43 +113,43 @@ implements LiteBansModule_98 {
 }
 
     @Override
-    public Object AsyncBackgroundTask_5(Object object) {
-        if (object instanceof class_3222) {
-            return ((class_3222)object).method_64396();
+    public Object AsyncBackgroundTask_5(Object targetObj) {
+        if (targetObj instanceof class_3222) {
+            return targetObj.method_64396();
         }
-        return object;
+        return targetObj;
     }
 
     @Override
-    public void c(Object object, String string) {
-        if (object instanceof class_2168) {
-            ((class_2168)object).method_45068((class_2561)this.AsyncBackgroundTask_5().LiteBansModule_31(string));
+    public void c(Object targetObj, String string) {
+        if (targetObj instanceof class_2168) {
+            targetObj.method_45068(this.AsyncBackgroundTask_5().LiteBansModule_31(string));
 }
 
     @Override
-    public void BaseCoreGenericHandler(Object object, String string, byte[] byArray) {
-        LiteBansModule_157.BaseCoreGenericHandler(object, string, byArray);
+    public void BaseCoreGenericHandler(Object targetObj, String string, byte[] byArray) {
+        LiteBansModule_157.BaseCoreGenericHandler(targetObj, string, byArray);
     }
 
     @Override
-    public CommandSenderWrapper c(Object object) {
-        String string = (object = this.AsyncBackgroundTask_5(object)) instanceof class_2168 ? ((class_2168)object).method_9214() : object.toString();
-        return (CommandSenderWrapper)((ConfigYmlHandler)this.AsyncBackgroundTask_5).BaseCoreGenericHandler().LiteBansModule_31.remove(string);
+    public CommandSenderWrapper c(Object targetObj) {
+        String string = (targetObj = this.AsyncBackgroundTask_5(targetObj)) instanceof class_2168 ? targetObj.method_9214() : targetObj.toString();
+        return (CommandSenderWrapper)(this.AsyncBackgroundTask_5).BaseCoreGenericHandler().LiteBansModule_31.remove(string);
     }
 
     @Override
-    public CommandSenderWrapper LiteBansModule_31(Object object) {
-        return this.plugin(object, (Supplier)null);
+    public CommandSenderWrapper LiteBansModule_31(Object targetObj) {
+        return this.plugin(targetObj, (Supplier)null);
     }
 
     @Override
-    public CommandSenderWrapper BaseCoreGenericHandler(Object object, @Nullable Supplier supplier) {
-        LiteBansCore core = ((ConfigYmlHandler)this.AsyncBackgroundTask_5).BaseCoreGenericHandler();
+    public CommandSenderWrapper BaseCoreGenericHandler(Object targetObj, @Nullable Supplier supplier) {
+        LiteBansCore core = (this.AsyncBackgroundTask_5).BaseCoreGenericHandler();
         Map map = core.LiteBansModule_31;
-        String string = (object = this.AsyncBackgroundTask_5(object)) instanceof class_2168 ? ((class_2168)object).method_9214() : object.toString();
+        String string = (targetObj = this.AsyncBackgroundTask_5(targetObj)) instanceof class_2168 ? targetObj.method_9214() : targetObj.toString();
         CommandSenderWrapper sender = (CommandSenderWrapper)map.get(string);
-        if (sender == null || sender.c() != object) {
-            sender = new BungeecordHandler((ConfigYmlHandler)this.AsyncBackgroundTask_5, object, supplier);
+        if (sender == null || sender.c() != targetObj) {
+            sender = new BungeecordHandler(this.AsyncBackgroundTask_5, targetObj, supplier);
             core.LiteBansModule_194();
             map.put(string, sender);
         }
@@ -169,11 +169,11 @@ implements LiteBansModule_98 {
     }
 
     @Override
-    public boolean AsyncBackgroundTask_5(@Nullable Object object, @Nullable String string) {
-        if (!(object instanceof class_2168)) {
+    public boolean AsyncBackgroundTask_5(@Nullable Object targetObj, @Nullable String string) {
+        if (!(targetObj instanceof class_2168)) {
             return false;
         }
-        return ((class_2168)object).method_9259(3);
+        return targetObj.method_9259(3);
     }
 
     @Override

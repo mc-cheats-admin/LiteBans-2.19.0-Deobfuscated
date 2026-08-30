@@ -11,14 +11,14 @@ public final class LiteBansModule_292 {
         this.plugin = l5;
     }
 
-    public boolean equals(Object object) {
-        if (this == object) {
+    public boolean equals(Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (object == null || this.getClass() != object.getClass()) {
+        if (targetObj == null || this.getClass() != targetObj.getClass()) {
             return false;
         }
-        LiteBansModule_292 i72 = (LiteBansModule_292)object;
+        LiteBansModule_292 i72 = (LiteBansModule_292)targetObj;
         return this.LiteBansModule_31 == i72.LiteBansModule_31 && this.plugin == i72.BaseCoreGenericHandler;
     }
 

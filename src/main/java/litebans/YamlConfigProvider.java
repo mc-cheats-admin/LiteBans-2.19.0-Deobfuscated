@@ -37,8 +37,8 @@ extends DatabaseService {
     }
 
     @Override
-    public Object BaseCoreGenericHandler(String string, Object object) {
-        return this.LiteBansModule_240.LiteBansModule_31(string, object);
+    public Object BaseCoreGenericHandler(String string, Object targetObj) {
+        return this.LiteBansModule_240.LiteBansModule_31(string, targetObj);
     }
 
     @Override
@@ -48,8 +48,8 @@ extends DatabaseService {
 
     @Override
     public boolean BaseCoreGenericHandler(String string, boolean flag) {
-        Object object = this.plugin(string, (Object)flag);
-        return object instanceof Boolean ? (Boolean)object : flag;
+        Object targetObj = this.plugin(string, flag);
+        return targetObj instanceof Boolean ? (Boolean)targetObj : flag;
     }
 
     @Override
@@ -215,8 +215,8 @@ extends DatabaseService {
     }
 
     @Override
-    public DatabaseService LiteBansModule_31(String string, Object object) {
-        this.LiteBansModule_240.BaseCoreGenericHandler(string, object);
+    public DatabaseService LiteBansModule_31(String string, Object targetObj) {
+        this.LiteBansModule_240.BaseCoreGenericHandler(string, targetObj);
         return this;
     }
 

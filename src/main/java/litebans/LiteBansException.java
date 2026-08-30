@@ -6,9 +6,9 @@ public class LiteBansException
 extends RuntimeException {
     private final Object BaseCoreGenericHandler;
 
-    public LiteBansException(@Nullable Object object) {
-        super(String.valueOf(object));
-        this.plugin = object;
+    public LiteBansException(@Nullable Object targetObj) {
+        super(String.valueOf(targetObj));
+        this.plugin = targetObj;
     }
 
     public final Object BaseCoreGenericHandler() {

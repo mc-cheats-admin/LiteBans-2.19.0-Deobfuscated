@@ -150,7 +150,7 @@ implements Statement {
     public ResultSet getResultSet() {
         ResultSet resultSet = this.plugin.getResultSet();
         if (resultSet != null) {
-            if (this.AsyncBackgroundTask_5 == null || ((LiteBansModule_223)this.AsyncBackgroundTask_5).LiteBansModule_31 != resultSet) {
+            if (this.AsyncBackgroundTask_5 == null || (this.AsyncBackgroundTask_5).LiteBansModule_31 != resultSet) {
                 this.AsyncBackgroundTask_5 = LiteBansModule_64.BaseCoreGenericHandler(this.LiteBansModule_31, this, resultSet);
 } else {
             this.AsyncBackgroundTask_5 = null;
@@ -161,7 +161,7 @@ implements Statement {
     @Override
     public ResultSet getGeneratedKeys() {
         ResultSet resultSet = this.plugin.getGeneratedKeys();
-        if (this.AsyncBackgroundTask_5 == null || ((LiteBansModule_223)this.AsyncBackgroundTask_5).LiteBansModule_31 != resultSet) {
+        if (this.AsyncBackgroundTask_5 == null || (this.AsyncBackgroundTask_5).LiteBansModule_31 != resultSet) {
             this.AsyncBackgroundTask_5 = LiteBansModule_64.BaseCoreGenericHandler(this.LiteBansModule_31, this, resultSet);
         }
         return this.AsyncBackgroundTask_5;

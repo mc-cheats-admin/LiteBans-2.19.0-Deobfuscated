@@ -37,10 +37,10 @@ implements LiteBansModule_98 {
     }
 
     @Override
-    public void BaseCoreGenericHandler(Object object, String string) {
+    public void BaseCoreGenericHandler(Object targetObj, String string) {
         int n = this.LiteBansModule_31();
         V116Handler g82 = n >= 770 ? V116Handler.BaseCoreGenericHandler : V116Handler.c;
-        ((ServerPlayer)object).connection.disconnect((Component)this.LiteBansModule_31().LiteBansModule_31(LiteBansModule_164.BaseCoreGenericHandler(string, g82)));
+        targetObj.connection.disconnect(this.LiteBansModule_31().LiteBansModule_31(LiteBansModule_164.BaseCoreGenericHandler(string, g82)));
     }
 
     @Override
@@ -49,24 +49,24 @@ implements LiteBansModule_98 {
     }
 
     @Override
-    public String BaseCoreGenericHandler(Object object) {
+    public String BaseCoreGenericHandler(Object targetObj) {
         SocketAddress socketAddress;
         InetAddress inetAddress;
-        if (object instanceof CommandSourceStack) {
-            ServerPlayer serverPlayer = ((CommandSourceStack)object).getPlayer();
+        if (targetObj instanceof CommandSourceStack) {
+            ServerPlayer serverPlayer = targetObj.getPlayer();
             if (serverPlayer == null) {
                 return null;
             }
             return this.plugin(serverPlayer.connection);
         }
-        if (object instanceof Player && (inetAddress = ((InetSocketAddress)(socketAddress = (InetSocketAddress)((ServerPlayer)object).connection.getRemoteAddress())).getAddress()) != null) {
+        if (targetObj instanceof Player && (inetAddress = ((InetSocketAddress)(socketAddress = (InetSocketAddress)targetObj.connection.getRemoteAddress())).getAddress()) != null) {
             return inetAddress.getHostAddress();
         }
-        if (object instanceof ServerPlayer && (socketAddress = ((ServerPlayer)object).connection.getRemoteAddress()) instanceof InetSocketAddress && (inetAddress = ((InetSocketAddress)socketAddress).getAddress()) != null) {
+        if (targetObj instanceof ServerPlayer && (socketAddress = targetObj.connection.getRemoteAddress()) instanceof InetSocketAddress && (inetAddress = ((InetSocketAddress)socketAddress).getAddress()) != null) {
             return inetAddress.getHostAddress();
         }
-        if (object instanceof ServerGamePacketListenerImpl) {
-            return this.plugin(((ServerGamePacketListenerImpl)object).player);
+        if (targetObj instanceof ServerGamePacketListenerImpl) {
+            return this.plugin(targetObj.player);
         }
         return null;
     }
@@ -96,8 +96,8 @@ implements LiteBansModule_98 {
     }
 
     @Override
-    public void LiteBansModule_31(Object object, String string) {
-        this.c.getCommands().performPrefixedCommand((CommandSourceStack)object, string);
+    public void LiteBansModule_31(Object targetObj, String string) {
+        this.c.getCommands().performPrefixedCommand((CommandSourceStack)targetObj, string);
     }
 
     @Override
@@ -111,45 +111,45 @@ implements LiteBansModule_98 {
 }
 
     @Override
-    public Object AsyncBackgroundTask_5(Object object) {
-        if (object instanceof ServerPlayer) {
-            return ((ServerPlayer)object).createCommandSourceStack();
+    public Object AsyncBackgroundTask_5(Object targetObj) {
+        if (targetObj instanceof ServerPlayer) {
+            return targetObj.createCommandSourceStack();
         }
-        return object;
+        return targetObj;
     }
 
     @Override
-    public void c(Object object, String string) {
-        if (object instanceof CommandSourceStack) {
-            ((CommandSourceStack)object).sendSystemMessage((Component)this.LiteBansModule_31().LiteBansModule_31(string));
+    public void c(Object targetObj, String string) {
+        if (targetObj instanceof CommandSourceStack) {
+            targetObj.sendSystemMessage(this.LiteBansModule_31().LiteBansModule_31(string));
         } else {
-            this.c(this.AsyncBackgroundTask_5(object), string);
+            this.c(this.AsyncBackgroundTask_5(targetObj), string);
 }
 
     @Override
-    public void BaseCoreGenericHandler(Object object, String string, byte[] byArray) {
-        LiteBansModule_157.BaseCoreGenericHandler(object, string, byArray);
+    public void BaseCoreGenericHandler(Object targetObj, String string, byte[] byArray) {
+        LiteBansModule_157.BaseCoreGenericHandler(targetObj, string, byArray);
     }
 
     @Override
-    public CommandSenderWrapper c(Object object) {
-        String string = (object = this.AsyncBackgroundTask_5(object)) instanceof CommandSourceStack ? ((CommandSourceStack)object).getTextName() : object.toString();
-        return (CommandSenderWrapper)((ConfigYmlHandler)this.AsyncBackgroundTask_5).BaseCoreGenericHandler().LiteBansModule_31.remove(string);
+    public CommandSenderWrapper c(Object targetObj) {
+        String string = (targetObj = this.AsyncBackgroundTask_5(targetObj)) instanceof CommandSourceStack ? targetObj.getTextName() : targetObj.toString();
+        return (CommandSenderWrapper)(this.AsyncBackgroundTask_5).BaseCoreGenericHandler().LiteBansModule_31.remove(string);
     }
 
     @Override
-    public CommandSenderWrapper LiteBansModule_31(Object object) {
-        return this.plugin(object, (Supplier)null);
+    public CommandSenderWrapper LiteBansModule_31(Object targetObj) {
+        return this.plugin(targetObj, (Supplier)null);
     }
 
     @Override
-    public CommandSenderWrapper BaseCoreGenericHandler(Object object, @Nullable Supplier supplier) {
-        LiteBansCore core = ((ConfigYmlHandler)this.AsyncBackgroundTask_5).BaseCoreGenericHandler();
+    public CommandSenderWrapper BaseCoreGenericHandler(Object targetObj, @Nullable Supplier supplier) {
+        LiteBansCore core = (this.AsyncBackgroundTask_5).BaseCoreGenericHandler();
         Map map = core.LiteBansModule_31;
-        String string = (object = this.AsyncBackgroundTask_5(object)) instanceof CommandSourceStack ? ((CommandSourceStack)object).getTextName() : object.toString();
+        String string = (targetObj = this.AsyncBackgroundTask_5(targetObj)) instanceof CommandSourceStack ? targetObj.getTextName() : targetObj.toString();
         CommandSenderWrapper sender = (CommandSenderWrapper)map.get(string);
-        if (sender == null || sender.c() != object) {
-            sender = new BungeecordHandler_3((ConfigYmlHandler)this.AsyncBackgroundTask_5, object, supplier);
+        if (sender == null || sender.c() != targetObj) {
+            sender = new BungeecordHandler_3(this.AsyncBackgroundTask_5, targetObj, supplier);
             core.LiteBansModule_194();
             map.put(string, sender);
         }
@@ -169,8 +169,8 @@ implements LiteBansModule_98 {
     }
 
     @Override
-    public boolean AsyncBackgroundTask_5(@Nullable Object object, @NotNull String string) {
-        return LiteBansModule_381.BaseCoreGenericHandler(object, string);
+    public boolean AsyncBackgroundTask_5(@Nullable Object targetObj, @NotNull String string) {
+        return LiteBansModule_381.BaseCoreGenericHandler(targetObj, string);
     }
 
     @Override

@@ -30,55 +30,52 @@ extends MessageHandler {
     }
 
     private static final KotlinUnitHandler BaseCoreGenericHandler(LiteBansModule_212 g_2, LiteBansModule_82 ch2) {
-        Object object;
         String string = g_2.e;
         if (string == null) {
-            Object object2;
             boolean flag;
-            Object object3;
 {
                 MessageHandler messageHandler = g_2;
-                object3 = g_2.g;
+                resultObj = g_2.g;
                 flag = false;
-                for (Object object4 : (Object[])messageHandler.LiteBansModule_240().q()) {
-                    CommandSenderWrapper sender = (CommandSenderWrapper)object4;
-                    if (!ObjectUtilities.BaseCoreGenericHandler((Object)sender.BaseCoreGenericHandler(), object3)) continue;
-                    object2 = object4;
+                for (Object helperObj : (Object[])messageHandler.LiteBansModule_240().q()) {
+                    CommandSenderWrapper sender = (CommandSenderWrapper)helperObj;
+                    if (!ObjectUtilities.BaseCoreGenericHandler(sender.BaseCoreGenericHandler(), resultObj)) continue;
+                    contextObj = helperObj;
                     break;
                 }
-                object2 = null;
+                contextObj = null;
             }
-            CommandSenderWrapper jv_03 = (CommandSenderWrapper)object2;
-            string = jv_03 != null ? jv_03.LiteBansModule_240() : null;
+            CommandSenderWrapper senderWrapper = (CommandSenderWrapper)contextObj;
+            string = senderWrapper != null ? senderWrapper.LiteBansModule_240() : null;
             if (string == null) {
                 MessageHandler fg_03 = g_2;
-                object3 = fg_03;
+                resultObj = fg_03;
                 flag = false;
-                string = ((ConfigService)((MessageHandler)object3).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_25();
+                string = ((ConfigService)this.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_25();
 }
         String string2 = LiteBansModule_242.BaseCoreGenericHandler(string, 32);
         SilentHandler dZ2 = null;
         dZ2 = AllHandler_3.BaseCoreGenericHandler(ch2, g_2.g, g_2.LiteBansModule_194, BanHandler.GnuSparseMapHandler, string2, false, false, 48, null);
         if (dZ2 == null && g_2.AsyncBackgroundTask_5 != null) {
-            object = g_2;
-            if (((ConfigService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().NullHandler()) {
+            targetObj = g_2;
+            if (((ConfigService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().NullHandler()) {
                 dZ2 = ch2.BaseCoreGenericHandler(g_2.AsyncBackgroundTask_5, g_2.g, string2, BanHandler.GnuSparseMapHandler);
 }
-        object = g_2;
-        object = (ConfigService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
+        targetObj = g_2;
+        targetObj = (ConfigService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class);
         n = 3;
-        if (((ConfigService)object).BaseCoreGenericHandler(n)) {
-            Object object5 = object;
-            ((ConfigService)object5).BaseCoreGenericHandler((Object)("Active mute for " + g_2.g + " on server " + string2 + ": " + dZ2));
+        if (targetObj.BaseCoreGenericHandler(n)) {
+            Object tempObj = targetObj;
+            ((ConfigService)tempObj).BaseCoreGenericHandler((Object)("Active mute for " + g_2.g + " on server " + string2 + ": " + dZ2));
         }
         if (dZ2 != null) {
-            object = g_2;
+            targetObj = g_2;
             n = 0;
-            ((PunishmentTableService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class)).BaseCoreGenericHandler(g_2.g, dZ2);
+            ((PunishmentTableService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class)).BaseCoreGenericHandler(g_2.g, dZ2);
         } else {
-            object = g_2;
+            targetObj = g_2;
             n = 0;
-            ((PunishmentTableService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class)).BaseCoreGenericHandler().LiteBansModule_31().remove(UUID.fromString(g_2.g));
+            ((PunishmentTableService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(PunishmentTableService.class)).BaseCoreGenericHandler().LiteBansModule_31().remove(UUID.fromString(g_2.g));
         }
         return KotlinUnitHandler.BaseCoreGenericHandler;
 }

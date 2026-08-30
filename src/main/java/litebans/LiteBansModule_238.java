@@ -17,7 +17,6 @@ extends MessageHandler {
 
     @Override
     public void run() {
-        Object object;
         BanHandler a_22;
         int n;
         LiteBansModule_324 iX2;
@@ -26,8 +25,8 @@ extends MessageHandler {
             BanHandler[] a_Array = BanHandler.values();
             n = 0;
             for (BanHandler a_22 : a_Array) {
-                object = a_22;
-                if (!ObjectUtilities.BaseCoreGenericHandler((Object)((Enum)object).name(), (Object)this.e[1])) {
+                targetObj = a_22;
+                if (!ObjectUtilities.BaseCoreGenericHandler((Object)targetObj.name(), this.e[1])) {
                     continue;
                 }
                 break;
@@ -40,16 +39,15 @@ extends MessageHandler {
         int n3 = Integer.parseInt(this.e[4]);
         int n4 = 15;
         int n5 = 40;
-        object = new ArrayList(n2);
+        targetObj = new ArrayList(n2);
         List list = new ArrayList(n2);
         MessageHandler messageHandler = this;
-        ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> LiteBansModule_238.BaseCoreGenericHandler(this, n2, (List)object, iX2, n5, n, n3, n4, a_3, list, arg_0));
+        ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> LiteBansModule_238.BaseCoreGenericHandler(this, n2, (List)targetObj, iX2, n5, n, n3, n4, a_3, list, arg_0));
     }
 
     private static final KotlinUnitHandler BaseCoreGenericHandler(LiteBansModule_238 gw2, int n, List list, LiteBansModule_324 iX2, int n2, int n3, int n4, int n5, BanHandler a_2, List list2, LiteBansModule_82 ch2) {
         boolean flag;
         boolean flag2;
-        Object object;
         int n6;
         if (ch2.LiteBansModule_31()) {
             CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)gw2, MessageKey.ServerEventListener);
@@ -58,10 +56,10 @@ extends MessageHandler {
         for (int i = 0; i < n; ++i) {
             list.add(new UUID(iX2.LiteBansModule_31(), iX2.LiteBansModule_31()).toString());
         }
-        CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)gw2, (CharSequence)LiteBansModule_242.BaseCoreGenericHandler(BlackHandler.i, "Generating entries.. + "));
+        CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)gw2, LiteBansModule_242.BaseCoreGenericHandler(BlackHandler.i, "Generating entries.. + "));
         long l3 = DatabaseMonitorService.BaseCoreGenericHandler(ch2.AsyncBackgroundTask_5(), false, 1, null);
         for (n6 = 0; n6 < n; ++n6) {
-            object = (String)list.get(n6);
+            targetObj = (String)list.get(n6);
             flag2 = iX2.BaseCoreGenericHandler(100) < n2;
             boolean flag3 = iX2.BaseCoreGenericHandler(100) < n3;
             boolean flag4 = flag3 && n4 > 0 && iX2.BaseCoreGenericHandler(100) < n4;
@@ -83,28 +81,28 @@ extends MessageHandler {
                 string = "%";
             }
             String string2 = "" + n7 + '.' + n8 + '.' + n9 + '.' + string;
-            SilentHandler dZ2 = new SilentHandler(a_2, (String)object, string2, "", "", "", "*", "", l3, l5, 0, false, flag3, flag, 0L, 17408, null);
+            SilentHandler dZ2 = new SilentHandler(a_2, (String)targetObj, string2, "", "", "", "*", "", l3, l5, 0, false, flag3, flag, 0L, 17408, null);
             list2.add(dZ2);
         }
-        CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)gw2, (CharSequence)LiteBansModule_242.BaseCoreGenericHandler(BlackHandler.i, "Adding entries.. + "));
-        object = gw2;
+        CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)gw2, LiteBansModule_242.BaseCoreGenericHandler(BlackHandler.i, "Adding entries.. + "));
+        targetObj = gw2;
         flag2 = false;
-        n6 = ((ConfigService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).BaseCoreGenericHandler();
-        object = gw2;
+        n6 = ((ConfigService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).BaseCoreGenericHandler();
+        targetObj = gw2;
         flag2 = false;
-        ((ConfigService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).BaseCoreGenericHandler((byte)0);
-        object = list2;
+        ((ConfigService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).BaseCoreGenericHandler((byte)0);
+        targetObj = list2;
         flag2 = false;
-        Iterator iterator = object.iterator();
+        Iterator iterator = targetObj.iterator();
         while (iterator.hasNext()) {
             Object t2 = iterator.next();
             SilentHandler dZ3 = (SilentHandler)t2;
             flag = false;
             ch2.c(dZ3);
         }
-        object = gw2;
+        targetObj = gw2;
         flag2 = false;
-        ((ConfigService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).BaseCoreGenericHandler((byte)n6);
+        ((ConfigService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).BaseCoreGenericHandler((byte)n6);
         long l7 = DatabaseMonitorService.BaseCoreGenericHandler(ch2.AsyncBackgroundTask_5(), false, 1, null);
         CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)gw2, (CharSequence)(LiteBansModule_242.BaseCoreGenericHandler(BlackHandler.i, "Done InitializerHandler_3 ") + (l7 - l3) + " "));
         return KotlinUnitHandler.BaseCoreGenericHandler;

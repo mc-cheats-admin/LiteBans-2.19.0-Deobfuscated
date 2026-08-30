@@ -97,15 +97,14 @@ switch (this.c) {
                     throw new UnexpectedTokenException(this.c(), 1, this.GnuSparseMapHandler);
                 }
                 case 2: {
-                    Object object;
                     switch (this.GnuSparseMapHandler.LiteBansModule_240) {
                         case 5: {
                             break;
                         }
                         case 0: {
                             if (this.GnuSparseMapHandler.e instanceof String) {
-                                object = (String)this.GnuSparseMapHandler.e;
-                                linkedList2.addFirst(object);
+                                targetObj = this.GnuSparseMapHandler.e;
+                                linkedList2.addFirst(targetObj);
                                 this.c = 4;
                                 linkedList.addFirst(new Integer(this.c));
                                 break;
@@ -129,25 +128,24 @@ switch (this.c) {
                 case 4: {
                     List list;
                     Map map;
-                    Object object;
                     switch (this.GnuSparseMapHandler.LiteBansModule_240) {
                         case 6: {
                             break;
                         }
                         case 0: {
                             linkedList.removeFirst();
-                            object = (String)linkedList2.removeFirst();
+                            targetObj = (String)linkedList2.removeFirst();
                             map = (Map)linkedList2.getFirst();
-                            map.put(object, this.GnuSparseMapHandler.e);
+                            map.put(targetObj, this.GnuSparseMapHandler.e);
                             this.c = this.plugin(linkedList);
                             break;
                         }
                         case 3: {
                             linkedList.removeFirst();
-                            object = (String)linkedList2.removeFirst();
+                            targetObj = (String)linkedList2.removeFirst();
                             map = (Map)linkedList2.getFirst();
                             list = this.plugin(ju_02);
-                            map.put(object, list);
+                            map.put(targetObj, list);
                             this.c = 3;
                             linkedList.addFirst(new Integer(this.c));
                             linkedList2.addFirst(list);
@@ -155,10 +153,10 @@ switch (this.c) {
                         }
                         case 1: {
                             linkedList.removeFirst();
-                            object = (String)linkedList2.removeFirst();
+                            targetObj = (String)linkedList2.removeFirst();
                             map = (Map)linkedList2.getFirst();
                             Map map2 = this.LiteBansModule_31(ju_02);
-                            map.put(object, map2);
+                            map.put(targetObj, map2);
                             this.c = 2;
                             linkedList.addFirst(new Integer(this.c));
                             linkedList2.addFirst(map2);
@@ -170,14 +168,13 @@ switch (this.c) {
                 case 3: {
                     List list;
                     Map map;
-                    Object object;
                     switch (this.GnuSparseMapHandler.LiteBansModule_240) {
                         case 5: {
                             break;
                         }
                         case 0: {
-                            object = (List)linkedList2.getFirst();
-                            object.add(this.GnuSparseMapHandler.e);
+                            targetObj = (List)linkedList2.getFirst();
+                            targetObj.add(this.GnuSparseMapHandler.e);
                             break;
                         }
                         case 4: {
@@ -191,18 +188,18 @@ switch (this.c) {
                             break;
                         }
                         case 1: {
-                            object = (List)linkedList2.getFirst();
+                            targetObj = (List)linkedList2.getFirst();
                             map = this.LiteBansModule_31(ju_02);
-                            object.add(map);
+                            targetObj.add(map);
                             this.c = 2;
                             linkedList.addFirst(new Integer(this.c));
                             linkedList2.addFirst(map);
                             break;
                         }
                         case 3: {
-                            object = (List)linkedList2.getFirst();
+                            targetObj = (List)linkedList2.getFirst();
                             list = this.plugin(ju_02);
-                            object.add(list);
+                            targetObj.add(list);
                             this.c = 3;
                             linkedList.addFirst(new Integer(this.c));
                             linkedList2.addFirst(list);

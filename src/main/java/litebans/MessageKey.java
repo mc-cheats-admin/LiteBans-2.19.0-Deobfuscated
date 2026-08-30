@@ -68,18 +68,18 @@ implements CharSequence {
     public static final MessageKey cp = new MessageKey("BAN_BROADCAST_TEMP", 58, BaseCoreGenericHandler, "broadcast_tempban", (CharSequence)(BlackHandler.c("$executor ") + BlackHandler.Utf8Handler_2 + "tempbanned " + BlackHandler.i + "$playerDisplayName " + BlackHandler.Utf8Handler_2 + "for $tempDuration for '" + BlackHandler.i + "$reason" + BlackHandler.Utf8Handler_2 + '\''));
     public static final MessageKey LiteBansModule_6 = new MessageKey("BAN_BROADCAST_IP", 59, BaseCoreGenericHandler, "broadcast_ip_ban", (CharSequence)(BlackHandler.c("$executor ") + BlackHandler.Utf8Handler_2 + "IP-banned " + BlackHandler.i + "$playerDisplayName " + BlackHandler.Utf8Handler_2 + "for '" + BlackHandler.i + "$reason" + BlackHandler.Utf8Handler_2 + '\''));
     public static final MessageKey LiteBansModule_2 = new MessageKey("BAN_BROADCAST_TEMP_IP", 60, BaseCoreGenericHandler, "broadcast_temp_ip_ban", (CharSequence)(BlackHandler.c("$executor ") + BlackHandler.Utf8Handler_2 + "temp IP-banned " + BlackHandler.i + "$playerDisplayName " + BlackHandler.Utf8Handler_2 + "for $tempDuration for '" + BlackHandler.i + "$reason" + BlackHandler.Utf8Handler_2 + '\''));
-    public static final MessageKey dB = new MessageKey("BAN_PREVIOUS_BAN_REMOVED", 61, BaseCoreGenericHandler, "previous_ban_removed", (CharSequence)BlackHandler.c("Previous ban for $playerName "));
-    public static final MessageKey LiteBansModule_34 = new MessageKey("BAN_PREVIOUS_BAN_EXISTING", 62, BaseCoreGenericHandler, "previous_ban_existing", (CharSequence)BlackHandler.LiteBansModule_194("$playerName is already banned, and you do not have permission to replace existing "));
-    public static final MessageKey SQLiteDriverHandler_2 = new MessageKey("BAN_ERROR_UNBAN_FAIL", 63, BaseCoreGenericHandler, "unban_fail", (CharSequence)BlackHandler.LiteBansModule_194("Target is not banned!"));
-    public static final MessageKey ai = new MessageKey("BAN_ERROR_NO_OVERRIDE", 64, BaseCoreGenericHandler, "no_override", (CharSequence)BlackHandler.LiteBansModule_194("Player is already banned!"));
+    public static final MessageKey dB = new MessageKey("BAN_PREVIOUS_BAN_REMOVED", 61, BaseCoreGenericHandler, "previous_ban_removed", BlackHandler.c("Previous ban for $playerName "));
+    public static final MessageKey LiteBansModule_34 = new MessageKey("BAN_PREVIOUS_BAN_EXISTING", 62, BaseCoreGenericHandler, "previous_ban_existing", BlackHandler.LiteBansModule_194("$playerName is already banned, and you do not have permission to replace existing "));
+    public static final MessageKey SQLiteDriverHandler_2 = new MessageKey("BAN_ERROR_UNBAN_FAIL", 63, BaseCoreGenericHandler, "unban_fail", BlackHandler.LiteBansModule_194("Target is not banned!"));
+    public static final MessageKey ai = new MessageKey("BAN_ERROR_NO_OVERRIDE", 64, BaseCoreGenericHandler, "no_override", BlackHandler.LiteBansModule_194("Player is already banned!"));
     public static final MessageKey LiteBansModule_117 = new MessageKey("BAN_ALTS_GUARDRAIL_DISCLAIMER", 65, BaseCoreGenericHandler, "alts_guardrail_disclaimer", (CharSequence)(BlackHandler.AsyncBackgroundTask_5("// WARNING WARNING WARNING WARNING WARNING //\n") + BlackHandler.g("Automatically banning accounts can result InitializerHandler_3 unintended and unexpected outcomes, such CommandExitException causing innocent players to be banned automatically.\n") + BlackHandler.g("If you want to enable this feature, please check and ensure the following:\n") + BlackHandler.LiteBansModule_194("1) Your players are not joining from BaseCoreGenericHandler limited range of IP addresses belonging to one specific host, such CommandExitException BaseCoreGenericHandler DDoS protection service forwarding players to your server.\n") + BlackHandler.LiteBansModule_194("2) All of your servers have IP forwarding set up correctly (please consult BungeeCord or Velocity documentation to set up IP forwarding, if you have not done so).\n") + BlackHandler.LiteBansModule_194("3) None of your user accounts are being randomly associated when checking /alts or /ipreport to view linked accounts on the same IP.\n") + BlackHandler.LiteBansModule_194("4) If you have HikariDataSource offline-mode network or permit non-premium users to join, please add your authentication or lobby server to ignored_iphistory_servers to prevent falsely associated accounts (since anyone can join any account).\n") + BlackHandler.AsyncBackgroundTask_5("// WARNING WARNING WARNING WARNING WARNING //\n") + BlackHandler.c("If you acknowledge and accept this disclaimer, please type " + BlackHandler.BaseCoreGenericHandler("litebans accept") + BlackHandler.c(" to enable automatic "))));
-    public static final MessageKey aa = new MessageKey("BAN_ALTS_GUARDRAIL_BAN_SELF", 66, BaseCoreGenericHandler, "alts_guardrail_ban_self", (CharSequence)BlackHandler.LiteBansModule_194("Error: Banning associated accounts for $playerName would also ban your account!\nNo additional players will be "));
-    public static final MessageKey U = new MessageKey("BAN_ALTS_GUARDRAIL_BAN_MANY", 67, BaseCoreGenericHandler, "alts_guardrail_ban_many", (CharSequence)BlackHandler.AsyncBackgroundTask_5("Warning: Banning this player will also ban $num players!\nThese players will be banned if you click here to confirm:\n$list\n {run: $command $commandArgs --confirm}"));
-    public static final MessageKey LiteBansModule_105 = new MessageKey("BAN_EXEMPT", 68, BaseCoreGenericHandler, "exempt", (CharSequence)BlackHandler.LiteBansModule_194("You can'AsyncBackgroundTask_22 ban $player!"));
-    public static final MessageKey LiteBansModule_36 = new MessageKey("BAN_COOLDOWN", 69, BaseCoreGenericHandler, "cooldown", (CharSequence)BlackHandler.LiteBansModule_194("You need to wait " + BlackHandler.AsyncBackgroundTask_5("$duration") + BlackHandler.LiteBansModule_194(" before you can use this command ")));
+    public static final MessageKey aa = new MessageKey("BAN_ALTS_GUARDRAIL_BAN_SELF", 66, BaseCoreGenericHandler, "alts_guardrail_ban_self", BlackHandler.LiteBansModule_194("Error: Banning associated accounts for $playerName would also ban your account!\nNo additional players will be "));
+    public static final MessageKey U = new MessageKey("BAN_ALTS_GUARDRAIL_BAN_MANY", 67, BaseCoreGenericHandler, "alts_guardrail_ban_many", BlackHandler.AsyncBackgroundTask_5("Warning: Banning this player will also ban $num players!\nThese players will be banned if you click here to confirm:\n$list\n {run: $command $commandArgs --confirm}"));
+    public static final MessageKey LiteBansModule_105 = new MessageKey("BAN_EXEMPT", 68, BaseCoreGenericHandler, "exempt", BlackHandler.LiteBansModule_194("You can'AsyncBackgroundTask_22 ban $player!"));
+    public static final MessageKey LiteBansModule_36 = new MessageKey("BAN_COOLDOWN", 69, BaseCoreGenericHandler, "cooldown", BlackHandler.LiteBansModule_194("You need to wait " + BlackHandler.AsyncBackgroundTask_5("$duration") + BlackHandler.LiteBansModule_194(" before you can use this command ")));
     public static final MessageKey D = new MessageKey("BAN_RESPONSE", 70, BaseCoreGenericHandler, "response", (CharSequence)"");
-    public static final MessageKey cj = new MessageKey("BAN_MODIFY_SUCCESS", 71, BaseCoreGenericHandler, "modify_success", (CharSequence)BlackHandler.c("Punishment modified "));
-    public static final MessageKey af = new MessageKey("BAN_DELETE_SUCCESS", 72, BaseCoreGenericHandler, "delete_success", (CharSequence)BlackHandler.c("Punishment deleted "));
+    public static final MessageKey cj = new MessageKey("BAN_MODIFY_SUCCESS", 71, BaseCoreGenericHandler, "modify_success", BlackHandler.c("Punishment modified "));
+    public static final MessageKey af = new MessageKey("BAN_DELETE_SUCCESS", 72, BaseCoreGenericHandler, "delete_success", BlackHandler.c("Punishment deleted "));
     public static final MessageKey SecHandler = new MessageKey("BAN_HIDDEN_IP", 73, BaseCoreGenericHandler, "ip_hidden", (CharSequence)"[IP Address]");
     public static final MessageKey L = new MessageKey("UNBAN_USAGE", 74, BaseCoreGenericHandler, "unban_usage", (CharSequence)(BlackHandler.c + "Usage: $command <player>"));
     public static final MessageKey cO = new MessageKey("UNBAN_BROADCAST", 75, BaseCoreGenericHandler, "broadcast_unban", (CharSequence)(BlackHandler.i + "$executor " + BlackHandler.Utf8Handler_2 + "unbanned " + BlackHandler.i + "$playerName " + BlackHandler.Utf8Handler_2 + "for '" + BlackHandler.i + "$removalReason" + BlackHandler.Utf8Handler_2 + '\''));
@@ -158,11 +158,11 @@ implements CharSequence {
     public static final MessageKey HikariPool = new MessageKey("DUPEIP_END", 148, cN, "end", (CharSequence)"");
     public static final MessageKey PoolBase = new MessageKey("DUPEIP_MULTIPLE_ADDRESSES", 149, cN, "multiple_addresses", (CharSequence)"[$num addresses]");
     public static final MessageKey ProxyConnection = new MessageKey("DUPEIP_SEPARATOR", 150, cN, "separator", (CharSequence)(BlackHandler.Utf8Handler_2 + ", "));
-    public static final MessageKey BroadcastService = new MessageKey("DUPEIP_ONLINE", 151, cN, "online", (CharSequence)BlackHandler.i);
-    public static final MessageKey n = new MessageKey("DUPEIP_OFFLINE", 152, cN, "offline", (CharSequence)BlackHandler.BroadcastService);
-    public static final MessageKey DatabaseMonitorService = new MessageKey("DUPEIP_BANNED", 153, cN, "banned", (CharSequence)BlackHandler.c);
-    public static final MessageKey cd = new MessageKey("DUPEIP_IP_BANNED", 154, cN, "ip_banned", (CharSequence)BlackHandler.ServerSyncService);
-    public static final MessageKey PunishmentTableService = new MessageKey("DUPEIP_MUTED", 155, cN, "muted", (CharSequence)BlackHandler.m);
+    public static final MessageKey BroadcastService = new MessageKey("DUPEIP_ONLINE", 151, cN, "online", BlackHandler.i);
+    public static final MessageKey n = new MessageKey("DUPEIP_OFFLINE", 152, cN, "offline", BlackHandler.BroadcastService);
+    public static final MessageKey DatabaseMonitorService = new MessageKey("DUPEIP_BANNED", 153, cN, "banned", BlackHandler.c);
+    public static final MessageKey cd = new MessageKey("DUPEIP_IP_BANNED", 154, cN, "ip_banned", BlackHandler.ServerSyncService);
+    public static final MessageKey PunishmentTableService = new MessageKey("DUPEIP_MUTED", 155, cN, "muted", BlackHandler.m);
     public static final MessageKey LiteBansModule_32 = new MessageKey("IPREPORT_START", 156, LiteBansModule_140, "start", (CharSequence)(BlackHandler.Utf8Handler_2 + "Scanning " + BlackHandler.i + "$num" + BlackHandler.Utf8Handler_2 + " online players. + " + '[' + BlackHandler.i + "Online" + BlackHandler.Utf8Handler_2 + "] [" + BlackHandler.BroadcastService + "Offline" + BlackHandler.Utf8Handler_2 + "] [" + BlackHandler.c + "Banned" + BlackHandler.Utf8Handler_2 + ']'));
     public static final MessageKey LiteBansModule_3 = new MessageKey("IPREPORT_ENTRY", 157, LiteBansModule_140, "entry", (CharSequence)(BlackHandler.Utf8Handler_2 + "$player" + BlackHandler.i + ": $result"));
     public static final MessageKey TapeHandler = new MessageKey("CHECKBAN_USAGE", 158, LiteBansModule_122, "usage", (CharSequence)(BlackHandler.c + "$command <player>"));
@@ -311,7 +311,7 @@ implements CharSequence {
      * WARNING - void declaration
      */
     private MessageKey(@Nullable CharSequence charSequence) {
-        this((String)var1_-1, (int)var2_-1, ((MessageKey)charSequence).BaseCoreGenericHandler() + '.' + (String)arg2, (CharSequence)arg3);
+        this((String)var1_-1, (int)var2_-1, ((MessageKey)charSequence).BaseCoreGenericHandler() + '.' + (String)arg2, arg3);
         void arg3;
         void arg2;
         void var2_-1;
@@ -338,24 +338,24 @@ implements CharSequence {
         void arg1;
         void var2_-1;
         void var1_-1;
-        this.plugin((CharSequence)arg2);
+        this.plugin(arg2);
     }
 
-    public static String BaseCoreGenericHandler(Object object, boolean flag, boolean flag2) {
-        if (object instanceof String) {
-            return (String)object;
+    public static String BaseCoreGenericHandler(Object targetObj, boolean flag, boolean flag2) {
+        if (targetObj instanceof String) {
+            return (String)targetObj;
         }
-        if (object instanceof CharSequence) {
-            return object.toString();
+        if (targetObj instanceof CharSequence) {
+            return targetObj.toString();
         }
-        if (object instanceof Character) {
-            return new String(new char[]{((Character)object).charValue()});
+        if (targetObj instanceof Character) {
+            return new String(new char[]{targetObj.charValue()});
         }
         if (flag) {
             if (flag2) {
-                return object.toString().trim();
+                return targetObj.toString().trim();
             }
-            return object.toString();
+            return targetObj.toString();
         }
         return null;
     }
@@ -366,7 +366,7 @@ implements CharSequence {
             if (!am2.name().equals(string)) continue;
             return am2;
         }
-        throw new AssertionError((Object)string);
+        throw new AssertionError(string);
     }
 
     public static String LiteBansModule_31(String string) {
@@ -417,8 +417,8 @@ implements CharSequence {
         return litebans.GeoIPLookupService.BaseCoreGenericHandler(charSequence);
     }
 
-    public String BaseCoreGenericHandler(String string, @Nullable Object object) {
-        return this.plugin(litebans.GeoIPLookupService.c(string), object);
+    public String BaseCoreGenericHandler(String string, @Nullable Object targetObj) {
+        return this.plugin(litebans.GeoIPLookupService.c(string), targetObj);
     }
 
     public String LiteBansModule_31(CharSequence charSequence) {
@@ -445,12 +445,12 @@ implements CharSequence {
         return this.ServerOriginHandler.length();
     }
 
-    public @NotNull String BaseCoreGenericHandler(CharSequence charSequence, @Nullable Object object) {
-        Object object2 = object;
-        if (object2 == null) {
-            object2 = "";
+    public @NotNull String BaseCoreGenericHandler(CharSequence charSequence, @Nullable Object targetObj) {
+        Object contextObj = targetObj;
+        if (contextObj == null) {
+            contextObj = "";
         }
-        return this.ServerOriginHandler.toString().replace(charSequence.toString(), object2.toString());
+        return this.ServerOriginHandler.toString().replace(charSequence.toString(), contextObj.toString());
     }
 
     public void BaseCoreGenericHandler(@Nullable CharSequence charSequence) {

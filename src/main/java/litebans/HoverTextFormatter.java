@@ -26,9 +26,7 @@ extends PluginModule {
     public final String BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String string) {
         LiteBansModule_168 ej2;
 {
-                Object object;
                 int n;
-                Object object2;
 {
                     boolean flag;
                     boolean flag2;
@@ -36,12 +34,12 @@ extends PluginModule {
                     boolean flag3;
 {
                         ej2 = this.plugin(string, sender);
-                        object2 = ej2.BaseCoreGenericHandler();
+                        contextObj = ej2.BaseCoreGenericHandler();
                         flag3 = false;
-                        n2 = ((LiteBansModule_289[])object2).length;
+                        n2 = ((LiteBansModule_289[])contextObj).length;
                         for (n = 0; n < n2; ++n) {
-                            object = object2[n];
-                            LiteBansModule_289 i42 = object;
+                            targetObj = contextObj[n];
+                            LiteBansModule_289 i42 = targetObj;
                             flag2 = false;
                             if (!i42.LiteBansModule_31()) continue;
                             flag = true;
@@ -53,39 +51,38 @@ extends PluginModule {
                     if (ej2.LiteBansModule_31() == null) return LiteBansModule_31.BaseCoreGenericHandler(string);
                     if (sender.LiteBansModule_194()) {
 {
-                            Object object3;
                             LiteBansModule_289[] i4Array = ej2.BaseCoreGenericHandler();
                             int n3 = i4Array.length;
                             for (n2 = 0; n2 < n3; ++n2) {
                                 LiteBansModule_289 i43;
                                 LiteBansModule_289 i44 = i43 = i4Array[n2];
-                                if (!(i44.LiteBansModule_31() && ObjectUtilities.BaseCoreGenericHandler((Object)i44.g(), (Object)this.LiteBansModule_31(sender)))) continue;
-                                object3 = i43;
+                                if (!(i44.LiteBansModule_31() && ObjectUtilities.BaseCoreGenericHandler(i44.g(), this.LiteBansModule_31(sender)))) continue;
+                                resultObj = i43;
                                 break;
                             }
-                            object3 = object2 = null;
+                            resultObj = contextObj = null;
                         }
-                        if (object2 != null) {
+                        if (contextObj != null) {
                             sender.BaseCoreGenericHandler(ej2.c());
-                            sender.BaseCoreGenericHandler("=> " + ((LiteBansModule_289)object2).BaseCoreGenericHandler());
+                            sender.BaseCoreGenericHandler("=> " + ((LiteBansModule_289)contextObj).BaseCoreGenericHandler());
                             return null;
 }
-                    object2 = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+                    contextObj = this.plugin.BaseCoreGenericHandler(ConfigService.class);
                     flag3 = false;
-                    if (((ConfigService)object2).g()) {
-                        Object object4 = object2;
+                    if (((ConfigService)contextObj).g()) {
+                        Object helperObj = contextObj;
                         n = 0;
-                        ((ConfigService)object4).BaseCoreGenericHandler(ej2.LiteBansModule_31());
+                        ((ConfigService)helperObj).BaseCoreGenericHandler(ej2.LiteBansModule_31());
                     }
                     if (!sender.e()) break;
-                    object2 = ej2.BaseCoreGenericHandler();
+                    contextObj = ej2.BaseCoreGenericHandler();
                     flag3 = false;
                     n = 0;
-                    n2 = ((Object)object2).length;
+                    n2 = (contextObj).length;
                     while (n < n2) {
-                        Object object5 = object = object2[n];
+                        Object tempObj = targetObj = contextObj[n];
                         flag2 = false;
-                        if (!ObjectUtilities.BaseCoreGenericHandler((Object)((LiteBansModule_289)object5).g(), (Object)this.plugin(sender))) {
+                        if (!ObjectUtilities.BaseCoreGenericHandler((Object)((LiteBansModule_289)tempObj).g(), this.plugin(sender))) {
                             ++n;
                             continue;
                         }
@@ -93,11 +90,11 @@ extends PluginModule {
                     }
                     throw new NoSuchElementException("Array contains no element matching the ");
                 }
-                if (!((LiteBansModule_289)object).LiteBansModule_31()) break;
-                object2 = sender;
+                if (!targetObj.LiteBansModule_31()) break;
+                contextObj = sender;
                 String string2 = "litebans.json.hover_text";
                 n = 0;
-                if (!object2.e(string2)) break;
+                if (!contextObj.e(string2)) break;
             }
             sender.LiteBansModule_31(ej2.LiteBansModule_31().toString());
             return null;
@@ -110,25 +107,25 @@ extends PluginModule {
         List list;
         int n;
         String string4 = '{' + string2 + ':';
-        if (i42 != null && !StringUtilities.BaseCoreGenericHandler((CharSequence)string, (CharSequence)string4, false, 2, null) && StringUtilities.c((CharSequence)string, '}', false, 2, null) && i42.AsyncBackgroundTask_5() && ObjectUtilities.BaseCoreGenericHandler((Object)i42.e(), (Object)string2)) {
+        if (i42 != null && !StringUtilities.BaseCoreGenericHandler(string, string4, false, 2, null) && StringUtilities.c(string, '}', false, 2, null) && i42.AsyncBackgroundTask_5() && ObjectUtilities.BaseCoreGenericHandler(i42.e(), string2)) {
             String string5 = string4 + ' ' + string;
             return this.plugin(string5, string2, string3, null);
         }
-        if (!StringUtilities.BaseCoreGenericHandler((CharSequence)string, (CharSequence)string4, false, 2, null)) {
+        if (!StringUtilities.BaseCoreGenericHandler(string, string4, false, 2, null)) {
             return new LiteBansModule_289(string2, string3, string, null, false, false, 56, null);
         }
-        Object object = new char[]{' '};
-        List list2 = StringUtilities.BaseCoreGenericHandler((CharSequence)string, object, false, 0, 6, null);
-        object = CollectionUtilities.BaseCoreGenericHandler((Collection)list2);
+        Object targetObj = new char[]{' '};
+        List list2 = StringUtilities.BaseCoreGenericHandler(string, targetObj, false, 0, 6, null);
+        targetObj = CollectionUtilities.BaseCoreGenericHandler((Collection)list2);
         n3 = 1;
-        ArrayList<String> arrayList = new ArrayList<String>(object.size());
+        ArrayList<String> arrayList = new ArrayList<String>(targetObj.size());
         HoverTextFormatter y2 = this;
         Iterable iterable = list2;
-        for (Object object2 : iterable) {
+        for (Object contextObj : iterable) {
             if ((n = n5++) < 0) {
                 CollectionUtilities.LiteBansModule_31();
             }
-            String string6 = (String)object2;
+            String string6 = (String)contextObj;
             int n6 = n;
             if (!flag && StringUtilities.LiteBansModule_31(string6, string4, false, 2, null)) {
                 flag = true;
@@ -138,18 +135,18 @@ extends PluginModule {
             }
             if (!flag2) continue;
             ++n3;
-            if (StringUtilities.c((CharSequence)string6, '}', false, 2, null) && !StringUtilities.c((CharSequence)string6, '{', false, 2, null)) {
+            if (StringUtilities.c(string6, '}', false, 2, null) && !StringUtilities.c(string6, '{', false, 2, null)) {
                 String string7 = StringUtilities.c(string6, '}', null, 2, null);
-                if (((CharSequence)string7).length() > 0) {
+                if ((string7).length() > 0) {
                     arrayList.add(string7);
                 }
                 String string8 = StringUtilities.AsyncBackgroundTask_5(string6, '}', null, 2, null);
-                if (((CharSequence)string8).length() > 0) {
+                if ((string8).length() > 0) {
                     int n7 = n6 + 1;
-                    if (object.size() > n7) {
-                        object.set(n7, string8 + (String)object.get(n7));
+                    if (targetObj.size() > n7) {
+                        targetObj.set(n7, string8 + (String)targetObj.get(n7));
                     } else {
-                        object.add(string8);
+                        targetObj.add(string8);
 }
                 flag2 = false;
                 flag3 = true;
@@ -157,36 +154,35 @@ extends PluginModule {
             }
             arrayList.add(string6);
         }
-        n2 = Math.min(object.size() - 1, n2);
+        n2 = Math.min(targetObj.size() - 1, n2);
         Iterable iterable2 = LiteBansModule_20.LiteBansModule_31(0, n3);
-        Object object3 = iterable2.iterator();
-        while (object3.hasNext()) {
+        Object resultObj = iterable2.iterator();
+        while (resultObj.hasNext()) {
             int n8;
-            n4 = n8 = ((LiteBansModule_290)object3).LiteBansModule_31();
+            n4 = n8 = this.LiteBansModule_31();
             n5 = 0;
-            object.remove(n2);
+            targetObj.remove(n2);
         }
         String string9 = string2;
         String string10 = string3;
-        String string11 = CollectionUtilities.BaseCoreGenericHandler((Iterable)object, " ", null, null, 0, null, null, 62, null);
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)"url")) {
+        String string11 = CollectionUtilities.BaseCoreGenericHandler((Iterable)targetObj, " ", null, null, 0, null, null, 62, null);
+        if (ObjectUtilities.BaseCoreGenericHandler(string2, (Object)"url")) {
             Iterable<String> iterable3;
             iterable2 = arrayList;
             String string12 = string11;
             String string13 = string10;
             String string14 = string9;
             flag6 = false;
-            object3 = iterable2;
+            resultObj = iterable2;
             iterable = new ArrayList(CollectionUtilities.BaseCoreGenericHandler(iterable2, 10));
             n4 = 0;
-            Iterator iterator = object3.iterator();
+            Iterator iterator = resultObj.iterator();
             while (iterator.hasNext()) {
-                Object object2;
                 Iterator iterator2 = iterator.next();
-                object2 = (String)((Object)iterator2);
+                contextObj = (String)(iterator2);
                 iterable3 = iterable;
                 n = 0;
-                iterable3.add(StringUtilities.BaseCoreGenericHandler(object2, '\u00a7', null, 2, null));
+                iterable3.add(StringUtilities.BaseCoreGenericHandler(contextObj, '\u00a7', null, 2, null));
             }
             iterable3 = (List)iterable;
             string9 = string14;
@@ -205,7 +201,7 @@ extends PluginModule {
         return new LiteBansModule_289(string18, string17, string16, string15, flag8, flag7);
     }
 
-    public static /* synthetic */ LiteBansModule_289 BaseCoreGenericHandler(HoverTextFormatter y2, String string, String string2, String string3, LiteBansModule_289 i42, int n, Object object) {
+    public static /* synthetic */ LiteBansModule_289 BaseCoreGenericHandler(HoverTextFormatter y2, String string, String string2, String string3, LiteBansModule_289 i42, int n, Object targetObj) {
         if ((n & 8) != 0) {
             i42 = null;
         }
@@ -322,11 +318,11 @@ extends PluginModule {
                 if (n < 770) {
                     g82 = V116Handler.c;
                 }
-                Object object = LiteBansModule_182.BaseCoreGenericHandler(string);
-                String string3 = LiteBansModule_147.BaseCoreGenericHandler(g82).BaseCoreGenericHandler(Arrays.copyOf(object, ((LiteBansModule_432[])object).length));
-                object = new LiteBansModule_314().BaseCoreGenericHandler(string3);
-                ObjectUtilities.LiteBansModule_31(object, "");
-                gr_04 = (NullHandler_3)object;
+                Object targetObj = LiteBansModule_182.BaseCoreGenericHandler(string);
+                String string3 = LiteBansModule_147.BaseCoreGenericHandler(g82).BaseCoreGenericHandler(Arrays.copyOf(targetObj, ((LiteBansModule_432[])targetObj).length));
+                targetObj = new LiteBansModule_314().BaseCoreGenericHandler(string3);
+                ObjectUtilities.LiteBansModule_31(targetObj, "");
+                gr_04 = (NullHandler_3)targetObj;
                 if (!this.plugin(gr_02, gr_04, string2)) {
                     Object v2 = gr_04.get("contents");
                     if (ObjectUtilities.BaseCoreGenericHandler(v2, (Object)"null")) {
@@ -340,7 +336,7 @@ extends PluginModule {
                         Object v3 = gr_05.get("contents");
                         ObjectUtilities.LiteBansModule_31(v3, "");
                         String string4 = (String)v3;
-                        if (ObjectUtilities.BaseCoreGenericHandler((Object)string4, (Object)"sort")) {
+                        if (ObjectUtilities.BaseCoreGenericHandler(string4, (Object)"sort")) {
                             String[] parsedArgs = new String[]{"00"};
                             filteredArgs = parsedArgs;
                         } else {
@@ -369,7 +365,7 @@ extends PluginModule {
         return gr_04;
     }
 
-    public static /* synthetic */ NullHandler_3 BaseCoreGenericHandler(HoverTextFormatter y2, String string, CommandSenderWrapper sender, NullHandler_3 gr_02, String string2, NullHandler_3 gr_03, int n, Object object) {
+    public static /* synthetic */ NullHandler_3 BaseCoreGenericHandler(HoverTextFormatter y2, String string, CommandSenderWrapper sender, NullHandler_3 gr_02, String string2, NullHandler_3 gr_03, int n, Object targetObj) {
         if ((n & 4) != 0) {
             gr_02 = null;
         }
@@ -399,7 +395,7 @@ extends PluginModule {
                 iterable = (List)collection2;
                 flag = false;
                 for (Collection collection2 : iterable) {
-                    NullHandler_3 gr_04 = (NullHandler_3)((Object)collection2);
+                    NullHandler_3 gr_04 = (NullHandler_3)(collection2);
                     ((Map)gr_04).put(string, gr_02);
 }
             ((Map)gr_03).put(string, gr_02);
@@ -410,36 +406,33 @@ extends PluginModule {
 
     public final NullHandler_3 BaseCoreGenericHandler(@NotNull NullHandler_3 gr_02, @NotNull CommandSenderWrapper sender) {
 {
-            Object object;
-            Object object2;
-            Object object3;
             if (!ObjectUtilities.BaseCoreGenericHandler(gr_02.get("text"), (Object)"")) {
-                object3 = gr_02;
-                object2 = "text";
+                resultObj = gr_02;
+                contextObj = "text";
                 LiteBansModule_289 i42 = HoverTextFormatter.BaseCoreGenericHandler(this, (String)gr_02.get("text"), null, 2, null);
                 String string = i42 != null ? i42.c() : null;
-                object3.put(object2, string);
+                resultObj.put(contextObj, string);
             }
-            object3 = (NullHandler_7)gr_02.get("extra");
-            object2 = null;
-            Object object4 = object3;
-            if (object4 == null) break;
-            Iterable iterable = (Iterable)object4;
+            resultObj = (NullHandler_7)gr_02.get("extra");
+            contextObj = null;
+            Object helperObj = resultObj;
+            if (helperObj == null) break;
+            Iterable iterable = (Iterable)helperObj;
             Iterable iterable2 = iterable;
             Collection collection2 = new ArrayList();
             Iterator iterator = iterable2.iterator();
             while (iterator.hasNext()) {
-                object = iterator.next();
-                if (!(object instanceof NullHandler_3)) continue;
-                collection2.add(object);
+                targetObj = iterator.next();
+                if (!(targetObj instanceof NullHandler_3)) continue;
+                collection2.add(targetObj);
             }
             iterable = (List)collection2;
             flag = false;
             for (Collection collection2 : iterable) {
                 String string;
-                NullHandler_3 gr_03 = (NullHandler_3)((Object)collection2);
-                object2 = object = this.plugin((String)gr_03.get("text"), (LiteBansModule_289)object2);
-                Object t2 = object;
+                NullHandler_3 gr_03 = (NullHandler_3)(collection2);
+                contextObj = targetObj = this.plugin((String)gr_03.get("text"), (LiteBansModule_289)contextObj);
+                Object t2 = targetObj;
                 ((Map)gr_03).put("text", t2 != null ? ((LiteBansModule_289)t2).c() : null);
                 String string2 = "click_event";
                 String string3 = "clickEvent";
@@ -488,7 +481,7 @@ extends PluginModule {
         return i43;
     }
 
-    static /* synthetic */ LiteBansModule_289 BaseCoreGenericHandler(HoverTextFormatter y2, String string, LiteBansModule_289 i42, int n, Object object) {
+    static /* synthetic */ LiteBansModule_289 BaseCoreGenericHandler(HoverTextFormatter y2, String string, LiteBansModule_289 i42, int n, Object targetObj) {
         if ((n & 2) != 0) {
             i42 = null;
         }

@@ -17,8 +17,8 @@ LiteBansModule_122 {
     }
 
     @Override
-    public boolean equals(@Nullable Object object) {
-        return object instanceof Set && ((Set)object).isEmpty();
+    public boolean equals(@Nullable Object targetObj) {
+        return targetObj instanceof Set && targetObj.isEmpty();
     }
 
     @Override
@@ -40,13 +40,13 @@ LiteBansModule_122 {
     }
 
     public boolean BaseCoreGenericHandler(@NotNull Void void_) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)void_, "element");
+        ObjectUtilities.BaseCoreGenericHandler(void_, "element");
         return false;
     }
 
     @Override
     public boolean containsAll(@NotNull Collection collection) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "elements");
+        ObjectUtilities.BaseCoreGenericHandler(collection, "elements");
         return collection.isEmpty();
     }
 
@@ -60,7 +60,7 @@ LiteBansModule_122 {
     }
 
     @Override
-    public boolean remove(Object object) {
+    public boolean remove(Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
@@ -90,21 +90,21 @@ LiteBansModule_122 {
     }
 
     @Override
-    public final boolean contains(Object object) {
-        if (!(object instanceof Void)) {
+    public final boolean contains(Object targetObj) {
+        if (!(targetObj instanceof Void)) {
             return false;
         }
-        return this.plugin((Void)object);
+        return this.plugintargetObj;
     }
 
     @Override
-    public boolean add(Object object) {
+    public boolean add(Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
     @Override
     public Object[] toArray(Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "array");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "array");
         return CollectionHandler.BaseCoreGenericHandler(this, objectArray);
     }
 

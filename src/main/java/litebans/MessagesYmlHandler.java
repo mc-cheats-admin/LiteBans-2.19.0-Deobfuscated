@@ -15,7 +15,7 @@ public final class MessagesYmlHandler {
     public MessagesYmlHandler(@NotNull PlatformPlugin plugin, @NotNull File file) {
         this.LiteBansModule_31 = plugin;
         this.e = file;
-        this.LiteBansModule_194 = (ConfigService)this.LiteBansModule_31.BaseCoreGenericHandler(ConfigService.class);
+        this.LiteBansModule_194 = this.LiteBansModule_31.BaseCoreGenericHandler(ConfigService.class);
         this.plugin = this.LiteBansModule_31();
     }
 

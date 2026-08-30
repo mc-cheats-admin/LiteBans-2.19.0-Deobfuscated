@@ -37,9 +37,9 @@ implements LiteBansModule_82 {
     public SQLiteDriverHandler_3(@NotNull PlatformPlugin plugin, @NotNull Connection connection) {
         this.LiteBansModule_240 = plugin;
         this.AsyncBackgroundTask_5 = connection;
-        this.Utf8Handler_2 = (PunishmentTableService)this.LiteBansModule_240.BaseCoreGenericHandler(PunishmentTableService.class);
-        this.g = (BroadcastService)this.LiteBansModule_240.BaseCoreGenericHandler(BroadcastService.class);
-        this.LiteBansModule_194 = (ConfigService)this.LiteBansModule_240.BaseCoreGenericHandler(ConfigService.class);
+        this.Utf8Handler_2 = this.LiteBansModule_240.BaseCoreGenericHandler(PunishmentTableService.class);
+        this.g = this.LiteBansModule_240.BaseCoreGenericHandler(BroadcastService.class);
+        this.LiteBansModule_194 = this.LiteBansModule_240.BaseCoreGenericHandler(ConfigService.class);
     }
 
     @Override
@@ -71,7 +71,7 @@ implements LiteBansModule_82 {
         for (Object t2 : iterable) {
             BansHandler_2 kL2 = (BansHandler_2)t2;
             long l5 = l3;
-            long l7 = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, kL2, null, false, 6, null);
+            long l7 = AllHandler_3.BaseCoreGenericHandler(this, kL2, null, false, 6, null);
             l3 = l5 + l7;
         }
         return l3;
@@ -107,114 +107,113 @@ implements LiteBansModule_82 {
         String string;
         String string2;
         int n;
-        Object object;
         boolean flag2;
         ConfigService configService;
-        LiteBansModule_354 jT2 = this.plugin(dZ2, ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_194.LiteBansModule_194().ElementsHandler(), (Object)"pgsql"));
+        LiteBansModule_354 jT2 = this.plugin(dZ2, ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_194.LiteBansModule_194().ElementsHandler(), (Object)"pgsql"));
         String string3 = (String)jT2.BaseCoreGenericHandler();
         String string4 = (String)jT2.c();
-        Object object2 = this.LiteBansModule_194;
+        Object contextObj = this.LiteBansModule_194;
         int n2 = 1;
-        if (((ConfigService)object2).BaseCoreGenericHandler(n2)) {
-            configService = object2;
+        if (((ConfigService)contextObj).BaseCoreGenericHandler(n2)) {
+            configService = contextObj;
             flag2 = false;
             configService.BaseCoreGenericHandler((Object)("Created new " + dZ2.ServerSyncService() + " for server:" + LiteBansModule_181.LiteBansModule_194.c(dZ2.m())));
         }
-        object2 = this.LiteBansModule_194;
+        contextObj = this.LiteBansModule_194;
         n2 = 1;
         flag3 = false;
-        if (((ConfigService)object2).BaseCoreGenericHandler(n2)) {
-            configService = object2;
+        if (((ConfigService)contextObj).BaseCoreGenericHandler(n2)) {
+            configService = contextObj;
             flag2 = false;
             configService.BaseCoreGenericHandler((Object)("Adding entry: " + dZ2));
         }
-        Object object3 = dZ2;
+        Object resultObj = dZ2;
         flag3 = false;
-        object2 = "INSERT INTO " + ((SilentHandler)object3).ServerSyncService().BaseCoreGenericHandler() + '(' + string3 + ")VALUES(" + string4 + ')';
-        object3 = this.c((CharSequence)object2);
+        contextObj = "INSERT INTO " + this.ServerSyncService().BaseCoreGenericHandler() + '(' + string3 + ")VALUES(" + string4 + ')';
+        resultObj = this.c(contextObj);
         flag3 = false;
         SilentHandler dZ3 = dZ2;
-        Object object4 = object3;
-        Object object5 = new String[5];
+        Object helperObj = resultObj;
+        Object tempObj = new String[5];
         String string5 = dZ3.DatabaseMonitorService();
-        object5[0] = string5 != null ? LiteBansModule_242.BaseCoreGenericHandler(string5, 36) : null;
+        tempObj[0] = string5 != null ? LiteBansModule_242.BaseCoreGenericHandler(string5, 36) : null;
         String string6 = dZ3.PunishmentTableService();
-        object5[1] = string6 != null ? LiteBansModule_242.BaseCoreGenericHandler(string6, 45) : null;
+        tempObj[1] = string6 != null ? LiteBansModule_242.BaseCoreGenericHandler(string6, 45) : null;
         CharSequence charSequence = dZ3.LiteBansModule_31();
         int n3 = 2048;
-        object5[2] = LiteBansModule_242.BaseCoreGenericHandler(((Object)charSequence).toString(), n3);
+        tempObj[2] = LiteBansModule_242.BaseCoreGenericHandler((charSequence).toString(), n3);
         String string7 = dZ3.e();
-        object5[3] = string7 != null ? LiteBansModule_242.BaseCoreGenericHandler(string7, 36) : null;
+        tempObj[3] = string7 != null ? LiteBansModule_242.BaseCoreGenericHandler(string7, 36) : null;
         String string8 = dZ3.LiteBansModule_433();
-        object5[4] = string8 != null ? LiteBansModule_242.BaseCoreGenericHandler(string8, 128) : null;
-        Object object6 = object = object4;
-        String[] args = object5;
+        tempObj[4] = string8 != null ? LiteBansModule_242.BaseCoreGenericHandler(string8, 128) : null;
+        Object object6 = targetObj = helperObj;
+        String[] args = tempObj;
         int n4 = args.length;
         for (n = 0; n < n4; ++n) {
             string = string2 = args[n];
             flag = false;
-            ((LiteBansModule_60)object4).BaseCoreGenericHandler(string);
+            ((LiteBansModule_60)helperObj).BaseCoreGenericHandler(string);
         }
-        object4 = object;
-        object5 = new long[2];
-        object5[0] = (String)dZ3.BroadcastService();
-        object5[1] = (String)dZ3.LiteBansModule_401();
+        helperObj = targetObj;
+        tempObj = new long[2];
+        tempObj[0] = (String)dZ3.BroadcastService();
+        tempObj[1] = (String)dZ3.LiteBansModule_401();
         flag6 = false;
-        object6 = object = object4;
+        object6 = targetObj = helperObj;
         flag7 = false;
-        args = object5;
+        args = tempObj;
         flag8 = false;
         n4 = args.length;
         for (n = 0; n < n4; ++n) {
             String string9;
             String string10 = string9 = args[n];
-            ((LiteBansModule_60)object4).BaseCoreGenericHandler((long)string10);
+            ((LiteBansModule_60)helperObj).BaseCoreGenericHandler((long)string10);
         }
-        object4 = ((LiteBansModule_60)object).BaseCoreGenericHandler(dZ3.r());
-        object5 = new String[]{LiteBansModule_181.LiteBansModule_194.c(dZ3.m()), LiteBansModule_181.LiteBansModule_194.c(dZ3.GnuSparseMapHandler())};
+        helperObj = targetObj.BaseCoreGenericHandler(dZ3.r());
+        tempObj = new String[]{LiteBansModule_181.LiteBansModule_194.c(dZ3.m()), LiteBansModule_181.LiteBansModule_194.c(dZ3.GnuSparseMapHandler())};
         flag6 = false;
-        object6 = object = object4;
+        object6 = targetObj = helperObj;
         flag7 = false;
-        args = object5;
+        args = tempObj;
         flag8 = false;
         n4 = args.length;
         for (n = 0; n < n4; ++n) {
             string = string2 = args[n];
             flag = false;
-            ((LiteBansModule_60)object4).BaseCoreGenericHandler(string);
+            ((LiteBansModule_60)helperObj).BaseCoreGenericHandler(string);
         }
-        object4 = object;
-        object5 = new boolean[4];
-        object5[0] = (String)dZ3.AsyncBackgroundTask_5();
-        object5[1] = (String)dZ3.LiteBansModule_240();
-        object5[2] = (String)dZ3.i();
-        object5[3] = (String)dZ3.AsyncBackgroundTask_22();
+        helperObj = targetObj;
+        tempObj = new boolean[4];
+        tempObj[0] = (String)dZ3.AsyncBackgroundTask_5();
+        tempObj[1] = (String)dZ3.LiteBansModule_240();
+        tempObj[2] = (String)dZ3.i();
+        tempObj[3] = (String)dZ3.AsyncBackgroundTask_22();
         flag6 = false;
-        object6 = object = object4;
+        object6 = targetObj = helperObj;
         flag7 = false;
-        args = object5;
+        args = tempObj;
         flag8 = false;
         n4 = args.length;
         for (n = 0; n < n4; ++n) {
             String string11;
             String string12 = string11 = args[n];
             flag = false;
-            ((LiteBansModule_60)object4).BaseCoreGenericHandler((boolean)string12);
+            ((LiteBansModule_60)helperObj).BaseCoreGenericHandler((boolean)string12);
         }
-        object4 = object;
-        object5 = object4;
+        helperObj = targetObj;
+        tempObj = helperObj;
         flag6 = false;
         if (dZ3.ServerSyncService() == BanHandler.c) {
-            ((LiteBansModule_60)object3).BaseCoreGenericHandler(dZ3.c());
+            this.BaseCoreGenericHandler(dZ3.c());
         }
-        LiteBansModule_184.LiteBansModule_31((LiteBansModule_60)object4);
+        LiteBansModule_184.LiteBansModule_31((LiteBansModule_60)helperObj);
     }
 
     @Override
     public LiteBansModule_297 BaseCoreGenericHandler(@NotNull LiteBansModule_297 iA2, boolean flag) {
         LiteBansModule_297 iA3;
         LiteBansModule_297 iA4 = iA3 = iA2;
-        AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, iA4.BaseCoreGenericHandler(), iA4.LiteBansModule_31(), iA4.i(), flag, false, 16, null);
+        AllHandler_3.BaseCoreGenericHandler(this, iA4.BaseCoreGenericHandler(), iA4.LiteBansModule_31(), iA4.i(), flag, false, 16, null);
         return iA3;
     }
 
@@ -230,7 +229,7 @@ implements LiteBansModule_82 {
             string4 = "#";
         }
         String string7 = string4;
-        Object object = LiteBansModule_401;
+        Object targetObj = LiteBansModule_401;
         String[] args = this;
         int n = string5.length();
         byte by2 = args.g().LiteBansModule_194().be();
@@ -245,25 +244,23 @@ implements LiteBansModule_82 {
             throw new IllegalArgumentException(string9.toString());
         }
         try {
-            Object object2;
             boolean flag5;
             int n2;
             String[] filteredArgs;
             int n3;
             int n4;
-            Object object3;
             if (this.plugin(string5, string2, string7)) {
-                if (flag && !StringUtilities.c((CharSequence)string7, '#', false, 2, null) && string2 != null) {
+                if (flag && !StringUtilities.c(string7, '#', false, 2, null) && string2 != null) {
                     CharSequence charSequence;
                     int n5;
-                    object = BansHandler_2.g;
-                    object = SQLiteDriverHandler.c(SQLiteDriverHandler.e("UPDATE " + object), "date=CURRENT_TIMESTAMP");
+                    targetObj = BansHandler_2.g;
+                    targetObj = SQLiteDriverHandler.c(SQLiteDriverHandler.e("UPDATE " + targetObj), "date=CURRENT_TIMESTAMP");
                     String[] parsedArgs = (String[])"ip=?";
                     SQLiteDriverHandler_3 gZ2 = this;
                     flag3 = false;
-                    Object object4 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object), parsedArgs};
+                    Object helperObj = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5targetObj, parsedArgs};
                     by2 = 0;
-                    CharSequence[] charSequenceArray = object4;
+                    CharSequence[] charSequenceArray = helperObj;
                     int n6 = charSequenceArray.length;
                     for (n5 = 0; n5 < n6; ++n5) {
                         CharSequence charSequence2;
@@ -272,29 +269,29 @@ implements LiteBansModule_82 {
                         String string10 = "Failed ";
                         throw new IllegalArgumentException(string10.toString());
                     }
-                    object = gZ2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object) + " WHERE " + parsedArgs), "uuid=?"), "name=?")));
+                    targetObj = gZ2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31targetObj + " WHERE " + parsedArgs), "uuid=?"), "name=?")));
                     parsedArgs = new String[]{string7, string2, string5};
                     flag3 = false;
-                    Object object5 = object4 = object;
+                    Object tempObj = helperObj = targetObj;
                     String[] cmdArgs = parsedArgs;
                     n5 = 0;
                     int n7 = cmdArgs.length;
                     for (n6 = 0; n6 < n7; ++n6) {
                         CharSequence charSequence3 = charSequence = cmdArgs[n6];
-                        ((LiteBansModule_60)object).BaseCoreGenericHandler((String)charSequence3);
+                        targetObj.BaseCoreGenericHandler((String)charSequence3);
                     }
-                    LiteBansModule_184.LiteBansModule_31((LiteBansModule_60)object4);
+                    LiteBansModule_184.LiteBansModule_31((LiteBansModule_60)helperObj);
                 }
                 return;
             }
             if (this.LiteBansModule_194.LiteBansModule_194().LiteBansModule_3() && flag2) {
                 CharSequence charSequence;
-                object = BansHandler_2.g;
-                object = SQLiteDriverHandler.e("DELETE FROM " + object);
+                targetObj = BansHandler_2.g;
+                targetObj = SQLiteDriverHandler.e("DELETE FROM " + targetObj);
                 args = m[24];
-                object3 = this;
+                resultObj = this;
                 flag3 = false;
-                Object object6 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object), args};
+                Object object6 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5targetObj, args};
                 by2 = 0;
                 CharSequence[] charSequenceArray = object6;
                 n4 = charSequenceArray.length;
@@ -305,10 +302,10 @@ implements LiteBansModule_82 {
                     String string11 = m[25];
                     throw new IllegalArgumentException(string11.toString());
                 }
-                object = ((SQLiteDriverHandler_3)object3).c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object) + m[26] + args), m[27])));
+                targetObj = this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31targetObj + m[26] + args), m[27])));
                 args = new String[]{string5, string2};
                 flag3 = false;
-                Object object7 = object6 = object;
+                Object object7 = object6 = targetObj;
                 flag4 = false;
                 filteredArgs = args;
                 n3 = 0;
@@ -316,13 +313,13 @@ implements LiteBansModule_82 {
                 for (n4 = 0; n4 < n2; ++n4) {
                     CharSequence charSequence5 = charSequence = filteredArgs[n4];
                     flag5 = false;
-                    ((LiteBansModule_60)object).BaseCoreGenericHandler((String)charSequence5);
+                    targetObj.BaseCoreGenericHandler((String)charSequence5);
                 }
                 LiteBansModule_184.LiteBansModule_31((LiteBansModule_60)object6);
             }
-            object = BansHandler_2.g;
+            targetObj = BansHandler_2.g;
             args = m[28];
-            object3 = this;
+            resultObj = this;
             flag3 = false;
             String[] stringArray5 = args;
             char c = ',';
@@ -349,13 +346,13 @@ implements LiteBansModule_82 {
                 }
                 stringArray5 = StringUtilities.LiteBansModule_31(stringBuilder.toString(), 1);
             }
-            Object object8 = object;
-            object = ((SQLiteDriverHandler_3)object3).c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(m[31] + object8 + '(' + args + m[32] + (CharSequence)stringArray5 + ')')));
-            Object object9 = object;
+            Object object8 = targetObj;
+            targetObj = this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(m[31] + object8 + '(' + args + m[32] + stringArray5 + ')')));
+            Object object9 = targetObj;
             stringArray5 = object9;
-            Object object10 = object;
+            Object object10 = targetObj;
             String[] stringArray6 = new String[]{string5, string2, string7};
-            Object object11 = object2 = object10;
+            Object object11 = contextObj = object10;
             String[] stringArray7 = stringArray6;
             flag5 = false;
             int n10 = stringArray7.length;
@@ -365,15 +362,15 @@ implements LiteBansModule_82 {
                 ((LiteBansModule_60)object10).BaseCoreGenericHandler(string13);
             }
             LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)object9);
-            object = this.LiteBansModule_194;
+            targetObj = this.LiteBansModule_194;
             n9 = 1;
-            if (((ConfigService)object).BaseCoreGenericHandler(n9)) {
-                object3 = object;
-                ((ConfigService)object3).BaseCoreGenericHandler((Object)(m[33] + string5 + ':' + string2 + ':' + string7 + ']'));
+            if (targetObj.BaseCoreGenericHandler(n9)) {
+                resultObj = targetObj;
+                this.BaseCoreGenericHandler((Object)(m[33] + string5 + ':' + string2 + ':' + string7 + ']'));
 }
         catch (SQLException sQLException) {
             String string14 = sQLException.getMessage();
-            boolean bl23 = string14 != null ? StringUtilities.BaseCoreGenericHandler((CharSequence)string14, (CharSequence)m[34], false, 2, null) : false;
+            boolean bl23 = string14 != null ? StringUtilities.BaseCoreGenericHandler(string14, m[34], false, 2, null) : false;
             if (bl23) {
                 return;
             }
@@ -391,7 +388,7 @@ implements LiteBansModule_82 {
 
     @Override
     public int BaseCoreGenericHandler(@NotNull DescHandler hc2, @NotNull BanHandler a_2) {
-        ResultSet resultSet = hc2.BaseCoreGenericHandler(a_2, (CharSequence)m[35]);
+        ResultSet resultSet = hc2.BaseCoreGenericHandler(a_2, m[35]);
         int n = 1;
         Integer n2 = resultSet.next() ? Integer.valueOf(resultSet.getInt(n)) : null;
         return n2 != null ? n2 : 0;
@@ -400,26 +397,25 @@ implements LiteBansModule_82 {
     @Override
     public List BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, @NotNull BanHandler a_2, @Nullable String string3, boolean flag, int n) {
         CharSequence charSequence;
-        Object object;
         LiteBansModule_144 dy_02 = new LiteBansModule_144();
         dy_02.BaseCoreGenericHandler = LiteBansModule_401.c();
         long l3 = this.LiteBansModule_194.LiteBansModule_194().LiteBansModule_43();
         String string4 = m[36];
-        if (string2 == null || StringUtilities.BaseCoreGenericHandler((CharSequence)string2, '#', false, 2, null)) {
+        if (string2 == null || StringUtilities.BaseCoreGenericHandler(string2, '#', false, 2, null)) {
             dy_02.BaseCoreGenericHandler = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)dy_02.BaseCoreGenericHandler, arg_0 -> SQLiteDriverHandler_3.LiteBansModule_31(string, arg_0));
         } else {
-            object = m[37];
+            targetObj = m[37];
             charSequence = m[38];
             if (l3 > 0L) {
-                string4 = string4 + m[39] + (String)object + m[40] + l3 + m[41] + charSequence + m[42];
+                string4 = string4 + m[39] + (String)targetObj + m[40] + l3 + m[41] + charSequence + m[42];
                 dy_02.BaseCoreGenericHandler = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)dy_02.BaseCoreGenericHandler, arg_0 -> SQLiteDriverHandler_3.c(string, string2, arg_0));
             } else {
-                string4 = string4 + m[43] + (String)object + m[44];
+                string4 = string4 + m[43] + (String)targetObj + m[44];
                 dy_02.BaseCoreGenericHandler = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)dy_02.BaseCoreGenericHandler, arg_0 -> SQLiteDriverHandler_3.LiteBansModule_31(string, string2, arg_0));
 }
-        object = this.LiteBansModule_194.AsyncBackgroundTask_21().BaseCoreGenericHandler(a_2);
-        if (!((Collection)object).isEmpty()) {
-            string4 = '(' + string4 + m[45] + CollectionUtilities.BaseCoreGenericHandler((Iterable)object, m[46], null, null, 0, null, null, 62, null) + ')';
+        targetObj = this.LiteBansModule_194.AsyncBackgroundTask_21().BaseCoreGenericHandler(a_2);
+        if (!targetObj.isEmpty()) {
+            string4 = '(' + string4 + m[45] + CollectionUtilities.BaseCoreGenericHandler((Iterable)targetObj, m[46], null, null, 0, null, null, 62, null) + ')';
         }
         String string5 = string4;
         UuidHandler jR2 = UuidHandler.c;
@@ -448,7 +444,7 @@ implements LiteBansModule_82 {
             String string3 = BansHandler_2.BaseCoreGenericHandler(kL2, null, false, 3, null);
             DatabaseMonitorService w2 = this.AsyncBackgroundTask_5();
             ConfigService configService = (ConfigService)w2.BaseCoreGenericHandler.BaseCoreGenericHandler(ConfigService.class);
-            if (ObjectUtilities.BaseCoreGenericHandler((Object)configService.LiteBansModule_194().ElementsHandler(), (Object)m[51])) {
+            if (ObjectUtilities.BaseCoreGenericHandler(configService.LiteBansModule_194().ElementsHandler(), m[51])) {
                 String string4 = string;
                 string2 = string4.toUpperCase(Locale.ENGLISH);
             } else {
@@ -461,27 +457,27 @@ implements LiteBansModule_82 {
 
     @Override
     public boolean LiteBansModule_31(@NotNull CharSequence charSequence) {
-        return this.AsyncBackgroundTask_5().getTables(null, null, ((Object)charSequence).toString(), null).next();
+        return this.AsyncBackgroundTask_5().getTables(null, null, (charSequence).toString(), null).next();
     }
 
     @Override
     public List BaseCoreGenericHandler(@Nullable String string, int n) {
         String string2 = string;
-        if (string2 == null || StringUtilities.BaseCoreGenericHandler((CharSequence)string2, '#', false, 2, null)) {
+        if (string2 == null || StringUtilities.BaseCoreGenericHandler(string2, '#', false, 2, null)) {
             return CollectionUtilities.e();
         }
         NameHandler_3 jp_02 = HexEncodingHelper.BaseCoreGenericHandler.Utf8Handler_2(string2);
         String string3 = jp_02.LiteBansModule_31();
         String string4 = LiteBansModule_401.BaseCoreGenericHandler(this, string3);
-        if (jp_02.AsyncBackgroundTask_5() == 2 && StringUtilities.c((CharSequence)string2, '*', false, 2, null)) {
+        if (jp_02.AsyncBackgroundTask_5() == 2 && StringUtilities.c(string2, '*', false, 2, null)) {
             string2 = StringUtilities.BaseCoreGenericHandler(string2, '*', '%', false, 4, null);
             string4 = m[52];
         }
-        Object object = BansHandler_2.g;
+        Object targetObj = BansHandler_2.g;
         CharSequence charSequence = this.g.Utf8Handler_2();
-        object = SQLiteDriverHandler.e(m[53] + charSequence + m[54] + object);
+        targetObj = SQLiteDriverHandler.e(m[53] + charSequence + m[54] + targetObj);
         SQLiteDriverHandler_3 gZ2 = this;
-        CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object), string4};
+        CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5targetObj, string4};
         CharSequence[] charSequenceArray2 = charSequenceArray;
         int n2 = charSequenceArray2.length;
         for (int i = 0; i < n2; ++i) {
@@ -491,12 +487,12 @@ implements LiteBansModule_82 {
             String string5 = m[55];
             throw new IllegalArgumentException(string5.toString());
         }
-        ResultSet resultSet = LiteBansModule_184.AsyncBackgroundTask_5(gZ2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object) + m[56] + (CharSequence)string4), m[57]), (Number)n))).BaseCoreGenericHandler(string2));
-        object = new ArrayList(4);
+        ResultSet resultSet = LiteBansModule_184.AsyncBackgroundTask_5(gZ2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31targetObj + m[56] + string4), m[57]), (Number)n))).BaseCoreGenericHandler(string2));
+        targetObj = new ArrayList(4);
         while (resultSet.next()) {
-            ((Collection)object).add(this.plugin(resultSet, true, this.LiteBansModule_194.LiteBansModule_194().ElementsHandler()));
+            targetObj.add(this.plugin(resultSet, true, this.LiteBansModule_194.LiteBansModule_194().ElementsHandler()));
         }
-        return (List)object;
+        return (List)targetObj;
     }
 
     @Override
@@ -530,83 +526,78 @@ implements LiteBansModule_82 {
         long l3;
         double d10;
         long l5;
-        Object object;
 {
             boolean flag3;
-            Object object2;
-            Object object3;
             boolean flag4;
             boolean flag5;
             AllHandler jJ2;
             boolean flag6;
             boolean flag7;
-            Object object4;
             String string4 = HexEncodingHelper.BaseCoreGenericHandler.g(string);
-            AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, false, 1, null);
+            AllHandler_3.BaseCoreGenericHandler(this, false, 1, null);
             if (flag2) {
-                object4 = this;
+                helperObj = this;
                 flag7 = true;
                 flag6 = false;
-                jJ2 = new AllHandler_2(object4.e(), string3, flag7);
+                jJ2 = new AllHandler_2(helperObj.e(), string3, flag7);
             } else {
-                object4 = this;
+                helperObj = this;
                 flag7 = false;
-                jJ2 = new AllHandler(object4.e(), string3);
+                jJ2 = new AllHandler(helperObj.e(), string3);
             }
             AllHandler jJ3 = jJ2;
-            Object object5 = this;
-            flag6 = false;
-            object4 = m[65] + (m[66] + ((SQLiteDriverHandler_3)object5).c().LiteBansModule_31() + m[67]);
-            object5 = m[68];
+                        flag6 = false;
+            helperObj = m[65] + (m[66] + ((SQLiteDriverHandler_3)tempObj).c().LiteBansModule_31() + m[67]);
+            tempObj = m[68];
             String string5 = m[69];
             if (a_2 != BanHandler.c && a_2 != BanHandler.g && !this.LiteBansModule_194.LiteBansModule_194().aE()) {
-                object5 = m[70] + this.g.LiteBansModule_31() + m[71] + this.g.LiteBansModule_31() + m[72];
+                tempObj = m[70] + this.g.LiteBansModule_31() + m[71] + this.g.LiteBansModule_31() + m[72];
                 string5 = m[73] + this.g.LiteBansModule_31() + ')';
             }
-            boolean flag8 = string4 == null || StringUtilities.BaseCoreGenericHandler((CharSequence)string4, '#', false, 2, null);
-            boolean bl9 = flag5 = string2 == null || StringUtilities.BaseCoreGenericHandler((CharSequence)string2, '#', false, 2, null);
+            boolean flag8 = string4 == null || StringUtilities.BaseCoreGenericHandler(string4, '#', false, 2, null);
+            boolean bl9 = flag5 = string2 == null || StringUtilities.BaseCoreGenericHandler(string2, '#', false, 2, null);
             if (flag5 && flag8) {
                 return null;
             }
             String string6 = flag ? m[74] : m[75];
             long l7 = this.LiteBansModule_194.LiteBansModule_194().LiteBansModule_43();
-            String string7 = l7 > 0L ? m[76] + this.g.LiteBansModule_31() + m[77] + (String)object5 + m[78] + l7 + m[79] + string5 + m[80] : m[81] + this.g.LiteBansModule_31() + m[82] + (String)object5 + m[83];
-            String string8 = (flag5 ? m[84] + a_2.BaseCoreGenericHandler() + m[85] + jJ3 + ')' + (String)object4 : (flag8 ? m[86] + a_2.BaseCoreGenericHandler() + m[87] + string7 + jJ3 + ')' + (String)object4 : m[88] + a_2.BaseCoreGenericHandler() + m[89] + string7 + ')' + jJ3 + ')' + (String)object4)) + string6;
+            String string7 = l7 > 0L ? m[76] + this.g.LiteBansModule_31() + m[77] + (String)tempObj + m[78] + l7 + m[79] + string5 + m[80] : m[81] + this.g.LiteBansModule_31() + m[82] + (String)tempObj + m[83];
+            String string8 = (flag5 ? m[84] + a_2.BaseCoreGenericHandler() + m[85] + jJ3 + ')' + (String)helperObj : (flag8 ? m[86] + a_2.BaseCoreGenericHandler() + m[87] + string7 + jJ3 + ')' + (String)helperObj : m[88] + a_2.BaseCoreGenericHandler() + m[89] + string7 + ')' + jJ3 + ')' + (String)helperObj)) + string6;
             Object object6 = this.LiteBansModule_194;
             if (((ConfigService)object6).g()) {
                 ConfigService configService = object6;
                 flag4 = false;
-                configService.BaseCoreGenericHandler((Object)string8);
+                configService.BaseCoreGenericHandler(string8);
             }
-            object6 = this.c((CharSequence)string8);
+            object6 = this.c(string8);
             if (!flag8) {
                 Object object7 = object6;
                 flag4 = false;
-                object2 = object3 = object7;
+                contextObj = resultObj = object7;
                 flag3 = false;
                 ((LiteBansModule_60)object7).BaseCoreGenericHandler(string4);
             }
             if (!flag5) {
                 ((LiteBansModule_60)object6).BaseCoreGenericHandler(string2);
-                if (!StringUtilities.LiteBansModule_31((CharSequence)object5)) {
+                if (!StringUtilities.LiteBansModule_31(tempObj)) {
                     ((LiteBansModule_60)object6).BaseCoreGenericHandler(string2);
                 }
                 if (l7 > 0L) {
                     LiteBansModule_184.BaseCoreGenericHandler((LiteBansModule_60)object6);
 }
-            object = object6;
+            targetObj = object6;
             flag4 = false;
-            object2 = object3 = object;
+            contextObj = resultObj = targetObj;
             flag3 = false;
-            jJ3.BaseCoreGenericHandler((LiteBansModule_60)object2);
+            jJ3.BaseCoreGenericHandler((LiteBansModule_60)contextObj);
             LiteBansModule_184.BaseCoreGenericHandler((LiteBansModule_60)object6);
-            object = null;
+            targetObj = null;
             l5 = System.nanoTime();
             try {
                 SilentHandler dZ2;
-                object2 = LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)object6);
-                if (!object2.next() || !(dZ2 = this.plugin((ResultSet)object2, a_2)).BaseCoreGenericHandler(string4, string2, DatabaseMonitorService.BaseCoreGenericHandler(this.AsyncBackgroundTask_5(), false, 1, null))) break;
-                object = dZ2;
+                contextObj = LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)object6);
+                if (!contextObj.next() || !(dZ2 = this.plugin((ResultSet)contextObj, a_2)).BaseCoreGenericHandler(string4, string2, DatabaseMonitorService.BaseCoreGenericHandler(this.AsyncBackgroundTask_5(), false, 1, null))) break;
+                targetObj = dZ2;
             }
             catch (Throwable throwable) {
                 long l8 = System.nanoTime() - l5;
@@ -619,24 +610,24 @@ implements LiteBansModule_82 {
         if ((d10 = (double)(l3 = System.nanoTime() - l5) / 1.0E9) > 4.0) {
             this.LiteBansModule_240.getLogger().warning(m[90] + LiteBansModule_287.BaseCoreGenericHandler(d10) + m[91]);
         }
-        return object;
+        return targetObj;
     }
 
     @Override
     public SilentHandler BaseCoreGenericHandler(@NotNull String string, @Nullable String string2, @Nullable String string3, @NotNull BanHandler a_2) {
-        List list = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, string, 0, 2, null);
+        List list = AllHandler_3.BaseCoreGenericHandler(this, string, 0, 2, null);
         if (list.isEmpty()) {
             return null;
         }
         for (LiteBansModule_297 iA2 : list) {
             String string4;
-            if (iA2.LiteBansModule_31() == null || ObjectUtilities.BaseCoreGenericHandler((Object)iA2.LiteBansModule_31(), (Object)string2)) continue;
+            if (iA2.LiteBansModule_31() == null || ObjectUtilities.BaseCoreGenericHandler(iA2.LiteBansModule_31(), string2)) continue;
             this.LiteBansModule_194.BaseCoreGenericHandler(10, (Object)(m[94] + iA2.LiteBansModule_31()));
             SilentHandler dZ2 = AllHandler_3.BaseCoreGenericHandler(this, iA2.LiteBansModule_31(), null, a_2, string3, false, false, 32, null);
             StringBuilder stringBuilder = new StringBuilder();
             BanHandler a_3 = a_2;
             String string5 = a_3.toString();
-            if (((CharSequence)string5).length() > 0) {
+            if ((string5).length() > 0) {
                 char c = string5.charAt(0);
                 StringBuilder stringBuilder2 = new StringBuilder();
                 String string6 = string5;
@@ -645,7 +636,7 @@ implements LiteBansModule_82 {
             } else {
                 string4 = string5;
             }
-            this.LiteBansModule_194.BaseCoreGenericHandler(10, (Object)stringBuilder.append(string4).append(m[95]).append(dZ2).toString());
+            this.LiteBansModule_194.BaseCoreGenericHandler(10, stringBuilder.append(string4).append(m[95]).append(dZ2).toString());
             if (dZ2 == null) continue;
             this.LiteBansModule_240.getLogger().info(m[96] + string + m[97] + a_2 + m[98] + dZ2.BaseCoreGenericHandler());
             return dZ2;
@@ -656,13 +647,13 @@ implements LiteBansModule_82 {
     @Override
     public List BaseCoreGenericHandler(@NotNull String string, @Nullable String string2, @Nullable String string3, @NotNull BanHandler a_2, boolean flag) {
         Iterable iterable;
-        List list = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, string, 0, 2, null);
+        List list = AllHandler_3.BaseCoreGenericHandler(this, string, 0, 2, null);
         if (list.isEmpty()) {
             return CollectionUtilities.e();
         }
         List list2 = new ArrayList();
         for (LiteBansModule_297 iA2 : list) {
-            if (iA2.LiteBansModule_31() == null || ObjectUtilities.BaseCoreGenericHandler((Object)iA2.LiteBansModule_31(), (Object)string2) || (iterable = this.plugin(iA2.LiteBansModule_31(), null, a_2, string3, true, 0)).isEmpty()) continue;
+            if (iA2.LiteBansModule_31() == null || ObjectUtilities.BaseCoreGenericHandler(iA2.LiteBansModule_31(), string2) || (iterable = this.plugin(iA2.LiteBansModule_31(), null, a_2, string3, true, 0)).isEmpty()) continue;
             list2.addAll((Collection)iterable);
         }
         if (flag) {
@@ -700,29 +691,28 @@ implements LiteBansModule_82 {
     @Override
     public long BaseCoreGenericHandler(@NotNull BansHandler_2 kL2, @NotNull String string, boolean flag) {
         String string2 = m[99] + kL2;
-        Object object = this;
-        AllHandler_2 jy2 = new AllHandler_2(object.e(), string, flag2);
-        object = m[100];
+                AllHandler_2 jy2 = new AllHandler_2(targetObj.e(), string, flag2);
+        targetObj = m[100];
         if (flag) {
             SQLiteDriverHandler_3 gZ2 = this;
             flag3 = false;
-            object = m[101] + (m[102] + gZ2.c().LiteBansModule_31() + m[103]);
+            targetObj = m[101] + (m[102] + gZ2.c().LiteBansModule_31() + m[103]);
         }
-        LiteBansModule_178 eo_02 = ((CharSequence)object).length() == 0 ? LiteBansModule_401.c() : LiteBansModule_401.BaseCoreGenericHandler(SQLiteDriverHandler_3::BaseCoreGenericHandler);
+        LiteBansModule_178 eo_02 = (targetObj).length() == 0 ? LiteBansModule_401.c() : LiteBansModule_401.BaseCoreGenericHandler(SQLiteDriverHandler_3::BaseCoreGenericHandler);
         NameHandler_2 dQ2 = LiteBansModule_401;
         String string3 = m[104];
-        Object object2 = m[105];
-        String string4 = ((CharSequence)object).length() == 0 ? m[106] + string3 : (!StringUtilities.BaseCoreGenericHandler((CharSequence)object, (CharSequence)m[107], false, 2, null) ? m[108] + (String)object + ' ' + (String)object2 + ' ' + string3 : (String)object + ' ' + (String)object2 + ' ' + string3);
-        object = string4;
-        if (((CharSequence)object).length() > 0) {
-            string2 = string2 + ' ' + (String)object;
+        Object contextObj = m[105];
+        String string4 = (targetObj).length() == 0 ? m[106] + string3 : (!StringUtilities.BaseCoreGenericHandler(targetObj, m[107], false, 2, null) ? m[108] + (String)targetObj + ' ' + (String)contextObj + ' ' + string3 : (String)targetObj + ' ' + (String)contextObj + ' ' + string3);
+        targetObj = string4;
+        if ((targetObj).length() > 0) {
+            string2 = string2 + ' ' + (String)targetObj;
         }
         string2 = string2 + jy2;
         eo_02 = LiteBansModule_401.BaseCoreGenericHandler(eo_02, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(jy2, arg_0));
-        object2 = LiteBansModule_184.BaseCoreGenericHandler(this.c((CharSequence)string2), eo_02);
+        contextObj = LiteBansModule_184.BaseCoreGenericHandler(this.c(string2), eo_02);
         int n = 1;
         flag4 = false;
-        Long l3 = object2.next() ? Long.valueOf(object2.getLong(n)) : null;
+        Long l3 = contextObj.next() ? Long.valueOf(contextObj.getLong(n)) : null;
         return l3 != null ? l3 : 0L;
     }
 
@@ -801,56 +791,52 @@ implements LiteBansModule_82 {
 
     @Override
     public List BaseCoreGenericHandler(@NotNull String string) {
-        Object object = string;
-        if (HexEncodingHelper.BaseCoreGenericHandler.i((String)object)) {
+        Object targetObj = string;
+        if (HexEncodingHelper.BaseCoreGenericHandler.itargetObj) {
             return AllHandler_3.LiteBansModule_31(this, string, 0, 2, null);
         }
-        object = this.c(string);
-        return object != null ? AllHandler_3.LiteBansModule_31(this, ((LiteBansModule_297)object).LiteBansModule_31(), 0, 2, null) : CollectionUtilities.e();
+        targetObj = this.c(string);
+        return targetObj != null ? AllHandler_3.LiteBansModule_31(this, targetObj.LiteBansModule_31(), 0, 2, null) : CollectionUtilities.e();
     }
 
     @Override
     public LiteBansModule_297 c(@Nullable String string) {
-        Object object;
         boolean flag;
-        Object object2;
-        Object object3;
-        Object object4;
         if (string == null) {
             return null;
         }
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)m[124])) {
+        if (ObjectUtilities.BaseCoreGenericHandler(string, m[124])) {
             return new LiteBansModule_297(m[125], m[126], m[127], null, 8, null);
         }
         NameHandler_3 jp_02 = HexEncodingHelper.BaseCoreGenericHandler.Utf8Handler_2(string);
         String string2 = jp_02.LiteBansModule_31();
         String string3 = LiteBansModule_401.BaseCoreGenericHandler(this, string2);
-        AsyncBackgroundTask_21 s2 = (AsyncBackgroundTask_21)this.LiteBansModule_240.BaseCoreGenericHandler(AsyncBackgroundTask_21.class);
+        AsyncBackgroundTask_21 s2 = this.LiteBansModule_240.BaseCoreGenericHandler(AsyncBackgroundTask_21.class);
         if (!((Collection)s2.BaseCoreGenericHandler()).isEmpty() && jp_02.AsyncBackgroundTask_5() == 0 || jp_02.AsyncBackgroundTask_5() == 1) {
             Object v0;
 {
-                object4 = s2.BaseCoreGenericHandler();
-                Iterator iterator = object4.iterator();
+                helperObj = s2.BaseCoreGenericHandler();
+                Iterator iterator = helperObj.iterator();
                 while (iterator.hasNext()) {
-                    object3 = iterator.next();
-                    object2 = (LiteBansModule_95)object3;
+                    resultObj = iterator.next();
+                    contextObj = (LiteBansModule_95)resultObj;
                     flag = false;
-                    if (!(ObjectUtilities.BaseCoreGenericHandler((Object)((LiteBansModule_95)object2).c(), (Object)string) || ObjectUtilities.BaseCoreGenericHandler((Object)((LiteBansModule_95)object2).g(), (Object)string))) continue;
-                    v0 = object3;
+                    if (!(ObjectUtilities.BaseCoreGenericHandler((Object)((LiteBansModule_95)contextObj).c(), string) || ObjectUtilities.BaseCoreGenericHandler((Object)((LiteBansModule_95)contextObj).g(), string))) continue;
+                    v0 = resultObj;
                     break;
 }
-            object = v0;
-            if (object != null) {
-                return new LiteBansModule_297(((LiteBansModule_95)object).c(), ((LiteBansModule_95)object).g(), ((LiteBansModule_95)object).LiteBansModule_31(), null, 8, null);
+            targetObj = v0;
+            if (targetObj != null) {
+                return new LiteBansModule_297(targetObj.c(), targetObj.g(), targetObj.LiteBansModule_31(), null, 8, null);
 }
         LiteBansModule_60 bT2 = this.c((CharSequence)(m[128] + this.g.Utf8Handler_2() + m[129] + BansHandler_2.g + m[130] + string3 + m[131]));
-        object4 = jp_02.BaseCoreGenericHandler();
-        object3 = bT2;
-        object2 = object3;
+        helperObj = jp_02.BaseCoreGenericHandler();
+        resultObj = bT2;
+        contextObj = resultObj;
         flag = false;
-        bT2.BaseCoreGenericHandler((String)object4);
-        object = LiteBansModule_184.AsyncBackgroundTask_5(object3);
-        return object.next() ? this.plugin((ResultSet)object, true, this.LiteBansModule_194.LiteBansModule_194().ElementsHandler()) : null;
+        bT2.BaseCoreGenericHandler((String)helperObj);
+        targetObj = LiteBansModule_184.AsyncBackgroundTask_5(resultObj);
+        return targetObj.next() ? this.plugin((ResultSet)targetObj, true, this.LiteBansModule_194.LiteBansModule_194().ElementsHandler()) : null;
     }
 
     @Override
@@ -859,39 +845,39 @@ implements LiteBansModule_82 {
         if (string == null) {
             return CollectionUtilities.e();
         }
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)m[132])) {
+        if (ObjectUtilities.BaseCoreGenericHandler(string, m[132])) {
             return CollectionUtilities.BaseCoreGenericHandler(new LiteBansModule_297(m[133], m[134], m[135], null, 8, null));
         }
         NameHandler_3 jp_02 = HexEncodingHelper.BaseCoreGenericHandler.Utf8Handler_2(string);
         String string2 = jp_02.LiteBansModule_31();
         String string3 = LiteBansModule_401.BaseCoreGenericHandler(this, string2);
-        Object object = this.c((CharSequence)(m[136] + this.g.Utf8Handler_2() + m[137] + BansHandler_2.g + m[138] + string3 + m[139] + n));
-        Object object2 = jp_02.BaseCoreGenericHandler();
-        LiteBansModule_60 bT3 = bT2 = object;
-        ((LiteBansModule_60)object).BaseCoreGenericHandler((String)object2);
+        Object targetObj = this.c((CharSequence)(m[136] + this.g.Utf8Handler_2() + m[137] + BansHandler_2.g + m[138] + string3 + m[139] + n));
+        Object contextObj = jp_02.BaseCoreGenericHandler();
+        LiteBansModule_60 bT3 = bT2 = targetObj;
+        targetObj.BaseCoreGenericHandler((String)contextObj);
         ResultSet resultSet = LiteBansModule_184.AsyncBackgroundTask_5(bT2);
-        object = new ArrayList();
-        object2 = new ArrayList();
+        targetObj = new ArrayList();
+        contextObj = new ArrayList();
         while (resultSet.next()) {
             LiteBansModule_297 iA2 = this.plugin(resultSet, true, this.LiteBansModule_194.LiteBansModule_194().ElementsHandler());
-            if (iA2.LiteBansModule_31() == null || ((ArrayList)object).contains(iA2.LiteBansModule_31())) continue;
-            ((Collection)object).add(iA2.LiteBansModule_31());
-            ((Collection)object2).add(iA2);
+            if (iA2.LiteBansModule_31() == null || targetObj.contains(iA2.LiteBansModule_31())) continue;
+            targetObj.add(iA2.LiteBansModule_31());
+            ((Collection)contextObj).add(iA2);
         }
-        return (List)object2;
+        return (List)contextObj;
     }
 
     @Override
     public long LiteBansModule_31(@NotNull SilentHandler dZ2) {
         SilentHandler dZ3 = dZ2;
-        Object object = dZ3;
-        object = ((SilentHandler)object).ServerSyncService().BaseCoreGenericHandler();
+        Object targetObj = dZ3;
+        targetObj = targetObj.ServerSyncService().BaseCoreGenericHandler();
         CharSequence charSequence = m[140];
-        object = SQLiteDriverHandler.e(m[141] + charSequence + m[142] + object);
+        targetObj = SQLiteDriverHandler.e(m[141] + charSequence + m[142] + targetObj);
         charSequence = m[143];
         SQLiteDriverHandler_3 gZ2 = this;
         flag3 = false;
-        CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object), charSequence};
+        CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5targetObj, charSequence};
         CharSequence[] charSequenceArray2 = charSequenceArray;
         int n = charSequenceArray2.length;
         for (int i = 0; i < n; ++i) {
@@ -901,18 +887,17 @@ implements LiteBansModule_82 {
             String string = m[144];
             throw new IllegalArgumentException(string.toString());
         }
-        object = LiteBansModule_184.AsyncBackgroundTask_5(gZ2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object) + m[145] + charSequence), m[146]), m[147]), (Number)1))).BaseCoreGenericHandler(dZ3.DatabaseMonitorService()).BaseCoreGenericHandler(dZ3.BroadcastService()));
+        targetObj = LiteBansModule_184.AsyncBackgroundTask_5(gZ2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31targetObj + m[145] + charSequence), m[146]), m[147]), (Number)1))).BaseCoreGenericHandler(dZ3.DatabaseMonitorService()).BaseCoreGenericHandler(dZ3.BroadcastService()));
         charSequence = m[148];
         flag3 = false;
-        Long l3 = object.next() ? Long.valueOf(object.getLong((String)charSequence)) : null;
+        Long l3 = targetObj.next() ? Long.valueOf(targetObj.getLong((String)charSequence)) : null;
         return l3 != null ? l3 : 0L;
     }
 
     @Override
     public boolean BaseCoreGenericHandler(@Nullable String v1, @Nullable String v2, @NotNull String v3) {
         arg1 = SQLiteDriverHandler_3.LiteBansModule_401;
-        arg2 = this;
-        if (v1 == null) ** GOTO lbl-1000
+                if (v1 == null) ** GOTO lbl-1000
         arg3 = v1.length();
         arg4 = arg2.g().LiteBansModule_194().be();
         if (ObjectUtilities.BaseCoreGenericHandler(arg3, arg4 & 255) <= 0) lbl-1000:
@@ -931,8 +916,7 @@ implements LiteBansModule_82 {
         arg2 = SQLiteDriverHandler_3.m[153];
         arg1 = SQLiteDriverHandler.e(SQLiteDriverHandler_3.m[154] + arg2 + SQLiteDriverHandler_3.m[155] + arg1);
         arg2 = SQLiteDriverHandler_3.m[156];
-        arg7 = this;
-        arg8   = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)arg1), arg2};
+                arg8   = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)arg1), arg2};
         arg9 = arg8  ;
         arg10 = arg9.length;
         for (arg11 = 0; arg11 < arg10; ++arg11) {
@@ -986,17 +970,17 @@ implements LiteBansModule_82 {
         AutoCloseable autoCloseable = connection.prepareStatement(m[163] + string);
         Throwable throwable = null;
         try {
-            Object object = (PreparedStatement)autoCloseable;
-            AutoCloseable autoCloseable2 = object.executeQuery();
+            Object targetObj = (PreparedStatement)autoCloseable;
+            AutoCloseable autoCloseable2 = targetObj.executeQuery();
             Throwable throwable2 = null;
             try {
-                Object object2 = (ResultSet)autoCloseable2;
+                Object contextObj = (ResultSet)autoCloseable2;
                 if (flag3) {
-                    while (object2.next()) {
-                        ObjectUtilities.BaseCoreGenericHandler(object2);
-                        SilentHandler dZ2 = this.plugin((ResultSet)object2, kL2.c());
-                        SilentHandler dZ3 = AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, dZ2, false, 2, null);
-                        if (dZ3 != null && (!dZ3.LiteBansModule_240() || ObjectUtilities.BaseCoreGenericHandler((Object)dZ3.DatabaseMonitorService(), (Object)dZ2.DatabaseMonitorService()))) continue;
+                    while (contextObj.next()) {
+                        ObjectUtilities.BaseCoreGenericHandler(contextObj);
+                        SilentHandler dZ2 = this.plugin((ResultSet)contextObj, kL2.c());
+                        SilentHandler dZ3 = AllHandler_3.BaseCoreGenericHandler(this, dZ2, false, 2, null);
+                        if (dZ3 != null && (!dZ3.LiteBansModule_240() || ObjectUtilities.BaseCoreGenericHandler(dZ3.DatabaseMonitorService(), dZ2.DatabaseMonitorService()))) continue;
                         try {
                             this.c(dZ2);
                         }
@@ -1005,15 +989,15 @@ implements LiteBansModule_82 {
                             if (!this.LiteBansModule_194.BaseCoreGenericHandler(1)) continue;
                             sQLException.printStackTrace();
 } else if (flag2) {
-                    while (object2.next()) {
-                        ObjectUtilities.BaseCoreGenericHandler(object2);
-                        LiteBansModule_297 iA2 = this.plugin((ResultSet)object2, false, (String)charSequence);
+                    while (contextObj.next()) {
+                        ObjectUtilities.BaseCoreGenericHandler(contextObj);
+                        LiteBansModule_297 iA2 = this.plugin((ResultSet)contextObj, false, (String)charSequence);
                         String string2 = iA2.LiteBansModule_240();
                         String string3 = iA2.c();
                         String string4 = iA2.AsyncBackgroundTask_5();
-                        AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, string2, string3, string4, false, false, 16, null);
+                        AllHandler_3.BaseCoreGenericHandler(this, string2, string3, string4, false, false, 16, null);
 }
-                object2 = KotlinUnitHandler.BaseCoreGenericHandler;
+                contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
             }
             catch (Throwable throwable3) {
                 throwable2 = throwable3;
@@ -1022,7 +1006,7 @@ implements LiteBansModule_82 {
             finally {
                 CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
             }
-            object = KotlinUnitHandler.BaseCoreGenericHandler;
+            targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable4) {
             throwable = throwable4;
@@ -1043,8 +1027,8 @@ implements LiteBansModule_82 {
         if (string4 == null) {
             string4 = m[171];
         }
-        Object object = resultSet;
-        Object object2 = m[173];
+        Object targetObj = resultSet;
+        Object contextObj = m[173];
         String string5 = resultSet.getString(m[172]);
         String string6 = string4;
         CharSequence charSequence2 = charSequence;
@@ -1052,17 +1036,17 @@ implements LiteBansModule_82 {
         String string8 = string2;
         CharSequence charSequence3 = a_3;
         try {
-            string = object.getString((String)object2);
+            string = targetObj.getString((String)contextObj);
         }
         catch (SQLException sQLException) {
             string = null;
         }
         String string9 = string;
-        object = resultSet;
-        object2 = m[174];
+        targetObj = resultSet;
+        contextObj = m[174];
         flag = false;
         try {
-            string = object.getString((String)object2);
+            string = targetObj.getString((String)contextObj);
         }
         catch (SQLException sQLException) {
             string = null;
@@ -1094,12 +1078,12 @@ implements LiteBansModule_82 {
         }
         if (a_2 != BanHandler.g) {
             String string17;
-            object = Calendar.getInstance();
-            ((Calendar)object).setTimeZone(TimeZone.getTimeZone(m[183]));
-            object2 = resultSet.getTimestamp(m[184]);
-            if (object2 != null) {
-                ((Calendar)object).setTime((Date)object2);
-                dZ2.c(((Calendar)object).getTimeInMillis() + (long)this.AsyncBackgroundTask_5().BaseCoreGenericHandler());
+            targetObj = Calendar.getInstance();
+            targetObj.setTimeZone(TimeZone.getTimeZone(m[183]));
+            contextObj = resultSet.getTimestamp(m[184]);
+            if (contextObj != null) {
+                targetObj.setTime((Date)contextObj);
+                dZ2.c(targetObj.getTimeInMillis() + this.AsyncBackgroundTask_5().BaseCoreGenericHandler());
             } else {
                 dZ2.c(0L);
             }
@@ -1136,7 +1120,7 @@ implements LiteBansModule_82 {
             catch (SQLException sQLException) {
                 string17 = null;
             }
-            dZ3.BaseCoreGenericHandler((CharSequence)string17);
+            dZ3.BaseCoreGenericHandler(string17);
         }
         return dZ2;
     }
@@ -1148,44 +1132,43 @@ implements LiteBansModule_82 {
 
     @Override
     public LiteBansModule_60 c(@NotNull CharSequence charSequence) {
-        Object object = this.LiteBansModule_194;
-        if (((ConfigService)object).g()) {
-            ((ConfigService)object).BaseCoreGenericHandler(charSequence);
+        Object targetObj = this.LiteBansModule_194;
+        if (targetObj.g()) {
+            targetObj.BaseCoreGenericHandler(charSequence);
         }
-        PreparedStatement preparedStatement = this.AsyncBackgroundTask_5.prepareStatement(((Object)charSequence).toString());
+        PreparedStatement preparedStatement = this.AsyncBackgroundTask_5.prepareStatement((charSequence).toString());
         if (preparedStatement == null) {
             AssertionUtilities.BaseCoreGenericHandler();
             throw new CommandExitException();
         }
-        object = preparedStatement;
+        targetObj = preparedStatement;
         String string = charSequence instanceof SQLiteDriverHandler ? ((SQLiteDriverHandler)charSequence).c() : null;
-        return ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_194.LiteBansModule_194().ElementsHandler(), (Object)m[188]) ? (LiteBansModule_60)new LiteBansModule_40(this, (PreparedStatement)object, string, null) : new LiteBansModule_60(this, (PreparedStatement)object, string, null);
+        return ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_194.LiteBansModule_194().ElementsHandler(), m[188]) ? (LiteBansModule_60)new LiteBansModule_40(this, (PreparedStatement)targetObj, string, null) : new LiteBansModule_60(this, (PreparedStatement)targetObj, string, null);
     }
 
     @Override
     public void BaseCoreGenericHandler(@Nullable String string, long l3) {
-        Object object;
         String string2 = HexEncodingHelper.BaseCoreGenericHandler.g(string);
         String string3 = m[189] + DatabaseMonitorService.BaseCoreGenericHandler(this.AsyncBackgroundTask_5(), false, 1, null) + m[190];
-        Object object2 = BansHandler_2.values();
-        Object object3 = object2;
+        Object contextObj = BansHandler_2.values();
+        Object resultObj = contextObj;
         Collection collection = new ArrayList();
-        for (BansHandler_2 kL2 : object3) {
-            object = kL2;
-            if (!((BansHandler_2)object).BaseCoreGenericHandler()) continue;
+        for (BansHandler_2 kL2 : resultObj) {
+            targetObj = kL2;
+            if (!targetObj.BaseCoreGenericHandler()) continue;
             collection.add(kL2);
         }
-        object2 = (List)collection;
+        contextObj = (List)collection;
         flag = false;
-        object3 = object2.iterator();
-        while (object3.hasNext()) {
-            collection = object3.next();
-            BansHandler_2 kL3 = (BansHandler_2)((Object)collection);
-            Object object4 = kL3;
-            object4 = SQLiteDriverHandler.e(m[191] + object4);
+        resultObj = contextObj.iterator();
+        while (resultObj.hasNext()) {
+            collection = resultObj.next();
+            BansHandler_2 kL3 = (BansHandler_2)(collection);
+            Object helperObj = kL3;
+            helperObj = SQLiteDriverHandler.e(m[191] + helperObj);
             CharSequence charSequence = m[192];
-            Object object5 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object4), charSequence};
-            CharSequence[] charSequenceArray = object5;
+            Object tempObj = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)helperObj), charSequence};
+            CharSequence[] charSequenceArray = tempObj;
             int n2 = charSequenceArray.length;
             for (int i = 0; i < n2; ++i) {
                 CharSequence charSequence2;
@@ -1194,16 +1177,16 @@ implements LiteBansModule_82 {
                 String string4 = m[193];
                 throw new IllegalArgumentException(string4.toString());
             }
-            String string5 = SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object4) + m[194] + charSequence), m[195]);
+            String string5 = SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)helperObj) + m[194] + charSequence), m[195]);
             if (kL3 != BansHandler_2.GnuSparseMapHandler) {
                 string5 = SQLiteDriverHandler.LiteBansModule_31(string5, string3);
             }
-            object4 = this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(string5));
-            object = object4;
-            object5 = object;
+            helperObj = this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(string5));
+            targetObj = helperObj;
+            tempObj = targetObj;
             flag6 = false;
-            ((LiteBansModule_60)object4).BaseCoreGenericHandler(string2);
-            LiteBansModule_184.AsyncBackgroundTask_5(((LiteBansModule_60)object).BaseCoreGenericHandler(l3));
+            ((LiteBansModule_60)helperObj).BaseCoreGenericHandler(string2);
+            LiteBansModule_184.AsyncBackgroundTask_5(targetObj.BaseCoreGenericHandler(l3));
 }
 
     @Override
@@ -1214,16 +1197,16 @@ implements LiteBansModule_82 {
         if (string == null) {
             return 0;
         }
-        boolean flag3 = c12.GnuSparseMapHandler() && string2 != null && !StringUtilities.c((CharSequence)string2, '#', false, 2, null);
+        boolean flag3 = c12.GnuSparseMapHandler() && string2 != null && !StringUtilities.c(string2, '#', false, 2, null);
         BansHandler_2 kL2 = c12.AsyncBackgroundTask_5().BaseCoreGenericHandler();
         LiteBansModule_178 eo_02 = LiteBansModule_401.c();
-        Object object = kL2;
+        Object targetObj = kL2;
         CharSequence charSequence = m[196];
-        String string3 = SQLiteDriverHandler.e(m[197] + charSequence + m[198] + object);
+        String string3 = SQLiteDriverHandler.e(m[197] + charSequence + m[198] + targetObj);
         if (flag3) {
-            object = m[199];
+            targetObj = m[199];
             flag2 = false;
-            charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string3), object};
+            charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string3), targetObj};
             flag = false;
             CharSequence[] charSequenceArray2 = charSequenceArray;
             int n = charSequenceArray2.length;
@@ -1234,12 +1217,12 @@ implements LiteBansModule_82 {
                 String string4 = m[200];
                 throw new IllegalArgumentException(string4.toString());
             }
-            string3 = SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31(string3) + m[201] + object), m[202]);
+            string3 = SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31(string3) + m[201] + targetObj), m[202]);
             eo_02 = LiteBansModule_401.BaseCoreGenericHandler(eo_02, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(string, string2, c12, arg_0));
         } else {
-            object = m[203];
+            targetObj = m[203];
             flag2 = false;
-            charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string3), object};
+            charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string3), targetObj};
             flag = false;
             CharSequence[] charSequenceArray3 = charSequenceArray;
             int n = charSequenceArray3.length;
@@ -1250,13 +1233,13 @@ implements LiteBansModule_82 {
                 String string5 = m[204];
                 throw new IllegalArgumentException(string5.toString());
             }
-            string3 = SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31(string3) + m[205] + object), m[206]);
+            string3 = SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31(string3) + m[205] + targetObj), m[206]);
             eo_02 = LiteBansModule_401.BaseCoreGenericHandler(eo_02, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(string, c12, arg_0));
         }
         if (c12.AsyncBackgroundTask_5() == BanHandler.c) {
-            object = this;
+            targetObj = this;
             flag2 = false;
-            string3 = SQLiteDriverHandler.LiteBansModule_31(string3, m[207] + ((SQLiteDriverHandler_3)object).c().LiteBansModule_31() + m[208]);
+            string3 = SQLiteDriverHandler.LiteBansModule_31(string3, m[207] + targetObj.c().LiteBansModule_31() + m[208]);
             eo_02 = LiteBansModule_401.BaseCoreGenericHandler(eo_02, SQLiteDriverHandler_3::c);
         }
         if (c12.i() > 0L) {
@@ -1279,85 +1262,84 @@ implements LiteBansModule_82 {
         int n;
         int n2;
         boolean flag2;
-        Object object;
         boolean flag3;
         CharSequence[] charSequenceArray;
         if (string == null) {
             return LiteBansModule_371.BaseCoreGenericHandler(0.0, 0.0);
         }
-        boolean flag4 = c12.GnuSparseMapHandler() && string2 != null && !StringUtilities.c((CharSequence)string2, '#', false, 2, null);
+        boolean flag4 = c12.GnuSparseMapHandler() && string2 != null && !StringUtilities.c(string2, '#', false, 2, null);
         BansHandler_2 kL2 = eM2.c().BaseCoreGenericHandler();
-        Object object2 = kL2;
-        Object object3 = m[210];
-        String string3 = SQLiteDriverHandler.e(m[211] + object3 + m[212] + object2);
-        object2 = null;
-        object2 = LiteBansModule_401.c();
+        Object contextObj = kL2;
+        Object resultObj = m[210];
+        String string3 = SQLiteDriverHandler.e(m[211] + resultObj + m[212] + contextObj);
+        contextObj = null;
+        contextObj = LiteBansModule_401.c();
         if (flag4) {
-            object3 = m[213];
+            resultObj = m[213];
             flag5 = false;
-            charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string3), object3};
+            charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string3), resultObj};
             flag3 = false;
-            object = charSequenceArray;
+            targetObj = charSequenceArray;
             flag2 = false;
-            n2 = ((CharSequence[])object).length;
+            n2 = ((CharSequence[])targetObj).length;
             for (n = 0; n < n2; ++n) {
-                charSequence = charSequence2 = object[n];
+                charSequence = charSequence2 = targetObj[n];
                 flag = false;
                 if (charSequence.length() > 0) continue;
                 String string4 = m[214];
                 throw new IllegalArgumentException(string4.toString());
             }
-            string3 = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31(string3) + m[215] + object3);
-            object2 = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)object2, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(string, string2, arg_0));
+            string3 = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31(string3) + m[215] + resultObj);
+            contextObj = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)contextObj, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(string, string2, arg_0));
         } else {
-            object3 = m[216];
+            resultObj = m[216];
             flag5 = false;
-            charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string3), object3};
+            charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5(string3), resultObj};
             flag3 = false;
-            object = charSequenceArray;
+            targetObj = charSequenceArray;
             flag2 = false;
-            n2 = ((CharSequence[])object).length;
+            n2 = ((CharSequence[])targetObj).length;
             for (n = 0; n < n2; ++n) {
-                charSequence = charSequence2 = object[n];
+                charSequence = charSequence2 = targetObj[n];
                 flag = false;
                 if (charSequence.length() > 0) continue;
                 String string5 = m[217];
                 throw new IllegalArgumentException(string5.toString());
             }
-            string3 = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31(string3) + m[218] + object3);
-            object2 = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)object2, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(string, arg_0));
+            string3 = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31(string3) + m[218] + resultObj);
+            contextObj = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)contextObj, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(string, arg_0));
         }
         if (eM2.c() == BanHandler.c) {
-            object3 = this;
+            resultObj = this;
             flag5 = false;
-            string3 = SQLiteDriverHandler.LiteBansModule_31(string3, m[219] + ((SQLiteDriverHandler_3)object3).c().LiteBansModule_31() + m[220]);
-            object2 = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)object2, SQLiteDriverHandler_3::LiteBansModule_31);
+            string3 = SQLiteDriverHandler.LiteBansModule_31(string3, m[219] + this.c().LiteBansModule_31() + m[220]);
+            contextObj = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)contextObj, SQLiteDriverHandler_3::LiteBansModule_31);
         }
         if (eM2.AsyncBackgroundTask_5() > 0L) {
             long l3 = DatabaseMonitorService.BaseCoreGenericHandler(this.AsyncBackgroundTask_5(), false, 1, null) - eM2.AsyncBackgroundTask_5();
             string3 = SQLiteDriverHandler.LiteBansModule_31(string3, m[221]);
-            object2 = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)object2, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(l3, arg_0));
+            contextObj = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)contextObj, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(l3, arg_0));
         }
         String string6 = null;
         string6 = m[222];
-        Object object4 = eM2.e();
-        Iterator iterator = object4.entrySet().iterator();
+        Object helperObj = eM2.e();
+        Iterator iterator = helperObj.entrySet().iterator();
         while (iterator.hasNext()) {
-            Object object5 = object = iterator.next();
+            Object tempObj = targetObj = iterator.next();
             n = 0;
-            LiteBansModule_65 c13 = (LiteBansModule_65)object5.getKey();
+            LiteBansModule_65 c13 = (LiteBansModule_65)tempObj.getKey();
             string6 = string6 + m[223];
-            object2 = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)object2, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(c13, arg_0));
+            contextObj = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)contextObj, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(c13, arg_0));
         }
         string6 = string6.substring(0, string6.length() - 4);
         string3 = SQLiteDriverHandler.LiteBansModule_31(string3, '(' + string6 + ')');
-        object4 = LiteBansModule_184.LiteBansModule_31(this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(string3)), (LiteBansModule_178)object2);
+        helperObj = LiteBansModule_184.LiteBansModule_31(this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(string3)), (LiteBansModule_178)contextObj);
         double d10 = 0.0;
         while (true) {
             String[] args;
             String[] filteredArgs;
             ConfigService configService;
-            Object object6 = object4;
+            Object object6 = helperObj;
             n = 1;
             n2 = 0;
             Integer n3 = object6.next() ? Integer.valueOf(object6.getInt(n)) : null;
@@ -1366,7 +1348,7 @@ implements LiteBansModule_82 {
             }
             byte by2 = LiteBansModule_283.BaseCoreGenericHandler((byte)n3.intValue());
             if ((LiteBansModule_65)eM2.LiteBansModule_31().get(LiteBansModule_283.AsyncBackgroundTask_5(by2)) == null) break;
-            Object v2 = eM2.e().get(object);
+            Object v2 = eM2.e().get(targetObj);
             ObjectUtilities.BaseCoreGenericHandler(v2);
             float f10 = ((Number)v2).floatValue();
             d10 += (double)f10;
@@ -1374,7 +1356,7 @@ implements LiteBansModule_82 {
             n2 = 10;
             if (q_03.BaseCoreGenericHandler(n2)) {
                 configService = q_03;
-                configService.BaseCoreGenericHandler((Object)('[' + eM2.BaseCoreGenericHandler() + m[224] + LiteBansModule_287.BaseCoreGenericHandler(f10) + m[225] + ((LiteBansModule_65)object).g() + m[226] + LiteBansModule_287.BaseCoreGenericHandler(d10)));
+                configService.BaseCoreGenericHandler((Object)('[' + eM2.BaseCoreGenericHandler() + m[224] + LiteBansModule_287.BaseCoreGenericHandler(f10) + m[225] + targetObj.g() + m[226] + LiteBansModule_287.BaseCoreGenericHandler(d10)));
             }
             q_03 = this.LiteBansModule_194;
             n2 = 0;
@@ -1383,7 +1365,7 @@ implements LiteBansModule_82 {
             flag7 = false;
             MuteHandler et2 = AbstractCommand.AsyncBackgroundTask_5;
             String string7 = m[227] + f10;
-            if (ObjectUtilities.BaseCoreGenericHandler((Object)string7, (Object)m[228])) {
+            if (ObjectUtilities.BaseCoreGenericHandler(string7, m[228])) {
                 filteredArgs = new String[]{m[229]};
                 args = filteredArgs;
             } else {
@@ -1403,27 +1385,26 @@ implements LiteBansModule_82 {
     @Override
     public ResultSet BaseCoreGenericHandler(@NotNull BansHandler_2 kL2, @NotNull String string, int n) {
         ResultSet resultSet;
-        Object object = this;
-        AllHandler_2 jy2 = new AllHandler_2(object.e(), string, flag);
+                AllHandler_2 jy2 = new AllHandler_2(targetObj.e(), string, flag);
         if (n == 1) {
             if (!kL2.BaseCoreGenericHandler()) {
                 return LiteBansModule_397.BaseCoreGenericHandler();
             }
-            object = kL2;
+            targetObj = kL2;
             flag = false;
-            return LiteBansModule_184.AsyncBackgroundTask_5(this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[231] + object), m[232]))));
+            return LiteBansModule_184.AsyncBackgroundTask_5(this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[231] + targetObj), m[232]))));
         }
         if (n == 2) {
             if (!kL2.BaseCoreGenericHandler()) {
                 return LiteBansModule_397.BaseCoreGenericHandler();
             }
-            object = kL2;
+            targetObj = kL2;
             flag = false;
-            object = SQLiteDriverHandler.e(m[233] + object);
+            targetObj = SQLiteDriverHandler.e(m[233] + targetObj);
             SQLiteDriverHandler_3 gZ2 = this;
             flag = false;
-            Object object2 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object), jy2};
-            CharSequence[] charSequenceArray = object2;
+            Object contextObj = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5targetObj, jy2};
+            CharSequence[] charSequenceArray = contextObj;
             int n2 = charSequenceArray.length;
             for (int i = 0; i < n2; ++i) {
                 CharSequence charSequence;
@@ -1432,24 +1413,24 @@ implements LiteBansModule_82 {
                 String string2 = m[234];
                 throw new IllegalArgumentException(string2.toString());
             }
-            object = gZ2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object) + m[235] + (CharSequence)jy2), m[236])));
+            targetObj = gZ2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31targetObj + m[235] + jy2), m[236])));
             flag = false;
-            Object object3 = object2 = object;
-            ((AllHandler)jy2).BaseCoreGenericHandler((LiteBansModule_60)object3);
-            return LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)object2);
+            Object resultObj = contextObj = targetObj;
+            ((AllHandler)jy2).BaseCoreGenericHandlerthis;
+            return LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)contextObj);
         }
         if (LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(string)) {
-            object = kL2;
+            targetObj = kL2;
             flag = false;
-            resultSet = LiteBansModule_184.AsyncBackgroundTask_5(this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(m[237] + object))));
+            resultSet = LiteBansModule_184.AsyncBackgroundTask_5(this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(m[237] + targetObj))));
         } else {
-            object = kL2;
+            targetObj = kL2;
             flag = false;
-            object = SQLiteDriverHandler.e(m[238] + object);
+            targetObj = SQLiteDriverHandler.e(m[238] + targetObj);
             SQLiteDriverHandler_3 gZ3 = this;
             flag = false;
-            Object object4 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object), jy2};
-            CharSequence[] charSequenceArray = object4;
+            Object helperObj = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5targetObj, jy2};
+            CharSequence[] charSequenceArray = helperObj;
             int n3 = charSequenceArray.length;
             for (int i = 0; i < n3; ++i) {
                 CharSequence charSequence;
@@ -1458,11 +1439,11 @@ implements LiteBansModule_82 {
                 String string3 = m[239];
                 throw new IllegalArgumentException(string3.toString());
             }
-            object = gZ3.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object) + m[240] + (CharSequence)jy2)));
+            targetObj = gZ3.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31targetObj + m[240] + jy2)));
             flag = false;
-            Object object5 = object4 = object;
-            ((AllHandler)jy2).BaseCoreGenericHandler((LiteBansModule_60)object5);
-            resultSet = LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)object4);
+            Object tempObj = helperObj = targetObj;
+            ((AllHandler)jy2).BaseCoreGenericHandler((LiteBansModule_60)tempObj);
+            resultSet = LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)helperObj);
         }
         return resultSet;
     }
@@ -1475,18 +1456,17 @@ implements LiteBansModule_82 {
 
     @Override
     public void BaseCoreGenericHandler(@NotNull CharSequence charSequence, long l3, @NotNull SilentHandler dZ2) {
-        Object object = this;
-        Object object2 = dZ2.m();
-        AllHandler_2 jy2 = new AllHandler_2(object.e(), (String)object2, flag);
-        object2 = dZ2;
+                Object contextObj = dZ2.m();
+        AllHandler_2 jy2 = new AllHandler_2(targetObj.e(), (String)contextObj, flag);
+        contextObj = dZ2;
         flag = false;
-        object2 = ((SilentHandler)object2).ServerSyncService().BaseCoreGenericHandler();
+        contextObj = ((SilentHandler)contextObj).ServerSyncService().BaseCoreGenericHandler();
         flag = false;
-        object2 = SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[243] + object2), m[244]);
+        contextObj = SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[243] + contextObj), m[244]);
         CharSequence charSequence2 = m[245];
         flag2 = false;
-        Object object3 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object2), charSequence2};
-        CharSequence[] charSequenceArray = object3;
+        Object resultObj = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)contextObj), charSequence2};
+        CharSequence[] charSequenceArray = resultObj;
         int n = charSequenceArray.length;
         for (int i = 0; i < n; ++i) {
             CharSequence charSequence3;
@@ -1495,24 +1475,24 @@ implements LiteBansModule_82 {
             String string = m[246];
             throw new IllegalArgumentException(string.toString());
         }
-        String string = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object2) + m[247] + charSequence2);
-        object2 = this;
-        object2 = SQLiteDriverHandler.LiteBansModule_31(string, m[248] + ((SQLiteDriverHandler_3)object2).c().LiteBansModule_31() + m[249]);
+        String string = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)contextObj) + m[247] + charSequence2);
+        contextObj = this;
+        contextObj = SQLiteDriverHandler.LiteBansModule_31(string, m[248] + ((SQLiteDriverHandler_3)contextObj).c().LiteBansModule_31() + m[249]);
         flag6 = false;
-        object = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object2) + (AllHandler)jy2);
-        object2 = this.c(SQLiteDriverHandler.AsyncBackgroundTask_5((String)object)).BaseCoreGenericHandler(l3);
+        targetObj = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)contextObj) + (AllHandler)jy2);
+        contextObj = this.c(SQLiteDriverHandler.AsyncBackgroundTask_5targetObj).BaseCoreGenericHandler(l3);
         flag6 = false;
-        Object object4 = object2;
-        object3 = object4;
+        Object helperObj = contextObj;
+        resultObj = helperObj;
         flag3 = false;
-        ((LiteBansModule_60)object2).BaseCoreGenericHandler(String.valueOf(charSequence));
-        object2 = LiteBansModule_184.BaseCoreGenericHandler(((LiteBansModule_60)object4).BaseCoreGenericHandler(dZ2.BaseCoreGenericHandler()));
+        ((LiteBansModule_60)contextObj).BaseCoreGenericHandler(String.valueOf(charSequence));
+        contextObj = LiteBansModule_184.BaseCoreGenericHandler(((LiteBansModule_60)helperObj).BaseCoreGenericHandler(dZ2.BaseCoreGenericHandler()));
         flag6 = false;
-        object4 = object2;
-        object3 = object4;
+        helperObj = contextObj;
+        resultObj = helperObj;
         flag3 = false;
-        ((AllHandler)jy2).BaseCoreGenericHandler((LiteBansModule_60)object3);
-        LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)object4);
+        ((AllHandler)jy2).BaseCoreGenericHandlerthis;
+        LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)helperObj);
     }
 
     @Override
@@ -1523,9 +1503,9 @@ implements LiteBansModule_82 {
         String string3 = string2;
         String string4 = string3 != null ? LiteBansModule_242.BaseCoreGenericHandler(string3, 128) : null;
         LiteBansModule_82 ch2 = this;
-        Object object = dZ2.m();
-        AllHandler_2 jy2 = new AllHandler_2(ch2.e(), (String)object, flag2);
-        boolean flag4 = dZ2.LiteBansModule_240() && dZ2.PunishmentTableService() != null && !StringUtilities.c((CharSequence)dZ2.PunishmentTableService(), '#', false, 2, null);
+        Object targetObj = dZ2.m();
+        AllHandler_2 jy2 = new AllHandler_2(ch2.e(), (String)targetObj, flag2);
+        boolean flag4 = dZ2.LiteBansModule_240() && dZ2.PunishmentTableService() != null && !StringUtilities.c(dZ2.PunishmentTableService(), '#', false, 2, null);
         if (flag) {
             SilentHandler dZ3 = dZ2;
             flag3 = false;
@@ -1533,14 +1513,14 @@ implements LiteBansModule_82 {
         } else {
             jT2 = flag4 ? LiteBansModule_371.BaseCoreGenericHandler(m[251], dZ2.PunishmentTableService()) : LiteBansModule_371.BaseCoreGenericHandler(m[252], dZ2.DatabaseMonitorService());
         }
-        object = jT2;
-        Object object2 = dZ2;
-        object2 = ((SilentHandler)object2).ServerSyncService().BaseCoreGenericHandler();
+        targetObj = jT2;
+        Object contextObj = dZ2;
+        contextObj = ((SilentHandler)contextObj).ServerSyncService().BaseCoreGenericHandler();
         flag5 = false;
-        object2 = SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[253] + object2), m[254]);
-        CharSequence charSequence3 = (String)((LiteBansModule_354)object).LiteBansModule_31() + m[255];
-        Object object3 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object2), charSequence3};
-        CharSequence[] charSequenceArray = object3;
+        contextObj = SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[253] + contextObj), m[254]);
+        CharSequence charSequence3 = (String)targetObj.LiteBansModule_31() + m[255];
+        Object resultObj = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)contextObj), charSequence3};
+        CharSequence[] charSequenceArray = resultObj;
         int n2 = charSequenceArray.length;
         for (n = 0; n < n2; ++n) {
             CharSequence charSequence4;
@@ -1549,33 +1529,33 @@ implements LiteBansModule_82 {
             String string5 = m[256];
             throw new IllegalArgumentException(string5.toString());
         }
-        String string6 = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object2) + m[257] + charSequence3);
-        object2 = this;
-        object2 = SQLiteDriverHandler.LiteBansModule_31(string6, m[258] + ((SQLiteDriverHandler_3)object2).c().LiteBansModule_31() + m[259]);
+        String string6 = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)contextObj) + m[257] + charSequence3);
+        contextObj = this;
+        contextObj = SQLiteDriverHandler.LiteBansModule_31(string6, m[258] + ((SQLiteDriverHandler_3)contextObj).c().LiteBansModule_31() + m[259]);
         bl10 = false;
-        String string7 = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object2) + (AllHandler)jy2);
-        object2 = this.LiteBansModule_194;
+        String string7 = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)contextObj) + (AllHandler)jy2);
+        contextObj = this.LiteBansModule_194;
         bl10 = false;
-        if (((ConfigService)object2).g()) {
-            Object object4 = object2;
+        if (((ConfigService)contextObj).g()) {
+            Object helperObj = contextObj;
             flag6 = false;
-            ((ConfigService)object4).BaseCoreGenericHandler((Object)(SQLiteDriverHandler.LiteBansModule_31(string7) + ' ' + dZ2.m() + ' ' + object));
+            ((ConfigService)helperObj).BaseCoreGenericHandler((Object)(SQLiteDriverHandler.LiteBansModule_31(string7) + ' ' + dZ2.m() + ' ' + targetObj));
         }
-        object2 = this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(string7));
-        String[] args = new String[]{string, string4, ((Object)charSequence).toString(), ((LiteBansModule_354)object).e()};
+        contextObj = this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(string7));
+        String[] args = new String[]{string, string4, (charSequence).toString(), targetObj.e()};
         flag6 = false;
-        Object object5 = object3 = object2;
+        Object tempObj = resultObj = contextObj;
         String[] filteredArgs = args;
         n = 0;
         int n3 = filteredArgs.length;
         for (n2 = 0; n2 < n3; ++n2) {
             CharSequence charSequence5 = charSequence2 = filteredArgs[n2];
-            ((LiteBansModule_60)object2).BaseCoreGenericHandler((String)charSequence5);
+            ((LiteBansModule_60)contextObj).BaseCoreGenericHandler((String)charSequence5);
         }
-        object2 = LiteBansModule_184.BaseCoreGenericHandler((LiteBansModule_60)object3);
-        Object object6 = object2;
-        object3 = object6;
-        ((AllHandler)jy2).BaseCoreGenericHandler((LiteBansModule_60)object3);
+        contextObj = LiteBansModule_184.BaseCoreGenericHandlerthis;
+        Object object6 = contextObj;
+        resultObj = object6;
+        ((AllHandler)jy2).BaseCoreGenericHandlerthis;
         LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)object6);
         dZ2.BaseCoreGenericHandler(string4, string, charSequence);
     }
@@ -1583,12 +1563,12 @@ implements LiteBansModule_82 {
     @Override
     public void BaseCoreGenericHandler(@NotNull SilentHandler dZ2, @Nullable String string, @Nullable String string2, @NotNull CharSequence charSequence, boolean flag) {
         if (flag) {
-            Object object = dZ2;
-            object = ((SilentHandler)object).ServerSyncService().BaseCoreGenericHandler();
+            Object targetObj = dZ2;
+            targetObj = targetObj.ServerSyncService().BaseCoreGenericHandler();
             flag2 = false;
-            object = SQLiteDriverHandler.e(m[260] + object);
+            targetObj = SQLiteDriverHandler.e(m[260] + targetObj);
             CharSequence charSequence2 = m[261];
-            CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object), charSequence2};
+            CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5targetObj, charSequence2};
             CharSequence[] charSequenceArray2 = charSequenceArray;
             int n = charSequenceArray2.length;
             for (int i = 0; i < n; ++i) {
@@ -1598,18 +1578,17 @@ implements LiteBansModule_82 {
                 String string3 = m[262];
                 throw new IllegalArgumentException(string3.toString());
             }
-            String string4 = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object) + m[263] + charSequence2);
+            String string4 = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31targetObj + m[263] + charSequence2);
             LiteBansModule_184.AsyncBackgroundTask_5(this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(string4)).BaseCoreGenericHandler(dZ2.BaseCoreGenericHandler()));
         } else {
             CharSequence charSequence5;
-            Object object;
-            Object object2 = dZ2;
-            object2 = ((SilentHandler)object2).ServerSyncService().BaseCoreGenericHandler();
+            Object contextObj = dZ2;
+            contextObj = ((SilentHandler)contextObj).ServerSyncService().BaseCoreGenericHandler();
             flag7 = false;
-            object2 = SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[264] + object2), m[265]);
+            contextObj = SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[264] + contextObj), m[265]);
             CharSequence charSequence6 = m[266];
-            Object object3 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object2), charSequence6};
-            CharSequence[] charSequenceArray = object3;
+            Object resultObj = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)contextObj), charSequence6};
+            CharSequence[] charSequenceArray = resultObj;
             int n = charSequenceArray.length;
             for (int i = 0; i < n; ++i) {
                 CharSequence charSequence7;
@@ -1618,25 +1597,25 @@ implements LiteBansModule_82 {
                 String string5 = m[267];
                 throw new IllegalArgumentException(string5.toString());
             }
-            String string6 = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object2) + m[268] + charSequence6);
-            object2 = this.LiteBansModule_194;
-            if (((ConfigService)object2).g()) {
-                Object object4 = object2;
+            String string6 = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)contextObj) + m[268] + charSequence6);
+            contextObj = this.LiteBansModule_194;
+            if (((ConfigService)contextObj).g()) {
+                Object helperObj = contextObj;
                 flag8 = false;
-                object3 = SQLiteDriverHandler.AsyncBackgroundTask_5(string6);
+                resultObj = SQLiteDriverHandler.AsyncBackgroundTask_5(string6);
                 CharSequence charSequence9 = m[269] + dZ2.BaseCoreGenericHandler();
-                ((ConfigService)object4).BaseCoreGenericHandler((Object)("" + object3 + charSequence9));
+                ((ConfigService)helperObj).BaseCoreGenericHandler((Object)("" + resultObj + charSequence9));
             }
-            object2 = this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(string6));
+            contextObj = this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(string6));
             bl12 = false;
-            object3 = object = object2;
-            ((LiteBansModule_60)object2).BaseCoreGenericHandler(string);
-            object2 = object;
+            resultObj = targetObj = contextObj;
+            ((LiteBansModule_60)contextObj).BaseCoreGenericHandler(string);
+            contextObj = targetObj;
             String string7 = string2;
             CharSequence charSequence10 = string7 != null ? LiteBansModule_242.BaseCoreGenericHandler(string7, 128) : null;
-            Object object5 = object3 = object2;
-            ((LiteBansModule_60)object2).BaseCoreGenericHandler((String)charSequence10);
-            object2 = object3;
+            Object tempObj = resultObj = contextObj;
+            ((LiteBansModule_60)contextObj).BaseCoreGenericHandler((String)charSequence10);
+            contextObj = resultObj;
             charSequence10 = charSequence;
             if (StringUtilities.LiteBansModule_31(charSequence10)) {
                 bl15 = false;
@@ -1646,10 +1625,10 @@ implements LiteBansModule_82 {
             }
             charSequence10 = charSequence5;
             bl15 = false;
-            object5 = object3 = object2;
+            tempObj = resultObj = contextObj;
             bl16 = false;
-            ((LiteBansModule_60)object2).BaseCoreGenericHandler(String.valueOf(charSequence10));
-            LiteBansModule_184.AsyncBackgroundTask_5(((LiteBansModule_60)object3).BaseCoreGenericHandler(dZ2.BaseCoreGenericHandler()));
+            ((LiteBansModule_60)contextObj).BaseCoreGenericHandler(String.valueOf(charSequence10));
+            LiteBansModule_184.AsyncBackgroundTask_5(this.BaseCoreGenericHandler(dZ2.BaseCoreGenericHandler()));
             dZ2.BaseCoreGenericHandler(string2, string, charSequence);
 }
 
@@ -1665,30 +1644,29 @@ implements LiteBansModule_82 {
         CharSequence[] charSequenceArray;
         boolean flag3;
         int n4;
-        Object object;
         LiteBansModule_82 ch2 = this;
         AllHandler jJ2 = new AllHandler(ch2.e(), string2);
-        Object object2 = BansHandler_2.values();
-        Object object3 = object2;
-        Object object4 = new ArrayList();
-        for (BansHandler_2 kL2 : object3) {
-            object = kL2;
-            if (!((BansHandler_2)object).BaseCoreGenericHandler()) continue;
-            object4.add(kL2);
+        Object contextObj = BansHandler_2.values();
+        Object resultObj = contextObj;
+        Object helperObj = new ArrayList();
+        for (BansHandler_2 kL2 : resultObj) {
+            targetObj = kL2;
+            if (!targetObj.BaseCoreGenericHandler()) continue;
+            helperObj.add(kL2);
         }
-        object2 = (List)object4;
+        contextObj = (List)helperObj;
         n5 = 0;
-        object3 = object2.iterator();
-        while (object3.hasNext()) {
-            object4 = object3.next();
-            BansHandler_2 kL3 = (BansHandler_2)object4;
+        resultObj = contextObj.iterator();
+        while (resultObj.hasNext()) {
+            helperObj = resultObj.next();
+            BansHandler_2 kL3 = (BansHandler_2)helperObj;
             int n6 = n5;
             n4 = 0;
-            Object object5 = kL3;
-            object5 = SQLiteDriverHandler.e(m[270] + object5);
+            Object tempObj = kL3;
+            tempObj = SQLiteDriverHandler.e(m[270] + tempObj);
             CharSequence charSequence3 = m[271];
-            object = this;
-            Object object6 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object5), charSequence3};
+            targetObj = this;
+            Object object6 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)tempObj), charSequence3};
             flag3 = false;
             charSequenceArray = object6;
             flag2 = false;
@@ -1700,14 +1678,14 @@ implements LiteBansModule_82 {
                 String string3 = m[272];
                 throw new IllegalArgumentException(string3.toString());
             }
-            object5 = ((SQLiteDriverHandler_3)object).c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object5) + m[273] + charSequence3), m[274] + jJ2)));
-            Object object7 = object5;
+            tempObj = targetObj.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)tempObj) + m[273] + charSequence3), m[274] + jJ2)));
+            Object object7 = tempObj;
             object6 = object7;
             flag3 = false;
-            ((LiteBansModule_60)object5).BaseCoreGenericHandler(string);
-            object5 = ((LiteBansModule_60)object7).BaseCoreGenericHandler(l3);
+            ((LiteBansModule_60)tempObj).BaseCoreGenericHandler(string);
+            tempObj = ((LiteBansModule_60)object7).BaseCoreGenericHandler(l3);
             bl9 = false;
-            object7 = object5;
+            object7 = tempObj;
             object6 = object7;
             flag3 = false;
             jJ2.BaseCoreGenericHandler((LiteBansModule_60)object6);
@@ -1715,34 +1693,34 @@ implements LiteBansModule_82 {
             n5 = n6 + n7;
         }
         long l5 = n5;
-        object2 = null;
-        object2 = LiteBansModule_401.BaseCoreGenericHandler(arg_0 -> SQLiteDriverHandler_3.c(string, arg_0));
+        contextObj = null;
+        contextObj = LiteBansModule_401.BaseCoreGenericHandler(arg_0 -> SQLiteDriverHandler_3.c(string, arg_0));
         if (l3 > 0L) {
             Timestamp timestamp = new Timestamp(l3);
-            object2 = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)object2, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(timestamp, arg_0));
+            contextObj = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)contextObj, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(timestamp, arg_0));
         }
-        object2 = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)object2, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(jJ2, arg_0));
+        contextObj = LiteBansModule_401.BaseCoreGenericHandler((LiteBansModule_178)contextObj, arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler(jJ2, arg_0));
         Object object8 = BansHandler_2.values();
-        object4 = object8;
+        helperObj = object8;
         Collection collection = new ArrayList();
         n4 = 0;
-        int n8 = ((BansHandler_2[])object4).length;
+        int n8 = ((BansHandler_2[])helperObj).length;
         for (n = 0; n < n8; ++n) {
-            Object object9 = object = object4[n];
+            Object object9 = targetObj = helperObj[n];
             if (!(((BansHandler_2)object9).BaseCoreGenericHandler() && object9 != BansHandler_2.GnuSparseMapHandler)) continue;
-            collection.add(object);
+            collection.add(targetObj);
         }
         object8 = (List)collection;
         bl10 = false;
-        object4 = object8.iterator();
-        while (object4.hasNext()) {
-            collection = object4.next();
-            BansHandler_2 kL4 = (BansHandler_2)((Object)collection);
+        helperObj = object8.iterator();
+        while (helperObj.hasNext()) {
+            collection = helperObj.next();
+            BansHandler_2 kL4 = (BansHandler_2)(collection);
             n = 0;
             CharSequence charSequence4 = kL4;
             charSequence4 = SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[275] + charSequence4), m[276]);
-            object = SQLiteDriverHandler.AsyncBackgroundTask_5(LiteBansModule_227.c(m[277]));
-            CharSequence[] charSequenceArray2 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)charSequence4), object};
+            targetObj = SQLiteDriverHandler.AsyncBackgroundTask_5(LiteBansModule_227.c(m[277]));
+            CharSequence[] charSequenceArray2 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)charSequence4), targetObj};
             flag3 = false;
             charSequenceArray = charSequenceArray2;
             flag2 = false;
@@ -1754,11 +1732,11 @@ implements LiteBansModule_82 {
                 String string4 = m[278];
                 throw new IllegalArgumentException(string4.toString());
             }
-            String string5 = SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)charSequence4) + m[279] + object), m[280] + jJ2);
+            String string5 = SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)charSequence4) + m[279] + targetObj), m[280] + jJ2);
             if (l3 > 0L) {
                 string5 = SQLiteDriverHandler.LiteBansModule_31(string5, m[281]);
             }
-            LiteBansModule_184.LiteBansModule_31(this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(string5)), (LiteBansModule_178)object2);
+            LiteBansModule_184.LiteBansModule_31(this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(string5)), (LiteBansModule_178)contextObj);
         }
         if (this.LiteBansModule_194.LiteBansModule_194().PunishmentTableService()) {
             PunishmentTableService p2 = this.Utf8Handler_2;
@@ -1769,12 +1747,12 @@ implements LiteBansModule_82 {
 
     @Override
     public ResultSet LiteBansModule_31(@NotNull String string) {
-        Object object = BansHandler_2.LiteBansModule_31;
-        object = LiteBansModule_293.BaseCoreGenericHandler(SQLiteDriverHandler.e(m[282] + object), m[283]);
+        Object targetObj = BansHandler_2.LiteBansModule_31;
+        targetObj = LiteBansModule_293.BaseCoreGenericHandler(SQLiteDriverHandler.e(m[282] + targetObj), m[283]);
         CharSequence charSequence = m[284];
         SQLiteDriverHandler_3 gZ2 = this;
-        Object object2 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object), charSequence};
-        CharSequence[] charSequenceArray = object2;
+        Object contextObj = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5targetObj, charSequence};
+        CharSequence[] charSequenceArray = contextObj;
         int n = charSequenceArray.length;
         for (int i = 0; i < n; ++i) {
             CharSequence charSequence2;
@@ -1783,12 +1761,12 @@ implements LiteBansModule_82 {
             String string2 = m[285];
             throw new IllegalArgumentException(string2.toString());
         }
-        object = gZ2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object) + m[286] + charSequence), SQLiteDriverHandler.AsyncBackgroundTask_5(LiteBansModule_227.c(m[287])))));
-        Object object3 = object;
-        object2 = object3;
+        targetObj = gZ2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31targetObj + m[286] + charSequence), SQLiteDriverHandler.AsyncBackgroundTask_5(LiteBansModule_227.c(m[287])))));
+        Object resultObj = targetObj;
+        contextObj = resultObj;
         flag3 = false;
-        ((LiteBansModule_60)object).BaseCoreGenericHandler(string);
-        return LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)object3);
+        targetObj.BaseCoreGenericHandler(string);
+        return LiteBansModule_184.AsyncBackgroundTask_5this;
     }
 
     /*
@@ -1804,62 +1782,60 @@ implements LiteBansModule_82 {
             if (l3 - this.AsyncBackgroundTask_5().LiteBansModule_31() <= 72000000L && !flag) {
                 return;
             }
-            ServerSyncService u2 = (ServerSyncService)this.LiteBansModule_240.BaseCoreGenericHandler(ServerSyncService.class);
-            Object object = this.AsyncBackgroundTask_5();
-            ((DatabaseMonitorService)object).BaseCoreGenericHandler(l3 + (long)n);
+            ServerSyncService u2 = this.LiteBansModule_240.BaseCoreGenericHandler(ServerSyncService.class);
+            Object targetObj = this.AsyncBackgroundTask_5();
+            targetObj.BaseCoreGenericHandler(l3 + (long)n);
             ServerSyncService.BaseCoreGenericHandler(u2, BroadcastHandler.PunishmentTableService, this, null, 0, 12, null);
-            object = this.AsyncBackgroundTask_5.createStatement();
+            targetObj = this.AsyncBackgroundTask_5.createStatement();
             Throwable throwable = null;
             try {
                 int n2;
                 int n3;
                 boolean flag3;
-                Object object2;
                 int n4;
                 boolean flag4;
-                Object object3;
-                Object object4 = (Statement)object;
-                Object object5 = BansHandler_2.values();
-                Object object6 = object5;
+                Object helperObj = (Statement)targetObj;
+                Object tempObj = BansHandler_2.values();
+                Object object6 = tempObj;
                 Collection<BansHandler_2> collection = new ArrayList();
                 for (CharSequence charSequence : object6) {
                     BansHandler_2 kL2 = charSequence;
-                    object3 = kL2;
+                    resultObj = kL2;
                     flag4 = false;
-                    boolean bl9 = object3.BaseCoreGenericHandler() && object3 != BansHandler_2.GnuSparseMapHandler;
+                    boolean bl9 = resultObj.BaseCoreGenericHandler() && resultObj != BansHandler_2.GnuSparseMapHandler;
                     if (!bl9) continue;
                     collection.add((BansHandler_2)charSequence);
                 }
-                object5 = (List)collection;
+                tempObj = (List)collection;
                 flag6 = false;
-                object6 = object5.iterator();
+                object6 = tempObj.iterator();
                 while (object6.hasNext()) {
                     CharSequence charSequence;
                     collection = object6.next();
-                    BansHandler_2 kL3 = (BansHandler_2)((Object)collection);
+                    BansHandler_2 kL3 = (BansHandler_2)(collection);
                     n4 = 0;
-                    ObjectUtilities.BaseCoreGenericHandler(object4);
-                    Statement statement = object4;
+                    ObjectUtilities.BaseCoreGenericHandler(helperObj);
+                    Statement statement = helperObj;
                     charSequence = kL3;
                     charSequence = SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[288] + charSequence), m[289]);
                     CharSequence charSequence2 = m[290];
-                    object3 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)charSequence), charSequence2};
+                    resultObj = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)charSequence), charSequence2};
                     flag4 = false;
-                    object2 = object3;
+                    contextObj = resultObj;
                     flag3 = false;
-                    n3 = ((CharSequence[])object2).length;
+                    n3 = ((CharSequence[])contextObj).length;
                     for (int i = 0; i < n3; ++i) {
                         CharSequence charSequence3;
-                        CharSequence charSequence4 = charSequence3 = object2[i];
+                        CharSequence charSequence4 = charSequence3 = contextObj[i];
                         if (charSequence4.length() > 0) continue;
                         String string = m[291];
                         throw new IllegalArgumentException(string.toString());
                     }
                     charSequence = SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)charSequence) + m[292] + charSequence2), m[293]), m[294] + l3));
                     Statement statement2 = statement;
-                    object3 = statement2;
+                    resultObj = statement2;
                     flag4 = false;
-                    statement.addBatch(((Object)charSequence).toString());
+                    statement.addBatch((charSequence).toString());
                 }
                 long l5 = this.LiteBansModule_194.LiteBansModule_194().LiteBansModule_43();
                 if (l5 > 0L) {
@@ -1868,11 +1844,11 @@ implements LiteBansModule_82 {
                     Collection<Object> collection2 = new ArrayList();
                     n2 = 0;
                     for (Object object7 : iterator) {
-                        object3 = object7;
+                        resultObj = object7;
                         flag4 = false;
-                        object2 = object3;
+                        contextObj = resultObj;
                         flag3 = false;
-                        boolean bl15 = object2.BaseCoreGenericHandler() && object2 != BansHandler_2.GnuSparseMapHandler;
+                        boolean bl15 = contextObj.BaseCoreGenericHandler() && contextObj != BansHandler_2.GnuSparseMapHandler;
                         if (!bl15) continue;
                         collection2.add(object7);
                     }
@@ -1881,15 +1857,15 @@ implements LiteBansModule_82 {
                     iterator = object6.iterator();
                     while (iterator.hasNext()) {
                         collection2 = iterator.next();
-                        BansHandler_2 kL4 = (BansHandler_2)((Object)collection2);
-                        ObjectUtilities.BaseCoreGenericHandler(object4);
-                        Object object8 = object4;
+                        BansHandler_2 kL4 = (BansHandler_2)(collection2);
+                        ObjectUtilities.BaseCoreGenericHandler(helperObj);
+                        Object object8 = helperObj;
                         CharSequence charSequence = kL4;
                         charSequence = SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[295] + charSequence), m[296]);
                         CharSequence charSequence5 = m[297];
-                        object2 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)charSequence), charSequence5};
+                        contextObj = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)charSequence), charSequence5};
                         flag3 = false;
-                        CharSequence[] charSequenceArray = object2;
+                        CharSequence[] charSequenceArray = contextObj;
                         n3 = 0;
                         int n6 = charSequenceArray.length;
                         for (int i = 0; i < n6; ++i) {
@@ -1901,13 +1877,13 @@ implements LiteBansModule_82 {
                         }
                         charSequence = SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.LiteBansModule_31(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)charSequence) + m[299] + charSequence5), m[300]), m[301] + l5 + m[302] + l3));
                         Object object9 = object8;
-                        object2 = object9;
+                        contextObj = object9;
                         flag3 = false;
-                        object8.addBatch(((Object)charSequence).toString());
+                        object8.addBatch((charSequence).toString());
 }
                 DatabaseMonitorService w2 = this.AsyncBackgroundTask_5();
-                ObjectUtilities.BaseCoreGenericHandler(object4);
-                object6 = w2.BaseCoreGenericHandler((Statement)object4);
+                ObjectUtilities.BaseCoreGenericHandler(helperObj);
+                object6 = w2.BaseCoreGenericHandler((Statement)helperObj);
                 if (this.LiteBansModule_194.BaseCoreGenericHandler(100)) {
                     Object object10 = object6;
                     n4 = 0;
@@ -1923,14 +1899,14 @@ implements LiteBansModule_82 {
                     if (n10 > 0) {
                         this.LiteBansModule_194.BaseCoreGenericHandler((Object)(m[303] + n10 + m[304] + l3 + ')'));
 }
-                object4 = KotlinUnitHandler.BaseCoreGenericHandler;
+                helperObj = KotlinUnitHandler.BaseCoreGenericHandler;
             }
             catch (Throwable throwable2) {
                 throwable = throwable2;
                 throw throwable2;
             }
             finally {
-                CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)object, throwable);
+                CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)targetObj, throwable);
 }
         catch (SQLException sQLException) {
             String string = sQLException.getMessage();
@@ -1945,12 +1921,12 @@ implements LiteBansModule_82 {
     public int BaseCoreGenericHandler(@NotNull LiteBansModule_297 iA2) {
         CharSequence charSequence;
         int n;
-        Object object = BansHandler_2.g;
-        object = SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[306] + object), m[307]);
+        Object targetObj = BansHandler_2.g;
+        targetObj = SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[306] + targetObj), m[307]);
         String[] args = (String[])m[308];
         SQLiteDriverHandler_3 gZ2 = this;
-        Object object2 = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object), args};
-        CharSequence[] charSequenceArray = object2;
+        Object contextObj = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5targetObj, args};
+        CharSequence[] charSequenceArray = contextObj;
         int n2 = charSequenceArray.length;
         for (n = 0; n < n2; ++n) {
             CharSequence charSequence2;
@@ -1959,18 +1935,18 @@ implements LiteBansModule_82 {
             String string = m[309];
             throw new IllegalArgumentException(string.toString());
         }
-        object = gZ2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object) + m[310] + args), m[311])));
+        targetObj = gZ2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31targetObj + m[310] + args), m[311])));
         args = new String[]{m[312], iA2.LiteBansModule_31(), iA2.i()};
         flag2 = false;
-        Object object3 = object2 = object;
+        Object resultObj = contextObj = targetObj;
         String[] filteredArgs = args;
         n = 0;
         int n3 = filteredArgs.length;
         for (n2 = 0; n2 < n3; ++n2) {
             CharSequence charSequence3 = charSequence = filteredArgs[n2];
-            ((LiteBansModule_60)object).BaseCoreGenericHandler((String)charSequence3);
+            targetObj.BaseCoreGenericHandler((String)charSequence3);
         }
-        return LiteBansModule_184.LiteBansModule_31((LiteBansModule_60)object2);
+        return LiteBansModule_184.LiteBansModule_31((LiteBansModule_60)contextObj);
     }
 
     private final void BaseCoreGenericHandler(Statement statement) {
@@ -1981,7 +1957,7 @@ implements LiteBansModule_82 {
             BansHandler_2 kL2;
             BansHandler_2 kL3 = kL2 = kLArray[i];
             String string2 = BansHandler_2.BaseCoreGenericHandler(kL3, Locale.getDefault(), false, 2, null);
-            if (ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)(string = BansHandler_2.BaseCoreGenericHandler(kL3, null, false, 3, null))) || this.LiteBansModule_31((CharSequence)string) || !this.LiteBansModule_31((CharSequence)string2)) continue;
+            if (ObjectUtilities.BaseCoreGenericHandler(string2, (Object)(string = BansHandler_2.BaseCoreGenericHandler(kL3, null, false, 3, null))) || this.LiteBansModule_31(string) || !this.LiteBansModule_31(string2)) continue;
             this.LiteBansModule_240.getLogger().info(m[325] + string2 + m[326] + string + '\"');
             statement.execute(m[327] + string2 + m[328] + string);
 }
@@ -1993,7 +1969,6 @@ implements LiteBansModule_82 {
 
     public final CharSequence BaseCoreGenericHandler(@NotNull BansHandler_2 kL2, @NotNull SQLiteDriverHandler_5 jr_02) {
         boolean flag;
-        Object object;
         String[] args;
         String string = null;
         string = m[329];
@@ -2002,8 +1977,8 @@ implements LiteBansModule_82 {
         SQLiteDriverHandler_5 jr_03 = jr_02;
         if (kL2 == BansHandler_2.LiteBansModule_31) {
             args = m[331];
-            object = m[332];
-            string2 = (String)args + m[333] + (String)object;
+            targetObj = m[332];
+            string2 = (String)args + m[333] + (String)targetObj;
         }
         if (kL2 != BansHandler_2.GnuSparseMapHandler) {
             args = m[334];
@@ -2024,87 +1999,87 @@ implements LiteBansModule_82 {
             flag4 = false;
             String string7 = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_03.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)args + m[344] + n + ')' + string4 + string3 : (String)args + m[345] + n + ')' + string3;
             args = jr_03;
-            object = m[346];
+            targetObj = m[346];
             string3 = m[347];
             flag = false;
-            string = string5 + ',' + string6 + ',' + string7 + ',' + ((String)object + m[348] + string3);
+            string = string5 + ',' + string6 + ',' + string7 + ',' + ((String)targetObj + m[348] + string3);
         }
         args = new String[18];
-        object = jr_03;
+        targetObj = jr_03;
         String string8 = m[349];
         flag = false;
-        args[0] = ObjectUtilities.BaseCoreGenericHandler((Object)((SQLiteDriverHandler_5)object).LiteBansModule_31().BaseCoreGenericHandler(), (Object)m[350]) ? string8 + m[351] : string8 + m[352];
-        object = m[353];
+        args[0] = ObjectUtilities.BaseCoreGenericHandler((Object)targetObj.LiteBansModule_31().BaseCoreGenericHandler(), m[350]) ? string8 + m[351] : string8 + m[352];
+        targetObj = m[353];
         int n = 36;
         String string9 = m[354];
         String string10 = m[355];
-        args[1] = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_03.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)object + m[356] + n + ')' + string9 + string10 : (String)object + m[357] + n + ')' + string10;
-        object = m[358];
+        args[1] = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_03.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)targetObj + m[356] + n + ')' + string9 + string10 : (String)targetObj + m[357] + n + ')' + string10;
+        targetObj = m[358];
         n = 45;
         string9 = m[359];
         string10 = m[360];
         flag5 = false;
-        args[2] = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_03.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)object + m[361] + n + ')' + string9 + string10 : (String)object + m[362] + n + ')' + string10;
-        object = m[363];
+        args[2] = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_03.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)targetObj + m[361] + n + ')' + string9 + string10 : (String)targetObj + m[362] + n + ')' + string10;
+        targetObj = m[363];
         n = 2048;
         string10 = m[364];
         string9 = jr_03.LiteBansModule_31().c();
         flag5 = false;
-        args[3] = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_03.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)object + m[365] + n + ')' + string9 + string10 : (String)object + m[366] + n + ')' + string10;
-        object = m[367];
+        args[3] = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_03.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)targetObj + m[365] + n + ')' + string9 + string10 : (String)targetObj + m[366] + n + ')' + string10;
+        targetObj = m[367];
         n = 36;
         string10 = m[368];
         string9 = jr_03.LiteBansModule_31().c();
         flag5 = false;
         SQLiteDriverHandler_5 jr_04 = jr_03;
         String string11 = string10 + m[369];
-        args[4] = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_04.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)object + m[370] + n + ')' + string9 + string11 : (String)object + m[371] + n + ')' + string11;
-        object = m[372];
+        args[4] = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_04.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)targetObj + m[370] + n + ')' + string9 + string11 : (String)targetObj + m[371] + n + ')' + string11;
+        targetObj = m[372];
         n = 128;
         string10 = m[373];
         string9 = jr_03.LiteBansModule_31().c();
         flag5 = false;
-        args[5] = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_03.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)object + m[374] + n + ')' + string9 + string10 : (String)object + m[375] + n + ')' + string10;
+        args[5] = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_03.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)targetObj + m[374] + n + ')' + string9 + string10 : (String)targetObj + m[375] + n + ')' + string10;
         args[6] = string;
-        object = jr_03;
+        targetObj = jr_03;
         String string12 = m[376];
         args[7] = string12 + m[377];
-        object = jr_03;
+        targetObj = jr_03;
         string12 = m[378];
         flag7 = false;
         args[8] = string12 + m[379];
-        object = jr_03;
+        targetObj = jr_03;
         string12 = m[380];
         String string13 = m[381];
-        String string14 = ((SQLiteDriverHandler_5)object).LiteBansModule_31().BaseCoreGenericHandler();
-        args[9] = ObjectUtilities.BaseCoreGenericHandler((Object)string14, (Object)m[382]) || ObjectUtilities.BaseCoreGenericHandler((Object)string14, (Object)m[383]) ? string12 + m[384] + string13 : string12 + m[385] + ((SQLiteDriverHandler_5)object).LiteBansModule_31().e() + m[386] + string13;
-        object = m[387];
+        String string14 = targetObj.LiteBansModule_31().BaseCoreGenericHandler();
+        args[9] = ObjectUtilities.BaseCoreGenericHandler(string14, m[382]) || ObjectUtilities.BaseCoreGenericHandler(string14, m[383]) ? string12 + m[384] + string13 : string12 + m[385] + targetObj.LiteBansModule_31().e() + m[386] + string13;
+        targetObj = m[387];
         int n2 = 32;
         string13 = m[388];
         String string15 = jr_03.LiteBansModule_31().c();
-        args[10] = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_03.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)object + m[389] + n2 + ')' + string15 + string13 : (String)object + m[390] + n2 + ')' + string13;
-        object = m[391];
+        args[10] = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_03.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)targetObj + m[389] + n2 + ')' + string15 + string13 : (String)targetObj + m[390] + n2 + ')' + string13;
+        targetObj = m[391];
         n2 = 32;
         string13 = m[392];
         string15 = jr_03.LiteBansModule_31().c();
         bl9 = false;
-        args[11] = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_03.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)object + m[393] + n2 + ')' + string15 + string13 : (String)object + m[394] + n2 + ')' + string13;
-        object = m[395];
+        args[11] = DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(jr_03.LiteBansModule_31().BaseCoreGenericHandler()) ? (String)targetObj + m[393] + n2 + ')' + string15 + string13 : (String)targetObj + m[394] + n2 + ')' + string13;
+        targetObj = m[395];
         String string16 = m[396];
-        args[12] = (String)object + m[397] + string16;
-        object = m[398];
+        args[12] = (String)targetObj + m[397] + string16;
+        targetObj = m[398];
         string16 = m[399];
         bl10 = false;
-        args[13] = (String)object + m[400] + string16;
-        object = jr_03;
+        args[13] = (String)targetObj + m[400] + string16;
+        targetObj = jr_03;
         string16 = m[401];
         String string17 = m[402];
         args[14] = string16 + m[403] + string17;
-        object = m[404];
+        targetObj = m[404];
         string16 = m[405];
-        args[15] = (String)object + m[406] + string16;
+        args[15] = (String)targetObj + m[406] + string16;
         args[16] = string2;
-        object = jr_03;
+        targetObj = jr_03;
         string16 = m[407];
         bl12 = false;
         args[17] = m[408] + string16 + ')';
@@ -2119,31 +2094,30 @@ implements LiteBansModule_82 {
         AutoCloseable autoCloseable = this.LiteBansModule_194();
         Throwable throwable = null;
         try {
-            Object object = (Statement)autoCloseable;
+            Object targetObj = (Statement)autoCloseable;
             if (dc_03.c()) {
                 Iterable iterable = dc_03.LiteBansModule_31();
                 for (Object t2 : iterable) {
                     String string = ((SQLiteDriverHandler)t2).c();
                     try {
-                        Object object2 = object;
+                        Object contextObj = targetObj;
                         SQLiteDriverHandler aR2 = SQLiteDriverHandler.AsyncBackgroundTask_5(string);
-                        object2.execute(((Object)aR2).toString());
+                        contextObj.execute((aR2).toString());
                     }
                     catch (SQLException sQLException) {
                         ConfigService.BaseCoreGenericHandler(dc_03.e(), sQLException, 0, 2, null);
 } else {
                 Iterable iterable = dc_03.LiteBansModule_31();
                 for (Object t3 : iterable) {
-                    Object object3;
-                    CharSequence charSequence = (CharSequence)t3;
-                    Object object4 = object;
-                    Object object5 = object3 = object4;
-                    object4.addBatch(((Object)charSequence).toString());
+                    CharSequence charSequence = t3;
+                    Object helperObj = targetObj;
+                    Object tempObj = resultObj = helperObj;
+                    helperObj.addBatch((charSequence).toString());
                 }
                 if (!((Collection)dc_03.LiteBansModule_31()).isEmpty()) {
-                    object.executeBatch();
+                    targetObj.executeBatch();
 }
-            object = KotlinUnitHandler.BaseCoreGenericHandler;
+            targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable2) {
             throwable = throwable2;
@@ -2169,18 +2143,18 @@ implements LiteBansModule_82 {
             try {
                 String string;
                 String string2;
-                Object object = BansHandler_2.i;
+                Object targetObj = BansHandler_2.i;
                 CharSequence charSequence = m[506];
                 flag4 = false;
-                object = LiteBansModule_184.AsyncBackgroundTask_5(this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.e(m[507] + charSequence + m[508] + object), (Number)1))));
+                targetObj = LiteBansModule_184.AsyncBackgroundTask_5(this.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.e(m[507] + charSequence + m[508] + targetObj), (Number)1))));
                 n = 1;
                 flag4 = false;
-                if (object.next()) {
+                if (targetObj.next()) {
                     String string3;
-                    Object object2 = object;
+                    Object contextObj = targetObj;
                     flag3 = false;
                     try {
-                        string3 = object2.getString(n);
+                        string3 = contextObj.getString(n);
                     }
                     catch (SQLException sQLException) {
                         string3 = null;
@@ -2193,7 +2167,7 @@ implements LiteBansModule_82 {
                     string = LiteBansModule_336.LiteBansModule_31();
                 }
                 String string4 = string;
-                ObjectUtilities.BaseCoreGenericHandler((Object)string4);
+                ObjectUtilities.BaseCoreGenericHandler(string4);
                 n3 = Integer.parseInt(string4);
             }
             catch (SQLException sQLException) {
@@ -2203,26 +2177,24 @@ implements LiteBansModule_82 {
             n2 = n3;
         }
         int n4 = n2;
-        Object object = configService;
-        if (((ConfigService)object).g()) {
-            ConfigService q_03 = object;
+        Object targetObj = configService;
+        if (targetObj.g()) {
+            ConfigService q_03 = targetObj;
             q_03.BaseCoreGenericHandler((Object)(m[509] + n4 + m[510] + LiteBansModule_336.LiteBansModule_31()));
         }
         if (n4 <= 1168) {
-            Object object3 = object = (ServerSyncService)this.LiteBansModule_240.BaseCoreGenericHandler(ServerSyncService.class);
-            ((ServerSyncService)object3).c(this);
+            Object resultObj = targetObj = this.LiteBansModule_240.BaseCoreGenericHandler(ServerSyncService.class);
+            this.c(this);
         }
-        object = this.LiteBansModule_194();
+        targetObj = this.LiteBansModule_194();
         Throwable throwable = null;
         try {
             boolean flag8;
-            Object object4;
             int n3;
-            Object object5;
-            Object object6 = (Statement)object;
+            Object object6 = (Statement)targetObj;
             n = 0;
             this.plugin((Statement)object6);
-            flag4 = ObjectUtilities.BaseCoreGenericHandler((Object)configService.LiteBansModule_194().ElementsHandler(), (Object)m[511]);
+            flag4 = ObjectUtilities.BaseCoreGenericHandler(configService.LiteBansModule_194().ElementsHandler(), m[511]);
             boolean bl9 = this.LiteBansModule_31(BansHandler_2.Utf8Handler_2);
             flag3 = this.LiteBansModule_31(BansHandler_2.m);
             boolean bl10 = this.LiteBansModule_31(BansHandler_2.LiteBansModule_31);
@@ -2233,13 +2205,13 @@ implements LiteBansModule_82 {
                 CharSequence[] charSequenceArray;
                 CharSequence charSequence;
                 int n5;
-                object5 = object6;
+                tempObj = object6;
                 Object object7 = this.plugin(BansHandler_2.m, jr_02);
-                object5.execute(object7.toString());
-                object5 = object6;
+                tempObj.execute(object7.toString());
+                tempObj = object6;
                 object7 = this.plugin(BansHandler_2.LiteBansModule_31, jr_02);
                 bl13 = false;
-                object5.execute(object7.toString());
+                tempObj.execute(object7.toString());
                 object7 = object6;
                 Object object8 = BansHandler_2.Utf8Handler_2;
                 CharSequence charSequence2 = m[514];
@@ -2257,14 +2229,14 @@ implements LiteBansModule_82 {
                     throw new IllegalArgumentException(string.toString());
                 }
                 object8 = SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object8) + m[519] + charSequence2));
-                object5 = object7.executeQuery(object8.toString());
-                object8 = (AutoCloseable)object5;
+                tempObj = object7.executeQuery(object8.toString());
+                object8 = (AutoCloseable)tempObj;
                 Throwable throwable2 = null;
                 try {
                     charSequenceArray = (ResultSet)object8;
                     n6 = 0;
-                    while (object5.next()) {
-                        Object object9 = object5;
+                    while (tempObj.next()) {
+                        Object object9 = tempObj;
                         boolean charSequenceArray3 = false;
                         this.c(this.plugin((ResultSet)object9, BanHandler.values()[object9.getInt(m[520])]));
                     }
@@ -2277,12 +2249,12 @@ implements LiteBansModule_82 {
                 finally {
                     CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)object8, throwable2);
                 }
-                object5 = object6;
-                object4 = BansHandler_2.Utf8Handler_2;
-                object4 = SQLiteDriverHandler.e(m[521] + object4);
+                tempObj = object6;
+                helperObj = BansHandler_2.Utf8Handler_2;
+                helperObj = SQLiteDriverHandler.e(m[521] + helperObj);
                 CharSequence charSequence4 = m[522];
                 flag8 = false;
-                charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object4), charSequence4};
+                charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)helperObj), charSequence4};
                 n6 = 0;
                 CharSequence[] charSequenceArray4 = charSequenceArray;
                 n5 = charSequenceArray4.length;
@@ -2293,35 +2265,35 @@ implements LiteBansModule_82 {
                     String string = m[523];
                     throw new IllegalArgumentException(string.toString());
                 }
-                object4 = SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object4) + m[524] + charSequence4));
-                object5.executeUpdate(object4.toString());
+                helperObj = SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)helperObj) + m[524] + charSequence4));
+                tempObj.executeUpdate(helperObj.toString());
             }
-            if (!ObjectUtilities.BaseCoreGenericHandler((Object)configService.LiteBansModule_194().ElementsHandler(), (Object)m[525])) {
-                object5 = this.LiteBansModule_31();
+            if (!ObjectUtilities.BaseCoreGenericHandler(configService.LiteBansModule_194().ElementsHandler(), m[525])) {
+                tempObj = this.LiteBansModule_31();
                 if (bl11) {
-                    object4 = object6;
+                    helperObj = object6;
                     CharSequence charSequence = BansHandler_2.Utf8Handler_2;
                     flag8 = false;
                     charSequence = SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.LiteBansModule_240(SQLiteDriverHandler.e(m[526] + charSequence), m[527]));
                     flag8 = false;
-                    object4.execute(((Object)charSequence).toString());
+                    helperObj.execute((charSequence).toString());
                 }
                 if (bl10 && !bl12) {
-                    object4 = object6;
+                    helperObj = object6;
                     CharSequence charSequence = BansHandler_2.LiteBansModule_31;
                     flag8 = false;
                     charSequence = SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.LiteBansModule_194(SQLiteDriverHandler.e(m[528] + charSequence), m[529]));
                     flag8 = false;
-                    object4.execute(((Object)charSequence).toString());
-                    object4 = object6;
+                    helperObj.execute((charSequence).toString());
+                    helperObj = object6;
                     charSequence = BansHandler_2.LiteBansModule_31;
                     flag8 = false;
                     charSequence = SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[530] + charSequence), m[531]));
                     flag8 = false;
-                    object4.executeUpdate(((Object)charSequence).toString());
+                    helperObj.executeUpdate((charSequence).toString());
                 }
                 if (flag || bl9) {
-                    object4 = object5;
+                    helperObj = tempObj;
                     for (BansHandler_2 kL2 : BansHandler_2.values()) {
                         if (kL2.BaseCoreGenericHandler()) {
                             dc_02.BaseCoreGenericHandler(kL2);
@@ -2331,19 +2303,19 @@ implements LiteBansModule_82 {
                                 dc_02.BaseCoreGenericHandler(LiteBansModule_371.BaseCoreGenericHandler(m[534], LiteBansModule_406.BaseCoreGenericHandler));
                                 dc_02.BaseCoreGenericHandler(LiteBansModule_371.BaseCoreGenericHandler(m[535], LiteBansModule_162.LiteBansModule_31));
                             }
-                            dc_02.BaseCoreGenericHandler(LiteBansModule_371.BaseCoreGenericHandler(m[536], new TemplateHandler((SQLiteDriverHandler_5)object4)));
-                            dc_02.BaseCoreGenericHandler(LiteBansModule_371.BaseCoreGenericHandler(m[537], new ServerOriginHandler((SQLiteDriverHandler_5)object4)));
-                            dc_02.BaseCoreGenericHandler(LiteBansModule_371.BaseCoreGenericHandler(m[538], arg_0 -> SQLiteDriverHandler_3.LiteBansModule_31((SQLiteDriverHandler_5)object4, arg_0)));
-                            dc_02.BaseCoreGenericHandler(LiteBansModule_371.BaseCoreGenericHandler(m[539], arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler((SQLiteDriverHandler_5)object4, arg_0)));
+                            dc_02.BaseCoreGenericHandler(LiteBansModule_371.BaseCoreGenericHandler(m[536], new TemplateHandler((SQLiteDriverHandler_5)helperObj)));
+                            dc_02.BaseCoreGenericHandler(LiteBansModule_371.BaseCoreGenericHandler(m[537], new ServerOriginHandler((SQLiteDriverHandler_5)helperObj)));
+                            dc_02.BaseCoreGenericHandler(LiteBansModule_371.BaseCoreGenericHandler(m[538], arg_0 -> SQLiteDriverHandler_3.LiteBansModule_31((SQLiteDriverHandler_5)helperObj, arg_0)));
+                            dc_02.BaseCoreGenericHandler(LiteBansModule_371.BaseCoreGenericHandler(m[539], arg_0 -> SQLiteDriverHandler_3.BaseCoreGenericHandler((SQLiteDriverHandler_5)helperObj, arg_0)));
                         }
                         if (kL2 == BansHandler_2.g || !DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(configService.LiteBansModule_194().ElementsHandler()) || n4 > 680) continue;
                         BansHandler_2 kL3 = kL2;
                         n3 = 0;
-                        SQLiteDriverHandler.g(SQLiteDriverHandler.e(m[540] + kL3), ((SQLiteDriverHandler_5)object5).LiteBansModule_31().c());
+                        SQLiteDriverHandler.g(SQLiteDriverHandler.e(m[540] + kL3), ((SQLiteDriverHandler_5)tempObj).LiteBansModule_31().c());
                     }
                     if (flag || n4 < 883) {
                         dc_02.BaseCoreGenericHandler(BansHandler_2.i);
-                        dc_02.BaseCoreGenericHandler(LiteBansModule_371.BaseCoreGenericHandler(m[541], new AcceptHandler((SQLiteDriverHandler_5)object4)));
+                        dc_02.BaseCoreGenericHandler(LiteBansModule_371.BaseCoreGenericHandler(m[541], new AcceptHandler((SQLiteDriverHandler_5)helperObj)));
                     }
                     if (!((Collection)dc_02).isEmpty()) {
                         this.LiteBansModule_240.getLogger().info(m[542]);
@@ -2357,7 +2329,7 @@ implements LiteBansModule_82 {
             throw throwable4;
         }
         finally {
-            CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)object, throwable);
+            CloseactionHandler.BaseCoreGenericHandler((AutoCloseable)targetObj, throwable);
 }
 
     @Override
@@ -2372,47 +2344,47 @@ implements LiteBansModule_82 {
 
     @Override
     public List BaseCoreGenericHandler(@NotNull LiteBansModule_297 iA2, @NotNull BanHandler a_2, @NotNull String string, boolean flag, int n) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, iA2, a_2, string, flag, n);
+        return AllHandler_3.BaseCoreGenericHandler(this, iA2, a_2, string, flag, n);
     }
 
     @Override
     public List BaseCoreGenericHandler(@NotNull SilentHandler dZ2, int n) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, dZ2, n);
+        return AllHandler_3.BaseCoreGenericHandler(this, dZ2, n);
     }
 
     @Override
     public List BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull BanHandler a_2, boolean flag, int n) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, sender, a_2, flag, n);
+        return AllHandler_3.BaseCoreGenericHandler(this, sender, a_2, flag, n);
     }
 
     @Override
     public List LiteBansModule_31(@NotNull ResultSet resultSet, @NotNull BanHandler a_2) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, resultSet, a_2);
+        return AllHandler_3.BaseCoreGenericHandler(this, resultSet, a_2);
     }
 
     @Override
     public String BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, sender);
+        return AllHandler_3.BaseCoreGenericHandler(this, sender);
     }
 
     @Override
     public CharSequence LiteBansModule_31(@NotNull CharSequence charSequence, @NotNull CommandSenderWrapper sender) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence, sender);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence, sender);
     }
 
     @Override
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable String string, @Nullable String string2, boolean flag) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence, string, string2, flag);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence, string, string2, flag);
     }
 
     @Override
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence);
     }
 
     @Override
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable LiteBansModule_297 iA2, boolean flag) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence, iA2, flag);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence, iA2, flag);
     }
 
     @Override
@@ -2422,32 +2394,32 @@ implements LiteBansModule_82 {
 
     @Override
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull LiteBansModule_113 d92) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence, d92);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence, d92);
     }
 
     @Override
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable SilentHandler dZ2, boolean flag) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence, dZ2, flag);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence, dZ2, flag);
     }
 
     @Override
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable SilentHandler dZ2, @Nullable LiteBansModule_297 iA2, boolean flag) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence, dZ2, iA2, flag);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence, dZ2, iA2, flag);
     }
 
     @Override
     public CharSequence BaseCoreGenericHandler(@NotNull CharSequence charSequence, @Nullable String string, @Nullable String string2, @Nullable String string3, @Nullable String string4, @Nullable String string5) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, charSequence, string, string2, string3, string4, string5);
+        return AllHandler_3.BaseCoreGenericHandler(this, charSequence, string, string2, string3, string4, string5);
     }
 
     @Override
     public boolean BaseCoreGenericHandler(@NotNull SilentHandler dZ2, @NotNull CommandSenderWrapper sender) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, dZ2, sender);
+        return AllHandler_3.BaseCoreGenericHandler(this, dZ2, sender);
     }
 
     @Override
     public boolean BaseCoreGenericHandler(@Nullable SilentHandler dZ2) {
-        return AllHandler_3.BaseCoreGenericHandler((LiteBansModule_82)this, dZ2);
+        return AllHandler_3.BaseCoreGenericHandler(this, dZ2);
     }
 
     private static final LiteBansModule_60 LiteBansModule_31(String string, LiteBansModule_60 bT2) {
@@ -2608,18 +2580,18 @@ implements LiteBansModule_82 {
 
     private static final SQLiteDriverHandler[] BaseCoreGenericHandler(SQLiteDriverHandler_5 jr_02, BansHandler_2 kL2) {
         SQLiteDriverHandler[] aRArray = new SQLiteDriverHandler[2];
-        Object object = kL2;
-        String string = SQLiteDriverHandler.e(m[552] + object);
-        object = jr_02;
+        Object targetObj = kL2;
+        String string = SQLiteDriverHandler.e(m[552] + targetObj);
+        targetObj = jr_02;
         String string2 = m[553];
         String string3 = m[554];
         aRArray[0] = SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.LiteBansModule_194(string, string2 + m[555] + string3));
-        object = kL2;
-        object = SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[556] + object), m[557]);
+        targetObj = kL2;
+        targetObj = SQLiteDriverHandler.c(SQLiteDriverHandler.e(m[556] + targetObj), m[557]);
         CharSequence charSequence = m[558];
         int n = 1;
         SQLiteDriverHandler[] aRArray2 = aRArray;
-        CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object), charSequence};
+        CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5targetObj, charSequence};
         CharSequence[] charSequenceArray2 = charSequenceArray;
         int n2 = charSequenceArray2.length;
         for (int i = 0; i < n2; ++i) {
@@ -2629,7 +2601,7 @@ implements LiteBansModule_82 {
             String string4 = m[559];
             throw new IllegalArgumentException(string4.toString());
         }
-        String string5 = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object) + m[560] + charSequence);
+        String string5 = SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31targetObj + m[560] + charSequence);
         aRArray2[n] = SQLiteDriverHandler.AsyncBackgroundTask_5(string5);
         return aRArray;
     }

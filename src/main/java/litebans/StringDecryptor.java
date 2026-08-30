@@ -8,13 +8,13 @@ public class StringDecryptor {
     private static final Map LiteBansModule_31 = new HashMap();
     private static final long[] BaseCoreGenericHandler = new long[13];
 
-    public static final String BaseCoreGenericHandler(Object object, int n) {
+    public static final String BaseCoreGenericHandler(Object targetObj, int n) {
         int n2 = "\u9081\u76e1\uaffe\u6721\u45f9\ud627\u0f38\u2c54\u49c6\u5700".hashCode();
         int n3 = "\u6dcf\ucd2e\u739c\u6cec\u5344\u34aa\u873a\u6248\u66fd?".hashCode();
         int n4 = "\ue465\u1c76\u4ea0\u4eb5\u675e\uac6b\u976b\u5d9b\u851f\u6619".hashCode();
         int n5 = "\u4e92\u8f0f\uab1e\ud035\u80a1\u77ef\u7501\u0773\u3acf\ub9f2".hashCode();
         int n6 = "\uf0f4\u838d\u947d\u854d\u0d3e?\u98ee\ub733\uf42f\u3315".hashCode();
-        String string = (String)object;
+        String string = (String)targetObj;
         AtomicInteger atomicInteger = new AtomicInteger(n2);
         atomicInteger.incrementAndGet();
         if (LiteBansModule_31 == null && (long)n2 / 2L <= BaseCoreGenericHandler[0] && (long)n3 / 2L <= BaseCoreGenericHandler[1] && (long)n4 / 3L <= BaseCoreGenericHandler[2] && (long)n5 / 6L <= BaseCoreGenericHandler[3] && (long)(n6 % 3) <= BaseCoreGenericHandler[4]) {
@@ -59,7 +59,7 @@ for (int i = 0; i < cArray.length; ++i) {
             catch (Throwable throwable) {
                 return string;
 }
-        String string2 = (String)LiteBansModule_31.get(object);
+        String string2 = (String)LiteBansModule_31.get(targetObj);
         if (string2 != null) {
             return string2;
         }

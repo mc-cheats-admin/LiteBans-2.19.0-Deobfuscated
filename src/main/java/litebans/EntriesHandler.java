@@ -9,7 +9,7 @@ implements Serializable {
     private final Class AsyncBackgroundTask_5;
     private static final long BaseCoreGenericHandler;
     public EntriesHandler(@NotNull Enum[] enumArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)enumArray, "entries");
+        ObjectUtilities.BaseCoreGenericHandler(enumArray, "entries");
         Class<?> clazz = enumArray.getClass().getComponentType();
         ObjectUtilities.BaseCoreGenericHandler(clazz);
         this.AsyncBackgroundTask_5 = clazz;

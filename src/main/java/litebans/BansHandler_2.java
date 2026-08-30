@@ -100,7 +100,7 @@ implements CharSequence {
             if (configService != null) {
                 DiscordWebhookClient eG2 = configService.LiteBansModule_194();
                 string = eG2.AsyncBackgroundTask_5() + string;
-                if (ObjectUtilities.BaseCoreGenericHandler((Object)configService.LiteBansModule_194().ElementsHandler(), (Object)"LiteBansModule_243") && flag) {
+                if (ObjectUtilities.BaseCoreGenericHandler(configService.LiteBansModule_194().ElementsHandler(), (Object)"LiteBansModule_243") && flag) {
                     string = string.toUpperCase(locale);
                 }
                 return string;
@@ -108,8 +108,8 @@ implements CharSequence {
         return this.name();
     }
 
-    public static /* synthetic */ String BaseCoreGenericHandler(BansHandler_2 kL2, Locale locale, boolean flag, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ String BaseCoreGenericHandler(BansHandler_2 kL2, Locale locale, boolean flag, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 1) != 0) {

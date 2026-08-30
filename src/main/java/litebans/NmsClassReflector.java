@@ -30,7 +30,7 @@ implements LiteBansModule_252 {
     }
 
     private final class_2561 BaseCoreGenericHandler(CharSequence charSequence) {
-        return (class_2561)class_8824.field_46597.parse((DynamicOps)class_5455.field_40585.method_57093((DynamicOps)JsonOps.INSTANCE), (Object)class_11341.method_71360((String)charSequence.toString())).getOrThrow(IllegalArgumentException::new);
+        return (class_2561)class_8824.field_46597.parse((DynamicOps)class_5455.field_40585.method_57093((DynamicOps)JsonOps.INSTANCE), class_11341.method_71360((String)charSequence.toString())).getOrThrow(IllegalArgumentException::new);
     }
 
     static {

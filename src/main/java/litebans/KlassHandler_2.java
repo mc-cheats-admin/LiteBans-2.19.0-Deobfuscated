@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 static class KlassHandler_2
 extends LiteBansModule_428 {
     public static final void LiteBansModule_31(@NotNull List list) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)list, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(list, "<this>");
         Collections.reverse(list);
     }
 

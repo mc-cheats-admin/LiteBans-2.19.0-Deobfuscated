@@ -18,9 +18,9 @@ implements LiteBansModule_88 {
     @EventHandler
     public final void BaseCoreGenericHandler(@NotNull PlayerJoinEvent playerJoinEvent) {
         Player player = playerJoinEvent.getPlayer();
-        DatabaseMonitorService w2 = (DatabaseMonitorService)this.LiteBansModule_31.BaseCoreGenericHandler(DatabaseMonitorService.class);
-        BroadcastService o2 = (BroadcastService)this.LiteBansModule_31.BaseCoreGenericHandler(BroadcastService.class);
-        ConfigService configService = (ConfigService)this.LiteBansModule_31.BaseCoreGenericHandler(ConfigService.class);
+        DatabaseMonitorService w2 = this.LiteBansModule_31.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        BroadcastService o2 = this.LiteBansModule_31.BaseCoreGenericHandler(BroadcastService.class);
+        ConfigService configService = this.LiteBansModule_31.BaseCoreGenericHandler(ConfigService.class);
         LiteBansModule_158 ec_02 = this.LiteBansModule_31.i();
         ObjectUtilities.LiteBansModule_31(ec_02, "");
         String string = ((BungeecordHandler_2)ec_02).LiteBansModule_31(player);
@@ -38,7 +38,7 @@ implements LiteBansModule_88 {
     private final void BaseCoreGenericHandler(LiteBansModule_82 ch2, CommandSenderWrapper sender, String string, String string2, String string3, SilentHandler dZ2, BroadcastService o2, ConfigService configService, LiteBansModule_82 ch3) {
         try {
             if (configService.LiteBansModule_194().aM()) {
-                CharSequence charSequence = ch2.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler(ch2, (CharSequence)MessageKey.LiteBansModule_240, dZ2, false, 2, null), sender);
+                CharSequence charSequence = ch2.BaseCoreGenericHandler(AllHandler_3.BaseCoreGenericHandler(ch2, MessageKey.LiteBansModule_240, dZ2, false, 2, null), sender);
                 o2.LiteBansModule_31(string, charSequence, true);
 }
         finally {

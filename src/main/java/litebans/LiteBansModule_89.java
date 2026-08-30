@@ -20,7 +20,7 @@ public final class LiteBansModule_89 {
     }
 
     public final boolean c() {
-        return ObjectUtilities.BaseCoreGenericHandler((Object)this, LiteBansModule_91.LiteBansModule_31());
+        return ObjectUtilities.BaseCoreGenericHandler(this, LiteBansModule_91.LiteBansModule_31());
     }
 
     public String toString() {
@@ -33,18 +33,18 @@ public final class LiteBansModule_89 {
         return n;
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof LiteBansModule_89)) {
+        if (!(targetObj instanceof LiteBansModule_89)) {
             return false;
         }
-        LiteBansModule_89 cM2 = (LiteBansModule_89)object;
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_31, (Object)cM2.LiteBansModule_31)) {
+        LiteBansModule_89 cM2 = (LiteBansModule_89)targetObj;
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_31, cM2.LiteBansModule_31)) {
             return false;
         }
-        return ObjectUtilities.BaseCoreGenericHandler((Object)this.c, cM2.c);
+        return ObjectUtilities.BaseCoreGenericHandler(this.c, cM2.c);
     }
 
     private static final void LiteBansModule_31() {

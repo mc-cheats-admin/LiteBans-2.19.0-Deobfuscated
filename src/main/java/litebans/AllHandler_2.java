@@ -13,7 +13,7 @@ extends AllHandler {
 
     @Override
     public void BaseCoreGenericHandler(@NotNull LiteBansModule_60 bT2) {
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)this.c(), (Object)"__ALL__")) {
+        if (ObjectUtilities.BaseCoreGenericHandler(this.c(), (Object)"__ALL__")) {
             return;
         }
         bT2.BaseCoreGenericHandler(this.c());
@@ -21,7 +21,7 @@ extends AllHandler {
 
     @Override
     public String toString() {
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)this.c(), (Object)"__ALL__")) {
+        if (ObjectUtilities.BaseCoreGenericHandler(this.c(), (Object)"__ALL__")) {
             return "";
         }
         if (this.LiteBansModule_194) {

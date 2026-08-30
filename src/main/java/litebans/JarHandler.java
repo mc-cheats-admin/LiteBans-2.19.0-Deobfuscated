@@ -46,26 +46,26 @@ public final class JarHandler {
         return n;
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof JarHandler)) {
+        if (!(targetObj instanceof JarHandler)) {
             return false;
         }
-        JarHandler jP2 = (JarHandler)object;
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.c, (Object)jP2.c)) {
+        JarHandler jP2 = (JarHandler)targetObj;
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.c, jP2.c)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.e, (Object)jP2.e)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.e, jP2.e)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5, (Object)jP2.AsyncBackgroundTask_5)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, jP2.AsyncBackgroundTask_5)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.plugin, (Object)jP2.BaseCoreGenericHandler)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.plugin, jP2.BaseCoreGenericHandler)) {
             return false;
         }
-        return ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_194, (Object)jP2.LiteBansModule_194);
+        return ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_194, jP2.LiteBansModule_194);
 }
 

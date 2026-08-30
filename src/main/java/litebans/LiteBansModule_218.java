@@ -9,10 +9,10 @@ implements Comparator {
         this.plugin = dZ2;
     }
 
-    public final int compare(Object object, Object object2) {
-        LiteBansModule_109 cy2 = (LiteBansModule_109)object;
+    public final int compare(Object targetObj, Object contextObj) {
+        LiteBansModule_109 cy2 = (LiteBansModule_109)targetObj;
         LiteBansModule_23 au2 = cy2.g();
-        cy2 = (LiteBansModule_109)object2;
+        cy2 = (LiteBansModule_109)contextObj;
         Comparable comparable = Long.valueOf(au2.BaseCoreGenericHandler(this.plugin));
         flag = false;
         au2 = cy2.g();

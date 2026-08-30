@@ -17,12 +17,12 @@ Serializable {
         this(LiteBansModule_31);
     }
 
-    protected LiteBansModule_382(Object object) {
-        this(object, null, null, null, false);
+    protected LiteBansModule_382(Object targetObj) {
+        this(targetObj, null, null, null, false);
     }
 
-    protected LiteBansModule_382(Object object, Class clazz, String string, String string2, boolean flag) {
-        this.AsyncBackgroundTask_5 = object;
+    protected LiteBansModule_382(Object targetObj, Class clazz, String string, String string2, boolean flag) {
+        this.AsyncBackgroundTask_5 = targetObj;
         this.plugin = clazz;
         this.c = string;
         this.LiteBansModule_194 = string2;
@@ -44,7 +44,7 @@ Serializable {
     }
 
     public LiteBansModule_73 LiteBansModule_31() {
-        return this.plugin == null ? null : (this.g ? Reflection.getOrCreateKotlinPackage((Class)this.plugin) : Reflection.getOrCreateKotlinClass((Class)this.plugin));
+        return this.plugin == null ? null : (this.g ? Reflection.getOrCreateKotlinPackage(this.plugin) : Reflection.getOrCreateKotlinClass(this.plugin));
     }
 
     @Override

@@ -26,7 +26,7 @@ extends BansHandler {
 
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender) {
-        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, sender, MessageKey.LiteBansModule_87.BaseCoreGenericHandler("amount", (Object)this.g().get()), null, 4, null);
+        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, sender, MessageKey.LiteBansModule_87.BaseCoreGenericHandler("amount", this.g().get()), null, 4, null);
     }
 
     private static final void BaseCoreGenericHandler() {

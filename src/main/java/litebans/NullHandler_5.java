@@ -19,41 +19,41 @@ public class NullHandler_5 {
         return NullHandler_5.BaseCoreGenericHandler(stringReader);
     }
 
-    public static final String BaseCoreGenericHandler(Object object) {
-        if (object == null) {
+    public static final String BaseCoreGenericHandler(Object targetObj) {
+        if (targetObj == null) {
             return "null";
         }
-        if (object instanceof String) {
-            return "\"" + NullHandler_5.LiteBansModule_31((String)object) + "\"";
+        if (targetObj instanceof String) {
+            return "\"" + NullHandler_5.LiteBansModule_31targetObj + "\"";
         }
-        if (object instanceof Double) {
-            if (((Double)object).isInfinite() || ((Double)object).isNaN()) {
+        if (targetObj instanceof Double) {
+            if (targetObj.isInfinite() || targetObj.isNaN()) {
                 return "null";
             }
-            return object.toString();
+            return targetObj.toString();
         }
-        if (object instanceof Float) {
-            if (((Float)object).isInfinite() || ((Float)object).isNaN()) {
+        if (targetObj instanceof Float) {
+            if (targetObj.isInfinite() || targetObj.isNaN()) {
                 return "null";
             }
-            return object.toString();
+            return targetObj.toString();
         }
-        if (object instanceof Number) {
-            return object.toString();
+        if (targetObj instanceof Number) {
+            return targetObj.toString();
         }
-        if (object instanceof Boolean) {
-            return object.toString();
+        if (targetObj instanceof Boolean) {
+            return targetObj.toString();
         }
-        if (object instanceof LiteBansModule_44) {
-            return ((LiteBansModule_44)object).BaseCoreGenericHandler();
+        if (targetObj instanceof LiteBansModule_44) {
+            return targetObj.BaseCoreGenericHandler();
         }
-        if (object instanceof Map) {
-            return NullHandler_3.BaseCoreGenericHandler((Map)object);
+        if (targetObj instanceof Map) {
+            return NullHandler_3.BaseCoreGenericHandlertargetObj;
         }
-        if (object instanceof List) {
-            return NullHandler_7.BaseCoreGenericHandler((List)object);
+        if (targetObj instanceof List) {
+            return NullHandler_7.BaseCoreGenericHandlertargetObj;
         }
-        return object.toString();
+        return targetObj.toString();
     }
 
     public static final String LiteBansModule_31(String string) {

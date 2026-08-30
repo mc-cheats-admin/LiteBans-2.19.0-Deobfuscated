@@ -21,12 +21,12 @@ public final class SQLiteDriverHandler_2 {
 
     public final boolean LiteBansModule_31(@NotNull String string) {
         String string2 = string;
-        return ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)"mysql") || ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)"mariadb");
+        return ObjectUtilities.BaseCoreGenericHandler(string2, (Object)"mysql") || ObjectUtilities.BaseCoreGenericHandler(string2, (Object)"mariadb");
     }
 
     public final boolean BaseCoreGenericHandler(@NotNull String string) {
         String string2 = string;
-        return !ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)"sqlite") && !ObjectUtilities.BaseCoreGenericHandler((Object)string2, (Object)"LiteBansModule_243");
+        return !ObjectUtilities.BaseCoreGenericHandler(string2, (Object)"sqlite") && !ObjectUtilities.BaseCoreGenericHandler(string2, (Object)"LiteBansModule_243");
     }
 
     public final String c(@NotNull String v1) {

@@ -217,9 +217,9 @@ implements LiteBansModule_350 {
         return this.z;
     }
 
-    public void BaseCoreGenericHandler(String string, Object object) {
+    public void BaseCoreGenericHandler(String string, Object targetObj) {
         this.HoverTextFormatter();
-        this.LiteBansModule_194.put(string, object);
+        this.LiteBansModule_194.put(string, targetObj);
     }
 
     public String i() {
@@ -420,28 +420,28 @@ implements LiteBansModule_350 {
         TreeSet treeSet = new TreeSet(SetHandler.BaseCoreGenericHandler(HikariConfig.class));
         for (String string : treeSet) {
             try {
-                Object object = SetHandler.BaseCoreGenericHandler(string, this);
+                Object targetObj = SetHandler.BaseCoreGenericHandler(string, this);
                 if ("dataSourceProperties".equals(string)) {
                     Properties properties = SetHandler.BaseCoreGenericHandler(this.LiteBansModule_194);
                     properties.setProperty("password", "<masked>");
-                    object = properties;
+                    targetObj = properties;
                 }
                 if ("initializationFailTimeout".equals(string) && this.J == Long.MAX_VALUE) {
-                    object = "infinite";
+                    targetObj = "infinite";
                 } else if ("transactionIsolation".equals(string) && this.BanHandler_2 == null) {
-                    object = "default";
-                } else if (string.matches("scheduledExecutorService|threadFactory") && object == null) {
-                    object = "internal";
-                } else if (string.contains("jdbcUrl") && object instanceof String) {
-                    object = ((String)object).replaceAll("([?&;]password=)[^&#;]*(.*)", "$1<masked>$2");
+                    targetObj = "default";
+                } else if (string.matches("scheduledExecutorService|threadFactory") && targetObj == null) {
+                    targetObj = "internal";
+                } else if (string.contains("jdbcUrl") && targetObj instanceof String) {
+                    targetObj = targetObj.replaceAll("([?&;]password=)[^&#;]*(.*)", "$1<masked>$2");
                 } else if (string.contains("password")) {
-                    object = "<masked>";
-                } else if (object instanceof String) {
-                    object = "\"" + object + "\"";
-                } else if (object == null) {
-                    object = "none";
+                    targetObj = "<masked>";
+                } else if (targetObj instanceof String) {
+                    targetObj = "\"" + targetObj + "\"";
+                } else if (targetObj == null) {
+                    targetObj = "none";
                 }
-                LiteBansModule_401.LiteBansModule_31("{}{}", new Object[]{string + "............................................... + ".substring(0, 32), object});
+                LiteBansModule_401.LiteBansModule_31("{}{}", new Object[]{string + "............................................... + ".substring(0, 32), targetObj});
             }
             catch (Exception exception) {}
 }

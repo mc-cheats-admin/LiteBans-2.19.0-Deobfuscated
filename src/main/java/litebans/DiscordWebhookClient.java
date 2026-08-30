@@ -140,10 +140,9 @@ public final class DiscordWebhookClient {
                             super();
                             this.ServerSyncService = v1;
                             this.A = v2;
-                            v3 = (ConfigService)this.ServerSyncService.BaseCoreGenericHandler(ConfigService.class);
+                            v3 = this.ServerSyncService.BaseCoreGenericHandler(ConfigService.class);
                             v3.BaseCoreGenericHandler(this);
-                            arg1 = this;
-                            arg2 = System.getenv("LITEBANS_CONFIG");
+                                                        arg2 = System.getenv("LITEBANS_CONFIG");
                             if (arg2 != null) {
                                 arg1.ServerSyncService.getLogger().info("Loading environment options: " + (String)arg2);
                                 v0 = new LiteBansModule_314().BaseCoreGenericHandler((String)arg2);
@@ -160,11 +159,10 @@ public final class DiscordWebhookClient {
                             this.LiteBansModule_31 = this.A.BaseCoreGenericHandler("i_accept_that_dupeip_geoip_iphistory_and_ipban_will_not_work_without_getAddress_and_just_want_to_only_disable_warnings_logged_to_console", false);
                             this.m = this.A.BaseCoreGenericHandler("disable_wildcard_bans", false);
                             this.ExceptionHandler = this.A.BaseCoreGenericHandler("disable_expiry_update", false);
-                            arg1 = this;
-                            arg8 = "database_time_offset";
+                                                        arg8 = "database_time_offset";
                             arg2 = "0 seconds";
                             this.c = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg1.bc().BaseCoreGenericHandler(arg8, (String)arg2), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg2, 0.0));
-                            this.ah = LiteBansModule_283.BaseCoreGenericHandler((byte)this.A.BaseCoreGenericHandler("username_max_length", 16));
+                            this.ah = LiteBansModule_283.BaseCoreGenericHandler(this.A.BaseCoreGenericHandler("username_max_length", 16));
                             v3.BaseCoreGenericHandler((byte)Math.max(0, this.A.BaseCoreGenericHandler("debug_level", 0)));
                             this.AsyncBackgroundTask_5 = this.A.BaseCoreGenericHandler("bungeecord", false);
                             this.NullHandler_8 = this.A.BaseCoreGenericHandler("online_mode", true);
@@ -198,16 +196,16 @@ public final class DiscordWebhookClient {
                                 catch (Exception arg10) {
                                     arg10.printStackTrace();
 }
-                            if (!ObjectUtilities.BaseCoreGenericHandler((Object)arg9, (Object)"litebans_")) {
+                            if (!ObjectUtilities.BaseCoreGenericHandler(arg9, (Object)"litebans_")) {
                                 arg5 = arg9;
                                 ObjectUtilities.BaseCoreGenericHandler(arg5);
-                                arg5 = (CharSequence)arg5;
+                                arg5 = arg5;
                                 arg6 = new NativepatternHandler("^[0-9a-zA-Z_]*$");
-                                if (!arg6.BaseCoreGenericHandler((CharSequence)arg5)) {
+                                if (!arg6.BaseCoreGenericHandler(arg5)) {
                                     this.ServerSyncService.getLogger().warning("Table prefix '" + arg9 + "' is invalid! Using default ('litebans_') + ");
                                     arg9 = "litebans_";
 }
-                            ObjectUtilities.BaseCoreGenericHandler((Object)arg8);
+                            ObjectUtilities.BaseCoreGenericHandler(arg8);
                             this.SQLiteDriverHandler = arg8;
                             arg5 = v7;
                             ObjectUtilities.BaseCoreGenericHandler(arg5);
@@ -220,16 +218,14 @@ public final class DiscordWebhookClient {
                             arg5 = arg9;
                             ObjectUtilities.BaseCoreGenericHandler(arg5);
                             this.LiteBansModule_9 = arg5;
-                            arg5 = this;
-                            arg6 = this.A.BaseCoreGenericHandler("sql.engine", "InnoDB");
+                                                        arg6 = this.A.BaseCoreGenericHandler("sql.engine", "InnoDB");
                             this.LiteBansModule_17 = ObjectUtilities.BaseCoreGenericHandler(arg6, (Object)"InnoDB") == false && ArrayUtilities.LiteBansModule_31(arg11 = new String[]{"mysql", "mariadb", "LiteBansModule_243", "sqlite"}, arg6.toLowerCase(Locale.ROOT)) != false ? "InnoDB" : arg6;
                             this.BanHandler = arg5 = this.A.BaseCoreGenericHandler("sql.options", "useSSL=false&serverTimezone=UTC");
                             arg5 = "version:8";
                             arg12   = new String[]{arg5, DiscordWebhookClient.bf[48], DiscordWebhookClient.bf[49], DiscordWebhookClient.bf[50], DiscordWebhookClient.bf[51], DiscordWebhookClient.bf[52]};
                             arg6 = arg12  ;
-                            arg13 = this;
-                            arg14 = DiscordWebhookClient.bf[53];
-                            arg15 = (String[])Arrays.copyOf(arg6, ((Object)arg6).length);
+                                                        arg14 = DiscordWebhookClient.bf[53];
+                            arg15 = (String[])Arrays.copyOf(arg6, (arg6).length);
                             if (!arg13.bc().LiteBansModule_194((String)arg14)) {
                                 v1 = Arrays.copyOf(arg15, ((String[])arg15).length);
                             } else {
@@ -244,20 +240,16 @@ public final class DiscordWebhookClient {
                             this.CommandExitException = arg12  ;
                             this.PlayerQuitListener = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[56], 1);
                             this.LiteBansModule_13 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[57], 10);
-                            arg13 = this;
-                            arg14 = DiscordWebhookClient.bf[58];
+                                                        arg14 = DiscordWebhookClient.bf[58];
                             arg15 = DiscordWebhookClient.bf[59];
                             this.L = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg13.bc().BaseCoreGenericHandler((String)arg14, (String)arg15), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg15, 0.0));
-                            arg13 = this;
-                            arg14 = DiscordWebhookClient.bf[60];
+                                                        arg14 = DiscordWebhookClient.bf[60];
                             arg15 = DiscordWebhookClient.bf[61];
                             this.i = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg13.bc().BaseCoreGenericHandler((String)arg14, (String)arg15), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg15, 0.0));
-                            arg13 = this;
-                            arg14 = DiscordWebhookClient.bf[62];
+                                                        arg14 = DiscordWebhookClient.bf[62];
                             arg15 = DiscordWebhookClient.bf[63];
                             this.ak = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg13.bc().BaseCoreGenericHandler((String)arg14, (String)arg15), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg15, 0.0));
-                            arg13 = this;
-                            arg14 = DiscordWebhookClient.bf[64];
+                                                        arg14 = DiscordWebhookClient.bf[64];
                             arg15 = DiscordWebhookClient.bf[65];
                             this.LiteBansModule_433 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg13.bc().BaseCoreGenericHandler((String)arg14, (String)arg15), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg15, 0.0));
                             arg13 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[66]);
@@ -270,8 +262,7 @@ public final class DiscordWebhookClient {
                                     arg19 = (String)arg17;
                                     arg20 = arg13.BaseCoreGenericHandler(arg19);
                                     if (arg20 == null) continue;
-                                    arg21 = this;
-                                    arg22   = new String[]{DiscordWebhookClient.bf[67], DiscordWebhookClient.bf[68], DiscordWebhookClient.bf[69]};
+                                                                        arg22   = new String[]{DiscordWebhookClient.bf[67], DiscordWebhookClient.bf[68], DiscordWebhookClient.bf[69]};
                                     arg23 = arg22  ;
                                     arg24 = new ArrayList<PunishmentService>();
                                     arg25 = arg23.length;
@@ -286,24 +277,22 @@ public final class DiscordWebhookClient {
                                     for (T arg29 : arg23) {
                                         arg28 = (String)arg29;
                                         arg30 = arg24;
-                                        arg30.add(LiteBansModule_242.BaseCoreGenericHandler((CharSequence)(DiscordWebhookClient.bf[70] + arg19 + DiscordWebhookClient.bf[71] + (String)arg28 + DiscordWebhookClient.bf[72]), (CharSequence)DiscordWebhookClient.bf[73]));
+                                        arg30.add(LiteBansModule_242.BaseCoreGenericHandler((CharSequence)(DiscordWebhookClient.bf[70] + arg19 + DiscordWebhookClient.bf[71] + (String)arg28 + DiscordWebhookClient.bf[72]), DiscordWebhookClient.bf[73]));
                                     }
                                     arg22   = (List)arg24;
                                     arg31 = arg21.ServerSyncService.getLogger();
                                     for (PunishmentService arg32 : arg22  ) {
-                                        arg33 = (CharSequence)arg32;
+                                        arg33 = arg32;
                                         arg28 = arg31;
                                         arg28.warning(arg33.toString());
                                     }
                                     arg21 = DiscordWebhookClient.bf[74];
                                     arg34 = DiscordWebhookClient.bf[75];
                                     arg22   = arg20.BaseCoreGenericHandler(DiscordWebhookClient.bf[76], DiscordWebhookClient.bf[77]);
-                                    arg24 = this;
-                                    arg35 = arg20;
+                                                                        arg35 = arg20;
                                     arg33 = DiscordWebhookClient.bf[78];
                                     arg36 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg35.BaseCoreGenericHandler((String)arg33, (String)arg21), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg21, 0.0));
-                                    arg33 = this;
-                                    arg37 = arg20;
+                                                                        arg37 = arg20;
                                     arg28 = DiscordWebhookClient.bf[79];
                                     arg38 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg37.BaseCoreGenericHandler((String)arg28, (String)arg21), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg21, 0.0));
                                     if (arg36 <= 0L) {
@@ -312,24 +301,19 @@ public final class DiscordWebhookClient {
                                     if (arg38 <= 0L) {
                                         arg38 = 0x7FFFFFFFFFFFFFFFL;
                                     }
-                                    arg28 = this;
-                                    arg27 = arg20;
+                                                                        arg27 = arg20;
                                     arg39 = DiscordWebhookClient.bf[80];
                                     arg40 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg27.BaseCoreGenericHandler((String)arg39, (String)arg34), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg34, 0.0));
-                                    arg39 = this;
-                                    arg30 = arg20;
+                                                                        arg30 = arg20;
                                     arg41 = DiscordWebhookClient.bf[81];
                                     arg42 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg30.BaseCoreGenericHandler((String)arg41, (String)arg34), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg34, 0.0));
-                                    arg41 = this;
-                                    arg43 = arg20;
+                                                                        arg43 = arg20;
                                     arg44 = DiscordWebhookClient.bf[82];
                                     arg45 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg43.BaseCoreGenericHandler((String)arg44, (String)arg34), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg34, 0.0));
-                                    arg44 = this;
-                                    arg46 = arg20;
+                                                                        arg46 = arg20;
                                     arg47 = DiscordWebhookClient.bf[83];
                                     arg48 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg46.BaseCoreGenericHandler((String)arg47, (String)arg34), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg34, 0.0));
-                                    arg47 = this;
-                                    arg49 = arg20;
+                                                                        arg49 = arg20;
                                     arg50 = DiscordWebhookClient.bf[84];
                                     arg51 = DiscordWebhookClient.bf[85];
                                     arg52 = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg49.BaseCoreGenericHandler(arg50, arg51), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg51, 0.0));
@@ -339,16 +323,14 @@ public final class DiscordWebhookClient {
                                     arg14.add(arg49);
 }
                             this.g = (List)arg14;
-                            arg15 = this;
-                            arg54   = DiscordWebhookClient.bf[87];
+                                                        arg54   = DiscordWebhookClient.bf[87];
                             arg16 = DiscordWebhookClient.bf[88];
                             this.ValueHandler = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg15.bc().BaseCoreGenericHandler((String)arg54  , (String)arg16), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg16, 0.0));
-                            arg15 = this;
-                            arg54   = DiscordWebhookClient.bf[89];
+                                                        arg54   = DiscordWebhookClient.bf[89];
                             arg16 = DiscordWebhookClient.bf[90];
                             this.PunishmentService = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg15.bc().BaseCoreGenericHandler((String)arg54  , (String)arg16), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg16, 0.0));
                             arg15 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[91], DiscordWebhookClient.bf[92]);
-                            if (ObjectUtilities.BaseCoreGenericHandler(arg15, (Object)DiscordWebhookClient.bf[93])) {
+                            if (ObjectUtilities.BaseCoreGenericHandler(arg15, DiscordWebhookClient.bf[93])) {
                                 arg16 = LiteBansModule_179.BaseCoreGenericHandler;
                                 arg54   = StringUtilities.LiteBansModule_31((String)arg16);
                                 if (arg54   != null) {
@@ -365,8 +347,7 @@ public final class DiscordWebhookClient {
                             this.W = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[98], true);
                             this.D = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[99], true);
                             this.aa = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[100], true);
-                            arg16 = this;
-                            arg56 = DiscordWebhookClient.bf[101];
+                                                        arg56 = DiscordWebhookClient.bf[101];
                             arg17 = new String[]{DiscordWebhookClient.bf[102], DiscordWebhookClient.bf[103], DiscordWebhookClient.bf[104], DiscordWebhookClient.bf[105]};
                             if (!arg16.bc().LiteBansModule_194(arg56)) {
                                 v3 = Arrays.copyOf(arg17, ((String[])arg17).length);
@@ -376,9 +357,7 @@ public final class DiscordWebhookClient {
                                 v3 = arg21.toArray(new String[0]);
                             }
                             arg54   = v3;
-                            arg16 = this;
-                            arg58 = this;
-                            arg17 = LiteBansModule_389.BaseCoreGenericHandler((String[])arg54  );
+                                                                                    arg17 = LiteBansModule_389.BaseCoreGenericHandler((String[])arg54  );
                             arg59 = arg17;
                             arg60 = new ArrayList<PunishmentService>(CollectionUtilities.BaseCoreGenericHandler((Iterable)arg17, 10));
                             arg34 = arg59.iterator();
@@ -386,18 +365,16 @@ public final class DiscordWebhookClient {
                                 arg22   = arg34.next();
                                 arg31 = (String)arg22  ;
                                 arg61 = arg60;
-                                arg61.add(StringUtilities.LiteBansModule_31((CharSequence)arg31, ' ', false, 2, null) != false ? arg31 : (String)arg31 + ' ');
+                                arg61.add(StringUtilities.LiteBansModule_31(arg31, ' ', false, 2, null) != false ? arg31 : (String)arg31 + ' ');
                             }
                             arg58.LockdownCommandHandler = arg62 = (List)arg60;
-                            arg16 = this;
-                            this.B = CollectionUtilities.g(LiteBansModule_389.BaseCoreGenericHandler((String[])arg54  ));
+                                                        this.B = CollectionUtilities.g(LiteBansModule_389.BaseCoreGenericHandler((String[])arg54  ));
                             this.BanHandler_4 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[106], true);
                             this.aE = arg16 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[107], DiscordWebhookClient.bf[108]);
-                            arg16 = this;
-                            arg63 = DiscordWebhookClient.bf[109];
+                                                        arg63 = DiscordWebhookClient.bf[109];
                             arg17 = new String[]{ }
                             if (!arg16.bc().LiteBansModule_194((String)arg63)) {
-                                v4 = (String[])Arrays.copyOf(arg17, ((Object)arg17).length);
+                                v4 = (String[])Arrays.copyOf(arg17, (arg17).length);
                             } else {
                                 arg59 = arg16.bc().g((String)arg63);
                                 arg64 = arg59;
@@ -438,8 +415,7 @@ public final class DiscordWebhookClient {
                     break;
 }
             this.PlayerproviderHandler = v6;
-            arg63 = this;
-            arg17 = this.A;
+                        arg17 = this.A;
             arg65 = DiscordWebhookClient.bf[117];
             arg59 = DiscordWebhookClient.bf[118];
             this.F = (long)SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler(arg17.BaseCoreGenericHandler((String)arg65, (String)arg59), SecHandler.AsyncBackgroundTask_5.BaseCoreGenericHandler((String)arg59, 0.0));
@@ -457,8 +433,7 @@ public final class DiscordWebhookClient {
             this.aj = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[131], false);
             this.af = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[132], true);
             this.be = arg63 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[133], DiscordWebhookClient.bf[134]);
-            arg63 = this;
-            arg17 = DiscordWebhookClient.bf[135];
+                        arg17 = DiscordWebhookClient.bf[135];
             arg65 = new String[]{ }
             if (!arg63.bc().LiteBansModule_194((String)arg17)) {
                 v7 = Arrays.copyOf(arg65, arg65.length);
@@ -468,8 +443,7 @@ public final class DiscordWebhookClient {
                 v7 = arg34.toArray(new String[0]);
             }
             this.LiteBansModule = v7;
-            arg63 = this;
-            arg17 = DiscordWebhookClient.bf[136];
+                        arg17 = DiscordWebhookClient.bf[136];
             arg65 = new String[]{ }
             if (!arg63.bc().LiteBansModule_194((String)arg17)) {
                 v8 = Arrays.copyOf(arg65, arg65.length);
@@ -480,8 +454,7 @@ public final class DiscordWebhookClient {
             }
             this.TapeHandler = v8;
             this.LiteBansModule_7 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[137], false);
-            arg63 = this;
-            arg17 = DiscordWebhookClient.bf[138];
+                        arg17 = DiscordWebhookClient.bf[138];
             arg65 = new String[]{ }
             if (!arg63.bc().LiteBansModule_194((String)arg17)) {
                 v9 = Arrays.copyOf(arg65, arg65.length);
@@ -491,8 +464,7 @@ public final class DiscordWebhookClient {
                 v9 = arg34.toArray(new String[0]);
             }
             this.az = v9;
-            arg63 = this;
-            arg17 = DiscordWebhookClient.bf[139];
+                        arg17 = DiscordWebhookClient.bf[139];
             arg65 = new String[]{ }
             if (!arg63.bc().LiteBansModule_194((String)arg17)) {
                 v10 = Arrays.copyOf(arg65, arg65.length);
@@ -502,8 +474,7 @@ public final class DiscordWebhookClient {
                 v10 = arg34.toArray(new String[0]);
             }
             this.HoverTextFormatter = v10;
-            arg63 = this;
-            arg17 = DiscordWebhookClient.bf[140];
+                        arg17 = DiscordWebhookClient.bf[140];
             arg65 = new String[]{DiscordWebhookClient.bf[141], DiscordWebhookClient.bf[142], DiscordWebhookClient.bf[143], DiscordWebhookClient.bf[144], DiscordWebhookClient.bf[145]};
             if (!arg63.bc().LiteBansModule_194((String)arg17)) {
                 v11 = Arrays.copyOf(arg65, arg65.length);
@@ -524,13 +495,12 @@ public final class DiscordWebhookClient {
             this.MessageKey = arg63 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[160], DiscordWebhookClient.bf[161]);
             this.LiteBansModule_240 = arg63 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[162], DiscordWebhookClient.bf[163]);
             arg63 = litebans.MessageKey.BaseCoreGenericHandler(this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[164], DiscordWebhookClient.bf[165]), true);
-            arg63 = (CharSequence)arg63;
+            arg63 = arg63;
             arg71 = this.ah;
             this.LiteBansModule_15 = LiteBansModule_242.BaseCoreGenericHandler(arg63.toString(), arg71 & 255);
             this.LiteBansModule_5 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[166], false);
             this.BanHandler_5 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[167], false);
-            arg63 = this;
-            arg72 = this.A;
+                        arg72 = this.A;
             arg73 = DiscordWebhookClient.bf[168];
             arg74 = 1;
             this.HikariConfig = (byte)arg72.BaseCoreGenericHandler((String)arg73, arg74);
@@ -542,7 +512,7 @@ public final class DiscordWebhookClient {
             this.H = Math.max(0, this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[174], 5));
             arg75 = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[175], false);
             if (this.ServerSyncService.AsyncBackgroundTask_22() == 0 && this.ServerSyncService.i().BaseCoreGenericHandler(DiscordWebhookClient.bf[176])) {
-                v3.BaseCoreGenericHandler((Object)DiscordWebhookClient.bf[177]);
+                v3.BaseCoreGenericHandler(DiscordWebhookClient.bf[177]);
             }
             this.ac = arg75;
             this.ab = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[178], 12000);
@@ -559,8 +529,7 @@ public final class DiscordWebhookClient {
             this.S = Math.max(1, this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[186], 3));
             arg73 = DiscordWebhookClient.bf[187];
             arg74 = 1;
-            arg76 = this;
-            arg34 = new String[]{ }
+                        arg34 = new String[]{ }
             if (!arg76.bc().LiteBansModule_194((String)arg73)) {
                 v12 = Arrays.copyOf(arg34, ((String[])arg34).length);
             } else {
@@ -569,8 +538,7 @@ public final class DiscordWebhookClient {
                 v12 = arg77.toArray(new String[0]);
             }
             this.LiteBansModule_24 = CollectionUtilities.LiteBansModule_31((Iterable)LiteBansModule_389.BaseCoreGenericHandler(v12));
-            arg73 = this;
-            arg78 = DiscordWebhookClient.bf[188];
+                        arg78 = DiscordWebhookClient.bf[188];
             arg79 = new String[]{DiscordWebhookClient.bf[189]};
             if (!arg73.bc().LiteBansModule_194(arg78)) {
                 v13 = Arrays.copyOf(arg79, arg79.length);
@@ -580,10 +548,8 @@ public final class DiscordWebhookClient {
                 v13 = arg31.toArray(new String[0]);
             }
             this.GnuSparseMapHandler = LiteBansModule_389.BaseCoreGenericHandler(v13);
-            arg73 = this;
-            arg78 = DiscordWebhookClient.bf[190];
-            arg80 = this;
-            arg34 = DiscordWebhookClient.bf[191];
+                        arg78 = DiscordWebhookClient.bf[190];
+                        arg34 = DiscordWebhookClient.bf[191];
             arg81 = new String[]{ }
             if (!arg80.bc().LiteBansModule_194((String)arg34)) {
                 v14 = Arrays.copyOf(arg81, arg81.length);
@@ -603,10 +569,9 @@ public final class DiscordWebhookClient {
             }
             this.z = LiteBansModule_389.BaseCoreGenericHandler(v15);
             arg73 = DiscordWebhookClient.bf[192];
-            arg84 = this;
-            arg34 = new String[]{ }
+                        arg34 = new String[]{ }
             if (!arg84.bc().LiteBansModule_194((String)arg73)) {
-                v16 = (String[])Arrays.copyOf(arg34, ((Object)arg34).length);
+                v16 = (String[])Arrays.copyOf(arg34, (arg34).length);
             } else {
                 arg85 = arg84.bc().g((String)arg73);
                 arg86 = arg85;
@@ -615,8 +580,7 @@ public final class DiscordWebhookClient {
             this.P = CollectionUtilities.LiteBansModule_31((Iterable)LiteBansModule_389.BaseCoreGenericHandler(v16));
             arg73 = LiteBansModule_181.LiteBansModule_194;
             arg87 = this.z;
-            arg58 = this;
-            arg84 = arg87;
+                        arg84 = arg87;
             if (arg84 instanceof Collection && ((Collection)arg84).isEmpty()) {
             } else {
                 arg88 = arg84.iterator();
@@ -651,8 +615,7 @@ public final class DiscordWebhookClient {
         this.q = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[214], true);
         this.X = (byte)Math.min(this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[215], 1), 2);
         this.aW = this.A.BaseCoreGenericHandler(DiscordWebhookClient.bf[216], false) != false && this.ServerSyncService.AsyncBackgroundTask_22() == 0;
-        arg73 = this;
-        arg92 = arg73.ServerSyncService.getLogger();
+                arg92 = arg73.ServerSyncService.getLogger();
         if (!arg73.PluginHookService) {
             arg92.warning(DiscordWebhookClient.bf[217]);
         }
@@ -670,13 +633,13 @@ public final class DiscordWebhookClient {
             if (v18 == null || (v18 = v18.toLowerCase(Locale.ROOT)) == null) {
                 v18 = DiscordWebhookClient.bf[223];
             }
-            if (((CharSequence)(arg93 = v18)).length() > 0 && !ObjectUtilities.BaseCoreGenericHandler((Object)arg93, (Object)DiscordWebhookClient.bf[224])) {
+            if (((CharSequence)(arg93 = v18)).length() > 0 && !ObjectUtilities.BaseCoreGenericHandler(arg93, DiscordWebhookClient.bf[224])) {
                 arg92.warning(DiscordWebhookClient.bf[225] + arg93 + DiscordWebhookClient.bf[226]);
 }
         arg73 = v3;
         if (arg73.g()) {
             arg58 = arg73;
-            arg94 = LiteBansModule_242.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler((CharSequence)CollectionUtilities.BaseCoreGenericHandler(this.g, null, null, null, 0, null, null, 63, null), (CharSequence)(DiscordWebhookClient.bf[227] + Arrays.toString(arg54  ))), (CharSequence)(DiscordWebhookClient.bf[228] + Arrays.toString(this.HoverTextFormatter)));
+            arg94 = LiteBansModule_242.BaseCoreGenericHandler(LiteBansModule_242.BaseCoreGenericHandler(CollectionUtilities.BaseCoreGenericHandler(this.g, null, null, null, 0, null, null, 63, null), (CharSequence)(DiscordWebhookClient.bf[227] + Arrays.toString(arg54  ))), (CharSequence)(DiscordWebhookClient.bf[228] + Arrays.toString(this.HoverTextFormatter)));
             arg58.BaseCoreGenericHandler(arg94);
 }
 
@@ -1185,7 +1148,7 @@ public final class DiscordWebhookClient {
 
     public final LiteBansModule_354 BaseCoreGenericHandler(boolean flag) {
         String string;
-        ConfigService configService = (ConfigService)this.ServerSyncService.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = this.ServerSyncService.BaseCoreGenericHandler(ConfigService.class);
         String string2 = LiteBansModule_242.BaseCoreGenericHandler(this.A.BaseCoreGenericHandler(bf[255], bf[256]), 32);
         if (LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(string2)) {
             configService.BaseCoreGenericHandler((Object)(bf[257] + string2 + bf[258]));
@@ -1193,18 +1156,18 @@ public final class DiscordWebhookClient {
         }
         String string3 = null;
         File file = this.ServerSyncService.getDataFolder();
-        Object object = bf[260];
-        File file2 = new File(file, (String)object);
+        Object targetObj = bf[260];
+        File file2 = new File(file, (String)targetObj);
         if (!file2.exists() || YamlConfigProvider.AsyncBackgroundTask_5() == null) {
             file = this.ServerSyncService.getDataFolder();
-            object = bf[261];
+            targetObj = bf[261];
             flag2 = false;
-            file2 = new File(file, (String)object);
+            file2 = new File(file, (String)targetObj);
         }
         try {
             boolean flag3 = flag || !file2.exists();
-            object = this.ServerSyncService.BaseCoreGenericHandler(file2).g();
-            String string4 = object.BaseCoreGenericHandler(bf[262], null);
+            targetObj = this.ServerSyncService.BaseCoreGenericHandler(file2).g();
+            String string4 = targetObj.BaseCoreGenericHandler(bf[262], null);
             if (string4 != null && string4.length() == 32) {
                 string3 = string4;
             } else {
@@ -1212,8 +1175,8 @@ public final class DiscordWebhookClient {
                 flag3 = true;
             }
             if (flag3) {
-                object.LiteBansModule_31(bf[263], string3);
-                ((DatabaseService)object).LiteBansModule_240();
+                targetObj.LiteBansModule_31(bf[263], string3);
+                targetObj.LiteBansModule_240();
             } else {
                 configService.BaseCoreGenericHandler(false);
 }
@@ -1225,16 +1188,16 @@ public final class DiscordWebhookClient {
             string = this.T();
         }
         LiteBansModule_354 jT2 = LiteBansModule_371.BaseCoreGenericHandler(string2, string);
-        object = configService;
+        targetObj = configService;
         int n = 10;
-        if (((ConfigService)object).BaseCoreGenericHandler(n)) {
-            Object object2 = object;
-            ((ConfigService)object2).BaseCoreGenericHandler((Object)(bf[264] + (String)jT2.e() + '\"'));
+        if (targetObj.BaseCoreGenericHandler(n)) {
+            Object contextObj = targetObj;
+            ((ConfigService)contextObj).BaseCoreGenericHandler((Object)(bf[264] + (String)jT2.e() + '\"'));
         }
         return jT2;
     }
 
-    public static /* synthetic */ LiteBansModule_354 BaseCoreGenericHandler(DiscordWebhookClient eG2, boolean flag, int n, Object object) {
+    public static /* synthetic */ LiteBansModule_354 BaseCoreGenericHandler(DiscordWebhookClient eG2, boolean flag, int n, Object targetObj) {
         if ((n & 1) != 0) {
             flag = false;
         }

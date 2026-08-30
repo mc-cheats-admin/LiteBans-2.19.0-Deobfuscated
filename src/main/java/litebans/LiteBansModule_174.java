@@ -46,7 +46,7 @@ public final class LiteBansModule_174 {
     }
 
     public final LiteBansModule_66 BaseCoreGenericHandler(int n) {
-        return n >= this.g.size() ? (LiteBansModule_66)CollectionUtilities.BaseCoreGenericHandler(this.g) : (n < 0 ? (LiteBansModule_66)CollectionUtilities.LiteBansModule_31(this.g) : (LiteBansModule_66)this.g.get(n));
+        return n >= this.g.size() ? (LiteBansModule_66)CollectionUtilities.BaseCoreGenericHandler(this.g) : (n < 0 ? (LiteBansModule_66)CollectionUtilities.LiteBansModule_31(this.g) : this.g.get(n));
     }
 
     public String toString() {
@@ -56,34 +56,34 @@ public final class LiteBansModule_174 {
     public int hashCode() {
         int n = this.c.hashCode();
         n = n * 31 + this.LiteBansModule_31.hashCode();
-        n = n * 31 + ((Object)this.plugin).hashCode();
-        n = n * 31 + ((Object)this.AsyncBackgroundTask_5).hashCode();
-        n = n * 31 + ((Object)this.g).hashCode();
+        n = n * 31 + (this.plugin).hashCode();
+        n = n * 31 + (this.AsyncBackgroundTask_5).hashCode();
+        n = n * 31 + (this.g).hashCode();
         n = n * 31 + Long.hashCode(this.LiteBansModule_194);
         return n;
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof LiteBansModule_174)) {
+        if (!(targetObj instanceof LiteBansModule_174)) {
             return false;
         }
-        LiteBansModule_174 eM2 = (LiteBansModule_174)object;
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.c, (Object)eM2.c)) {
+        LiteBansModule_174 eM2 = (LiteBansModule_174)targetObj;
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.c, eM2.c)) {
             return false;
         }
         if (this.LiteBansModule_31 != eM2.LiteBansModule_31) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.plugin, eM2.BaseCoreGenericHandler)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.plugin, eM2.BaseCoreGenericHandler)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5, eM2.AsyncBackgroundTask_5)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, eM2.AsyncBackgroundTask_5)) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.g, eM2.g)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.g, eM2.g)) {
             return false;
         }
         return this.LiteBansModule_194 == eM2.LiteBansModule_194;

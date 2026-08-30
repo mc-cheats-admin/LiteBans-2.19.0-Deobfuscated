@@ -27,15 +27,15 @@ Serializable {
     }
 
     @Override
-    public boolean add(Object object) {
+    public boolean add(Object targetObj) {
         if (this.c < this.AsyncBackgroundTask_5.length) {
-            this.AsyncBackgroundTask_5[this.c++] = object;
+            this.AsyncBackgroundTask_5[this.c++] = targetObj;
         } else {
             int n = this.AsyncBackgroundTask_5.length;
             int n2 = n << 1;
             Object[] objectArray = (Object[])Array.newInstance(this.LiteBansModule_31, n2);
             System.arraycopy(this.AsyncBackgroundTask_5, 0, objectArray, 0, n);
-            objectArray[this.c++] = object;
+            objectArray[this.c++] = targetObj;
             this.AsyncBackgroundTask_5 = objectArray;
         }
         return true;
@@ -46,9 +46,9 @@ Serializable {
     }
 
     @Override
-    public boolean remove(Object object) {
+    public boolean remove(Object targetObj) {
         for (int i = this.c - 1; i >= 0; --i) {
-            if (object != this.AsyncBackgroundTask_5[i]) continue;
+            if (targetObj != this.AsyncBackgroundTask_5[i]) continue;
             int n = this.c - i - 1;
             if (n > 0) {
                 System.arraycopy(this.AsyncBackgroundTask_5, i + 1, this.AsyncBackgroundTask_5, i, n);
@@ -77,27 +77,27 @@ Serializable {
         return this.c == 0;
     }
 
-    public Object set(int n, Object object) {
-        Object object2 = this.AsyncBackgroundTask_5[n];
-        this.AsyncBackgroundTask_5[n] = object;
-        return object2;
+    public Object set(int n, Object targetObj) {
+        Object contextObj = this.AsyncBackgroundTask_5[n];
+        this.AsyncBackgroundTask_5[n] = targetObj;
+        return contextObj;
     }
 
     public Object remove(int n) {
         if (this.c == 0) {
             return null;
         }
-        Object object = this.AsyncBackgroundTask_5[n];
+        Object targetObj = this.AsyncBackgroundTask_5[n];
         int n2 = this.c - n - 1;
         if (n2 > 0) {
             System.arraycopy(this.AsyncBackgroundTask_5, n + 1, this.AsyncBackgroundTask_5, n, n2);
         }
         this.AsyncBackgroundTask_5[--this.c] = null;
-        return object;
+        return targetObj;
     }
 
     @Override
-    public boolean contains(Object object) {
+    public boolean contains(Object targetObj) {
         throw new UnsupportedOperationException();
     }
 
@@ -140,17 +140,17 @@ Serializable {
         throw new UnsupportedOperationException();
     }
 
-    public void add(int n, Object object) {
+    public void add(int n, Object targetObj) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public int indexOf(Object object) {
+    public int indexOf(Object targetObj) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public int lastIndexOf(Object object) {
+    public int lastIndexOf(Object targetObj) {
         throw new UnsupportedOperationException();
     }
 

@@ -108,31 +108,31 @@ extends Enum {
         CharSequence charSequence;
         switch (LiteBansModule_192.BaseCoreGenericHandler[this.ordinal()]) {
             case 1: {
-                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, (Object)MessageKey.dC, (Object)MessageKey.bu);
+                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, MessageKey.dC, MessageKey.bu);
                 break;
             }
             case 2: {
-                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, (Object)MessageKey.r, (Object)MessageKey.cB);
+                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, MessageKey.r, MessageKey.cB);
                 break;
             }
             case 3: {
-                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, (Object)MessageKey.cH, (Object)MessageKey.SetHandler);
+                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, MessageKey.cH, MessageKey.SetHandler);
                 break;
             }
             case 4: {
-                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, (Object)MessageKey.LiteBansModule_125, (Object)MessageKey.aq);
+                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, MessageKey.LiteBansModule_125, MessageKey.aq);
                 break;
             }
             case 5: {
-                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, (Object)MessageKey.ElementsHandler_3, (Object)MessageKey.aU);
+                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, MessageKey.ElementsHandler_3, MessageKey.aU);
                 break;
             }
             case 6: {
-                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, (Object)MessageKey.LiteBansModule_10, (Object)MessageKey.aT);
+                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, MessageKey.LiteBansModule_10, MessageKey.aT);
                 break;
             }
             case 7: {
-                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, (Object)MessageKey.AsyncBackgroundTask_6, (Object)MessageKey.q);
+                charSequence = AsyncBackgroundTask_5.BaseCoreGenericHandler(d10, MessageKey.AsyncBackgroundTask_6, MessageKey.q);
                 break;
             }
             default: {

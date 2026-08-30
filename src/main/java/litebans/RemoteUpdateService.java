@@ -37,7 +37,7 @@ extends PluginModule {
         ConfigService configService = (ConfigService)plugin.BaseCoreGenericHandler(ConfigService.class);
         configService.e();
         String string = AsyncBackgroundTask_5;
-        if (string == null || ((CharSequence)string).length() == 0) {
+        if (string == null || (string).length() == 0) {
             return;
         }
         ThreadPoolExecutor threadPoolExecutor = plugin.LiteBansModule_433();

@@ -38,23 +38,23 @@ extends BansHandler {
         AutoCloseable autoCloseable = preparedStatement;
         Throwable throwable = null;
         try {
-            Object object = (PreparedStatement)autoCloseable;
+            Object targetObj = (PreparedStatement)autoCloseable;
             ResultSet resultSet = preparedStatement.executeQuery();
             AutoCloseable autoCloseable2 = resultSet;
             Throwable throwable2 = null;
             try {
-                Object object2 = (ResultSet)autoCloseable2;
+                Object contextObj = (ResultSet)autoCloseable2;
                 while (resultSet.next()) {
                     String string3 = resultSet.getString("name");
                     String string4 = LiteBansModule_50.c.e(resultSet.getString("uuid"));
                     String string5 = resultSet.getString("operator");
                     String string6 = resultSet.getString("reason");
                     String string7 = resultSet.getString("punishmentType");
-                    ObjectUtilities.BaseCoreGenericHandler((Object)string7);
+                    ObjectUtilities.BaseCoreGenericHandler(string7);
                     String string8 = string7;
                     String string9 = string8.toLowerCase(Locale.ENGLISH);
                     string8 = null;
-                    boolean flag4 = StringUtilities.BaseCoreGenericHandler((CharSequence)string9, (CharSequence)("ip" + string2), false, 2, null);
+                    boolean flag4 = StringUtilities.BaseCoreGenericHandler(string9, (CharSequence)("ip" + string2), false, 2, null);
                     String string10 = string4;
                     if (HexEncodingHelper.BaseCoreGenericHandler.i(string10) && !flag4) {
                         this.m().warning("IP was stored InitializerHandler_3 UUID column for " + string7 + '!');
@@ -78,14 +78,12 @@ extends BansHandler {
                     }
                     long l3 = resultSet.getLong("start");
                     long l5 = Math.max(resultSet.getLong("end"), 0L);
-                    Object object3 = this;
-                    String string11 = ((ConfigService)((MessageHandler)object3).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_25();
-                    Object object4 = this;
-                    object3 = LiteBansModule_181.LiteBansModule_194.BaseCoreGenericHandler(((ConfigService)((MessageHandler)object4).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().BuilderactionHandler(), string11, this.LiteBansModule_240().HoverTextFormatter());
+                                        String string11 = ((ConfigService)this.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_25();
+                                        resultObj = LiteBansModule_181.LiteBansModule_194.BaseCoreGenericHandler(((ConfigService)((MessageHandler)helperObj).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().BuilderactionHandler(), string11, this.LiteBansModule_240().HoverTextFormatter());
                     if (!flag || AllHandler_3.BaseCoreGenericHandler(ch2, string4, null, null, false, false, 30, null) == null) {
-                        ObjectUtilities.BaseCoreGenericHandler((Object)string6);
-                        object4 = new SilentHandler(a_2, string4, string8, string6, this.LiteBansModule_31(string5), string5, (String)object3, string11, l3, l5, 0, false, flag4, flag, 0L, 19456, null);
-                        ch2.c((SilentHandler)object4);
+                        ObjectUtilities.BaseCoreGenericHandler(string6);
+                        helperObj = new SilentHandler(a_2, string4, string8, string6, this.LiteBansModule_31(string5), string5, (String)resultObj, string11, l3, l5, 0, false, flag4, flag, 0L, 19456, null);
+                        ch2.c((SilentHandler)helperObj);
                         if (a_2 == BanHandler.LiteBansModule_240) {
                             this.g().incrementAndGet();
 } else {
@@ -93,10 +91,10 @@ extends BansHandler {
                     }
                     if (string4 == null) continue;
                     PlatformPlugin plugin = this.LiteBansModule_240();
-                    ObjectUtilities.BaseCoreGenericHandler((Object)string3);
+                    ObjectUtilities.BaseCoreGenericHandler(string3);
                     new LiteBansModule_221(plugin, string3, string4, string8).run();
                 }
-                object2 = KotlinUnitHandler.BaseCoreGenericHandler;
+                contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
             }
             catch (Throwable throwable3) {
                 throwable2 = throwable3;
@@ -105,7 +103,7 @@ extends BansHandler {
             finally {
                 CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
             }
-            object = KotlinUnitHandler.BaseCoreGenericHandler;
+            targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
         }
         catch (Throwable throwable4) {
             throwable = throwable4;
@@ -115,7 +113,7 @@ extends BansHandler {
             CloseactionHandler.BaseCoreGenericHandler(autoCloseable, throwable);
 }
 
-    static /* synthetic */ void BaseCoreGenericHandler(AdvancedbanHandler ft2, Connection connection, String string, String string2, LiteBansModule_82 ch2, BanHandler a_2, boolean flag, int n, Object object) {
+    static /* synthetic */ void BaseCoreGenericHandler(AdvancedbanHandler ft2, Connection connection, String string, String string2, LiteBansModule_82 ch2, BanHandler a_2, boolean flag, int n, Object targetObj) {
         if ((n & 0x20) != 0) {
             flag = true;
         }

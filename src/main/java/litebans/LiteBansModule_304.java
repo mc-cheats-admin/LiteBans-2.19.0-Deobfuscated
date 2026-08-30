@@ -12,7 +12,7 @@ public class LiteBansModule_304 {
     }
 
     public static Component LiteBansModule_31(CharSequence charSequence) {
-        return GsonComponentSerializer.gson().deserialize((Object)charSequence.toString());
+        return GsonComponentSerializer.gson().deserialize(charSequence.toString());
     }
 
     public static @NotNull LegacyComponentSerializer BaseCoreGenericHandler() {

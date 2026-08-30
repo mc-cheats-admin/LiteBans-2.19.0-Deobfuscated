@@ -47,18 +47,18 @@ public final class NameHandler_3 {
         return n;
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof NameHandler_3)) {
+        if (!(targetObj instanceof NameHandler_3)) {
             return false;
         }
-        NameHandler_3 jp_02 = (NameHandler_3)object;
+        NameHandler_3 jp_02 = (NameHandler_3)targetObj;
         if (this.LiteBansModule_31 != jp_02.LiteBansModule_31) {
             return false;
         }
-        return ObjectUtilities.BaseCoreGenericHandler((Object)this.e, (Object)jp_02.e);
+        return ObjectUtilities.BaseCoreGenericHandler(this.e, jp_02.e);
     }
 
     static {

@@ -79,31 +79,30 @@ implements CharSequence {
 
     @Override
     public String toString() {
-        Object object;
         this.e();
         CharSequence charSequence = "";
         charSequence = this.LiteBansModule_31(this.c(this.plugin(charSequence)));
         if (this.LiteBansModule_31 != null) {
-            object = this.e ? "DESC" : "ASC";
+            targetObj = this.e ? "DESC" : "ASC";
             CharSequence charSequence2 = charSequence;
-            CharSequence charSequence3 = " ORDER BY " + this.LiteBansModule_31 + ' ' + (String)object;
+            CharSequence charSequence3 = " ORDER BY " + this.LiteBansModule_31 + ' ' + (String)targetObj;
             charSequence = "" + charSequence2 + charSequence3;
         }
-        object = this.LiteBansModule_240;
-        if (ObjectUtilities.BaseCoreGenericHandler(((Number)object).intValue(), n) > 0) {
-            object = charSequence;
+        targetObj = this.LiteBansModule_240;
+        if (ObjectUtilities.BaseCoreGenericHandler(targetObj.intValue(), n) > 0) {
+            targetObj = charSequence;
             CharSequence charSequence4 = " LIMIT ? OFFSET ?";
             flag = false;
-            charSequence = "" + object + charSequence4;
+            charSequence = "" + targetObj + charSequence4;
             this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, arg_0 -> DescHandler.LiteBansModule_31(this, arg_0));
         }
-        return ((Object)charSequence).toString();
+        return (charSequence).toString();
     }
 
     private final CharSequence c(CharSequence charSequence) {
         if (this.Utf8Handler_2) {
             this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, DescHandler::BaseCoreGenericHandler);
-            return this.plugin(charSequence, (CharSequence)i[5]);
+            return this.plugin(charSequence, i[5]);
         }
         return charSequence;
     }
@@ -116,7 +115,7 @@ implements CharSequence {
     }
 
     public void e() {
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.AsyncBackgroundTask_5, SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler())) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.AsyncBackgroundTask_5, SQLiteDriverHandler_3.LiteBansModule_401.BaseCoreGenericHandler())) {
             this.AsyncBackgroundTask_5 = SQLiteDriverHandler_3.LiteBansModule_401.c();
 }
 
@@ -133,8 +132,8 @@ implements CharSequence {
             }
             case 3: {
                 DescHandler hc2 = this;
-                Object object = hc2.c();
-                return this.plugin(object != null && (object = StringUtilities.LiteBansModule_31((String)object)) != null ? (Long)object : -1L, i[8], charSequence);
+                Object targetObj = hc2.c();
+                return this.plugin(targetObj != null && (targetObj = StringUtilities.LiteBansModule_31targetObj) != null ? (Long)targetObj : -1L, i[8], charSequence);
 }
         return this.plugin(charSequence, (CharSequence)('(' + this.LiteBansModule_194 + ')'));
     }
@@ -157,8 +156,8 @@ implements CharSequence {
         return this.plugin(a_2.BaseCoreGenericHandler(), charSequence);
     }
 
-    public static /* synthetic */ ResultSet BaseCoreGenericHandler(DescHandler hc2, BanHandler a_2, CharSequence charSequence, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ ResultSet BaseCoreGenericHandler(DescHandler hc2, BanHandler a_2, CharSequence charSequence, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException(i[12]);
         }
         if ((n & 2) != 0) {

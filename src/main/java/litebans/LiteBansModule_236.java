@@ -9,7 +9,7 @@ extends GeoIPLookupService_3 {
     }
 
     @Override
-    public String c(@NotNull Object object) {
+    public String c(@NotNull Object targetObj) {
         MessageHandler messageHandler = this;
         return ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService();
 }

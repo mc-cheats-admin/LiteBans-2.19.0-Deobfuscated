@@ -159,20 +159,20 @@ implements Runnable {
     @Override
     public void run() {
         AtomicBoolean atomicBoolean = this.Utf8Handler_2;
-        Object object = atomicBoolean;
-        if (((AtomicBoolean)object).compareAndSet(false, true)) {
+        Object targetObj = atomicBoolean;
+        if (targetObj.compareAndSet(false, true)) {
             try {
-                object = this.AsyncBackgroundTask_5();
+                targetObj = this.AsyncBackgroundTask_5();
                 flag2 = false;
                 try {
-                    LiteBansModule_82 ch2 = ((DatabaseMonitorService)object).LiteBansModule_194();
+                    LiteBansModule_82 ch2 = targetObj.LiteBansModule_194();
                     Closeable closeable = ch2;
                     Throwable throwable = null;
                     try {
-                        Object object2 = (LiteBansModule_82)closeable;
+                        Object contextObj = (LiteBansModule_82)closeable;
                         LiteBansModule_82 ch3 = ch2;
                         this.BroadcastService = this.plugin(ch3, this.AsyncBackgroundTask_5, this.BroadcastService);
-                        object2 = KotlinUnitHandler.BaseCoreGenericHandler;
+                        contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
                     }
                     catch (Throwable throwable2) {
                         throwable = throwable2;
@@ -182,7 +182,7 @@ implements Runnable {
                         BlockHandler.BaseCoreGenericHandler(closeable, throwable);
 }
                 catch (SQLException sQLException) {
-                    if (!((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) {
+                    if (!targetObj.LiteBansModule_31(sQLException)) {
                         throw sQLException;
 }
             catch (SQLException sQLException) {
@@ -195,8 +195,8 @@ implements Runnable {
 }
 
     private final void AsyncBackgroundTask_5(LiteBansModule_82 ch2) {
-        long l3 = ((AtomicLong)this.LiteBansModule_401.LiteBansModule_194()).incrementAndGet();
-        long l5 = l3 - ((AtomicLong)this.LiteBansModule_401.c()).get();
+        long l3 = (this.LiteBansModule_401.LiteBansModule_194()).incrementAndGet();
+        long l5 = l3 - (this.LiteBansModule_401.c()).get();
         if (l5 > 1L) {
             this.LiteBansModule_31(ch2);
 }
@@ -221,39 +221,38 @@ implements Runnable {
         if (!this.AsyncBackgroundTask_5().AsyncBackgroundTask_21() || ch2.LiteBansModule_31()) {
             return;
         }
-        Object object = charSequence;
+        Object targetObj = charSequence;
         int n2 = 4092;
         char c = '\u0000';
-        String string = LiteBansModule_242.BaseCoreGenericHandler(object.toString(), n2);
-        object = this.AsyncBackgroundTask_5().LiteBansModule_401();
-        if (object == null || ((LiteBansModule_15)object).LiteBansModule_194() && n == -1) {
+        String string = LiteBansModule_242.BaseCoreGenericHandler(targetObj.toString(), n2);
+        targetObj = this.AsyncBackgroundTask_5().LiteBansModule_401();
+        if (targetObj == null || targetObj.LiteBansModule_194() && n == -1) {
             ServerSyncService u2 = this;
             c = 'LiteBansModule_433';
             ConfigService configService = u2.BaseCoreGenericHandler();
             if (configService.g()) {
                 ConfigService q_03 = configService;
-                q_03.BaseCoreGenericHandler((Object)("0x11 <" + c + "> " + object));
+                q_03.BaseCoreGenericHandler((Object)("0x11 <" + c + "> " + targetObj));
             }
             return;
         }
         try {
-            Object object2;
             boolean flag;
             char c10;
             int n3;
-            n2 = ((LiteBansModule_15)object).c();
+            n2 = targetObj.c();
             if (n != -1 && n != n2) {
                 n2 = n;
             } else {
-                ((AtomicLong)this.LiteBansModule_401.c()).incrementAndGet();
+                (this.LiteBansModule_401.c()).incrementAndGet();
             }
             c = (ij2.AsyncBackgroundTask_5() << 16 | n2) + 42;
-            Object object3 = BansHandler_2.c;
+            Object resultObj = BansHandler_2.c;
             CharSequence charSequence2 = "info,msg";
             LiteBansModule_82 ch3 = ch2;
-            Object object4 = charSequence2;
+            Object helperObj = charSequence2;
             char c11 = ',';
-            CharSequence charSequence3 = object4;
+            CharSequence charSequence3 = helperObj;
             for (n3 = 0; n3 < charSequence3.length(); ++n3) {
                 char c12 = c10 = charSequence3.charAt(n3);
                 flag = false;
@@ -261,7 +260,7 @@ implements Runnable {
                 ++n4;
             }
             int n5 = n4;
-            object4 = "?";
+            helperObj = "?";
             if (n5 > 0) {
                 StringBuilder stringBuilder = new StringBuilder(n5 * 2);
                 Iterable iterable = new LiteBansModule_166(0, n5);
@@ -271,31 +270,31 @@ implements Runnable {
                     c10 = '\u0000';
                     stringBuilder.append("?,");
                 }
-                object4 = StringUtilities.LiteBansModule_31(stringBuilder.toString(), 1);
+                helperObj = StringUtilities.LiteBansModule_31(stringBuilder.toString(), 1);
             }
-            BansHandler_2 kL2 = object3;
+            BansHandler_2 kL2 = resultObj;
             flag5 = false;
-            object3 = ch3.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e("INSERT INTO " + kL2 + '(' + charSequence2 + ")VALUES(" + object4 + ')'))).BaseCoreGenericHandler(c);
-            object4 = object2 = object3;
-            ((LiteBansModule_60)object3).BaseCoreGenericHandler(string);
-            LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)object2);
-            object3 = this;
+            resultObj = ch3.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e("INSERT INTO " + kL2 + '(' + charSequence2 + ")VALUES(" + helperObj + ')'))).BaseCoreGenericHandler(c);
+            helperObj = contextObj = resultObj;
+            this.BaseCoreGenericHandler(string);
+            LiteBansModule_184.AsyncBackgroundTask_5((LiteBansModule_60)contextObj);
+            resultObj = this;
             LiteBansModule_82 ch4 = ch2;
-            object4 = (AsyncBackgroundTask_20)ch4.e().BaseCoreGenericHandler(AsyncBackgroundTask_20.class);
+            helperObj = (AsyncBackgroundTask_20)ch4.e().BaseCoreGenericHandler(AsyncBackgroundTask_20.class);
             long l3 = System.currentTimeMillis();
             if (l3 - ch4.AsyncBackgroundTask_5().i() > 28800000L) {
                 ch4.AsyncBackgroundTask_5().LiteBansModule_31(l3);
                 charSequence3 = "1 minute";
-                if (ObjectUtilities.BaseCoreGenericHandler((Object)((ServerSyncService)object3).BaseCoreGenericHandler().LiteBansModule_194().ElementsHandler(), (Object)"pgsql")) {
+                if (ObjectUtilities.BaseCoreGenericHandler((Object)this.BaseCoreGenericHandler().LiteBansModule_194().ElementsHandler(), (Object)"pgsql")) {
                     charSequence3 = '\'' + (String)charSequence3 + '\'';
                 }
-                Object object5 = BansHandler_2.c;
+                Object tempObj = BansHandler_2.c;
                 n4 = 0;
-                object5 = SQLiteDriverHandler.e("DELETE FROM " + object5);
+                tempObj = SQLiteDriverHandler.e("DELETE FROM " + tempObj);
                 CharSequence charSequence4 = "time < (NOW() - INTERVAL " + (String)charSequence3 + ')';
                 LiteBansModule_82 ch5 = ch4;
                 c10 = '\u0000';
-                CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)object5), charSequence4};
+                CharSequence[] charSequenceArray = new CharSequence[]{SQLiteDriverHandler.AsyncBackgroundTask_5((String)tempObj), charSequence4};
                 flag = false;
                 CharSequence[] charSequenceArray2 = charSequenceArray;
                 int n6 = charSequenceArray2.length;
@@ -306,15 +305,15 @@ implements Runnable {
                     String string2 = "Failed ";
                     throw new IllegalArgumentException(string2.toString());
                 }
-                LiteBansModule_184.AsyncBackgroundTask_5(ch5.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)object5) + " WHERE " + charSequence4))));
-                object5 = object4;
-                ((AsyncBackgroundTask_20)object5).BaseCoreGenericHandler(ch4);
+                LiteBansModule_184.AsyncBackgroundTask_5(ch5.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e(SQLiteDriverHandler.LiteBansModule_31((String)tempObj) + " WHERE " + charSequence4))));
+                tempObj = helperObj;
+                ((AsyncBackgroundTask_20)tempObj).BaseCoreGenericHandler(ch4);
 }
         catch (SQLException sQLException) {
             this.AsyncBackgroundTask_5().BaseCoreGenericHandler(sQLException);
 }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(ServerSyncService u2, BroadcastHandler ij2, LiteBansModule_82 ch2, CharSequence charSequence, int n, int n2, Object object) {
+    public static /* synthetic */ void BaseCoreGenericHandler(ServerSyncService u2, BroadcastHandler ij2, LiteBansModule_82 ch2, CharSequence charSequence, int n, int n2, Object targetObj) {
         if ((n2 & 4) != 0) {
             charSequence = "";
         }
@@ -363,7 +362,7 @@ implements Runnable {
                         arg3 = this.plugin();
                         if (arg3.g()) {
                             arg5 = arg3;
-                            arg5.BaseCoreGenericHandler((Object)("[!!!] NF " + (Object)arg1));
+                            arg5.BaseCoreGenericHandler((Object)("[!!!] NF " + arg1));
                         }
                         return;
                     }
@@ -377,7 +376,7 @@ implements Runnable {
                     }
                     if (arg2.isEmpty()) break;
                     if (arg1.BaseCoreGenericHandler() || arg2.contains(v2)) break;
-                    if (((CharSequence)v3).length() == 0) break;
+                    if ((v3).length() == 0) break;
                     arg3 = v1.e().q();
                     for (Object arg7 : arg3) {
                         arg8 = (Object[])arg7;
@@ -467,7 +466,7 @@ implements Runnable {
                 case 4: {
                     v7 = this.LiteBansModule_31();
                     ObjectUtilities.BaseCoreGenericHandler(arg20);
-                    v7.BaseCoreGenericHandler(arg20, (CharSequence)GeoIPLookupService.BaseCoreGenericHandler(v1, (SilentHandler)arg3, arg20));
+                    v7.BaseCoreGenericHandler(arg20, GeoIPLookupService.BaseCoreGenericHandler(v1, (SilentHandler)arg3, arg20));
 }
 
     /*
@@ -482,8 +481,7 @@ implements Runnable {
             try {
                 arg2 = v1.AsyncBackgroundTask_5().LiteBansModule_401();
                 if (v1.LiteBansModule_31() || arg2 == null) {
-                    arg24 = this;
-                    arg25 = 'AsyncBackgroundTask_21';
+                                        arg25 = 'AsyncBackgroundTask_21';
                     arg26 = arg24.BaseCoreGenericHandler();
                     if (arg26.g()) {
                         arg27 = arg26;
@@ -522,7 +520,7 @@ implements Runnable {
                         if (arg30.g()) {
                             arg33 = arg30;
                             arg34 = "L+ " + arg23;
-                            arg33.BaseCoreGenericHandler((Object)arg34);
+                            arg33.BaseCoreGenericHandler(arg34);
 }
                 arg29 = LiteBansModule_184.AsyncBackgroundTask_5(v1.c((CharSequence)("SELECT * FROM " + BansHandler_2.c + " WHERE SQLiteDriverHandler_4>?")).BaseCoreGenericHandler(arg23));
                 while (arg29.next()) {
@@ -534,8 +532,7 @@ implements Runnable {
                         arg41 = v1.AsyncBackgroundTask_5().BaseCoreGenericHandler(v1, arg39, true);
                         arg23 = Math.max(arg23, arg37);
                         if (arg41 == null) {
-                            arg42 = this;
-                            arg43 = 108;
+                                                        arg43 = 108;
                             arg44 = arg42.BaseCoreGenericHandler();
                             if (!arg44.g()) continue;
                             arg45 = arg44;
@@ -549,8 +546,7 @@ implements Runnable {
                         arg42 = arg29.getString("msg");
                         arg46 = BroadcastHandler.LiteBansModule_401.BaseCoreGenericHandler((int)arg40);
                         if (arg46 == null) {
-                            arg47 = this;
-                            arg48 = 'c';
+                                                        arg48 = 'c';
                             arg49 = arg40;
                             arg50 = arg47.BaseCoreGenericHandler();
                             if (!arg50.g()) continue;
@@ -558,19 +554,19 @@ implements Runnable {
                             arg51.BaseCoreGenericHandler((Object)("0x11 <" + arg48 + "> " + arg49));
                             continue;
                         }
-                        ((AtomicLong)this.LiteBansModule_401.BaseCoreGenericHandler()).incrementAndGet();
+                        (this.LiteBansModule_401.BaseCoreGenericHandler()).incrementAndGet();
                         arg52 = this.plugin();
                         if (arg52.g()) {
                             arg33 = arg52;
                             arg34 = "SQLiteDriverHandler_4: " + arg37 + ", type: " + arg40 + ", server: " + LiteBansModule_72.c(arg39) + ", message: \"" + (String)arg42 + '\"';
-                            arg33.BaseCoreGenericHandler((Object)arg34);
+                            arg33.BaseCoreGenericHandler(arg34);
                         }
                         arg52 = arg42;
-                        if (StringUtilities.BaseCoreGenericHandler((CharSequence)arg52, (CharSequence)"server", false, 2, null) || StringUtilities.BaseCoreGenericHandler((CharSequence)(arg52 = arg42), (CharSequence)"Server", false, 2, null)) {
+                        if (StringUtilities.BaseCoreGenericHandler(arg52, (CharSequence)"server", false, 2, null) || StringUtilities.BaseCoreGenericHandler((CharSequence)(arg52 = arg42), (CharSequence)"Server", false, 2, null)) {
                             arg53 = MessageKey.BaseCoreGenericHandler(arg41.e(), false);
                             arg52 = arg53;
                             arg53 = arg42;
-                            arg42 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)arg53, (CharSequence)"server", arg52), (CharSequence)"playerServer", arg52);
+                            arg42 = GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(arg53, (CharSequence)"server", arg52), (CharSequence)"playerServer", arg52);
                         }
                         arg52 = v2;
                         if (arg52 instanceof Collection && ((Collection)arg52).isEmpty()) {
@@ -581,11 +577,10 @@ implements Runnable {
                                 break;
 }
                     if (v0) {
-                        arg52 = this;
-                        v1 = arg52.BaseCoreGenericHandler();
+                                                v1 = arg52.BaseCoreGenericHandler();
                         arg56 = AbstractCommand.AsyncBackgroundTask_5;
                         arg57 = "0x11 <PluginHookService> " + arg40;
-                        if (ObjectUtilities.BaseCoreGenericHandler((Object)arg57, (Object)"sort")) {
+                        if (ObjectUtilities.BaseCoreGenericHandler(arg57, (Object)"sort")) {
                             arg58 = new String[]{"00"};
                             v2 = arg58;
                         } else {
@@ -626,7 +621,7 @@ implements Runnable {
                             arg65 = arg64  .length;
                             for (arg66 = 0; arg66 < arg65; arg66 += 1) {
                                 arg67 = arg68 = arg64  [arg66];
-                                if (!ObjectUtilities.BaseCoreGenericHandler((Object)arg67.name(), (Object)arg63)) {
+                                if (!ObjectUtilities.BaseCoreGenericHandler(arg67.name(), arg63)) {
                                     continue;
                                 }
                                 ** GOTO lbl177
@@ -639,7 +634,7 @@ implements Runnable {
                             }
                             arg64   = v7;
                             arg69 = this.LiteBansModule_31();
-                            litebans.BroadcastService.BaseCoreGenericHandler(arg69, v1, (CharSequence)arg52[0], arg46, (BanHandler)arg62, (String)arg64  , false, false, null, 112, null);
+                            litebans.BroadcastService.BaseCoreGenericHandler(arg69, v1, arg52[0], arg46, (BanHandler)arg62, (String)arg64  , false, false, null, 112, null);
                                                         v4 = KotlinUnitHandler.BaseCoreGenericHandler;
                             break;
                         }
@@ -647,7 +642,7 @@ implements Runnable {
                             arg70 = this.LiteBansModule_31();
                             v8 = arg42;
                             ObjectUtilities.c(v8, "element");
-                            litebans.BroadcastService.BaseCoreGenericHandler(arg70, v1, (CharSequence)v8, "console", null, null, arg60.AsyncBackgroundTask_21() != false && arg60.LiteBansModule_14() != false && arg60.B() != false, false, null, 108, null);
+                            litebans.BroadcastService.BaseCoreGenericHandler(arg70, v1, v8, "console", null, null, arg60.AsyncBackgroundTask_21() != false && arg60.LiteBansModule_14() != false && arg60.B() != false, false, null, 108, null);
                             v4 = KotlinUnitHandler.BaseCoreGenericHandler;
                             break;
                         }
@@ -658,7 +653,7 @@ implements Runnable {
                             arg71 = arg52[0];
                             arg72 = arg52[1];
                             arg73 = this.LiteBansModule_31();
-                            litebans.BroadcastService.BaseCoreGenericHandler(arg73, v1, (CharSequence)arg72, arg71, null, null, arg60.AsyncBackgroundTask_21(), false, null, 108, null);
+                            litebans.BroadcastService.BaseCoreGenericHandler(arg73, v1, arg72, arg71, null, null, arg60.AsyncBackgroundTask_21(), false, null, 108, null);
                             v4 = KotlinUnitHandler.BaseCoreGenericHandler;
                             break;
                         }
@@ -676,7 +671,7 @@ implements Runnable {
                             arg74 = this.LiteBansModule_31();
                             v11 = arg42;
                             ObjectUtilities.c(v11, "element");
-                            litebans.BroadcastService.BaseCoreGenericHandler(arg74, v1, (CharSequence)v11, arg46, null, null, arg60.ExceptionHandler() != false && arg60.LockdownCommandHandler() != false && arg60.aU() != false, false, null, 108, null);
+                            litebans.BroadcastService.BaseCoreGenericHandler(arg74, v1, v11, arg46, null, null, arg60.ExceptionHandler() != false && arg60.LockdownCommandHandler() != false && arg60.aU() != false, false, null, 108, null);
                             v4 = KotlinUnitHandler.BaseCoreGenericHandler;
                             break;
                         }
@@ -684,7 +679,7 @@ implements Runnable {
                             arg75 = this.LiteBansModule_31();
                             v12 = arg42;
                             ObjectUtilities.c(v12, "element");
-                            litebans.BroadcastService.BaseCoreGenericHandler(arg75, v1, (CharSequence)v12, arg46, BanHandler.GnuSparseMapHandler, null, arg60.aU(), false, null, 104, null);
+                            litebans.BroadcastService.BaseCoreGenericHandler(arg75, v1, v12, arg46, BanHandler.GnuSparseMapHandler, null, arg60.aU(), false, null, 104, null);
                             v4 = KotlinUnitHandler.BaseCoreGenericHandler;
                             break;
                         }
@@ -704,7 +699,7 @@ implements Runnable {
                             arg65 = (int)ObjectUtilities.BaseCoreGenericHandler(arg67, (Object)"1");
                             arg67 = ServerSyncService.GnuSparseMapHandler;
                             arg81 = (String)ArrayUtilities.BaseCoreGenericHandler((Object[])arg52, 5);
-                            arg82 = ObjectUtilities.BaseCoreGenericHandler((Object)arg81, (Object)"1");
+                            arg82 = ObjectUtilities.BaseCoreGenericHandler(arg81, (Object)"1");
                             v14 = (String)ArrayUtilities.BaseCoreGenericHandler((Object[])arg52, 6);
                             arg83 = v14 != null && (v14 = LiteBansModule_232.BaseCoreGenericHandler((String)v14)) != null ? (byte)v14.BaseCoreGenericHandler() : -1;
                             v15 = (String)ArrayUtilities.BaseCoreGenericHandler((Object[])arg52, 7);
@@ -763,7 +758,7 @@ implements Runnable {
                             break;
                         }
                         case 15: {
-                            ServerSyncService.BaseCoreGenericHandler(this, BroadcastHandler.CommandThrottleService, v1, (CharSequence)arg42, 0, 8, null);
+                            ServerSyncService.BaseCoreGenericHandler(this, BroadcastHandler.CommandThrottleService, v1, arg42, 0, 8, null);
                             v4 = KotlinUnitHandler.BaseCoreGenericHandler;
                             break;
                         }
@@ -832,7 +827,7 @@ implements Runnable {
                 while (arg107.hasNext()) {
                     arg113 = arg107.next();
                     arg108 = (LiteBansModule_354)arg113;
-                    arg114 = this.plugin(StringUtilities.BaseCoreGenericHandler((CharSequence)arg108.e()));
+                    arg114 = this.plugin(StringUtilities.BaseCoreGenericHandler(arg108.e()));
                     arg115 = (Map)arg105;
                     arg67 = arg114;
                     arg116 = arg115.get(arg67);
@@ -909,8 +904,7 @@ implements Runnable {
                         if (v25) {
                             arg91 = arg67[((Number)arg135.getKey()).intValue()];
                         }
-                        arg95 = this;
-                        ObjectUtilities.BaseCoreGenericHandler(arg135);
+                                                ObjectUtilities.BaseCoreGenericHandler(arg135);
                         arg96 = arg135;
                         v26 = arg91;
                         if (v26 == null) {
@@ -928,7 +922,7 @@ implements Runnable {
                                 arg144 = arg143.next();
                                 arg145 = (LiteBansModule_354)arg144;
                                 if (((String)arg145.e()).length() >= 20) ** GOTO lbl-1000
-                                arg146 = (CharSequence)arg145.e();
+                                arg146 = arg145.e();
                                 arg147 = SortHandler.P;
                                 for (arg148 = 0; arg148 < arg146.length(); ++arg148) {
                                     arg149 = arg150 = arg146.charAt(arg148);
@@ -973,9 +967,9 @@ implements Runnable {
                             arg142[arg150] = arg156.n()[arg148 - 44];
                         }
                         arg157 = arg143;
-                        arg141 = new byte[((Object)arg157).length];
+                        arg141 = new byte[(arg157).length];
                         arg106.BaseCoreGenericHandler(arg106.LiteBansModule_194());
-                        if (arg91 != null && ((Object)arg91).length == 0 == false) {
+                        if (arg91 != null && (arg91).length == 0 == false) {
                             arg106.LiteBansModule_31().BaseCoreGenericHandler((byte[])arg91);
                         } else {
                             arg142 = new byte[8192];
@@ -1010,11 +1004,11 @@ implements Runnable {
                         arg144 = arg95.BaseCoreGenericHandler();
                         if (arg144.g()) {
                             arg152 = arg144;
-                            v35 = new StringBuilder().append("Bucket ").append(((Number)arg96.getKey()).intValue()).append(" filled with (").append(((Object)arg142).length).append(" => ").append(((Object)arg143).length).append(") bytes\n").append(ArrayUtilities.BaseCoreGenericHandler((byte[])arg141, (CharSequence)",", null, null, 0, null, null, 62, null)).append('\n').append((String)arg140).append('\n');
+                            v35 = new StringBuilder().append("Bucket ").append(((Number)arg96.getKey()).intValue()).append(" filled with (").append((arg142).length).append(" => ").append((arg143).length).append(") bytes\n").append(ArrayUtilities.BaseCoreGenericHandler((byte[])arg141, (CharSequence)",", null, null, 0, null, null, 62, null)).append('\n').append((String)arg140).append('\n');
                             v36 = arg95.BaseCoreGenericHandler();
                             arg160 = AbstractCommand.AsyncBackgroundTask_5;
                             arg161 = ArrayUtilities.BaseCoreGenericHandler((byte[])arg143, null, null, null, 0, null, null, 63, null);
-                            if (ObjectUtilities.BaseCoreGenericHandler((Object)arg161, (Object)"sort")) {
+                            if (ObjectUtilities.BaseCoreGenericHandler(arg161, (Object)"sort")) {
                                 arg162 = new String[]{"00"};
                                 v37 = arg162;
                             } else {
@@ -1022,7 +1016,7 @@ implements Runnable {
                                 v37 = arg162;
                             }
                             arg163 = v37;
-                            arg152.BaseCoreGenericHandler((Object)v35.append((Object)LiteBansModule_72.c(new LiteBansModule_403(v36, Arrays.copyOf(arg163, arg163.length)).LiteBansModule_31())).toString());
+                            arg152.BaseCoreGenericHandler(v35.append(LiteBansModule_72.c(new LiteBansModule_403(v36, Arrays.copyOf(arg163, arg163.length)).LiteBansModule_31())).toString());
                         }
                         arg106.LiteBansModule_31().BaseCoreGenericHandler(LiteBansModule_389.BaseCoreGenericHandler());
                         ServerSyncService.c((ServerSyncService)arg95)[((Number)arg96.getKey()).intValue()] = (byte[])arg143;
@@ -1054,7 +1048,7 @@ implements Runnable {
                                 arg136 = StringUtilities.LiteBansModule_31(arg169.toString(), 1);
                             }
                             arg172 = arg96;
-                            arg95 = arg165.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e("INSERT INTO " + arg172 + '(' + arg164 + ")VALUES(" + (CharSequence)arg136 + ')')));
+                            arg95 = arg165.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.e("INSERT INTO " + arg172 + '(' + arg164 + ")VALUES(" + arg136 + ')')));
                             LiteBansModule_184.AsyncBackgroundTask_5(arg95.BaseCoreGenericHandler(((Number)arg135.getKey()).intValue()).BaseCoreGenericHandler((byte[])arg91));
                         }
                         catch (SQLException arg173) {
@@ -1062,7 +1056,7 @@ implements Runnable {
                             if (v38 == null) {
                                 v38 = "";
                             }
-                            if (StringUtilities.BaseCoreGenericHandler((CharSequence)(arg174 = v38), (CharSequence)"Duplicate entry", false, 2, null) || StringUtilities.BaseCoreGenericHandler((CharSequence)arg174, (CharSequence)"duplicate key", false, 2, null)) continue;
+                            if (StringUtilities.BaseCoreGenericHandler((CharSequence)(arg174 = v38), (CharSequence)"Duplicate entry", false, 2, null) || StringUtilities.BaseCoreGenericHandler(arg174, (CharSequence)"duplicate key", false, 2, null)) continue;
                             v1.AsyncBackgroundTask_5().BaseCoreGenericHandler(arg173);
 }
                     if (arg128) {
@@ -1077,7 +1071,7 @@ implements Runnable {
                 for (Object arg44 : arg41) {
                     arg105 = (byte[])arg44;
                     arg178 = arg179;
-                    arg180 = ((Object)arg105).length;
+                    arg180 = (arg105).length;
                     arg179 = arg178 + arg180;
                 }
                 arg41 = (Object[])this.PunishmentTableService;
@@ -1085,7 +1079,7 @@ implements Runnable {
                 for (Object arg44 : arg41) {
                     arg105 = (byte[])arg44;
                     arg182 = arg179;
-                    arg183 = ((Object)arg105).length;
+                    arg183 = (arg105).length;
                     arg179 = arg182 + arg183;
                 }
                 arg184 = arg179;
@@ -1129,8 +1123,8 @@ implements Runnable {
                 SortHandler br3 = br2;
                 Object[] objectArray2 = objectArray;
                 Collection collection = new ArrayList(objectArray.length);
-                for (Object object : objectArray2) {
-                    byte[] byArray = (byte[])object;
+                for (Object targetObj : objectArray2) {
+                    byte[] byArray = (byte[])targetObj;
                     Collection collection2 = collection;
                     byte by3 = by2;
                     by2 = (byte)(by3 + 1);
@@ -1151,29 +1145,26 @@ implements Runnable {
      * WARNING - Removed try catching itself - possible behaviour change.
      */
     public final LiteBansModule_56 BaseCoreGenericHandler(int n, @NotNull SortHandler br2) {
-        Object object;
-        Object object2;
         Object[] objectArray;
-        Object object3 = this.plugin();
-        if (((ConfigService)object3).g()) {
-            ConfigService configService = object3;
+        Object resultObj = this.plugin();
+        if (this.g()) {
+            ConfigService configService = resultObj;
             objectArray = (Object[])this.PunishmentTableService;
             StringBuilder stringBuilder = new StringBuilder().append("Read bucket ").append(n).append(" + ").append(br2.LiteBansModule_401().size()).append(" loaded, ").append(((Object[])this.PunishmentTableService).length).append(" stored\n").append(CollectionUtilities.BaseCoreGenericHandler(br2.LiteBansModule_401(), "|", null, null, 0, null, ServerSyncService::BaseCoreGenericHandler, 30, null)).append('\n');
             Object[] objectArray2 = objectArray;
-            object2 = new ArrayList(objectArray.length);
-            for (Object object4 : objectArray2) {
-                object = (byte[])object4;
-                Collection object5 = object2;
+            contextObj = new ArrayList(objectArray.length);
+            for (Object helperObj : objectArray2) {
+                targetObj = (byte[])helperObj;
+                Collection tempObj = contextObj;
                 boolean object14 = false;
-                object5.add(ArrayUtilities.BaseCoreGenericHandler((byte[])object, null, null, null, 0, null, null, 63, null));
+                tempObj.add(ArrayUtilities.BaseCoreGenericHandler((byte[])targetObj, null, null, null, 0, null, null, 63, null));
             }
-            configService.BaseCoreGenericHandler((Object)stringBuilder.append((List)object2).toString());
+            configService.BaseCoreGenericHandler(stringBuilder.append((List)contextObj).toString());
         }
-        object3 = br2;
-        synchronized (object3) {
+        resultObj = br2;
+        synchronized (resultObj) {
             int n2;
             boolean flag2;
-            Object object4;
             byte[] byArray;
 {
                     flag = false;
@@ -1187,10 +1178,10 @@ implements Runnable {
                 objectArray = this.plugin();
                 if (objectArray.g()) {
                     ConfigService q_03 = objectArray;
-                    q_03.BaseCoreGenericHandler((Object)ArrayUtilities.BaseCoreGenericHandler(byArray, null, null, null, 0, null, null, 63, null));
+                    q_03.BaseCoreGenericHandler(ArrayUtilities.BaseCoreGenericHandler(byArray, null, null, null, 0, null, null, 63, null));
                 }
                 objectArray = (Object[])br2.BaseCoreGenericHandler();
-                if (byArray != LiteBansModule_389.BaseCoreGenericHandler() && objectArray != null && !(((Object)objectArray[n]).length == 0)) break;
+                if (byArray != LiteBansModule_389.BaseCoreGenericHandler() && objectArray != null && !((objectArray[n]).length == 0)) break;
                 this.plugin().BaseCoreGenericHandler(10, (Object)"No cache");
                 LiteBansModule_56 bP3 = new LiteBansModule_56((byte)n, LiteBansModule_348.BaseCoreGenericHandler());
                 return bP3;
@@ -1200,47 +1191,45 @@ implements Runnable {
             br2.BaseCoreGenericHandler(byArray, byteArrayOutputStream);
             byte[] byArray2 = new byte[byteArrayOutputStream.size()];
             br2.BaseCoreGenericHandler(br2.LiteBansModule_194());
-            object2 = Arrays.copyOf(byteArrayOutputStream.toByteArray(), byteArrayOutputStream.size());
-            ObjectUtilities.BaseCoreGenericHandler(object2);
-            SortHandler.BaseCoreGenericHandler(br2, (byte[])object2, byArray2, false, false, 8, null);
+            contextObj = Arrays.copyOf(byteArrayOutputStream.toByteArray(), byteArrayOutputStream.size());
+            ObjectUtilities.BaseCoreGenericHandler(contextObj);
+            SortHandler.BaseCoreGenericHandler(br2, (byte[])contextObj, byArray2, false, false, 8, null);
             Object object7 = this.plugin();
             if (((ConfigService)object7).g()) {
                 ConfigService q_04 = object7;
-                q_04.BaseCoreGenericHandler((Object)ArrayUtilities.BaseCoreGenericHandler(byArray2, null, null, null, 0, null, null, 63, null));
+                q_04.BaseCoreGenericHandler(ArrayUtilities.BaseCoreGenericHandler(byArray2, null, null, null, 0, null, null, 63, null));
             }
             object7 = br2.BaseCoreGenericHandler(byArray2).toString();
             Object object8 = new char[]{','};
-            object8 = StringUtilities.BaseCoreGenericHandler((CharSequence)object7, object8, false, 0, 6, null);
-            object = object8;
-            String[] args = object.toArray(new String[0]);
+            object8 = StringUtilities.BaseCoreGenericHandler(object7, object8, false, 0, 6, null);
+            targetObj = object8;
+            String[] args = targetObj.toArray(new String[0]);
             object8 = new HashMap(args.length * 2, 0.5f);
             for (String string : args) {
-                if (!(((CharSequence)string).length() > 0)) continue;
+                if (!((string).length() > 0)) continue;
                 int[] nArray = this.plugin(string);
-                object4 = nArray;
+                helperObj = nArray;
                 flag2 = false;
-                int n4 = ((int[])object4).length;
+                int n4 = ((int[])helperObj).length;
                 for (n2 = 0; n2 < n4; ++n2) {
-                    Object object5;
-                    Object object6;
-                    Object object9 = object6 = object4[n2];
+                    Object object9 = object6 = helperObj[n2];
                     Map map = (Map)object8;
                     Integer n6 = (int)object9;
                     Object v2 = map.get(n6);
                     if (v2 == null) {
                         ArrayList arrayList = new ArrayList(64);
                         map.put(n6, arrayList);
-                        object5 = arrayList;
+                        tempObj = arrayList;
                     } else {
-                        object5 = v2;
+                        tempObj = v2;
                     }
-                    ((ArrayList)object5).add(string);
+                    ((ArrayList)tempObj).add(string);
 }
             Object object12 = (Map)object8;
             for (Map.Entry entry : object12.entrySet()) {
-                object4 = entry;
+                helperObj = entry;
                 flag2 = false;
-                ((ArrayList)object4.getValue()).trimToSize();
+                ((ArrayList)helperObj.getValue()).trimToSize();
             }
             object12 = br2;
             PlatformPlugin plugin = this.plugin;
@@ -1249,10 +1238,10 @@ implements Runnable {
                 String[] filteredArgs;
                 String[] parsedArgs;
                 Object object11 = object10;
-                object4 = AbstractCommand.AsyncBackgroundTask_5;
-                String string = ((Object)((CharSequence)object7)).toString();
+                helperObj = AbstractCommand.AsyncBackgroundTask_5;
+                String string = ((Object)(object7)).toString();
                 n2 = 0;
-                if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"sort")) {
+                if (ObjectUtilities.BaseCoreGenericHandler(string, (Object)"sort")) {
                     String[] cmdArgs = new String[]{"00"};
                     parsedArgs = cmdArgs;
                 } else {
@@ -1263,7 +1252,7 @@ implements Runnable {
                     throw new IllegalArgumentException();
 }
             object12 = new LiteBansModule_56((byte)n, new HashMap((Map)object8));
-            ((Collection)this.LiteBansModule_31).add(new SoftReference<Object>(object12));
+            (this.LiteBansModule_31).add(new SoftReference<Object>(object12));
             Object object13 = object12;
             return object13;
 }
@@ -1273,7 +1262,7 @@ implements Runnable {
     }
 
     public final int[] BaseCoreGenericHandler(@NotNull String string) {
-        if (((CharSequence)string).length() == 0) {
+        if ((string).length() == 0) {
             int[] nArray = new int[]{0};
             return nArray;
         }

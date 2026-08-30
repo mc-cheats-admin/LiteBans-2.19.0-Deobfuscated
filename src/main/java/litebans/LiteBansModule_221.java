@@ -26,7 +26,7 @@ extends MessageHandler {
         AsyncBackgroundTask_21 s2;
 {
             AsyncBackgroundTask_21 s3;
-            s2 = s3 = (AsyncBackgroundTask_21)this.LiteBansModule_240().BaseCoreGenericHandler(AsyncBackgroundTask_21.class);
+            s2 = s3 = this.LiteBansModule_240().BaseCoreGenericHandler(AsyncBackgroundTask_21.class);
             string3 = this.e;
             string2 = this.AsyncBackgroundTask_5;
             string = this.LiteBansModule_194;
@@ -36,7 +36,7 @@ extends MessageHandler {
             } else {
                 for (Object t2 : iterable) {
                     LiteBansModule_95 cp_02 = (LiteBansModule_95)t2;
-                    if (!(ObjectUtilities.BaseCoreGenericHandler((Object)cp_02.c(), (Object)string3) && ObjectUtilities.BaseCoreGenericHandler((Object)cp_02.g(), (Object)string2) && ObjectUtilities.BaseCoreGenericHandler((Object)cp_02.LiteBansModule_31(), (Object)string))) continue;
+                    if (!(ObjectUtilities.BaseCoreGenericHandler(cp_02.c(), string3) && ObjectUtilities.BaseCoreGenericHandler(cp_02.g(), string2) && ObjectUtilities.BaseCoreGenericHandler(cp_02.LiteBansModule_31(), string))) continue;
                     flag = true;
                     break;
                 }

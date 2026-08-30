@@ -25,12 +25,12 @@ extends BansHandler {
             AutoCloseable autoCloseable = connection.prepareStatement("SELECT * FROM bans ORDER BY time LIMIT " + this.GnuSparseMapHandler() + " OFFSET " + n);
             Throwable throwable = null;
             try {
-                Object object = (PreparedStatement)autoCloseable;
-                ObjectUtilities.BaseCoreGenericHandler(object);
-                if (this.plugin((PreparedStatement)object, ch2) == 0) {
+                Object targetObj = (PreparedStatement)autoCloseable;
+                ObjectUtilities.BaseCoreGenericHandler(targetObj);
+                if (this.plugin((PreparedStatement)targetObj, ch2) == 0) {
                     return;
                 }
-                object = KotlinUnitHandler.BaseCoreGenericHandler;
+                targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
             }
             catch (Throwable throwable2) {
                 throwable = throwable2;
@@ -51,18 +51,18 @@ extends BansHandler {
             AutoCloseable autoCloseable = connection.prepareStatement("SELECT * FROM ipbans");
             Throwable throwable = null;
             try {
-                Object object = (PreparedStatement)autoCloseable;
-                if (object.execute()) {
-                    ResultSet resultSet = object.getResultSet();
+                Object targetObj = (PreparedStatement)autoCloseable;
+                if (targetObj.execute()) {
+                    ResultSet resultSet = targetObj.getResultSet();
                     AutoCloseable autoCloseable2 = resultSet;
                     Throwable throwable2 = null;
                     try {
-                        Object object2 = (ResultSet)autoCloseable2;
+                        Object contextObj = (ResultSet)autoCloseable2;
                         while (resultSet.next()) {
                             ResultSet resultSet2 = resultSet;
                             BansHandler.BaseCoreGenericHandler(this, ch2, null, resultSet2.getString("reason"), resultSet2.getLong("time"), resultSet2.getLong("expires"), resultSet2.getString("banner"), null, null, resultSet2.getString("ip"), null, null, 1728, null);
                         }
-                        object2 = KotlinUnitHandler.BaseCoreGenericHandler;
+                        contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
                     }
                     catch (Throwable throwable3) {
                         throwable2 = throwable3;
@@ -71,7 +71,7 @@ extends BansHandler {
                     finally {
                         CloseactionHandler.BaseCoreGenericHandler(autoCloseable2, throwable2);
 }
-                object = KotlinUnitHandler.BaseCoreGenericHandler;
+                targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
             }
             catch (Throwable throwable4) {
                 throwable = throwable4;
@@ -90,7 +90,7 @@ extends BansHandler {
             AutoCloseable autoCloseable = resultSet;
             Throwable throwable = null;
             try {
-                Object object = (ResultSet)autoCloseable;
+                Object targetObj = (ResultSet)autoCloseable;
                 while (resultSet.next()) {
                     ResultSet resultSet2 = resultSet;
                     ++n;
@@ -102,7 +102,7 @@ extends BansHandler {
                         MessageHandler messageHandler = this;
                         ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(exception);
 }
-                object = KotlinUnitHandler.BaseCoreGenericHandler;
+                targetObj = KotlinUnitHandler.BaseCoreGenericHandler;
             }
             catch (Throwable throwable2) {
                 throwable = throwable2;

@@ -18,8 +18,8 @@ public final class AllHandler_3 {
         return (DatabaseMonitorService)ch2.e().BaseCoreGenericHandler(DatabaseMonitorService.class);
     }
 
-    public static /* synthetic */ LiteBansModule_297 BaseCoreGenericHandler(LiteBansModule_82 ch2, LiteBansModule_297 iA2, boolean flag, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ LiteBansModule_297 BaseCoreGenericHandler(LiteBansModule_82 ch2, LiteBansModule_297 iA2, boolean flag, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 2) != 0) {
@@ -28,8 +28,8 @@ public final class AllHandler_3 {
         return ch2.BaseCoreGenericHandler(iA2, flag);
     }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, String string2, String string3, boolean flag, boolean flag2, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, String string2, String string3, boolean flag, boolean flag2, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 8) != 0) {
@@ -41,8 +41,8 @@ public final class AllHandler_3 {
         ch2.BaseCoreGenericHandler(string, string2, string3, flag, flag2);
     }
 
-    public static /* synthetic */ ResultSet BaseCoreGenericHandler(LiteBansModule_82 ch2, UUID uUID, int n, int n2, Object object) {
-        if (object != null) {
+    public static /* synthetic */ ResultSet BaseCoreGenericHandler(LiteBansModule_82 ch2, UUID uUID, int n, int n2, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n2 & 2) != 0) {
@@ -51,8 +51,8 @@ public final class AllHandler_3 {
         return ch2.BaseCoreGenericHandler(uUID, n);
     }
 
-    public static /* synthetic */ boolean BaseCoreGenericHandler(LiteBansModule_82 ch2, UUID uUID, BanHandler a_2, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ boolean BaseCoreGenericHandler(LiteBansModule_82 ch2, UUID uUID, BanHandler a_2, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 2) != 0) {
@@ -61,8 +61,8 @@ public final class AllHandler_3 {
         return ch2.BaseCoreGenericHandler(uUID, a_2);
     }
 
-    public static /* synthetic */ List LiteBansModule_31(LiteBansModule_82 ch2, String string, int n, int n2, Object object) {
-        if (object != null) {
+    public static /* synthetic */ List LiteBansModule_31(LiteBansModule_82 ch2, String string, int n, int n2, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n2 & 2) != 0) {
@@ -71,8 +71,8 @@ public final class AllHandler_3 {
         return ch2.BaseCoreGenericHandler(string, n);
     }
 
-    public static /* synthetic */ SilentHandler BaseCoreGenericHandler(LiteBansModule_82 ch2, SilentHandler dZ2, boolean flag, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ SilentHandler BaseCoreGenericHandler(LiteBansModule_82 ch2, SilentHandler dZ2, boolean flag, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 2) != 0) {
@@ -81,8 +81,8 @@ public final class AllHandler_3 {
         return ch2.BaseCoreGenericHandler(dZ2, flag);
     }
 
-    public static /* synthetic */ SilentHandler BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, String string2, BanHandler a_2, boolean flag, boolean flag2, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ SilentHandler BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, String string2, BanHandler a_2, boolean flag, boolean flag2, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 2) != 0) {
@@ -100,8 +100,8 @@ public final class AllHandler_3 {
         return ch2.BaseCoreGenericHandler(string, string2, a_2, flag, flag2);
     }
 
-    public static /* synthetic */ SilentHandler BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, String string2, BanHandler a_2, String string3, boolean flag, boolean flag2, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ SilentHandler BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, String string2, BanHandler a_2, String string3, boolean flag, boolean flag2, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 2) != 0) {
@@ -119,8 +119,8 @@ public final class AllHandler_3 {
         return ch2.BaseCoreGenericHandler(string, string2, a_2, string3, flag, flag2);
     }
 
-    public static /* synthetic */ SilentHandler BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, BanHandler a_2, String string2, boolean flag, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ SilentHandler BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, BanHandler a_2, String string2, boolean flag, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 4) != 0) {
@@ -132,8 +132,8 @@ public final class AllHandler_3 {
         return ch2.BaseCoreGenericHandler(string, a_2, string2, flag);
     }
 
-    public static /* synthetic */ SilentHandler BaseCoreGenericHandler(LiteBansModule_82 ch2, long l3, BanHandler a_2, String string, boolean flag, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ SilentHandler BaseCoreGenericHandler(LiteBansModule_82 ch2, long l3, BanHandler a_2, String string, boolean flag, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 8) != 0) {
@@ -142,8 +142,8 @@ public final class AllHandler_3 {
         return ch2.BaseCoreGenericHandler(l3, a_2, string, flag);
     }
 
-    public static /* synthetic */ long BaseCoreGenericHandler(LiteBansModule_82 ch2, BansHandler_2 kL2, String string, boolean flag, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ long BaseCoreGenericHandler(LiteBansModule_82 ch2, BansHandler_2 kL2, String string, boolean flag, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 2) != 0) {
@@ -155,8 +155,8 @@ public final class AllHandler_3 {
         return ch2.BaseCoreGenericHandler(kL2, string, flag);
     }
 
-    public static /* synthetic */ SilentHandler BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, String string2, String string3, BanHandler a_2, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ SilentHandler BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, String string2, String string3, BanHandler a_2, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 8) != 0) {
@@ -165,8 +165,8 @@ public final class AllHandler_3 {
         return ch2.BaseCoreGenericHandler(string, string2, string3, a_2);
     }
 
-    public static /* synthetic */ List BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, int n, int n2, Object object) {
-        if (object != null) {
+    public static /* synthetic */ List BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, int n, int n2, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n2 & 2) != 0) {
@@ -175,8 +175,8 @@ public final class AllHandler_3 {
         return ch2.LiteBansModule_31(string, n);
     }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, String string2, CharSequence charSequence, SilentHandler dZ2, boolean flag, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, String string2, CharSequence charSequence, SilentHandler dZ2, boolean flag, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 0x10) != 0) {
@@ -185,8 +185,8 @@ public final class AllHandler_3 {
         ch2.BaseCoreGenericHandler(string, string2, charSequence, dZ2, flag);
     }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_82 ch2, SilentHandler dZ2, String string, String string2, CharSequence charSequence, boolean flag, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_82 ch2, SilentHandler dZ2, String string, String string2, CharSequence charSequence, boolean flag, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 2) != 0) {
@@ -204,8 +204,8 @@ public final class AllHandler_3 {
         ch2.BaseCoreGenericHandler(dZ2, string, string2, charSequence, flag);
     }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_82 ch2, boolean flag, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ void BaseCoreGenericHandler(LiteBansModule_82 ch2, boolean flag, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 1) != 0) {
@@ -236,10 +236,10 @@ public final class AllHandler_3 {
     }
 
     public static List BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull CommandSenderWrapper sender, @NotNull BanHandler a_2, boolean flag, int n) {
-        CommandSenderWrapper jv_03 = sender;
-        String string = jv_03.BaseCoreGenericHandler();
-        String string2 = jv_03.LiteBansModule_31();
-        String string3 = jv_03.LiteBansModule_240();
+        CommandSenderWrapper senderWrapper = sender;
+        String string = senderWrapper.BaseCoreGenericHandler();
+        String string2 = senderWrapper.LiteBansModule_31();
+        String string3 = senderWrapper.LiteBansModule_240();
         if (string3 == null) {
             string3 = ch2.AsyncBackgroundTask_5().ServerSyncService();
         }
@@ -288,10 +288,10 @@ public final class AllHandler_3 {
                 string4 = (String)jT2.LiteBansModule_31();
                 string5 = (String)jT2.e();
 }
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)string4, (Object)"null")) {
+        if (ObjectUtilities.BaseCoreGenericHandler(string4, (Object)"null")) {
             string4 = "";
         }
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)string5, (Object)"null")) {
+        if (ObjectUtilities.BaseCoreGenericHandler(string5, (Object)"null")) {
             string5 = "";
         }
         if (flag) {
@@ -299,11 +299,11 @@ public final class AllHandler_3 {
             string5 = MessageKey.BaseCoreGenericHandler(string5, true);
             string3 = string3 + BlackHandler.PunishmentTableService;
         }
-        return GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler(charSequence2, (CharSequence)"executorUUID", (Object)string2), (CharSequence)"executorPrefix", (Object)string4), (CharSequence)"executorSuffix", (Object)string5), (CharSequence)"executor", (Object)string3);
+        return GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(charSequence2, (CharSequence)"executorUUID", string2), (CharSequence)"executorPrefix", string4), (CharSequence)"executorSuffix", string5), (CharSequence)"executor", string3);
     }
 
-    public static /* synthetic */ CharSequence BaseCoreGenericHandler(LiteBansModule_82 ch2, CharSequence charSequence, String string, String string2, boolean flag, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ CharSequence BaseCoreGenericHandler(LiteBansModule_82 ch2, CharSequence charSequence, String string, String string2, boolean flag, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 4) != 0) {
@@ -323,8 +323,8 @@ public final class AllHandler_3 {
         return GeoIPLookupService.BaseCoreGenericHandler(ch2, iA2, charSequence, flag);
     }
 
-    public static /* synthetic */ CharSequence BaseCoreGenericHandler(LiteBansModule_82 ch2, CharSequence charSequence, LiteBansModule_297 iA2, boolean flag, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ CharSequence BaseCoreGenericHandler(LiteBansModule_82 ch2, CharSequence charSequence, LiteBansModule_297 iA2, boolean flag, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 2) != 0) {
@@ -355,8 +355,8 @@ public final class AllHandler_3 {
         return GeoIPLookupService.BaseCoreGenericHandler(ch2, dZ2, charSequence, 0L, flag, 4, null);
     }
 
-    public static /* synthetic */ CharSequence BaseCoreGenericHandler(LiteBansModule_82 ch2, CharSequence charSequence, SilentHandler dZ2, boolean flag, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ CharSequence BaseCoreGenericHandler(LiteBansModule_82 ch2, CharSequence charSequence, SilentHandler dZ2, boolean flag, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 2) != 0) {
@@ -369,8 +369,8 @@ public final class AllHandler_3 {
         return ch2.BaseCoreGenericHandler(ch2.BaseCoreGenericHandler(charSequence, dZ2, false), iA2, flag);
     }
 
-    public static /* synthetic */ CharSequence BaseCoreGenericHandler(LiteBansModule_82 ch2, CharSequence charSequence, SilentHandler dZ2, LiteBansModule_297 iA2, boolean flag, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ CharSequence BaseCoreGenericHandler(LiteBansModule_82 ch2, CharSequence charSequence, SilentHandler dZ2, LiteBansModule_297 iA2, boolean flag, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 4) != 0) {

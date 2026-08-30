@@ -29,42 +29,42 @@ public final class GeoIPLookupService_2 {
             File[] fileArray = file.listFiles(GeoIPLookupService_2::BaseCoreGenericHandler);
             ObjectUtilities.BaseCoreGenericHandler(fileArray);
             File[] fileArray2 = fileArray;
-            Object object = fileArray2;
-            Object object2 = object;
-            Collection collection = new ArrayList(((File[])object).length);
-            int n = ((File[])object2).length;
+            Object targetObj = fileArray2;
+            Object contextObj = targetObj;
+            Collection collection = new ArrayList(((File[])targetObj).length);
+            int n = ((File[])contextObj).length;
             for (int i = 0; i < n; ++i) {
                 File file3;
-                File file4 = file3 = object2[i];
+                File file4 = file3 = contextObj[i];
                 Collection collection2 = collection;
                 collection2.add(file4.toURI().toURL());
             }
-            object = (List)collection;
+            targetObj = (List)collection;
             flag = false;
-            object2 = object;
-            URL[] uRLArray = object2.toArray(new URL[0]);
-            Object object3 = new Class[]{File.class};
-            Constructor<?> constructor = new URLClassLoader(uRLArray, Driver.class.getClassLoader()).loadClass("com.maxmind.geoip2.DatabaseReader$Builder").getConstructor((Class<?>)object3);
-            object3 = new Object[]{file2};
-            object = constructor.newInstance((Object[])object3);
-            Object object4 = this.AsyncBackgroundTask_5 = object.getClass().getMethod("build", new Class[0]).invoke(object, new Object[0]);
-            ObjectUtilities.BaseCoreGenericHandler(object4);
-            object3 = new Class[]{InetAddress.class};
-            this.plugin = object4.getClass().getMethod("country", (Class<?>)object3);
+            contextObj = targetObj;
+            URL[] uRLArray = contextObj.toArray(new URL[0]);
+            Object resultObj = new Class[]{File.class};
+            Constructor<?> constructor = new URLClassLoader(uRLArray, Driver.class.getClassLoader()).loadClass("com.maxmind.geoip2.DatabaseReader$Builder").getConstructor((Class<?>)resultObj);
+            resultObj = new Object[]{file2};
+            targetObj = constructor.newInstance((Object[])resultObj);
+            Object helperObj = this.AsyncBackgroundTask_5 = targetObj.getClass().getMethod("build", new Class[0]).invoke(targetObj, new Object[0]);
+            ObjectUtilities.BaseCoreGenericHandler(helperObj);
+            resultObj = new Class[]{InetAddress.class};
+            this.plugin = helperObj.getClass().getMethod("country", (Class<?>)resultObj);
             Method method2 = this.plugin;
             if (method2 == null) {
                 ObjectUtilities.e("");
                 method2 = null;
             }
-            if ((method = (this.g = ((Class)(object3 = method2.getReturnType())).getMethod("getCountry", new Class[0]))) == null) {
+            if ((method = (this.g = ((Class)(resultObj = method2.getReturnType())).getMethod("getCountry", new Class[0]))) == null) {
                 ObjectUtilities.e("");
                 method = null;
             }
             this.LiteBansModule_31 = method.getReturnType().getMethod("getName", new Class[0]);
             this.e.getLogger().info("GeoIP support ");
-            object2 = this.LiteBansModule_31("8.8.8.8");
-            if (!ObjectUtilities.BaseCoreGenericHandler(object2, (Object)"United States")) {
-                this.e.getLogger().warning("GeoIP database test failed. (" + (String)object2 + ')');
+            contextObj = this.LiteBansModule_31("8.8.8.8");
+            if (!ObjectUtilities.BaseCoreGenericHandler(contextObj, (Object)"United States")) {
+                this.e.getLogger().warning("GeoIP database test failed. (" + (String)contextObj + ')');
 }
         catch (Throwable throwable) {
             throwable.printStackTrace();
@@ -74,13 +74,12 @@ public final class GeoIPLookupService_2 {
         if (string == null) {
             return "geoip.unavailable";
         }
-        Object object = this.AsyncBackgroundTask_5;
-        if (object == null) {
+        Object targetObj = this.AsyncBackgroundTask_5;
+        if (targetObj == null) {
             return "geoip.unavailable";
         }
-        Object object2 = object;
+        Object contextObj = targetObj;
         try {
-            Object object3;
             String string2;
             InetAddress inetAddress = InetAddress.getByName(string);
             Method method = this.plugin;
@@ -88,26 +87,26 @@ public final class GeoIPLookupService_2 {
                 ObjectUtilities.e("");
                 method = null;
             }
-            Object object4 = new Object[]{inetAddress};
-            Object object5 = method.invoke(object2, object4);
+            Object helperObj = new Object[]{inetAddress};
+            Object tempObj = method.invoke(contextObj, helperObj);
             Method method2 = this.g;
             if (method2 == null) {
                 ObjectUtilities.e("");
                 method2 = null;
             }
-            object4 = method2.invoke(object5, new Object[0]);
+            helperObj = method2.invoke(tempObj, new Object[0]);
             Method method3 = this.LiteBansModule_31;
             if (method3 == null) {
                 ObjectUtilities.e("");
                 method3 = null;
             }
-            if ((string2 = (object3 = method3.invoke(object4, new Object[0])) instanceof String ? (String)object3 : null) == null) {
+            if ((string2 = (resultObj = method3.invoke(helperObj, new Object[0])) instanceof String ? (String)resultObj : null) == null) {
                 string2 = "geoip.error";
             }
             return string2;
         }
         catch (Exception exception) {
-            ConfigService configService = (ConfigService)this.e.BaseCoreGenericHandler(ConfigService.class);
+            ConfigService configService = this.e.BaseCoreGenericHandler(ConfigService.class);
             ConfigService.BaseCoreGenericHandler(configService, exception, 0, 2, null);
             return "geoip.error";
 }
@@ -116,7 +115,7 @@ public final class GeoIPLookupService_2 {
         if (string == null) {
             return null;
         }
-        ConfigService configService = (ConfigService)this.e.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = this.e.BaseCoreGenericHandler(ConfigService.class);
         DiscordWebhookClient eG2 = configService.LiteBansModule_194();
         if (eG2.W()) {
             boolean flag2;
@@ -167,7 +166,7 @@ public final class GeoIPLookupService_2 {
     }
 
     private static final boolean BaseCoreGenericHandler(File file, String string) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)string);
+        ObjectUtilities.BaseCoreGenericHandler(string);
         return StringUtilities.BaseCoreGenericHandler(string, ".jar", false, 2, null);
     }
 

@@ -16,9 +16,9 @@ extends Representer {
         map.put(clazz, represent);
     }
 
-    private static final Node BaseCoreGenericHandler(LiteBansModule_185 et_02, Object object) {
-        ObjectUtilities.LiteBansModule_31(object, "");
-        return et_02.represent(((NullHandler_4)object).AsyncBackgroundTask_5);
+    private static final Node BaseCoreGenericHandler(LiteBansModule_185 et_02, Object targetObj) {
+        ObjectUtilities.LiteBansModule_31(targetObj, "");
+        return et_02.represent(targetObj.AsyncBackgroundTask_5);
     }
 
     private static final void BaseCoreGenericHandler() {

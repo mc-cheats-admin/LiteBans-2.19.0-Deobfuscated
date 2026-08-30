@@ -6,8 +6,8 @@ implements LiteBansModule_161,
 Serializable {
     private final Object BaseCoreGenericHandler;
 
-    public LiteBansModule_103(Object object) {
-        this.plugin = object;
+    public LiteBansModule_103(Object targetObj) {
+        this.plugin = targetObj;
     }
 
     @Override

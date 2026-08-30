@@ -23,7 +23,7 @@ extends CommandManager {
 }
 
     public void LiteBansModule_31(LiteCommand command) {
-        Plugin plugin = (Plugin)this.plugin;
+        Plugin plugin = this.plugin;
         plugin.getProxy().getPluginManager().registerCommand(plugin, (Command)((LiteBansModule_262)command));
 }
 

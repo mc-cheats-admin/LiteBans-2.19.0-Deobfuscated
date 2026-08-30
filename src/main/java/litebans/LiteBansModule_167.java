@@ -13,11 +13,11 @@ extends LiteBansModule_160 {
     }
 
     @Override
-    public boolean equals(Object object) {
+    public boolean equals(Object targetObj) {
         if (this.LiteBansModule_31 instanceof LiteBansModule_432[]) {
-            return object instanceof LiteBansModule_167 && ((LiteBansModule_167)object).LiteBansModule_31 instanceof LiteBansModule_432[] && Arrays.equals((LiteBansModule_432[])this.LiteBansModule_31, (LiteBansModule_432[])((LiteBansModule_167)object).LiteBansModule_31);
+            return targetObj instanceof LiteBansModule_167 && targetObj.LiteBansModule_31 instanceof LiteBansModule_432[] && Arrays.equals((LiteBansModule_432[])this.LiteBansModule_31, (LiteBansModule_432[])targetObj.LiteBansModule_31);
         }
-        return this.LiteBansModule_31.equals(object);
+        return this.LiteBansModule_31.equals(targetObj);
     }
 
     @Override

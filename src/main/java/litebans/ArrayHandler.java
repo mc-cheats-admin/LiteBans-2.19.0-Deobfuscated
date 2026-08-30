@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 
 public final class ArrayHandler {
     public static final Iterator BaseCoreGenericHandler(@NotNull Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "array");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "array");
         return new ArrayHandler_2(objectArray);
     }
 

@@ -55,7 +55,7 @@ public final class LiteBansModule_65 {
     }
 
     public final LiteBansModule_66 BaseCoreGenericHandler(int n) {
-        return this.GnuSparseMapHandler.isEmpty() ? this.plugin : (n >= this.GnuSparseMapHandler.size() ? (LiteBansModule_66)CollectionUtilities.BaseCoreGenericHandler(this.GnuSparseMapHandler) : (n < 0 ? (LiteBansModule_66)CollectionUtilities.LiteBansModule_31(this.GnuSparseMapHandler) : (LiteBansModule_66)this.GnuSparseMapHandler.get(n)));
+        return this.GnuSparseMapHandler.isEmpty() ? this.plugin : (n >= this.GnuSparseMapHandler.size() ? (LiteBansModule_66)CollectionUtilities.BaseCoreGenericHandler(this.GnuSparseMapHandler) : (n < 0 ? (LiteBansModule_66)CollectionUtilities.LiteBansModule_31(this.GnuSparseMapHandler) : this.GnuSparseMapHandler.get(n)));
     }
 
     public String toString() {
@@ -68,35 +68,35 @@ public final class LiteBansModule_65 {
         n = n * 31 + this.g.hashCode();
         n = n * 31 + this.plugin.hashCode();
         n = n * 31 + Boolean.hashCode(this.LiteBansModule_240);
-        n = n * 31 + ((Object)this.GnuSparseMapHandler).hashCode();
+        n = n * 31 + (this.GnuSparseMapHandler).hashCode();
         n = n * 31 + Long.hashCode(this.i);
         return n;
     }
 
-    public boolean equals(@Nullable Object object) {
-        if (this == object) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (this == targetObj) {
             return true;
         }
-        if (!(object instanceof LiteBansModule_65)) {
+        if (!(targetObj instanceof LiteBansModule_65)) {
             return false;
         }
-        LiteBansModule_65 c12 = (LiteBansModule_65)object;
+        LiteBansModule_65 c12 = (LiteBansModule_65)targetObj;
         if (this.AsyncBackgroundTask_5 != c12.AsyncBackgroundTask_5) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.e, (Object)c12.e)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.e, c12.e)) {
             return false;
         }
         if (this.g != c12.g) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.plugin, c12.BaseCoreGenericHandler)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.plugin, c12.BaseCoreGenericHandler)) {
             return false;
         }
         if (this.LiteBansModule_240 != c12.LiteBansModule_240) {
             return false;
         }
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)this.GnuSparseMapHandler, c12.GnuSparseMapHandler)) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(this.GnuSparseMapHandler, c12.GnuSparseMapHandler)) {
             return false;
         }
         return this.i == c12.i;

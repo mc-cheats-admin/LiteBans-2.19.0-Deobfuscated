@@ -224,17 +224,17 @@ extends PluginModule {
         return this.LiteBansModule_31 >= n;
     }
 
-    public final void BaseCoreGenericHandler(int n, @Nullable Object object) {
+    public final void BaseCoreGenericHandler(int n, @Nullable Object targetObj) {
         if (this.plugin(n)) {
-            this.plugin(object);
+            this.plugin(targetObj);
 }
 
-    public final void BaseCoreGenericHandler(@Nullable Object object) {
-        if (object instanceof Throwable) {
-            ((Throwable)object).printStackTrace();
+    public final void BaseCoreGenericHandler(@Nullable Object targetObj) {
+        if (targetObj instanceof Throwable) {
+            targetObj.printStackTrace();
         } else {
             PluginModule module = this;
-            String string = String.valueOf(object);
+            String string = String.valueOf(targetObj);
             module.BaseCoreGenericHandler.getLogger().info(string);
 }
 
@@ -253,47 +253,47 @@ extends PluginModule {
         return -1;
     }
 
-    public final void BaseCoreGenericHandler(@Nullable Object object, int n) {
+    public final void BaseCoreGenericHandler(@Nullable Object targetObj, int n) {
         if (this.g()) {
-            if (object instanceof Throwable) {
+            if (targetObj instanceof Throwable) {
                 PluginModule module = this;
                 String string = "0xAAA";
                 module.BaseCoreGenericHandler.getLogger().warning(string);
-                ((Throwable)object).printStackTrace();
+                targetObj.printStackTrace();
             } else {
                 PluginModule n_03 = this;
-                String string = "0xAAA " + object;
+                String string = "0xAAA " + targetObj;
                 n_03.BaseCoreGenericHandler.getLogger().warning(string);
                 Thread.dumpStack();
-} else if (n == 1 && object instanceof Throwable) {
-            Object object2 = object.getClass().getName();
-            for (int i = 0; i < object2.length(); ++i) {
+} else if (n == 1 && targetObj instanceof Throwable) {
+            Object contextObj = targetObj.getClass().getName();
+            for (int i = 0; i < contextObj.length(); ++i) {
                 char c;
-                char c10 = c = object2.charAt(i);
+                char c10 = c = contextObj.charAt(i);
                 int n3 = n2;
                 int n4 = c10 ^ 0x17;
                 n2 = n3 + n4;
             }
             int n5 = n2;
             if (n5 == 3140) {
-                object2 = new LiteBansModule_324(0L, 1, null);
-                this.LiteBansModule_433 = (byte)(((LiteBansModule_324)object2).BaseCoreGenericHandler(2) + 1);
-                this.LiteBansModule_401 = (long)((LiteBansModule_324)object2).BaseCoreGenericHandler(23) + 1L;
+                contextObj = new LiteBansModule_324(0L, 1, null);
+                this.LiteBansModule_433 = (byte)(((LiteBansModule_324)contextObj).BaseCoreGenericHandler(2) + 1);
+                this.LiteBansModule_401 = (long)((LiteBansModule_324)contextObj).BaseCoreGenericHandler(23) + 1L;
 }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(ConfigService configService, Object object, int n, int n2, Object object2) {
+    public static /* synthetic */ void BaseCoreGenericHandler(ConfigService configService, Object targetObj, int n, int n2, Object contextObj) {
         if ((n2 & 2) != 0) {
             n = 0;
         }
-        configService.BaseCoreGenericHandler(object, n);
+        configService.BaseCoreGenericHandler(targetObj, n);
     }
 
     public final String LiteBansModule_31(@Nullable String string) {
-        Object object = this.B;
-        if (object == null || (object = ((GeoIPLookupService_2)object).LiteBansModule_31(string)) == null) {
-            object = "geoip.unavailable";
+        Object targetObj = this.B;
+        if (targetObj == null || (targetObj = targetObj.LiteBansModule_31(string)) == null) {
+            targetObj = "geoip.unavailable";
         }
-        return object;
+        return targetObj;
     }
 
     @Override
@@ -304,25 +304,24 @@ extends PluginModule {
         ConfigService configService = this;
         if (configService.LiteBansModule_194().D()) {
             try {
-                Object object;
                 BroadcastService o2 = (BroadcastService)configService.BaseCoreGenericHandler.BaseCoreGenericHandler(BroadcastService.class);
-                Object object2 = configService.BaseCoreGenericHandler.getDataFolder();
+                Object contextObj = configService.BaseCoreGenericHandler.getDataFolder();
                 String string = "lockdown.yml";
-                File file = new File((File)object2, string);
+                File file = new File((File)contextObj, string);
                 if (!file.exists() || YamlConfigProvider.AsyncBackgroundTask_5() == null) {
-                    object2 = configService.BaseCoreGenericHandler.getDataFolder();
+                    contextObj = configService.BaseCoreGenericHandler.getDataFolder();
                     string = "lockdown.json";
                     flag2 = false;
-                    file = new File((File)object2, string);
+                    file = new File((File)contextObj, string);
                 }
                 LitebansLockdownBypassHandler gG2 = o2.e();
                 if ((gG2 != null ? gG2.c() : null) == null) {
-                    object = LiteBansModule_112.LiteBansModule_31(file);
+                    targetObj = LiteBansModule_112.LiteBansModule_31(file);
                 } else {
-                    object2 = configService.BaseCoreGenericHandler.BaseCoreGenericHandler(file).g();
+                    contextObj = configService.BaseCoreGenericHandler.BaseCoreGenericHandler(file).g();
                     LitebansLockdownBypassHandler gG3 = o2.e();
                     LitebansLockdownBypassHandler gG4 = o2.e();
-                    object = object2.LiteBansModule_31("reason", gG3 != null ? gG3.c() : null).LiteBansModule_31("scope", gG4 != null ? gG4.BaseCoreGenericHandler() : null).LiteBansModule_240();
+                    targetObj = contextObj.LiteBansModule_31("reason", gG3 != null ? gG3.c() : null).LiteBansModule_31("scope", gG4 != null ? gG4.BaseCoreGenericHandler() : null).LiteBansModule_240();
 }
             catch (Exception exception) {
                 exception.printStackTrace();
@@ -370,31 +369,30 @@ extends PluginModule {
             this.plugin(exception);
         }
         this.plugin.BroadcastService();
-        Object object = this;
-        Logger logger = ((ConfigService)object).BaseCoreGenericHandler.getLogger();
-        Throwable throwable = ((ConfigService)object).BaseCoreGenericHandler.LiteBansModule_240().LiteBansModule_31();
+                Logger logger = targetObj.BaseCoreGenericHandler.getLogger();
+        Throwable throwable = targetObj.BaseCoreGenericHandler.LiteBansModule_240().LiteBansModule_31();
         if (throwable != null) {
             Throwable throwable2 = throwable;
-            ((ConfigService)object).BaseCoreGenericHandler("config", throwable2);
-            if (((ConfigService)object).BaseCoreGenericHandler.LiteBansModule_240().c().exists()) {
+            targetObj.BaseCoreGenericHandler("config", throwable2);
+            if (targetObj.BaseCoreGenericHandler.LiteBansModule_240().c().exists()) {
                 logger.severe("[!!] Your configuration might be invalid. It can be verified with https://yaml-online-parser.appspot.com/");
             } else {
-                logger.severe("[!!] Configuration does not exist! Ensure that read/write permissions are correct. (\"" + ((ConfigService)object).BaseCoreGenericHandler.LiteBansModule_240().c().getAbsolutePath() + "\")");
+                logger.severe("[!!] Configuration does not exist! Ensure that read/write permissions are correct. (\"" + targetObj.BaseCoreGenericHandler.LiteBansModule_240().c().getAbsolutePath() + "\")");
             }
-            if (((ConfigService)object).BaseCoreGenericHandler(2)) {
-                ((ConfigService)object).BaseCoreGenericHandler(throwable2);
+            if (targetObj.BaseCoreGenericHandler(2)) {
+                targetObj.BaseCoreGenericHandler(throwable2);
 }
-        object = new DiscordWebhookClient(this.plugin, null, 2, null);
-        this.plugin((DiscordWebhookClient)object);
+        targetObj = new DiscordWebhookClient(this.plugin, null, 2, null);
+        this.plugintargetObj;
     }
 
     private final void ServerSyncService() {
         if (YamlConfigProvider.AsyncBackgroundTask_5() == null) {
-            DatabaseMonitorService w2 = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+            DatabaseMonitorService w2 = this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
             JarHandler jP2 = new JarHandler("SnakeYAML", LiteBansModule_123.class.getName(), "https://repo1.maven.org/maven2/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar", "2.4", "ef779af5d29a9dde8cc70ce0341f5c6f7735e23edff9685ceaa9d35359b7bb7f");
-            Object object = litebans.DatabaseMonitorService.BaseCoreGenericHandler(w2, jP2, false, false, 2, null);
-            ObjectUtilities.LiteBansModule_31(object, "");
-            Class clazz = (Class)object;
+            Object targetObj = litebans.DatabaseMonitorService.BaseCoreGenericHandler(w2, jP2, false, false, 2, null);
+            ObjectUtilities.LiteBansModule_31(targetObj, "");
+            Class clazz = (Class)targetObj;
             this.plugin.BaseCoreGenericHandler(new LiteBansModule_186(this, clazz));
 }
 
@@ -408,12 +406,11 @@ extends PluginModule {
                 }
                 this.plugin();
                 this.c = (byte)2;
-                v1.LiteBansModule_31((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, BaseCoreGenericHandler(litebans.ConfigService litebans.PlatformPlugin ), ()V)((ConfigService)this, (PlatformPlugin)v1));
+                v1.LiteBansModule_31((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, BaseCoreGenericHandler(litebans.ConfigService litebans.PlatformPlugin ), ()V)(this, (PlatformPlugin)v1));
                 v2.LiteBansModule_31(this.LiteBansModule_194().ElementsHandler());
                 ObjectUtilities.BaseCoreGenericHandler(v1);
                 v3 = new TemplatesYmlHandler(v1, null, false, 6, null);
-                arg1 = this;
-                arg2 = v5 = v3;
+                                arg2 = v5 = v3;
                 try {
 {
                         v3.c().BaseCoreGenericHandler("templates.yml");
@@ -462,7 +459,7 @@ extends PluginModule {
                                             arg27 = "Empty template: '" + (String)arg26 + '\'';
                                             throw new IllegalArgumentException(arg27.toString());
                                         }
-                                        if (!(StringUtilities.c((CharSequence)arg26, ' ', false, 2, null) == false && StringUtilities.c((CharSequence)arg26, '.', false, 2, null) == false)) {
+                                        if (!(StringUtilities.c(arg26, ' ', false, 2, null) == false && StringUtilities.c(arg26, '.', false, 2, null) == false)) {
                                             arg28 = "Template name '" + (String)arg26 + "' cannot include dots or spaces! Use dashes or underscores instead + ";
                                             throw new IllegalArgumentException(arg28.toString());
                                         }
@@ -689,7 +686,7 @@ extends PluginModule {
                                         arg70 = arg69  .length;
                                         for (arg71 = 0; arg71 < arg70; ++arg71) {
                                             arg29 = arg72 = arg69  [arg71];
-                                            if (!ObjectUtilities.BaseCoreGenericHandler((Object)(arg19.BaseCoreGenericHandler("type", "") != null ? arg73.toLowerCase(Locale.ROOT) : null), (Object)arg29.toString())) continue;
+                                            if (!ObjectUtilities.BaseCoreGenericHandler((Object)(arg19.BaseCoreGenericHandler("type", "") != null ? arg73.toLowerCase(Locale.ROOT) : null), arg29.toString())) continue;
                                             v6 = arg72;
                                             break;
                                         }
@@ -919,8 +916,7 @@ extends PluginModule {
             arg1.BaseCoreGenericHandler(arg118);
             this.plugin(new DiscordWebhookClient_2(v1, null, 2, null).BaseCoreGenericHandler());
             if (v1.LiteBansModule_401()) {
-                v3 = this;
-                try {
+                                try {
                     v5 = v3.AsyncBackgroundTask_22();
                     if (v5 == null) break;
                     v3.CommandThrottleService = arg2 = new NullHandler_8(v3.BaseCoreGenericHandler);
@@ -939,10 +935,9 @@ extends PluginModule {
                     }
                     break;
 }
-            v1.c((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, LiteBansModule_31(litebans.ConfigService ), ()V)((ConfigService)this));
+            v1.c((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, LiteBansModule_31(litebans.ConfigService ), ()V)(this));
         }
-        v3 = this;
-        v5 = v3.LiteBansModule_194();
+                v5 = v3.LiteBansModule_194();
         if (v5.W()) {
             arg2 = v3.BaseCoreGenericHandler.getDataFolder();
             arg121 = "geoip";
@@ -951,8 +946,7 @@ extends PluginModule {
         }
         try {
             this.q = true;
-            v3 = this;
-            v5 = (BroadcastService)v3.BaseCoreGenericHandler.BaseCoreGenericHandler(BroadcastService.class);
+                        v5 = (BroadcastService)v3.BaseCoreGenericHandler.BaseCoreGenericHandler(BroadcastService.class);
             arg2 = v3.BaseCoreGenericHandler.getDataFolder();
             arg122 = "lockdown.yml";
             arg4 = new File((File)arg2, arg122);
@@ -966,15 +960,14 @@ extends PluginModule {
                 arg122 = arg2.BaseCoreGenericHandler("scope", "*");
                 arg123 = arg2.BaseCoreGenericHandler("reason", "");
                 if (v3.LiteBansModule_194().D()) {
-                    ObjectUtilities.BaseCoreGenericHandler((Object)arg123);
-                    if (((CharSequence)arg123).length() > 0) {
+                    ObjectUtilities.BaseCoreGenericHandler(arg123);
+                    if ((arg123).length() > 0) {
                         v3.BaseCoreGenericHandler.getLogger().info("Applying saved lockdown, reason: \"" + arg123 + '\"');
-                        ObjectUtilities.BaseCoreGenericHandler((Object)arg122);
-                        v5.BaseCoreGenericHandler(arg122, (CharSequence)arg123, true);
+                        ObjectUtilities.BaseCoreGenericHandler(arg122);
+                        v5.BaseCoreGenericHandler(arg122, arg123, true);
 }
             this.AsyncBackgroundTask_5();
-            v3 = this;
-            v5 = LiteBansModule_336.c();
+                        v5 = LiteBansModule_336.c();
             arg2 = v3.BaseCoreGenericHandler.e();
             if (!ObjectUtilities.BaseCoreGenericHandler(v5, arg2)) {
                 arg122 = "This is LiteBans version " + (String)v5 + ", NOT version " + (String)arg2 + '!';
@@ -983,10 +976,10 @@ extends PluginModule {
                 v3.BaseCoreGenericHandler.BaseCoreGenericHandler(arg124, 20L);
             }
             if (this.g()) {
-                v1.BaseCoreGenericHandler((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, BaseCoreGenericHandler(litebans.PlatformPlugin litebans.ConfigService ), ()V)((PlatformPlugin)v1, (ConfigService)this), 140L);
+                v1.BaseCoreGenericHandler((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, BaseCoreGenericHandler(litebans.PlatformPlugin litebans.ConfigService ), ()V)((PlatformPlugin)v1, this), 140L);
             }
             if (v1.AsyncBackgroundTask_22() == 0) {
-                v1.BaseCoreGenericHandler((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, LiteBansModule_31(litebans.PlatformPlugin litebans.ConfigService ), ()V)((PlatformPlugin)v1, (ConfigService)this), 300L);
+                v1.BaseCoreGenericHandler((Runnable)LambdaMetafactory.metafactory(null, null, null, ()V, LiteBansModule_31(litebans.PlatformPlugin litebans.ConfigService ), ()V)((PlatformPlugin)v1, this), 300L);
 }
         catch (Throwable arg125) {
             this.plugin(arg125);
@@ -1031,7 +1024,7 @@ extends PluginModule {
         if (throwable instanceof LiteBansException_9) {
             PluginModule module = this;
             String string = throwable.getMessage();
-            ObjectUtilities.BaseCoreGenericHandler((Object)string);
+            ObjectUtilities.BaseCoreGenericHandler(string);
             String string2 = string;
             module.BaseCoreGenericHandler.getLogger().severe(string2);
             return;
@@ -1044,26 +1037,24 @@ extends PluginModule {
     public final void BaseCoreGenericHandler(@NotNull String string) {
         boolean flag;
         String string2;
-        Object object;
         Iterator iterator;
         boolean flag2;
         Collection collection3;
-        Object object2;
         boolean flag3;
         Iterable iterable;
-        Object object3 = new String[]{System.lineSeparator()};
-        List list = StringUtilities.BaseCoreGenericHandler((CharSequence)string, (String[])object3, false, 0, 6, null);
-        object3 = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
-        if (!(list.size() <= 2 || object3 != null && ((ConfigService)object3).g())) {
+        Object resultObj = new String[]{System.lineSeparator()};
+        List list = StringUtilities.BaseCoreGenericHandler(string, (String[])resultObj, false, 0, 6, null);
+        resultObj = this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        if (!(list.size() <= 2 || resultObj != null && this.g())) {
             iterable = list;
             flag3 = false;
-            object2 = iterable;
+            contextObj = iterable;
             collection3 = new ArrayList(CollectionUtilities.BaseCoreGenericHandler(iterable, 10));
             flag2 = false;
-            iterator = object2.iterator();
+            iterator = contextObj.iterator();
             while (iterator.hasNext()) {
-                object = iterator.next();
-                string2 = (String)object;
+                targetObj = iterator.next();
+                string2 = (String)targetObj;
                 Collection collection2 = collection3;
                 flag = false;
                 collection2.add(this.AsyncBackgroundTask_5(string2));
@@ -1072,24 +1063,24 @@ extends PluginModule {
         }
         iterable = list;
         flag3 = false;
-        object2 = iterable;
+        contextObj = iterable;
         collection3 = new ArrayList();
         flag2 = false;
-        iterator = object2.iterator();
+        iterator = contextObj.iterator();
         while (iterator.hasNext()) {
-            object = iterator.next();
-            string2 = (String)object;
+            targetObj = iterator.next();
+            string2 = (String)targetObj;
             flag = false;
-            boolean flag4 = ((CharSequence)string2).length() > 0;
+            boolean flag4 = (string2).length() > 0;
             if (!flag4) continue;
-            collection3.add(object);
+            collection3.add(targetObj);
         }
         iterable = (List)collection3;
         flag3 = false;
         for (Collection collection3 : iterable) {
-            String string3 = (String)((Object)collection3);
-            object = this;
-            ((PluginModule)object).BaseCoreGenericHandler.getLogger().warning(string3);
+            String string3 = (String)(collection3);
+            targetObj = this;
+            targetObj.BaseCoreGenericHandler.getLogger().warning(string3);
 }
 
     public final String AsyncBackgroundTask_5(@NotNull String string) {
@@ -1112,39 +1103,38 @@ extends PluginModule {
             if (c == '\u0000') break;
             --n2;
         }
-        return StringUtilities.LiteBansModule_31(string2 = ((Object)charSequence.subSequence(n, n2 + 1)).toString(), "LiteBansModule_21 java.lang.Thread.run(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 java.util.concurrent.ThreadPoolExecutor$Worker.run(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 java.util.concurrent.ThreadPoolExecutor.runWorker(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, litebans.DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(), false, 2, null) || StringUtilities.LiteBansModule_31(string2, litebans.DatabaseMonitorService.CommandThrottleService.AsyncBackgroundTask_5(), false, 2, null) || StringUtilities.LiteBansModule_31(string2, litebans.DatabaseMonitorService.CommandThrottleService.c(), false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 sun.reflect.NativeConstructorAccessorImpl.newInstance", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 sun.reflect.DelegatingConstructorAccessorImpl.newInstance(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 java.lang.reflect.Constructor.newInstance(", false, 2, null) ? "" : string;
+        return StringUtilities.LiteBansModule_31(string2 = (charSequence.subSequence(n, n2 + 1)).toString(), "LiteBansModule_21 java.lang.Thread.run(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 java.util.concurrent.ThreadPoolExecutor$Worker.run(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 java.util.concurrent.ThreadPoolExecutor.runWorker(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, litebans.DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(), false, 2, null) || StringUtilities.LiteBansModule_31(string2, litebans.DatabaseMonitorService.CommandThrottleService.AsyncBackgroundTask_5(), false, 2, null) || StringUtilities.LiteBansModule_31(string2, litebans.DatabaseMonitorService.CommandThrottleService.c(), false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 sun.reflect.NativeConstructorAccessorImpl.newInstance", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 sun.reflect.DelegatingConstructorAccessorImpl.newInstance(", false, 2, null) || StringUtilities.LiteBansModule_31(string2, "LiteBansModule_21 java.lang.reflect.Constructor.newInstance(", false, 2, null) ? "" : string;
     }
 
     public final void BaseCoreGenericHandler(@NotNull String string, @NotNull Throwable throwable) {
         int n;
-        Object object = this;
-        String[] args = "[!!] Could not load " + string + " + ";
-        ((PluginModule)object).BaseCoreGenericHandler.getLogger().severe((String)args);
-        object = "org.bukkit.configuration.InvalidConfigurationException: ";
-        Object object2 = new String[]{(String)object + "while scanning HikariDataSource anchor", (String)object + "while scanning BaseCoreGenericHandler simple key", (String)object + "while scanning for the next token", (String)object + "while parsing BaseCoreGenericHandler block mapping", (String)object + "while parsing BaseCoreGenericHandler block collection", object};
-        args = object2;
-        object2 = null;
+                String[] args = "[!!] Could not load " + string + " + ";
+        targetObj.BaseCoreGenericHandler.getLogger().severe((String)args);
+        targetObj = "org.bukkit.configuration.InvalidConfigurationException: ";
+        Object contextObj = new String[]{(String)targetObj + "while scanning HikariDataSource anchor", (String)targetObj + "while scanning BaseCoreGenericHandler simple key", (String)targetObj + "while scanning for the next token", (String)targetObj + "while parsing BaseCoreGenericHandler block mapping", (String)targetObj + "while parsing BaseCoreGenericHandler block collection", targetObj};
+        args = contextObj;
+        contextObj = null;
         String string2 = throwable.getMessage();
         if (string2 == null) {
             string2 = "";
         }
-        object2 = string2;
-        Object object3 = args;
-        int n2 = ((String[])object3).length;
+        contextObj = string2;
+        Object resultObj = args;
+        int n2 = ((String[])resultObj).length;
         for (n = 0; n < n2; ++n) {
             String string3;
-            String string4 = string3 = object3[n];
-            object2 = StringUtilities.BaseCoreGenericHandler((String)object2, string4, "", false, 4, null);
+            String string4 = string3 = resultObj[n];
+            contextObj = StringUtilities.BaseCoreGenericHandler((String)contextObj, string4, "", false, 4, null);
         }
-        object2 = StringUtilities.BaseCoreGenericHandler((String)object2, "\\AsyncBackgroundTask_22(TAB)", "TAB", false, 4, null);
-        object3 = this;
-        String string5 = "[!!] Configuration error found: " + (String)object2;
+        contextObj = StringUtilities.BaseCoreGenericHandler((String)contextObj, "\\AsyncBackgroundTask_22(TAB)", "TAB", false, 4, null);
+        resultObj = this;
+        String string5 = "[!!] Configuration error found: " + (String)contextObj;
         n = 0;
-        object3.BaseCoreGenericHandler.getLogger().severe(string5);
-        object3 = this;
+        resultObj.BaseCoreGenericHandler.getLogger().severe(string5);
+        resultObj = this;
         string5 = "[!!] LiteBans will use the default " + string + " until errors have been ";
         n = 0;
-        object3.BaseCoreGenericHandler.getLogger().severe(string5);
+        resultObj.BaseCoreGenericHandler.getLogger().severe(string5);
     }
 
     public final Object AsyncBackgroundTask_22() {
@@ -1161,15 +1151,15 @@ extends PluginModule {
         return this;
     }
 
-    public final CharSequence LiteBansModule_31(@Nullable Object object) {
-        if (object == null) {
+    public final CharSequence LiteBansModule_31(@Nullable Object targetObj) {
+        if (targetObj == null) {
             return MessageKey.ay;
         }
-        String string = object.toString();
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"true")) {
+        String string = targetObj.toString();
+        if (ObjectUtilities.BaseCoreGenericHandler(string, (Object)"true")) {
             return MessageKey.ap;
         }
-        if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"false")) {
+        if (ObjectUtilities.BaseCoreGenericHandler(string, (Object)"false")) {
             return MessageKey.OutHandler;
         }
         if (LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(string)) {
@@ -1178,11 +1168,11 @@ extends PluginModule {
         return string;
     }
 
-    public final String BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull Object object) {
+    public final String BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull Object targetObj) {
         String string;
         String string2 = string = sender.LiteBansModule_31();
         if (string2 == null && !this.LiteBansModule_194().LiteBansModule_240()) {
-            this.plugin.getLogger().warning("Player[name=" + sender.i() + "].getAddress() returned null on " + object.getClass().getSimpleName());
+            this.plugin.getLogger().warning("Player[name=" + sender.i() + "].getAddress() returned null on " + targetObj.getClass().getSimpleName());
         }
         return string;
     }
@@ -1194,7 +1184,7 @@ extends PluginModule {
         if (!this.LiteBansModule_194().BanHandler_2() && StringUtilities.BaseCoreGenericHandler(string, "warn", false, 2, null)) {
             return false;
         }
-        return this.LiteBansModule_194().ab() || !ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"lockdown");
+        return this.LiteBansModule_194().ab() || !ObjectUtilities.BaseCoreGenericHandler(string, (Object)"lockdown");
     }
 
     public final boolean PunishmentTableService() {
@@ -1204,23 +1194,23 @@ extends PluginModule {
     public final SimpleDateFormat BaseCoreGenericHandler(@NotNull CharSequence charSequence, @NotNull CharSequence charSequence2) {
         SimpleDateFormat simpleDateFormat;
         try {
-            simpleDateFormat = new SimpleDateFormat(StringUtilities.BaseCoreGenericHandler(((Object)charSequence).toString(), "YYYY", "yyyy", false, 4, null), this.z().AsyncBackgroundTask_5());
+            simpleDateFormat = new SimpleDateFormat(StringUtilities.BaseCoreGenericHandler((charSequence).toString(), "YYYY", "yyyy", false, 4, null), this.z().AsyncBackgroundTask_5());
         }
         catch (Exception exception) {
             if (!(exception instanceof LiteBansException_4)) {
                 PluginModule module = this;
                 CharSequence charSequence3 = LiteBansModule_242.BaseCoreGenericHandler((CharSequence)("Invalid date format: \"" + charSequence + "\". Using default date format \"" + charSequence2 + "\" + "), (CharSequence)"Date format documentation: https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html");
                 Logger logger = module.BaseCoreGenericHandler.getLogger();
-                logger.warning(((Object)charSequence3).toString());
+                logger.warning((charSequence3).toString());
             }
-            simpleDateFormat = new SimpleDateFormat(((Object)charSequence2).toString());
+            simpleDateFormat = new SimpleDateFormat((charSequence2).toString());
         }
         SimpleDateFormat simpleDateFormat2 = simpleDateFormat;
         simpleDateFormat2.setTimeZone(TimeZone.getTimeZone("UTC"));
         return simpleDateFormat;
     }
 
-    public static /* synthetic */ SimpleDateFormat BaseCoreGenericHandler(ConfigService configService, CharSequence charSequence, CharSequence charSequence2, int n, Object object) {
+    public static /* synthetic */ SimpleDateFormat BaseCoreGenericHandler(ConfigService configService, CharSequence charSequence, CharSequence charSequence2, int n, Object targetObj) {
         if ((n & 2) != 0) {
             charSequence2 = "yyyy-MM-LiteBansModule_118";
         }
@@ -1239,9 +1229,6 @@ extends PluginModule {
         MessagesYmlHandler k22;
         ConfigService q_03;
 {
-            Object object;
-            Object object2;
-            Object object3;
             MessagesYmlHandler k23;
             ObjectUtilities.BaseCoreGenericHandler(plugin);
             MessagesYmlHandler k24 = new MessagesYmlHandler(plugin, null, 2, null);
@@ -1253,35 +1240,35 @@ extends PluginModule {
                 gn_02 = k24.BaseCoreGenericHandler().BaseCoreGenericHandler(k24.g()).g();
                 gn_02.BaseCoreGenericHandler(DatabaseService.LiteBansModule_31("messages.yml", null));
                 k24.BaseCoreGenericHandler(gn_02);
-                object3 = k24;
-                DatabaseService gn_03 = ((MessagesYmlHandler)object3).c();
+                resultObj = k24;
+                DatabaseService gn_03 = this.c();
                 ObjectUtilities.BaseCoreGenericHandler(gn_03);
-                object2 = gn_03;
-                object = MessageKey.values();
-                for (CharSequence charSequence : object) {
+                contextObj = gn_03;
+                targetObj = MessageKey.values();
+                for (CharSequence charSequence : targetObj) {
                     MessageKey am2 = charSequence;
                     String string = am2.PluginHookService;
                     CharSequence charSequence2 = am2.ServerOriginHandler;
                     if (charSequence2 == null) continue;
-                    String string2 = object2.BaseCoreGenericHandler(string, null);
+                    String string2 = contextObj.BaseCoreGenericHandler(string, null);
                     if (string2 != null) {
-                        am2.BaseCoreGenericHandler(object2.BaseCoreGenericHandler(string, ((Object)charSequence2).toString()));
-                        if (!(((CharSequence)string2).length() > 0)) continue;
-                        object2.LiteBansModule_31(string, MessageKey.BaseCoreGenericHandler(am2, string2));
+                        am2.BaseCoreGenericHandler(contextObj.BaseCoreGenericHandler(string, (charSequence2).toString()));
+                        if (!((string2).length() > 0)) continue;
+                        contextObj.LiteBansModule_31(string, MessageKey.BaseCoreGenericHandler(am2, string2));
                         continue;
                     }
-                    object2.LiteBansModule_31(string, StringUtilities.BaseCoreGenericHandler(((Object)charSequence2).toString(), '\u00a7', '&', false, 4, null));
+                    contextObj.LiteBansModule_31(string, StringUtilities.BaseCoreGenericHandler((charSequence2).toString(), '\u00a7', '&', false, 4, null));
                 }
-                object3 = gn_02.BaseCoreGenericHandler("locale", "system");
-                if (!ObjectUtilities.BaseCoreGenericHandler(object3, (Object)"system")) {
+                resultObj = gn_02.BaseCoreGenericHandler("locale", "system");
+                if (!ObjectUtilities.BaseCoreGenericHandler(resultObj, (Object)"system")) {
                     Locale locale = k24.LiteBansModule_31();
-                    k24.BaseCoreGenericHandler(new Locale((String)object3));
+                    k24.BaseCoreGenericHandler(new Localethis);
                     k24.BaseCoreGenericHandler().getLogger().info("Using configured locale (" + k24.AsyncBackgroundTask_5().getLanguage() + ')');
-                    if (ObjectUtilities.BaseCoreGenericHandler((Object)k24.AsyncBackgroundTask_5(), locale)) {
-                        object2 = "Supported locales: " + ArrayUtilities.BaseCoreGenericHandler(Locale.getAvailableLocales(), null, null, null, 0, null, (LiteBansModule_178)LiteBansModule_172.BaseCoreGenericHandler, 31, null);
-                        object = k24.BaseCoreGenericHandler().getLogger();
-                        CharSequence charSequence = LiteBansModule_242.BaseCoreGenericHandler((CharSequence)"Note: If the configured locale is unrecognized, the system default locale is ", (CharSequence)object2);
-                        ((Logger)object).info(((Object)charSequence).toString());
+                    if (ObjectUtilities.BaseCoreGenericHandler(k24.AsyncBackgroundTask_5(), locale)) {
+                        contextObj = "Supported locales: " + ArrayUtilities.BaseCoreGenericHandler(Locale.getAvailableLocales(), null, null, null, 0, null, (LiteBansModule_178)LiteBansModule_172.BaseCoreGenericHandler, 31, null);
+                        targetObj = k24.BaseCoreGenericHandler().getLogger();
+                        CharSequence charSequence = LiteBansModule_242.BaseCoreGenericHandler((CharSequence)"Note: If the configured locale is unrecognized, the system default locale is ", contextObj);
+                        targetObj.info((charSequence).toString());
 } else {
                     k24.BaseCoreGenericHandler().getLogger().info("Using system locale (" + k24.AsyncBackgroundTask_5().getLanguage() + ')');
                 }
@@ -1300,12 +1287,12 @@ extends PluginModule {
                     k24.BaseCoreGenericHandler().getLogger().severe("[!!] Could not save messages + ");
                     k24.e().BaseCoreGenericHandler(exception);
 }
-            object3 = k24;
-            object2 = MessageKey.PlayerproviderHandler;
-            object = MessageKey.ad;
-            if (StringUtilities.BaseCoreGenericHandler((CharSequence)object2, (CharSequence)"$bannedPlayer", false, 2, null) || StringUtilities.BaseCoreGenericHandler((CharSequence)object, (CharSequence)"$bannedPlayer", false, 2, null)) {
-                ((MessageKey)object2).ServerOriginHandler = ((MessageKey)object2).BaseCoreGenericHandler((CharSequence)"$bannedPlayer", (Object)"$mutedPlayer");
-                ((MessageKey)object).ServerOriginHandler = ((MessageKey)object).BaseCoreGenericHandler((CharSequence)"$bannedPlayer", (Object)"$warnedPlayer");
+            resultObj = k24;
+            contextObj = MessageKey.PlayerproviderHandler;
+            targetObj = MessageKey.ad;
+            if (StringUtilities.BaseCoreGenericHandler(contextObj, (CharSequence)"$bannedPlayer", false, 2, null) || StringUtilities.BaseCoreGenericHandler(targetObj, (CharSequence)"$bannedPlayer", false, 2, null)) {
+                ((MessageKey)contextObj).ServerOriginHandler = ((MessageKey)contextObj).BaseCoreGenericHandler((CharSequence)"$bannedPlayer", (Object)"$mutedPlayer");
+                targetObj.ServerOriginHandler = targetObj.BaseCoreGenericHandler((CharSequence)"$bannedPlayer", (Object)"$warnedPlayer");
             }
             try {
                 PermanentHandler.BaseCoreGenericHandler(SecHandler.AsyncBackgroundTask_5, 0L, false, 2, null);
@@ -1314,9 +1301,9 @@ extends PluginModule {
                 if (exception instanceof IllegalFormatException) {
                     CharSequence charSequence;
                     String string = "%AsyncBackgroundTask_5 %AsyncBackgroundTask_21";
-                    Logger logger = ((MessagesYmlHandler)object3).BaseCoreGenericHandler().getLogger();
+                    Logger logger = this.BaseCoreGenericHandler().getLogger();
                     charSequence = LiteBansModule_242.BaseCoreGenericHandler((CharSequence)("Duration format (\"" + MessageKey.InputHandler + "\") is invalid! (" + exception.getClass().getSimpleName() + ')'), (CharSequence)("Using default format instead (\"" + string + "\") + "));
-                    logger.warning(((Object)charSequence).toString());
+                    logger.warning((charSequence).toString());
                     MessageKey.InputHandler.BaseCoreGenericHandler(string);
                 }
                 throw exception;
@@ -1330,18 +1317,18 @@ extends PluginModule {
 {
             ConfigService q_03 = configService;
             try {
-                Object object = q_03.AsyncBackgroundTask_22();
-                if (object != null) {
+                Object targetObj = q_03.AsyncBackgroundTask_22();
+                if (targetObj != null) {
                     NullHandler_8 z = new NullHandler_8(q_03.BaseCoreGenericHandler);
                     q_03.CommandThrottleService = z;
                     if (!BukkitBlockAdapter.c()) {
-                        z.BaseCoreGenericHandler(object);
+                        z.BaseCoreGenericHandler(targetObj);
 }
             catch (Throwable throwable) {
                 PluginModule module = q_03;
                 CharSequence charSequence = LiteBansModule_242.BaseCoreGenericHandler((CharSequence)"Failed to hook into ", (CharSequence)"Try using the latest ServerListPlus development ");
                 Logger logger = module.BaseCoreGenericHandler.getLogger();
-                logger.warning(((Object)charSequence).toString());
+                logger.warning((charSequence).toString());
                 if (!q_03.BaseCoreGenericHandler(1)) break;
                 throwable.printStackTrace();
 }
@@ -1355,59 +1342,59 @@ extends PluginModule {
             int n = plugin.z().e().size();
             if (!(n > 8)) {
                 Integer n2 = n;
-                throw new IllegalArgumentException(((Object)n2).toString());
+                throw new IllegalArgumentException((n2).toString());
             }
-            Object object = new Class[]{PlatformPlugin.class};
-            Class[] classArray = object;
-            object = new Object[]{plugin};
-            List list = plugin.LiteBansModule_194().BaseCoreGenericHandler(BansHandler.class, classArray, (Object[])object);
+            Object targetObj = new Class[]{PlatformPlugin.class};
+            Class[] classArray = targetObj;
+            targetObj = new Object[]{plugin};
+            List list = plugin.LiteBansModule_194().BaseCoreGenericHandler(BansHandler.class, classArray, (Object[])targetObj);
             if (!(list.size() > 1)) {
                 ObjectUtilities.BaseCoreGenericHandler(list);
                 List list2 = list;
                 throw new IllegalArgumentException(list2.toString());
             }
-            Object object2 = object = (DatabaseMonitorService)plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+            Object contextObj = targetObj = (DatabaseMonitorService)plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
             try {
-                LiteBansModule_82 ch2 = ((DatabaseMonitorService)object2).LiteBansModule_194();
+                LiteBansModule_82 ch2 = ((DatabaseMonitorService)contextObj).LiteBansModule_194();
                 Closeable closeable = ch2;
                 Throwable throwable = null;
                 try {
                     boolean flag2;
-                    Object object3 = (LiteBansModule_82)closeable;
+                    Object resultObj = (LiteBansModule_82)closeable;
                     LiteBansModule_82 ch3 = ch2;
                     ResultSet resultSet = LiteBansModule_184.AsyncBackgroundTask_5(ch3.c((CharSequence)"SELECT NOW() CommandExitException now"));
                     resultSet.next();
                     Timestamp timestamp = resultSet.getTimestamp("now");
-                    Object object4 = configService;
-                    Object object5 = "AsyncBackgroundTask_22: " + timestamp.getTime();
-                    ((PluginModule)object4).BaseCoreGenericHandler.getLogger().info((String)object5);
-                    object4 = configService;
-                    object5 = "LiteBansModule_194: " + o2.BaseCoreGenericHandler(timestamp.getTime(), true) + " +" + o2.BaseCoreGenericHandler(true);
+                    Object helperObj = configService;
+                    Object tempObj = "AsyncBackgroundTask_22: " + timestamp.getTime();
+                    ((PluginModule)helperObj).BaseCoreGenericHandler.getLogger().info((String)tempObj);
+                    helperObj = configService;
+                    tempObj = "LiteBansModule_194: " + o2.BaseCoreGenericHandler(timestamp.getTime(), true) + " +" + o2.BaseCoreGenericHandler(true);
                     flag5 = false;
-                    ((PluginModule)object4).BaseCoreGenericHandler.getLogger().info((String)object5);
+                    ((PluginModule)helperObj).BaseCoreGenericHandler.getLogger().info((String)tempObj);
                     ObjectUtilities.BaseCoreGenericHandler(plugin);
-                    object5 = object4 = new AltsHandler(plugin, "", "", "");
+                    tempObj = helperObj = new AltsHandler(plugin, "", "", "");
                     flag5 = false;
                     LiteBansModule_297 iA2 = ch3.c("[CONSOLE]");
                     ObjectUtilities.BaseCoreGenericHandler(iA2);
                     Object object6 = iA2;
                     String string = ((LiteBansModule_297)object6).LiteBansModule_31();
-                    ObjectUtilities.BaseCoreGenericHandler((Object)string);
-                    Object object7 = ((AltsHandler)object5).BaseCoreGenericHandler(ch3, (LiteBansModule_297)object6, new LiteBansModule_206(string, ch3, null, false, 0, 28, null).i());
-                    if (!(!StringUtilities.BaseCoreGenericHandler((CharSequence)object7, (CharSequence)"))", false, 2, null))) {
+                    ObjectUtilities.BaseCoreGenericHandler(string);
+                    Object object7 = ((AltsHandler)tempObj).BaseCoreGenericHandler(ch3, (LiteBansModule_297)object6, new LiteBansModule_206(string, ch3, null, false, 0, 28, null).i());
+                    if (!(!StringUtilities.BaseCoreGenericHandler(object7, (CharSequence)"))", false, 2, null))) {
                         CharSequence charSequence = object7;
-                        throw new IllegalArgumentException(((Object)charSequence).toString());
+                        throw new IllegalArgumentException((charSequence).toString());
                     }
-                    ch3.BaseCoreGenericHandler(((LiteBansModule_297)object6).LiteBansModule_31(), ((AltsHandler)object4).c(), BanHandler.LiteBansModule_240, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), false, 1);
-                    ch3.BaseCoreGenericHandler(((LiteBansModule_297)object6).LiteBansModule_31(), ((AltsHandler)object4).c(), BanHandler.LiteBansModule_240, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), true, 1);
-                    object5 = "*";
+                    ch3.BaseCoreGenericHandler(((LiteBansModule_297)object6).LiteBansModule_31(), ((AltsHandler)helperObj).c(), BanHandler.LiteBansModule_240, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), false, 1);
+                    ch3.BaseCoreGenericHandler(((LiteBansModule_297)object6).LiteBansModule_31(), ((AltsHandler)helperObj).c(), BanHandler.LiteBansModule_240, LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(), true, 1);
+                    tempObj = "*";
                     String string2 = LiteBansModule_181.LiteBansModule_194.c("global");
                     if (!LiteBansModule_181.LiteBansModule_194.LiteBansModule_31(string2)) {
                         String string3 = string2 + ' ' + LiteBansModule_181.LiteBansModule_194.LiteBansModule_31();
                         throw new IllegalArgumentException(string3.toString());
                     }
-                    if (!(ObjectUtilities.BaseCoreGenericHandler((Object)string2, object5) && string2.charAt(0) == ((String)object5).charAt(0))) {
-                        String string4 = string2 + ' ' + (String)object5;
+                    if (!(ObjectUtilities.BaseCoreGenericHandler(string2, tempObj) && string2.charAt(0) == ((String)tempObj).charAt(0))) {
+                        String string4 = string2 + ' ' + (String)tempObj;
                         throw new IllegalArgumentException(string4.toString());
                     }
                     LiteCommand command = plugin.z().BaseCoreGenericHandler("ban");
@@ -1427,8 +1414,8 @@ extends PluginModule {
                     LiteBansModule_297 iA3 = ch3.c("test");
                     ObjectUtilities.BaseCoreGenericHandler(iA3);
                     object7 = iA3.LiteBansModule_31();
-                    object8 = AllHandler_3.BaseCoreGenericHandler(ch3, (String)object7, null, BanHandler.LiteBansModule_240, (String)object5, false, false, 48, null);
-                    if (!(object8 != null && ObjectUtilities.BaseCoreGenericHandler((Object)((SilentHandler)object8).m(), object5))) {
+                    object8 = AllHandler_3.BaseCoreGenericHandler(ch3, (String)object7, null, BanHandler.LiteBansModule_240, (String)tempObj, false, false, 48, null);
+                    if (!(object8 != null && ObjectUtilities.BaseCoreGenericHandler((Object)((SilentHandler)object8).m(), tempObj))) {
                         flag2 = false;
                         String string5 = String.valueOf(object8);
                         throw new IllegalArgumentException(string5.toString());
@@ -1440,7 +1427,7 @@ extends PluginModule {
                     PluginModule module = configService;
                     String string7 = "" + plugin.HoverTextFormatter().c();
                     module.BaseCoreGenericHandler.getLogger().info(string7);
-                    object3 = KotlinUnitHandler.BaseCoreGenericHandler;
+                    resultObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable2) {
                     throwable = throwable2;
@@ -1450,7 +1437,7 @@ extends PluginModule {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
 }
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object2).LiteBansModule_31(sQLException)) break;
+                if (((DatabaseMonitorService)contextObj).LiteBansModule_31(sQLException)) break;
                 throw sQLException;
 }
 
@@ -1461,14 +1448,12 @@ extends PluginModule {
         try {
             boolean flag;
             PluginModule module;
-            Object object;
-            Object object2;
 {
                 LiteBansModule_158 ec_02 = plugin.i();
                 ObjectUtilities.LiteBansModule_31(ec_02, "");
                 DefaultHandler e12 = ((BungeecordHandler_2)ec_02).LiteBansModule_31();
-                object2 = e12.c();
-                object = e12.LiteBansModule_31();
+                contextObj = e12.c();
+                targetObj = e12.LiteBansModule_31();
                 DatabaseMonitorService w2 = (DatabaseMonitorService)plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
                 module = w2;
                 flag = false;
@@ -1477,20 +1462,20 @@ extends PluginModule {
                     Closeable closeable = ch2;
                     Throwable throwable = null;
                     try {
-                        Object object3 = (LiteBansModule_82)closeable;
+                        Object resultObj = (LiteBansModule_82)closeable;
                         LiteBansModule_82 ch3 = ch2;
                         if (ch3.BaseCoreGenericHandler()) {
                             CharSequence charSequence;
                             BansHandler_2 kL2 = BansHandler_2.g;
-                            Object object4 = "uuid";
-                            ResultSet resultSet = LiteBansModule_184.AsyncBackgroundTask_5(ch3.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.e("SELECT " + object4 + " FROM " + kL2), "SQLiteDriverHandler_4"), (Number)1))));
-                            object4 = resultSet;
+                            Object helperObj = "uuid";
+                            ResultSet resultSet = LiteBansModule_184.AsyncBackgroundTask_5(ch3.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.BaseCoreGenericHandler(SQLiteDriverHandler.e("SELECT " + helperObj + " FROM " + kL2), "SQLiteDriverHandler_4"), (Number)1))));
+                            helperObj = resultSet;
                             n = 1;
-                            if (object4.next()) {
+                            if (helperObj.next()) {
                                 String string;
-                                Object object5 = object4;
+                                Object tempObj = helperObj;
                                 try {
-                                    string = object5.getString(n);
+                                    string = tempObj.getString(n);
                                 }
                                 catch (SQLException sQLException) {
                                     string = null;
@@ -1499,16 +1484,16 @@ extends PluginModule {
                             } else {
                                 charSequence = kL2 = null;
                             }
-                            if (HexEncodingHelper.BaseCoreGenericHandler((String)((Object)kL2))) {
-                                object4 = UUID.fromString(HexEncodingHelper.BaseCoreGenericHandler.g((String)((Object)kL2)));
+                            if (HexEncodingHelper.BaseCoreGenericHandler((String)(kL2))) {
+                                helperObj = UUID.fromString(HexEncodingHelper.BaseCoreGenericHandler.g((String)(kL2)));
                                 LiteBansModule_158 ec_03 = plugin.i();
                                 ObjectUtilities.LiteBansModule_31(ec_03, "");
                                 BungeecordHandler_2 ao_02 = (BungeecordHandler_2)ec_03;
-                                ObjectUtilities.BaseCoreGenericHandler(object4);
-                                DefaultHandler.BaseCoreGenericHandler(e12, ao_02.BaseCoreGenericHandler((UUID)object4), "test", null, 4, null);
-                                e12.BaseCoreGenericHandler(object4);
+                                ObjectUtilities.BaseCoreGenericHandler(helperObj);
+                                DefaultHandler.BaseCoreGenericHandler(e12, ao_02.BaseCoreGenericHandler((UUID)helperObj), "test", null, 4, null);
+                                e12.BaseCoreGenericHandler(helperObj);
 }
-                        object3 = KotlinUnitHandler.BaseCoreGenericHandler;
+                        resultObj = KotlinUnitHandler.BaseCoreGenericHandler;
                     }
                     catch (Throwable throwable2) {
                         throwable = throwable2;
@@ -1525,7 +1510,7 @@ extends PluginModule {
             flag = false;
             if (((ConfigService)module).g()) {
                 PluginModule n_03 = module;
-                ((ConfigService)n_03).BaseCoreGenericHandler((Object)("" + object2 + object + '\n'));
+                ((ConfigService)n_03).BaseCoreGenericHandler((Object)("" + contextObj + targetObj + '\n'));
 }
         catch (LinkageError linkageError) {
             ConfigService.BaseCoreGenericHandler(configService, linkageError, 0, 2, null);

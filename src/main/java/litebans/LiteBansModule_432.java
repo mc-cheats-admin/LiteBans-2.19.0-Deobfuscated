@@ -269,20 +269,20 @@ public abstract class LiteBansModule_432 {
         return "BaseComponent(style=" + this.LiteBansModule_31() + ", insertion=" + this.AsyncBackgroundTask_21() + ", extra=" + this.CommandThrottleService() + ", clickEvent=" + this.LiteBansModule_194() + ", hoverEvent=" + this.LiteBansModule_240() + ", reset=" + this.DatabaseMonitorService() + ")";
     }
 
-    public boolean equals(Object object) {
-        if (object == this) {
+    public boolean equals(Object targetObj) {
+        if (targetObj == this) {
             return true;
         }
-        if (!(object instanceof LiteBansModule_432)) {
+        if (!(targetObj instanceof LiteBansModule_432)) {
             return false;
         }
-        LiteBansModule_432 v_02 = (LiteBansModule_432)object;
-        if (!v_02.BaseCoreGenericHandler((Object)this)) {
+        LiteBansModule_432 v_02 = (LiteBansModule_432)targetObj;
+        if (!v_02.BaseCoreGenericHandler(this)) {
             return false;
         }
         LiteBansModule_368 ka_02 = this.LiteBansModule_31();
         LiteBansModule_368 ka_03 = v_02.LiteBansModule_31();
-        if (ka_02 == null ? ka_03 != null : !((Object)ka_02).equals(ka_03)) {
+        if (ka_02 == null ? ka_03 != null : !(ka_02).equals(ka_03)) {
             return false;
         }
         String string = this.AsyncBackgroundTask_21();
@@ -292,36 +292,36 @@ public abstract class LiteBansModule_432 {
         }
         List list = this.CommandThrottleService();
         List list2 = v_02.CommandThrottleService();
-        if (list == null ? list2 != null : !((Object)list).equals(list2)) {
+        if (list == null ? list2 != null : !(list).equals(list2)) {
             return false;
         }
         LiteBansModule_377 kf_02 = this.LiteBansModule_194();
         LiteBansModule_377 kf_03 = v_02.LiteBansModule_194();
-        if (kf_02 == null ? kf_03 != null : !((Object)kf_02).equals(kf_03)) {
+        if (kf_02 == null ? kf_03 != null : !(kf_02).equals(kf_03)) {
             return false;
         }
         ActionHandler eu_02 = this.LiteBansModule_240();
         ActionHandler eu_03 = v_02.LiteBansModule_240();
-        return !(eu_02 == null ? eu_03 != null : !((Object)eu_02).equals(eu_03));
+        return !(eu_02 == null ? eu_03 != null : !(eu_02).equals(eu_03));
     }
 
-    protected boolean BaseCoreGenericHandler(Object object) {
-        return object instanceof LiteBansModule_432;
+    protected boolean BaseCoreGenericHandler(Object targetObj) {
+        return targetObj instanceof LiteBansModule_432;
     }
 
     public int hashCode() {
         int n = 59;
         int n2 = 1;
         LiteBansModule_368 ka_02 = this.LiteBansModule_31();
-        n2 = n2 * 59 + (ka_02 == null ? 43 : ((Object)ka_02).hashCode());
+        n2 = n2 * 59 + (ka_02 == null ? 43 : (ka_02).hashCode());
         String string = this.AsyncBackgroundTask_21();
         n2 = n2 * 59 + (string == null ? 43 : string.hashCode());
         List list = this.CommandThrottleService();
-        n2 = n2 * 59 + (list == null ? 43 : ((Object)list).hashCode());
+        n2 = n2 * 59 + (list == null ? 43 : (list).hashCode());
         LiteBansModule_377 kf_02 = this.LiteBansModule_194();
-        n2 = n2 * 59 + (kf_02 == null ? 43 : ((Object)kf_02).hashCode());
+        n2 = n2 * 59 + (kf_02 == null ? 43 : (kf_02).hashCode());
         ActionHandler eu_02 = this.LiteBansModule_240();
-        n2 = n2 * 59 + (eu_02 == null ? 43 : ((Object)eu_02).hashCode());
+        n2 = n2 * 59 + (eu_02 == null ? 43 : (eu_02).hashCode());
         return n2;
     }
 

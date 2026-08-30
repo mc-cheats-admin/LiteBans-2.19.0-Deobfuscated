@@ -43,12 +43,11 @@ public class LiteBansModule_8 {
     }
 
     public static final LiteBansModule_177[] BaseCoreGenericHandler(byte[] byArray, boolean flag, LiteBansModule_137 dt_02) {
-        Object object;
         int n;
         ArrayList<LiteBansModule_177> arrayList = new ArrayList<LiteBansModule_177>();
         for (int i = 0; i <= byArray.length - 4; i += n + 4) {
             LiteBansModule_177 en_02;
-            object = new LiteBansModule_288(byArray, i);
+            targetObj = new LiteBansModule_288(byArray, i);
             n = new LiteBansModule_288(byArray, i + 2).BaseCoreGenericHandler();
             if (i + 4 + n > byArray.length) {
                 en_02 = dt_02.BaseCoreGenericHandler(byArray, i, byArray.length - i, flag, n);
@@ -57,15 +56,15 @@ public class LiteBansModule_8 {
                 break;
             }
             try {
-                en_02 = Objects.requireNonNull(dt_02.BaseCoreGenericHandler((LiteBansModule_288)object), "createExtraField must not return null");
+                en_02 = Objects.requireNonNull(dt_02.BaseCoreGenericHandlertargetObj, "createExtraField must not return null");
                 arrayList.add(Objects.requireNonNull(dt_02.BaseCoreGenericHandler(en_02, byArray, i + 4, n, flag), "fill must not return null"));
                 continue;
             }
             catch (IllegalAccessException | InstantiationException reflectiveOperationException) {
                 throw (ZipException)new ZipException(reflectiveOperationException.getMessage()).initCause(reflectiveOperationException);
 }
-        object = new LiteBansModule_177[arrayList.size()];
-        return arrayList.toArray((T[])object);
+        targetObj = new LiteBansModule_177[arrayList.size()];
+        return arrayList.toArray((T[])targetObj);
     }
 
     public static final byte[] LiteBansModule_31(LiteBansModule_177[] en_0Array) {

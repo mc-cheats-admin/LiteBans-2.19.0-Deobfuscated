@@ -16,22 +16,21 @@ extends AbstractCommand {
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
 {
-            Object object = this;
-            String string = CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)object, (String)ArrayUtilities.LiteBansModule_31(args));
-            object = this;
+                        String string = CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)targetObj, (String)ArrayUtilities.LiteBansModule_31(args));
+            targetObj = this;
             flag = false;
-            object = (DatabaseMonitorService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+            targetObj = (DatabaseMonitorService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
             flag = false;
             try {
-                LiteBansModule_82 ch2 = ((DatabaseMonitorService)object).LiteBansModule_194();
+                LiteBansModule_82 ch2 = targetObj.LiteBansModule_194();
                 Closeable closeable = ch2;
                 Throwable throwable = null;
                 try {
-                    Object object2 = (LiteBansModule_82)closeable;
+                    Object contextObj = (LiteBansModule_82)closeable;
                     LiteBansModule_82 ch3 = ch2;
                     LiteBansModule_297 iA2 = CommandArgumentUtils.BaseCoreGenericHandler(ch3, string, false, 2, null);
-                    CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, AllHandler_3.BaseCoreGenericHandler(ch3, (CharSequence)MessageKey.bI, iA2, false, 2, null));
-                    object2 = KotlinUnitHandler.BaseCoreGenericHandler;
+                    CommandArgumentUtils.BaseCoreGenericHandler(this, AllHandler_3.BaseCoreGenericHandler(ch3, MessageKey.bI, iA2, false, 2, null));
+                    contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable2) {
                     throwable = throwable2;
@@ -41,7 +40,7 @@ extends AbstractCommand {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
 }
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break;
+                if (targetObj.LiteBansModule_31(sQLException)) break;
                 throw sQLException;
 }
 

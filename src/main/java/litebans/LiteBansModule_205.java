@@ -16,11 +16,11 @@ extends MessageHandler {
 
     private static final KotlinUnitHandler BaseCoreGenericHandler(LiteBansModule_205 fq_02, LiteBansModule_82 ch2) {
         ch2.AsyncBackgroundTask_5().AsyncBackgroundTask_5(true);
-        Object object = BansHandler_2.i;
-        LiteBansModule_184.AsyncBackgroundTask_5(ch2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.c(SQLiteDriverHandler.e("UPDATE " + object), "accept=1"))));
-        CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)fq_02, (CharSequence)BlackHandler.c("Disclaimer accepted!"));
-        object = (ServerSyncService)ch2.e().BaseCoreGenericHandler(ServerSyncService.class);
-        ServerSyncService.BaseCoreGenericHandler((ServerSyncService)object, BroadcastHandler.BaseCoreGenericHandler, ch2, null, 0, 12, null);
+        Object targetObj = BansHandler_2.i;
+        LiteBansModule_184.AsyncBackgroundTask_5(ch2.c(SQLiteDriverHandler.AsyncBackgroundTask_5(SQLiteDriverHandler.c(SQLiteDriverHandler.e("UPDATE " + targetObj), "accept=1"))));
+        CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)fq_02, BlackHandler.c("Disclaimer accepted!"));
+        targetObj = (ServerSyncService)ch2.e().BaseCoreGenericHandler(ServerSyncService.class);
+        ServerSyncService.BaseCoreGenericHandler((ServerSyncService)targetObj, BroadcastHandler.BaseCoreGenericHandler, ch2, null, 0, 12, null);
         return KotlinUnitHandler.BaseCoreGenericHandler;
     }
 

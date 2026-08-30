@@ -21,7 +21,7 @@ implements CustomPacketPayload {
     }
 
     public CustomPacketPayload.Type type() {
-        return new CustomPacketPayload.Type(Identifier.parse((String)this.LiteBansModule_31));
+        return new CustomPacketPayload.Type(Identifier.parse(this.LiteBansModule_31));
     }
 
     private static final void BaseCoreGenericHandler() {

@@ -12,7 +12,7 @@ public final class DiscordEmbedBuilder {
     }
 
     public final void BaseCoreGenericHandler(@NotNull LiteBansModule_82 v1, @NotNull NoneHandler_2 v2, @NotNull String v3) {
-        if (((CharSequence)v3).length() == 0) {
+        if ((v3).length() == 0) {
             return;
         }
         arg1 = v2;
@@ -28,7 +28,7 @@ public final class DiscordEmbedBuilder {
         arg5 = MessageKey.LiteBansModule_31("WEB_" + arg1.ServerSyncService() + "_CONTENT");
         arg6 = ContentHandler.GnuSparseMapHandler.BaseCoreGenericHandler(v1, MessageKey.LiteBansModule_31("WEB_" + arg1.ServerSyncService() + "_COLOR"));
         v2 = arg7 = MessageKey.LiteBansModule_31("WEB_" + arg1.ServerSyncService() + "_THUMB");
-        if (v2 != null ? StringUtilities.LiteBansModule_31((CharSequence)v2) : false) ** GOTO lbl-1000
+        if (v2 != null ? StringUtilities.LiteBansModule_31(v2) : false) ** GOTO lbl-1000
         v3 = arg7;
         v4 = v3 != null ? !StringUtilities.LiteBansModule_31(v3, "https://", false, 2, null) : false;
         if (v4) lbl-1000:
@@ -42,58 +42,57 @@ public final class DiscordEmbedBuilder {
         }
         arg8 = v7;
         arg9 = ContentHandler.GnuSparseMapHandler.BaseCoreGenericHandler(v1, arg8, arg1);
-        arg4 = v1.BaseCoreGenericHandler(v1.BaseCoreGenericHandler((CharSequence)arg4, arg1.H(), arg1.AsyncBackgroundTask_5(), false), arg3, arg1.AsyncBackgroundTask_22(), false).toString();
+        arg4 = v1.BaseCoreGenericHandler(v1.BaseCoreGenericHandler(arg4, arg1.H(), arg1.AsyncBackgroundTask_5(), false), arg3, arg1.AsyncBackgroundTask_22(), false).toString();
         arg10 = arg5;
-        ObjectUtilities.BaseCoreGenericHandler((Object)arg10);
-        arg5 = v1.BaseCoreGenericHandler(v1.BaseCoreGenericHandler((CharSequence)arg10, arg1.H(), arg1.AsyncBackgroundTask_5(), false), arg3, arg1.AsyncBackgroundTask_22(), false).toString();
-        ContentHandler.GnuSparseMapHandler.BaseCoreGenericHandler(v1, arg2, arg4, arg5, arg6, arg7, arg9, StringUtilities.BaseCoreGenericHandler((CharSequence)arg8, (CharSequence)"\n\n", false, 2, null) == false);
+        ObjectUtilities.BaseCoreGenericHandler(arg10);
+        arg5 = v1.BaseCoreGenericHandler(v1.BaseCoreGenericHandler(arg10, arg1.H(), arg1.AsyncBackgroundTask_5(), false), arg3, arg1.AsyncBackgroundTask_22(), false).toString();
+        ContentHandler.GnuSparseMapHandler.BaseCoreGenericHandler(v1, arg2, arg4, arg5, arg6, arg7, arg9, StringUtilities.BaseCoreGenericHandler(arg8, (CharSequence)"\n\n", false, 2, null) == false);
     }
 
     private final LiteBansModule_354[] BaseCoreGenericHandler(LiteBansModule_82 ch2, String string, NoneHandler_2 cz2) {
         LiteBansModule_354[] jTArray;
-        Object object;
         NoneHandler_2 cz3 = cz2;
-        if (StringUtilities.LiteBansModule_31((CharSequence)string)) {
+        if (StringUtilities.LiteBansModule_31(string)) {
             return null;
         }
         DiscordEmbedBuilder bc_02 = ContentHandler.GnuSparseMapHandler;
-        CharSequence charSequence = ch2.BaseCoreGenericHandler((CharSequence)string, cz3.q(), cz3.AsyncBackgroundTask_22(), false);
+        CharSequence charSequence = ch2.BaseCoreGenericHandler(string, cz3.q(), cz3.AsyncBackgroundTask_22(), false);
         ArrayList<LiteBansModule_354> arrayList = new ArrayList<LiteBansModule_354>();
         String string2 = bc_02.BaseCoreGenericHandler(charSequence);
         List list = null;
-        ObjectUtilities.BaseCoreGenericHandler((Object)string2);
-        if (StringUtilities.BaseCoreGenericHandler((CharSequence)string2, (CharSequence)"\n\n", false, 2, null)) {
-            object = new String[]{"\n\n"};
-            list = StringUtilities.BaseCoreGenericHandler((CharSequence)string2, (String[])object, false, 0, 6, null);
+        ObjectUtilities.BaseCoreGenericHandler(string2);
+        if (StringUtilities.BaseCoreGenericHandler(string2, (CharSequence)"\n\n", false, 2, null)) {
+            targetObj = new String[]{"\n\n"};
+            list = StringUtilities.BaseCoreGenericHandler(string2, (String[])targetObj, false, 0, 6, null);
         } else {
-            object = new char[1];
-            object[0] = (String)10;
-            list = StringUtilities.BaseCoreGenericHandler((CharSequence)string2, (char[])object, false, 0, 6, null);
+            targetObj = new char[1];
+            targetObj[0] = (String)10;
+            list = StringUtilities.BaseCoreGenericHandler(string2, (char[])targetObj, false, 0, 6, null);
         }
-        object = list;
-        Object object2 = object.iterator();
-        while (object2.hasNext()) {
-            Object t2 = object2.next();
+        targetObj = list;
+        Object contextObj = targetObj.iterator();
+        while (contextObj.hasNext()) {
+            Object t2 = contextObj.next();
             String string3 = (String)t2;
-            if (((CharSequence)string3).length() == 0) continue;
-            Object object3 = new char[]{':'};
-            List list2 = StringUtilities.BaseCoreGenericHandler((CharSequence)string3, object3, false, 0, 6, null);
+            if ((string3).length() == 0) continue;
+            Object resultObj = new char[]{':'};
+            List list2 = StringUtilities.BaseCoreGenericHandler(string3, resultObj, false, 0, 6, null);
             if (list2.size() <= 1) {
                 if (arrayList.isEmpty()) {
                     ((Collection)arrayList).add(LiteBansModule_371.BaseCoreGenericHandler(string3, string3));
                     continue;
                 }
-                object3 = (LiteBansModule_354)CollectionUtilities.BaseCoreGenericHandler(arrayList);
-                arrayList.set(CollectionUtilities.LiteBansModule_31(arrayList), LiteBansModule_371.BaseCoreGenericHandler(object3.LiteBansModule_31(), (String)object3.e() + '\n' + string3));
+                resultObj = (LiteBansModule_354)CollectionUtilities.BaseCoreGenericHandler(arrayList);
+                arrayList.set(CollectionUtilities.LiteBansModule_31(arrayList), LiteBansModule_371.BaseCoreGenericHandler(resultObj.LiteBansModule_31(), (String)resultObj.e() + '\n' + string3));
                 continue;
             }
             ((Collection)arrayList).add(LiteBansModule_371.BaseCoreGenericHandler(list2.get(0), list2.get(1)));
         }
         if (!((Collection)arrayList).isEmpty()) {
-            object = arrayList;
+            targetObj = arrayList;
             flag3 = false;
-            object2 = object;
-            jTArray = object2.toArray(new LiteBansModule_354[0]);
+            contextObj = targetObj;
+            jTArray = contextObj.toArray(new LiteBansModule_354[0]);
         } else {
             jTArray = null;
         }
@@ -103,7 +102,7 @@ public final class DiscordEmbedBuilder {
     public final int BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull CharSequence charSequence) {
         int n = 0xFFFFFF;
         try {
-            n = ((Number)Integer.valueOf(StringUtilities.LiteBansModule_31(((Object)charSequence).toString(), '#', null, 2, null), 16)).intValue();
+            n = ((Number)Integer.valueOf(StringUtilities.LiteBansModule_31((charSequence).toString(), '#', null, 2, null), 16)).intValue();
         }
         catch (NumberFormatException numberFormatException) {
             ch2.e().getLogger().warning("Invalid color format InitializerHandler_3 embed configuration, ");
@@ -112,7 +111,7 @@ public final class DiscordEmbedBuilder {
     }
 
     public final String BaseCoreGenericHandler(@NotNull CharSequence charSequence) {
-        return BlackHandler.BaseCoreGenericHandler((CharSequence)HoverTextFormatter.LiteBansModule_31.BaseCoreGenericHandler(((Object)charSequence).toString()));
+        return BlackHandler.BaseCoreGenericHandler(HoverTextFormatter.LiteBansModule_31.BaseCoreGenericHandler((charSequence).toString()));
     }
 
     public final void BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull ContentHandler i32, @NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, int n, @Nullable String string, @Nullable LiteBansModule_354[] jTArray, boolean flag) {
@@ -126,10 +125,9 @@ public final class DiscordEmbedBuilder {
                 objectArray = jTArray;
                 int n2 = objectArray.length;
                 for (int i = 0; i < n2; ++i) {
-                    Object object;
-                    Object object2 = object = objectArray[i];
-                    String string2 = (String)((LiteBansModule_354)object2).BaseCoreGenericHandler();
-                    String string3 = (String)((LiteBansModule_354)object2).c();
+                    Object contextObj = targetObj = objectArray[i];
+                    String string2 = (String)((LiteBansModule_354)contextObj).BaseCoreGenericHandler();
+                    String string3 = (String)((LiteBansModule_354)contextObj).c();
                     g92.BaseCoreGenericHandler(string2, string3, flag);
 }
             objectArray = new LiteBansModule_211[]{g92};

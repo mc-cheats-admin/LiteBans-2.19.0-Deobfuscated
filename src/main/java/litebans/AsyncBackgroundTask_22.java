@@ -27,7 +27,7 @@ implements Runnable {
 
     @Override
     public void e() {
-        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
         configService.e();
         long l3 = 80L;
         if (configService.LiteBansModule_194().e() > 1) {
@@ -57,9 +57,9 @@ implements Runnable {
     @Override
     public void run() {
         AtomicBoolean atomicBoolean = this.g;
-        Object object = atomicBoolean;
-        if (!((AtomicBoolean)object).compareAndSet(false, true)) return;
-        object = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        Object targetObj = atomicBoolean;
+        if (!targetObj.compareAndSet(false, true)) return;
+        targetObj = this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
         try {
             int n2;
             AsyncBackgroundTask_22 t2 = this;
@@ -87,18 +87,18 @@ implements Runnable {
                     throw new CommandExitException();
 }
             int n3 = n2;
-            if (((DatabaseMonitorService)object).BaseCoreGenericHandler(2) && n <= 2) {
+            if (targetObj.BaseCoreGenericHandler(2) && n <= 2) {
                 return;
             }
             int n4 = 1;
             if (n4 > n3) return;
             while (true) {
                 LiteBansModule_95 cp_02;
-                if ((LiteBansModule_95)this.LiteBansModule_194.peek() == null) {
+                if (this.LiteBansModule_194.peek() == null) {
                     return;
                 }
                 if (this.plugin(cp_02)) return;
-                LiteBansModule_95 cp_03 = (LiteBansModule_95)this.LiteBansModule_194.poll();
+                LiteBansModule_95 cp_03 = this.LiteBansModule_194.poll();
                 if (cp_03 != cp_02) {
                     ObjectUtilities.BaseCoreGenericHandler(cp_03);
                     if (this.plugin(cp_03)) {
@@ -117,7 +117,7 @@ implements Runnable {
             if (exception instanceof InterruptedException) {
                 return;
             }
-            ((DatabaseMonitorService)object).BaseCoreGenericHandler(exception);
+            targetObj.BaseCoreGenericHandler(exception);
             return;
         }
         finally {
@@ -134,7 +134,7 @@ implements Runnable {
             } else {
                 for (Object t2 : iterable) {
                     LiteBansModule_95 cp_03 = (LiteBansModule_95)t2;
-                    if (!(ObjectUtilities.BaseCoreGenericHandler((Object)cp_03.c(), (Object)cp_02.c()) || ObjectUtilities.BaseCoreGenericHandler((Object)cp_03.g(), (Object)cp_02.g()) || ObjectUtilities.BaseCoreGenericHandler((Object)cp_03.LiteBansModule_31(), (Object)cp_02.LiteBansModule_31()))) continue;
+                    if (!(ObjectUtilities.BaseCoreGenericHandler(cp_03.c(), cp_02.c()) || ObjectUtilities.BaseCoreGenericHandler(cp_03.g(), cp_02.g()) || ObjectUtilities.BaseCoreGenericHandler(cp_03.LiteBansModule_31(), cp_02.LiteBansModule_31()))) continue;
                     flag = true;
                     break;
                 }
@@ -144,13 +144,13 @@ implements Runnable {
     }
 
     public final void BaseCoreGenericHandler(@Nullable String string, @Nullable String string2, @Nullable String string3) {
-        CommandThrottleService v2 = (CommandThrottleService)this.plugin.BaseCoreGenericHandler(CommandThrottleService.class);
-        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        CommandThrottleService v2 = this.plugin.BaseCoreGenericHandler(CommandThrottleService.class);
+        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
         if (configService.LiteBansModule_194().LockdownCommandHandler() && !v2.BaseCoreGenericHandler((byte)0, string2)) {
             String string4 = string;
-            ObjectUtilities.BaseCoreGenericHandler((Object)string4);
+            ObjectUtilities.BaseCoreGenericHandler(string4);
             String string5 = string2;
-            ObjectUtilities.BaseCoreGenericHandler((Object)string5);
+            ObjectUtilities.BaseCoreGenericHandler(string5);
             this.LiteBansModule_194.offer(new LiteBansModule_95(string4, HexEncodingHelper.LiteBansModule_194(string5), string3));
             ConfigService q_03 = configService;
             if (q_03.g()) {

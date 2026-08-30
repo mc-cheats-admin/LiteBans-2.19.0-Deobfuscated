@@ -13,13 +13,13 @@ extends ConfigurationManager {
 
     @Override
     public int LiteBansModule_31() {
-        Collection collection = ((BukkitPlugin)this.plugin).getServer().getOnlinePlayers();
+        Collection collection = (this.plugin).getServer().getOnlinePlayers();
         return collection.size();
     }
 
     @Override
     public CommandSenderWrapper[] BaseCoreGenericHandler() {
-        Collection collection = ((BukkitPlugin)this.plugin).getServer().getOnlinePlayers();
+        Collection collection = (this.plugin).getServer().getOnlinePlayers();
         if (collection.isEmpty()) {
             return CommandSenderWrapper.BaseCoreGenericHandler;
         }

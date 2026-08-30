@@ -8,7 +8,7 @@ static final class ReaderHandler
 implements LiteBansModule_295 {
     private final BufferedReader BaseCoreGenericHandler;
     public ReaderHandler(@NotNull BufferedReader bufferedReader) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)bufferedReader, "reader");
+        ObjectUtilities.BaseCoreGenericHandler(bufferedReader, "reader");
         this.plugin = bufferedReader;
     }
 

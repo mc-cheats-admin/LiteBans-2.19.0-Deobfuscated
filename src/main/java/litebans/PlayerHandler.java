@@ -13,8 +13,8 @@ implements LiteBansModule_200 {
 
     @Override
     public boolean BaseCoreGenericHandler(LiteBansModule_15 aK2, BroadcastHandler ij2, String string) {
-        if (ij2 == BroadcastHandler.g && ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)this.AsyncBackgroundTask_5.AsyncBackgroundTask_21()) && this.g.LiteBansModule_31(this)) {
-            ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, this.LiteBansModule_194, GeoIPLookupService.BaseCoreGenericHandler((CharSequence)MessageKey.LiteBansModule_99.BaseCoreGenericHandler("player", (Object)this.AsyncBackgroundTask_5.AsyncBackgroundTask_21()), (CharSequence)"executor", (Object)this.AsyncBackgroundTask_5.H()), null, 4, null);
+        if (ij2 == BroadcastHandler.g && ObjectUtilities.BaseCoreGenericHandler(string, this.AsyncBackgroundTask_5.AsyncBackgroundTask_21()) && this.g.LiteBansModule_31(this)) {
+            ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, this.LiteBansModule_194, GeoIPLookupService.BaseCoreGenericHandler(MessageKey.LiteBansModule_99.BaseCoreGenericHandler("player", this.AsyncBackgroundTask_5.AsyncBackgroundTask_21()), (CharSequence)"executor", this.AsyncBackgroundTask_5.H()), null, 4, null);
         }
         return true;
     }

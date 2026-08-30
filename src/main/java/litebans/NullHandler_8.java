@@ -39,20 +39,19 @@ implements BanProvider {
     public final SilentHandler BaseCoreGenericHandler(@NotNull UUID uUID) {
         SilentHandler dZ2;
 {
-            Object object = this;
-            WeakHashMap weakHashMap = (WeakHashMap)((NullHandler_8)object).LiteBansModule_31().get();
-            object = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+                        WeakHashMap weakHashMap = (WeakHashMap)targetObj.LiteBansModule_31().get();
+            targetObj = this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
             dZ2 = null;
-            Object object2 = object;
+            Object contextObj = targetObj;
             try {
-                LiteBansModule_82 ch2 = ((DatabaseMonitorService)object2).LiteBansModule_194();
+                LiteBansModule_82 ch2 = ((DatabaseMonitorService)contextObj).LiteBansModule_194();
                 Closeable closeable = ch2;
                 Throwable throwable = null;
                 try {
-                    Object object3 = (LiteBansModule_82)closeable;
+                    Object resultObj = (LiteBansModule_82)closeable;
                     LiteBansModule_82 ch3 = ch2;
-                    SilentHandler dZ3 = dZ2 = AllHandler_3.BaseCoreGenericHandler(ch3, uUID.toString(), null, BanHandler.LiteBansModule_240, ((DatabaseMonitorService)object).ServerSyncService(), false, false, 48, null);
-                    boolean flag5 = dZ3 != null ? dZ3.BaseCoreGenericHandler(uUID.toString(), null, DatabaseMonitorService.BaseCoreGenericHandler((DatabaseMonitorService)object, false, 1, null)) : false;
+                    SilentHandler dZ3 = dZ2 = AllHandler_3.BaseCoreGenericHandler(ch3, uUID.toString(), null, BanHandler.LiteBansModule_240, targetObj.ServerSyncService(), false, false, 48, null);
+                    boolean flag5 = dZ3 != null ? dZ3.BaseCoreGenericHandler(uUID.toString(), null, DatabaseMonitorService.BaseCoreGenericHandler((DatabaseMonitorService)targetObj, false, 1, null)) : false;
                     if (flag5) {
                         ObjectUtilities.BaseCoreGenericHandler(weakHashMap);
                         Map map = weakHashMap;
@@ -62,7 +61,7 @@ implements BanProvider {
                     } else {
                         dZ2 = null;
                     }
-                    object3 = KotlinUnitHandler.BaseCoreGenericHandler;
+                    resultObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable2) {
                     throwable = throwable2;
@@ -72,7 +71,7 @@ implements BanProvider {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
 }
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object2).LiteBansModule_31(sQLException)) break;
+                if (((DatabaseMonitorService)contextObj).LiteBansModule_31(sQLException)) break;
                 throw sQLException;
 }
         return dZ2;
@@ -83,12 +82,12 @@ implements BanProvider {
         UUID uUID = playerIdentity.getUuid();
         NullHandler_8 z2 = z;
         SilentHandler dZ2 = (SilentHandler)((WeakHashMap)z2.LiteBansModule_31().get()).get(uUID);
-        Object object = dZ2;
-        if (object == null || (object = ((SilentHandler)object).LiteBansModule_31()) == null) {
+        Object targetObj = dZ2;
+        if (targetObj == null || (targetObj = targetObj.LiteBansModule_31()) == null) {
             SilentHandler dZ3 = this.plugin(playerIdentity.getUuid());
-            object = dZ3 != null ? dZ3.LiteBansModule_31() : (CharSequence)"null";
+            targetObj = dZ3 != null ? dZ3.LiteBansModule_31() : (CharSequence)"null";
         }
-        return object.toString();
+        return targetObj.toString();
     }
 
     public boolean isBanned(@NotNull PlayerIdentity playerIdentity) {
@@ -97,21 +96,19 @@ implements BanProvider {
     }
 
     public String getBanOperator(@NotNull PlayerIdentity playerIdentity) {
-        Object object = this;
-        UUID uUID = playerIdentity.getUuid();
-        NullHandler_8 z = object;
+                UUID uUID = playerIdentity.getUuid();
+        NullHandler_8 z = targetObj;
         SilentHandler dZ2 = (SilentHandler)((WeakHashMap)z.LiteBansModule_31().get()).get(uUID);
         if (dZ2 != null) {
             return dZ2.LiteBansModule_433();
         }
-        Object object2 = object = this.plugin(playerIdentity.getUuid());
-        return object2 != null ? ((SilentHandler)object2).LiteBansModule_433() : null;
+        Object contextObj = targetObj = this.plugin(playerIdentity.getUuid());
+        return contextObj != null ? ((SilentHandler)contextObj).LiteBansModule_433() : null;
     }
 
     public Date getBanExpiration(@NotNull PlayerIdentity playerIdentity) {
-        Object object = this;
-        UUID uUID = playerIdentity.getUuid();
-        NullHandler_8 z = object;
+                UUID uUID = playerIdentity.getUuid();
+        NullHandler_8 z = targetObj;
         SilentHandler dZ2 = (SilentHandler)((WeakHashMap)z.LiteBansModule_31().get()).get(uUID);
         if (dZ2 != null) {
             if (dZ2.LiteBansModule_401() <= 0L) {
@@ -119,25 +116,25 @@ implements BanProvider {
             }
             return new Date(dZ2.LiteBansModule_401());
         }
-        object = this.plugin(playerIdentity.getUuid());
-        if (object != null) {
-            if (((SilentHandler)object).HoverTextFormatter()) {
+        targetObj = this.plugin(playerIdentity.getUuid());
+        if (targetObj != null) {
+            if (targetObj.HoverTextFormatter()) {
                 return null;
             }
-            return new Date(((SilentHandler)object).LiteBansModule_401());
+            return new Date(targetObj.LiteBansModule_401());
         }
         return null;
     }
 
-    public final void BaseCoreGenericHandler(@Nullable Object object) {
-        ObjectUtilities.LiteBansModule_31(object, "");
-        ServerListPlusPlugin serverListPlusPlugin = (ServerListPlusPlugin)object;
+    public final void BaseCoreGenericHandler(@Nullable Object targetObj) {
+        ObjectUtilities.LiteBansModule_31(targetObj, "");
+        ServerListPlusPlugin serverListPlusPlugin = (ServerListPlusPlugin)targetObj;
         ServerListPlusCore serverListPlusCore = serverListPlusPlugin.getCore();
         if (serverListPlusCore == null) {
             throw new NullPointerException("core");
         }
         ServerListPlusCore serverListPlusCore2 = serverListPlusCore;
-        serverListPlusCore2.setBanProvider((BanProvider)this);
+        serverListPlusCore2.setBanProvider(this);
         this.plugin.getLogger().info("Registered CommandExitException ServerListPlus ban ");
     }
 

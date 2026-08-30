@@ -26,6 +26,6 @@ extends ConfigurationManager {
     }
 
     private final ConfigYmlHandler BaseCoreGenericHandler() {
-        return (ConfigYmlHandler)this.plugin;
+        return this.plugin;
 }
 

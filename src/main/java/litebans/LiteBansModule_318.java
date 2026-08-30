@@ -11,10 +11,9 @@ public final class LiteBansModule_318 {
     }
 
     public final String BaseCoreGenericHandler(@NotNull String string) {
-        if (StringUtilities.c((CharSequence)string, '#', false, 2, null)) {
+        if (StringUtilities.c(string, '#', false, 2, null)) {
             boolean flag;
             boolean flag2;
-            Object object;
             List list;
             int n;
             ArrayList arrayList;
@@ -22,48 +21,48 @@ public final class LiteBansModule_318 {
 {
                 stringBuilder = new StringBuilder();
                 arrayList = new ArrayList();
-                Object object2 = new char[]{'\n'};
-                object2 = StringUtilities.BaseCoreGenericHandler((CharSequence)MessageKey.LiteBansModule_50, object2, false, 0, 6, null);
-                char[] cArray = object2;
-                Object object3 = new ArrayList();
+                Object contextObj = new char[]{'\n'};
+                contextObj = StringUtilities.BaseCoreGenericHandler(MessageKey.LiteBansModule_50, contextObj, false, 0, 6, null);
+                char[] cArray = contextObj;
+                Object resultObj = new ArrayList();
                 n = 0;
-                Object object4 = cArray.iterator();
-                while (object4.hasNext()) {
-                    Object t2 = object4.next();
+                Object helperObj = cArray.iterator();
+                while (helperObj.hasNext()) {
+                    Object t2 = helperObj.next();
                     String string2 = (String)t2;
-                    if (!StringUtilities.BaseCoreGenericHandler((CharSequence)string2, (CharSequence)"%AsyncBackgroundTask_21", false, 2, null)) continue;
-                    object3.add(t2);
+                    if (!StringUtilities.BaseCoreGenericHandler(string2, (CharSequence)"%AsyncBackgroundTask_21", false, 2, null)) continue;
+                    resultObj.add(t2);
                 }
-                list = (List)object3;
-                object = list;
-                if (object instanceof Collection && ((Collection)object).isEmpty()) {
+                list = (List)resultObj;
+                targetObj = list;
+                if (targetObj instanceof Collection && targetObj.isEmpty()) {
                     flag2 = false;
                 } else {
-                    object3 = object.iterator();
-                    while (object3.hasNext()) {
-                        Object e = object3.next();
-                        object4 = (String)e;
-                        char c = StringUtilities.BaseCoreGenericHandler((CharSequence)object4);
+                    resultObj = targetObj.iterator();
+                    while (resultObj.hasNext()) {
+                        Object e = resultObj.next();
+                        helperObj = (String)e;
+                        char c = StringUtilities.BaseCoreGenericHandler(helperObj);
                         String string3 = "#";
-                        if (!StringUtilities.BaseCoreGenericHandler((CharSequence)string, (CharSequence)(c + string3), false, 2, null)) continue;
+                        if (!StringUtilities.BaseCoreGenericHandler(string, (CharSequence)(c + string3), false, 2, null)) continue;
                         flag2 = true;
                         break;
                     }
                     flag2 = false;
 }
             boolean flag7 = flag2;
-            Object object5 = object = (Object)string.toCharArray();
+            Object tempObj = targetObj = string.toCharArray();
             n = 0;
-            for (Object object6 : object5) {
+            for (Object object6 : tempObj) {
                 int n2 = n++;
                 Object object7 = object6;
                 int n3 = n2;
                 flag = false;
-                if (object7 != 35 || ((Object)object).length <= n3 + 6) continue;
+                if (object7 != 35 || (targetObj).length <= n3 + 6) continue;
                 StringUtilities.BaseCoreGenericHandler(stringBuilder);
                 stringBuilder.append('#');
                 for (int i = 1; i < 7; ++i) {
-                    Object object8 = object[n3 + i];
+                    Object object8 = targetObj[n3 + i];
                     if (!Character.isDigit((char)object8)) {
                         if (!(97 <= object8 ? object8 < 103 : false)) {
                             boolean bl10 = 65 <= object8 ? object8 < 71 : false;
@@ -88,10 +87,10 @@ public final class LiteBansModule_318 {
 }
                 ((Collection)arrayList).add(LiteBansModule_371.BaseCoreGenericHandler(string4, string5));
             }
-            object5 = string;
+            tempObj = string;
             flag8 = false;
             Object object9 = null;
-            object9 = object5;
+            object9 = tempObj;
             Iterable iterable = arrayList;
             for (Object t4 : iterable) {
                 LiteBansModule_354 jT2 = (LiteBansModule_354)t4;

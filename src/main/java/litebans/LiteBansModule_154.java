@@ -31,7 +31,7 @@ implements CommandSenderWrapper {
 
     @Override
     public void c(String string) {
-        CommandSender commandSender = (CommandSender)this.e.get();
+        CommandSender commandSender = this.e.get();
         if (commandSender == null || string.isEmpty()) {
             return;
         }
@@ -40,7 +40,7 @@ implements CommandSenderWrapper {
 
     @Override
     public String g() {
-        CommandSender commandSender = (CommandSender)this.e.get();
+        CommandSender commandSender = this.e.get();
         if (commandSender == null) {
             return this.LiteBansModule_194;
         }
@@ -56,7 +56,7 @@ implements CommandSenderWrapper {
     public @Nullable String LiteBansModule_31() {
         CommandSender commandSender;
         String string = this.c;
-        if (string == null && (commandSender = (CommandSender)this.e.get()) != null) {
+        if (string == null && (commandSender = this.e.get()) != null) {
             this.c = string = this.plugin(commandSender);
         }
         return string;
@@ -69,7 +69,7 @@ implements CommandSenderWrapper {
 
     @Override
     public @Nullable String LiteBansModule_240() {
-        CommandSender commandSender = (CommandSender)this.e.get();
+        CommandSender commandSender = this.e.get();
         if (commandSender == null) {
             return null;
         }
@@ -89,7 +89,7 @@ implements CommandSenderWrapper {
         UUID uUID;
         CommandSender commandSender;
         UUID uUID2 = this.AsyncBackgroundTask_5;
-        if (uUID2.equals(LiteBansModule_31) && this.GnuSparseMapHandler && (commandSender = (CommandSender)this.e.get()) != null && (uUID = ((ProxiedPlayer)commandSender).getUniqueId()) != null) {
+        if (uUID2.equals(LiteBansModule_31) && this.GnuSparseMapHandler && (commandSender = this.e.get()) != null && (uUID = ((ProxiedPlayer)commandSender).getUniqueId()) != null) {
             this.AsyncBackgroundTask_5 = uUID;
             return uUID;
         }
@@ -103,16 +103,16 @@ implements CommandSenderWrapper {
     }
 
     public int LiteBansModule_31() {
-        Object object = this.c();
-        if (object instanceof ProxiedPlayer) {
-            PendingConnection pendingConnection = ((ProxiedPlayer)object).getPendingConnection();
+        Object targetObj = this.c();
+        if (targetObj instanceof ProxiedPlayer) {
+            PendingConnection pendingConnection = targetObj.getPendingConnection();
             return pendingConnection.getVersion();
         }
         return 0;
     }
 
-    public boolean equals(Object object) {
-        return this == object || object instanceof LiteBansModule_154 && ((LiteBansModule_154)object).AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
+    public boolean equals(Object targetObj) {
+        return this == targetObj || targetObj instanceof LiteBansModule_154 && targetObj.AsyncBackgroundTask_5().equals(this.AsyncBackgroundTask_5());
     }
 
     @Override
@@ -120,7 +120,7 @@ implements CommandSenderWrapper {
         if (string == null) {
             return true;
         }
-        CommandSender commandSender = (CommandSender)this.e.get();
+        CommandSender commandSender = this.e.get();
         return commandSender != null && commandSender.hasPermission(string);
     }
 
@@ -132,7 +132,7 @@ implements CommandSenderWrapper {
     @Override
     public boolean GnuSparseMapHandler() {
         CommandSender commandSender;
-        if (this.GnuSparseMapHandler && (commandSender = (CommandSender)this.e.get()) != null) {
+        if (this.GnuSparseMapHandler && (commandSender = this.e.get()) != null) {
             return ((ProxiedPlayer)commandSender).isConnected();
         }
         return this.e.get() != null;
@@ -148,7 +148,7 @@ implements CommandSenderWrapper {
         if (string == null) {
             throw new NullPointerException("reason is marked non-null but is null");
         }
-        CommandSender commandSender = (CommandSender)this.e.get();
+        CommandSender commandSender = this.e.get();
         if (commandSender == null) {
             return;
         }
@@ -159,7 +159,7 @@ implements CommandSenderWrapper {
 
     @Override
     public void LiteBansModule_31(String string) {
-        CommandSender commandSender = (CommandSender)this.e.get();
+        CommandSender commandSender = this.e.get();
         if (commandSender == null) {
             return;
         }
@@ -174,7 +174,7 @@ implements CommandSenderWrapper {
 
     @Override
     public void BaseCoreGenericHandler(String string) {
-        CommandSender commandSender = (CommandSender)this.e.get();
+        CommandSender commandSender = this.e.get();
         if (commandSender == null || this.GnuSparseMapHandler && !this.GnuSparseMapHandler()) {
             return;
         }
@@ -183,7 +183,7 @@ implements CommandSenderWrapper {
 
     @Override
     public void BaseCoreGenericHandler(String string, byte[] byArray) {
-        CommandSender commandSender = (CommandSender)this.e.get();
+        CommandSender commandSender = this.e.get();
         if (commandSender == null) {
             return;
         }

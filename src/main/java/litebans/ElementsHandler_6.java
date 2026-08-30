@@ -9,8 +9,8 @@ import org.jetbrains.annotations.NotNull;
 static class ElementsHandler_6
 extends ComparatorHandler_2 {
     public static final boolean BaseCoreGenericHandler(@NotNull Collection collection, @NotNull Iterable iterable) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "elements");
+        ObjectUtilities.BaseCoreGenericHandler(collection, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "elements");
         if (iterable instanceof Collection) {
             return collection.addAll((Collection)iterable);
         }
@@ -22,14 +22,14 @@ extends ComparatorHandler_2 {
     }
 
     public static final boolean BaseCoreGenericHandler(@NotNull Collection collection, @NotNull Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "elements");
+        ObjectUtilities.BaseCoreGenericHandler(collection, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "elements");
         return collection.addAll(ArrayUtilities.BaseCoreGenericHandler(objectArray));
     }
 
     public static final boolean BaseCoreGenericHandler(@NotNull Iterable iterable, @NotNull LiteBansModule_178 eo_02) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)iterable, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)eo_02, "predicate");
+        ObjectUtilities.BaseCoreGenericHandler(iterable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(eo_02, "predicate");
         return ElementsHandler_6.BaseCoreGenericHandler(iterable, eo_02, true);
     }
 
@@ -44,8 +44,8 @@ extends ComparatorHandler_2 {
     }
 
     public static final boolean BaseCoreGenericHandler(@NotNull List list, @NotNull LiteBansModule_178 eo_02) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)list, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)eo_02, "predicate");
+        ObjectUtilities.BaseCoreGenericHandler(list, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(eo_02, "predicate");
         return ElementsHandler_6.BaseCoreGenericHandler(list, eo_02, false);
     }
 

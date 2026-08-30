@@ -40,11 +40,11 @@ Serializable {
         return (int)LiteBansModule_267.BaseCoreGenericHandler(byArray, n, 2);
     }
 
-    public boolean equals(Object object) {
-        if (object == null || !(object instanceof LiteBansModule_288)) {
+    public boolean equals(Object targetObj) {
+        if (targetObj == null || !(targetObj instanceof LiteBansModule_288)) {
             return false;
         }
-        return this.plugin == ((LiteBansModule_288)object).BaseCoreGenericHandler();
+        return this.plugin == targetObj.BaseCoreGenericHandler();
     }
 
     public int hashCode() {

@@ -32,18 +32,16 @@ extends LiteBansModule_199 {
         int n2;
         int n3;
         boolean flag2;
-        Object object;
-        Object object2;
 {
-            object2 = AbstractCommand.AsyncBackgroundTask_5;
-            object = args;
+            contextObj = AbstractCommand.AsyncBackgroundTask_5;
+            targetObj = args;
             flag2 = false;
-            n3 = ((String[])object).length;
+            n3 = ((String[])targetObj).length;
             for (n2 = 0; n2 < n3; ++n2) {
                 String string2;
-                String string3 = string2 = object[n2];
+                String string3 = string2 = targetObj[n2];
                 n = 0;
-                if (!StringUtilities.LiteBansModule_31((CharSequence)string3)) continue;
+                if (!StringUtilities.LiteBansModule_31(string3)) continue;
                 flag = false;
                 break;
             }
@@ -52,61 +50,60 @@ extends LiteBansModule_199 {
         if (flag) {
             filteredArgs = args;
         } else {
-            object = args;
+            targetObj = args;
             flag2 = false;
-            String[] parsedArgs = object;
+            String[] parsedArgs = targetObj;
             Collection collection = new ArrayList();
             n = parsedArgs.length;
             for (int i = 0; i < n; ++i) {
                 String string4;
                 String string5 = string4 = parsedArgs[i];
-                boolean flag6 = !StringUtilities.LiteBansModule_31((CharSequence)string5);
+                boolean flag6 = !StringUtilities.LiteBansModule_31(string5);
                 if (!flag6) continue;
                 collection.add(string4);
             }
-            object = (List)collection;
+            targetObj = (List)collection;
             flag2 = false;
-            parsedArgs = object;
+            parsedArgs = targetObj;
             filteredArgs = parsedArgs.toArray(new String[0]);
         }
         String[] cmdArgs = filteredArgs;
-        object2 = string;
-        object2 = StringUtilities.BaseCoreGenericHandler((String)object2, "litebans:", null, 2, null);
-        AbstractCommand abstractCommand = (AbstractCommand)this.plugin((String)object2);
+        contextObj = string;
+        contextObj = StringUtilities.BaseCoreGenericHandler((String)contextObj, "litebans:", null, 2, null);
+        AbstractCommand abstractCommand = this.plugin((String)contextObj);
         if (abstractCommand != null) {
-            object = abstractCommand.getPermission();
-            if (object != null) {
-                CommandSenderWrapper jv_03 = sender;
+            targetObj = abstractCommand.getPermission();
+            if (targetObj != null) {
+                CommandSenderWrapper senderWrapper = sender;
                 n2 = 0;
-                CommandSenderWrapper jv_04 = jv_03;
-                if (!jv_04.e((String)object)) {
-                    jv_03 = sender;
+                CommandSenderWrapper senderWrapper = senderWrapper;
+                if (!senderWrapper.etargetObj) {
+                    senderWrapper = sender;
                     CharSequence charSequence = MessageKey.cZ;
-                    ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, jv_03, charSequence, null, 4, null);
+                    ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, senderWrapper, charSequence, null, 4, null);
                     return;
 }
             BanHandler_4 g = this;
             n2 = 0;
-            g.BaseCoreGenericHandler.LiteBansModule_31(new CommandExecutionTask(sender, cmdArgs, abstractCommand, (String)object2));
+            g.BaseCoreGenericHandler.LiteBansModule_31(new CommandExecutionTask(sender, cmdArgs, abstractCommand, (String)contextObj));
             return;
         }
-        object = CommandArgumentUtils.BaseCoreGenericHandler(AbstractCommand.AsyncBackgroundTask_5, (String)object2, cmdArgs);
+        targetObj = CommandArgumentUtils.BaseCoreGenericHandler(AbstractCommand.AsyncBackgroundTask_5, (String)contextObj, cmdArgs);
         BanHandler_4 g = this;
-        Object object3 = this;
-        n3 = 0;
-        AbstractCommand banCommand = (AbstractCommand)((CommandManager)object3).BaseCoreGenericHandler("ban");
+                n3 = 0;
+        AbstractCommand banCommand = (AbstractCommand)this.BaseCoreGenericHandler("ban");
         if (banCommand == null) {
             AssertionUtilities.BaseCoreGenericHandler();
             throw new CommandExitException();
         }
-        object3 = banCommand;
+        resultObj = banCommand;
         n3 = 0;
-        g.BaseCoreGenericHandler.LiteBansModule_31(new CommandExecutionTask(sender, (String[])object, (AbstractCommand)object3, (String)object2));
+        g.BaseCoreGenericHandler.LiteBansModule_31(new CommandExecutionTask(sender, (String[])targetObj, (AbstractCommand)resultObj, (String)contextObj));
     }
 
     @Override
     public void BaseCoreGenericHandler() {
-        ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+        ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
         configService.BaseCoreGenericHandler();
         super.BaseCoreGenericHandler();
         this.plugin.BaseCoreGenericHandler(this);
@@ -121,7 +118,7 @@ extends LiteBansModule_199 {
     @Override
     public void BaseCoreGenericHandler(@NotNull LiteBansModule_352 v1, @NotNull CommandDispatcher v2) {
 {
-                        v3 = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+                        v3 = this.plugin.BaseCoreGenericHandler(ConfigService.class);
                         if (!v3.e(v1.getName())) break;
                         super.BaseCoreGenericHandler(v1, v2);
                         if (v1.BaseCoreGenericHandler() instanceof ClearChatCommand) break;
@@ -169,8 +166,8 @@ extends LiteBansModule_199 {
             while (arg5.hasNext()) {
                 arg7 = arg5.next();
                 arg8 = (String)arg7;
-                ObjectUtilities.BaseCoreGenericHandler((Object)arg8);
-                if (!(StringUtilities.c((CharSequence)arg8, ':', false, 2, null) == false)) continue;
+                ObjectUtilities.BaseCoreGenericHandler(arg8);
+                if (!(StringUtilities.c(arg8, ':', false, 2, null) == false)) continue;
                 arg6.add(arg7);
             }
             arg1 = (List)arg6;
@@ -179,8 +176,7 @@ extends LiteBansModule_199 {
 {
                                                 arg6 = arg3.next();
                                                 arg9 = (String)arg6;
-                                                arg7 = this;
-                                                ObjectUtilities.BaseCoreGenericHandler((Object)arg9);
+                                                                                                ObjectUtilities.BaseCoreGenericHandler(arg9);
                                                 arg8 = arg9;
                                                 arg10 = v1.getName();
                                                 v1 = new StringBuilder().append("litebans + ");
@@ -311,10 +307,10 @@ extends LiteBansModule_199 {
     public List BaseCoreGenericHandler(@Nullable LiteCommand command, @NotNull String string, @NotNull CommandSenderWrapper sender, @NotNull String[] args) {
         List list;
         if (!(args.length == 0)) {
-            CommandSenderWrapper jv_03 = sender;
+            CommandSenderWrapper senderWrapper = sender;
             String string2 = "litebans.tabcomplete";
-            CommandSenderWrapper jv_04 = jv_03;
-            if (!(!jv_04.e(string2))) {
+            CommandSenderWrapper senderWrapper = senderWrapper;
+            if (!(!senderWrapper.e(string2))) {
                 list = AbstractCommand.AsyncBackgroundTask_5.BaseCoreGenericHandler(command, string, sender, this.plugin, args);
                 return list;
 }

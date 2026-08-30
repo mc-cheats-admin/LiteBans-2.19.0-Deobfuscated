@@ -23,33 +23,32 @@ extends AbstractCommand {
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
 {
-            Object object = this.LiteBansModule_240().q();
-            Object object2 = object;
-            Object object3 = new ArrayList();
-            for (Object object4 : object2) {
-                CommandSenderWrapper jv_03 = (CommandSenderWrapper)object4;
-                if (!(!ObjectUtilities.BaseCoreGenericHandler((Object)jv_03, sender))) continue;
-                object3.add(object4);
+            Object targetObj = this.LiteBansModule_240().q();
+            Object contextObj = targetObj;
+            Object resultObj = new ArrayList();
+            for (Object helperObj : contextObj) {
+                CommandSenderWrapper senderWrapper = (CommandSenderWrapper)helperObj;
+                if (!(!ObjectUtilities.BaseCoreGenericHandler(senderWrapper, sender))) continue;
+                resultObj.add(helperObj);
             }
-            List list = (List)object3;
-            object = this;
+            List list = (List)resultObj;
+            targetObj = this;
             flag = false;
-            object = (DatabaseMonitorService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+            targetObj = (DatabaseMonitorService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
             flag = false;
             try {
-                object2 = ((DatabaseMonitorService)object).LiteBansModule_194();
-                object3 = (Closeable)object2;
+                contextObj = targetObj.LiteBansModule_194();
+                resultObj = (Closeable)contextObj;
                 Throwable throwable = null;
                 try {
-                    Object object4;
-                    Object object5 = (LiteBansModule_82)object3;
-                    object4 = object2;
-                    CharSequence charSequence = object4.BaseCoreGenericHandler((CharSequence)MessageKey.LiteBansModule_32.BaseCoreGenericHandler("num", (Object)list.size()));
-                    CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, charSequence);
+                    Object tempObj = (LiteBansModule_82)resultObj;
+                    helperObj = contextObj;
+                    CharSequence charSequence = helperObj.BaseCoreGenericHandler(MessageKey.LiteBansModule_32.BaseCoreGenericHandler("num", list.size()));
+                    CommandArgumentUtils.BaseCoreGenericHandler(this, charSequence);
                     Iterable iterable = list;
                     for (Object t2 : iterable) {
-                        CommandSenderWrapper jv_04 = (CommandSenderWrapper)t2;
-                        LiteBansModule_206 fW2 = new LiteBansModule_206(jv_04.i(), (LiteBansModule_82)object4, null, false, 0, 28, null).i();
+                        CommandSenderWrapper senderWrapper = (CommandSenderWrapper)t2;
+                        LiteBansModule_206 fW2 = new LiteBansModule_206(senderWrapper.i(), (LiteBansModule_82)helperObj, null, false, 0, 28, null).i();
                         MessageHandler messageHandler = fW2;
                         if (!(!((LiteBansModule_206)messageHandler).e())) continue;
                         messageHandler = this;
@@ -57,19 +56,19 @@ extends AbstractCommand {
                         MessageHandler fg_03 = messageHandler;
                         if (fW2.m() < ((ConfigService)fg_03.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_31()) continue;
                         messageHandler = new CharSequence[]{"result", fW2.c()};
-                        CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, (CharSequence)LiteBansModule_242.BaseCoreGenericHandler(object4.BaseCoreGenericHandler((CharSequence)MessageKey.LiteBansModule_3, jv_04), (CharSequence[])messageHandler));
+                        CommandArgumentUtils.BaseCoreGenericHandler(this, LiteBansModule_242.BaseCoreGenericHandler(helperObj.BaseCoreGenericHandler(MessageKey.LiteBansModule_3, senderWrapper), (CharSequence[])messageHandler));
                     }
-                    object5 = KotlinUnitHandler.BaseCoreGenericHandler;
+                    tempObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable2) {
                     throwable = throwable2;
                     throw throwable2;
                 }
                 finally {
-                    BlockHandler.BaseCoreGenericHandler((Closeable)object3, throwable);
+                    BlockHandler.BaseCoreGenericHandler((Closeable)resultObj, throwable);
 }
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break;
+                if (targetObj.LiteBansModule_31(sQLException)) break;
                 throw sQLException;
 }
 

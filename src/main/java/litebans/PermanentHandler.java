@@ -49,22 +49,20 @@ public final class PermanentHandler {
     public final double BaseCoreGenericHandler(@NotNull String string, double d10) {
         Double d11;
         List list;
-        Object object;
 {
-            Object object2;
 {
                 List list2;
-                if (ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"permanent") || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"none") || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"unlimited") || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)"never") || ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)MessageKey.LiteBansModule_60.toString())) {
+                if (ObjectUtilities.BaseCoreGenericHandler(string, (Object)"permanent") || ObjectUtilities.BaseCoreGenericHandler(string, (Object)"none") || ObjectUtilities.BaseCoreGenericHandler(string, (Object)"unlimited") || ObjectUtilities.BaseCoreGenericHandler(string, (Object)"never") || ObjectUtilities.BaseCoreGenericHandler(string, MessageKey.LiteBansModule_60.toString())) {
                     return 0.0;
                 }
-                object2 = new char[]{' '};
-                object2 = StringUtilities.BaseCoreGenericHandler((CharSequence)string, object2, false, 0, 6, null);
-                if (!object2.isEmpty()) {
-                    object = object2.listIterator(object2.size());
-                    while (object.hasPrevious()) {
-                        String string2 = (String)object.previous();
-                        if (((CharSequence)string2).length() == 0) continue;
-                        list2 = CollectionUtilities.BaseCoreGenericHandler((Iterable)object2, object.nextIndex() + 1);
+                contextObj = new char[]{' '};
+                contextObj = StringUtilities.BaseCoreGenericHandler(string, contextObj, false, 0, 6, null);
+                if (!contextObj.isEmpty()) {
+                    targetObj = contextObj.listIterator(contextObj.size());
+                    while (targetObj.hasPrevious()) {
+                        String string2 = (String)targetObj.previous();
+                        if ((string2).length() == 0) continue;
+                        list2 = CollectionUtilities.BaseCoreGenericHandler((Iterable)contextObj, targetObj.nextIndex() + 1);
                         break;
 } else {
                     list2 = list = CollectionUtilities.e();
@@ -72,19 +70,19 @@ public final class PermanentHandler {
                 if (list.isEmpty()) {
                     return d10;
                 }
-                object2 = StringUtilities.BaseCoreGenericHandler((String)list.get(0), ',', '.', false, 4, null);
-                d11 = StringUtilities.LiteBansModule_31((String)object2);
+                contextObj = StringUtilities.BaseCoreGenericHandler((String)list.get(0), ',', '.', false, 4, null);
+                d11 = StringUtilities.LiteBansModule_31((String)contextObj);
                 if (d11 == null) break;
-                String string3 = String.valueOf(StringUtilities.LiteBansModule_31((CharSequence)object2));
+                String string3 = String.valueOf(StringUtilities.LiteBansModule_31(contextObj));
                 ObjectUtilities.LiteBansModule_31(string3, "");
-                if (!ObjectUtilities.BaseCoreGenericHandler((Object)string3.toLowerCase(Locale.ROOT), (Object)"AsyncBackgroundTask_5")) break;
+                if (!ObjectUtilities.BaseCoreGenericHandler(string3.toLowerCase(Locale.ROOT), (Object)"AsyncBackgroundTask_5")) break;
             }
-            Double d12 = StringUtilities.LiteBansModule_31(LiteBansModule_81.BaseCoreGenericHandler(this.plugin(), (CharSequence)object2, ""));
+            Double d12 = StringUtilities.LiteBansModule_31(LiteBansModule_81.BaseCoreGenericHandler(this.plugin(), contextObj, ""));
             if (d12 == null) {
                 return d10;
             }
             double d13 = d12;
-            String string4 = LiteBansModule_81.BaseCoreGenericHandler(this.LiteBansModule_31(), (CharSequence)object2, "");
+            String string4 = LiteBansModule_81.BaseCoreGenericHandler(this.LiteBansModule_31(), contextObj, "");
             SecHandler dk2 = this.plugin(string4);
             if (dk2 == null) {
                 return d10;
@@ -99,11 +97,11 @@ public final class PermanentHandler {
         if (dk4 == null) {
             return d10;
         }
-        object = dk4;
-        return ((SecHandler)((Object)object)).LiteBansModule_31(d11);
+        targetObj = dk4;
+        return ((SecHandler)(targetObj)).LiteBansModule_31(d11);
     }
 
-    public static /* synthetic */ double BaseCoreGenericHandler(PermanentHandler db_02, String string, double d10, int n, Object object) {
+    public static /* synthetic */ double BaseCoreGenericHandler(PermanentHandler db_02, String string, double d10, int n, Object targetObj) {
         if ((n & 2) != 0) {
             d10 = 0.0;
         }
@@ -125,10 +123,10 @@ public final class PermanentHandler {
         CharSequence charSequence3 = null;
         CharSequence charSequence4 = null;
         if (flag) {
-            charSequence = this.plugin(l5, (Object)MessageKey.LiteBansModule_125, (Object)MessageKey.aq);
-            charSequence2 = this.plugin(l8, (Object)MessageKey.cH, (Object)MessageKey.SetHandler);
-            charSequence3 = this.plugin(l9, (Object)MessageKey.r, (Object)MessageKey.cB);
-            charSequence4 = this.plugin(l10, (Object)MessageKey.dC, (Object)MessageKey.bu);
+            charSequence = this.plugin(l5, MessageKey.LiteBansModule_125, MessageKey.aq);
+            charSequence2 = this.plugin(l8, MessageKey.cH, MessageKey.SetHandler);
+            charSequence3 = this.plugin(l9, MessageKey.r, MessageKey.cB);
+            charSequence4 = this.plugin(l10, MessageKey.dC, MessageKey.bu);
         } else {
             charSequence = this.plugin(l5, (Object)"day", (Object)"days");
             charSequence2 = this.plugin(l8, (Object)"hour", (Object)"hours");
@@ -172,27 +170,27 @@ public final class PermanentHandler {
         return string;
     }
 
-    public static /* synthetic */ String BaseCoreGenericHandler(PermanentHandler db_02, long l3, boolean flag, int n, Object object) {
+    public static /* synthetic */ String BaseCoreGenericHandler(PermanentHandler db_02, long l3, boolean flag, int n, Object targetObj) {
         if ((n & 2) != 0) {
             flag = true;
         }
         return db_02.BaseCoreGenericHandler(l3, flag);
     }
 
-    private final boolean BaseCoreGenericHandler(String string, Object object) {
-        return StringUtilities.BaseCoreGenericHandler(string, object.toString(), true);
+    private final boolean BaseCoreGenericHandler(String string, Object targetObj) {
+        return StringUtilities.BaseCoreGenericHandler(string, targetObj.toString(), true);
     }
 
-    private final boolean BaseCoreGenericHandler(String string, Object object, Object object2) {
-        return this.plugin(string, object) || this.plugin(string, object2);
+    private final boolean BaseCoreGenericHandler(String string, Object targetObj, Object contextObj) {
+        return this.plugin(string, targetObj) || this.plugin(string, contextObj);
     }
 
-    public final CharSequence BaseCoreGenericHandler(@NotNull Number number, @NotNull Object object, @NotNull Object object2) {
-        return (number.doubleValue() == 1.0 ? object : object2).toString();
+    public final CharSequence BaseCoreGenericHandler(@NotNull Number number, @NotNull Object targetObj, @NotNull Object contextObj) {
+        return (number.doubleValue() == 1.0 ? targetObj : contextObj).toString();
     }
 
-    public static final /* synthetic */ boolean BaseCoreGenericHandler(PermanentHandler db_02, String string, Object object, Object object2) {
-        return db_02.BaseCoreGenericHandler(string, object, object2);
+    public static final /* synthetic */ boolean BaseCoreGenericHandler(PermanentHandler db_02, String string, Object targetObj, Object contextObj) {
+        return db_02.BaseCoreGenericHandler(string, targetObj, contextObj);
     }
 
     public /* synthetic */ PermanentHandler(LiteBansModule_14 aJ2) {

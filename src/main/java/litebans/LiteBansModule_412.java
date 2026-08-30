@@ -36,7 +36,7 @@ PreparedStatement,
 CallableStatement {
     public boolean isWrapperFor(Class clazz) {
         try {
-            return ((CallableStatement)this.plugin).isWrapperFor(clazz);
+            return (this.plugin).isWrapperFor(clazz);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -63,7 +63,7 @@ CallableStatement {
     @Override
     public int getMaxFieldSize() {
         try {
-            return ((CallableStatement)this.plugin).getMaxFieldSize();
+            return (this.plugin).getMaxFieldSize();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -72,7 +72,7 @@ CallableStatement {
     @Override
     public void setMaxFieldSize(int n) {
         try {
-            ((CallableStatement)this.plugin).setMaxFieldSize(n);
+            (this.plugin).setMaxFieldSize(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -81,7 +81,7 @@ CallableStatement {
     @Override
     public int getMaxRows() {
         try {
-            return ((CallableStatement)this.plugin).getMaxRows();
+            return (this.plugin).getMaxRows();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -90,7 +90,7 @@ CallableStatement {
     @Override
     public void setMaxRows(int n) {
         try {
-            ((CallableStatement)this.plugin).setMaxRows(n);
+            (this.plugin).setMaxRows(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -99,7 +99,7 @@ CallableStatement {
     @Override
     public void setEscapeProcessing(boolean flag) {
         try {
-            ((CallableStatement)this.plugin).setEscapeProcessing(flag);
+            (this.plugin).setEscapeProcessing(flag);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -108,7 +108,7 @@ CallableStatement {
     @Override
     public int getQueryTimeout() {
         try {
-            return ((CallableStatement)this.plugin).getQueryTimeout();
+            return (this.plugin).getQueryTimeout();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -117,7 +117,7 @@ CallableStatement {
     @Override
     public void setQueryTimeout(int n) {
         try {
-            ((CallableStatement)this.plugin).setQueryTimeout(n);
+            (this.plugin).setQueryTimeout(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -126,7 +126,7 @@ CallableStatement {
     @Override
     public void cancel() {
         try {
-            ((CallableStatement)this.plugin).cancel();
+            (this.plugin).cancel();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -135,7 +135,7 @@ CallableStatement {
     @Override
     public SQLWarning getWarnings() {
         try {
-            return ((CallableStatement)this.plugin).getWarnings();
+            return (this.plugin).getWarnings();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -144,7 +144,7 @@ CallableStatement {
     @Override
     public void clearWarnings() {
         try {
-            ((CallableStatement)this.plugin).clearWarnings();
+            (this.plugin).clearWarnings();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -153,7 +153,7 @@ CallableStatement {
     @Override
     public void setCursorName(String string) {
         try {
-            ((CallableStatement)this.plugin).setCursorName(string);
+            (this.plugin).setCursorName(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -180,7 +180,7 @@ CallableStatement {
     @Override
     public int getUpdateCount() {
         try {
-            return ((CallableStatement)this.plugin).getUpdateCount();
+            return (this.plugin).getUpdateCount();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -189,7 +189,7 @@ CallableStatement {
     @Override
     public boolean getMoreResults() {
         try {
-            return ((CallableStatement)this.plugin).getMoreResults();
+            return (this.plugin).getMoreResults();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -198,7 +198,7 @@ CallableStatement {
     @Override
     public void setFetchDirection(int n) {
         try {
-            ((CallableStatement)this.plugin).setFetchDirection(n);
+            (this.plugin).setFetchDirection(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -207,7 +207,7 @@ CallableStatement {
     @Override
     public int getFetchDirection() {
         try {
-            return ((CallableStatement)this.plugin).getFetchDirection();
+            return (this.plugin).getFetchDirection();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -216,7 +216,7 @@ CallableStatement {
     @Override
     public void setFetchSize(int n) {
         try {
-            ((CallableStatement)this.plugin).setFetchSize(n);
+            (this.plugin).setFetchSize(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -225,7 +225,7 @@ CallableStatement {
     @Override
     public int getFetchSize() {
         try {
-            return ((CallableStatement)this.plugin).getFetchSize();
+            return (this.plugin).getFetchSize();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -234,7 +234,7 @@ CallableStatement {
     @Override
     public int getResultSetConcurrency() {
         try {
-            return ((CallableStatement)this.plugin).getResultSetConcurrency();
+            return (this.plugin).getResultSetConcurrency();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -243,7 +243,7 @@ CallableStatement {
     @Override
     public int getResultSetType() {
         try {
-            return ((CallableStatement)this.plugin).getResultSetType();
+            return (this.plugin).getResultSetType();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -252,7 +252,7 @@ CallableStatement {
     @Override
     public void addBatch(String string) {
         try {
-            ((CallableStatement)this.plugin).addBatch(string);
+            (this.plugin).addBatch(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -261,7 +261,7 @@ CallableStatement {
     @Override
     public void clearBatch() {
         try {
-            ((CallableStatement)this.plugin).clearBatch();
+            (this.plugin).clearBatch();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -288,7 +288,7 @@ CallableStatement {
     @Override
     public boolean getMoreResults(int n) {
         try {
-            return ((CallableStatement)this.plugin).getMoreResults(n);
+            return (this.plugin).getMoreResults(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -360,7 +360,7 @@ CallableStatement {
     @Override
     public int getResultSetHoldability() {
         try {
-            return ((CallableStatement)this.plugin).getResultSetHoldability();
+            return (this.plugin).getResultSetHoldability();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -378,7 +378,7 @@ CallableStatement {
     @Override
     public void setPoolable(boolean flag) {
         try {
-            ((CallableStatement)this.plugin).setPoolable(flag);
+            (this.plugin).setPoolable(flag);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -387,7 +387,7 @@ CallableStatement {
     @Override
     public boolean isPoolable() {
         try {
-            return ((CallableStatement)this.plugin).isPoolable();
+            return (this.plugin).isPoolable();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -396,7 +396,7 @@ CallableStatement {
     @Override
     public void closeOnCompletion() {
         try {
-            ((CallableStatement)this.plugin).closeOnCompletion();
+            (this.plugin).closeOnCompletion();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -405,7 +405,7 @@ CallableStatement {
     @Override
     public boolean isCloseOnCompletion() {
         try {
-            return ((CallableStatement)this.plugin).isCloseOnCompletion();
+            return (this.plugin).isCloseOnCompletion();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -414,7 +414,7 @@ CallableStatement {
     @Override
     public long getLargeUpdateCount() {
         try {
-            return ((CallableStatement)this.plugin).getLargeUpdateCount();
+            return (this.plugin).getLargeUpdateCount();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -423,7 +423,7 @@ CallableStatement {
     @Override
     public void setLargeMaxRows(long l3) {
         try {
-            ((CallableStatement)this.plugin).setLargeMaxRows(l3);
+            (this.plugin).setLargeMaxRows(l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -432,7 +432,7 @@ CallableStatement {
     @Override
     public long getLargeMaxRows() {
         try {
-            return ((CallableStatement)this.plugin).getLargeMaxRows();
+            return (this.plugin).getLargeMaxRows();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -441,7 +441,7 @@ CallableStatement {
     @Override
     public long[] executeLargeBatch() {
         try {
-            return ((CallableStatement)this.plugin).executeLargeBatch();
+            return (this.plugin).executeLargeBatch();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -450,7 +450,7 @@ CallableStatement {
     @Override
     public long executeLargeUpdate(String string) {
         try {
-            return ((CallableStatement)this.plugin).executeLargeUpdate(string);
+            return (this.plugin).executeLargeUpdate(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -459,7 +459,7 @@ CallableStatement {
     @Override
     public long executeLargeUpdate(String string, int n) {
         try {
-            return ((CallableStatement)this.plugin).executeLargeUpdate(string, n);
+            return (this.plugin).executeLargeUpdate(string, n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -468,7 +468,7 @@ CallableStatement {
     @Override
     public long executeLargeUpdate(String string, int[] nArray) {
         try {
-            return ((CallableStatement)this.plugin).executeLargeUpdate(string, nArray);
+            return (this.plugin).executeLargeUpdate(string, nArray);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -477,7 +477,7 @@ CallableStatement {
     @Override
     public long executeLargeUpdate(String string, String[] args) {
         try {
-            return ((CallableStatement)this.plugin).executeLargeUpdate(string, args);
+            return (this.plugin).executeLargeUpdate(string, args);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -504,7 +504,7 @@ CallableStatement {
     @Override
     public void setNull(int n, int n2) {
         try {
-            ((CallableStatement)this.plugin).setNull(n, n2);
+            (this.plugin).setNull(n, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -513,7 +513,7 @@ CallableStatement {
     @Override
     public void setBoolean(int n, boolean flag) {
         try {
-            ((CallableStatement)this.plugin).setBoolean(n, flag);
+            (this.plugin).setBoolean(n, flag);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -522,7 +522,7 @@ CallableStatement {
     @Override
     public void setByte(int n, byte by2) {
         try {
-            ((CallableStatement)this.plugin).setByte(n, by2);
+            (this.plugin).setByte(n, by2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -531,7 +531,7 @@ CallableStatement {
     @Override
     public void setShort(int n, short s2) {
         try {
-            ((CallableStatement)this.plugin).setShort(n, s2);
+            (this.plugin).setShort(n, s2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -540,7 +540,7 @@ CallableStatement {
     @Override
     public void setInt(int n, int n2) {
         try {
-            ((CallableStatement)this.plugin).setInt(n, n2);
+            (this.plugin).setInt(n, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -549,7 +549,7 @@ CallableStatement {
     @Override
     public void setLong(int n, long l3) {
         try {
-            ((CallableStatement)this.plugin).setLong(n, l3);
+            (this.plugin).setLong(n, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -558,7 +558,7 @@ CallableStatement {
     @Override
     public void setFloat(int n, float f10) {
         try {
-            ((CallableStatement)this.plugin).setFloat(n, f10);
+            (this.plugin).setFloat(n, f10);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -567,7 +567,7 @@ CallableStatement {
     @Override
     public void setDouble(int n, double d10) {
         try {
-            ((CallableStatement)this.plugin).setDouble(n, d10);
+            (this.plugin).setDouble(n, d10);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -576,7 +576,7 @@ CallableStatement {
     @Override
     public void setBigDecimal(int n, BigDecimal bigDecimal) {
         try {
-            ((CallableStatement)this.plugin).setBigDecimal(n, bigDecimal);
+            (this.plugin).setBigDecimal(n, bigDecimal);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -585,7 +585,7 @@ CallableStatement {
     @Override
     public void setString(int n, String string) {
         try {
-            ((CallableStatement)this.plugin).setString(n, string);
+            (this.plugin).setString(n, string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -594,7 +594,7 @@ CallableStatement {
     @Override
     public void setBytes(int n, byte[] byArray) {
         try {
-            ((CallableStatement)this.plugin).setBytes(n, byArray);
+            (this.plugin).setBytes(n, byArray);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -603,7 +603,7 @@ CallableStatement {
     @Override
     public void setDate(int n, Date date) {
         try {
-            ((CallableStatement)this.plugin).setDate(n, date);
+            (this.plugin).setDate(n, date);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -612,7 +612,7 @@ CallableStatement {
     @Override
     public void setTime(int n, Time time) {
         try {
-            ((CallableStatement)this.plugin).setTime(n, time);
+            (this.plugin).setTime(n, time);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -621,7 +621,7 @@ CallableStatement {
     @Override
     public void setTimestamp(int n, Timestamp timestamp) {
         try {
-            ((CallableStatement)this.plugin).setTimestamp(n, timestamp);
+            (this.plugin).setTimestamp(n, timestamp);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -630,7 +630,7 @@ CallableStatement {
     @Override
     public void setAsciiStream(int n, InputStream inputStream, int n2) {
         try {
-            ((CallableStatement)this.plugin).setAsciiStream(n, inputStream, n2);
+            (this.plugin).setAsciiStream(n, inputStream, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -639,7 +639,7 @@ CallableStatement {
     @Override
     public void setUnicodeStream(int n, InputStream inputStream, int n2) {
         try {
-            ((CallableStatement)this.plugin).setUnicodeStream(n, inputStream, n2);
+            (this.plugin).setUnicodeStream(n, inputStream, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -648,7 +648,7 @@ CallableStatement {
     @Override
     public void setBinaryStream(int n, InputStream inputStream, int n2) {
         try {
-            ((CallableStatement)this.plugin).setBinaryStream(n, inputStream, n2);
+            (this.plugin).setBinaryStream(n, inputStream, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -657,25 +657,25 @@ CallableStatement {
     @Override
     public void clearParameters() {
         try {
-            ((CallableStatement)this.plugin).clearParameters();
+            (this.plugin).clearParameters();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(int n, Object object, int n2) {
+    public void setObject(int n, Object targetObj, int n2) {
         try {
-            ((CallableStatement)this.plugin).setObject(n, object, n2);
+            (this.plugin).setObject(n, targetObj, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(int n, Object object) {
+    public void setObject(int n, Object targetObj) {
         try {
-            ((CallableStatement)this.plugin).setObject(n, object);
+            (this.plugin).setObject(n, targetObj);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -693,7 +693,7 @@ CallableStatement {
     @Override
     public void addBatch() {
         try {
-            ((CallableStatement)this.plugin).addBatch();
+            (this.plugin).addBatch();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -702,7 +702,7 @@ CallableStatement {
     @Override
     public void setCharacterStream(int n, Reader reader, int n2) {
         try {
-            ((CallableStatement)this.plugin).setCharacterStream(n, reader, n2);
+            (this.plugin).setCharacterStream(n, reader, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -711,7 +711,7 @@ CallableStatement {
     @Override
     public void setRef(int n, Ref ref) {
         try {
-            ((CallableStatement)this.plugin).setRef(n, ref);
+            (this.plugin).setRef(n, ref);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -720,7 +720,7 @@ CallableStatement {
     @Override
     public void setBlob(int n, Blob blob) {
         try {
-            ((CallableStatement)this.plugin).setBlob(n, blob);
+            (this.plugin).setBlob(n, blob);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -729,7 +729,7 @@ CallableStatement {
     @Override
     public void setClob(int n, Clob clob) {
         try {
-            ((CallableStatement)this.plugin).setClob(n, clob);
+            (this.plugin).setClob(n, clob);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -738,7 +738,7 @@ CallableStatement {
     @Override
     public void setArray(int n, Array array) {
         try {
-            ((CallableStatement)this.plugin).setArray(n, array);
+            (this.plugin).setArray(n, array);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -747,7 +747,7 @@ CallableStatement {
     @Override
     public ResultSetMetaData getMetaData() {
         try {
-            return ((CallableStatement)this.plugin).getMetaData();
+            return (this.plugin).getMetaData();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -756,7 +756,7 @@ CallableStatement {
     @Override
     public void setDate(int n, Date date, Calendar calendar) {
         try {
-            ((CallableStatement)this.plugin).setDate(n, date, calendar);
+            (this.plugin).setDate(n, date, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -765,7 +765,7 @@ CallableStatement {
     @Override
     public void setTime(int n, Time time, Calendar calendar) {
         try {
-            ((CallableStatement)this.plugin).setTime(n, time, calendar);
+            (this.plugin).setTime(n, time, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -774,7 +774,7 @@ CallableStatement {
     @Override
     public void setTimestamp(int n, Timestamp timestamp, Calendar calendar) {
         try {
-            ((CallableStatement)this.plugin).setTimestamp(n, timestamp, calendar);
+            (this.plugin).setTimestamp(n, timestamp, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -783,7 +783,7 @@ CallableStatement {
     @Override
     public void setNull(int n, int n2, String string) {
         try {
-            ((CallableStatement)this.plugin).setNull(n, n2, string);
+            (this.plugin).setNull(n, n2, string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -792,7 +792,7 @@ CallableStatement {
     @Override
     public void setURL(int n, URL uRL) {
         try {
-            ((CallableStatement)this.plugin).setURL(n, uRL);
+            (this.plugin).setURL(n, uRL);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -801,7 +801,7 @@ CallableStatement {
     @Override
     public ParameterMetaData getParameterMetaData() {
         try {
-            return ((CallableStatement)this.plugin).getParameterMetaData();
+            return (this.plugin).getParameterMetaData();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -810,7 +810,7 @@ CallableStatement {
     @Override
     public void setRowId(int n, RowId rowId) {
         try {
-            ((CallableStatement)this.plugin).setRowId(n, rowId);
+            (this.plugin).setRowId(n, rowId);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -819,7 +819,7 @@ CallableStatement {
     @Override
     public void setNString(int n, String string) {
         try {
-            ((CallableStatement)this.plugin).setNString(n, string);
+            (this.plugin).setNString(n, string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -828,7 +828,7 @@ CallableStatement {
     @Override
     public void setNCharacterStream(int n, Reader reader, long l3) {
         try {
-            ((CallableStatement)this.plugin).setNCharacterStream(n, reader, l3);
+            (this.plugin).setNCharacterStream(n, reader, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -837,7 +837,7 @@ CallableStatement {
     @Override
     public void setNClob(int n, NClob nClob) {
         try {
-            ((CallableStatement)this.plugin).setNClob(n, nClob);
+            (this.plugin).setNClob(n, nClob);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -846,7 +846,7 @@ CallableStatement {
     @Override
     public void setClob(int n, Reader reader, long l3) {
         try {
-            ((CallableStatement)this.plugin).setClob(n, reader, l3);
+            (this.plugin).setClob(n, reader, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -855,7 +855,7 @@ CallableStatement {
     @Override
     public void setBlob(int n, InputStream inputStream, long l3) {
         try {
-            ((CallableStatement)this.plugin).setBlob(n, inputStream, l3);
+            (this.plugin).setBlob(n, inputStream, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -864,7 +864,7 @@ CallableStatement {
     @Override
     public void setNClob(int n, Reader reader, long l3) {
         try {
-            ((CallableStatement)this.plugin).setNClob(n, reader, l3);
+            (this.plugin).setNClob(n, reader, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -873,16 +873,16 @@ CallableStatement {
     @Override
     public void setSQLXML(int n, SQLXML sQLXML) {
         try {
-            ((CallableStatement)this.plugin).setSQLXML(n, sQLXML);
+            (this.plugin).setSQLXML(n, sQLXML);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(int n, Object object, int n2, int n3) {
+    public void setObject(int n, Object targetObj, int n2, int n3) {
         try {
-            ((CallableStatement)this.plugin).setObject(n, object, n2, n3);
+            (this.plugin).setObject(n, targetObj, n2, n3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -891,7 +891,7 @@ CallableStatement {
     @Override
     public void setAsciiStream(int n, InputStream inputStream, long l3) {
         try {
-            ((CallableStatement)this.plugin).setAsciiStream(n, inputStream, l3);
+            (this.plugin).setAsciiStream(n, inputStream, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -900,7 +900,7 @@ CallableStatement {
     @Override
     public void setBinaryStream(int n, InputStream inputStream, long l3) {
         try {
-            ((CallableStatement)this.plugin).setBinaryStream(n, inputStream, l3);
+            (this.plugin).setBinaryStream(n, inputStream, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -909,7 +909,7 @@ CallableStatement {
     @Override
     public void setCharacterStream(int n, Reader reader, long l3) {
         try {
-            ((CallableStatement)this.plugin).setCharacterStream(n, reader, l3);
+            (this.plugin).setCharacterStream(n, reader, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -918,7 +918,7 @@ CallableStatement {
     @Override
     public void setAsciiStream(int n, InputStream inputStream) {
         try {
-            ((CallableStatement)this.plugin).setAsciiStream(n, inputStream);
+            (this.plugin).setAsciiStream(n, inputStream);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -927,7 +927,7 @@ CallableStatement {
     @Override
     public void setBinaryStream(int n, InputStream inputStream) {
         try {
-            ((CallableStatement)this.plugin).setBinaryStream(n, inputStream);
+            (this.plugin).setBinaryStream(n, inputStream);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -936,7 +936,7 @@ CallableStatement {
     @Override
     public void setCharacterStream(int n, Reader reader) {
         try {
-            ((CallableStatement)this.plugin).setCharacterStream(n, reader);
+            (this.plugin).setCharacterStream(n, reader);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -945,7 +945,7 @@ CallableStatement {
     @Override
     public void setNCharacterStream(int n, Reader reader) {
         try {
-            ((CallableStatement)this.plugin).setNCharacterStream(n, reader);
+            (this.plugin).setNCharacterStream(n, reader);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -954,7 +954,7 @@ CallableStatement {
     @Override
     public void setClob(int n, Reader reader) {
         try {
-            ((CallableStatement)this.plugin).setClob(n, reader);
+            (this.plugin).setClob(n, reader);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -963,7 +963,7 @@ CallableStatement {
     @Override
     public void setBlob(int n, InputStream inputStream) {
         try {
-            ((CallableStatement)this.plugin).setBlob(n, inputStream);
+            (this.plugin).setBlob(n, inputStream);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -972,25 +972,25 @@ CallableStatement {
     @Override
     public void setNClob(int n, Reader reader) {
         try {
-            ((CallableStatement)this.plugin).setNClob(n, reader);
+            (this.plugin).setNClob(n, reader);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(int n, Object object, SQLType sQLType, int n2) {
+    public void setObject(int n, Object targetObj, SQLType sQLType, int n2) {
         try {
-            ((CallableStatement)this.plugin).setObject(n, object, sQLType, n2);
+            (this.plugin).setObject(n, targetObj, sQLType, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(int n, Object object, SQLType sQLType) {
+    public void setObject(int n, Object targetObj, SQLType sQLType) {
         try {
-            ((CallableStatement)this.plugin).setObject(n, object, sQLType);
+            (this.plugin).setObject(n, targetObj, sQLType);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -999,7 +999,7 @@ CallableStatement {
     @Override
     public long executeLargeUpdate() {
         try {
-            return ((CallableStatement)this.plugin).executeLargeUpdate();
+            return (this.plugin).executeLargeUpdate();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1008,7 +1008,7 @@ CallableStatement {
     @Override
     public void registerOutParameter(int n, int n2) {
         try {
-            ((CallableStatement)this.plugin).registerOutParameter(n, n2);
+            (this.plugin).registerOutParameter(n, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1017,7 +1017,7 @@ CallableStatement {
     @Override
     public void registerOutParameter(int n, int n2, int n3) {
         try {
-            ((CallableStatement)this.plugin).registerOutParameter(n, n2, n3);
+            (this.plugin).registerOutParameter(n, n2, n3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1026,7 +1026,7 @@ CallableStatement {
     @Override
     public boolean wasNull() {
         try {
-            return ((CallableStatement)this.plugin).wasNull();
+            return (this.plugin).wasNull();
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1035,7 +1035,7 @@ CallableStatement {
     @Override
     public String getString(int n) {
         try {
-            return ((CallableStatement)this.plugin).getString(n);
+            return (this.plugin).getString(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1044,7 +1044,7 @@ CallableStatement {
     @Override
     public boolean getBoolean(int n) {
         try {
-            return ((CallableStatement)this.plugin).getBoolean(n);
+            return (this.plugin).getBoolean(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1053,7 +1053,7 @@ CallableStatement {
     @Override
     public byte getByte(int n) {
         try {
-            return ((CallableStatement)this.plugin).getByte(n);
+            return (this.plugin).getByte(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1062,7 +1062,7 @@ CallableStatement {
     @Override
     public short getShort(int n) {
         try {
-            return ((CallableStatement)this.plugin).getShort(n);
+            return (this.plugin).getShort(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1071,7 +1071,7 @@ CallableStatement {
     @Override
     public int getInt(int n) {
         try {
-            return ((CallableStatement)this.plugin).getInt(n);
+            return (this.plugin).getInt(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1080,7 +1080,7 @@ CallableStatement {
     @Override
     public long getLong(int n) {
         try {
-            return ((CallableStatement)this.plugin).getLong(n);
+            return (this.plugin).getLong(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1089,7 +1089,7 @@ CallableStatement {
     @Override
     public float getFloat(int n) {
         try {
-            return ((CallableStatement)this.plugin).getFloat(n);
+            return (this.plugin).getFloat(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1098,7 +1098,7 @@ CallableStatement {
     @Override
     public double getDouble(int n) {
         try {
-            return ((CallableStatement)this.plugin).getDouble(n);
+            return (this.plugin).getDouble(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1107,7 +1107,7 @@ CallableStatement {
     @Override
     public BigDecimal getBigDecimal(int n, int n2) {
         try {
-            return ((CallableStatement)this.plugin).getBigDecimal(n, n2);
+            return (this.plugin).getBigDecimal(n, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1116,7 +1116,7 @@ CallableStatement {
     @Override
     public byte[] getBytes(int n) {
         try {
-            return ((CallableStatement)this.plugin).getBytes(n);
+            return (this.plugin).getBytes(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1125,7 +1125,7 @@ CallableStatement {
     @Override
     public Date getDate(int n) {
         try {
-            return ((CallableStatement)this.plugin).getDate(n);
+            return (this.plugin).getDate(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1134,7 +1134,7 @@ CallableStatement {
     @Override
     public Time getTime(int n) {
         try {
-            return ((CallableStatement)this.plugin).getTime(n);
+            return (this.plugin).getTime(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1143,7 +1143,7 @@ CallableStatement {
     @Override
     public Timestamp getTimestamp(int n) {
         try {
-            return ((CallableStatement)this.plugin).getTimestamp(n);
+            return (this.plugin).getTimestamp(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1152,7 +1152,7 @@ CallableStatement {
     @Override
     public Object getObject(int n) {
         try {
-            return ((CallableStatement)this.plugin).getObject(n);
+            return (this.plugin).getObject(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1161,7 +1161,7 @@ CallableStatement {
     @Override
     public BigDecimal getBigDecimal(int n) {
         try {
-            return ((CallableStatement)this.plugin).getBigDecimal(n);
+            return (this.plugin).getBigDecimal(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1169,7 +1169,7 @@ CallableStatement {
 
     public Object getObject(int n, Map map) {
         try {
-            return ((CallableStatement)this.plugin).getObject(n, map);
+            return (this.plugin).getObject(n, map);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1178,7 +1178,7 @@ CallableStatement {
     @Override
     public Ref getRef(int n) {
         try {
-            return ((CallableStatement)this.plugin).getRef(n);
+            return (this.plugin).getRef(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1187,7 +1187,7 @@ CallableStatement {
     @Override
     public Blob getBlob(int n) {
         try {
-            return ((CallableStatement)this.plugin).getBlob(n);
+            return (this.plugin).getBlob(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1196,7 +1196,7 @@ CallableStatement {
     @Override
     public Clob getClob(int n) {
         try {
-            return ((CallableStatement)this.plugin).getClob(n);
+            return (this.plugin).getClob(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1205,7 +1205,7 @@ CallableStatement {
     @Override
     public Array getArray(int n) {
         try {
-            return ((CallableStatement)this.plugin).getArray(n);
+            return (this.plugin).getArray(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1214,7 +1214,7 @@ CallableStatement {
     @Override
     public Date getDate(int n, Calendar calendar) {
         try {
-            return ((CallableStatement)this.plugin).getDate(n, calendar);
+            return (this.plugin).getDate(n, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1223,7 +1223,7 @@ CallableStatement {
     @Override
     public Time getTime(int n, Calendar calendar) {
         try {
-            return ((CallableStatement)this.plugin).getTime(n, calendar);
+            return (this.plugin).getTime(n, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1232,7 +1232,7 @@ CallableStatement {
     @Override
     public Timestamp getTimestamp(int n, Calendar calendar) {
         try {
-            return ((CallableStatement)this.plugin).getTimestamp(n, calendar);
+            return (this.plugin).getTimestamp(n, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1241,7 +1241,7 @@ CallableStatement {
     @Override
     public void registerOutParameter(int n, int n2, String string) {
         try {
-            ((CallableStatement)this.plugin).registerOutParameter(n, n2, string);
+            (this.plugin).registerOutParameter(n, n2, string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1250,7 +1250,7 @@ CallableStatement {
     @Override
     public void registerOutParameter(String string, int n) {
         try {
-            ((CallableStatement)this.plugin).registerOutParameter(string, n);
+            (this.plugin).registerOutParameter(string, n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1259,7 +1259,7 @@ CallableStatement {
     @Override
     public void registerOutParameter(String string, int n, int n2) {
         try {
-            ((CallableStatement)this.plugin).registerOutParameter(string, n, n2);
+            (this.plugin).registerOutParameter(string, n, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1268,7 +1268,7 @@ CallableStatement {
     @Override
     public void registerOutParameter(String string, int n, String string2) {
         try {
-            ((CallableStatement)this.plugin).registerOutParameter(string, n, string2);
+            (this.plugin).registerOutParameter(string, n, string2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1277,7 +1277,7 @@ CallableStatement {
     @Override
     public URL getURL(int n) {
         try {
-            return ((CallableStatement)this.plugin).getURL(n);
+            return (this.plugin).getURL(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1286,7 +1286,7 @@ CallableStatement {
     @Override
     public void setURL(String string, URL uRL) {
         try {
-            ((CallableStatement)this.plugin).setURL(string, uRL);
+            (this.plugin).setURL(string, uRL);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1295,7 +1295,7 @@ CallableStatement {
     @Override
     public void setNull(String string, int n) {
         try {
-            ((CallableStatement)this.plugin).setNull(string, n);
+            (this.plugin).setNull(string, n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1304,7 +1304,7 @@ CallableStatement {
     @Override
     public void setBoolean(String string, boolean flag) {
         try {
-            ((CallableStatement)this.plugin).setBoolean(string, flag);
+            (this.plugin).setBoolean(string, flag);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1313,7 +1313,7 @@ CallableStatement {
     @Override
     public void setByte(String string, byte by2) {
         try {
-            ((CallableStatement)this.plugin).setByte(string, by2);
+            (this.plugin).setByte(string, by2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1322,7 +1322,7 @@ CallableStatement {
     @Override
     public void setShort(String string, short s2) {
         try {
-            ((CallableStatement)this.plugin).setShort(string, s2);
+            (this.plugin).setShort(string, s2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1331,7 +1331,7 @@ CallableStatement {
     @Override
     public void setInt(String string, int n) {
         try {
-            ((CallableStatement)this.plugin).setInt(string, n);
+            (this.plugin).setInt(string, n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1340,7 +1340,7 @@ CallableStatement {
     @Override
     public void setLong(String string, long l3) {
         try {
-            ((CallableStatement)this.plugin).setLong(string, l3);
+            (this.plugin).setLong(string, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1349,7 +1349,7 @@ CallableStatement {
     @Override
     public void setFloat(String string, float f10) {
         try {
-            ((CallableStatement)this.plugin).setFloat(string, f10);
+            (this.plugin).setFloat(string, f10);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1358,7 +1358,7 @@ CallableStatement {
     @Override
     public void setDouble(String string, double d10) {
         try {
-            ((CallableStatement)this.plugin).setDouble(string, d10);
+            (this.plugin).setDouble(string, d10);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1367,7 +1367,7 @@ CallableStatement {
     @Override
     public void setBigDecimal(String string, BigDecimal bigDecimal) {
         try {
-            ((CallableStatement)this.plugin).setBigDecimal(string, bigDecimal);
+            (this.plugin).setBigDecimal(string, bigDecimal);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1376,7 +1376,7 @@ CallableStatement {
     @Override
     public void setString(String string, String string2) {
         try {
-            ((CallableStatement)this.plugin).setString(string, string2);
+            (this.plugin).setString(string, string2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1385,7 +1385,7 @@ CallableStatement {
     @Override
     public void setBytes(String string, byte[] byArray) {
         try {
-            ((CallableStatement)this.plugin).setBytes(string, byArray);
+            (this.plugin).setBytes(string, byArray);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1394,7 +1394,7 @@ CallableStatement {
     @Override
     public void setDate(String string, Date date) {
         try {
-            ((CallableStatement)this.plugin).setDate(string, date);
+            (this.plugin).setDate(string, date);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1403,7 +1403,7 @@ CallableStatement {
     @Override
     public void setTime(String string, Time time) {
         try {
-            ((CallableStatement)this.plugin).setTime(string, time);
+            (this.plugin).setTime(string, time);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1412,7 +1412,7 @@ CallableStatement {
     @Override
     public void setTimestamp(String string, Timestamp timestamp) {
         try {
-            ((CallableStatement)this.plugin).setTimestamp(string, timestamp);
+            (this.plugin).setTimestamp(string, timestamp);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1421,7 +1421,7 @@ CallableStatement {
     @Override
     public void setAsciiStream(String string, InputStream inputStream, int n) {
         try {
-            ((CallableStatement)this.plugin).setAsciiStream(string, inputStream, n);
+            (this.plugin).setAsciiStream(string, inputStream, n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1430,34 +1430,34 @@ CallableStatement {
     @Override
     public void setBinaryStream(String string, InputStream inputStream, int n) {
         try {
-            ((CallableStatement)this.plugin).setBinaryStream(string, inputStream, n);
+            (this.plugin).setBinaryStream(string, inputStream, n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(String string, Object object, int n, int n2) {
+    public void setObject(String string, Object targetObj, int n, int n2) {
         try {
-            ((CallableStatement)this.plugin).setObject(string, object, n, n2);
+            (this.plugin).setObject(string, targetObj, n, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(String string, Object object, int n) {
+    public void setObject(String string, Object targetObj, int n) {
         try {
-            ((CallableStatement)this.plugin).setObject(string, object, n);
+            (this.plugin).setObject(string, targetObj, n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(String string, Object object) {
+    public void setObject(String string, Object targetObj) {
         try {
-            ((CallableStatement)this.plugin).setObject(string, object);
+            (this.plugin).setObject(string, targetObj);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1466,7 +1466,7 @@ CallableStatement {
     @Override
     public void setCharacterStream(String string, Reader reader, int n) {
         try {
-            ((CallableStatement)this.plugin).setCharacterStream(string, reader, n);
+            (this.plugin).setCharacterStream(string, reader, n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1475,7 +1475,7 @@ CallableStatement {
     @Override
     public void setDate(String string, Date date, Calendar calendar) {
         try {
-            ((CallableStatement)this.plugin).setDate(string, date, calendar);
+            (this.plugin).setDate(string, date, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1484,7 +1484,7 @@ CallableStatement {
     @Override
     public void setTime(String string, Time time, Calendar calendar) {
         try {
-            ((CallableStatement)this.plugin).setTime(string, time, calendar);
+            (this.plugin).setTime(string, time, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1493,7 +1493,7 @@ CallableStatement {
     @Override
     public void setTimestamp(String string, Timestamp timestamp, Calendar calendar) {
         try {
-            ((CallableStatement)this.plugin).setTimestamp(string, timestamp, calendar);
+            (this.plugin).setTimestamp(string, timestamp, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1502,7 +1502,7 @@ CallableStatement {
     @Override
     public void setNull(String string, int n, String string2) {
         try {
-            ((CallableStatement)this.plugin).setNull(string, n, string2);
+            (this.plugin).setNull(string, n, string2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1511,7 +1511,7 @@ CallableStatement {
     @Override
     public String getString(String string) {
         try {
-            return ((CallableStatement)this.plugin).getString(string);
+            return (this.plugin).getString(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1520,7 +1520,7 @@ CallableStatement {
     @Override
     public boolean getBoolean(String string) {
         try {
-            return ((CallableStatement)this.plugin).getBoolean(string);
+            return (this.plugin).getBoolean(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1529,7 +1529,7 @@ CallableStatement {
     @Override
     public byte getByte(String string) {
         try {
-            return ((CallableStatement)this.plugin).getByte(string);
+            return (this.plugin).getByte(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1538,7 +1538,7 @@ CallableStatement {
     @Override
     public short getShort(String string) {
         try {
-            return ((CallableStatement)this.plugin).getShort(string);
+            return (this.plugin).getShort(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1547,7 +1547,7 @@ CallableStatement {
     @Override
     public int getInt(String string) {
         try {
-            return ((CallableStatement)this.plugin).getInt(string);
+            return (this.plugin).getInt(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1556,7 +1556,7 @@ CallableStatement {
     @Override
     public long getLong(String string) {
         try {
-            return ((CallableStatement)this.plugin).getLong(string);
+            return (this.plugin).getLong(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1565,7 +1565,7 @@ CallableStatement {
     @Override
     public float getFloat(String string) {
         try {
-            return ((CallableStatement)this.plugin).getFloat(string);
+            return (this.plugin).getFloat(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1574,7 +1574,7 @@ CallableStatement {
     @Override
     public double getDouble(String string) {
         try {
-            return ((CallableStatement)this.plugin).getDouble(string);
+            return (this.plugin).getDouble(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1583,7 +1583,7 @@ CallableStatement {
     @Override
     public byte[] getBytes(String string) {
         try {
-            return ((CallableStatement)this.plugin).getBytes(string);
+            return (this.plugin).getBytes(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1592,7 +1592,7 @@ CallableStatement {
     @Override
     public Date getDate(String string) {
         try {
-            return ((CallableStatement)this.plugin).getDate(string);
+            return (this.plugin).getDate(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1601,7 +1601,7 @@ CallableStatement {
     @Override
     public Time getTime(String string) {
         try {
-            return ((CallableStatement)this.plugin).getTime(string);
+            return (this.plugin).getTime(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1610,7 +1610,7 @@ CallableStatement {
     @Override
     public Timestamp getTimestamp(String string) {
         try {
-            return ((CallableStatement)this.plugin).getTimestamp(string);
+            return (this.plugin).getTimestamp(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1619,7 +1619,7 @@ CallableStatement {
     @Override
     public Object getObject(String string) {
         try {
-            return ((CallableStatement)this.plugin).getObject(string);
+            return (this.plugin).getObject(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1628,7 +1628,7 @@ CallableStatement {
     @Override
     public BigDecimal getBigDecimal(String string) {
         try {
-            return ((CallableStatement)this.plugin).getBigDecimal(string);
+            return (this.plugin).getBigDecimal(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1636,7 +1636,7 @@ CallableStatement {
 
     public Object getObject(String string, Map map) {
         try {
-            return ((CallableStatement)this.plugin).getObject(string, map);
+            return (this.plugin).getObject(string, map);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1645,7 +1645,7 @@ CallableStatement {
     @Override
     public Ref getRef(String string) {
         try {
-            return ((CallableStatement)this.plugin).getRef(string);
+            return (this.plugin).getRef(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1654,7 +1654,7 @@ CallableStatement {
     @Override
     public Blob getBlob(String string) {
         try {
-            return ((CallableStatement)this.plugin).getBlob(string);
+            return (this.plugin).getBlob(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1663,7 +1663,7 @@ CallableStatement {
     @Override
     public Clob getClob(String string) {
         try {
-            return ((CallableStatement)this.plugin).getClob(string);
+            return (this.plugin).getClob(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1672,7 +1672,7 @@ CallableStatement {
     @Override
     public Array getArray(String string) {
         try {
-            return ((CallableStatement)this.plugin).getArray(string);
+            return (this.plugin).getArray(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1681,7 +1681,7 @@ CallableStatement {
     @Override
     public Date getDate(String string, Calendar calendar) {
         try {
-            return ((CallableStatement)this.plugin).getDate(string, calendar);
+            return (this.plugin).getDate(string, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1690,7 +1690,7 @@ CallableStatement {
     @Override
     public Time getTime(String string, Calendar calendar) {
         try {
-            return ((CallableStatement)this.plugin).getTime(string, calendar);
+            return (this.plugin).getTime(string, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1699,7 +1699,7 @@ CallableStatement {
     @Override
     public Timestamp getTimestamp(String string, Calendar calendar) {
         try {
-            return ((CallableStatement)this.plugin).getTimestamp(string, calendar);
+            return (this.plugin).getTimestamp(string, calendar);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1708,7 +1708,7 @@ CallableStatement {
     @Override
     public URL getURL(String string) {
         try {
-            return ((CallableStatement)this.plugin).getURL(string);
+            return (this.plugin).getURL(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1717,7 +1717,7 @@ CallableStatement {
     @Override
     public RowId getRowId(int n) {
         try {
-            return ((CallableStatement)this.plugin).getRowId(n);
+            return (this.plugin).getRowId(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1726,7 +1726,7 @@ CallableStatement {
     @Override
     public RowId getRowId(String string) {
         try {
-            return ((CallableStatement)this.plugin).getRowId(string);
+            return (this.plugin).getRowId(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1735,7 +1735,7 @@ CallableStatement {
     @Override
     public void setRowId(String string, RowId rowId) {
         try {
-            ((CallableStatement)this.plugin).setRowId(string, rowId);
+            (this.plugin).setRowId(string, rowId);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1744,7 +1744,7 @@ CallableStatement {
     @Override
     public void setNString(String string, String string2) {
         try {
-            ((CallableStatement)this.plugin).setNString(string, string2);
+            (this.plugin).setNString(string, string2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1753,7 +1753,7 @@ CallableStatement {
     @Override
     public void setNCharacterStream(String string, Reader reader, long l3) {
         try {
-            ((CallableStatement)this.plugin).setNCharacterStream(string, reader, l3);
+            (this.plugin).setNCharacterStream(string, reader, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1762,7 +1762,7 @@ CallableStatement {
     @Override
     public void setNClob(String string, NClob nClob) {
         try {
-            ((CallableStatement)this.plugin).setNClob(string, nClob);
+            (this.plugin).setNClob(string, nClob);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1771,7 +1771,7 @@ CallableStatement {
     @Override
     public void setClob(String string, Reader reader, long l3) {
         try {
-            ((CallableStatement)this.plugin).setClob(string, reader, l3);
+            (this.plugin).setClob(string, reader, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1780,7 +1780,7 @@ CallableStatement {
     @Override
     public void setBlob(String string, InputStream inputStream, long l3) {
         try {
-            ((CallableStatement)this.plugin).setBlob(string, inputStream, l3);
+            (this.plugin).setBlob(string, inputStream, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1789,7 +1789,7 @@ CallableStatement {
     @Override
     public void setNClob(String string, Reader reader, long l3) {
         try {
-            ((CallableStatement)this.plugin).setNClob(string, reader, l3);
+            (this.plugin).setNClob(string, reader, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1798,7 +1798,7 @@ CallableStatement {
     @Override
     public NClob getNClob(int n) {
         try {
-            return ((CallableStatement)this.plugin).getNClob(n);
+            return (this.plugin).getNClob(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1807,7 +1807,7 @@ CallableStatement {
     @Override
     public NClob getNClob(String string) {
         try {
-            return ((CallableStatement)this.plugin).getNClob(string);
+            return (this.plugin).getNClob(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1816,7 +1816,7 @@ CallableStatement {
     @Override
     public void setSQLXML(String string, SQLXML sQLXML) {
         try {
-            ((CallableStatement)this.plugin).setSQLXML(string, sQLXML);
+            (this.plugin).setSQLXML(string, sQLXML);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1825,7 +1825,7 @@ CallableStatement {
     @Override
     public SQLXML getSQLXML(int n) {
         try {
-            return ((CallableStatement)this.plugin).getSQLXML(n);
+            return (this.plugin).getSQLXML(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1834,7 +1834,7 @@ CallableStatement {
     @Override
     public SQLXML getSQLXML(String string) {
         try {
-            return ((CallableStatement)this.plugin).getSQLXML(string);
+            return (this.plugin).getSQLXML(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1843,7 +1843,7 @@ CallableStatement {
     @Override
     public String getNString(int n) {
         try {
-            return ((CallableStatement)this.plugin).getNString(n);
+            return (this.plugin).getNString(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1852,7 +1852,7 @@ CallableStatement {
     @Override
     public String getNString(String string) {
         try {
-            return ((CallableStatement)this.plugin).getNString(string);
+            return (this.plugin).getNString(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1861,7 +1861,7 @@ CallableStatement {
     @Override
     public Reader getNCharacterStream(int n) {
         try {
-            return ((CallableStatement)this.plugin).getNCharacterStream(n);
+            return (this.plugin).getNCharacterStream(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1870,7 +1870,7 @@ CallableStatement {
     @Override
     public Reader getNCharacterStream(String string) {
         try {
-            return ((CallableStatement)this.plugin).getNCharacterStream(string);
+            return (this.plugin).getNCharacterStream(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1879,7 +1879,7 @@ CallableStatement {
     @Override
     public Reader getCharacterStream(int n) {
         try {
-            return ((CallableStatement)this.plugin).getCharacterStream(n);
+            return (this.plugin).getCharacterStream(n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1888,7 +1888,7 @@ CallableStatement {
     @Override
     public Reader getCharacterStream(String string) {
         try {
-            return ((CallableStatement)this.plugin).getCharacterStream(string);
+            return (this.plugin).getCharacterStream(string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1897,7 +1897,7 @@ CallableStatement {
     @Override
     public void setBlob(String string, Blob blob) {
         try {
-            ((CallableStatement)this.plugin).setBlob(string, blob);
+            (this.plugin).setBlob(string, blob);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1906,7 +1906,7 @@ CallableStatement {
     @Override
     public void setClob(String string, Clob clob) {
         try {
-            ((CallableStatement)this.plugin).setClob(string, clob);
+            (this.plugin).setClob(string, clob);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1915,7 +1915,7 @@ CallableStatement {
     @Override
     public void setAsciiStream(String string, InputStream inputStream, long l3) {
         try {
-            ((CallableStatement)this.plugin).setAsciiStream(string, inputStream, l3);
+            (this.plugin).setAsciiStream(string, inputStream, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1924,7 +1924,7 @@ CallableStatement {
     @Override
     public void setBinaryStream(String string, InputStream inputStream, long l3) {
         try {
-            ((CallableStatement)this.plugin).setBinaryStream(string, inputStream, l3);
+            (this.plugin).setBinaryStream(string, inputStream, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1933,7 +1933,7 @@ CallableStatement {
     @Override
     public void setCharacterStream(String string, Reader reader, long l3) {
         try {
-            ((CallableStatement)this.plugin).setCharacterStream(string, reader, l3);
+            (this.plugin).setCharacterStream(string, reader, l3);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1942,7 +1942,7 @@ CallableStatement {
     @Override
     public void setAsciiStream(String string, InputStream inputStream) {
         try {
-            ((CallableStatement)this.plugin).setAsciiStream(string, inputStream);
+            (this.plugin).setAsciiStream(string, inputStream);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1951,7 +1951,7 @@ CallableStatement {
     @Override
     public void setBinaryStream(String string, InputStream inputStream) {
         try {
-            ((CallableStatement)this.plugin).setBinaryStream(string, inputStream);
+            (this.plugin).setBinaryStream(string, inputStream);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1960,7 +1960,7 @@ CallableStatement {
     @Override
     public void setCharacterStream(String string, Reader reader) {
         try {
-            ((CallableStatement)this.plugin).setCharacterStream(string, reader);
+            (this.plugin).setCharacterStream(string, reader);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1969,7 +1969,7 @@ CallableStatement {
     @Override
     public void setNCharacterStream(String string, Reader reader) {
         try {
-            ((CallableStatement)this.plugin).setNCharacterStream(string, reader);
+            (this.plugin).setNCharacterStream(string, reader);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1978,7 +1978,7 @@ CallableStatement {
     @Override
     public void setClob(String string, Reader reader) {
         try {
-            ((CallableStatement)this.plugin).setClob(string, reader);
+            (this.plugin).setClob(string, reader);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1987,7 +1987,7 @@ CallableStatement {
     @Override
     public void setBlob(String string, InputStream inputStream) {
         try {
-            ((CallableStatement)this.plugin).setBlob(string, inputStream);
+            (this.plugin).setBlob(string, inputStream);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -1996,7 +1996,7 @@ CallableStatement {
     @Override
     public void setNClob(String string, Reader reader) {
         try {
-            ((CallableStatement)this.plugin).setNClob(string, reader);
+            (this.plugin).setNClob(string, reader);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -2004,7 +2004,7 @@ CallableStatement {
 
     public Object getObject(int n, Class clazz) {
         try {
-            return ((CallableStatement)this.plugin).getObject(n, clazz);
+            return (this.plugin).getObject(n, clazz);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -2012,25 +2012,25 @@ CallableStatement {
 
     public Object getObject(String string, Class clazz) {
         try {
-            return ((CallableStatement)this.plugin).getObject(string, clazz);
+            return (this.plugin).getObject(string, clazz);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(String string, Object object, SQLType sQLType, int n) {
+    public void setObject(String string, Object targetObj, SQLType sQLType, int n) {
         try {
-            ((CallableStatement)this.plugin).setObject(string, object, sQLType, n);
+            (this.plugin).setObject(string, targetObj, sQLType, n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
 }
 
     @Override
-    public void setObject(String string, Object object, SQLType sQLType) {
+    public void setObject(String string, Object targetObj, SQLType sQLType) {
         try {
-            ((CallableStatement)this.plugin).setObject(string, object, sQLType);
+            (this.plugin).setObject(string, targetObj, sQLType);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -2039,7 +2039,7 @@ CallableStatement {
     @Override
     public void registerOutParameter(int n, SQLType sQLType) {
         try {
-            ((CallableStatement)this.plugin).registerOutParameter(n, sQLType);
+            (this.plugin).registerOutParameter(n, sQLType);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -2048,7 +2048,7 @@ CallableStatement {
     @Override
     public void registerOutParameter(int n, SQLType sQLType, int n2) {
         try {
-            ((CallableStatement)this.plugin).registerOutParameter(n, sQLType, n2);
+            (this.plugin).registerOutParameter(n, sQLType, n2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -2057,7 +2057,7 @@ CallableStatement {
     @Override
     public void registerOutParameter(int n, SQLType sQLType, String string) {
         try {
-            ((CallableStatement)this.plugin).registerOutParameter(n, sQLType, string);
+            (this.plugin).registerOutParameter(n, sQLType, string);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -2066,7 +2066,7 @@ CallableStatement {
     @Override
     public void registerOutParameter(String string, SQLType sQLType) {
         try {
-            ((CallableStatement)this.plugin).registerOutParameter(string, sQLType);
+            (this.plugin).registerOutParameter(string, sQLType);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -2075,7 +2075,7 @@ CallableStatement {
     @Override
     public void registerOutParameter(String string, SQLType sQLType, int n) {
         try {
-            ((CallableStatement)this.plugin).registerOutParameter(string, sQLType, n);
+            (this.plugin).registerOutParameter(string, sQLType, n);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);
@@ -2084,7 +2084,7 @@ CallableStatement {
     @Override
     public void registerOutParameter(String string, SQLType sQLType, String string2) {
         try {
-            ((CallableStatement)this.plugin).registerOutParameter(string, sQLType, string2);
+            (this.plugin).registerOutParameter(string, sQLType, string2);
         }
         catch (SQLException sQLException) {
             throw this.plugin(sQLException);

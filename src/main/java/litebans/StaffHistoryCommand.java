@@ -27,19 +27,18 @@ implements LiteBansModule_359 {
     @Override
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args) {
 {
-            int n = LimitHandler.BaseCoreGenericHandler((LiteBansModule_359)this, this.LiteBansModule_240(), args, CollectionUtilities.e(), 0, 8, null);
-            Object object = this;
-            String string = CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)object, (String)ArrayUtilities.LiteBansModule_31(args));
-            object = this;
+            int n = LimitHandler.BaseCoreGenericHandler(this, this.LiteBansModule_240(), args, CollectionUtilities.e(), 0, 8, null);
+                        String string = CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)targetObj, (String)ArrayUtilities.LiteBansModule_31(args));
+            targetObj = this;
             flag = false;
-            object = (DatabaseMonitorService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
+            targetObj = (DatabaseMonitorService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class);
             flag = false;
             try {
-                LiteBansModule_82 ch2 = ((DatabaseMonitorService)object).LiteBansModule_194();
+                LiteBansModule_82 ch2 = targetObj.LiteBansModule_194();
                 Closeable closeable = ch2;
                 Throwable throwable = null;
                 try {
-                    Object object2 = (LiteBansModule_82)closeable;
+                    Object contextObj = (LiteBansModule_82)closeable;
                     LiteBansModule_82 ch3 = ch2;
                     LiteBansModule_297 iA2 = CommandArgumentUtils.BaseCoreGenericHandler(ch3, string, false);
                     String string2 = (String)ArrayUtilities.BaseCoreGenericHandler((Object[])args, 1);
@@ -63,7 +62,7 @@ implements LiteBansModule_359 {
                     }
                     List list2 = CollectionUtilities.e((List)collection);
                     LimitHandler.BaseCoreGenericHandler(this, ch3, list2, iA2, args, null, 0, 24, null);
-                    object2 = KotlinUnitHandler.BaseCoreGenericHandler;
+                    contextObj = KotlinUnitHandler.BaseCoreGenericHandler;
                 }
                 catch (Throwable throwable2) {
                     throwable = throwable2;
@@ -73,7 +72,7 @@ implements LiteBansModule_359 {
                     BlockHandler.BaseCoreGenericHandler(closeable, throwable);
 }
             catch (SQLException sQLException) {
-                if (((DatabaseMonitorService)object).LiteBansModule_31(sQLException)) break;
+                if (targetObj.LiteBansModule_31(sQLException)) break;
                 throw sQLException;
 }
 
@@ -84,7 +83,7 @@ implements LiteBansModule_359 {
 
     @Override
     public void BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @NotNull Collection collection, @Nullable LiteBansModule_297 iA2, @Nullable String[] args, @NotNull AbstractCommand abstractCommand, int n) {
-        LimitHandler.BaseCoreGenericHandler((LiteBansModule_359)this, ch2, collection, iA2, args, abstractCommand, n);
+        LimitHandler.BaseCoreGenericHandler(this, ch2, collection, iA2, args, abstractCommand, n);
     }
 
     @Override

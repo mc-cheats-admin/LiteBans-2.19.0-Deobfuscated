@@ -5,8 +5,8 @@ import org.jetbrains.annotations.NotNull;
 
 static class ExceptionHandler {
     public static final void BaseCoreGenericHandler(@NotNull Throwable throwable, @NotNull Throwable throwable2) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)throwable, "<this>");
-        ObjectUtilities.BaseCoreGenericHandler((Object)throwable2, "exception");
+        ObjectUtilities.BaseCoreGenericHandler(throwable, "<this>");
+        ObjectUtilities.BaseCoreGenericHandler(throwable2, "exception");
         if (throwable != throwable2) {
             PlatformImplementationsKt.IMPLEMENTATIONS.addSuppressed(throwable, throwable2);
 }

@@ -97,7 +97,7 @@ extends MessageHandler {
     }
 
     public void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender) {
-        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, sender, GeoIPLookupService.BaseCoreGenericHandler((CharSequence)MessageKey.ValueHandler_2.BaseCoreGenericHandler("bans", (Object)this.g()), (CharSequence)"ipbans", this.LiteBansModule_194()), null, 4, null);
+        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, sender, GeoIPLookupService.BaseCoreGenericHandler(MessageKey.ValueHandler_2.BaseCoreGenericHandler("bans", this.g()), (CharSequence)"ipbans", this.LiteBansModule_194()), null, 4, null);
     }
 
     public abstract void BaseCoreGenericHandler(@NotNull String var1, @NotNull Connection var2, @NotNull LiteBansModule_82 var3, boolean var4);
@@ -110,15 +110,14 @@ extends MessageHandler {
     public final String LiteBansModule_31(@Nullable String string) {
         String string2;
         String string3;
-        if (string == null || StringUtilities.BaseCoreGenericHandler((CharSequence)string, '#', false, 2, null)) {
+        if (string == null || StringUtilities.BaseCoreGenericHandler(string, '#', false, 2, null)) {
             return "#";
         }
-        String string4 = string3 = (String)this.plugin().get(string);
+        String string4 = string3 = this.plugin().get(string);
         if (string4 != null) {
             return string4;
         }
-        Object object = this;
-        boolean flag2 = ((ConfigService)((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().af();
+                boolean flag2 = ((ConfigService)targetObj.LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().af();
         if (flag2) {
             LiteBansModule_89 cM2 = LiteBansModule_50.c.BaseCoreGenericHandler(string);
             if (cM2 == null) {
@@ -128,9 +127,9 @@ extends MessageHandler {
         } else {
             string2 = LiteBansModule_242.BaseCoreGenericHandler(string);
         }
-        object = string2;
-        ((Map)this.plugin()).put(string, object);
-        return object;
+        targetObj = string2;
+        (this.plugin()).put(string, targetObj);
+        return targetObj;
     }
 
     public String BaseCoreGenericHandler(@NotNull UUID uUID) {
@@ -157,28 +156,23 @@ extends MessageHandler {
 }
 
     public final void BaseCoreGenericHandler(@NotNull LiteBansModule_82 ch2, @Nullable String string, @NotNull String string2, long l3, long l5, @Nullable String string3, @Nullable UUID uUID, @Nullable UUID uUID2, @Nullable String string4, @NotNull AtomicLong atomicLong, @NotNull BanHandler a_2) {
-        Object object;
-        Object object2;
-        Object object3;
-        Object object4 = uUID;
-        if (object4 == null || (object4 = ((UUID)object4).toString()) == null) {
-            object4 = object3 = this.LiteBansModule_31(string);
+        Object helperObj = uUID;
+        if (helperObj == null || (helperObj = ((UUID)helperObj).toString()) == null) {
+            helperObj = resultObj = this.LiteBansModule_31(string);
         }
-        if ((object2 = uUID2) == null || (object2 = ((UUID)object2).toString()) == null) {
-            object2 = object = this.LiteBansModule_31(string3);
+        if ((contextObj = uUID2) == null || (contextObj = ((UUID)contextObj).toString()) == null) {
+            contextObj = targetObj = this.LiteBansModule_31(string3);
         }
-        if (string4 == null && StringUtilities.LiteBansModule_31((String)object3, "#", false, 2, null)) {
+        if (string4 == null && StringUtilities.LiteBansModule_31((String)resultObj, "#", false, 2, null)) {
             return;
         }
         MessageHandler messageHandler = this;
-        SilentHandler dZ2 = AllHandler_3.BaseCoreGenericHandler(ch2, (String)object3, string4, a_2, ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService(), false, false, 48, null);
-        if (a_2 == BanHandler.c || dZ2 == null || !ObjectUtilities.BaseCoreGenericHandler((Object)dZ2.DatabaseMonitorService(), object3)) {
+        SilentHandler dZ2 = AllHandler_3.BaseCoreGenericHandler(ch2, (String)resultObj, string4, a_2, ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).ServerSyncService(), false, false, 48, null);
+        if (a_2 == BanHandler.c || dZ2 == null || !ObjectUtilities.BaseCoreGenericHandler(dZ2.DatabaseMonitorService(), resultObj)) {
             boolean flag2 = string4 != null;
-            Object object5 = this;
-            String string5 = ((ConfigService)((MessageHandler)object5).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_25();
-            Object object6 = this;
-            object5 = LiteBansModule_181.LiteBansModule_194.BaseCoreGenericHandler(((ConfigService)((MessageHandler)object6).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().BuilderactionHandler(), string5, this.LiteBansModule_240().HoverTextFormatter());
-            object6 = new SilentHandler(a_2, (String)object3, string4, string2, (String)object, string3, (String)object5, string5, l3, l5, 0, false, flag2, false, 0L, 27648, null);
+                        String string5 = ((ConfigService)((MessageHandler)tempObj).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().LiteBansModule_25();
+                        tempObj = LiteBansModule_181.LiteBansModule_194.BaseCoreGenericHandler(((ConfigService)((MessageHandler)object6).LiteBansModule_240().BaseCoreGenericHandler(ConfigService.class)).LiteBansModule_194().BuilderactionHandler(), string5, this.LiteBansModule_240().HoverTextFormatter());
+            object6 = new SilentHandler(a_2, (String)resultObj, string4, string2, (String)targetObj, string3, (String)tempObj, string5, l3, l5, 0, false, flag2, false, 0L, 27648, null);
             ch2.c((SilentHandler)object6);
             if (a_2 == BanHandler.LiteBansModule_240) {
                 atomicLong.incrementAndGet();
@@ -187,15 +181,15 @@ extends MessageHandler {
 } else {
             this.LiteBansModule_240().getLogger().warning("Ignoring duplicate " + a_2 + " for " + string + " (ip=" + string4 + ')');
         }
-        if (string != null && object3 != null) {
-            new LiteBansModule_221(this.LiteBansModule_240(), string, (String)object3, "#").run();
+        if (string != null && resultObj != null) {
+            new LiteBansModule_221(this.LiteBansModule_240(), string, (String)resultObj, "#").run();
         }
-        if (string3 != null && object != null) {
-            new LiteBansModule_221(this.LiteBansModule_240(), string3, (String)object, "#").run();
+        if (string3 != null && targetObj != null) {
+            new LiteBansModule_221(this.LiteBansModule_240(), string3, (String)targetObj, "#").run();
 }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(BansHandler fS2, LiteBansModule_82 ch2, String string, String string2, long l3, long l5, String string3, UUID uUID, UUID uUID2, String string4, AtomicLong atomicLong, BanHandler a_2, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ void BaseCoreGenericHandler(BansHandler fS2, LiteBansModule_82 ch2, String string, String string2, long l3, long l5, String string3, UUID uUID, UUID uUID2, String string4, AtomicLong atomicLong, BanHandler a_2, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 0x40) != 0) {

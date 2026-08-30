@@ -40,7 +40,7 @@ public final class LiteBansModule_366 {
             if (br2.e().isEmpty()) {
                 br2.LiteBansModule_31(new ArrayList(this.LiteBansModule_31.length));
             }
-            br2.LiteBansModule_31(CollectionUtilities.BaseCoreGenericHandler((Collection)br2.e(), (Object)LiteBansModule_371.BaseCoreGenericHandler(n, by2)));
+            br2.LiteBansModule_31(CollectionUtilities.BaseCoreGenericHandler((Collection)br2.e(), LiteBansModule_371.BaseCoreGenericHandler(n, by2)));
             return 0;
         }
         return this.LiteBansModule_31[n];

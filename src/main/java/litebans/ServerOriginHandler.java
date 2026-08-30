@@ -8,19 +8,19 @@ implements LiteBansModule_178 {
     }
 
     public final String BaseCoreGenericHandler(BansHandler_2 kL2) {
-        Object object = kL2;
-        String string = SQLiteDriverHandler.e("ALTER TABLE " + object);
-        object = this.LiteBansModule_31;
+        Object targetObj = kL2;
+        String string = SQLiteDriverHandler.e("ALTER TABLE " + targetObj);
+        targetObj = this.LiteBansModule_31;
         String string2 = "server_origin";
         int n = 32;
         String string3 = "";
-        String string4 = ((SQLiteDriverHandler_5)object).LiteBansModule_31().c();
-        return SQLiteDriverHandler.LiteBansModule_194(string, DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(((SQLiteDriverHandler_5)object).LiteBansModule_31().BaseCoreGenericHandler()) ? string2 + " VARCHAR(" + n + ')' + string4 + string3 : string2 + " VARCHAR(" + n + ')' + string3);
+        String string4 = targetObj.LiteBansModule_31().c();
+        return SQLiteDriverHandler.LiteBansModule_194(string, DatabaseMonitorService.CommandThrottleService.LiteBansModule_31(targetObj.LiteBansModule_31().BaseCoreGenericHandler()) ? string2 + " VARCHAR(" + n + ')' + string4 + string3 : string2 + " VARCHAR(" + n + ')' + string3);
     }
 
     @Override
-    public Object BaseCoreGenericHandler(Object object) {
-        return SQLiteDriverHandler.AsyncBackgroundTask_5(this.plugin((BansHandler_2)object));
+    public Object BaseCoreGenericHandler(Object targetObj) {
+        return SQLiteDriverHandler.AsyncBackgroundTask_5(this.plugintargetObj);
     }
 
     private static final void BaseCoreGenericHandler() {

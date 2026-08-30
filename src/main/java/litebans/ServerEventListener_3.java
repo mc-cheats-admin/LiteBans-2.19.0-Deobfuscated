@@ -12,7 +12,7 @@ implements LiteBansModule_171 {
     private final BroadcastService BaseCoreGenericHandler;
     public ServerEventListener_3(@NotNull PlatformPlugin plugin) {
         this.c = plugin;
-        this.plugin = (BroadcastService)this.c.BaseCoreGenericHandler(BroadcastService.class);
+        this.plugin = this.c.BaseCoreGenericHandler(BroadcastService.class);
     }
 
     public final PlatformPlugin BaseCoreGenericHandler() {
@@ -67,7 +67,7 @@ implements LiteBansModule_171 {
                             arg10 = arg9.next();
                             arg11 = (String)arg10;
                             arg12 = arg2;
-                            ObjectUtilities.BaseCoreGenericHandler((Object)arg11);
+                            ObjectUtilities.BaseCoreGenericHandler(arg11);
                             arg13 = arg11;
                             if (!(StringUtilities.BaseCoreGenericHandler(arg12.BaseCoreGenericHandler(), arg13, true) == false)) continue;
                             v3 = arg10;
@@ -79,11 +79,11 @@ implements LiteBansModule_171 {
                     } else {
                         v1.setResult(ServerPreConnectEvent.ServerResult.allowed((RegisteredServer)((RegisteredServer)CollectionUtilities.LiteBansModule_240(arg1.c.matchServer((String)arg7)))));
                         arg8 = v2;
-                        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)arg8, (CharSequence)arg4, null, 4, null);
+                        ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)arg8, arg4, null, 4, null);
 } else {
                     LitebansLockdownBypassHandler.BaseCoreGenericHandler(arg2, v1, null, false, 2, null);
                     arg7 = v2;
-                    ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)arg7, (CharSequence)arg4, null, 4, null);
+                    ChatFormatter.BaseCoreGenericHandler(MessageHandler.BaseCoreGenericHandler, (CommandSenderWrapper)arg7, arg4, null, 4, null);
 }
 
     public ServerEventListener_3 c() {

@@ -14,7 +14,7 @@ implements LiteBansModule_51 {
 
     public LiteBansModule_110(@NotNull PlatformPlugin plugin) {
         this.plugin = plugin;
-        this.LiteBansModule_31 = (PunishmentTableService)this.plugin.BaseCoreGenericHandler(PunishmentTableService.class);
+        this.LiteBansModule_31 = this.plugin.BaseCoreGenericHandler(PunishmentTableService.class);
     }
 
     public final PlatformPlugin LiteBansModule_31() {
@@ -35,9 +35,9 @@ implements LiteBansModule_51 {
         String string = class_74712.method_46291().getString();
         LiteBansModule_70 c92 = new LiteBansModule_70(class_74712, false, 2, null);
         TestHandler_2 f82 = this.LiteBansModule_31.BaseCoreGenericHandler();
-        ObjectUtilities.BaseCoreGenericHandler((Object)string);
+        ObjectUtilities.BaseCoreGenericHandler(string);
         ObjectUtilities.BaseCoreGenericHandler(sender);
-        f82.BaseCoreGenericHandler((Object)c92, string, sender, true);
+        f82.BaseCoreGenericHandler(c92, string, sender, true);
         return !c92.BaseCoreGenericHandler();
     }
 
@@ -46,7 +46,7 @@ implements LiteBansModule_51 {
         String string = class_74712.method_46291().getString();
         LiteBansModule_70 c92 = new LiteBansModule_70(class_74712, false, 2, null);
         TestHandler_2 f82 = this.LiteBansModule_31.BaseCoreGenericHandler();
-        ObjectUtilities.BaseCoreGenericHandler((Object)string);
+        ObjectUtilities.BaseCoreGenericHandler(string);
         ObjectUtilities.BaseCoreGenericHandler(sender);
         TestHandler_2.BaseCoreGenericHandler(f82, c92, string, sender, false, 8, null);
         return !c92.BaseCoreGenericHandler();

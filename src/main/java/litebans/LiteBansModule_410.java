@@ -51,11 +51,11 @@ LiteBansModule_122 {
         return this.plugin();
     }
 
-    public void set(Object object) {
+    public void set(Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
-    public void add(Object object) {
+    public void add(Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 

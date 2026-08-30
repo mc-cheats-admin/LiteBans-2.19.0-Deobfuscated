@@ -27,25 +27,25 @@ extends MessageHandler {
     }
 
     private static final KotlinUnitHandler BaseCoreGenericHandler(LiteBansModule_195 f02, LiteBansModule_82 ch2) {
-        Object object = MessageHandler.BaseCoreGenericHandler;
+        Object targetObj = MessageHandler.BaseCoreGenericHandler;
         boolean flag = ch2.LiteBansModule_31();
-        Object object2 = MessageKey.ServerEventListener;
-        Object object3 = object;
+        Object contextObj = MessageKey.ServerEventListener;
+        Object resultObj = targetObj;
         if (flag) {
-            ChatFormatter chatFormatter = object3;
-            chatFormatter.BaseCoreGenericHandler(object2);
+            ChatFormatter chatFormatter = resultObj;
+            chatFormatter.BaseCoreGenericHandler(contextObj);
             throw new CommandExitException();
         }
-        object = BansHandler_2.AsyncBackgroundTask_5.BaseCoreGenericHandler();
+        targetObj = BansHandler_2.AsyncBackgroundTask_5.BaseCoreGenericHandler();
         flag = false;
-        object2 = object.iterator();
-        while (object2.hasNext()) {
-            Object e = object2.next();
-            object3 = (BansHandler_2)e;
+        contextObj = targetObj.iterator();
+        while (contextObj.hasNext()) {
+            Object e = contextObj.next();
+            resultObj = (BansHandler_2)e;
             flag3 = false;
-            ch2.BaseCoreGenericHandler((BansHandler_2)object3);
+            ch2.BaseCoreGenericHandlerthis;
         }
-        CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)f02, (CharSequence)LiteBansModule_242.BaseCoreGenericHandler(BlackHandler.ServerSyncService, "All templates have been reset "));
+        CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)f02, LiteBansModule_242.BaseCoreGenericHandler(BlackHandler.ServerSyncService, "All templates have been reset "));
         return KotlinUnitHandler.BaseCoreGenericHandler;
     }
 

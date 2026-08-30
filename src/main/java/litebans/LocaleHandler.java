@@ -9,14 +9,14 @@ static class LocaleHandler {
     }
 
     public static final String LiteBansModule_31(char c, @NotNull Locale locale) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)locale, "locale");
+        ObjectUtilities.BaseCoreGenericHandler(locale, "locale");
         String string = String.valueOf(c);
         ObjectUtilities.LiteBansModule_31(string, "");
         return string.toUpperCase(locale);
     }
 
     public static final String BaseCoreGenericHandler(char c, @NotNull Locale locale) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)locale, "locale");
+        ObjectUtilities.BaseCoreGenericHandler(locale, "locale");
         String string = LiteBansModule_338.LiteBansModule_31(c, locale);
         if (string.length() > 1) {
             String string2;
@@ -36,7 +36,7 @@ static class LocaleHandler {
         }
         String string4 = String.valueOf(c);
         ObjectUtilities.LiteBansModule_31(string4, "");
-        if (!ObjectUtilities.BaseCoreGenericHandler((Object)string, (Object)string4.toUpperCase(Locale.ROOT))) {
+        if (!ObjectUtilities.BaseCoreGenericHandler(string, string4.toUpperCase(Locale.ROOT))) {
             return string;
         }
         return String.valueOf(Character.toTitleCase(c));

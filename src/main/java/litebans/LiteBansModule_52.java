@@ -15,7 +15,7 @@ implements Comparator {
         return l3.compareTo(l5);
     }
 
-    public int compare(Object object, Object object2) {
-        return this.plugin((LiteBansModule_292)object, (LiteBansModule_292)object2);
+    public int compare(Object targetObj, Object contextObj) {
+        return this.plugin((LiteBansModule_292)targetObj, (LiteBansModule_292)contextObj);
 }
 

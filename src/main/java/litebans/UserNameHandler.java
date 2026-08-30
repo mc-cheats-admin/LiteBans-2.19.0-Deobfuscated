@@ -59,11 +59,11 @@ LiteBansModule_411 {
         return bv_02 != null && this.getName().equals(bv_02.getName());
     }
 
-    public boolean equals(Object object) {
-        if (object == null || this.getClass() != object.getClass()) {
+    public boolean equals(Object targetObj) {
+        if (targetObj == null || this.getClass() != targetObj.getClass()) {
             return false;
         }
-        return this.plugin((UserNameHandler)object);
+        return this.plugintargetObj;
     }
 
     public int hashCode() {
@@ -267,9 +267,9 @@ LiteBansModule_411 {
 
     private final void BaseCoreGenericHandler(byte[] byArray, LiteBansModule_119 dd_02, boolean flag, boolean flag2) {
         this.LiteBansModule_7 = flag ? LiteBansModule_355.LiteBansModule_31(byArray, n, 100) : LiteBansModule_355.BaseCoreGenericHandler(byArray, n, 100, dd_02);
-        this.LiteBansModule_24 = (int)this.plugin(byArray, n += 100, 8, flag2);
-        this.LiteBansModule_15 = (int)this.plugin(byArray, n += 8, 8, flag2);
-        this.LiteBansModule_9 = (int)this.plugin(byArray, n += 8, 8, flag2);
+        this.LiteBansModule_24 = this.plugin(byArray, n += 100, 8, flag2);
+        this.LiteBansModule_15 = this.plugin(byArray, n += 8, 8, flag2);
+        this.LiteBansModule_9 = this.plugin(byArray, n += 8, 8, flag2);
         this.ElementsHandler = LiteBansModule_355.BaseCoreGenericHandler(byArray, n += 8, 12);
         this.aE = this.plugin(byArray, n += 12, 12, flag2);
         n += 12;
@@ -283,8 +283,8 @@ LiteBansModule_411 {
         this.LockdownCommandHandler = flag ? LiteBansModule_355.LiteBansModule_31(byArray, n, 32) : LiteBansModule_355.BaseCoreGenericHandler(byArray, n += 32, 32, dd_02);
         n += 32;
         if (this.SQLiteDriverHandler == 51 || this.SQLiteDriverHandler == 52) {
-            this.LiteBansModule_25 = (int)this.plugin(byArray, n, 8, flag2);
-            this.LiteBansModule_18 = (int)this.plugin(byArray, n += 8, 8, flag2);
+            this.LiteBansModule_25 = this.plugin(byArray, n, 8, flag2);
+            this.LiteBansModule_18 = this.plugin(byArray, n += 8, 8, flag2);
             n += 8;
         } else {
             n += 16;

@@ -15,7 +15,7 @@ implements LiteBansModule_88 {
 
     @EventHandler(priority=EventPriority.LOW, ignoreCancelled=true)
     public final void BaseCoreGenericHandler(@NotNull LoginEvent loginEvent) {
-        DatabaseMonitorService w2 = (DatabaseMonitorService)this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
+        DatabaseMonitorService w2 = this.plugin.BaseCoreGenericHandler(DatabaseMonitorService.class);
         try {
             Player player = loginEvent.getPlayer();
             if (player == null) {
@@ -30,7 +30,7 @@ implements LiteBansModule_88 {
         }
         catch (Throwable throwable) {
             this.plugin.getLogger().severe("Handling AuthMe login event failed. Further events will not be ");
-            ConfigService configService = (ConfigService)this.plugin.BaseCoreGenericHandler(ConfigService.class);
+            ConfigService configService = this.plugin.BaseCoreGenericHandler(ConfigService.class);
             w2.BaseCoreGenericHandler(throwable);
             LiteBansModule_175[] em_0Array = new LiteBansModule_175[]{this};
             this.plugin.BaseCoreGenericHandler(em_0Array);

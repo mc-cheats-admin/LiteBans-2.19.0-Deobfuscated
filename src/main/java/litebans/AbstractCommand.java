@@ -45,30 +45,30 @@ implements LiteCommand {
      */
     public final void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String[] args, @NotNull String string) {
         ChatFormatter chatFormatter = MessageHandler.BaseCoreGenericHandler;
-        CommandSenderWrapper jv_03 = sender;
+        CommandSenderWrapper senderWrapper = sender;
         try {
-            chatFormatter.LiteBansModule_31().set(jv_03);
-            CommandThrottleService v2 = (CommandThrottleService)this.LiteBansModule_240().BaseCoreGenericHandler(CommandThrottleService.class);
+            chatFormatter.LiteBansModule_31().set(senderWrapper);
+            CommandThrottleService v2 = this.LiteBansModule_240().BaseCoreGenericHandler(CommandThrottleService.class);
             try {
                 if (this.plugin()) {
                     AbstractCommand.BaseCoreGenericHandler(this, args, null, 2, null);
                 }
                 if (sender.e() && v2.BaseCoreGenericHandler((byte)3, sender.BaseCoreGenericHandler())) {
-                    CommandSenderWrapper jv_04 = sender;
+                    CommandSenderWrapper senderWrapper = sender;
                     String string2 = "litebans.cooldown.bypass";
-                    CommandSenderWrapper jv_05 = jv_04;
-                    if (!jv_05.e(string2)) {
+                    CommandSenderWrapper senderWrapper = senderWrapper;
+                    if (!senderWrapper.e(string2)) {
                         flag3 = true;
 }
                 if (!flag3) {
                     this.plugin(sender, args);
 }
             catch (LiteBansException bi2) {
-                String string3 = GeoIPLookupService.BaseCoreGenericHandler((CharSequence)GeoIPLookupService.BaseCoreGenericHandler((CharSequence)String.valueOf(bi2.BaseCoreGenericHandler()), (CharSequence)"commandArgs", () -> AbstractCommand.BaseCoreGenericHandler(args)), (CharSequence)"command", () -> AbstractCommand.BaseCoreGenericHandler(string));
-                CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, (CharSequence)string3);
+                String string3 = GeoIPLookupService.BaseCoreGenericHandler(GeoIPLookupService.BaseCoreGenericHandler(String.valueOf(bi2.BaseCoreGenericHandler()), (CharSequence)"commandArgs", () -> AbstractCommand.BaseCoreGenericHandler(args)), (CharSequence)"command", () -> AbstractCommand.BaseCoreGenericHandler(string));
+                CommandArgumentUtils.BaseCoreGenericHandler(this, string3);
             }
             catch (Exception exception) {
-                CommandArgumentUtils.BaseCoreGenericHandler((MessageHandler)this, MessageKey.LiteBansModule_67);
+                CommandArgumentUtils.BaseCoreGenericHandler(this, MessageKey.LiteBansModule_67);
                 MessageHandler messageHandler = this;
                 ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(exception);
             }
@@ -88,8 +88,8 @@ implements LiteCommand {
             throw new CommandExitException();
 }
 
-    public static /* synthetic */ void BaseCoreGenericHandler(AbstractCommand abstractCommand, String[] args, LiteBansModule_146 messageSupplier, int n, Object object) {
-        if (object != null) {
+    public static /* synthetic */ void BaseCoreGenericHandler(AbstractCommand abstractCommand, String[] args, LiteBansModule_146 messageSupplier, int n, Object targetObj) {
+        if (targetObj != null) {
             throw new UnsupportedOperationException("");
         }
         if ((n & 2) != 0) {

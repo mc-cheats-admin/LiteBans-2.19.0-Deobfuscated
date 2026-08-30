@@ -37,12 +37,12 @@ public final class NullHandler_4 {
             return this;
         }
         String string2 = string.substring(0, n);
-        Object object = this.AsyncBackgroundTask_5.get(string2);
-        if (object == null) {
-            object = new NullHandler_4(this.LiteBansModule_31 == null ? null : this.LiteBansModule_31.LiteBansModule_31(string2));
-            this.AsyncBackgroundTask_5.put(string2, object);
+        Object targetObj = this.AsyncBackgroundTask_5.get(string2);
+        if (targetObj == null) {
+            targetObj = new NullHandler_4(this.LiteBansModule_31 == null ? null : this.LiteBansModule_31.LiteBansModule_31(string2));
+            this.AsyncBackgroundTask_5.put(string2, targetObj);
         }
-        return (NullHandler_4)object;
+        return (NullHandler_4)targetObj;
     }
 
     private final String LiteBansModule_240(String string) {
@@ -50,13 +50,13 @@ public final class NullHandler_4 {
         return n == -1 ? string : string.substring(n + 1);
     }
 
-    public Object LiteBansModule_31(String string, Object object) {
+    public Object LiteBansModule_31(String string, Object targetObj) {
         NullHandler_4 ie_02 = this.c(string);
-        Object object2 = ie_02 == this ? this.AsyncBackgroundTask_5.get(string) : ie_02.LiteBansModule_31(this.LiteBansModule_240(string), object);
-        if (object2 == null && object instanceof NullHandler_4) {
-            this.AsyncBackgroundTask_5.put(string, object);
+        Object contextObj = ie_02 == this ? this.AsyncBackgroundTask_5.get(string) : ie_02.LiteBansModule_31(this.LiteBansModule_240(string), targetObj);
+        if (contextObj == null && targetObj instanceof NullHandler_4) {
+            this.AsyncBackgroundTask_5.put(string, targetObj);
         }
-        return object2 != null ? object2 : object;
+        return contextObj != null ? contextObj : targetObj;
     }
 
     public Object e(String string) {
@@ -67,23 +67,23 @@ public final class NullHandler_4 {
         return this.LiteBansModule_31 == null ? null : this.LiteBansModule_31.e(string);
     }
 
-    public void BaseCoreGenericHandler(String string, Object object) {
+    public void BaseCoreGenericHandler(String string, Object targetObj) {
         NullHandler_4 ie_02;
-        if (object instanceof Map) {
-            object = new NullHandler_4((Map)object, this.LiteBansModule_31 == null ? null : this.LiteBansModule_31.LiteBansModule_31(string));
+        if (targetObj instanceof Map) {
+            targetObj = new NullHandler_4((Map)targetObj, this.LiteBansModule_31 == null ? null : this.LiteBansModule_31.LiteBansModule_31(string));
         }
         if ((ie_02 = this.c(string)) == this) {
-            if (object == null) {
+            if (targetObj == null) {
                 this.AsyncBackgroundTask_5.remove(string);
             } else {
-                this.AsyncBackgroundTask_5.put(string, object);
+                this.AsyncBackgroundTask_5.put(string, targetObj);
 } else {
-            ie_02.BaseCoreGenericHandler(this.LiteBansModule_240(string), object);
+            ie_02.BaseCoreGenericHandler(this.LiteBansModule_240(string), targetObj);
 }
 
     public NullHandler_4 LiteBansModule_31(String string) {
-        Object object = this.g(string);
-        return (NullHandler_4)this.LiteBansModule_31(string, object instanceof NullHandler_4 ? object : new NullHandler_4(this.LiteBansModule_31 == null ? null : this.LiteBansModule_31.LiteBansModule_31(string)));
+        Object targetObj = this.g(string);
+        return this.LiteBansModule_31(string, targetObj instanceof NullHandler_4 ? targetObj : new NullHandler_4(this.LiteBansModule_31 == null ? null : this.LiteBansModule_31.LiteBansModule_31(string)));
     }
 
     public Collection LiteBansModule_31() {
@@ -91,43 +91,43 @@ public final class NullHandler_4 {
     }
 
     public int BaseCoreGenericHandler(String string, int n) {
-        Object object = this.LiteBansModule_31(string, n);
-        return object instanceof Number ? ((Number)object).intValue() : n;
+        Object targetObj = this.LiteBansModule_31(string, n);
+        return targetObj instanceof Number ? targetObj.intValue() : n;
     }
 
     public long BaseCoreGenericHandler(String string, long l3) {
-        Object object = this.LiteBansModule_31(string, l3);
-        return object instanceof Number ? ((Number)object).longValue() : l3;
+        Object targetObj = this.LiteBansModule_31(string, l3);
+        return targetObj instanceof Number ? targetObj.longValue() : l3;
     }
 
     public double BaseCoreGenericHandler(String string) {
-        Object object = this.g(string);
-        return this.plugin(string, object instanceof Number ? ((Number)object).doubleValue() : 0.0);
+        Object targetObj = this.g(string);
+        return this.plugin(string, targetObj instanceof Number ? targetObj.doubleValue() : 0.0);
     }
 
     public double BaseCoreGenericHandler(String string, double d10) {
-        Object object = this.LiteBansModule_31(string, d10);
-        return object instanceof Number ? ((Number)object).doubleValue() : d10;
+        Object targetObj = this.LiteBansModule_31(string, d10);
+        return targetObj instanceof Number ? targetObj.doubleValue() : d10;
     }
 
     public boolean LiteBansModule_194(String string) {
-        Object object = this.g(string);
-        return this.plugin(string, object instanceof Boolean ? (Boolean)object : false);
+        Object targetObj = this.g(string);
+        return this.plugin(string, targetObj instanceof Boolean ? (Boolean)targetObj : false);
     }
 
     public boolean BaseCoreGenericHandler(String string, boolean flag) {
-        Object object = this.LiteBansModule_31(string, flag);
-        return object instanceof Boolean ? (Boolean)object : flag;
+        Object targetObj = this.LiteBansModule_31(string, flag);
+        return targetObj instanceof Boolean ? (Boolean)targetObj : flag;
     }
 
     public String i(String string) {
-        Object object = this.g(string);
-        return this.plugin(string, object instanceof String ? (String)object : "");
+        Object targetObj = this.g(string);
+        return this.plugin(string, targetObj instanceof String ? (String)targetObj : "");
     }
 
     public String BaseCoreGenericHandler(String string, String string2) {
-        Object object = this.LiteBansModule_31(string, string2);
-        return object instanceof String ? (String)object : string2;
+        Object targetObj = this.LiteBansModule_31(string, string2);
+        return targetObj instanceof String ? (String)targetObj : string2;
     }
 
     public List GnuSparseMapHandler(String string) {
@@ -141,13 +141,13 @@ public final class NullHandler_4 {
     }
 
     public List AsyncBackgroundTask_5(String string) {
-        Object object = this.g(string);
-        return this.plugin(string, object instanceof List ? (List)object : Collections.EMPTY_LIST);
+        Object targetObj = this.g(string);
+        return this.plugin(string, targetObj instanceof List ? (List)targetObj : Collections.EMPTY_LIST);
     }
 
     public List BaseCoreGenericHandler(String string, List list) {
-        Object object = this.LiteBansModule_31(string, list);
-        return object instanceof List ? (List)object : list;
+        Object targetObj = this.LiteBansModule_31(string, list);
+        return targetObj instanceof List ? (List)targetObj : list;
     }
 
     private static final void BaseCoreGenericHandler() {

@@ -16,7 +16,7 @@ extends ConfigurationManager {
     }
 
     private final Collection BaseCoreGenericHandler() {
-        return ((VelocityPlugin)this.plugin).c.getAllPlayers();
+        return (this.plugin).c.getAllPlayers();
     }
 
     @Override

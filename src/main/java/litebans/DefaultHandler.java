@@ -41,16 +41,16 @@ public final class DefaultHandler {
      * Lifted jumps to return sites
      */
     public final boolean BaseCoreGenericHandler(@NotNull String string, @NotNull UUID uUID, @NotNull String string2, @NotNull String string3, @NotNull String string4, @NotNull String[] args) {
-        if (StringUtilities.BaseCoreGenericHandler((CharSequence)string, '#', false, 2, null)) {
+        if (StringUtilities.BaseCoreGenericHandler(string, '#', false, 2, null)) {
             return false;
         }
         DefaultHandler e12 = this;
         LiteBansModule_158 ec_02 = e12.BaseCoreGenericHandler().c().i();
         ObjectUtilities.LiteBansModule_31(ec_02, "");
         BungeecordHandler_2 ao_02 = (BungeecordHandler_2)ec_02;
-        Object object = this.c();
-        if (!(object instanceof Permission)) return false;
-        Permission permission = (Permission)object;
+        Object targetObj = this.c();
+        if (!(targetObj instanceof Permission)) return false;
+        Permission permission = (Permission)targetObj;
         if (permission == null) {
             return false;
         }
@@ -63,9 +63,9 @@ public final class DefaultHandler {
         }
         e12 = offlinePlayer;
         try {
-            object = ObjectUtilities.BaseCoreGenericHandler((Object)string4, (Object)"default") ? null : string4;
+            targetObj = ObjectUtilities.BaseCoreGenericHandler(string4, (Object)"default") ? null : string4;
             if (!(args.length == 0) && permission2.hasGroupSupport()) {
-                objectArray = permission2.getPlayerGroups((String)object, (OfflinePlayer)e12);
+                objectArray = permission2.getPlayerGroups((String)targetObj, (OfflinePlayer)e12);
                 for (String string5 : args) {
                     Iterator iterator = ArrayHandler.BaseCoreGenericHandler(objectArray);
                     while (iterator.hasNext()) {
@@ -73,9 +73,9 @@ public final class DefaultHandler {
                         if (!StringUtilities.BaseCoreGenericHandler(string5, string6, true)) continue;
                         return true;
 }
-            if (permission2.playerHas((String)object, (OfflinePlayer)e12, string3)) return true;
+            if (permission2.playerHas((String)targetObj, (OfflinePlayer)e12, string3)) return true;
             objectArray = string2;
-            if (!permission2.playerHas((String)object, (OfflinePlayer)e12, string3 + '.' + objectArray.toLowerCase(Locale.ENGLISH))) return false;
+            if (!permission2.playerHas((String)targetObj, (OfflinePlayer)e12, string3 + '.' + objectArray.toLowerCase(Locale.ENGLISH))) return false;
             return true;
         }
         catch (IllegalArgumentException illegalArgumentException) {
@@ -85,98 +85,98 @@ public final class DefaultHandler {
             return false;
 }
 
-    public final boolean BaseCoreGenericHandler(@Nullable Object object, @NotNull String string, @Nullable String string2) {
-        Object object2 = this.c();
-        Permission permission = object2 instanceof Permission ? (Permission)object2 : null;
+    public final boolean BaseCoreGenericHandler(@Nullable Object targetObj, @NotNull String string, @Nullable String string2) {
+        Object contextObj = this.c();
+        Permission permission = contextObj instanceof Permission ? (Permission)contextObj : null;
         if (permission == null) {
             return false;
         }
         Permission permission2 = permission;
-        ObjectUtilities.LiteBansModule_31(object, "");
-        return permission2.playerHas(string2, (OfflinePlayer)object, string);
+        ObjectUtilities.LiteBansModule_31(targetObj, "");
+        return permission2.playerHas(string2, (OfflinePlayer)targetObj, string);
     }
 
-    public static /* synthetic */ boolean BaseCoreGenericHandler(DefaultHandler e12, Object object, String string, String string2, int n, Object object2) {
+    public static /* synthetic */ boolean BaseCoreGenericHandler(DefaultHandler e12, Object targetObj, String string, String string2, int n, Object contextObj) {
         if ((n & 4) != 0) {
             string2 = null;
         }
-        return e12.BaseCoreGenericHandler(object, string, string2);
+        return e12.BaseCoreGenericHandler(targetObj, string, string2);
     }
 
-    public final String BaseCoreGenericHandler(@Nullable Object object) {
-        if (object == null) {
+    public final String BaseCoreGenericHandler(@Nullable Object targetObj) {
+        if (targetObj == null) {
             return "";
         }
         LiteBansModule_158 ec_02 = this.LiteBansModule_31;
         ObjectUtilities.LiteBansModule_31(ec_02, "");
         BungeecordHandler_2 ao_02 = (BungeecordHandler_2)ec_02;
-        Object object2 = this.c();
-        Permission permission = object2 instanceof Permission ? (Permission)object2 : null;
+        Object contextObj = this.c();
+        Permission permission = contextObj instanceof Permission ? (Permission)contextObj : null;
         if (permission == null) {
             return "";
         }
         Permission permission2 = permission;
-        Object object3 = this.LiteBansModule_31();
-        Chat chat = object3 instanceof Chat ? (Chat)object3 : null;
+        Object resultObj = this.LiteBansModule_31();
+        Chat chat = resultObj instanceof Chat ? (Chat)resultObj : null;
         if (chat == null) {
             return "";
         }
         Chat chat2 = chat;
-        if (object instanceof UUID) {
-            Object object4 = ao_02.BaseCoreGenericHandler((UUID)object);
-            OfflinePlayer offlinePlayer = object4 instanceof OfflinePlayer ? (OfflinePlayer)object4 : null;
+        if (targetObj instanceof UUID) {
+            Object helperObj = ao_02.BaseCoreGenericHandlertargetObj;
+            OfflinePlayer offlinePlayer = helperObj instanceof OfflinePlayer ? (OfflinePlayer)helperObj : null;
             if (offlinePlayer == null) {
                 return "";
             }
-            object2 = offlinePlayer;
-            String string = chat2.getPlayerPrefix(null, (OfflinePlayer)object2);
+            contextObj = offlinePlayer;
+            String string = chat2.getPlayerPrefix(null, (OfflinePlayer)contextObj);
             if (string == null) {
                 string = "";
             }
             return string;
         }
-        String string = chat2.getPlayerPrefix((Player)object);
+        String string = chat2.getPlayerPrefixtargetObj;
         if (string == null) {
-            string = chat2.getGroupPrefix(((Player)object).getWorld().getName(), permission2.getPrimaryGroup((Player)object));
+            string = chat2.getGroupPrefix(targetObj.getWorld().getName(), permission2.getPrimaryGrouptargetObj);
         }
         return string;
     }
 
-    public final String LiteBansModule_31(@Nullable Object object) {
-        if (object == null) {
+    public final String LiteBansModule_31(@Nullable Object targetObj) {
+        if (targetObj == null) {
             return "";
         }
         LiteBansModule_158 ec_02 = this.LiteBansModule_31;
         ObjectUtilities.LiteBansModule_31(ec_02, "");
         BungeecordHandler_2 ao_02 = (BungeecordHandler_2)ec_02;
-        Object object2 = this.c();
-        Permission permission = object2 instanceof Permission ? (Permission)object2 : null;
+        Object contextObj = this.c();
+        Permission permission = contextObj instanceof Permission ? (Permission)contextObj : null;
         if (permission == null) {
             return "";
         }
         Permission permission2 = permission;
-        Object object3 = this.LiteBansModule_31();
-        Chat chat = object3 instanceof Chat ? (Chat)object3 : null;
+        Object resultObj = this.LiteBansModule_31();
+        Chat chat = resultObj instanceof Chat ? (Chat)resultObj : null;
         if (chat == null) {
             return "";
         }
         Chat chat2 = chat;
-        if (object instanceof UUID) {
-            Object object4 = ao_02.BaseCoreGenericHandler((UUID)object);
-            OfflinePlayer offlinePlayer = object4 instanceof OfflinePlayer ? (OfflinePlayer)object4 : null;
+        if (targetObj instanceof UUID) {
+            Object helperObj = ao_02.BaseCoreGenericHandlertargetObj;
+            OfflinePlayer offlinePlayer = helperObj instanceof OfflinePlayer ? (OfflinePlayer)helperObj : null;
             if (offlinePlayer == null) {
                 return "";
             }
-            object2 = offlinePlayer;
-            String string = chat2.getPlayerSuffix(null, (OfflinePlayer)object2);
+            contextObj = offlinePlayer;
+            String string = chat2.getPlayerSuffix(null, (OfflinePlayer)contextObj);
             if (string == null) {
                 string = "";
             }
             return string;
         }
-        String string = chat2.getPlayerSuffix((Player)object);
+        String string = chat2.getPlayerSuffixtargetObj;
         if (string == null) {
-            string = chat2.getGroupSuffix(((Player)object).getWorld().getName(), permission2.getPrimaryGroup((Player)object));
+            string = chat2.getGroupSuffix(targetObj.getWorld().getName(), permission2.getPrimaryGrouptargetObj);
         }
         return string;
     }

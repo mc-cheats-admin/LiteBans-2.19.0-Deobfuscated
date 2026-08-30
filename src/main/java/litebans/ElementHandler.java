@@ -20,8 +20,8 @@ LiteBansModule_122 {
     }
 
     @Override
-    public boolean equals(@Nullable Object object) {
-        return object instanceof List && ((List)object).isEmpty();
+    public boolean equals(@Nullable Object targetObj) {
+        return targetObj instanceof List && targetObj.isEmpty();
     }
 
     @Override
@@ -43,13 +43,13 @@ LiteBansModule_122 {
     }
 
     public boolean LiteBansModule_31(@NotNull Void void_) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)void_, "element");
+        ObjectUtilities.BaseCoreGenericHandler(void_, "element");
         return false;
     }
 
     @Override
     public boolean containsAll(@NotNull Collection collection) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)collection, "elements");
+        ObjectUtilities.BaseCoreGenericHandler(collection, "elements");
         return collection.isEmpty();
     }
 
@@ -58,12 +58,12 @@ LiteBansModule_122 {
     }
 
     public int c(@NotNull Void void_) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)void_, "element");
+        ObjectUtilities.BaseCoreGenericHandler(void_, "element");
         return -1;
     }
 
     public int BaseCoreGenericHandler(@NotNull Void void_) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)void_, "element");
+        ObjectUtilities.BaseCoreGenericHandler(void_, "element");
         return -1;
     }
 
@@ -95,7 +95,7 @@ LiteBansModule_122 {
     }
 
     @Override
-    public boolean remove(Object object) {
+    public boolean remove(Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
@@ -133,11 +133,11 @@ LiteBansModule_122 {
     }
 
     @Override
-    public final boolean contains(Object object) {
-        if (!(object instanceof Void)) {
+    public final boolean contains(Object targetObj) {
+        if (!(targetObj instanceof Void)) {
             return false;
         }
-        return this.LiteBansModule_31((Void)object);
+        return this.LiteBansModule_31targetObj;
     }
 
     public Object get(int n) {
@@ -145,37 +145,37 @@ LiteBansModule_122 {
     }
 
     @Override
-    public final int indexOf(Object object) {
-        if (!(object instanceof Void)) {
+    public final int indexOf(Object targetObj) {
+        if (!(targetObj instanceof Void)) {
             return -1;
         }
-        return this.c((Void)object);
+        return this.ctargetObj;
     }
 
     @Override
-    public final int lastIndexOf(Object object) {
-        if (!(object instanceof Void)) {
+    public final int lastIndexOf(Object targetObj) {
+        if (!(targetObj instanceof Void)) {
             return -1;
         }
-        return this.plugin((Void)object);
+        return this.plugintargetObj;
     }
 
     @Override
-    public boolean add(Object object) {
+    public boolean add(Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
-    public void add(int n, Object object) {
+    public void add(int n, Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
-    public Object set(int n, Object object) {
+    public Object set(int n, Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
     @Override
     public Object[] toArray(Object[] objectArray) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)objectArray, "array");
+        ObjectUtilities.BaseCoreGenericHandler(objectArray, "array");
         return CollectionHandler.BaseCoreGenericHandler(this, objectArray);
     }
 

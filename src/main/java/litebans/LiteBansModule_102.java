@@ -28,16 +28,15 @@ Serializable {
         }
         LiteBansModule_102 cU2 = this;
         synchronized (cU2) {
-            Object object;
             Object t4 = this.LiteBansModule_31.get();
             if (t4 != null) {
-                object = t4;
+                targetObj = t4;
             } else {
-                Object object2 = this.plugin.BaseCoreGenericHandler();
-                this.LiteBansModule_31 = new SoftReference<Object>(object2);
-                object = object2;
+                Object contextObj = this.plugin.BaseCoreGenericHandler();
+                this.LiteBansModule_31 = new SoftReference<Object>(contextObj);
+                targetObj = contextObj;
             }
-            t2 = object;
+            t2 = targetObj;
         }
         return t2;
     }

@@ -244,7 +244,7 @@ implements PlatformPlugin {
     @Override
     public void LiteBansModule_31(LiteBansModule_175[] em_0Array) {
         for (LiteBansModule_175 em_02 : em_0Array) {
-            this.c.getEventManager().register((Object)this, (Object)em_02);
+            this.c.getEventManager().register(this, em_02);
 }
 
     @Override
@@ -273,7 +273,7 @@ implements PlatformPlugin {
             throw new IllegalArgumentException("Invalid delay: " + l3);
         }
         this.c();
-        this.g.add(this.c.getScheduler().buildTask((Object)this, runnable).delay(l3 * 50L, TimeUnit.MILLISECONDS).schedule());
+        this.g.add(this.c.getScheduler().buildTask(this, runnable).delay(l3 * 50L, TimeUnit.MILLISECONDS).schedule());
     }
 
     @Override
@@ -289,7 +289,7 @@ implements PlatformPlugin {
     @Override
     public void LiteBansModule_31(Runnable runnable, long l3, long l5) {
         this.c();
-        this.g.add(this.c.getScheduler().buildTask((Object)this, runnable).delay(l3 * 50L, TimeUnit.MILLISECONDS).repeat(l5 * 50L, TimeUnit.MILLISECONDS).schedule());
+        this.g.add(this.c.getScheduler().buildTask(this, runnable).delay(l3 * 50L, TimeUnit.MILLISECONDS).repeat(l5 * 50L, TimeUnit.MILLISECONDS).schedule());
     }
 
     /*
@@ -318,40 +318,40 @@ implements PlatformPlugin {
 
     @Override
     public void r() {
-        this.c.getEventManager().unregisterListeners((Object)this);
+        this.c.getEventManager().unregisterListeners(this);
     }
 
     @Override
     public void BaseCoreGenericHandler(LiteBansModule_175[] em_0Array) {
         for (LiteBansModule_175 em_02 : em_0Array) {
-            this.c.getEventManager().unregisterListener((Object)this, (Object)em_02);
+            this.c.getEventManager().unregisterListener(this, em_02);
 }
 
     @Override
-    public CommandSenderWrapper LiteBansModule_31(Object object) {
-        if (!(object instanceof CommandSource)) {
-            if (object instanceof CommandSenderWrapper) {
-                return (CommandSenderWrapper)this.LiteBansModule_194.LiteBansModule_31.remove(((CommandSenderWrapper)object).i());
+    public CommandSenderWrapper LiteBansModule_31(Object targetObj) {
+        if (!(targetObj instanceof CommandSource)) {
+            if (targetObj instanceof CommandSenderWrapper) {
+                return this.LiteBansModule_194.LiteBansModule_31.remove(targetObj.i());
             }
             throw new IllegalArgumentException();
         }
         String string = "[Console]";
-        if (object instanceof Player) {
-            string = ((Player)object).getUsername();
+        if (targetObj instanceof Player) {
+            string = targetObj.getUsername();
         }
-        return (CommandSenderWrapper)this.LiteBansModule_194.LiteBansModule_31.remove(string);
+        return this.LiteBansModule_194.LiteBansModule_31.remove(string);
     }
 
     @Override
-    public CommandSenderWrapper BaseCoreGenericHandler(Object object) {
+    public CommandSenderWrapper BaseCoreGenericHandler(Object targetObj) {
         CommandSenderWrapper sender;
-        if (!(object instanceof CommandSource)) {
-            if (object instanceof CommandSenderWrapper) {
-                return (CommandSenderWrapper)object;
+        if (!(targetObj instanceof CommandSource)) {
+            if (targetObj instanceof CommandSenderWrapper) {
+                return (CommandSenderWrapper)targetObj;
             }
             throw new IllegalArgumentException();
         }
-        CommandSource commandSource = (CommandSource)object;
+        CommandSource commandSource = (CommandSource)targetObj;
         Map map = this.LiteBansModule_194.LiteBansModule_31;
         String string = "[Console]";
         if (commandSource instanceof Player) {

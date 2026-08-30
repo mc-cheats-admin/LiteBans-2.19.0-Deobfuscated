@@ -232,87 +232,86 @@ implements LiteBansModule_158 {
 }
 
     public final void BaseCoreGenericHandler(@NotNull CommandSenderWrapper sender, @NotNull String string) {
-        Object object = sender.c();
-        ObjectUtilities.LiteBansModule_31(object, "");
+        Object targetObj = sender.c();
+        ObjectUtilities.LiteBansModule_31(targetObj, "");
         BaseComponent[] baseComponentArray = ComponentSerializer.parse((String)string);
-        ((ProxiedPlayer)object).disconnect(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
+        targetObj.disconnect(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
     }
 
     @Override
-    public LiteBansModule_95 BaseCoreGenericHandler(@NotNull Object object, boolean flag) {
-        if (!(object instanceof ServerConnectEvent)) {
+    public LiteBansModule_95 BaseCoreGenericHandler(@NotNull Object targetObj, boolean flag) {
+        if (!(targetObj instanceof ServerConnectEvent)) {
             throw new UnsupportedOperationException();
         }
-        ProxiedPlayer proxiedPlayer = ((ServerConnectEvent)object).getPlayer();
+        ProxiedPlayer proxiedPlayer = targetObj.getPlayer();
         return new LiteBansModule_95(proxiedPlayer.getName(), proxiedPlayer.getUniqueId().toString(), proxiedPlayer.getAddress().getAddress().getHostAddress());
     }
 
     @Override
-    public void BaseCoreGenericHandler(@NotNull Object object, @NotNull CharSequence charSequence) {
-        Object object2 = object;
-        if (object2 instanceof ServerConnectEvent) {
-            if (((ServerConnectEvent)object).getPlayer().isConnected()) {
-                BaseComponent[] baseComponentArray = TextComponent.fromLegacyText((String)((Object)charSequence).toString());
-                ((ServerConnectEvent)object).getPlayer().sendMessage(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
-} else if (!(object2 instanceof LoginEvent)) {
+    public void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence) {
+        Object contextObj = targetObj;
+        if (contextObj instanceof ServerConnectEvent) {
+            if (targetObj.getPlayer().isConnected()) {
+                BaseComponent[] baseComponentArray = TextComponent.fromLegacyText((String)(charSequence).toString());
+                targetObj.getPlayer().sendMessage(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
+} else if (!(contextObj instanceof LoginEvent)) {
             throw new UnsupportedOperationException();
 }
 
     @Override
-    public String BaseCoreGenericHandler(@NotNull Object object) {
-        if (!(object instanceof ServerConnectEvent)) {
+    public String BaseCoreGenericHandler(@NotNull Object targetObj) {
+        if (!(targetObj instanceof ServerConnectEvent)) {
             throw new UnsupportedOperationException();
         }
-        return ((ServerConnectEvent)object).getTarget().getName();
+        return targetObj.getTarget().getName();
     }
 
     @Override
-    public void BaseCoreGenericHandler(@NotNull Object object, @NotNull CharSequence charSequence, @NotNull String string, boolean flag, @NotNull String string2) {
-        Object object2;
-        if (object instanceof Cancellable) {
-            ((Cancellable)object).setCancelled(true);
+    public void BaseCoreGenericHandler(@NotNull Object targetObj, @NotNull CharSequence charSequence, @NotNull String string, boolean flag, @NotNull String string2) {
+        if (targetObj instanceof Cancellable) {
+            targetObj.setCancelled(true);
         }
-        if ((object2 = object) instanceof ChatEvent) {
-            boolean flag2 = StringUtilities.BaseCoreGenericHandler((CharSequence)((ChatEvent)object).getMessage(), '/', false, 2, null);
-            ((ChatEvent)object).setMessage((flag2 ? "/" : "") + string + ((ChatEvent)object).getMessage());
-        } else if (object2 instanceof LoginEvent) {
+        if ((contextObj = targetObj) instanceof ChatEvent) {
+            boolean flag2 = StringUtilities.BaseCoreGenericHandler((CharSequence)targetObj.getMessage(), '/', false, 2, null);
+            targetObj.setMessage((flag2 ? "/" : "") + string + targetObj.getMessage());
+        } else if (contextObj instanceof LoginEvent) {
             if (this.LiteBansModule_31) {
-                BaseComponent[] baseComponentArray = TextComponent.fromLegacyText((String)((Object)charSequence).toString());
-                ((LoginEvent)object).setCancelReason(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
+                BaseComponent[] baseComponentArray = TextComponent.fromLegacyText((String)(charSequence).toString());
+                targetObj.setCancelReason(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
             } else {
-                LiteBansModule_225.BaseCoreGenericHandler.BaseCoreGenericHandler(object, charSequence);
-} else if (object2 instanceof ServerConnectEvent && flag && ((ServerConnectEvent)object).getPlayer().getServer() == null) {
-            BaseComponent[] baseComponentArray = TextComponent.fromLegacyText((String)((Object)charSequence).toString());
-            ((ServerConnectEvent)object).getPlayer().disconnect(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
+                LiteBansModule_225.BaseCoreGenericHandler.BaseCoreGenericHandler(targetObj, charSequence);
+} else if (contextObj instanceof ServerConnectEvent && flag && targetObj.getPlayer().getServer() == null) {
+            BaseComponent[] baseComponentArray = TextComponent.fromLegacyText((String)(charSequence).toString());
+            targetObj.getPlayer().disconnect(Arrays.copyOf(baseComponentArray, baseComponentArray.length));
 }
 
-    public final ServerInfo BaseCoreGenericHandler(@NotNull Object object) {
+    public final ServerInfo BaseCoreGenericHandler(@NotNull Object targetObj) {
         ServerInfo serverInfo;
         ProxyServer proxyServer = this.c(this.c());
-        if (object instanceof PendingConnection) {
+        if (targetObj instanceof PendingConnection) {
             ReconnectHandler reconnectHandler = proxyServer.getReconnectHandler();
             if (reconnectHandler == null) {
-                return this.LiteBansModule_31(object);
+                return this.LiteBansModule_31(targetObj);
             }
             ReconnectHandler reconnectHandler2 = reconnectHandler;
-            serverInfo = reconnectHandler2.getServer((ProxiedPlayer)new NullHandler_2(this.c(), (PendingConnection)object));
+            serverInfo = reconnectHandler2.getServer((ProxiedPlayer)new NullHandler_2(this.c(), (PendingConnection)targetObj));
             if (serverInfo == null) {
-                return this.LiteBansModule_31(object);
+                return this.LiteBansModule_31(targetObj);
 } else {
             serverInfo = null;
         }
         return serverInfo;
     }
 
-    public final ServerInfo LiteBansModule_31(@NotNull Object object) {
+    public final ServerInfo LiteBansModule_31(@NotNull Object targetObj) {
         ServerInfo serverInfo;
         ProxyServer proxyServer = this.c(this.c());
-        if (object instanceof PendingConnection) {
+        if (targetObj instanceof PendingConnection) {
             GetcancelreasoncomponentsHandler k12 = this;
-            ListenerInfo listenerInfo = ((PendingConnection)object).getListener();
+            ListenerInfo listenerInfo = targetObj.getListener();
             serverInfo = proxyServer.getServerInfo(listenerInfo.getDefaultServer());
             if (serverInfo == null) {
-                serverInfo = AbstractReconnectHandler.getForcedHost((PendingConnection)((PendingConnection)object));
+                serverInfo = AbstractReconnectHandler.getForcedHost((PendingConnection)targetObj);
 } else {
             serverInfo = null;
         }

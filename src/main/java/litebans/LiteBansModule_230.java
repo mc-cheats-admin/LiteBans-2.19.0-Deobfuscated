@@ -26,7 +26,7 @@ LiteBansModule_122 {
     }
 
     @Override
-    public int indexOf(Object object) {
+    public int indexOf(Object targetObj) {
         int n;
 {
             List list = this;
@@ -34,7 +34,7 @@ LiteBansModule_122 {
             while (iterator.hasNext()) {
                 Object e;
                 Object e10 = e = iterator.next();
-                if (ObjectUtilities.BaseCoreGenericHandler(e10, object)) {
+                if (ObjectUtilities.BaseCoreGenericHandler(e10, targetObj)) {
                     n = n2;
                     break;
                 }
@@ -46,14 +46,14 @@ LiteBansModule_122 {
     }
 
     @Override
-    public int lastIndexOf(Object object) {
+    public int lastIndexOf(Object targetObj) {
         int n;
 {
             List list = this;
             ListIterator listIterator = list.listIterator(list.size());
             while (listIterator.hasPrevious()) {
                 Object e = listIterator.previous();
-                if (!ObjectUtilities.BaseCoreGenericHandler(e, object)) continue;
+                if (!ObjectUtilities.BaseCoreGenericHandler(e, targetObj)) continue;
                 n = listIterator.nextIndex();
                 break;
             }
@@ -75,14 +75,14 @@ LiteBansModule_122 {
     }
 
     @Override
-    public boolean equals(@Nullable Object object) {
-        if (object == this) {
+    public boolean equals(@Nullable Object targetObj) {
+        if (targetObj == this) {
             return true;
         }
-        if (!(object instanceof List)) {
+        if (!(targetObj instanceof List)) {
             return false;
         }
-        return LiteBansModule_31.BaseCoreGenericHandler(this, (Collection)object);
+        return LiteBansModule_31.BaseCoreGenericHandler(this, (Collection)targetObj);
     }
 
     @Override
@@ -90,7 +90,7 @@ LiteBansModule_122 {
         return LiteBansModule_31.BaseCoreGenericHandler(this);
     }
 
-    public void add(int n, Object object) {
+    public void add(int n, Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
@@ -98,7 +98,7 @@ LiteBansModule_122 {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
-    public Object set(int n, Object object) {
+    public Object set(int n, Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 

@@ -10,7 +10,7 @@ implements RandomAccess {
     private final int e;
     private int LiteBansModule_194;
     public ListHandler(@NotNull LiteBansModule_230 gn2, int n, int n2) {
-        ObjectUtilities.BaseCoreGenericHandler((Object)gn2, "list");
+        ObjectUtilities.BaseCoreGenericHandler(gn2, "list");
         this.LiteBansModule_240 = gn2;
         this.e = n;
         LiteBansModule_230.LiteBansModule_31.BaseCoreGenericHandler(this.e, n2, this.LiteBansModule_240.size());

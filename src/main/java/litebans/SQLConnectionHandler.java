@@ -24,7 +24,7 @@ LiteBansModule_122 {
         this.c = flag;
         this.plugin = arrayList;
         this.LiteBansModule_194 = BansHandler_2.Utf8Handler_2;
-        this.LiteBansModule_31 = (ConfigService)this.g.BaseCoreGenericHandler(ConfigService.class);
+        this.LiteBansModule_31 = this.g.BaseCoreGenericHandler(ConfigService.class);
     }
 
     public /* synthetic */ SQLConnectionHandler(PlatformPlugin plugin, LiteBansModule_82 ch2, boolean flag, ArrayList arrayList, int n, LiteBansModule_14 aJ2) {
@@ -51,24 +51,23 @@ LiteBansModule_122 {
     }
 
     public final void BaseCoreGenericHandler(@NotNull LiteBansModule_354 jT2) {
-        boolean flag = ObjectUtilities.BaseCoreGenericHandler((Object)this.LiteBansModule_31.LiteBansModule_194().ElementsHandler(), (Object)"mysql");
+        boolean flag = ObjectUtilities.BaseCoreGenericHandler(this.LiteBansModule_31.LiteBansModule_194().ElementsHandler(), (Object)"mysql");
         if (this.c || !this.e.LiteBansModule_31(this.LiteBansModule_194, (String)jT2.LiteBansModule_31(), flag)) {
-            Object object = ((LiteBansModule_178)jT2.e()).BaseCoreGenericHandler(this.LiteBansModule_194);
-            if (object instanceof Object[]) {
+            Object targetObj = ((LiteBansModule_178)jT2.e()).BaseCoreGenericHandler(this.LiteBansModule_194);
+            if (targetObj instanceof Object[]) {
                 SQLConnectionHandler dc_02 = this;
-                Object[] objectArray = (Object[])object;
+                Object[] objectArray = (Object[])targetObj;
                 Object[] objectArray2 = objectArray;
                 int n = objectArray2.length;
                 for (int i = 0; i < n; ++i) {
-                    Object object2;
-                    Object object3 = object2 = objectArray2[i];
+                    Object resultObj = contextObj = objectArray2[i];
                     Collection collection = dc_02.LiteBansModule_31();
-                    ObjectUtilities.LiteBansModule_31(object3, "");
-                    collection.add((SQLiteDriverHandler)object3);
+                    ObjectUtilities.LiteBansModule_31(resultObj, "");
+                    collection.addthis;
 } else {
                 Collection collection = this.plugin;
-                ObjectUtilities.LiteBansModule_31(object, "");
-                collection.add((SQLiteDriverHandler)object);
+                ObjectUtilities.LiteBansModule_31(targetObj, "");
+                collection.addtargetObj;
 }
 
     @Override
@@ -91,7 +90,7 @@ LiteBansModule_122 {
     }
 
     public String BaseCoreGenericHandler(int n) {
-        return ((SQLiteDriverHandler)this.plugin.get(n)).c();
+        return (this.plugin.get(n)).c();
     }
 
     public int LiteBansModule_31(@NotNull String string) {
@@ -119,7 +118,7 @@ LiteBansModule_122 {
     }
 
     @Override
-    public boolean remove(Object object) {
+    public boolean remove(Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
@@ -160,11 +159,11 @@ LiteBansModule_122 {
     }
 
     @Override
-    public final boolean contains(Object object) {
-        if (!(object instanceof SQLiteDriverHandler)) {
+    public final boolean contains(Object targetObj) {
+        if (!(targetObj instanceof SQLiteDriverHandler)) {
             return false;
         }
-        return this.plugin(((SQLiteDriverHandler)object).c());
+        return this.plugin(targetObj.c());
     }
 
     public Object get(int n) {
@@ -172,19 +171,19 @@ LiteBansModule_122 {
     }
 
     @Override
-    public final int indexOf(Object object) {
-        if (!(object instanceof SQLiteDriverHandler)) {
+    public final int indexOf(Object targetObj) {
+        if (!(targetObj instanceof SQLiteDriverHandler)) {
             return -1;
         }
-        return this.LiteBansModule_31(((SQLiteDriverHandler)object).c());
+        return this.LiteBansModule_31(targetObj.c());
     }
 
     @Override
-    public final int lastIndexOf(Object object) {
-        if (!(object instanceof SQLiteDriverHandler)) {
+    public final int lastIndexOf(Object targetObj) {
+        if (!(targetObj instanceof SQLiteDriverHandler)) {
             return -1;
         }
-        return this.c(((SQLiteDriverHandler)object).c());
+        return this.c(targetObj.c());
     }
 
     @Override
@@ -193,15 +192,15 @@ LiteBansModule_122 {
     }
 
     @Override
-    public boolean add(Object object) {
+    public boolean add(Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
-    public void add(int n, Object object) {
+    public void add(int n, Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 
-    public Object set(int n, Object object) {
+    public Object set(int n, Object targetObj) {
         throw new UnsupportedOperationException("Operation is not supported for read-only collection");
     }
 

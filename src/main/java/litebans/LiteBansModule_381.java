@@ -7,12 +7,12 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class LiteBansModule_381 {
-    public static boolean BaseCoreGenericHandler(@Nullable Object object, @NotNull String string) {
-        if (object instanceof CommandSourceStack) {
-            if (((CommandSourceStack)object).permissions() == LevelBasedPermissionSet.OWNER) {
+    public static boolean BaseCoreGenericHandler(@Nullable Object targetObj, @NotNull String string) {
+        if (targetObj instanceof CommandSourceStack) {
+            if (targetObj.permissions() == LevelBasedPermissionSet.OWNER) {
                 return true;
             }
-            return ((CommandSourceStack)object).permissions().hasPermission((Permission)Permission.Atom.create((String)string));
+            return targetObj.permissions().hasPermission((Permission)Permission.Atom.create((String)string));
         }
         return false;
 }

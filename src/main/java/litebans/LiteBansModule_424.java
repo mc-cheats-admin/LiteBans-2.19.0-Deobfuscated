@@ -12,25 +12,25 @@ implements PreparedStatement {
     @Override
     public boolean execute() {
         this.LiteBansModule_31.LiteBansModule_31();
-        return ((PreparedStatement)this.plugin).execute();
+        return (this.plugin).execute();
     }
 
     @Override
     public ResultSet executeQuery() {
         this.LiteBansModule_31.LiteBansModule_31();
-        ResultSet resultSet = ((PreparedStatement)this.plugin).executeQuery();
+        ResultSet resultSet = (this.plugin).executeQuery();
         return LiteBansModule_64.BaseCoreGenericHandler(this.LiteBansModule_31, this, resultSet);
     }
 
     @Override
     public int executeUpdate() {
         this.LiteBansModule_31.LiteBansModule_31();
-        return ((PreparedStatement)this.plugin).executeUpdate();
+        return (this.plugin).executeUpdate();
     }
 
     @Override
     public long executeLargeUpdate() {
         this.LiteBansModule_31.LiteBansModule_31();
-        return ((PreparedStatement)this.plugin).executeLargeUpdate();
+        return (this.plugin).executeLargeUpdate();
 }
 

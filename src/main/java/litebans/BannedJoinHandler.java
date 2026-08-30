@@ -16,18 +16,18 @@ extends MessageHandler {
 
     @Override
     public void run() {
-        CommandThrottleService v2 = (CommandThrottleService)this.LiteBansModule_240().BaseCoreGenericHandler(CommandThrottleService.class);
+        CommandThrottleService v2 = this.LiteBansModule_240().BaseCoreGenericHandler(CommandThrottleService.class);
         if (!v2.BaseCoreGenericHandler((byte)2, HexEncodingHelper.LiteBansModule_194(this.e))) {
             MessageHandler messageHandler = this;
             ((DatabaseMonitorService)messageHandler.LiteBansModule_240().BaseCoreGenericHandler(DatabaseMonitorService.class)).BaseCoreGenericHandler(arg_0 -> BannedJoinHandler.BaseCoreGenericHandler(this, arg_0));
 }
 
     private static final KotlinUnitHandler BaseCoreGenericHandler(BannedJoinHandler gl2, LiteBansModule_82 ch2) {
-        Object object = gl2;
-        Object[] objectArray = (Object[])((MessageHandler)object).LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
+        Object targetObj = gl2;
+        Object[] objectArray = (Object[])targetObj.LiteBansModule_240().BaseCoreGenericHandler(BroadcastService.class);
         BroadcastService.BaseCoreGenericHandler((BroadcastService)objectArray, ch2, gl2.g, "banned_join", null, null, false, false, null, 124, null);
         if (gl2.AsyncBackgroundTask_5 && ch2.AsyncBackgroundTask_5().AsyncBackgroundTask_21()) {
-            object = ServerSyncService.GnuSparseMapHandler;
+            targetObj = ServerSyncService.GnuSparseMapHandler;
             objectArray = new CharSequence[]{gl2.e, gl2.g};
             flag2 = false;
             CommandArgumentUtils.BaseCoreGenericHandler(ch2, BroadcastHandler.i, ArrayUtilities.BaseCoreGenericHandler(objectArray, (CharSequence)"\ufeff", null, null, 0, null, null, 62, null), null, null, 12, null);
