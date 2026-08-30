@@ -1,12 +1,22 @@
-# 🛡️ LiteBans 2.19.0 — Clean Decompiled & Structured Source Code
+# 🛡️ LiteBans 2.19.0 — Clean Deobfuscated & Structured Source Code
 
 [![Java](https://img.shields.io/badge/Java-8%2B-orange.svg)](https://www.oracle.com/java/)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.8--1.21.x-blue.svg)](https://spigotmc.org/)
+[![Deobfuscation](https://img.shields.io/badge/Deobf-11%2C554%20Strings%20Decrypted-brightgreen.svg)]()
 [![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)]()
 [![Platforms](https://img.shields.io/badge/Platforms-Bukkit%20%7C%20Bungee%20%7C%20Velocity%20%7C%20Fabric-blue.svg)]()
 
-Fully extracted, cleaned, and organized source code of **LiteBans** version **2.19.0** (by Ruan).
-Structured into a standard Maven layout (src/main/java), completely free of decompilation headers, ready for analysis and development.
+Fully extracted, decrypted, and deobfuscated source code of **LiteBans** version **2.19.0** (by Ruan).
+Structured into a standard Maven layout (src/main/java), free of obfuscation strings and decompilation artifacts, 100% human-readable.
+
+---
+
+## ⚡ Deobfuscation Achievements
+
+* 🔓 **11,554 Encrypted Strings Decrypted:** All XOR key-based encrypted strings in hl.a() decrypted into direct Unicode/ASCII text literals.
+* 🧩 **3,190 String Array References Inlined:** Static table lookups (g[0], c[1]) replaced with direct string constants.
+* 🧹 **Clean Class Declarations:** Fixed 670 top-level static modifier issues and cleaned CFR synthetic comments across 799 Java files.
+* 🗂️ **Maven Layout & Multi-Platform Descriptors:** Full support for Bukkit/Spigot, BungeeCord, Velocity, and Fabric.
 
 ---
 
@@ -28,7 +38,7 @@ LiteBans is an industry-leading multi-platform punishment management system for 
 ### 3. Moderation Commands
 * /ban, /tempban, /ipban, /tempipban
 * /mute, /tempmute, /ipmute, /tempipmute
-* /warn, /unwarn, /kick, /history, /checkban, /checkmute
+* /warn, /unwarn, /kick, /history, /checkban, /checkmute, /dupeip
 * /litebans (reload, import, fixhistory, sqlexec, clearhistory)
 
 ---
